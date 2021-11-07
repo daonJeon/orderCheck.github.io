@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>layout</title>
+
+  <!-- css, js 연결 -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../resource/css/reset.css">
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+</head>
+
+<body>
+  <!-- skip -->
+  <div id="skip">
+    <a href="#content">컨텐츠 바로가기</a>
+  </div>
+  <!-- //skip -->
+
+  <div id="wrap">
+    <section id="content">
+
+
+      <nav class="sidebar">
+        <div class="logo-details">
+          <button type="button" class="btn-side-open"><span class="material-icons">check</span></button>
+          <h1 class="logo_name">오더체크</h1>
+        </div>
+
+        <ul class="nav-list">
+          <li>
+            <a href="#">
+              <i class='material-icons'>home</i>
+              <span class="links_name">홈</span>
+            </a>
+            <span class="tooltip">홈</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="material-icons">person</i>
+              <span class="links_name">고객관리</span>
+            </a>
+            <span class="tooltip">고객관리</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='material-icons'>folder</i>
+              <span class="links_name">파일보관함</span>
+            </a>
+            <span class="tooltip">파일보관함</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='material-icons'>chat</i>
+              <span class="links_name">채팅</span>
+            </a>
+            <span class="tooltip">채팅</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='material-icons'>content_paste</i>
+              <span class="links_name">신청폼리스트</span>
+            </a>
+            <span class="tooltip">신청폼리스트</span>
+          </li>
+
+          <li class="profile">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class='material-icons'>help_outline</i>
+                  <span class="links_name">자주 묻는 질문</span>
+                </a>
+                <span class="tooltip">자주 묻는 질문</span>
+              </li>
+              <li>
+                <a href="#">
+                  <i class='material-icons'>settings</i>
+                  <span class="links_name">설정</span>
+                </a>
+                <span class="tooltip">설정</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="home-section">
+        <!-- header -->
+        <header id="header" class="header">
+          <h2 class="title">Dashboard</h2>
+          <div class="searchbox">
+            <i class='material-icons'>search</i>
+            <input type="text" placeholder="검색해보세요.">
+          </div>
+          <ul class="menu">
+            <li>
+              <a href="#" class="btn-drop">
+                <div class="profile-details">
+                  <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                  <span class="name">홍길동님</span>
+                </div>
+                <i class="arrow down"></i>
+              </a>
+            </li>
+            <li><a href="#"><i class="material-icons">mail_outline</i></a></li>
+            <li><a href="#"><i class="material-icons">notifications_none</i></a></li>
+          </ul>
+        </header>
+        <!-- /header -->
+       
+      </section>
+
+    </section>
+  </div>
+
+
+  <script src="../resource/js/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/common.js"></script>
+  <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector(".btn-side-open");
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //calling the function(optional)
+    });
+
+
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+      if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("bx-menu", "bx-menu-alt-right"); //replacing the iocns class
+      } else {
+        closeBtn.classList.replace("bx-menu-alt-right", "bx-menu"); //replacing the iocns class
+      }
+    }
+  </script>
+</body>
+
+</html>
