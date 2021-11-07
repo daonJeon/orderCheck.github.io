@@ -128,7 +128,7 @@ input {
   font-size: 15px;
   color: #fff;
 }
-.header {display:flex; justify-content: space-between; align-items: center;}
+.header {display:flex; padding:0 30px; justify-content: space-between; align-items: center;}
 /* search box */
 .searchbox { padding:0 10px; width:360px; height:42px; background: rgba(29, 88, 255, 0.08); border-radius: 27px; font-size: 22px; }
 .searchbox i {color:#1D58FF;   vertical-align: middle;}
