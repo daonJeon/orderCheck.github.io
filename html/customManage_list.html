@@ -35,35 +35,35 @@
       <ul class="nav-list">
         <li>
           <a href="#">
-            <i class='icon home'></i>
+            <i class='ico home'></i>
             <span class="links_name">홈</span>
           </a>
           <span class="tooltip">홈</span>
         </li>
         <li>
           <a href="customManage_list.html">
-            <i class="icon user"></i>
+            <i class="ico user"></i>
             <span class="links_name">고객관리</span>
           </a>
           <span class="tooltip">고객관리</span>
         </li>
         <li>
           <a href="#">
-            <i class='icon file'></i>
+            <i class='ico file'></i>
             <span class="links_name">파일보관함</span>
           </a>
           <span class="tooltip">파일보관함</span>
         </li>
         <li>
           <a href="#">
-            <i class='icon chat'></i>
+            <i class='ico chat'></i>
             <span class="links_name">채팅</span>
           </a>
           <span class="tooltip">채팅</span>
         </li>
         <li>
           <a href="#">
-            <i class='icon form'></i>
+            <i class='ico form'></i>
             <span class="links_name">신청폼리스트</span>
           </a>
           <span class="tooltip">신청폼리스트</span>
@@ -72,14 +72,14 @@
         <ul class="btm">
           <li>
             <a href="#">
-              <i class='icon help'></i>
+              <i class='ico help'></i>
               <span class="links_name">자주 묻는 질문</span>
             </a>
             <span class="tooltip">자주 묻는 질문</span>
           </li>
           <li>
             <a href="#">
-              <i class='icon setting'></i>
+              <i class='ico setting'></i>
               <span class="links_name">설정</span>
             </a>
             <span class="tooltip">설정</span>
@@ -96,19 +96,20 @@
             <ul class="menu">
               <li>
                 <div class="searchbox">
-                  <i class='icon search'></i>
+                  <i class='ico search'></i>
                   <input type="text" placeholder="검색해보세요.">
                 </div>
               </li>
               <li>
                 <div class="dropdown-wrap">
-                  <a href="#" class="btn-drop">
+                  <button type="button" class="btn-drop">
                     <div class="profile-details">
                       <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
                       <span class="name">홍길동님</span>
+                      <i class="arrow down"></i>
                     </div>
-                    <i class="arrow down"></i>
-                  </a>
+
+                  </button>
                   <div class="dropdown-box">
                     <ul>
                       <li><a href="#" class="btn-drop-menu">버튼1</a></li>
@@ -118,8 +119,8 @@
                   </div>
                 </div>
               </li>
-              <li><button type="button" class="btn-menu" data-info="mail"><i class="icon mail"></i></button></li>
-              <li><button type="button" class="btn-menu" data-info="alarm"><i class="icon alarm"></i></button></li>
+              <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+              <li><button type="button" class="btn-menu" data-info="alarm"><i class="ico alarm"></i></button></li>
             </ul>
           </header>
           <!-- /header -->
@@ -148,13 +149,12 @@
         <div class="cnt-box-wrap">
           <div class="cnt-box left">
             <div class="cnt-top">
-              <h2 class="cnt-title"><i class="icon filter"></i>필터</h2>
-              <button type="button" class="btn-bk-line"><i class="icon refresh"></i>필터 초기화</button>
+              <h2 class="cnt-title"><i class="ico filter"></i>필터</h2>
+              <button type="button" class="btn btn-bk-line"><span><i class="ico refresh"></i>필터 초기화</span></button>
             </div>
             <div class="filter-box">
               <p class="filter-title">날짜</p>
               <div class="inp-row">
-
                 <!-- select -->
                 <div class="inp-select">
                   <select name="range" style="width:100%;">
@@ -177,23 +177,23 @@
               <p class="filter-title">상담 상태</p>
               <span class="checkbox">
                 <input type="checkbox" name="consulting_state" id="consulting_apply" class="check">
-                <label for="consulting_apply">상담 신청</label>
+                <label for="consulting_apply"><span class="box"></span><span>상담 신청</span></label>
               </span>
               <span class="checkbox">
                 <input type="checkbox" name="consulting_state" id="consulting_on" class="check">
-                <label for="consulting_on">상담 중</label>
+                <label for="consulting_on"><span class="box"></span><span>상담 중</span></label>
               </span>
               <span class="checkbox">
                 <input type="checkbox" name="consulting_state" id="consulting_complete" class="check">
-                <label for="consulting_complete">상담 완료</label>
+                <label for="consulting_complete"><span class="box"></span><span>상담 완료</span></label>
               </span>
               <span class="checkbox">
                 <input type="checkbox" name="consulting_state" id="consulting_issue" class="check">
-                <label for="consulting_issue">이슈</label>
+                <label for="consulting_issue"><span class="box"></span><span>이슈</span></label>
               </span>
               <span class="checkbox">
                 <input type="checkbox" name="consulting_state" id="consulting_refuse" class="check">
-                <label for="consulting_refuse">거절</label>
+                <label for="consulting_refuse"><span class="box"></span><span>거절</span></label>
               </span>
             </div>
 
@@ -221,19 +221,27 @@
             </div>
 
             <div class="filter-box">
-              <p class="filter-title">담당자 설정하기</p>
+              <p class="filter-title">담당자 설정</p>
 
               <div class="manager-list">
-                <button type="button" class="btn-manager-add open-layer" data-info="layer-manager-set">+ 추가</button>
-                <button type="button" class="btn-sel"><span class="txt">전체</span><i class="icon remove">삭제</i></button>
-                <button type="button" class="btn-sel"><span class="txt">전체</span><i class="icon remove">삭제</i></button>
-                <button type="button" class="btn-sel"><span class="txt">전체</span><i class="icon remove">삭제</i></button>
-                <button type="button" class="btn-sel"><span class="txt">전체</span><i class="icon remove">삭제</i></button>
+                <button type="button" class="btn-manager-add open-layer" data-info="layer-manager-set"><span><i class="ico plus"></i>추가</span></button>
+                <button type="button" class="btn-sel">
+                  <span><span class="txt">전체</span><i class="ico remove">삭제</i></span>
+                </button>
+                <button type="button" class="btn-sel">
+                  <span><span class="txt">전체</span><i class="ico remove">삭제</i></span>
+                </button>
+                <button type="button" class="btn-sel">
+                  <span><span class="txt">전체</span><i class="ico remove">삭제</i></span>
+                </button>
+                <button type="button" class="btn-sel">
+                  <span><span class="txt">전체</span><i class="ico remove">삭제</i></span>
+                </button>
               </div>
             </div>
 
             <div class="btn-group">
-              <button type="button" class="btn-bk"><var>15</var>건 검색결과 보기</button>
+              <button type="submit" class="btn-l btn-bk"><span><strong>15</strong>건 검색결과 보기</span></button>
             </div>
           </div>
           <div class="cnt-box right">
@@ -241,17 +249,17 @@
               <h2 class="cnt-title">고객 리스트</h2>
               <div class="row-list">
                  <!-- select -->
-                <span class="inp-select">
+                <div class="inp-select">
                   <select name="searchOpt" style="width:100%;">
                     <option value="10">10개씩</option>
                   </select>
-                </span>
+                </div>
 
                 <span class="inp">
                   <input type="text" name="" placeholder="고객명/연락처/주소를 검색하세요.">
                 </span>
-                <button type="button" class="btn-bk-line">검색</button>
-                <button type="button" class="btn-bk">+ 신규고객등록</button>
+                <button type="button" class="btn btn-bk-line"><span>검색</span></button>
+                <button type="button" class="btn btn-bk"><span><i class="ico plus"></i>신규고객등록</span></button>
               </div>
             </div>
 
@@ -408,9 +416,9 @@
                 <a href="#" class="btn first"><span class="hide">처음으로</span></a>
                 <a href="#" class="btn prev"><span class="hide">이전</span></a>
                 <ul class="list">
-                  <li class="on"><a href="#" class="btn">1</a></li>
-                  <li><a href="#" class="btn">2</a></li>
-                  <li><a href="#" class="btn">3</a></li>
+                  <li class="on"><button type="button" class="btn">1</button></li>
+                  <li><button type="button" class="btn">2</button></li>
+                  <li><button type="button" class="btn">3</button></li>
                 </ul>
                 <a href="#" class="btn next"><span class="hide">다음</span></a>
                 <a href="#" class="btn last"><span class="hide">마지막으로</span></a>
@@ -427,16 +435,61 @@
         <h2 class="title">담당자 설정</h2>
       </div>
       <div class="layer-mid">
-        <span class="inp">
-          <input type="text" name="" placeholder="고객명/연락처/주소를 검색하세요.">
-        </span>
-        <button type="button" class="btn-bk-line">검색</button>
-
-        <div class="layer-bnt" style="text-align: right;">
-          <button type="button" class="btn-bk-line"><i class="icon refresh"></i> 초기화</button>
-          <button type="button" class="btn-bk">확인</button>
+        <div class="search-top">
+          <strong class="txt">팀원<var class="tx-orange">12</var></strong>
+          <span class="tx-gray">(열람 가능한 팀원들만 노출됩니다.)</span>
         </div>
-        <button type="button" class="btn-close layer-close">닫기</button>
+        <div class="inp-line">
+          <span class="inp">
+            <input type="text" name="" placeholder="담당자명을 검색하세요.">
+          </span>
+          <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
+        </div>
+        <div class="manager-box">
+          <span class="checkbox">
+            <input type="checkbox" name="manager_select" id="manager_all" class="check">
+            <label for="manager_all"><span class="box"></span><span>전체</span></label>
+          </span>
+          <div class="inbox">
+            <ul>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager_empty" class="check">
+                  <label for="manager_empty"><span class="box"></span><img src="../resource/images/thumnail/img_person1.png" alt="" /><strong>담당자 없음</strong></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager01" class="check">
+                  <label for="manager01"><span class="box"></span><img src="../resource/images/thumnail/img_person2.png" alt="" /><strong>나</strong><span class="txt">홍길동</span></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager02" class="check">
+                  <label for="manager02"><span class="box"></span><img src="../resource/images/thumnail/img_person3.png" alt="" /><span class="txt">김수안</span></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager03" class="check">
+                  <label for="manager03"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager04" class="check">
+                  <label for="manager04"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="layer-btn tr">
+          <button type="button" class="btn-l btn-bk-line"><span><i class="ico refresh"></i> 초기화</span></button>
+          <button type="button" class="btn-l btn-bk"><span>확인</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
       </div>
     </div>
   </div>
@@ -448,8 +501,18 @@
   <script src="../resource/js/layerpop.js"></script>
   <script src="../resource/js/common.js"></script>
   <script>
+
     init ()//공통 페이지용 함수
     btnSortFunc (".btn-sort")//테이블 sorting 함수
+
+    //필터 담당자 삭제
+    btnRemoveFunc(".manager-list",".btn-sel")
+    layerOpenFunc("layer-manager-set")
+    layerCloseFunc("layer-manager-set")
+
+    //체크 기능
+    agreeChkFunc(".manager-box","manager_all")
+
     $(".inp-select").on('change', "select[name=range]", function() {
       selectInpRangeSet (".inp-select select[name=range]")
     });
@@ -457,7 +520,6 @@
     $(document).ready(function() {
       $('.inp-select select').niceSelect();
     });
-    layerOpenFunc("layer-manager-set")
   </script>
 </body>
 

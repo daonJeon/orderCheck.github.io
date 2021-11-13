@@ -91,6 +91,44 @@ function selectInpRangeSet(sel) {//셀렉트 박스 - 인풋 연계
 
 }
 
+// 체크 박스 모두 체크 기능 추가
+function agreeChkFunc (wrap, chkAllId) {
+  var wrapArea = document.querySelector(wrap);
+  var chk = wrapArea.querySelectorAll("input[type=checkbox]:not(#"+chkAllId+")")
+  var chk_all = wrapArea.querySelector("#"+chkAllId+"")
+  // 모두 체크/해제
+  chk_all.addEventListener("change",function(e){
+    Array.prototype.forEach.call(chk, function(chk, idx){
+          if(e.target.checked) chk.checked = true
+          else chk.checked = false
+      })
+  })
+  //개별 체크 박스 제어
+  Array.prototype.forEach.call(chk, function(item, idx){
+    item.addEventListener("change",function(e){
+      var chk_num = wrapArea.querySelectorAll("input[type=checkbox]:not(#"+chkAllId+"):checked")
+      if(chk_num.length == chk.length) chk_all.checked = true
+      else chk_all.checked = false
+
+    })
+  })
+
+}
+
+function btnRemoveFunc (wrap,btnClass) {
+  var wrapArea = document.querySelector(wrap);
+  var btns = wrapArea.querySelectorAll(btnClass)
+  Array.prototype.forEach.call(btns, function(btn, idx){
+    btn.addEventListener("click",function(e){
+      var target = ''
+      e.currentTarget.tagName == "button"? target = e.currentTarget : target = e.currentTarget.closest(btnClass)
+      target.parentNode.removeChild (target)
+    })
+  })
+}
+
+
+
 function init () {
   //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")

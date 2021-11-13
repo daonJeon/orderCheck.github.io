@@ -4,18 +4,19 @@ var layerset = null;
 var cntwrap = '#wrap',  // 페이지 컨텐츠 영역
 	layer = '.layer-pop', // 레이어 팝업 공통 클래스
 	layercnt = '.layer-cnt', // 레이어 팝업 내 컨텐츠 영역 클래스
+	closebtn = '.layer-close',
 	onClass = 'now-open'; // 레이어 팝업 오픈 시킨 버튼에 지정될 임시 클래스
 
 function popSet(tg, btn, bgSet, middle){
 	if(bgSet == null) {
-		tabIndexOff(cntwrap);
+		//tabIndexOff(cntwrap);
 	} else {
 		layerset = bgSet;
-		indexOffScroll(cntwrap);
+		//indexOffScroll(cntwrap);
 	}
 	if(middle == true)	popPos(tg);
 	else null;
-	if(btn != null) btn.classList.add(onClass);
+
 }
 
 function popPos(e){
@@ -52,12 +53,11 @@ pos = 레이어 위치 관련 변수 - 값이 없을 경우 - 화면 중앙
 function layerOpenBtn(e, pos){
 
 	var btn = e,
-	tg = btn.getAttribute('data-target');
-	bgSet = btn.getAttribute('data-layerset');
+	tg = btn.getAttribute('data-info');
 
   document.querySelector('#'+tg+'').style.display = "block"
-  document.querySelector('#'+tg+''+layercnt).setAttribute('tabindex','0').focus()
-  popSet(document.querySelector('#'+tg+''), btn, bgSet, true);
+  //document.querySelector('#'+tg+''+ layercnt).setAttribute('tabindex','0')//.focus()
+  popSet(document.querySelector('#'+tg+''), btn, null , true);
 }
 
 // 이벤트 호출용 함수
@@ -66,20 +66,20 @@ function layerOpen(e, pos, bgset){
 	bgSet = bgset;
 
   document.querySelector('#'+tg+'').style.display = "block"
+  document.querySelector('#'+tg+'').classList.add(onClass);
+  //document.querySelector('#'+tg+''+layercnt).setAttribute('tabindex','0')//.focus()
 
-  document.querySelector('#'+tg+''+layercnt).setAttribute('tabindex','0').focus()
-
-  popSet(tg, null, bgSet, true);
+  popSet(tg, null, null, null);
 }
 
 //닫기용 함수 - 레이어 전체
 function layerClose(){
   document.querySelector(layer).style.display = "none"
 
-	if(layerset != null) indexOnScroll(cntwrap);
-	else tabIndexOn(cntwrap);
-	document.querySelector('.'+onClass+'').focus().classList.remove(onClass);
-	layerset = null;
+	//if(layerset != null) indexOnScroll(cntwrap);
+	//else tabIndexOn(cntwrap);
+	document.querySelector('.'+onClass).classList.remove(onClass);
+	//layerset = null;
 }
 
 //닫기용 - 팝업 어려개일 경우 현재 팝업만 닫기.
@@ -94,6 +94,11 @@ function layerOpenFunc (layer) {
     btn.addEventListener("click",function () {
       layerOpen(layer);
     })
+  })
+}
+function layerCloseFunc (layer) {
+  document.querySelector('#'+layer).querySelector(closebtn).addEventListener("click",function (e) {
+    layerClose();
   })
 }
 
