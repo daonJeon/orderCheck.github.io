@@ -45,9 +45,7 @@
 .sidebar .logo-details .btn-side-open {
   position: absolute; top:5px;left:0;
   width: 50px; height: 50px;
-  font-size: 22px;
-  transition: all 1s ease;
-  color: #fff; z-index: 1;
+  font-size: 22px;  color: #fff; z-index: 1;
 }
 
 
@@ -146,8 +144,7 @@ background-color:#fff;}
 .sidebar li a .links_name { padding-left:12px; color: #fff; font-size: 15px; font-weight: 400; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.4s;}
 .sidebar.open li a .links_name {  opacity: 1;  pointer-events: auto;}
 .sidebar li a:hover .links_name {  transition: all 0.5s ease;}
-.sidebar .btm {position: absolute; left:16px; bottom: 10px; transition: all 0.5s ease; overflow: hidden;}
-.sidebar.open .btm {width: 100%}
+.sidebar .btm {position: absolute; left:16px; bottom: 10px; overflow: hidden;}
 .sidebar li .profile-details { display: flex; align-items: center; flex-wrap: nowrap;}
 .sidebar li img { width: 45px; height: 45px; object-fit: cover; border-radius: 6px; margin-right: 10px;}
 .sidebar .btm .name, .sidebar .btm .job {font-size: 15px; font-weight: 400; color: #fff; white-space: nowrap; }
