@@ -1,229 +1,102 @@
-$(document).ready(function(){
-	//btn-select 클릭시, optionbox 와 투명 레이어 생성
-	$(".btn-select").on("click",function(){
-		$(this).closest(".option-wrap").find(".option-box").toggle().next(".tr-bg").show();
-		return false; 
-	})		
-	// btn-select 버튼 클릭시 나타나는 투명 레이어 클릭
-	$(".tr-bg").on("click",function(){
-		$(this).hide().prev(".option-box").hide();
-		return false;
-	})
+//메인 , 드롭 메뉴
+function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
+  var btnMenu = document.querySelectorAll(dropBtn)
 
-	//input focus 시, 레이어 열림
-	$(".search-bar input").on("focus",function() {
-		$(this).closest(".search-bar").addClass("focus")
-		$("#layerpop1").show().find(".search-bar input").focus()
-	})
-	//input focus 사라지면 활성화 취소 
-	$(".search-bar input").on("blur",function() {
-		$(this).closest(".search-bar").removeClass("focus").blur();
-	})
-	//input 내용 제거 
-	$(".btn-remove").on("click",function(){
-		$(this).closest(".inp-txt").find("input").val("")
-	})
+  clickAddClassFunc (btnName,dropBox,"on")
+  clickRemoveClassFunc (btnMenu,dropBox,"on", function (target) {
+    document.querySelector(btnName).querySelector(textArea).innerText = target.innerText
 
-
-	//layer관련 
-	$(".layerOpen").on("click", function(e){
-		var getPopId = $(this).attr("href");
-		var popHalf = $(getPopId).outerHeight()/2;
-		var popH = $(this).offset().top;
-		var layertopPos = popH-popHalf;
-
-		openLayer(getPopId);
-		if(layertopPos<0) {
-			$(getPopId).css('top','10px');
-		} else {
-			$(getPopId).css('top',layertopPos+'px');
-		}
-	   
-		$('html, body').animate({scrollTop : layertopPos}, 400);
-
-		e.preventDefault();
-	});
-	
-	$(".layer-close").on("click", function(){
-		$(this).closest(".layerpop").hide();
-		$(".bg").hide();
-	});
-
-	$(".bg").on("click", function(){
-		$(this).closest(".layerpop").hide();
-		$(this).hide();
-	});
-
-	
-	//list
-	$(".total-list li a,.total-list li button").on("click",function(){
-		$(this).parent().toggleClass("on");
-		return false; 
-
-	})
-	$(".filter-opt li a, .filter-opt li button").on("click",function(){
-		$(this).parent().toggleClass("on").siblings().removeClass("on");
-		return false; 
-	})
-
-	// accordion 
-	accordion();
-
-	//버튼 관련 
-	$(".btn-course").on("click",function(){
-		var display = $(this).next().css("display")
-		
-		if(display=="none") {
-			$(this).next().slideDown().parent().addClass("on");
-		}else{
-			$(this).next().slideUp().parent().removeClass("on");
-		}
-		return false; 
-	})
-
-	$(".btn-more").on("click",function(){
-		$(".timeline li").show();
-		$(this).remove();
-		return false; 
-	})
-	// 더보기 버튼
-	var orginH = $(".btn-link").parent().outerHeight(true);
-
-	$(".btn-link").on("click",function(){
-		$(this).closest(".answerBox").find(".heightLimit").removeClass("heightLimit");
-		$(this).remove();
-		return false; 
-	})
-	//코스 정보 펼쳐보기 버튼
-	$(".btn-allopen").on("click",function(){
-		if($(this).hasClass("open")) {
-			$(this).text("펼쳐보기").removeClass("open").prev(".timeline").find(">li").removeClass("on").find(".box-course").hide()
-		} else {
-			$(this).text("닫기").addClass("open").prev(".timeline").find(">li").addClass("on").find(".box-course").show()
-		}
-		return false; 
-	})
-
-
-	//스크롤 이동 
-	onePage ();
-	//슬라이더
-	slider ();
-})
-
-function openLayer(id) {//레이어 오픈
-	$(id).show();
-	$(".bg").show();
-}
-
-function accordion() {// 아코디언 메뉴
-	$accBox = $(".accBox");
-	$accBox.find("a").on("click",function(){
-		var display = $(this).next().css("display");
-		if(display=="none") {
-			$(this).parent().addClass("on").siblings().removeClass("on").end().find(".answerBox").stop().slideDown();
-		}else{
-			$(this).parent().removeClass("on").find(".answerBox").stop().slideUp();
-		}
-		return false;
-	});
-	$(".accBox li").each(function(){
-		var contentShow = $(this).hasClass("on")
-		if( contentShow ) {
-			$(this).find(".answerBox").show();
-		}
-	}) 
-	
-}
-//스크롤 이동
-function onePage () {
-	var $menu=$(".tab-box ul li");
-	var $cnt=$(".tab-cnt li");
-	var headHei=$(".tab-type1 ul").outerHeight();
-	var $this = $(this);
-
-	//1)indicator에 a를 클릭하는 경우
-	$menu.children(">a").on("click",function  () {
-		//1-1) indicator li에 .on 제어
-		$(this).parent().addClass("on").siblings().removeClass("on");		
-		//1-2) html과 body를 animate시켜 원하는 article에 이동
-		var tg=$(this).attr("href");
-		var posY=$(tg).offset().top-headHei;
-
-		$(window).off("scroll");	
-		$("html, body").animate({scrollTop:posY}, 500, function () {
-			$(window).on("scroll");	
-		});
-
-		return false;
-	});
-
+  })
 
 }
-//이미지 슬라이더
-function slider () {
-	var $visual=$(".gallery-slider .visual > li");
-	var $paging=$(".gallery-slider .paging li");
-	var total=$visual.length;
-	var nowNum=0;
-	var nextNum;
-	var playNext;		
+dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')
 
-	//1) paging 버튼을 클릭하는 경우
-	$paging.children().on("click",function  () {
-		nextNum=$(this).parent().index();
-		//clearInterval(playNext);
+//우측 슬라이드 메뉴
+function slideMenu () {
+  clickAddClassFunc (".btn-menu",".gnb-box","open")
+  clickRemoveClassFunc (".close-box",".gnb-box","open")
+}
 
-		//제어3) 자기자신은 클릭하지 못하게 한다
-		if (nowNum==nextNum) return false;
+slideMenu()
 
+//좌측 슬라이드 메뉴
+//클릭 이벤트 시, add class 용
+function clickAddClassFunc (clickBtn, addArea,className,callback) {
+  var wrap = document.querySelectorAll(addArea);
+  var btn = document.querySelectorAll(clickBtn);
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function () {
+      wrap[idx].classList.toggle(className);
+      if(callback != null) callback()
+    });
+  })
+}
+function clickRemoveClassFunc (clickBtn, removeArea,className,callback) {
+  var btn;
+  typeof clickBtn  == "string" ? btn =  document.querySelectorAll(clickBtn) : btn = clickBtn;
 
-		if(nowNum < nextNum){
-			//1-1) $pagingi태그 on 클래스명 제어
-			$(this).parent().addClass("on").siblings().removeClass("on");
-			//1-2) $visual을 animate 시키기
-			$visual.eq(nowNum).css("left","50%").stop().animate({left:"-150%"});
-			$visual.eq(nextNum).css("left","150%").stop().animate({left:"50%"});
-			nowNum=nextNum;
-		}  else {
-				$(this).parent().addClass("on").siblings().removeClass("on");
-				$visual.eq(nowNum).css("left","50%").stop().animate({left:"150%"});
-				$visual.eq(nextNum).css("left","-150%").stop().animate({left:"50%"});
-				nowNum=nextNum;
-		}
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.target.closest(removeArea).classList.remove(className);
+      if(callback != null) callback(e.currentTarget)
+    });
+  })
+}
 
-		return false;
-	});
-
-	//2) 자동으로 슬라이더 되는 경우
-	function timer () {
-		playNext=setInterval(function  () {
-			nextNum=nowNum+1;
-			if (nextNum==3) nextNum=0;
-			
-			//2-1) $paging태그 on 클래스명 제어
-			$paging.eq(nextNum).addClass("on").siblings().removeClass("on");
-			//2-2) $visual을 animate 시키기
-			$visual.eq(nowNum).css("left",0).stop().animate({left:"-100%"});
-			$visual.eq(nextNum).css("left","100%").stop().animate({left:0});
-
-			nowNum++;		
-			if (nowNum==3) nowNum=0;
+function selectInpRangeSet(sel) {//셀렉트 박스 - 인풋 연계
+  //셀렉트 박스 선택 값에 따라서 input value change
+  var rangeSelect = document.querySelector(sel);
+  var selectValue = rangeSelect.options[rangeSelect.selectedIndex].value
+  var result = ''
+  var inpTxt =  document.querySelector(".inp.inp-cal input")
 
 
-		}, 1000);
-	}
+  if(selectValue == 'today') result = getDate(0)
+  else if(selectValue == 'yesterday') result = getDate(-1)
+  else if(selectValue == 'lastweek') result = getDate(-7)
+  else if(selectValue == 'thismonth') result = getDate("lastmonth")
+  else if(selectValue == 'lastyear') result = getDate("lastyear")
+  else if(selectValue == 'all') result = getDate(0)
+  else if(selectValue == 'custom') result = getDate(0)
+  inpTxt.value = result
 
-	//3) 이전, 다음 버튼을 클릭하는 경우
-	$(".gallery-slider .prev_next a").on("click",function  () {
-		var num=$(this).index();
 
-		num==0? nextNum=nowNum-1 : nextNum=nowNum+1;
-		if (nextNum==-1) return false;
-		else if (nextNum==3) return false;
-		$paging.eq(nextNum).children().click();
+  function getDate (gap) {
+    var now = new Date();
+    var resultDay;
 
-		return false;
-	});
+    var nowYear = now.getFullYear(),
+    nowMonth = now.getMonth() + 1,
+    nowDate = now.getDate();
+    nowMonth < 10 ? nowMonth = '0' + nowMonth :  nowMonth
+    nowDate < 10 ? nowDate = '0' + nowDate : nowDate
+
+    if(gap == 'lastyear') resultDay = new Date(now.setFullYear(now.getFullYear() - 1))
+    else if(gap == 'lastmonth') resultDay = new Date(now.setMonth(now.getMonth() - 1))
+    else resultDay = new Date(now.setDate(now.getDate() - gap));
+
+    var resultYear = resultDay.getFullYear(),
+    resultMonth = resultDay.getMonth() + 1,
+    resultDate = resultDay.getDate();
+    resultMonth < 10 ? resultMonth = '0' + resultMonth :  resultMonth
+    resultDate < 10 ? resultDate = '0' + resultDate : resultDate
+
+    function getResult (gap) {
+      gap == 0 ? result = nowYear +'.'+ nowMonth +'.'+ nowDate : result =  resultYear +'.'+ resultMonth +'.'+ resultDate +'~'+ nowYear +'.'+ nowMonth +'.'+ nowDate
+      return result
+
+    }
+    return getResult(gap)
+  }
 
 }
+
+function init () {
+  //모든 페이지용 함수
+  clickAddClassFunc(".btn-side-open",".sidebar","open")
+
+}
+
+
+
+

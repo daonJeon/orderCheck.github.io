@@ -12,17 +12,17 @@
 	ul, ol, li{list-style:none;}
 	button, span, label{display:inline-block;background:none;border:0;}
 	button, input[type='checkbox'], input[type='radio'], input[type='submit'], input[type='image'] {cursor:pointer;}
-	
+
 	table, th, td{border-collapse:collapse;margin:0;padding:0;}
 	table caption, legend {position:absolute; top:-999em; left:-999em; }
-	
+
 	select, input, textarea{font-family:dotum,AppleGothic,sans-serif;color:#363636;padding:0;margin:0;}
 	textarea, iframe{font-size:12px;font-family:dotum,AppleGothic,sans-serif;color:#363636;outline-style:none;}
 	input, select{outline-style:none;outline:none;background:#fff;color:#363636;}
 	input:not([type='checkbox']), input:not([type='radio']), textarea, select {border-radius:0;}
 	input:not([type='checkbox']), input:not([type='radio']), textarea, select {-webkit-appearance:none; -moz-appearance:none; appearance:none;}
 	::-webkit-input-placeholder {color:#BBBBBB;}
-	:-ms-input-placeholder {color:#BBBBBB;} 
+	:-ms-input-placeholder {color:#BBBBBB;}
 
 	a {text-decoration:none;color:inherit;}
 	a:hover, a:link, a:visited, a:active{text-decoration:none;padding:0;/*outline-style:none;*/}
@@ -104,14 +104,14 @@
 			});
 
 
-			//종료일에 값이 있으면 색 어두워짐 
+			//종료일에 값이 있으면 색 어두워짐
 
 			$(this).find("tbody tr").each(function(index){
 				var enddate = $(".list tbody tr td").eq(7);
 
 				if(! enddate.text() == "") {
-					
-				} 
+
+				}
 			});
 		});
 		$(".list tr.del td:first-child").text("삭제");
@@ -192,7 +192,7 @@
 				<td></td><!-- Depth 3 -->
 				<td></td><!-- Depth 4 -->
 				<td></td><!-- Depth 5 -->
-				<td><a target="_blank" href="html/custom_manage.html">custom_manage.html</a></td><!-- File Name -->
+				<td><a target="_blank" href="html/customManage_list.html">customManage_list.html</a></td><!-- File Name -->
 				<td class="date"></td><!-- 종료일 -->
 				<td class="state">진행전</td><!-- 상태 -->
 				<td></td><!-- 수정내역 -->
@@ -202,10 +202,88 @@
 				<td></td><!-- No. -->
 				<td></td><!-- Depth 1 -->
 				<td>상세</td><!-- Depth 2 -->
+				<td>메인</td><!-- Depth 3 -->
+				<td></td><!-- Depth 4 -->
+				<td></td><!-- Depth 5 -->
+				<td><a target="_blank" href="html/customManage_detail-main.html">customManage_detail-main.html</a></td><!-- File Name -->
+				<td class="date"></td><!-- 종료일 -->
+				<td class="state">진행전</td><!-- 상태 -->
+				<td></td><!-- 수정내역 -->
+				<td></td><!-- 비고 -->
+			</tr>
+			<tr>
+				<td></td><!-- No. -->
+				<td></td><!-- Depth 1 -->
+				<td></td><!-- Depth 2 -->
+				<td>기본정보</td><!-- Depth 3 -->
+				<td></td><!-- Depth 4 -->
+				<td></td><!-- Depth 5 -->
+				<td><a target="_blank" href="html/customManage_detail-default.html">customManage_detail-default.html</a></td><!-- File Name -->
+				<td class="date"></td><!-- 종료일 -->
+				<td class="state">진행전</td><!-- 상태 -->
+				<td></td><!-- 수정내역 -->
+				<td></td><!-- 비고 -->
+			</tr>
+			<tr>
+				<td></td><!-- No. -->
+				<td></td><!-- Depth 1 -->
+				<td></td><!-- Depth 2 -->
+				<td>견적 리스트</td><!-- Depth 3 -->
+				<td></td><!-- Depth 4 -->
+				<td></td><!-- Depth 5 -->
+				<td><a target="_blank" href="html/customManage_detail-orderList.html">customManage_detail-orderList.html</a></td><!-- File Name -->
+				<td class="date"></td><!-- 종료일 -->
+				<td class="state">진행전</td><!-- 상태 -->
+				<td></td><!-- 수정내역 -->
+				<td></td><!-- 비고 -->
+			</tr>
+			<tr>
+				<td></td><!-- No. -->
+				<td></td><!-- Depth 1 -->
+				<td></td><!-- Depth 2 -->
+				<td>견적 카드형</td><!-- Depth 3 -->
+				<td></td><!-- Depth 4 -->
+				<td></td><!-- Depth 5 -->
+				<td><a target="_blank" href="html/customManage_detail-orderCard.html">customManage_detail-orderCard.html</a></td><!-- File Name -->
+				<td class="date"></td><!-- 종료일 -->
+				<td class="state">진행전</td><!-- 상태 -->
+				<td></td><!-- 수정내역 -->
+				<td></td><!-- 비고 -->
+			</tr>
+			<tr>
+				<td></td><!-- No. -->
+				<td></td><!-- Depth 1 -->
+				<td>신규 고객등록</td><!-- Depth 2 -->
 				<td></td><!-- Depth 3 -->
 				<td></td><!-- Depth 4 -->
 				<td></td><!-- Depth 5 -->
-				<td><a target="_blank" href="html/custom_manage-detail.html">custom_manage-detail.html</a></td><!-- File Name -->
+				<td><a target="_blank" href="html/customManage_detail-new.html">customManage_detail-new.html</a></td><!-- File Name -->
+				<td class="date"></td><!-- 종료일 -->
+				<td class="state">진행전</td><!-- 상태 -->
+				<td></td><!-- 수정내역 -->
+				<td></td><!-- 비고 -->
+			</tr>
+			<tr>
+				<td></td><!-- No. -->
+				<td></td><!-- Depth 1 -->
+				<td>고객 연결 </td><!-- Depth 2 -->
+				<td></td><!-- Depth 3 -->
+				<td></td><!-- Depth 4 -->
+				<td></td><!-- Depth 5 -->
+				<td><a target="_blank" href="html/customManage_detail-connect.html">customManage_detail-connect.html</a></td><!-- File Name -->
+				<td class="date"></td><!-- 종료일 -->
+				<td class="state">진행전</td><!-- 상태 -->
+				<td></td><!-- 수정내역 -->
+				<td></td><!-- 비고 -->
+			</tr>
+			<tr>
+				<td></td><!-- No. -->
+				<td></td><!-- Depth 1 -->
+				<td>고객 공유</td><!-- Depth 2 -->
+				<td></td><!-- Depth 3 -->
+				<td></td><!-- Depth 4 -->
+				<td></td><!-- Depth 5 -->
+				<td><a target="_blank" href="html/customManage_detail-share.html">customManage_detail-share.html</a></td><!-- File Name -->
 				<td class="date"></td><!-- 종료일 -->
 				<td class="state">진행전</td><!-- 상태 -->
 				<td></td><!-- 수정내역 -->
