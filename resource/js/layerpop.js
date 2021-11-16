@@ -102,6 +102,88 @@ function layerCloseFunc (layer) {
   })
 }
 
+//생성용 레이어
+function nlayerAlert(title, ment, btn, tg) {
+	var body = document.querySelector('body');
+
+	var btnTx = btn == null ? '확인' : btn;
+	var layerCnt = '<div class="layer-pop alert" id="nAlert">';
+		layerCnt += '<div class="layer-cnt">';
+
+		if(title != '') {
+			layerCnt += '<div class="layer-top">';
+			layerCnt += '<h2 class="layer-title">'+ title +'</h2>';
+			layerCnt += '</div>';
+		}
+
+		layerCnt += '<div class="layer-mid">';
+		layerCnt += '<p class="alert-msg">'+ment+'</p>';
+		layerCnt += '<div class="layer-btn tr">';
+		layerCnt += '<button type="button" class="btn btn-gray close-layer"><span>'+btnTx+'</span></button>';
+		layerCnt += '</div>';
+		layerCnt += '</div>';
+		layerCnt += '<button type="button" class="btn-close close-layer"><span class="txt">팝업 닫기</span></button>';
+		layerCnt += '</div>';
+		layerCnt += '</div>';
+
+	body.insertAdjacentHTML('beforeend', layerCnt);
+	var alert = document.querySelector('#nAlert'),
+		close = alert.querySelector('#nAlert .close-layer');
+
+  document.querySelector('#nAlert').style.display="block";
+	close.focus();
+
+	close.addEventListener('click', function(){
+		alert.parentNode.removeChild(alert);
+		if(tg != null) tg.focus();
+	});
+}
+
+// 생성용 레이어
+function nlayerConfirm(active, title, ment, btn1, btn2) {
+	var body = document.querySelector('body');
+
+	var btnCancel = btn1 == null ? '취소' : btn1,
+		btnOk = btn2 == null ? '확인' : btn2;
+
+	var layerCnt = '<div class="layer-pop confirm" id="nConfirm">';
+		layerCnt += '<div class="layer-cnt">';
+		if(title != '') {
+			layerCnt += '<div class="layer-top">';
+			layerCnt += '<h2 class="layer-title">'+ title +'</h2>';
+			layerCnt += '</div>';
+		}
+		layerCnt += '<div class="layer-mid">';
+		layerCnt += '<p class="confirm-msg">'+ment+'</p>';
+		layerCnt += '<div class="layer-btn tr">';
+		layerCnt += '<button type="button" class="btn btn-gray close-layer"><span>'+ btnCancel +'</span></button>';
+		layerCnt += '<button type="button" class="btn btn-bk close-layer btn-ok"><span>'+ btnOk +'</span></button>';
+		layerCnt += '</div>';
+		layerCnt += '</div>';
+		layerCnt += '<button type="button" class="btn-close close-layer"><span class="txt">팝업 닫기</span></button>';
+		layerCnt += '</div>';
+		layerCnt += '</div>';
+
+	body.insertAdjacentHTML('beforeend', layerCnt);
+	var confirm  = document.querySelector('#nConfirm'),
+		cancel = confirm.querySelectorAll('#nConfirm .close-layer'),
+		ok 	   = confirm.querySelector('#nConfirm .btn-ok');
+
+	document.querySelector('#nConfirm').style.display="block";
+
+  Array.prototype.forEach.call(cancel, function(cancelBtn, idx){
+    cancelBtn.addEventListener('click', function(){
+      confirm.parentNode.removeChild(confirm);
+    });
+  })
+	ok.addEventListener('click', function(){
+		confirm.parentNode.removeChild(confirm);
+		if(typeof active === 'function') {
+			active();
+		}
+	});
+}
+
 /* 레이어 팝업 기능 안내
 값이 없을 경우 - 배경화면 스크롤 유지
 'fixed' 일 경우 - 배경화면 position 속성을 fixed 로 설정

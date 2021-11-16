@@ -1,3 +1,46 @@
+// closest 기능 함수 설정
+if (window.Element && !Element.prototype.closest) {
+  Element.prototype.closest =
+  function(s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+          i,
+          el = this;
+      do {
+          i = matches.length;
+          while (--i >= 0 && matches.item(i) !== el) {};
+      } while ((i < 0) && (el = el.parentElement));
+      return el;
+  };
+}
+
+// parents 기능 함수 - 부모요소 배열 반환
+Element.prototype.parents = function(selector) {
+	var elements = [];
+	var elem = this;
+	var ishaveselector = selector !== undefined;
+
+	while ((elem = elem.parentElement) !== null) {
+		if (elem.nodeType !== Node.ELEMENT_NODE) {
+			continue;
+		}
+
+		if (!ishaveselector || elem.matches(selector)) {
+			elements.push(elem);
+		}
+	}
+
+	return elements;
+};
+
+//remove support
+if (!('remove' in Element.prototype)) {
+  Element.prototype.remove = function() {
+      if (this.parentNode) {
+          this.parentNode.removeChild(this);
+      }
+  };
+}
+
 //메인 , 드롭 메뉴
 function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
   var btnMenu = document.querySelectorAll(dropBtn)
@@ -127,6 +170,40 @@ function btnRemoveFunc (wrap,btnClass) {
   })
 }
 
+function tabFunc (tabwrap) {
+  var wrap = document.querySelector(tabwrap)
+  var tabBtn = wrap.querySelectorAll(".tab-btn")
+  var slider = wrap.querySelector(".slider")
+  var tabContent = document.querySelectorAll(".content")
+
+  Array.prototype.forEach.call(tabBtn, function(tab, idx){
+    tab.addEventListener("click", function (e) {
+      Array.prototype.forEach.call(tabBtn, function(tab, idx){
+        tab.parentNode.classList.remove("on")
+        tabContent[idx].classList.remove("active")
+    })
+
+    var id = e.target.getAttribute("data-tab");
+    slider.style.width = e.currentTarget.parentNode.clientWidth + "px"
+    slider.style.left = e.currentTarget.offsetLeft + "px"
+    e.currentTarget.parentNode.classList.add("on")
+    document.getElementById(id).classList.add("active");
+    })
+  })
+
+}
+
+function accordionFunc (btnName) {
+  var title = document.querySelectorAll(btnName);
+
+  for(var i = 0; i < title.length; i++){
+    title[i].addEventListener("click", function(){
+      var result = this.nextElementSibling;
+      result.parentNode.classList.toggle("active");
+
+    })
+  }
+}
 
 
 function init () {
