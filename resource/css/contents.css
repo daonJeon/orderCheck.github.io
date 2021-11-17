@@ -161,8 +161,7 @@
 .accordion-cnt .info-list > li strong + var {margin-left:5px}
 
 .card .info-list {display:block; margin-top:27px}
-.card .list-linkbox {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
-.card .list-linkbox > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box;
-  box-sizing: border-box;  border-radius: 6px;}
-.card .list-linkbox > li + li {margin-left:.5%}
-.card .list-linkbox .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
+.list-linkbox.card  {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
+.list-linkbox.card  > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box; box-sizing: border-box;  border-radius: 6px;}
+.list-linkbox.card  > li + li {margin-left:.5%}
+.list-linkbox.card  .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
