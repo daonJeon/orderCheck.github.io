@@ -166,3 +166,5 @@
 .list-linkbox.card  > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box; box-sizing: border-box;  border-radius: 6px;}
 .list-linkbox.card  > li + li {margin-left:.5%}
 .list-linkbox.card  .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
+.list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
+.list-linkbox.card .info-list .desc {overflow:hidden}
