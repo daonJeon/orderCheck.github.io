@@ -102,8 +102,18 @@ function layerCloseFunc (layer) {
   })
 }
 
+function layerFunc (openBtns) {
+  var openBtn = document.querySelectorAll(openBtns)
+  Array.prototype.forEach.call(openBtn, function(btn, idx){
+    var layer = btn.getAttribute("data-info")
+    console.log(btn)
+    layerOpenFunc(layer)
+    layerCloseFunc(layer)
+
+  })
+}
 //생성용 레이어
-function nlayerAlert(title, ment, btn, tg) {
+function layerAlert(title, msg, btn, tg) {
 	var body = document.querySelector('body');
 
 	var btnTx = btn == null ? '확인' : btn;
@@ -117,7 +127,7 @@ function nlayerAlert(title, ment, btn, tg) {
 		}
 
 		layerCnt += '<div class="layer-mid">';
-		layerCnt += '<p class="alert-msg">'+ment+'</p>';
+		layerCnt += '<p class="alert-msg">'+msg+'</p>';
 		layerCnt += '<div class="layer-btn tr">';
 		layerCnt += '<button type="button" class="btn btn-gray close-layer"><span>'+btnTx+'</span></button>';
 		layerCnt += '</div>';
@@ -140,7 +150,7 @@ function nlayerAlert(title, ment, btn, tg) {
 }
 
 // 생성용 레이어
-function nlayerConfirm(active, title, ment, btn1, btn2) {
+function layerConfirm(active, title, msg, btn1, btn2) {
 	var body = document.querySelector('body');
 
 	var btnCancel = btn1 == null ? '취소' : btn1,
@@ -154,7 +164,7 @@ function nlayerConfirm(active, title, ment, btn1, btn2) {
 			layerCnt += '</div>';
 		}
 		layerCnt += '<div class="layer-mid">';
-		layerCnt += '<p class="confirm-msg">'+ment+'</p>';
+		layerCnt += '<p class="confirm-msg">'+msg+'</p>';
 		layerCnt += '<div class="layer-btn tr">';
 		layerCnt += '<button type="button" class="btn btn-gray close-layer"><span>'+ btnCancel +'</span></button>';
 		layerCnt += '<button type="button" class="btn btn-bk close-layer btn-ok"><span>'+ btnOk +'</span></button>';
@@ -167,7 +177,7 @@ function nlayerConfirm(active, title, ment, btn1, btn2) {
 	body.insertAdjacentHTML('beforeend', layerCnt);
 	var confirm  = document.querySelector('#nConfirm'),
 		cancel = confirm.querySelectorAll('#nConfirm .close-layer'),
-		ok 	   = confirm.querySelector('#nConfirm .btn-ok');
+		okBtn 	   = confirm.querySelectorAll('#nConfirm .btn-ok');
 
 	document.querySelector('#nConfirm').style.display="block";
 
@@ -176,16 +186,14 @@ function nlayerConfirm(active, title, ment, btn1, btn2) {
       confirm.parentNode.removeChild(confirm);
     });
   })
-	ok.addEventListener('click', function(){
-		confirm.parentNode.removeChild(confirm);
-		if(typeof active === 'function') {
-			active();
-		}
-	});
+  Array.prototype.forEach.call(okBtn, function(ok, idx){
+    ok.addEventListener('click', function(){
+      confirm.parentNode.removeChild(confirm);
+      if(typeof active === 'function') {
+        active();
+      }
+    });
+  })
+
+
 }
-
-/* 레이어 팝업 기능 안내
-값이 없을 경우 - 배경화면 스크롤 유지
-'fixed' 일 경우 - 배경화면 position 속성을 fixed 로 설정
-
-*/

@@ -99,7 +99,8 @@ input { outline: none; border: none; background: none}
 .cnt-inner .right.line {padding:20px 26px; border: 1px solid #CDD1DA; border-radius: 10px; box-sizing: border-box;}
 .cnt-inner .right .content {padding:20px 0; height: 100%; box-sizing: border-box;}
 
-
+.textarea {width:100%;height:120px;padding: 0;margin: 0;border: 1px solid #E7E7E7;resize: none;}
+.revise-box {margin-top:30px; margin-bottom:12px;}
 @media all and (max-width: 768px){
 
 }
@@ -151,7 +152,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .btn-side-close:before {transform:rotate(45deg)}
 .btn-close:after,
 .btn-side-close:after {transform:rotate(-45deg)}
-
+.btn-manager-add .ico.plus,
 .btn-bk .ico.plus {margin-right:5px}
 .btn-bk .ico.plus:after,
 .btn-bk .ico.plus:before {background-color: #fff;}
@@ -225,8 +226,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .layer-pop.alert .btn-group,
 .layer-pop.confirm .btn-group {display:flex; justify-content: right;}
 .layer-pop.confirm .alert-msg,
-.layer-pop.confirm .confirm-msg {margin-bottom:63px; font-weight:700;font-size:22px; line-height:32px; color:#41495D; }
-
+.layer-pop.confirm .confirm-msg {font-weight:700;font-size:22px; line-height:32px; color:#41495D; }
+.layer-pop.confirm .alert-msg + .layer-btn,
+.layer-pop.confirm .confirm-msg + .layer-btn {margin-top:63px;}
 .btn-gray {background-color:#EBEBEB; font-weight:700; font-size:16px; line-height:23px; color:#9A9A9A; }
 
 /* location */
@@ -321,7 +323,7 @@ background-color:#fff;}
 /* data-empty-box */
 .data-empty-box {display:flex; height:100%; justify-content: center; align-items:center; }
 .data-empty-box.bg .txt {padding-top:230px; background: url(../images/common/bg_empty-custom.png) no-repeat top center;}
-.data-empty-box .txt {font-weight: bold; font-size: 18px; line-height: 26px; color: #9A9A9A;}
+.data-empty-box .txt {font-weight: 700; font-size: 18px; line-height: 26px; color: #9A9A9A;}
 .data-empty-box.customer {height:708px}
 .data-empty-box.customer .txt {padding-top:160px; background: url(../images/common/bg_empty-customer.png) no-repeat top 20px center;}
 
@@ -340,7 +342,7 @@ background-color:#fff;}
 
 .badge.position{display:inline-block; width:35px; height:21px; padding:2px; border-radius: 4px;border: 1px solid #E2E2E2; font-weight: 500; font-size: 12px; line-height: 17px; text-align: center; color: #7B7B7B; box-sizing: border-box;}
 input:checked + label .badge.position {background-color:#1D58FF; color:#fff; vertical-align: middle;}
-.info-list {display:block; margin-top:27px}
+
 .list-linkbox {margin-top:15px;}
 .list-linkbox .checkbox {vertical-align: middle;}
 .list-linkbox .name {margin-right:6px; font-weight: bold; font-size: 20px; line-height: 29px;  color: #41495D; vertical-align: middle;}

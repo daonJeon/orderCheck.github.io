@@ -46,7 +46,7 @@
 .filter-box {margin-bottom:36px; }
 .filter-box .checkbox {display:inline-block; width:32%; font-size:14px; color:#414C5D}
 .filter-box .checkbox:nth-child(-n + 3) {margin-bottom:12px;}
-.filter-title {margin-bottom:12px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
+.filter-title {display:inline-block; margin-bottom:12px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
 
 .inp-row {display:flex; justify-content: space-between;}
 .inp-row .inp {width:49%}
@@ -142,6 +142,7 @@
 
 .accordion {}
 .accordion-box { border:1px solid #E5E7EC; border-radius: 8px; overflow: hidden; }
+.accordion-box.active {border-color:#02164F}
 .accordion-box + .accordion-box {margin-top:12px}
 .accordion .accordion-title {position: relative; display:block; width:100%; padding:17px 21px; font-size: 14px; line-height: 20px; color: #7B7B7B; text-align: left;}
 .accordion .accordion-title .badge {margin-left:16px; font-weight: 500;}
@@ -159,8 +160,9 @@
 .accordion-cnt .info-list > li .ico {margin-right:8px}
 .accordion-cnt .info-list > li strong + var {margin-left:5px}
 
+.card .info-list {display:block; margin-top:27px}
 .card .list-linkbox {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
 .card .list-linkbox > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box;
   box-sizing: border-box;  border-radius: 6px;}
-  .card .list-linkbox > li + li {margin-left:.5%}
-  .card .list-linkbox .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
+.card .list-linkbox > li + li {margin-left:.5%}
+.card .list-linkbox .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
