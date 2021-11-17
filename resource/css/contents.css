@@ -140,7 +140,6 @@
 .layer-btn > .btn-bk-line{ min-width:auto; width:107px;}
 .layer-btn > .btn-bk { min-width:auto; width:90px;}
 
-.accordion {}
 .accordion-box { border:1px solid #E5E7EC; border-radius: 8px; overflow: hidden; }
 .accordion-box.active {border-color:#02164F}
 .accordion-box + .accordion-box {margin-top:12px}

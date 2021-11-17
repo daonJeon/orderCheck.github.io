@@ -347,6 +347,6 @@ input:checked + label .badge.position {background-color:#1D58FF; color:#fff; ver
 .list-linkbox .checkbox {vertical-align: middle;}
 .list-linkbox .name {margin-right:6px; font-weight: bold; font-size: 20px; line-height: 29px;  color: #41495D; vertical-align: middle;}
 .list-linkbox .date {font-size: 15px; line-height: 22px;  color: #41495D; vertical-align: middle;}
-.list-linkbox .badge.position {margin-left:13px; margin-right:12px;}
+.list-linkbox .badge.position {margin-right:12px;}
 .list-linkbox > li > a {position: relative; display:block;}
 .list-linkbox > li > a:after {display:block; margin-top:-15px; position:absolute; top:50%; right:20px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; vertical-align: middle; transform:rotate(-90deg); content:''}
