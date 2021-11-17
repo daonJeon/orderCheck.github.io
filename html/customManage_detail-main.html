@@ -381,7 +381,7 @@
                           </select>
                           <!-- select -->
                         </div>
-                        <button type="button" class="btn btn-bk-line"><span>견적 업로드</span></button>
+                        <button type="button" class="btn btn-bk-line open-layer" data-info="layer-estimate-upload"><span>견적 업로드</span></button>
                       </div>
                       <!-- 리스트 -->
                       <div class="tbl-type1" style="display:none">
@@ -429,7 +429,7 @@
                                 <button type="button" class="btn-round delete"><span>지우기</span></button>
                               </td>
                             </tr>
-                            <tr>
+                            <tr class="del">
                               <td>
                                 <span class="checkbox">
                                   <input type="checkbox" name="estimate" id="estimate03" class="check">
@@ -490,73 +490,71 @@
                         </table>
                       </div>
                       <!-- 카드형 -->
-                      <div class="estimate-box card">
-                        <ul class="list-linkbox">
-                          <li>
-                            <div class="tbl-top">
-                              <div class="top-title">
-                                <span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var>
-                              </div>
-                              <div class="">
-                                <button type="button" class="btn-round edit"><span>글쓰기</span></button>
-                                <button type="button" class="btn-round delete"><span>지우기</span></button>
-                              </div>
+                      <ul class="list-linkbox card">
+                        <li>
+                          <div class="tbl-top">
+                            <div class="top-title">
+                              <span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var>
                             </div>
-                            <p class="txt">도배, 마루 견적서</p>
-                            <ul class="info-list">
-                              <li><span class="head">파일</span><span class="desc"><a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a> <a href="sampletext.pdf" class="btn-link" target="_blank" download>다운로드</a></span></li>
-                              <li><span class="head">견적금액</span><span class="desc">1억 3,429 만 원</span></li>
-                              <li><span class="head">업로드 일시</span><span class="desc">-</span></li>
-                              <li><span class="head">공유 일시</span><span class="desc">2021.10.21</span></li>
-                              <li><span class="head">확인 유무</span><strong class="desc">미확인</strong></li>
-                            </ul>
-                            <button type="submit" class="btn btn-light-blue"><span>공유하기</span></button>
-
-                          </li>
-                          <li>
-                            <div class="tbl-top">
-                              <div class="top-title">
-                                <span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var>
-                              </div>
-                              <div class="">
-                                <button type="button" class="btn-round edit"><span>글쓰기</span></button>
-                                <button type="button" class="btn-round delete"><span>지우기</span></button>
-                              </div>
+                            <div class="group">
+                              <button type="button" class="btn-round edit"><span>글쓰기</span></button>
+                              <button type="button" class="btn-round delete"><span>지우기</span></button>
                             </div>
-                            <p class="txt">도배, 마루 견적서</p>
-                            <ul class="info-list">
-                              <li><span class="head">파일</span><span class="desc"><a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a> <a href="sampletext.pdf" class="btn-link" target="_blank" download>다운로드</a></span></li>
-                              <li><span class="head">견적금액</span><span class="desc">1억 3,429 만 원</span></li>
-                              <li><span class="head">업로드 일시</span><span class="desc">-</span></li>
-                              <li><span class="head">공유 일시</span><span class="desc">2021.10.21</span></li>
-                              <li><span class="head">확인 유무</span><strong class="desc">미확인</strong></li>
-                            </ul>
-                            <button type="submit" class="btn btn-light-blue"><span>공유하기</span></button>
+                          </div>
+                          <p class="txt">도배, 마루 견적서</p>
+                          <ul class="info-list">
+                            <li><span class="head">파일</span><span class="desc"><a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a> <a href="sampletext.pdf" class="btn-down" target="_blank" download>다운로드</a></span></li>
+                            <li><span class="head">견적금액</span><span class="desc">1억 3,429 만 원</span></li>
+                            <li><span class="head">업로드 일시</span><span class="desc">-</span></li>
+                            <li><span class="head">공유 일시</span><span class="desc">2021.10.21</span></li>
+                            <li><span class="head">확인 유무</span><strong class="desc tx-darkblue">미확인</strong></li>
+                          </ul>
+                          <button type="submit" class="btn btn-light-blue"disabled><span>공유완료</span></button>
 
-                          </li>
-                          <li>
-                            <div class="tbl-top">
-                              <div class="top-title">
-                                <span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var>
-                              </div>
-                              <div class="">
-                                <button type="button" class="btn-round edit"><span>글쓰기</span></button>
-                                <button type="button" class="btn-round delete"><span>지우기</span></button>
-                              </div>
+                        </li>
+                        <li>
+                          <div class="tbl-top">
+                            <div class="top-title">
+                              <span class="badge position blue">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var>
                             </div>
-                            <p class="txt">도배, 마루 견적서</p>
-                            <ul class="info-list">
-                              <li><span class="head">파일</span><span class="desc"><a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a> <a href="sampletext.pdf" class="btn-link" target="_blank" download>다운로드</a></span></li>
-                              <li><span class="head">견적금액</span><span class="desc">1억 3,429 만 원</span></li>
-                              <li><span class="head">업로드 일시</span><span class="desc">-</span></li>
-                              <li><span class="head">공유 일시</span><span class="desc">2021.10.21</span></li>
-                              <li><span class="head">확인 유무</span><strong class="desc">미확인</strong></li>
-                            </ul>
-                            <button type="submit" class="btn btn-light-blue"><span>공유하기</span></button>
+                            <div class="group">
+                              <button type="button" class="btn-round edit"><span>글쓰기</span></button>
+                              <button type="button" class="btn-round delete"><span>지우기</span></button>
+                            </div>
+                          </div>
+                          <p class="txt">도배, 마루 견적서</p>
+                          <ul class="info-list">
+                            <li><span class="head">파일</span><span class="desc"><a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a> <a href="sampletext.pdf" class="btn-down" target="_blank" download>다운로드</a></span></li>
+                            <li><span class="head">견적금액</span><span class="desc">1억 3,429 만 원</span></li>
+                            <li><span class="head">업로드 일시</span><span class="desc">-</span></li>
+                            <li><span class="head">공유 일시</span><span class="desc">2021.10.21</span></li>
+                            <li><span class="head">확인 유무</span><strong class="desc tx-darkblue">미확인</strong></li>
+                          </ul>
+                          <button type="submit" class="btn btn-light-blue"><span><i class="ico send"></i>공유하기</span></button>
 
-                          </li>
-                        </ul>
-                      </div>
+                        </li>
+                        <li>
+                          <div class="tbl-top">
+                            <div class="top-title">
+                              <span class="badge position gray">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var>
+                            </div>
+                            <div class="group">
+                              <button type="button" class="btn-round edit"><span>글쓰기</span></button>
+                              <button type="button" class="btn-round delete"><span>지우기</span></button>
+                            </div>
+                          </div>
+                          <p class="txt">도배, 마루 견적서</p>
+                          <ul class="info-list">
+                            <li><span class="head">파일</span><span class="desc"><a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a> <a href="sampletext.pdf" class="btn-down" target="_blank" download>다운로드</a></span></li>
+                            <li><span class="head">견적금액</span><span class="desc">1억 3,429 만 원</span></li>
+                            <li><span class="head">업로드 일시</span><span class="desc">-</span></li>
+                            <li><span class="head">공유 일시</span><span class="desc">2021.10.21</span></li>
+                            <li><span class="head">확인 유무</span><strong class="desc tx-darkblue">미확인</strong></li>
+                          </ul>
+                          <button type="submit" class="btn btn-light-blue"><span>공유하기</span></button>
+
+                        </li>
+                      </ul>
                   </div>
                   <div class="content" id="tab3">
                     <div class="checkbox">
@@ -565,12 +563,24 @@
                     </div>
 
                     <!-- 링크 -->
-                    <ul class="list-linkbox">
+                    <ul class="list-linkbox link">
                       <li>
                         <a href="#">
                           <div class="checkbox">
                             <input type="checkbox" name="interlink" id="interlink01" class="check">
                             <label for="interlink01"><span class="box"></span><span><span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var></span></label>
+                          </div>
+                          <ul class="info-list">
+                            <li><span class="head">번호</span><span class="desc">010.1234.5678</span></li>
+                            <li><span class="head">주소</span><span class="desc">서울특별시 성복구 길음동1232-13 현미건물 3층</span></li>
+                          </ul>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="checkbox">
+                            <input type="checkbox" name="interlink" id="interlink02" class="check">
+                            <label for="interlink02"><span class="box"></span><span><span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var></span></label>
                           </div>
                           <ul class="info-list">
                             <li><span class="head">번호</span><span class="desc">010.1234.5678</span></li>
@@ -663,6 +673,71 @@
     </div>
   </div>
 
+  <div class="layer-pop" id="layer-estimate-upload">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">견적 업로드</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="filter-wrap">
+          <div class="filter-box">
+            <p class="filter-title">파일</p>
+            <div class="inp-line">
+              <span class="inp">
+                <input type="file" name="" placeholder="파일 검색">
+              </span>
+              <button type="submit" class="btn btn-light-blue"><span>첨부하기</span></button>
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <h3 class="title">견적 정보</h3>
+            <p class="filter-title">견적 제목</p>
+            <span class="inp">
+              <input type="text" name="" placeholder="시공명_견적서">
+            </span>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">견적 제목</p>
+            <span class="inp">
+              <input type="text" name="" placeholder="시공명_견적서">
+            </span>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">주소 <span class="tx-gray">주소가 맞지 않는 경우 고객이 일치하는지 확인해주세요!</span></p>
+            <div class="inp-line">
+              <span class="inp">
+                <input type="text" name="">
+              </span>
+              <button type="submit" class="btn btn-light-blue"><span>주소 검색</span></button>
+            </div>
+            <div class="inp">
+              <input type="text" name="" placeholder="상세주소">
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">견적 금액</p>
+            <span class="inp">
+              <input type="text" name="" placeholder="0">
+              <span class="unit">원</span>
+            </span>
+            <div class="tx-warning">고객 견적서에 <span class="tx-org">x억 x,xxx,x만원</span>으로 표출됩니다.</div>
+          </div>
+
+        </div><!-- filter wrap-->
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk layer-close"><span>확인</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
   <!-- 내용 수정 레이어 -->
   <div class="layer-pop confirm" id="layer-revise">
     <div class="layer-cnt">
@@ -673,11 +748,11 @@
           <textarea name="" id="textarea1" class="textarea"></textarea>
         </div>
         <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray close-layer"><span>취소</span></button>
-          <button type="button" class="btn btn-bk close-layer btn-ok"><span>확인</span></button>
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
         </div>
       </div>
-      <button type="button" class="btn-close close-layer"><span class="txt">팝업 닫기</span></button>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
     </div>
   </div>
 

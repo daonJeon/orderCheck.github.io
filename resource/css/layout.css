@@ -173,6 +173,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .tbl-type1 td {padding:15px 0; border-bottom:1px solid #C4C4C4; line-height:20px; font-size:14px; }
 .tbl-type1 td.left {text-align: left;}
 .tbl-type1 tbody tr:hover {background-color: #F9FAFE;}
+.tbl-type1 tr.del {background: #F9F9F9;}
+.tbl-type1 tr.del td,
+.tbl-type1 tr.del td .btn-link {font-weight:400; color:#9A9A9A;}
 
 /*===== SELECT =====*/
 
@@ -185,7 +188,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .tabs li.on button {font-weight: bold; color: #02164F;}
 .slider {display:block; position:absolute; width:60px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
 .tabs li var {display:none}
-.tabs li.on var {display:inline-block}
+.tabs li.on var {display:inline-block; margin-left:2px}
 
 /*===== input =====*/
 .inp {position: relative;}
@@ -215,7 +218,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 
 /*===== layer =====*/
 .layer-pop {display:none; width: 100%;height: 100%;position: fixed;left: 0;top: 0; background:rgba(0,0,0,.3);z-index: 100;}
-.layer-pop .layer-cnt {position:absolute;left:50%;top:50%;border-radius:12px; padding:30px 24px; transform:translate(-50%,-50%); background-color:#fff;box-sizing:border-box;z-index:1000}
+.layer-pop .layer-cnt {position:absolute; width:600px; left:50%;top:50%;border-radius:12px; padding:30px 24px; transform:translate(-50%,-50%); background-color:#fff;box-sizing:border-box;z-index:1000}
 .layer-pop.open {display:block}
 .layer-top .title {padding:0px 0px 33px;font-size:18px;}
 .layer-top .title-box h2 {border-bottom:1px solid rgba(0,0,0,0.03);}
@@ -230,13 +233,13 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .layer-pop.confirm .alert-msg + .layer-btn,
 .layer-pop.confirm .confirm-msg + .layer-btn {margin-top:63px;}
 .btn-gray {background-color:#EBEBEB; font-weight:700; font-size:16px; line-height:23px; color:#9A9A9A; }
-
+.layer-mid {max-height:500px; overflow: auto;}
 /* location */
 .location-wrap {display:flex;padding:0 33px;}
 .location-wrap > li {color:#555868;}
 .location-wrap > li img {vertical-align: -1px;}
 .location-wrap > li + li {position:relative; margin-left:14px; }
-.location-wrap > li + li:before {display:inline-block; margin-right:14px; width:8px; height:8px; border-top:2px solid #C6C6C6; border-right:2px solid #C6C6C6; transform:rotate(45deg); vertical-align:1px; content:''}
+.location-wrap > li + li:before {display:inline-block; margin-right:14px; width:7px; height:7px; border-top:2px solid #C6C6C6; border-right:2px solid #C6C6C6; transform:rotate(45deg); vertical-align:1px; content:''}
 .location-wrap + .cnt-box-wrap {padding-top:11px}
 
 /* scrollbar */
@@ -309,6 +312,7 @@ background-color:#fff;}
 .ico.cal { min-width:auto; width:18px; height:18px; background-image:url(../images/common/ico_cal.png); vertical-align: -3px; }
 .ico.folder { min-width:auto; width:18px; height:18px; background-image:url(../images/common/ico_folder.png); vertical-align: -3px; }
 .ico.folder2 { min-width:auto; width:18px; height:18px; background-image:url(../images/common/ico_folder2.png); vertical-align: -3px; }
+.ico.send { min-width:auto; width:20px; height:20px; background-image:url(../images/common/ico_send-hover.png); vertical-align: -5px; }
 
 .sidebar.open .ico {width:28px; height:28px;}
 .sidebar li a .links_name { padding-left:12px; color: #fff; font-size: 15px; font-weight: 400; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.4s;}
@@ -329,7 +333,7 @@ background-color:#fff;}
 
 .tab-content {height: 100%;}
 .tab-content > .content {display: none;}
-.tab-content > .content.active {display: block;}
+.tab-content > .content.active {display: block;position: relative;}
 
 .btn-round {display:inline-block; width:30px; height:30px; border-radius: 50%; border:1px solid #DFDFDF; text-indent:-9999px}
 .btn-round.send {background:url(../images/common/ico_round-send.png) no-repeat center}
@@ -340,13 +344,21 @@ background-color:#fff;}
 .info-list .head {font-weight: 500; font-size: 13px; line-height: 19px; color: #555868;}
 .info-list .desc { margin-left: 8px; font-size: 13px; line-height: 19px; color: #7B7B7B;}
 
-.badge.position{display:inline-block; width:35px; height:21px; padding:2px; border-radius: 4px;border: 1px solid #E2E2E2; font-weight: 500; font-size: 12px; line-height: 17px; text-align: center; color: #7B7B7B; box-sizing: border-box;}
-input:checked + label .badge.position {background-color:#1D58FF; color:#fff; vertical-align: middle;}
+.badge.position {display:inline-block; width:35px; height:21px; padding:2px; border-radius: 4px;border: 1px solid #E2E2E2; font-weight: 500; font-size: 12px; line-height: 15px; text-align: center; color: #7B7B7B; box-sizing: border-box;vertical-align: middle;}
+.badge.position.blue {background-color: #1D58FF; color: #fff;}
+.badge.position.gray {background-color: #EBEDF1; color:#9A9A9A}
+input:checked + label .badge.position {background-color:#1D58FF; color:#fff; }
+.list-linkbox.card .badge.position{vertical-align: -4px; margin-left:0; margin-right:8px; }
 
 .list-linkbox {margin-top:15px;}
 .list-linkbox .checkbox {vertical-align: middle;}
 .list-linkbox .name {margin-right:6px; font-weight: bold; font-size: 20px; line-height: 29px;  color: #41495D; vertical-align: middle;}
 .list-linkbox .date {font-size: 15px; line-height: 22px;  color: #41495D; vertical-align: middle;}
-.list-linkbox .badge.position {margin-right:12px;}
+.list-linkbox:not(card) .badge.position {margin-left:13px; margin-right:12px;}
 .list-linkbox > li > a {position: relative; display:block;}
 .list-linkbox > li > a:after {display:block; margin-top:-15px; position:absolute; top:50%; right:20px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; vertical-align: middle; transform:rotate(-90deg); content:''}
+
+.btn-down {float:right; font-weight:500; font-size:12px; line-height:18px; color:#B8B8B8;}
+
+.tx-darkblue {color:#41495D !important}
+.btn-light-blue:disabled {background-color:#EEEEEE !important; color:#9A9A9A !important}

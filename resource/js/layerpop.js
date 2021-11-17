@@ -73,8 +73,9 @@ function layerOpen(e, pos, bgset){
 }
 
 //닫기용 함수 - 레이어 전체
-function layerClose(){
-  document.querySelector(layer).style.display = "none"
+function layerClose(e){
+
+  e.closest(".layer-pop").style.display = "none"
 
 	//if(layerset != null) indexOnScroll(cntwrap);
 	//else tabIndexOn(cntwrap);
@@ -88,17 +89,22 @@ function layerCloseThis(e){
 	thisLayer.closest('.layer-pop').style.display = "none"
 }
 
-function layerOpenFunc (layer) {
+function layerOpenFunc () {
   layerBtn = document.querySelectorAll(".open-layer")
   Array.prototype.forEach.call(layerBtn, function(btn, idx){
-    btn.addEventListener("click",function () {
+    btn.addEventListener("click",function (e) {
+      var layer = btn.getAttribute("data-info")
       layerOpen(layer);
+      e.currentTarget.classList.add(onClass)
     })
   })
 }
 function layerCloseFunc (layer) {
-  document.querySelector('#'+layer).querySelector(closebtn).addEventListener("click",function (e) {
-    layerClose();
+
+  Array.prototype.forEach.call(document.querySelectorAll(".layer-close"), function(close, idx){
+  close.addEventListener("click",function (e) {
+      layerClose(e.target);
+    })
   })
 }
 
@@ -106,8 +112,8 @@ function layerFunc (openBtns) {
   var openBtn = document.querySelectorAll(openBtns)
   Array.prototype.forEach.call(openBtn, function(btn, idx){
     var layer = btn.getAttribute("data-info")
-    console.log(btn)
-    layerOpenFunc(layer)
+    // console.log(btn)
+    layerOpenFunc()
     layerCloseFunc(layer)
 
   })

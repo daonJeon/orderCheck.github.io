@@ -41,6 +41,7 @@
 .cnt-top .btn-bk-line {position: absolute; right:0; top:0; z-index: 1;}
 
 .tbl-top {display:flex; justify-content: space-between; align-items: center; margin-bottom:15px}
+.tbl-top .inp-select {min-width:130px}
 .tbl-top .cnt-title {font-size: 16px; line-height: 23px; }
 .tbl-top .btn {min-width: 90px}
 .filter-box {margin-bottom:36px; }
@@ -160,8 +161,20 @@
 .accordion-cnt .info-list > li strong + var {margin-left:5px}
 
 .card .info-list {display:block; margin-top:27px}
-.card .list-linkbox {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
-.card .list-linkbox > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box;
-  box-sizing: border-box;  border-radius: 6px;}
-.card .list-linkbox > li + li {margin-left:.5%}
-.card .list-linkbox .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
+.list-linkbox.card  {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
+.list-linkbox.card  > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box; box-sizing: border-box;  border-radius: 6px;}
+.list-linkbox.card  > li + li {margin-left:.5%}
+.list-linkbox.card  .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
+.list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
+.list-linkbox.card .info-list .desc {overflow:hidden}
+.list-linkbox.card .btn-link:last-child {float:right}
+.list-linkbox.card .info-list > li + li {margin-top:8px}
+
+.list-linkbox.link  {border:none; padding:0; }
+.list-linkbox.link > li + li {margin-top:12px;}
+.list-linkbox.link > li {position: relative; padding:20px 18px; border: 1px solid #E5E7EC;  box-sizing: border-box;  border-radius: 6px;}
+.list-linkbox.link .info-list {margin-top:27px}
+.list-linkbox.link .info-list > li + li {margin-top:8px}
+.list-linkbox .checkbox .box {vertical-align: middle;}
+
+.btn-group.btm {position:absolute; bottom:23px; left:0; width:100%; }
