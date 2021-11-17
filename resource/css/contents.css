@@ -169,3 +169,4 @@
 .list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
 .list-linkbox.card .info-list .desc {overflow:hidden}
 .list-linkbox.card .btn-link:last-child {float:right}
+.list-linkbox.card .info-list > li {margin-bottom:5px}
