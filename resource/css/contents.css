@@ -44,9 +44,11 @@
 .tbl-top .inp-select {min-width:130px}
 .tbl-top .cnt-title {font-size: 16px; line-height: 23px; }
 .tbl-top .btn {min-width: 90px}
-.filter-box {margin-bottom:36px; }
-.filter-box .checkbox {display:inline-block; width:32%; font-size:14px; color:#414C5D}
-.filter-box .checkbox:nth-child(-n + 3) {margin-bottom:12px;}
+.cnt-box .filter-box {margin-bottom:36px; }
+.cnt-box .filter-box .checkbox {display:inline-block; width:32%; font-size:14px; color:#414C5D}
+.cnt-box .filter-box .checkbox:nth-child(-n + 3) {margin-bottom:12px;}
+.cnt-box .filter-title {display: block;}
+.filter-box {margin-bottom:17px; }
 .filter-title {display:inline-block; margin-bottom:12px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
 
 .inp-row {display:flex; justify-content: space-between;}
@@ -178,3 +180,12 @@
 .list-linkbox .checkbox .box {vertical-align: middle;}
 
 .btn-group.btm {position:absolute; bottom:23px; left:0; width:100%; }
+
+.msg-box .msg {margin-bottom:18px; font-weight: bold;  font-size: 14px;  line-height: 20px; color: #41495D;}
+.msg-box .checkbox {margin-top:32px;}
+.msg-box .tx-gray.sm {display:block; margin-top:10px; margin-bottom:25px; color:#9A9A9A; font-size:12px;line-height: 18px; font-weight: 400;}
+.tx-warn {display: block; margin-top:6px}
+.tx-darkgray {font-size: 13px;  line-height: 19px; color: #555868;}
+
+.msg-box .list-linkbox {margin:-4px 0 12px;}
+.msg-box .list-linkbox:not(card) .badge.position {margin-left:0;}
