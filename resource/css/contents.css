@@ -168,3 +168,4 @@
 .list-linkbox.card  .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
 .list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
 .list-linkbox.card .info-list .desc {overflow:hidden}
+.list-linkbox.card .btn-link:last-child {float:right}
