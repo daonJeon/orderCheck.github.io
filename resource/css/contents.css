@@ -41,6 +41,7 @@
 .cnt-top .btn-bk-line {position: absolute; right:0; top:0; z-index: 1;}
 
 .tbl-top {display:flex; justify-content: space-between; align-items: center; margin-bottom:15px}
+.tbl-top .inp-select {min-width:130px}
 .tbl-top .cnt-title {font-size: 16px; line-height: 23px; }
 .tbl-top .btn {min-width: 90px}
 .filter-box {margin-bottom:36px; }
