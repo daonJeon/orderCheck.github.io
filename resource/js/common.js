@@ -176,19 +176,36 @@ function tabFunc (tabwrap) {
   var slider = wrap.querySelector(".slider")
   var tabContent = document.querySelectorAll(".content")
 
+  // tab loading
+  function getSlider (wrap,pos,idx) {
+    slider.style.width =wrap.clientWidth + "px"
+    slider.style.left = pos[idx] + "px"
+  }
+
+  //클릭 이벤트
   Array.prototype.forEach.call(tabBtn, function(tab, idx){
+    var offsetPos = [0,89,181]
     tab.addEventListener("click", function (e) {
       Array.prototype.forEach.call(tabBtn, function(tab, idx){
         tab.parentNode.classList.remove("on")
-        tabContent[idx].classList.remove("active")
+        tabContent[idx].style.display ="none"
     })
 
-    var id = e.target.getAttribute("data-tab");
-    slider.style.width = e.currentTarget.parentNode.clientWidth + "px"
-    slider.style.left = e.currentTarget.offsetLeft + "px"
+    //슬라이드 영역 조절
+    var id = e.currentTarget.getAttribute("data-tab");
     e.currentTarget.parentNode.classList.add("on")
-    document.getElementById(id).classList.add("active");
+    getSlider(e.currentTarget,offsetPos,idx)
+    console.log(document.getElementById(id))
+    document.getElementById(id).style.display ="block"
     })
+
+    if(tab.parentNode.classList.contains("on")) {
+      getSlider(tab,offsetPos,idx)
+      tabContent[idx].style.display ="block"
+
+    } else {
+      tabContent[idx].style.display ="none"
+    }
   })
 
 }

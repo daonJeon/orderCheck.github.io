@@ -14,7 +14,7 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
 
-  <title>고객 관리 상세 메인</title>
+  <title>고객 관리 상세</title>
 
   <!-- css, js 연결 -->
   <link rel="stylesheet" href="../resource/css/layout.css">
@@ -291,8 +291,8 @@
               <section class="tab-content">
                 <div class="content active" id="tab1">
                     <h2 class="filter-title">진행 타임라인</h2>
-                    <div class="accordion">
-                        <!-- accordion box -->
+                    <div class="accordion" style="display:none">
+                      <!-- accordion box -->
                       <div class="accordion-box active">
                         <button type="button" class="accordion-title"><span class="badge apply">상담신청</span><span class="date">2021.10.21</span></button>
                         <div class="accordion-cnt">
@@ -366,7 +366,7 @@
                     </div>
                     <!-- //accordion box -->
                     <!-- data empty box -->
-                    <div class="data-empty-box bg" style="display:none">
+                    <div class="data-empty-box bg">
                       <p class="txt">아직 연동된 고객이 없어요!</p>
                     </div>
                     <!-- //data empty box -->
@@ -384,7 +384,7 @@
                       <button type="button" class="btn btn-bk-line open-layer" data-info="layer-estimate-upload"><span>견적 업로드</span></button>
                     </div>
                     <!-- 리스트 -->
-                    <div class="tbl-type1" style="display:none">
+                    <div class="tbl-type1">
                       <table>
                         <caption>고객 리스트 정보</caption>
                         <colgroup>
@@ -490,7 +490,7 @@
                       </table>
                     </div>
                     <!-- 카드형 -->
-                    <ul class="list-linkbox card">
+                    <ul class="list-linkbox card" style="display:none">
                       <li>
                         <div class="tbl-top">
                           <div class="top-title">
