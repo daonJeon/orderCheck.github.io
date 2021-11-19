@@ -4,6 +4,7 @@
 .content-section .title { display: inline-block; color: #41495E; line-height: 32px; font-size: 22px; font-weight: 700;}
 .content-section .title + .filter-box {margin-top:30px;}
 .sidebar.open~.content-section { left: 250px; width: calc(100% - 250px);}
+.content-section .header {height:70px; padding:0 30px; }
 
 @media (max-width: 780px) {
 
@@ -166,7 +167,7 @@
 .list-linkbox.card  {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
 .list-linkbox.card  > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box; box-sizing: border-box;  border-radius: 6px;}
 .list-linkbox.card  > li + li {margin-left:.5%}
-.list-linkbox.card  .btn-light-blue {position: absolute; right:10px; bottom:10px; z-index: 1;}
+.list-linkbox.card  .btn {position: absolute; right:10px; bottom:10px; z-index: 1; font-size:14px}
 .list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
 .list-linkbox.card .info-list .desc {overflow:hidden}
 .list-linkbox.card .btn-link:last-child {float:right}
@@ -189,3 +190,30 @@
 
 .msg-box .list-linkbox {margin:-4px 0 12px;}
 .msg-box .list-linkbox:not(card) .badge.position {margin-left:0;}
+
+
+/* Login */
+.login-wrap {width:400px;margin:0 auto}
+.login-wrap .title {text-align:center; font-weight: bold; font-size: 32px; line-height: 46px;color: #41495D;}
+.login-wrap .sub-title {font-size: 15px; line-height: 22px; text-align: center; color: #555868;}
+.login-wrap .title + .sub-title {margin-top:16px}
+.login-wrap .login-top {margin-bottom:60px;}
+.login-wrap .inp {margin-bottom:12px;}
+.login-wrap .inp-line {margin-bottom:12px;}
+.login-wrap .inp-line .inp {margin-bottom:0px;}
+.login-wrap .inp:last-child{margin-bottom: 0;}
+.login-wrap .btn-l {width:100%}
+.login-wrap .btn-l + .btn-l {margin-top:12px;}
+.login-wrap .form-btm.tl {padding:23px 0 0;}
+.login-wrap .form-btm.tc {padding:23px 0 26px;}
+.login-wrap .form-btm .txt {margin-right:8px; font-size: 13px; line-height: 19px;color:#555868}
+.login-wrap .inp-title {display:block; margin-bottom:8px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
+.login-wrap .warning-txt + .form-btm {padding-top:0;}
+.login-wrap .social-login {margin-top:25px;}
+
+.login-wrap .btn-group {margin-top:30px}
+.login-wrap .inp-line + .btn-group {margin-top:40px}
+.login-wrap .inp-line button {width:110px;}
+
+
+.auth-time {position:absolute; right:12px; top:50%; margin-top:-9px; line-height:20px; font-size: 14px;  }

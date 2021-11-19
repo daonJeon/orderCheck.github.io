@@ -222,6 +222,46 @@ function accordionFunc (btnName) {
   }
 }
 
+// login chk
+function inpActiveFunc(wrap) {
+  var scriptArea = document.querySelector(wrap);
+  var input = scriptArea.querySelectorAll("input[type=text], input[type=password]")
+  var loginBtnFlag = [false,false];
+
+  function inputValChkJS (ele) {
+      var checkflag = ele.parentElement;
+      if(ele.value.length > 0) checkflag.classList.add("on")
+      else checkflag.classList.remove("on")
+      inputValLengthChk ()
+  }
+  function loginBtnDisabled () {
+      var loginBtn = scriptArea.querySelector(".btn-group .login")
+
+      if(loginBtnFlag[0] && loginBtnFlag[1]) loginBtn.disabled = false
+      else loginBtn.disabled = true;
+  }
+  function inputValLengthChk () {
+    Array.prototype.forEach.call(input, function(inp, idx){
+      if(inp.value != '') {
+          loginBtnFlag[idx] = true;
+      } else {
+          loginBtnFlag[idx] = false;
+      }
+
+      loginBtnDisabled()
+    })
+
+  }
+  input.forEach(function(ele,idx){
+      ele.addEventListener("keyup", function (e) {
+          inputValChkJS(ele)
+          loginBtnDisabled()
+      })
+
+  })
+
+  loginBtnDisabled()
+}
 
 function init () {
   //모든 페이지용 함수
