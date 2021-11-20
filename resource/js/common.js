@@ -195,7 +195,6 @@ function tabFunc (tabwrap) {
     var id = e.currentTarget.getAttribute("data-tab");
     e.currentTarget.parentNode.classList.add("on")
     getSlider(e.currentTarget,offsetPos,idx)
-    console.log(document.getElementById(id))
     document.getElementById(id).style.display ="block"
     })
 
@@ -223,41 +222,77 @@ function accordionFunc (btnName) {
 }
 
 // login chk
-function inpActiveFunc(wrap) {
+function inpActiveFunc(wrap,btnClass) {
   var scriptArea = document.querySelector(wrap);
   var input = scriptArea.querySelectorAll("input[type=text], input[type=password]")
-  var loginBtnFlag = [false,false];
+  var loginBtnFlag = [];
+
+  Array.prototype.forEach.call(input, function(inp, idx){
+    loginBtnFlag.push(false)
+  })
 
   function inputValChkJS (ele) {
       var checkflag = ele.parentElement;
       if(ele.value.length > 0) checkflag.classList.add("on")
       else checkflag.classList.remove("on")
+
       inputValLengthChk ()
   }
   function loginBtnDisabled () {
-      var loginBtn = scriptArea.querySelector(".btn-group .login")
+      var loginBtn = scriptArea.querySelector(".btn-group",btnClass)
 
-      if(loginBtnFlag[0] && loginBtnFlag[1]) loginBtn.disabled = false
+      if(loginBtnFlag[0] && loginBtnFlag[1]) loginBtn.disabled = false//둘다 인풋 체크
       else loginBtn.disabled = true;
+
   }
   function inputValLengthChk () {
     Array.prototype.forEach.call(input, function(inp, idx){
-      if(inp.value != '') {
-          loginBtnFlag[idx] = true;
-      } else {
-          loginBtnFlag[idx] = false;
-      }
+
+      if(inp.value != '') loginBtnFlag[idx] = true;
+      else loginBtnFlag[idx] = false;
+
+      inp.addEventListener("keyup", function (e) {
+        inputValChkJS(inp)
+        loginBtnDisabled()
+      })
 
       loginBtnDisabled()
     })
 
   }
-  input.forEach(function(ele,idx){
-      ele.addEventListener("keyup", function (e) {
-          inputValChkJS(ele)
-          loginBtnDisabled()
-      })
+  Array.prototype.forEach.call(input, function(inp, idx){
 
+    inp.addEventListener("keyup", function (e) {
+      inputValChkJS(inp)
+      loginBtnDisabled()
+    })
+
+    loginBtnDisabled()
+  })
+
+  loginBtnDisabled()
+}
+// login chk
+function chkActiveFunc(wrap,btnClass) {
+
+  var scriptArea = document.querySelector(wrap);
+  var input = scriptArea.querySelectorAll("input[type=checkbox]")
+
+
+  function loginBtnDisabled () {
+    var inputChecked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):checked")
+    var confirmBtn = scriptArea.querySelector(".btn-group",btnClass)
+
+    if(inputChecked.length == input.length -1) confirmBtn.disabled = false//둘다 인풋 체크
+    else confirmBtn.disabled = true;
+    console.log(confirmBtn.disabled)
+  }
+
+  Array.prototype.forEach.call(input, function(inp, idx){
+    inp.addEventListener("click", function (e) {
+
+      loginBtnDisabled()
+    })
   })
 
   loginBtnDisabled()

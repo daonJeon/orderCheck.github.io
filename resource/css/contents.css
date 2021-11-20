@@ -193,7 +193,7 @@
 
 
 /* Login */
-.login-wrap.complete {padding-top:100px; padding-bottom:10px; background: url(../images/common/bg_login-complete.png) no-repeat top center;}
+.login-wrap.complete {width:100%; padding-top:100px; padding-bottom:10px; background: url(../images/common/bg_login-complete.png) no-repeat top center;}
 .login-wrap .title {text-align:center; font-weight: bold; font-size: 32px; line-height: 46px;color: #41495D;}
 .login-wrap .sub-txt {font-size: 15px; line-height: 22px; text-align: center; color: #555868;}
 .login-wrap .sub-title {font-size: 20px; line-height: 29px; text-align: center; color: #555868;}
@@ -219,3 +219,15 @@
 
 
 .auth-time {position:absolute; right:12px; top:50%; margin-top:-9px; line-height:20px; font-size: 14px;  }
+.auth-box {width:420px; margin:28px auto 50px; text-align: center;}
+.auth-box .msg {margin-bottom:40px; font-size:15px; line-height:24px; color:#41495D}
+.auth-box .msg strong {font-weight: 700; font-size:21px; line-height:33px;}
+.agree-box.all {padding:16px; border: 1px solid #E7E7E7;border-radius: 6px;}
+.agree-box {padding:16px 16px 10px;}
+.agree-box > li + li {margin-top:12px}
+.agree-box.all .checkbox input.check:checked + label .box.round { background-color:#1D58FF; border-color:#1D58FF; }
+.agree-box.all .checkbox input.check:checked + label .box.round:before,
+.agree-box.all .checkbox input.check:checked + label .box.round:after {background-color:#fff;}
+.agree-box .checkbox .box {margin-right:12px}
+.agree-box .btn-link {font-weight: 400;}
+

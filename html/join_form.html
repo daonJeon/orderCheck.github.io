@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>로그인 : 계정 선택</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+</head>
+
+<body>
+  <!-- skip -->
+  <div id="skip">
+    <a href="#content">컨텐츠 바로가기</a>
+  </div>
+  <!-- //skip -->
+
+  <div id="wrap">
+    <section id="content" class="subpage">
+      <header class="header">
+        <img src="../resource/images/common/logo_color.png" alt="오더체크"/>
+      </header>
+      <div class="center-box">
+        <div class="login-wrap">
+          <div class="login-top">
+            <h2 class="title">회원가입</h2>
+          </div>
+          <div class="form-area">
+            <label for="user_phone" class="inp-title">휴대폰 번호</label>
+            <div class="inp">
+              <input type="text" id="user_phone" placeholder="휴대폰 번호 (‘-’ 없이 입력해주세요)"/>
+            </div>
+            <label for="user_name" class="inp-title">이름</label>
+            <div class="inp">
+              <input type="text" id="user_name" placeholder="이름"/>
+            </div>
+            <label for="user_pw" class="inp-title">비밀번호</label>
+            <div class="inp">
+              <input type="password" id="user_pw" placeholder="비밀번호">
+            </div>
+            <label for="user_email" class="inp-title">이메일</label>
+            <div class="inp">
+              <input type="text" id="user_email" placeholder="이메일"/>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn-l btn-bk confirm open-layer" data-info="layer-join-auth"><span>다음</span></button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- 견적 공유 레이어 -->
+  <div class="layer-pop confirm" id="layer-join-auth">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">인증번호 입력</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="auth-box">
+          <p class="msg"><strong>010-1234-5678</strong>으로<br> 인증번호 6자리가 전송되었습니다.</p>
+          <div class="inp-line">
+            <span class="inp">
+              <input type="text" id="user_auth" placeholder="인증번호" />
+              <span class="auth-time tx-org" id="timer">3:00</span>
+            </span>
+            <button type="button" class="btn btn-light-blue"><span>확인</span></button>
+          </div>
+
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+
+  <!-- script -->
+  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script src="../resource/js/common.js"></script>
+  <script>
+layerFunc (".open-layer")
+
+
+  </script>
+</body>
+
+</html>

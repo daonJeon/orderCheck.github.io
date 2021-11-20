@@ -103,7 +103,7 @@ input { outline: none; border: none; background: none}
 
 .subpage {padding-top:90px; height:100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box;}
 .subpage .header {position:absolute; width:100%; top:0; left:0; justify-content: center; padding:34px 0; z-index: 1;}
-.center-box {margin:0 auto; padding:50px 80px; width:620px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
+.center-box {display:flex; justify-content:center; align-items:center; margin:0 auto; padding:50px 80px; width:620px; height:540px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
 .warning-txt {padding:12px 14px; padding-left:10px;margin-bottom:8px;color:#FF4949; background: #FFDCDC; border-radius: 6px;}
 
 .btn-phone {padding:0; height:62px; line-height:62px; border:1px solid #02164F;background-color:#02164F;color:#fff}
@@ -236,6 +236,10 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .checkbox input.check:checked + label .box:after {background-color: #fff;}
 .checkbox input.check:checked + label .box {background:#02164F; border-color:#02164F}
 .checkbox input.check + label {vertical-align:top;}
+.checkbox input.check + label .box.round {border-radius: 50%; }
+.checkbox input.check:checked + label .box.round { background-color:#fff; border-color:#1D58FF; }
+.checkbox input.check:checked + label .box.round:before,
+.checkbox input.check:checked + label .box.round:after {background-color:#1D58FF;}
 
 /*===== layer =====*/
 .layer-pop {display:none; width: 100%;height: 100%;position: fixed;left: 0;top: 0; background:rgba(0,0,0,.3);z-index: 100;}
