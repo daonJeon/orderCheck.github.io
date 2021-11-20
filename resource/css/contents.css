@@ -193,10 +193,12 @@
 
 
 /* Login */
-.login-wrap {width:400px;margin:0 auto}
+.login-wrap.complete {padding-top:100px; padding-bottom:10px; background: url(../images/common/bg_login-complete.png) no-repeat top center;}
 .login-wrap .title {text-align:center; font-weight: bold; font-size: 32px; line-height: 46px;color: #41495D;}
-.login-wrap .sub-title {font-size: 15px; line-height: 22px; text-align: center; color: #555868;}
-.login-wrap .title + .sub-title {margin-top:16px}
+.login-wrap .sub-txt {font-size: 15px; line-height: 22px; text-align: center; color: #555868;}
+.login-wrap .sub-title {font-size: 20px; line-height: 29px; text-align: center; color: #555868;}
+.login-wrap .sub-title  + .sub-txt {margin-top:6px}
+.login-wrap .title + .sub-txt {margin-top:16px}
 .login-wrap .login-top {margin-bottom:60px;}
 .login-wrap .inp {margin-bottom:12px;}
 .login-wrap .inp-line {margin-bottom:12px;}

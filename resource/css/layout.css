@@ -66,6 +66,7 @@ input { outline: none; border: none; background: none}
 .tx-org {color:#FF8159}
 .tx-gray {color:#7B7B7B}
 .tx-gray {color:#7B7B7B; }
+.tx-blue {color:#1D58FF;}
 
 /*===== btn =====*/
 .btn { min-width: 90px; padding:11px 12px; border-radius: 6px;text-align: center; font-size:14px; }
@@ -211,7 +212,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
-.inp input {width:100%; padding:11px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 20px;  color: #9A9A9A;}
+.inp input {width:100%; padding:11px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 20px;  color:#41495D;}
 .inp input:disabled {background: #F6F6F6;  border: 1px solid #E7E7E7;}
 .inp input:focus {border-color:#1D58FF}
 .inp input::placeholder {color:#9A9A9A}
