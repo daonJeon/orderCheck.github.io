@@ -103,7 +103,8 @@ input { outline: none; border: none; background: none}
 
 .subpage {padding-top:90px; height:100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box;}
 .subpage .header {position:absolute; width:100%; top:0; left:0; justify-content: center; padding:34px 0; z-index: 1;}
-.center-box {display:flex; justify-content:center; align-items:center; margin:0 auto; padding:50px 80px; width:620px; height:540px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
+.center-box {display:flex; justify-content:center; align-items:center; margin:0 auto; padding:50px 80px; width:620px; min-height:540px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
+.center-box .login-wrap {width:100%;}
 .warning-txt {padding:12px 14px; padding-left:10px;margin-bottom:8px;color:#FF4949; background: #FFDCDC; border-radius: 6px;}
 
 .btn-phone {padding:0; height:62px; line-height:62px; border:1px solid #02164F;background-color:#02164F;color:#fff}
