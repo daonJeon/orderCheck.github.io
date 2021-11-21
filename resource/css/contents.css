@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.content-section {  position: relative;  min-width:1920px; background: #E4E9F7;  min-height: 100vh;  top: 0;  left: 78px;  width: calc(100% - 78px);  z-index: 2; }
+.content-section {  position: relative;  min-width:1836px; background: #E4E9F7;  min-height: 100vh;  top: 0;  left: 78px;  width: calc(100% - 78px);  z-index: 2; }
 .content-section .title { display: inline-block; color: #41495E; line-height: 32px; font-size: 22px; font-weight: 700;}
 .content-section .title + .filter-box {margin-top:30px;}
 .sidebar.open~.content-section { left: 250px; width: calc(100% - 250px);}
