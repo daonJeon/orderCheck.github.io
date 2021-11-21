@@ -202,16 +202,17 @@
 .login-wrap .title + .sub-txt {margin-top:16px}
 .login-wrap .login-top {margin-bottom:60px;}
 .login-wrap .inp:not(:last-child) {margin-bottom:12px;}
-.login-wrap .inp-line {margin-bottom:12px;}
+.login-wrap .inp-line,
+.auth-box .inp-line {margin-bottom:12px;}
 .login-wrap .inp-line .inp {margin-bottom:0px;}
 .login-wrap .inp:last-child{margin-bottom: 0;}
-.login-wrap .btn-l {width:100%; font-weight:500}
+.login-wrap .btn-l {display:block; width:100%; font-weight:500; box-sizing: border-box;}
 .login-wrap .btn-l + .btn-l {margin-top:12px;}
 .login-wrap .btn-group .btn-bk {font-weight:700}
-.login-wrap .form-btm.tl {padding:16px 0 0;}
 .login-wrap .form-btm.tc {padding:23px 0 26px;}
 .login-wrap .form-btm .txt {margin-right:4px; font-size: 13px; line-height: 19px;color:#555868}
 .login-wrap .inp-title {display:block; margin-bottom:8px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
+.login-wrap .warning-txt {margin-bottom:16px}
 .login-wrap .warning-txt + .form-btm {padding-top:0;}
 .login-wrap .social-login {margin-top:25px;}
 

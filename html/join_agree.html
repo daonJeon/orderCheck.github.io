@@ -50,21 +50,21 @@
             <ul class="agree-box">
               <li>
                 <span class="checkbox">
-                  <input type="checkbox" name="agree_chk" id="agree01" class="check">
+                  <input type="checkbox" name="agree_chk" id="agree01" class="check" required>
                   <label for="agree01"><span class="box round"></span>이용약관 동의 <span class="tx-blue">(필수)</span></label>
                   <button type="button" class="btn-link"><span>자세히 보기</span></button>
                 </span>
               </li>
               <li>
                 <span class="checkbox">
-                  <input type="checkbox" name="agree_chk" id="agree02" class="check">
+                  <input type="checkbox" name="agree_chk" id="agree02" class="check" required>
                   <label for="agree02"><span class="box round"></span>개인정보 처리방침 동의 <span class="tx-blue">(필수)</span></label>
                   <button type="button" class="btn-link"><span>자세히 보기</span></button>
                 </span>
               </li>
               <li>
                 <span class="checkbox">
-                  <input type="checkbox" name="agree_chk" id="agree03" class="check">
+                  <input type="checkbox" name="agree_chk" id="agree03" class="check" required>
                   <label for="agree03"><span class="box round"></span>만 14세 이상 <span class="tx-blue">(필수)</span></label>
                   <button type="button" class="btn-link"><span>자세히 보기</span></button>
                 </span>
@@ -96,8 +96,10 @@
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/common.js"></script>
   <script>
-  chkActiveFunc (".agree-wrap", ".confirm")
-  agreeChkFunc(".agree-wrap","agree_all")
+    agreeChkFunc(".agree-wrap ","agree_all",function() {
+      chkActiveFunc (".agree-wrap", ".confirm")
+    })
+      
   </script>
 </body>
 

@@ -138,7 +138,7 @@ function selectInpRangeSet(sel) {//셀렉트 박스 - 인풋 연계
 }
 
 // 체크 박스 모두 체크 기능 추가
-function agreeChkFunc (wrap, chkAllId) {
+function agreeChkFunc (wrap, chkAllId,callback) {
   var wrapArea = document.querySelector(wrap);
   var chk = wrapArea.querySelectorAll("input[type=checkbox]:not(#"+chkAllId+")")
   var chk_all = wrapArea.querySelector("#"+chkAllId+"")
@@ -155,10 +155,10 @@ function agreeChkFunc (wrap, chkAllId) {
       var chk_num = wrapArea.querySelectorAll("input[type=checkbox]:not(#"+chkAllId+"):checked")
       if(chk_num.length == chk.length) chk_all.checked = true
       else chk_all.checked = false
-
+      if(callback != null ) callback()
     })
   })
-
+  
 }
 
 function btnRemoveFunc (wrap,btnClass) {
@@ -225,91 +225,118 @@ function accordionFunc (btnName) {
 }
 
 // login chk
-function inpActiveFunc(wrap,btnClass) {
+function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일치할때만 실행
   var scriptArea = document.querySelector(wrap);
-  var input = scriptArea.querySelectorAll("input[type=text], input[type=password]")
+  var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
 
+  //value값에 따라 초기값 세팅
   Array.prototype.forEach.call(input, function(inp, idx){
-    loginBtnFlag.push(false)
+    var flag = ''
+    maxIsTrue == true ? inp.value.length == inp.getAttribute("maxlength") : inp.value.length > 0
+    if(flag) loginBtnFlag.push(true)
+    else loginBtnFlag.push(false)
   })
+  loginBtnDisabled()
+  inputValLengthChk ()
 
-  function inputValChkJS (ele) {
-      var checkflag = ele.parentElement;
-      if(ele.value.length > 0) checkflag.classList.add("on")
-      else checkflag.classList.remove("on")
-
-      inputValLengthChk ()
-  }
-  function loginBtnDisabled () {
-      var loginBtn = scriptArea.querySelector(".btn-group",btnClass)
-
-      if(loginBtnFlag[0] && loginBtnFlag[1]) loginBtn.disabled = false//둘다 인풋 체크
-      else loginBtn.disabled = true;
-
-  }
   function inputValLengthChk () {
-    Array.prototype.forEach.call(input, function(inp, idx){
-
-      if(inp.value != '') loginBtnFlag[idx] = true;
-      else loginBtnFlag[idx] = false;
-
+    Array.prototype.forEach.call(input, function(inp, idx){      
       inp.addEventListener("keyup", function (e) {
-        inputValChkJS(inp)
+        var checkflag = inp.parentElement;
+        var flag = '';
+        maxIsTrue == true ? flag =( inp.value.length == inp.getAttribute("maxlength")) : flag = inp.value.length > 0
+        if(flag) {
+          loginBtnFlag[idx] = true;
+          checkflag.classList.add("on")
+        } else {
+          loginBtnFlag[idx] = false;
+          checkflag.classList.remove("on")
+        }
+        
         loginBtnDisabled()
       })
 
-      loginBtnDisabled()
     })
 
   }
-  Array.prototype.forEach.call(input, function(inp, idx){
-
-    inp.addEventListener("keyup", function (e) {
-      inputValChkJS(inp)
-      loginBtnDisabled()
-    })
-
-    loginBtnDisabled()
-  })
-
-  loginBtnDisabled()
-}
-// login chk
-function chkActiveFunc(wrap,btnClass) {
-
-  var scriptArea = document.querySelector(wrap);
-  var input = scriptArea.querySelectorAll("input[type=checkbox]")
-
-
   function loginBtnDisabled () {
-    var inputChecked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):checked")
-    var confirmBtn = scriptArea.querySelector(".btn-group",btnClass)
-
-    if(inputChecked.length == input.length -1) confirmBtn.disabled = false//둘다 인풋 체크
-    else confirmBtn.disabled = true;
-    console.log(confirmBtn.disabled)
+    var loginBtn = scriptArea.querySelector(btnClass )
+    var flag = loginBtnFlag.every(function(val) {return val == true})
+ 
+    if(flag) loginBtn.disabled = false//둘다 인풋 체크
+    else loginBtn.disabled = true
   }
 
-  Array.prototype.forEach.call(input, function(inp, idx){
-    inp.addEventListener("click", function (e) {
-      loginBtnDisabled()// 클릭 이벤트 시에만 실행
+}
+// chk
+function chkActiveFunc(wrap,btnClass) {
+  var scriptArea = document.querySelector(wrap);
+  var check = scriptArea.querySelectorAll("input[type=checkbox]:required")
+  var checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):required:checked")
+  var confirmBtn = scriptArea.querySelector(btnClass)
+  console.log(check)
+  if(checked.length >= check.length) confirmBtn.disabled = false
+  else confirmBtn.disabled = true;
+
+  Array.prototype.forEach.call(check, function(chk, idx){
+    chk.addEventListener("click", function (e) {
+      checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):checked")      
+      if(checked.length == check.length -1) confirmBtn.disabled = false
+      else confirmBtn.disabled = true;
     })
   })
-  loginBtnDisabled() //기본 화면에서 실행
 }
 
 /* input password/text 전환 */
 function inpTypeSwitch () {
   clickAddClassFunc (".btn-pw-show",".btn-pw-show","active", function (e) {
-      var inputPw = e.currentTarget.previousElementSibling;
-      var flag = inputPw.getAttribute("type")
-      flag == "text"? inputPw.setAttribute("type","password") : inputPw.setAttribute("type","text") 
+    var inputPw = e.currentTarget.previousElementSibling;
+    var flag = inputPw.getAttribute("type")
+    flag == "text"? inputPw.setAttribute("type","password") : inputPw.setAttribute("type","text") 
   })
 }
 
-function inpValueAddHypen (inputID,gap) {//매개변수 설명 : input ID / 하이픈 적용되어야하는 텀 (number or array)
-  
+function autoHypenTelFunc (inputID,callback) {//매개변수 설명 : input ID / 하이픈 적용되어야하는 텀 (number or array)
+  var input = document.querySelector("#"+inputID)
+  input.addEventListener("keyup",function(e){
+    var _val = this.value.trim()
+    this.value = autoHypenTel(_val,callback,e.currentTarget)
+
+  })
+  //휴대폰용 하이픈 자동 추가
+  function autoHypenTel (str,callback,target) {
+    str = str.replace(/[^0-9]/g,'')
+    var tmp = '';
+
+    if(callback != null) callback(target) 
+
+    if (str.length < 4) {
+      return str;
+    } else if (str.length < 7) {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3);
+      return tmp;
+    } else if (str.length < 11) {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 3);
+      tmp += '-';
+      tmp += str.substr(6);
+      return tmp;
+    } else {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 4);
+      tmp += '-';
+      tmp += str.substr(7);
+      
+      return tmp;
+    }
+    
+  }
+
 }
 
 
