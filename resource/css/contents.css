@@ -173,7 +173,7 @@
 .list-linkbox.card .btn-link:last-child {float:right}
 .list-linkbox.card .info-list > li + li {margin-top:8px}
 
-.list-linkbox.link  {border:none; padding:0; }
+.list-linkbox.link  {border:none; padding:0; max-height:780px; overflow:auto }
 .list-linkbox.link > li + li {margin-top:12px;}
 .list-linkbox.link > li {position: relative; padding:20px 18px; border: 1px solid #E5E7EC;  box-sizing: border-box;  border-radius: 6px;}
 .list-linkbox.link .info-list {margin-top:27px}

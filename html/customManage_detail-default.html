@@ -941,11 +941,11 @@
 
     //alert
     var alertBtn = document.querySelector('.open-confirm');
-    var confirmRun = function(){
-        console.log('컨펌 확인 버튼 클릭 시 시 실행될 함수입니다.');
+    var confirmCallback = function(){
+        console.log('컨펌용 콜백');
     }
     alertBtn.addEventListener('click', function(){
-      layerConfirm(confirmRun, '', '내용을 수정하시겠습니까?', '취소', '확인');
+      layerConfirm(confirmCallback, '', '내용을 수정하시겠습니까?', '취소', '확인');
     });
   </script>
 </body>

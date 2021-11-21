@@ -181,7 +181,7 @@ function tabFunc (tabwrap) {
 
   // tab loading
   function getSlider (wrap,pos,idx) {
-    slider.style.width =wrap.clientWidth + "px"
+    slider.style.width =wrap.parentNode.clientWidth + "px"
     slider.style.left = pos[idx] + "px"
   }
 
@@ -191,22 +191,22 @@ function tabFunc (tabwrap) {
     tab.addEventListener("click", function (e) {
       Array.prototype.forEach.call(tabBtn, function(tab, idx){
         tab.parentNode.classList.remove("on")
-        tabContent[idx].style.display ="none"
+        if(tabContent != null) tabContent[idx].style.display ="none"
     })
 
     //슬라이드 영역 조절
     var id = e.currentTarget.getAttribute("data-tab");
     e.currentTarget.parentNode.classList.add("on")
     getSlider(e.currentTarget,offsetPos,idx)
-    document.getElementById(id).style.display ="block"
+    if(tabContent != null) document.getElementById(id).style.display ="block"
     })
 
     if(tab.parentNode.classList.contains("on")) {
       getSlider(tab,offsetPos,idx)
-      tabContent[idx].style.display ="block"
+      if(tabContent != null) tabContent[idx].style.display ="block"
 
     } else {
-      tabContent[idx].style.display ="none"
+      if(tabContent != null) tabContent[idx].style.display ="none"
     }
   })
 
