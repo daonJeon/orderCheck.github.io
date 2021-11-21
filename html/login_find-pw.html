@@ -52,8 +52,8 @@
             <label for="user_autth" class="inp-title">인증번호</label>
             <div class="inp-line">
               <span class="inp">
-                <input type="password" id="user_autth" placeholder="인증번호">
-                <span class="auth-time tx-org" id="timer">3:00</span>
+                <input type="password" id="user_auth" placeholder="인증번호">
+                <var class="pos auth-time">3:00</var>
               </span>
               <button type="submit" class="btn btn-light-blue"><span>확인</span></button>
             </div>
@@ -73,8 +73,7 @@
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/common.js"></script>
   <script>
-   inpActiveFunc (".login-wrap",".login")
-
+   inpActiveFunc (".login-wrap",".login") //인풋 들의 value 값이 타이핑 되면 버튼 활성화
 
   </script>
 </body>

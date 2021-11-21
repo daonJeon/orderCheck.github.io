@@ -52,6 +52,7 @@ function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
   })
 
 }
+
 dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')
 
 //우측 슬라이드 메뉴
@@ -68,12 +69,13 @@ function clickAddClassFunc (clickBtn, addArea,className,callback) {
   var wrap = document.querySelectorAll(addArea);
   var btn = document.querySelectorAll(clickBtn);
   Array.prototype.forEach.call(btn, function(b, idx){
-    b.addEventListener("click", function () {
+    b.addEventListener("click", function (e) {
       wrap[idx].classList.toggle(className);
-      if(callback != null) callback()
+      if(callback != null) callback(e)
     });
   })
 }
+
 function clickRemoveClassFunc (clickBtn, removeArea,className,callback) {
   var btn;
   typeof clickBtn  == "string" ? btn =  document.querySelectorAll(clickBtn) : btn = clickBtn;
@@ -85,6 +87,7 @@ function clickRemoveClassFunc (clickBtn, removeArea,className,callback) {
     });
   })
 }
+
 
 function selectInpRangeSet(sel) {//셀렉트 박스 - 인풋 연계
   //셀렉트 박스 선택 값에 따라서 input value change
@@ -290,13 +293,27 @@ function chkActiveFunc(wrap,btnClass) {
 
   Array.prototype.forEach.call(input, function(inp, idx){
     inp.addEventListener("click", function (e) {
-
-      loginBtnDisabled()
+      loginBtnDisabled()// 클릭 이벤트 시에만 실행
     })
   })
-
-  loginBtnDisabled()
+  loginBtnDisabled() //기본 화면에서 실행
 }
+
+/* input password/text 전환 */
+function inpTypeSwitch () {
+  clickAddClassFunc (".btn-pw-show",".btn-pw-show","active", function (e) {
+      var inputPw = e.currentTarget.previousElementSibling;
+      var flag = inputPw.getAttribute("type")
+      flag == "text"? inputPw.setAttribute("type","password") : inputPw.setAttribute("type","text") 
+  })
+}
+
+function inpValueAddHypen (inputID,gap) {//매개변수 설명 : input ID / 하이픈 적용되어야하는 텀 (number or array)
+  
+}
+
+
+
 
 function init () {
   //모든 페이지용 함수

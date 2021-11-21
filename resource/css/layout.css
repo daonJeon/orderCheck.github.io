@@ -88,25 +88,7 @@ input { outline: none; border: none; background: none}
 .btn-group a {width:100%}
 .layer-btn button {margin-left:8px}
 
-/* input */
-.inp-line {display:flex; align-items: center; justify-content:space-between;}
-.inp-line .inp {flex:1; margin-right:10px;}
-.inp-line .btn {min-width:100px}
-.inp-line + .inp {margin-top:8px}
-/* layout */
-.header {  display:flex; justify-content: space-between; align-items: center; }/* #footer */
-.cnt-inner {display:flex; justify-content: space-between;}
-.cnt-inner .left {width:34%}
-.cnt-inner .right {width:64%}
-.cnt-inner .right.line {padding:20px 26px; border: 1px solid #CDD1DA; border-radius: 10px; box-sizing: border-box;}
-.cnt-inner .right .content {padding:20px 0; height: 100%; box-sizing: border-box;}
-
-.subpage {padding-top:90px; height:100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box;}
-.subpage .header {position:absolute; width:100%; top:0; left:0; justify-content: center; padding:34px 0; z-index: 1;}
-.center-box {display:flex; justify-content:center; align-items:center; margin:0 auto; padding:50px 80px; width:620px; min-height:540px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
-.center-box .login-wrap {width:100%;}
-.warning-txt {padding:12px 14px; padding-left:10px;margin-bottom:8px;color:#FF4949; background: #FFDCDC; border-radius: 6px;}
-
+.btn-gray {background-color:#EBEBEB; font-weight:700; font-size:16px; line-height:23px; color:#9A9A9A; }
 .btn-phone {padding:0; height:62px; line-height:62px; border:1px solid #02164F;background-color:#02164F;color:#fff}
 .btn-phone span {display: inline-block; padding-left:42px; background: url(../images/common/ico_phone.png) no-repeat left center;}
 .btn-kakao {padding:0; height:62px; line-height:62px; border:1px solid #ffeb00;background-color:#ffeb00;color:#333}
@@ -116,13 +98,30 @@ input { outline: none; border: none; background: none}
 .btn-facebook {border:1px solid #4267b2;background-color:#4267b2;color:#fff}
 .btn-naver {border:1px solid #1ec800;background-color:#1ec800;color:#fff;}
 .btn-google {border:1px solid #d0422a;background-color:#d0422a;color:#fff;}
-.btn-golink {font-size: 13px;line-height: 19px;color:#02164F; }
+.btn-golink {font-size: 13px;line-height: 19px; font-weight:700; color:#02164F; }
 
-p.line {margin:10px 0; width:100%; height:1px; background-color: #E3E3E3;}
-p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-10px; margin-left:-22px; background-color: #fff; color:#9A9A9A; font-size: 14px; text-align: center; z-index: 1;}
+/* input */
+.inp-line {display:flex; align-items: center; justify-content:space-between;}
+.inp-line .inp {flex:1; margin-right:10px;}
+.inp-line .btn {min-width:100px}
+.inp-line + .inp {margin-top:8px}
 
 .textarea {width:100%;height:120px;padding: 0;margin: 0;border: 1px solid #E7E7E7;resize: none; box-sizing: border-box;}
-.revise-box {margin-top:30px; margin-bottom:12px;}
+
+
+/* layout */
+.header {  display:flex; justify-content: space-between; align-items: center; }/* #footer */
+.cnt-inner {display:flex; justify-content: space-between;}
+.cnt-inner .left {width:34%}
+.cnt-inner .right {width:64%}
+.cnt-inner .right.line {padding:20px 26px; border: 1px solid #CDD1DA; border-radius: 10px; box-sizing: border-box;}
+.cnt-inner .right .content {padding:20px 0; height: 100%; box-sizing: border-box;}
+
+.subpage {padding-top:90px; height:100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box;}
+.subpage .header {position:absolute; width:100%; top:0; left:0; justify-content: center; padding:34px 0; z-index: 1; background-color: #fff;}
+.center-box {display:flex; justify-content:center; align-items:center; margin:0 auto; padding:50px 80px; width:620px; min-height:540px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
+
+
 @media all and (max-width: 768px){
 
 }
@@ -178,6 +177,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .btn-bk .ico.plus {margin-right:5px}
 .btn-bk .ico.plus:after,
 .btn-bk .ico.plus:before {background-color: #fff;}
+
+
+
 /* paging */
 .paging {margin:20px 0; text-align:center}
 .paging, .paging .list {display: flex; justify-content: center;}
@@ -215,7 +217,8 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
-.inp input {width:100%; padding:11px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 20px;  color:#41495D;}
+.inp input {width:100%; padding:10px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 22px;  color:#41495D;}
+.inp input[type=password] {padding-right:30px;}
 .inp input:disabled {background: #F6F6F6;  border: 1px solid #E7E7E7;}
 .inp input:focus {border-color:#1D58FF}
 .inp input::placeholder {color:#9A9A9A}
@@ -259,8 +262,8 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .layer-pop.confirm .confirm-msg {font-weight:700;font-size:22px; line-height:32px; color:#41495D; }
 .layer-pop.confirm .alert-msg + .layer-btn,
 .layer-pop.confirm .confirm-msg + .layer-btn {margin-top:63px;}
-.btn-gray {background-color:#EBEBEB; font-weight:700; font-size:16px; line-height:23px; color:#9A9A9A; }
-.layer-mid {max-height:500px; overflow: auto;}
+.layer-pop .layer-mid {max-height:500px; overflow: auto;}
+
 /* location */
 .location-wrap {display:flex;padding:0 33px;}
 .location-wrap > li {color:#555868;}

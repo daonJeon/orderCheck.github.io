@@ -193,6 +193,7 @@
 
 
 /* Login */
+.center-box .login-wrap {width:100%;}
 .login-wrap.complete {width:100%; padding-top:100px; padding-bottom:10px; background: url(../images/common/bg_login-complete.png) no-repeat top center;}
 .login-wrap .title {text-align:center; font-weight: bold; font-size: 32px; line-height: 46px;color: #41495D;}
 .login-wrap .sub-txt {font-size: 15px; line-height: 22px; text-align: center; color: #555868;}
@@ -200,15 +201,16 @@
 .login-wrap .sub-title  + .sub-txt {margin-top:6px}
 .login-wrap .title + .sub-txt {margin-top:16px}
 .login-wrap .login-top {margin-bottom:60px;}
-.login-wrap .inp {margin-bottom:12px;}
+.login-wrap .inp:not(:last-child) {margin-bottom:12px;}
 .login-wrap .inp-line {margin-bottom:12px;}
 .login-wrap .inp-line .inp {margin-bottom:0px;}
 .login-wrap .inp:last-child{margin-bottom: 0;}
-.login-wrap .btn-l {width:100%}
+.login-wrap .btn-l {width:100%; font-weight:500}
 .login-wrap .btn-l + .btn-l {margin-top:12px;}
-.login-wrap .form-btm.tl {padding:23px 0 0;}
+.login-wrap .btn-group .btn-bk {font-weight:700}
+.login-wrap .form-btm.tl {padding:16px 0 0;}
 .login-wrap .form-btm.tc {padding:23px 0 26px;}
-.login-wrap .form-btm .txt {margin-right:8px; font-size: 13px; line-height: 19px;color:#555868}
+.login-wrap .form-btm .txt {margin-right:4px; font-size: 13px; line-height: 19px;color:#555868}
 .login-wrap .inp-title {display:block; margin-bottom:8px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
 .login-wrap .warning-txt + .form-btm {padding-top:0;}
 .login-wrap .social-login {margin-top:25px;}
@@ -217,8 +219,17 @@
 .login-wrap .inp-line + .btn-group {margin-top:40px}
 .login-wrap .inp-line button {width:110px;}
 
+.warning-txt {padding:12px 14px; padding-left:10px; color:#FF4949; background: #FFDCDC; border-radius: 6px;}
+p.line {margin:10px 0; width:100%; height:1px; background-color: #E3E3E3;}
+p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-10px; margin-left:-22px; background-color: #fff; color:#9A9A9A; font-size: 14px; text-align: center; z-index: 1;}
 
-.auth-time {position:absolute; right:12px; top:50%; margin-top:-9px; line-height:20px; font-size: 14px;  }
+.revise-box {margin-top:30px; margin-bottom:12px;}
+
+.pos {position:absolute; right:12px; top:50%; margin-top:-9px; line-height:20px; font-size: 14px;  }
+.pos.auth-time {color:#FF8159}
+.pos.btn-pw-show {width:22px; height:22px; background:url(../images/common/ico_pw-show.png) no-repeat center; }
+.pos.btn-pw-show.active {background-image:url(../images/common/ico_pw-show-active.png)}
+
 .auth-box {width:420px; margin:28px auto 50px; text-align: center;}
 .auth-box .msg {margin-bottom:40px; font-size:15px; line-height:24px; color:#41495D}
 .auth-box .msg strong {font-weight: 700; font-size:21px; line-height:33px;}

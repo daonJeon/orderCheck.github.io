@@ -42,24 +42,25 @@
           <div class="form-area">
             <label for="user_id" class="inp-title">아이디</label>
             <div class="inp">
-              <input type="text" id="user_id" placeholder="아이디 (휴대폰 번호 입력)"/>
+              <input type="text" id="user_id" placeholder="휴대폰 번호를 입력해주세요"/>
             </div>
             <label for="user_pw" class="inp-title">비밀번호</label>
             <div class="inp">
-              <input type="password" id="user_pw" placeholder="비밀번호">
+              <input type="password" id="user_pw" placeholder="비밀번호를 입력해주세요">
+              <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
             </div>
             <p class="warning-txt">아이디 또는 비밀번호가 일치하지 않습니다! 😵 </p>
           </div>
           <div class="form-btm tl">
             <span class="txt">비밀번호를 잊으셨나요?</span>
-            <a href="#" class="btn-golink"><span>비밀번호 찾기</span></a>
+            <a href="login_find-pw.html" class="btn-golink" target="_blank"><span>비밀번호 찾기</span></a>
           </div>
           <div class="btn-group">
-            <button type="button" class="btn-l btn-bk"><span>로그인</span></button>
+            <button type="button" class="btn-l btn-bk login"><span>로그인</span></button>
           </div>
           <div class="form-btm tc">
-            <span class="txt">비밀번호를 잊으셨나요?</span>
-            <a href="#" class="btn-golink"><span>비밀번호 찾기</span></a>
+            <span class="txt">오더체크가 처음이신가요?</span>
+            <a href="join_form.html" class="btn-golink" target="_blank"><span>회원가입</span></a>
           </div>
           <p class="line"><span class="txt">or</span></p>
           <div class="social-login">
@@ -75,12 +76,11 @@
 
 
   <script src="../resource/js/jquery-2.1.3.min.js"></script>
-  <script src="../resource/js/IEcheck.js"></script>
   <script src="../resource/js/common.js"></script>
   <script>
-
-
-
+    inpTypeSwitch () //눈 모양 누르면, input[password] 에서 패스워드 type 속성을 text/password 로 스윗칭
+    inpActiveFunc (".login-wrap",".login") //인풋 들의 value 값이 타이핑 되면 버튼 활성화
+    inpValueAddHypen ("user_id",[3,4,4]) // input 내 벨류 입력시, 4자리마다 하이픈 추가
   </script>
 </body>
 
