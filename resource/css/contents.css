@@ -243,3 +243,50 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .agree-box .checkbox .box {margin-right:12px}
 .agree-box .btn-link {font-weight: 400;}
 
+.tbl-top-type02 .sub-title {margin-top:20px}
+.tbl-top-type02 .btn-link-type02 {margin-top:4px;}
+.info-list.side > li + li {margin-top:14px}
+.info-list.side .checkbox input.check + label {font-size:15px;}
+.info-list.side .checkbox input.check + label dt { color: #41495D;}
+.info-list.side .checkbox input.check + label dd { color: #555868;}
+.info-list.side .checkbox input.check:checked + label dt {font-weight:700; color:#02164F}
+.info-list.side .checkbox input.check:checked + label dd {font-weight:700; color:#02164F}
+.info-list.side .checkbox input.check:checked + label dd .unit {font-size:13px; line-height:18px; }
+.info-list.side .checkbox input.check:disabled + label dt {color:#41495D}
+.info-list.side .checkbox input.check:disabled + label dd {font-weight:400; line-height:17px; font-size:12px; color:#9A9A9A}
+
+.btn-member-drop {margin-top:20px; padding:18px 44px 18px 20px; width:100%; border-radius: 6px;background: #F2F4F8; border: 1px solid #02164F;}
+.btn-member-drop:after {position:absolute; right:20px; top:50%; margin-top:5px; width:0; height:0;border-left:7px solid transparent; border-right: 7px solid transparent; border-top: 10px solid #02164F; transition:all 1s; content:''}
+.btn-member-drop.active:after {transform:rotate(180deg)}
+
+.btn-member-drop dl,
+.btn-member-drop dd {display: flex; justify-content: space-between; align-self: center;}
+.btn-member-drop dt {text-align: left;}
+.btn-member-drop .company {font-weight: 500; font-size: 14px; line-height: 20px; color: #41495D;}
+.btn-member-drop .desc {display:block; margin-top:6px; font-size: 12px; line-height: 17px; color: #9A9A9A;}
+.btn-member-drop .price {float:right; font-size: 18px; line-height: 26px;color: #02164F;}
+.service-box {margin-top:20px;}
+.service-box .checkbox input.check + label dl,
+.service-box .total { justify-content:space-between; align-items:center; }
+.service-box .checkbox input.check + label dl {display:inline-flex; margin-left:5px; width:calc(100% - 30px)}
+.service-box .total {display:flex;padding:24px 0 10px; border-top:1px solid #E4E4E4;}
+.service-box .total .head:not(.sm) {font-weight: bold; font-size: 16px; line-height: 23px;color:#02164F }
+.service-box .total .sm {margin-top:3px; font-weight: 400; font-size: 12px; line-height: 17px;color:#9A9A9A }
+.service-box .total .total-price {color: #1D58FF; font-size: 13px; line-height: 19px;}
+.service-box .total .total-price .won:before {display:inline-block; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF; border-radius:50%; text-align:center; color:#fff; content:'₩'}
+.service-box .total .total-price .won {margin-right:4px; font-weight: bold; font-size: 20px; line-height: 29px;}
+
+.btn-dark-gray {background: #A3A9BA; border-radius: 6px; color:#fff}
+
+
+.member-info-title {font-weight: bold; font-size: 12px; line-height: 17px; color: #7B7B7B;}
+.member-box .info-box .box {padding:12px 20px; border:1px solid #E9E9E9;border-radius: 4px;}
+.member-box .info-box .box.active {border-color:#02164F}
+.member-box .info-box .box + .box {margin-top:8px}
+.member-box .info-box .box .member-info-list {margin-top:14px}
+.member-box .info-box .box .member-info-list .head {font-weight: bold; font-size: 14px; line-height: 20px; color: #41495D;}
+.member-box .info-box .box .member-info-list .desc {margin-left:10px; font-size: 13px; line-height: 19px; color: #7B7B7B;}
+.member-box .dot-list {margin:20px 0 36px }
+.dot-list li {position: relative; padding-left:10px; font-size: 12px; line-height: 16px; color: #9A9A9A;}
+.dot-list li:before {position:absolute; top:8px; left:0; width:4px; height:4px; border-radius: 50%; background:#9A9A9A; content:''}
+.dot-list li + li {margin-top:8px;}
