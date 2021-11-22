@@ -290,3 +290,10 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .dot-list li {position: relative; padding-left:10px; font-size: 12px; line-height: 16px; color: #9A9A9A;}
 .dot-list li:before {position:absolute; top:8px; left:0; width:4px; height:4px; border-radius: 50%; background:#9A9A9A; content:''}
 .dot-list li + li {margin-top:8px;}
+
+
+.login-wrap .inp-phone {margin-bottom:12px; display: flex; justify-content: space-between; align-items: center;}
+.login-wrap .inp-phone .inp {width:24%; margin-bottom:0}
+.inp.range input:first-child {width:60px;}
+.inp.range input:last-child {width:100px;}
+.inp.pw input {width:60px;}

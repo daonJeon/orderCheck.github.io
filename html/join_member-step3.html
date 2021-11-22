@@ -14,7 +14,7 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
 
-  <title>회원가입 : 요금제 선택</title>
+  <title>회원가입 : 요금제 가입</title>
 
   <!-- css, js 연결 -->
   <link rel="stylesheet" href="../resource/css/layout.css">
@@ -36,64 +36,26 @@
       </header>
       <div class="center-box">
         <div class="login-wrap">
-          <div class="tbl-top-type02">
-            <h2 class="title">요금제 선택</h2>
-            <p class="sub-title"><strong class="tx-blue">14일 무료 체험</strong></p>
-            <button type="button" class="btn-link-type02"><span class="txt">자세한 가격 및 기능 알아보기</span></button>
+          <div class="login-top">
+            <h2 class="title">회사 생성</h2>
           </div>
-
-          <div class="tab-wrap">
-            <ul class="tabs">
-              <li class="on"><button type="button" class="tab-btn active">월</button></li>
-              <li><button type="button" class="tab-btn">연(10%할인)</button></li>
-            </ul>
-            <span class="slider" data-left="0"></span>
-          </div>
-
-          <div class="dropdown-wrap">
-            <button type="button" class="btn-member-drop drop-btn">
-              <dl>
-                <dt><span class="company">컴퍼니</span> <span class="desc">월 상담 신청 300건 이하</span></dt>
-                <dd><strong class="price">₩ 91,300 원</strong></dd>
-              </dl>
-            </button>
-            <div class="sel-drop-menu">
-              <ul>
-                <li><button type="button" class="btn-l btn-line-gray"><span class="company">컴퍼니</span> <span class="desc">월 상담 신청 300건 이하</span><strong class="price">₩ 91,300 원</strong></button></li>
-              </ul>
+          <div class="form-area">
+            <label for="user_company" class="inp-title">회사 이름</label>
+            <div class="inp">
+              <input type="password" id="user_company" placeholder="회사 이름">
             </div>
-          </div>
 
-          <div class="service-box">
-            <h2 class="filter-title">부가 서비스</h2>
-            <ul class="info-list side">
-              <li>
-                <div class="checkbox">
-                  <input type="checkbox" name="service" id="service01" class="check" disabled>
-                  <label for="service01"><span class="box"></span><dl><dt class="label-head">화이트 라벨링</dt><dd class="label-desc">프로 플랜부터 가능</dd></dl></label>
-                </div>
-              </li>
-              <li>
-                <div class="checkbox">
-                  <input type="checkbox" name="service" id="service02" class="check" checked>
-                  <label for="service02"><span class="box"></span><dl><dt><span class="label-head">채팅</span></dt><dd><span class="label-desc">₩ <var>36,000</var> <span class="unit">원</span></span></dd></dl></label>
-                </div>
-              </li>
-              <li>
-                <div class="checkbox">
-                  <input type="checkbox" name="service" id="service03" class="check">
-                  <label for="service03"><span class="box"></span><dl><dt><span class="label-head">통계/분석</span></dt><dd><span class="label-desc">₩ <var>36,000</var> <span class="unit">원</span></span></dd></dl></label>
-                </div>
-              </li>
-              <li class="total">
-                <div class="head">합계<p class="sm">모든 이용 요금은 세금(10%) 별도입니다</p></div>
-                <span class="total-price"><var class="won">36,000</var><span class="unit">원</span></span>
-              </li>
-            </ul>
+            <label for="user_companyUrl" class="inp-title">회사 URL</label>
+            <div class="inp-line url">
+              <span class="inp">
+                <input type="password" id="user_companyUrl" placeholder="회사 URL">
+              </span>
+              <span class="url-address">.ordercheck.io</span>
+            </div>
 
           </div>
           <div class="btn-group">
-            <button type="button" class="btn-l btn-dark-gray open-layer" data-info="layer-member-info"><span>다음 단계로</span></button>
+            <a href="login_complete-pw.html" class="btn-l btn-dark-gray confirm"><span>1개월 무료로 시작하기</span></a>
           </div>
 
         </div>
