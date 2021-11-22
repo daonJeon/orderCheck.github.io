@@ -39,7 +39,7 @@
           <div class="tbl-top-type02">
             <h2 class="title">요금제 선택</h2>
             <p class="sub-title"><strong class="tx-blue">14일 무료 체험</strong></p>
-            <button type="button" class="btn-link-type02"><span class="txt">자세한 가격 및 기능 알아보기</span></button>
+            <a href="#" class="btn-link-type02" target="_blank"><span class="txt">자세한 가격 및 기능 알아보기</span></a>
           </div>
 
           <div class="tab-wrap">
@@ -51,15 +51,30 @@
           </div>
 
           <div class="dropdown-wrap">
-            <button type="button" class="btn-member-drop drop-btn">
+            <button type="button" class="btn-member-drop btn-drop-type02">
               <dl>
                 <dt><span class="company">컴퍼니</span> <span class="desc">월 상담 신청 300건 이하</span></dt>
-                <dd><strong class="price">₩ 91,300 원</strong></dd>
+                <dd><strong class="price">₩ <var>91,300</var><span class="unit">원</span></strong></dd>
               </dl>
             </button>
-            <div class="sel-drop-menu">
+            <div class="drop-menu-list">
               <ul>
-                <li><button type="button" class="btn-l btn-line-gray"><span class="company">컴퍼니</span> <span class="desc">월 상담 신청 300건 이하</span><strong class="price">₩ 91,300 원</strong></button></li>
+                <li>
+                  <button type="button" class="btn-member-drop">
+                    <dl>
+                      <dt><span class="company">컴퍼니1</span> <span class="desc">월 상담 신청 400건 이하</span></dt>
+                      <dd><strong class="price">₩ <var>92,300</var><span class="unit">원</span></strong></dd>
+                    </dl>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="btn-member-drop">
+                    <dl>
+                      <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
+                      <dd><strong class="price">₩ <var>93,300</var><span class="unit">원</span></strong></dd>
+                    </dl>
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
@@ -93,7 +108,7 @@
 
           </div>
           <div class="btn-group">
-            <button type="button" class="btn-l btn-dark-gray open-layer" data-info="layer-member-info"><span>다음 단계로</span></button>
+            <button type="button" class="btn-l btn-dark-gray open-layer" data-info="layer-member-info"><span>다음 </span></button>
           </div>
 
         </div>
@@ -151,9 +166,13 @@
   <script src="../resource/js/common.js"></script>
   <script>
     //우측 탭
-    //tabFunc (".tab-wrap")
+    tabFunc (".tab-wrap")
     //레이어
     layerFunc (".open-layer")
+    //drop menu
+    dropMenuShowHide('.dropdown-wrap','.btn-drop-type02','.drop-menu-list')
+
+
   </script>
 </body>
 

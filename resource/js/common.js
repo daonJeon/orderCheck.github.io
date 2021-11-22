@@ -158,7 +158,7 @@ function agreeChkFunc (wrap, chkAllId,callback) {
       if(callback != null ) callback()
     })
   })
-  
+
 }
 
 function btnRemoveFunc (wrap,btnClass) {
@@ -173,43 +173,63 @@ function btnRemoveFunc (wrap,btnClass) {
   })
 }
 
-function tabFunc (tabwrap) {
+function tabFunc (tabwrap,isFullSlider,callback) {
+  setTimeout(function(e) {
   var wrap = document.querySelector(tabwrap)
   var tabBtn = wrap.querySelectorAll(".tab-btn")
   var slider = wrap.querySelector(".slider")
   var tabContent = document.querySelectorAll(".content")
+  var offsetPos = []
+
+  if(callback!= null ) callback()
 
   // tab loading
+
   function getSlider (wrap,pos,idx) {
-    slider.style.width =wrap.parentNode.clientWidth + "px"
-    slider.style.left = pos[idx] + "px"
+    if(isFullSlider) {
+      slider.style.width =wrap.parentNode.clientWidth + "px"
+      slider.style.left = pos[idx] + "px"
+
+    } else {
+      slider.style.width =wrap.clientWidth + "px"
+      slider.style.left = pos[idx] + "px"
+
+    }
   }
 
   //클릭 이벤트
   Array.prototype.forEach.call(tabBtn, function(tab, idx){
-    var offsetPos = [0,89,181]
-    tab.addEventListener("click", function (e) {
-      Array.prototype.forEach.call(tabBtn, function(tab, idx){
-        tab.parentNode.classList.remove("on")
-        if(tabContent != null) tabContent[idx].style.display ="none"
-    })
-
-    //슬라이드 영역 조절
-    var id = e.currentTarget.getAttribute("data-tab");
-    e.currentTarget.parentNode.classList.add("on")
-    getSlider(e.currentTarget,offsetPos,idx)
-    if(tabContent != null) document.getElementById(id).style.display ="block"
-    })
+    if(isFullSlider) {
+      offsetPos.push(tabBtn[idx].parentElement.offsetLeft)
+    } else {
+      offsetPos.push(tabBtn[idx].offsetLeft)
+    }
 
     if(tab.parentNode.classList.contains("on")) {
       getSlider(tab,offsetPos,idx)
-      if(tabContent != null) tabContent[idx].style.display ="block"
-
+      if(tabContent.length > 0) tabContent[idx].classList.add("active")
     } else {
-      if(tabContent != null) tabContent[idx].style.display ="none"
+      if(tabContent.length > 0) tabContent[idx].classList.remove("active")
     }
-  })
 
+    tab.addEventListener("click", function (e) {
+
+    Array.prototype.forEach.call(tabBtn, function(tab2, idx){
+      tab2.parentNode.classList.remove("on")
+        if(tabContent.length > 0) tabContent[idx].classList.remove("active")
+      })
+
+      var id = e.currentTarget.getAttribute("data-tab");
+      getSlider(e.currentTarget,offsetPos,idx)
+      e.currentTarget.parentNode.classList.add("on")
+      if(tabContent.length > 0) document.getElementById(id).classList.add("active")
+      if(callback != null ) callback()
+
+    })
+
+
+  })
+  },200)//setTimeout
 }
 
 function accordionFunc (btnName) {
@@ -241,10 +261,11 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
   inputValLengthChk ()
 
   function inputValLengthChk () {
-    Array.prototype.forEach.call(input, function(inp, idx){      
+    Array.prototype.forEach.call(input, function(inp, idx){
       inp.addEventListener("keyup", function (e) {
         var checkflag = inp.parentElement;
         var flag = '';
+
         maxIsTrue == true ? flag =( inp.value.length == inp.getAttribute("maxlength")) : flag = inp.value.length > 0
         if(flag) {
           loginBtnFlag[idx] = true;
@@ -253,7 +274,7 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
           loginBtnFlag[idx] = false;
           checkflag.classList.remove("on")
         }
-        
+
         loginBtnDisabled()
       })
 
@@ -261,9 +282,9 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
 
   }
   function loginBtnDisabled () {
-    var loginBtn = scriptArea.querySelector(btnClass )
+    var loginBtn = scriptArea.querySelector(btnClass)
     var flag = loginBtnFlag.every(function(val) {return val == true})
- 
+
     if(flag) loginBtn.disabled = false//둘다 인풋 체크
     else loginBtn.disabled = true
   }
@@ -275,13 +296,13 @@ function chkActiveFunc(wrap,btnClass) {
   var check = scriptArea.querySelectorAll("input[type=checkbox]:required")
   var checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):required:checked")
   var confirmBtn = scriptArea.querySelector(btnClass)
-  console.log(check)
+
   if(checked.length >= check.length) confirmBtn.disabled = false
   else confirmBtn.disabled = true;
 
   Array.prototype.forEach.call(check, function(chk, idx){
     chk.addEventListener("click", function (e) {
-      checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):checked")      
+      checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):checked")
       if(checked.length == check.length -1) confirmBtn.disabled = false
       else confirmBtn.disabled = true;
     })
@@ -293,7 +314,7 @@ function inpTypeSwitch () {
   clickAddClassFunc (".btn-pw-show",".btn-pw-show","active", function (e) {
     var inputPw = e.currentTarget.previousElementSibling;
     var flag = inputPw.getAttribute("type")
-    flag == "text"? inputPw.setAttribute("type","password") : inputPw.setAttribute("type","text") 
+    flag == "text"? inputPw.setAttribute("type","password") : inputPw.setAttribute("type","text")
   })
 }
 
@@ -309,7 +330,7 @@ function autoHypenTelFunc (inputID,callback) {//매개변수 설명 : input ID /
     str = str.replace(/[^0-9]/g,'')
     var tmp = '';
 
-    if(callback != null) callback(target) 
+    if(callback != null) callback(target)
 
     if (str.length < 4) {
       return str;
@@ -331,14 +352,78 @@ function autoHypenTelFunc (inputID,callback) {//매개변수 설명 : input ID /
       tmp += str.substr(3, 4);
       tmp += '-';
       tmp += str.substr(7);
-      
+
       return tmp;
     }
-    
+
   }
 
 }
 
+
+function dropMenuShowHide (wrap,clickBtn,menuList ) {
+  var dropWrap = document.querySelector(wrap)
+  var btn = dropWrap.querySelector(clickBtn)
+  var menu = document.querySelector(menuList)
+
+  var company = document.querySelector(".company")
+  var desc = document.querySelector(".desc")
+  var price = document.querySelector(".price var")
+
+
+  //event
+  btn.addEventListener("click",function(e){
+    if(e.target.classList.contains("open")) {
+      menuClose ()
+    } else {
+      menuOpen ()
+      dimCreate ()
+    }
+  })
+
+  menu.addEventListener("click",function(e){
+    clickResultApply (e)
+    menuClose ()
+  })
+
+  function menuClose () {
+    btn.classList.remove("open")
+    var dim = document.querySelector(".dim")
+    dim.parentElement.removeChild(dim)
+  }
+
+  function menuOpen () {
+    btn.classList.add("open")
+  }
+
+  function clickResultApply (e) {
+    e.target.tagName != "BUTTON"? target = e.target.closest("button") : target = e.currentTarget
+    var selCompany = target.querySelector(".company").innerText
+    var selDesc = target.querySelector(".desc").innerText
+    var selPrice = target.querySelector(".price var").innerText
+
+
+    company.innerText = selCompany
+    desc.innerText = selDesc
+    price.innerText = selPrice
+
+    btn.classList.add("active")
+  }
+  function dimCreate () {
+      var dimElement = document.createElement("div")
+      dimElement.classList.add("dim")
+      dropWrap.append(dimElement)
+  }
+  function dimRemove () {
+    var dim = document.querySelector(".dim")
+    //event
+    dim.addEventListener("click",function(e){
+      dim.parentElement.removeChild(dim)
+      menuClose ()
+    })
+  }
+
+}
 
 
 
