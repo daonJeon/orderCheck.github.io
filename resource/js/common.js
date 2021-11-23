@@ -1,3 +1,31 @@
+var agent = navigator.userAgent.toLowerCase();
+if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+  //alert("인터넷 익스플로러 브라우저 입니다.");
+  contentHeightFix(".subpage",".center-box")
+} else {
+
+}
+
+
+//IE display: flex 지원용
+function contentHeightFix (wrap, cntbox) {
+  var page = document.querySelector(wrap)
+  var contentbox = document.querySelector(cntbox)
+
+
+  if(contentbox.classList.contains("narrow")) {
+    setTimeout(function() {
+      page.style.height = page.clientHeight + "px"
+      contentbox.style.height = contentbox.clientHeight + "px"
+    },300)
+
+
+  } else {
+    page.style.height = page.clientHeight + "px"
+    contentbox.style.height = contentbox.clientHeight + "px"
+  }
+}
+
 // closest 기능 함수 설정
 if (window.Element && !Element.prototype.closest) {
   Element.prototype.closest =
@@ -41,17 +69,7 @@ if (!('remove' in Element.prototype)) {
   };
 }
 
-var agent = navigator.userAgent.toLowerCase();
-if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
-  //console.log("인터넷 익스플로러 브라우저 입니다.");
-  contentHeightFix(".center-box")
-}
 
-//IE display: flex 지원용
-function contentHeightFix (wrap) {
-  var contentbox = document.querySelector(wrap)
-  contentbox.style.height = contentbox.clientHeight
-}
 
 //메인 , 드롭 메뉴
 function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
@@ -451,7 +469,5 @@ function init () {
   clickAddClassFunc(".btn-side-open",".sidebar","open")
 
 }
-
-
 
 
