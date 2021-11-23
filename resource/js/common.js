@@ -41,6 +41,18 @@ if (!('remove' in Element.prototype)) {
   };
 }
 
+var agent = navigator.userAgent.toLowerCase();
+if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+  //console.log("인터넷 익스플로러 브라우저 입니다.");
+  contentHeightFix(".center-box")
+}
+
+//IE display: flex 지원용
+function contentHeightFix (wrap) {
+  var contentbox = document.querySelector(wrap)
+  contentbox.style.height = contentbox.clientHeight
+}
+
 //메인 , 드롭 메뉴
 function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
   var btnMenu = document.querySelectorAll(dropBtn)
@@ -365,7 +377,7 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   var dropWrap = document.querySelector(wrap)
   var btn = dropWrap.querySelector(clickBtn)
   var menu = document.querySelector(menuList)
-
+  var menuBtn = menu.querySelectorAll(".btn-member-drop")
   var company = document.querySelector(".company")
   var desc = document.querySelector(".desc")
   var price = document.querySelector(".price var")
@@ -380,16 +392,19 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
       dimCreate ()
     }
   })
+  Array.prototype.forEach.call(menuBtn, function(btn, idx){
+    btn.addEventListener("click",function(e){
+      clickResultApply (e)
+      menuClose ()
+    })
 
-  menu.addEventListener("click",function(e){
-    clickResultApply (e)
-    menuClose ()
   })
 
   function menuClose () {
     btn.classList.remove("open")
     var dim = document.querySelector(".dim")
     dim.parentElement.removeChild(dim)
+    dimRemove()
   }
 
   function menuOpen () {
@@ -397,7 +412,8 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   }
 
   function clickResultApply (e) {
-    e.target.tagName != "BUTTON"? target = e.target.closest("button") : target = e.currentTarget
+    e.currentTarget.tagName != "BUTTON"? target = e.currentTarget.closest("button") : target = e.currentTarget
+
     var selCompany = target.querySelector(".company").innerText
     var selDesc = target.querySelector(".desc").innerText
     var selPrice = target.querySelector(".price var").innerText
@@ -412,15 +428,18 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   function dimCreate () {
       var dimElement = document.createElement("div")
       dimElement.classList.add("dim")
-      dropWrap.append(dimElement)
+      dropWrap.appendChild(dimElement)
   }
   function dimRemove () {
     var dim = document.querySelector(".dim")
     //event
-    dim.addEventListener("click",function(e){
-      dim.parentElement.removeChild(dim)
-      menuClose ()
-    })
+    if (dim != null) {
+      dim.addEventListener("click",function(e){
+        dim.parentElement.removeChild(dim)
+        menuClose ()
+      })
+
+    }
   }
 
 }

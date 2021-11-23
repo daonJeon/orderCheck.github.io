@@ -133,14 +133,14 @@ input { outline: none; border: none; background: none}
 .cnt-inner .right.line {padding:20px 26px; border: 1px solid #CDD1DA; border-radius: 10px; box-sizing: border-box;}
 .cnt-inner .right .content {padding:20px 0; height: 100%; box-sizing: border-box;}
 
-.subpage {padding:110px 0 20px; min-height:100vh; display: flex; align-items: center; justify-content: center; box-sizing: border-box;}
+.subpage {padding:110px 0 20px; min-height:100vh; display: flex; align-items: center; box-sizing: border-box;}
 .subpage .header {position:fixed; width:100%; top:0; left:0; justify-content: center; padding:34px 0; z-index: 1; background-color: #fff;}
 .center-box {display:flex; justify-content:center; align-items:center; margin:0 auto; padding:50px 80px; width:620px; min-height:540px; border-radius: 6px; border: 1px solid #E7E7E7; box-sizing: border-box;}
 .center-box.row {flex-direction: column;}
 .center-box.narrow {padding-left:100px; padding-right:100px}
 .login-wrap.inviter .login-top {margin-bottom:36px;}
 .login-wrap.inviter .social-login {margin-bottom:36px;}
-.login-wrap.inviter .form-btm.tc {padding:0}
+.login-wrap.inviter .social-login + .form-btm.tc {padding:0}
 
 .page-top {width:100%; margin-bottom:40px; padding-bottom:40px; text-align:center; border-bottom:1px solid #E7E7E7;}
 .page-top .title {margin-bottom:16px}
@@ -148,7 +148,11 @@ input { outline: none; border: none; background: none}
 @media all and (max-width: 768px){
 
 }
+ /* IE10+ */
+ @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
+/* .center-box {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}*/
+ }
 /* 추가 수정 */
 /* .material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px;
 display: inline-block; line-height: 1; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr;
@@ -241,7 +245,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
 .inp input {width:100%; padding:10px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 22px;  color:#41495D;}
-.inp.large input {height:62px;line-height:62px;}
+.inp.large input {height:62px;}
 .inp input[type=password] {padding-right:30px;}
 .inp input:disabled {background: #F6F6F6;  border: 1px solid #E7E7E7;}
 .inp input:focus {border-color:#1D58FF}
