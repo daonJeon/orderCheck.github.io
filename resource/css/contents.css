@@ -17,6 +17,7 @@
 .menu .btn-menu {margin:0 10px}
 .menu .btn-menu > * {position: relative;}
 
+.searchbox .ico.search,
 .menu .ico {display:inline-block; min-width:30px; width:30px; height:30px; vertical-align: middle;}
 .profile-details {position:relative; display:inline-block; padding-right:20px;}
 .profile-details .img,
@@ -29,7 +30,7 @@
 .btn-drop .arrow:after {position:absolute; right:0; top:50%; margin-top:-3px; border-top-color: #818181; }
 
 .cnt-box-wrap {display:flex; padding:30px;}
-.cnt-box {padding:22px 20px; background:#fff; border-radius: 16px;}
+.cnt-box {padding:28px 20px; background:#fff; border-radius: 16px;}
 .cnt-box.left {flex-basis: 380px; min-width: 340px}
 .cnt-box.right {width:100%; margin-left:20px; }
 .cnt-box:first-child:last-child {width:100%}
@@ -45,6 +46,11 @@
 .tbl-top .inp-select {min-width:130px}
 .tbl-top .cnt-title {font-size: 16px; line-height: 23px; }
 .tbl-top .btn {min-width: 90px}
+.tbl-top .searchbox {width:420px}
+
+.tbl-top.start {margin-bottom:24px; justify-content: flex-start;}
+.tbl-top.start .title {margin-right:20px}
+
 .cnt-box .filter-box {margin-bottom:36px; }
 .cnt-box .filter-box .checkbox {display:inline-block; width:32%; font-size:14px; color:#414C5D}
 .cnt-box .filter-box .checkbox:nth-child(-n + 3) {margin-bottom:12px;}
@@ -301,3 +307,10 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .inp.range input:first-child {width:60px;}
 .inp.range input:last-child {width:100px;}
 .inp.pw input {width:60px;}
+
+.estimate-list::after {display: block; clear: both; content: '';}
+.estimate-list > li {float:left;position: relative;}
+.estimate-list .btn-form-menu {position: absolute; top:15px; right:15px;z-index: 1;}
+.estimate-list > li + li {margin-left:20px;}
+.btn-form {width: 274px; height: 170px;padding:20px 14px; text-align:left; border: 1px solid #E7E7E7; box-sizing: border-box; border-radius: 6px;font-size: 15px; line-height: 22px; color: #555868;}
+.btn-form .dropdown-wrap {position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1;}
