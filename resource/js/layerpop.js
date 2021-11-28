@@ -83,10 +83,14 @@ function layerClose(e){
 	//layerset = null;
 }
 
-//닫기용 - 팝업 어려개일 경우 현재 팝업만 닫기.
-function layerCloseThis(e){
-	thisLayer = e;
-	thisLayer.closest('.layer-pop').style.display = "none"
+function layerAllClose () {
+	var allLayer = document.querySelectorAll(layer)
+	Array.prototype.forEach.call(allLayer, function(layerAll, idx){
+		layerAll.addEventListener("click",function (){
+			layerAll.style.display = "none"
+		})
+
+	})
 }
 
 function layerOpenFunc () {
@@ -94,6 +98,8 @@ function layerOpenFunc () {
   Array.prototype.forEach.call(layerBtn, function(btn, idx){
     btn.addEventListener("click",function (e) {
       var layer = btn.getAttribute("data-info")
+	 
+	  layerAllClose()
       layerOpen(layer);
       e.currentTarget.classList.add(onClass)
     })
@@ -123,7 +129,7 @@ function layerAlert(title, msg, btn, tg) {
 	var body = document.querySelector('body');
 
 	var btnTx = btn == null ? '확인' : btn;
-	var layerCnt = '<div class="layer-pop alert" id="nAlert">';
+	var layerCnt = '<div class="layer-pop alert" id="alertLayer">';
 		layerCnt += '<div class="layer-cnt">';
 
 		if(title != '') {
@@ -143,10 +149,10 @@ function layerAlert(title, msg, btn, tg) {
 		layerCnt += '</div>';
 
 	body.insertAdjacentHTML('beforeend', layerCnt);
-	var alert = document.querySelector('#nAlert'),
-		close = alert.querySelector('#nAlert .close-layer');
+	var alert = document.querySelector('#alertLayer'),
+		close = alert.querySelector('#alertLayer .close-layer');
 
-  document.querySelector('#nAlert').style.display="block";
+  document.querySelector('#alertLayer').style.display="block";
 	close.focus();
 
 	close.addEventListener('click', function(){
@@ -162,7 +168,7 @@ function layerConfirm(active, title, msg, btn1, btn2) {
 	var btnCancel = btn1 == null ? '취소' : btn1,
 		btnOk = btn2 == null ? '확인' : btn2;
 
-	var layerCnt = '<div class="layer-pop confirm" id="nConfirm">';
+	var layerCnt = '<div class="layer-pop confirm" id="ConfirmLayer">';
 		layerCnt += '<div class="layer-cnt">';
 		if(title != '') {
 			layerCnt += '<div class="layer-top">';
@@ -181,11 +187,11 @@ function layerConfirm(active, title, msg, btn1, btn2) {
 		layerCnt += '</div>';
 
 	body.insertAdjacentHTML('beforeend', layerCnt);
-	var confirm  = document.querySelector('#nConfirm'),
-		cancel = confirm.querySelectorAll('#nConfirm .close-layer'),
-		okBtn 	   = confirm.querySelectorAll('#nConfirm .btn-ok');
+	var confirm  = document.querySelector('#ConfirmLayer'),
+		cancel = confirm.querySelectorAll('#ConfirmLayer .close-layer'),
+		okBtn 	   = confirm.querySelectorAll('#ConfirmLayer .btn-ok');
 
-	document.querySelector('#nConfirm').style.display="block";
+	document.querySelector('#ConfirmLayer').style.display="block";
 
   Array.prototype.forEach.call(cancel, function(cancelBtn, idx){
     cancelBtn.addEventListener('click', function(){
@@ -194,7 +200,7 @@ function layerConfirm(active, title, msg, btn1, btn2) {
   })
   Array.prototype.forEach.call(okBtn, function(ok, idx){
     ok.addEventListener('click', function(){
-      confirm.parentNode.removeChild(confirm);
+      confirm.parentElement.removeChild(confirm);
       if(typeof active === 'function') {
         active();
       }
