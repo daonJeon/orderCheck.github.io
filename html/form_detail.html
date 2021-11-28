@@ -25,71 +25,41 @@
 
 <body>
   <div id="wrap">
-    <nav class="sidebar">
-      <div class="logo-details">
-        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
-        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+    <aside class="side-form left">
+      <div class="top-cnt">
+        <h2 class="title">Page 1 title</h2>
+        <button type="button" class="btn-plus">메뉴 선택</button>
+        <div class="page-info">
+          <ul>
+            <li><button type="button" class="list-cnt name"><span>성함</span></button></li>
+            <li><button type="button" class="list-cnt tel"><span>연락처</span></button></li>
+            <li><button type="button" class="list-cnt address"><span>시공지 주소</span></button></li>
+            <li>
+              <button type="button" class="list-cnt on address"><span>시공지 주소</span></button>
+              <button type="button" class="btn-remove"><span>삭제</span></button>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <ul class="nav-list">
-        <li>
-          <a href="#">
-            <i class='ico home'></i>
-            <span class="links_name">홈</span>
-          </a>
-        </li>
-        <li>
-          <a href="customManage_list.html">
-            <i class="ico user"></i>
-            <span class="links_name">고객관리</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='ico file'></i>
-            <span class="links_name">파일보관함</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='ico chat'></i>
-            <span class="links_name">채팅</span>
-          </a>
-        </li>
-        <li class="on">
-          <a href="form_list.html">
-            <i class='ico form'></i>
-            <span class="links_name">신청폼리스트</span>
-          </a>
-        </li>
-       </ul>
-        <ul class="btm">
-          <li>
-            <a href="#">
-              <i class='ico help'></i>
-              <span class="links_name">자주 묻는 질문</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class='ico setting'></i>
-              <span class="links_name">설정</span>
-            </a>
-          </li>
-        </ul>
-    </nav>
-    <section id="content" class="content-section">
-      <!-- #include file="include_header.html" -->
+    </aside>
+    <aside class="side-form right">
+      <h2 class="sub-title">질문 상세 설정</h2>
+
+    </aside> 
+    <section id="content" class="content-section type02">
 
       <!-- header -->
       <div class="header-wrap">
         <header id="header" class="header">
-          <h2 class="title">상담 신청폼</h2>
+          <div class="title">
+            <button type="button" class="btn-txt-prev"><span><i></i>신청폼 리스트 돌아가기</span></button>            
+          </div>
           <ul class="menu">
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
-                <input type="text" placeholder=" 제목으로 검색하세요">
+                <input type="text" placeholder="제목으로 검색하세요">
               </div>
             </li>
             <li>
@@ -137,94 +107,57 @@
           </div>
           </aside>
       </div>
-      <!-- location -->
-      <ul class="location-wrap">
-        <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
-        <li><a href="customManage_list.html" target="_blank">상담 신청폼</a></li>
-        <li>고객명(21.11.14)</li>
-      </ul>
-      <!-- //location -->
 
+
+      <header class="tbl-top band">
+        <input type="text" value="제목 없는 신청폼" class="inp-title">        
+        <div class="tab-wrap">
+          <ul class="tabs">
+            <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>
+            <li><button type="button" class="tab-btn">공유하기</button></li>
+            <li><button type="button" class="tab-btn">설정</button></li>
+          </ul>
+          <span class="slider" data-left="0" style="width: 14px; left: 22px;"></span>
+        </div>
+        <div class="row-list">
+
+          <button type="button" class="btn-m btn-white-line open-layer" data-info="layer-customer-share"><span>미리보기</span></button>
+          <button type="button" class="btn-m btn-white open-confirm"><span>게시하기</span></button>
+        </div>
+      </header>
       <div class="cnt-box-wrap">
-        <div class="cnt-box">
-          <!-- tbl-top -->
-          <div class="tbl-top start">
-            <h3 class="title">신청폼 리스트</h3>
-            <div class="searchbox">
-              <i class='ico search02'></i>
-              <input type="text" placeholder=" 제목으로 검색하세요">
-            </div>
-          </div>
-          <!-- //tbl-top -->
-          <ul class="estimate-list">
+        <div class="form-list-wrap">
+          <ul>
             <li>
-              <button type="button" class="btn-form-add open-layer" data-info="layer-form-title">
-                <span>신청폼 생성하기</span>
-              </button>
-            </li>
-            <li>
-              <div type="button" class="btn-form">
-                <span class="txt">신청서 제목란입니다</span>
-
-                <div class="dropdown-wrap">
-                  <button type="button" class="btn-form-menu btn-drop"><span>메뉴열기</span></button>
-                  <div class="dropdown-box">
-                    <ul>
-                      <li><a href="#" class="btn-drop-menu">복제하기</a></li>
-                      <li><a href="#" class="btn-drop-menu">삭제하기</a></li>
-                      <li><a href="#" class="btn-drop-menu">링크확인</a></li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="form-template">
+                
               </div>
-
             </li>
           </ul>
-
         </div>
+        <footer class="cnt-bottom">
+          <button type="button" class="btn-form-arrow" title="사이드오픈" data-direction="left">
+            <span>
+              <img src="../resource/images/common/ico_form-arrow-left.png" alt=""/>
+            </span>
+          </button>
+          
+          <div>
+            <img src="../resource/images/common/ico_switch-txt.png" alt="오더체크 이용중 체크"/>
+            <span class="switch">
+              <input type="checkbox" id="a" checked="">
+              <label for="a" class="slider round"></label>
+            </span>  
+          </div>
+          <button type="button" class="btn-form-arrow" title="사이드오픈" data-direction="right">
+            <span>
+              <img src="../resource/images/common/ico_form-arrow-right.png" alt=""/>
+            </span>
+          </button>
+           </footer>
       </div>
     </section>
 
-  </div>
-
-
-  <!--  -->
-  <div class="layer-pop confirm" id="layer-form-title">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">견적 삭제하기</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="inp">
-          <input type="text" name="" id="" placeholder="고객명" value="">
-        </div>
-
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-bk open-layer" data-info="layer-type-select"><span>확인</span></button>
-        </div>
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
-  </div>
-
-  <!--  -->
-  <div class="layer-pop confirm" id="layer-type-select">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">편집 유형</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="btn-group-wrap">
-          <span><button type="button"><span class="txt">직접 만들기</span></button></span>
-          <span><button type="button"><span class="txt">템플릿으로 시작</span></button></span>
-        </div>
-
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-bk open-layer" data-info="layer-form-title"><span>확인</span></button>
-        </div>
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
   </div>
 
   <!-- script -->
@@ -237,25 +170,12 @@
     init ()
     //우측 탭
     window.onload = function(){
-
       tabFunc (".tab-wrap")
     }
     //레이어
     layerFunc (".open-layer")
-    //아코디언 기능
-    accordionFunc (".accordion-title")
-
-    //select box = jquery plugin
-    $('.inp-select select').niceSelect();
-
-    //alert
-    var alertBtn = document.querySelector('.open-confirm');
-    var confirmCallback = function(){
-        console.log('컨펌용 콜백');
-    }
-    alertBtn.addEventListener('click', function(){
-      layerConfirm(confirmCallback, '', '내용을 수정하시겠습니까?', '취소', '확인');
-    });
+    formSideFunc(".btn-form-arrow",".side-form")
+    inpEmptyFunc(".inp-title")
   </script>
 </body>
 </html>

@@ -163,16 +163,16 @@
               </button>
             </li>
             <li>
-              <div type="button" class="btn-form">
+              <div class="btn-form">
                 <span class="txt">신청서 제목란입니다</span>
 
                 <div class="dropdown-wrap">
-                  <button type="button" class="btn-form-menu btn-drop"><span>메뉴열기</span></button>
+                  <button type="button" class="btn-form-menu"><span>메뉴열기</span></button>
                   <div class="dropdown-box">
                     <ul>
-                      <li><a href="#" class="btn-drop-menu">복제하기</a></li>
-                      <li><a href="#" class="btn-drop-menu">삭제하기</a></li>
-                      <li><a href="#" class="btn-drop-menu">링크확인</a></li>
+                      <li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>
+                      <li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>
+                      <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크확인</span></a></li>
                     </ul>
                   </div>
                 </div>
@@ -188,7 +188,7 @@
   </div>
 
 
-  <!--  -->
+  <!-- 신청폼 제목 -->
   <div class="layer-pop confirm" id="layer-form-title">
     <div class="layer-cnt">
       <div class="layer-top">
@@ -207,7 +207,7 @@
     </div>
   </div>
 
-  <!--  -->
+  <!-- 편집 유형 -->
   <div class="layer-pop confirm" id="layer-type-select">
     <div class="layer-cnt">
       <div class="layer-top">
@@ -215,8 +215,8 @@
       </div>
       <div class="layer-mid">
         <div class="btn-group-wrap">
-          <span><button type="button" class="btn-type-custom"><span class="txt">직접 만들기</span></button></span>
-          <span><button type="button" class="btn-type-temp"><span class="txt">템플릿으로 시작</span></button></span>
+          <span><button type="button" class="btn-l btn-line-gray btn-type-custom"><span class="txt">직접 만들기</span></button></span>
+          <span><button type="button" class="btn-l btn-line-gray btn-type-temp"><span class="txt">템플릿으로 시작</span></button></span>
         </div>
 
         <div class="layer-btn tr">
@@ -235,14 +235,9 @@
   <script>
     //공통 페이지용 함수
     init ()
-    
     //레이어
     layerFunc (".open-layer")
-    //아코디언 기능
-    accordionFunc (".accordion-title")
-
-    //select box = jquery plugin
-    $('.inp-select select').niceSelect();
+    formControlFunc(".btn-drop-menu")
 
   </script>
 </body>

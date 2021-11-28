@@ -16,6 +16,7 @@ function popSet(tg, btn, bgSet, middle){
 	}
 	if(middle == true)	popPos(tg);
 	else null;
+	
 
 }
 
@@ -52,6 +53,7 @@ pos = 레이어 위치 관련 변수 - 값이 없을 경우 - 화면 중앙
 // 버튼용 함수
 function layerOpenBtn(e, pos){
 
+	
 	var btn = e,
 	tg = btn.getAttribute('data-info');
 
@@ -64,7 +66,6 @@ function layerOpenBtn(e, pos){
 function layerOpen(e, pos, bgset){
 	var tg = e,
 	bgSet = bgset;
-
   document.querySelector('#'+tg+'').style.display = "block"
   document.querySelector('#'+tg+'').classList.add(onClass);
   //document.querySelector('#'+tg+''+layercnt).setAttribute('tabindex','0')//.focus()
@@ -74,7 +75,6 @@ function layerOpen(e, pos, bgset){
 
 //닫기용 함수 - 레이어 전체
 function layerClose(e){
-
   e.closest(".layer-pop").style.display = "none"
 
 	//if(layerset != null) indexOnScroll(cntwrap);
@@ -106,9 +106,9 @@ function layerOpenFunc () {
   })
 }
 function layerCloseFunc (layer) {
-
+	
   Array.prototype.forEach.call(document.querySelectorAll(".layer-close"), function(close, idx){
-  close.addEventListener("click",function (e) {
+  close.addEventListener("click",function (e) {	  	
       layerClose(e.target);
     })
   })
@@ -156,6 +156,7 @@ function layerAlert(title, msg, btn, tg) {
 	close.focus();
 
 	close.addEventListener('click', function(){
+		
 		alert.parentNode.removeChild(alert);
 		if(tg != null) tg.focus();
 	});
@@ -195,10 +196,10 @@ function layerConfirm(active, title, msg, btn1, btn2) {
 
   Array.prototype.forEach.call(cancel, function(cancelBtn, idx){
     cancelBtn.addEventListener('click', function(){
-      confirm.parentNode.removeChild(confirm);
+		confirm.parentNode.removeChild(confirm);
     });
-  })
-  Array.prototype.forEach.call(okBtn, function(ok, idx){
+})
+Array.prototype.forEach.call(okBtn, function(ok, idx){
     ok.addEventListener('click', function(){
       confirm.parentElement.removeChild(confirm);
       if(typeof active === 'function') {

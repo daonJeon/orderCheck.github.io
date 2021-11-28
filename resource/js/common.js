@@ -77,13 +77,27 @@ function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
 
   clickAddClassFunc (btnName,dropBox,"on")
   clickRemoveClassFunc (btnMenu,dropBox,"on", function (target) {
-    document.querySelector(btnName).querySelector(textArea).innerText = target.innerText
+    if(textArea != null)  document.querySelector(btnName).querySelector(textArea).innerText = target.innerText
 
   })
 
 }
 
-dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')
+//메인 , 드롭 메뉴
+function dropFormMenuOpen (btnName, dropBox, dropListBtn) {
+  var btnMenu = document.querySelectorAll(btnName)
+  Array.prototype.forEach.call(btnMenu, function(btn, idx){
+    btn.addEventListener("click",function(e) {
+      e.currentTarget.classList.toggle("on")
+      e.currentTarget.nextElementSibling.classList.toggle("on")
+    })
+
+  })
+
+  
+
+}
+
 
 //우측 슬라이드 메뉴
 function slideMenu () {
@@ -462,11 +476,85 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
 
 }
 
+var formControlFunc = function (wrap) {  
+  var cntWrap = document.querySelectorAll(wrap)
+  Array.prototype.forEach.call(cntWrap, function(cnt, idx){
+    cnt.addEventListener("click",function (e) {
+      var classFlag = e.currentTarget.classList[1]
+      if( classFlag =="copy") formCopy(e)
+      else if( classFlag =="delete") formDelete(e)
+
+
+    })    
+  })
+  var formCopy = function (e) {
+    var formList = document.querySelector(".estimate-list")
+    var formTitle = document.querySelectorAll(".estimate-list > li .txt")
+    var formLi =''
+    for (var title_index = 0; title_index < formTitle.length; title_index++) {
+      //e.currentTarget.closest(".btn-form").querySelector(".txt").innerText
+      
+    }
+    var msg = "a"
+    
+    formLi += '<li>';
+		formLi += '<div class="btn-form">';
+		formLi += '<span class="txt">'+msg+'</span>';
+		formLi += '<div class="dropdown-wrap">';
+		formLi += '<button type="button" class="btn-form-menu"><span>메뉴열기</span></button>';
+		formLi += '<div class="dropdown-box">';
+		formLi += '<ul>';
+		formLi += '<li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>';
+		formLi += '<li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>';
+		formLi += '<li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크확인</span></a></li>';
+		formLi += '</ul>';
+		formLi += '</div>';
+		formLi += '</div>'; 
+		formLi += '</div>';
+		formLi += '</li>';
+               
+  	formList.insertAdjacentHTML('beforeend', formLi);     
+
+    dropFormMenuOpen(".btn-form-menu")    
+    formControlFunc(".btn-drop-menu")
+  }
+  var formDelete = function (e) {
+    e.currentTarget.closest(".btn-form").parentNode.parentNode.removeChild(e.currentTarget.closest(".btn-form").parentNode)
+  }
+
+}
+
+function formSideFunc (btn,wrap) {
+  var formBtn = document.querySelectorAll(btn)
+  var sideLeft = document.querySelector(wrap+".left")
+  var sideRight = document.querySelector(wrap+".right")
+  Array.prototype.forEach.call(formBtn, function(btn, idx){
+    btn.addEventListener("click",function(e) {
+      var directionFlag = e.currentTarget.getAttribute("data-direction")
+      if(directionFlag =="left") sideLeft.classList.toggle("open")
+      else if(directionFlag =="right") sideRight.classList.toggle("open")
+      
+    })
+  })
+}
+
+function inpEmptyFunc (ele) {
+  var input = document.querySelectorAll(ele)
+  Array.prototype.forEach.call(input, function(inp, idx){
+    inp.addEventListener("focus",function(e) {
+      if(e.currentTarget.value != '') e.currentTarget.value = ''
+      
+    })
+  })
+}
 
 
 function init () {
   //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")
+  
+  dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')
+  dropFormMenuOpen(".btn-form-menu")
 
 }
 
