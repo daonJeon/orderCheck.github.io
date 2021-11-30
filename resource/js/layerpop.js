@@ -16,8 +16,6 @@ function popSet(tg, btn, bgSet, middle){
 	}
 	if(middle == true)	popPos(tg);
 	else null;
-	
-
 }
 
 function popPos(e){
@@ -52,8 +50,6 @@ pos = 레이어 위치 관련 변수 - 값이 없을 경우 - 화면 중앙
 
 // 버튼용 함수
 function layerOpenBtn(e, pos){
-
-	
 	var btn = e,
 	tg = btn.getAttribute('data-info');
 
@@ -86,9 +82,7 @@ function layerClose(e){
 function layerAllClose () {
 	var allLayer = document.querySelectorAll(layer)
 	Array.prototype.forEach.call(allLayer, function(layerAll, idx){
-		layerAll.addEventListener("click",function (){
-			layerAll.style.display = "none"
-		})
+		layerAll.style.display = "none"
 
 	})
 }
@@ -98,31 +92,25 @@ function layerOpenFunc () {
   Array.prototype.forEach.call(layerBtn, function(btn, idx){
     btn.addEventListener("click",function (e) {
       var layer = btn.getAttribute("data-info")
-	 
-	  layerAllClose()
+
+	    layerAllClose()
       layerOpen(layer);
       e.currentTarget.classList.add(onClass)
     })
   })
 }
 function layerCloseFunc (layer) {
-	
+
   Array.prototype.forEach.call(document.querySelectorAll(".layer-close"), function(close, idx){
-  close.addEventListener("click",function (e) {	  	
+  close.addEventListener("click",function (e) {
       layerClose(e.target);
     })
   })
 }
 
 function layerFunc (openBtns) {
-  var openBtn = document.querySelectorAll(openBtns)
-  Array.prototype.forEach.call(openBtn, function(btn, idx){
-    var layer = btn.getAttribute("data-info")
-    // console.log(btn)
-    layerOpenFunc()
-    layerCloseFunc(layer)
-
-  })
+  layerOpenFunc()
+  layerCloseFunc(layer)
 }
 //생성용 레이어
 function layerAlert(title, msg, btn, tg) {
@@ -156,7 +144,7 @@ function layerAlert(title, msg, btn, tg) {
 	close.focus();
 
 	close.addEventListener('click', function(){
-		
+
 		alert.parentNode.removeChild(alert);
 		if(tg != null) tg.focus();
 	});
