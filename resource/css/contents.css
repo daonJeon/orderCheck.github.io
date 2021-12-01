@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.content-section {  position: relative;  min-width:1836px; background: #E4E9F7;  min-height: 100vh;  top: 0;  left: 78px;  width: calc(100% - 78px);  z-index: 2; }
+.content-section {  position: relative;  min-width:1836px; background: #F7F8FB;  min-height: 100vh;  top: 0;  left: 78px;  width: calc(100% - 78px);  z-index: 2; }
 .content-section .title { display: inline-block; color: #41495E; line-height: 32px; font-size: 22px; font-weight: 700;}
 .content-section .title + .filter-box {margin-top:30px;}
 .content-section .header {height:70px; padding:0 30px; }
@@ -64,8 +64,8 @@
 
 .cnt-top {position: relative; margin-bottom:37px;}
 .cnt-title {display:block; margin-top:7px; padding-right:120px; font-weight: bold; color: #7C8094;}
-.cnt-top .cnt-title {font-size: 18px; line-height: 26px; }
-.cnt-top .btn-bk-line {position: absolute; right:0; top:0; z-index: 1;}
+.cnt-top .cnt-title {margin-top:0; font-size: 18px; line-height: 26px; }
+.cnt-top .btn-bk-line {position: absolute; height:40px; line-height:16px; right:0; top:-6px; z-index: 1;}
 
 .tbl-top {display:flex; justify-content: space-between; align-items: center; margin-bottom:15px}
 .tbl-top .inp-select {min-width:130px}
@@ -77,10 +77,14 @@
 .tbl-top.start .title {margin-right:20px}
 
 .cnt-box .filter-box {margin-bottom:36px; }
-.cnt-box .filter-box .checkbox {display:inline-block; width:32%; font-size:14px; color:#414C5D}
+.cnt-box .filter-box .checkbox {display:inline-block; margin-right:55px; font-size:14px; color:#414C5D}
+.cnt-box .filter-box .checkbox:nth-child(4) {margin-right:0}
+.cnt-box .filter-box .checkbox:nth-child(5) {margin-right:84px}
 .cnt-box .filter-box .checkbox:nth-child(-n + 3) {margin-bottom:12px;}
-.cnt-box .filter-title {display: block;}
 .filter-box {margin-bottom:17px; }
+.filter-box .title {margin-bottom:16px; font-weight: bold; font-size: 18px; line-height: 26px; color: #41495D;}
+.cnt-box .filter-title {display: block;}
+.cnt-box .filter-title .tx-gray {font-size: 13px; line-height: 19px; color: #9A9A9A !important;}
 
 
 .inp-row {display:flex; justify-content: space-between;}
@@ -89,16 +93,18 @@
 .inp-row .inp-select,
 .row-list .inp-select {display:inline-block; width:130px; vertical-align: middle;}
 .inp-row .inp-cal {display:inline-block; width:200px; margin-left:6px; vertical-align: middle;}
-.inp-select .nice-select {width:100%; height:44px; line-height:42px; padding-left:12px; color:#9A9A9A}
-.inp-select .nice-select:active, .inp-select .nice-select.open, .inp-select .nice-select:focus {border-color:#E7E7E7}
-.inp-select .nice-select .list {width:100%; top:92%; border-top-left-radius: 0; border-top-right-radius: 0;}
+.inp-select .nice-select {width:100%; height:44px; line-height:42px; padding-left:12px;}
+.inp-select .nice-select:active, .inp-select .nice-select.open, .inp-select .nice-select:focus {border-color:#E7E7E7; }
+.inp-select .nice-select .current { color:#9A9A9A}
+.inp-select .nice-select.active .current {color:#555868}
+.inp-select .nice-select .list {width:100%; top:92%; margin-top:2px; border-top-left-radius: 0; border-top-right-radius: 0;}
 .inp-select .nice-select .option {color:#41495D}
 .inp-select .nice-select .option + .option {border-top:1px solid #E7E7E7}
 .inp-select .nice-select .option:hover,
-.inp-select .nice-select .option.focus,
-.inp-select .nice-select .option.selected.focus{ background-color: #E1E5EF; color:#02164F}
+.inp-select .nice-select .option.focus{ background-color: #E1E5EF; color:#02164F}
+.inp-select .nice-select .option.selected {background-color:#fff; font-weight:700; color:#02164F}
 .inp-select .nice-select:after { width:0;height:0; margin-top:-3px;
-  border-top: 6px solid #999; border-left: 6px solid transparent;  border-right: 6px solid transparent; border-bottom:none;
+  border-top: 6px solid #7C8094; border-left: 6px solid transparent;  border-right: 6px solid transparent; border-bottom:none;
   -webkit-transform: none; -ms-transform: none ;transform: none;  }
 .inp-select .nice-select.open:after { -webkit-transform: rotate(-180deg); -ms-transform: rotate(-180deg) ;transform: rotate(-180deg);  }
 .row-list {display:flex; }
@@ -111,14 +117,15 @@
 .cnt-inner .right .tbl-top .btn-gray-line {font-size:13px}
 .cnt-box-wrap .tbl-top .btn-bk {font-size:15px; min-width: auto; font-weight: 700;}
 
-.tab-radio-box {width:100%; min-height:44px; border: 1px solid #E7E7E7;border-radius: 6px; text-align: center; font-size:0}
-.tab-radio-box .tab {display:inline-table;  margin-left:0; width:25%; height:100%; line-height:20px; font-size:14px; box-sizing: border-box; vertical-align: middle;}
+.tab-radio-box {width:100%; min-height:44px; border: 1px solid #E7E7E7;border-radius: 6px; text-align: center; box-sizing: border-box;}
+.tab-radio-box .tab {position:relative; flex:1; margin-left:0; width:25%; height:100%; line-height:20px; font-size:14px; box-sizing: border-box; z-index: 1}
 .tab-radio-box .tab:first-child input:checked + label{border-top-left-radius: 6px; border-bottom-left-radius: 6px;}
 .tab-radio-box .tab:last-child input:checked + label{border-top-right-radius: 6px; border-bottom-right-radius: 6px;}
-.tab-radio-box .tab + .tab {border-left:1px solid #E7E7E7}
+.tab-radio-box .tab + .tab label {border-left:1px solid #E7E7E7}
 .tab-radio-box .tab input {display:none}
-.tab-radio-box .tab label {display:table-cell; width:100%; height:100%; background: #F7F7F7; vertical-align: middle; color:#7b7b7b}
+.tab-radio-box .tab label {position:absolute; top:0; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content: center; width:100%; height:100%; background: #F7F7F7; color:#7b7b7b; box-sizing: border-box; z-index: 2;}
 .tab-radio-box .tab input:checked + label {background: #E1E5EF;border: 1px solid #02164F; font-weight:700; color:#02164F;}
+
 .tab-radio-box.color .tab:nth-child(1) input:checked + label {border-color:#4475FF; background-color: #DAE4FF; color:#4475FF}
 .tab-radio-box.color .tab:nth-child(2) input:checked + label {border-color:#1A947D; background-color: #DDF4F0; color:#1A947D}
 .tab-radio-box.color .tab:nth-child(3) input:checked + label {border-color:#D99A20; background-color: #FFEBC4; color:#D99A20}
@@ -161,12 +168,12 @@
 .search-top .txt {margin-right:10px; font-size:15px; font-weight:bold; }
 .search-top .tx-gray { font-size:13px; }
 .search-top + .inp-line {margin-bottom:6px;}
-.manager-box > .checkbox {display:inline-block; padding:16px 0; }
+.manager-box > .checkbox {display:block; padding:16px 0; border-bottom:1px solid #E6E6E6 }
 .manager-box strong {font-weight: 700;}
 .manager-box .checkbox input.check,
 .manager-box .checkbox input.check + label,
 .manager-box .checkbox label > * {vertical-align: middle;}
-.manager-box .inbox {padding:16px 0; max-height:230px; overflow:auto; border-top: 1px solid #E6E6E6}
+.manager-box .inbox {padding:16px 0; max-height:230px; overflow:auto;}
 .manager-box .inbox .checkbox .box {margin-right:20px;}
 .manager-box .inbox .checkbox label {display:inline-block; padding:7px 0;}
 .manager-box .inbox .checkbox label > img + * {margin-left:8px}
@@ -192,6 +199,7 @@
 .accordion-cnt dl dd + dd {width:100%; padding-left:90px;}
 .accordion-cnt .info-list > li {margin-bottom:10px}
 .accordion-cnt .info-list > li .ico {margin-right:8px}
+.accordion-cnt .info-list > li var {color:#7B7B7B}
 .accordion-cnt .info-list > li strong + var {margin-left:5px}
 
 .card .info-list {display:block; margin-top:27px}
@@ -206,12 +214,15 @@
 
 .list-linkbox.link  {border:none; padding:0; max-height:780px; overflow:auto }
 .list-linkbox.link > li + li {margin-top:12px;}
-.list-linkbox.link > li {position: relative; padding:20px 18px; border: 1px solid #E5E7EC;  box-sizing: border-box;  border-radius: 6px;}
+.list-linkbox.link > li {position: relative;  border: 1px solid #E5E7EC;  box-sizing: border-box;  border-radius: 6px;}
+.list-linkbox.link > li a {padding:20px 18px;border-radius: inherit;}
+.list-linkbox.link > li a:hover {background-color:#F9FAFE}
 .list-linkbox.link .info-list {margin-top:27px}
 .list-linkbox.link .info-list > li + li {margin-top:8px}
 .list-linkbox .checkbox .box {vertical-align: middle;}
 
 .btn-group.btm {position:absolute; bottom:23px; left:0; width:100%; }
+.btn-group.btm button {width:200px; line-height:22px; }
 
 .msg-box .msg {margin-bottom:18px; font-weight: bold;  font-size: 14px;  line-height: 20px; color: #41495D;}
 .msg-box .checkbox {margin-top:32px;}
@@ -220,6 +231,7 @@
 .tx-darkgray {font-size: 13px;  line-height: 19px; color: #555868;}
 
 .msg-box .list-linkbox {margin:-4px 0 12px;}
+.msg-box .list-linkbox > li {padding: 20px 18px}
 .msg-box .list-linkbox:not(card) .badge.position {margin-left:0;}
 
 
@@ -423,3 +435,4 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .temp-inp-box .info > li + li {margin-top:8px;}
 .temp-inp-box .list-cnt {border: 1px solid #E7E7E7;}
 .temp-inp-box .btn {width:100%}
+

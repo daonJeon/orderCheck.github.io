@@ -43,13 +43,13 @@
         <li class="on">
           <a href="customManage_list.html">
             <i class="ico user"></i>
-            <span class="links_name">고객관리</span>
+            <span class="links_name">고객 관리</span>
           </a>
         </li>
         <li>
           <a href="#">
             <i class='ico file'></i>
-            <span class="links_name">파일보관함</span>
+            <span class="links_name">파일 보관함</span>
           </a>
         </li>
         <li>
@@ -61,7 +61,7 @@
         <li>
           <a href="form_list.html">
             <i class='ico form'></i>
-            <span class="links_name">신청폼리스트</span>
+            <span class="links_name">상담 신청폼</span>
           </a>
         </li>
        </ul>
@@ -85,7 +85,7 @@
         <!-- header -->
         <div class="header-wrap">
           <header id="header" class="header">
-            <h2 class="title">고객관리</h2>
+            <h2 class="title">고객 관리</h2>
 
             <ul class="menu">
               <li>
@@ -140,6 +140,15 @@
             </div>
            </aside>
         </div>
+
+        <!-- location -->
+        <ul class="location-wrap">
+          <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
+          <li><a href="customManage_list.html">고객관리</a></li>
+          <li>고객명</li>
+        </ul>
+        <!-- //location -->
+
         <div class="cnt-box-wrap">
           <div class="cnt-box left">
             <div class="cnt-top">
@@ -196,20 +205,20 @@
               <p class="filter-title">계약 가능성</p>
               <div class="tab-radio-box row-list">
                 <span class="tab">
-                  <input type="radio" name="contact" id="contact1">
-                  <label for="contact1">없음</label>
+                  <input type="checkbox" name="contact" id="contact1">
+                  <label for="contact1"><span>없음</span></label>
                 </span>
                 <span class="tab">
-                  <input type="radio" name="contact" id="contact2" checked>
-                  <label for="contact2">50%<br>미만</label>
+                  <input type="checkbox" name="contact" id="contact2" checked>
+                  <label for="contact2"><span>50% 미만</span></label>
                 </span>
                 <span class="tab">
-                  <input type="radio" name="contact" id="contact3">
-                  <label for="contact3">50%<br>이상</label>
+                  <input type="checkbox" name="contact" id="contact3">
+                  <label for="contact3"><span>50% 이상</span></label>
                 </span>
                 <span class="tab">
-                  <input type="radio" name="contact" id="contact4">
-                  <label for="contact4">계약완료</label>
+                  <input type="checkbox" name="contact" id="contact4">
+                  <label for="contact4"><span>계약 완료</span></label>
                 </span>
               </div>
 
@@ -249,7 +258,6 @@
                     <option value="10">10개씩</option>
                     <option value="25">25개씩</option>
                     <option value="50">50개씩</option>
-                    <option value="100">100개씩</option>
                   </select>
                 </div>
 
@@ -265,13 +273,13 @@
               <table>
                 <caption>고객 리스트 정보</caption>
                 <colgroup>
-                  <col style="width:8%">
-                  <col style="width:20%">
-                  <col style="width:12%">
-                  <col style="width:20%">
-                  <col style="width:14%">
-                  <col style="width:13%">
-                  <col style="width:13%">
+                  <col style="width:100px">
+                  <col style="width:300px">
+                  <col style="width:128px">
+                  <col style="width:332px">
+                  <col style="width:174px">
+                  <col style="width:167px">
+                  <col style="width:138px">
                 </colgroup>
                 <thead>
                   <tr>
@@ -305,18 +313,6 @@
             </div>
             <!-- //data empty box -->
 
-            <!-- paging -->
-            <div class="paging">
-              <a href="#" class="btn-paging first"><span class="hide">처음으로</span></a>
-              <a href="#" class="btn-paging prev"><span class="hide">이전</span></a>
-              <ul class="list">
-                <li class="on"><button type="button" class="btn-paging">1</button></li>
-                <li><button type="button" class="btn-paging">2</button></li>
-                <li><button type="button" class="btn-paging">3</button></li>
-              </ul>
-              <a href="#" class="btn-paging next"><span class="hide">다음</span></a>
-              <a href="#" class="btn-paging last"><span class="hide">마지막으로</span></a>
-            </div>
           </div>
         </div>
     </section>
@@ -410,13 +406,14 @@
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
     //select option 값에 따른 input date 변경
-    $(".inp-select").on('change', "select[name=range]", function() {
-      selectInpRangeSet (".inp-select select[name=range]")
+    $(".inp-select").on('change', "select", function() {
+      $(this).addClass("active").next().addClass("active")
+      if($(this).attr("name") == "range") selectInpRangeSet (".inp-select select[name=range]","2021.01.22") //두번째 매개변수에 가입일 전달해야함
     });
     // date picker
     $('input[name="daterange"]').daterangepicker({
       locale: {
-      "separator": " ~ ",                     // 시작일시와 종료일시 구분자
+      "separator": " - ",                     // 시작일시와 종료일시 구분자
       "format": 'YYYY.MM.DD',     // 일시 노출 포맷
       "applyLabel": "확인",                    // 확인 버튼 텍스트
       "cancelLabel": "취소",                   // 취소 버튼 텍스트

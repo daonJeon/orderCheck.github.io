@@ -138,7 +138,7 @@ function clickRemoveClassFunc (clickBtn, removeArea,className,callback) {
 }
 
 
-function selectInpRangeSet(sel) {//셀렉트 박스 - 인풋 연계
+function selectInpRangeSet(sel,joinDay) {//셀렉트 박스 - 인풋 연계
   //셀렉트 박스 선택 값에 따라서 input value change
   var rangeSelect = document.querySelector(sel);
   var selectValue = rangeSelect.options[rangeSelect.selectedIndex].value
@@ -147,40 +147,72 @@ function selectInpRangeSet(sel) {//셀렉트 박스 - 인풋 연계
 
 
   if(selectValue == 'today') result = getDate(0)
-  else if(selectValue == 'yesterday') result = getDate(-1)
-  else if(selectValue == 'lastweek') result = getDate(-7)
+  else if(selectValue == 'yesterday') result = getDate("yesterday")
+  else if(selectValue == 'lastweek') result = getDate("lastweek")
   else if(selectValue == 'thismonth') result = getDate("lastmonth")
   else if(selectValue == 'lastyear') result = getDate("lastyear")
-  else if(selectValue == 'all') result = getDate(0)
-  else if(selectValue == 'custom') result = getDate(0)
+  else if(selectValue == 'all') result = getDate("all",joinDay)
+  else if(selectValue == 'custom') {
+    result = getDate(0)
+    document.querySelector(".inp.inp-cal input").focus()
+  }
   inpTxt.value = result
 
 
-  function getDate (gap) {
+  function getDate (gap,joinDay) {
     var now = new Date();
-    var resultDay;
+    var startDay, endDay;
 
     var nowYear = now.getFullYear(),
     nowMonth = now.getMonth() + 1,
     nowDate = now.getDate();
+
     nowMonth < 10 ? nowMonth = '0' + nowMonth :  nowMonth
     nowDate < 10 ? nowDate = '0' + nowDate : nowDate
 
-    if(gap == 'lastyear') resultDay = new Date(now.setFullYear(now.getFullYear() - 1))
-    else if(gap == 'lastmonth') resultDay = new Date(now.setMonth(now.getMonth() - 1))
-    else resultDay = new Date(now.setDate(now.getDate() - gap));
+    if(gap == 'yesterday') {
+      startDay = new Date(now.setDate(now.getDate() - 1));
+      endDay = new Date(now.setDate(now.getDate()));
+    } else if(gap == 'lastweek') {
+      //지난 주 월요일부터 금요일까지
+      console.log(now.getDay())
+      startDay = new Date(now.setDate(now.getDate() - (now.getDay() + 6) ));
+      endDay = new Date(now.setDate(now.getDate() + 4 ));
+    }  else if(gap == 'lastmonth') {
+      startDay = new Date(now.getFullYear(),now.getMonth(),1)
+      endDay = new Date(now)
+    } else if(gap == 'lastyear') {
+      startDay = new Date(now.setFullYear(now.getFullYear() - 1))
+      endDay = new Date(now)
+    } else if(gap == 'all') {
+      var word = joinDay.split(".")
+      console.log(word)
+      startDay = new Date(word[0],word[1]-1,word[2])
+      endDay = new Date(now)
+    } else {
+      startDay = new Date(now);
+      endDay = new Date(now);
+    }
 
-    var resultYear = resultDay.getFullYear(),
-    resultMonth = resultDay.getMonth() + 1,
-    resultDate = resultDay.getDate();
-    resultMonth < 10 ? resultMonth = '0' + resultMonth :  resultMonth
-    resultDate < 10 ? resultDate = '0' + resultDate : resultDate
+    var startYear = startDay.getFullYear(),
+    startMonth = startDay.getMonth() + 1,
+    startDate = startDay.getDate();
+
+    var endYear = endDay.getFullYear(),
+    endMonth = endDay.getMonth() + 1,
+    endDate = endDay.getDate();
+
+    startMonth < 10 ? startMonth = '0' + startMonth :  startMonth
+    startDate < 10 ? startDate = '0' + startDate : startDate
+
+    endMonth < 10 ? endMonth = '0' + endMonth :  endMonth
+    endDate < 10 ? endDate = '0' + endDate : endDate
 
     function getResult (gap) {
-      gap == 0 ? result = nowYear +'.'+ nowMonth +'.'+ nowDate : result =  resultYear +'.'+ resultMonth +'.'+ resultDate +'~'+ nowYear +'.'+ nowMonth +'.'+ nowDate
+      result =  startYear +'.'+ startMonth +'.'+ startDate +' - '+ endYear +'.'+ endMonth +'.'+ endDate
       return result
-
     }
+
     return getResult(gap)
   }
 
@@ -553,6 +585,17 @@ function inpEmptyFunc (ele) {
   })
 }
 
+layerLoadingByBtn (".tab-radio-box input[name='consult'] + label","layer-revise")
+function layerLoadingByBtn (b,layer) {
+  var clickBtn = document.querySelectorAll(b)
+
+  Array.prototype.forEach.call(clickBtn, function(btn, idx){
+    btn.addEventListener("click",function(e) {
+      layerOpen(layer)
+
+    })
+  })
+}
 
 function init () {
   //모든 페이지용 함수
