@@ -247,7 +247,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 
 
 .btn-ordercheck {width: 160px; height: 51px;background: #1D58FF url(../images/common/ico_mark-txt.png) no-repeat center; box-shadow: 0px 4px 12px rgba(29, 88, 255, 0.46); border-radius: 40px;}
-
+.btn-remove {width:20px; height:20px; background: url(../images/common/ico_remove.png) no-repeat center;}
 /* paging */
 .paging {margin:20px 0; text-align:center}
 .paging, .paging .list {display: flex; justify-content: center;}
@@ -279,15 +279,15 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .tabs li button {padding-bottom:8px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
 .tabs li + li {margin-left:34px}
 .tabs li.on button {font-weight: bold; color: #02164F;}
-.slider {display:block; position:absolute; width:60px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
+.tab-wrap .slider {display:block; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
 .tabs li.on var {display:inline-block; margin-left:2px}
 
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
-.inp input {width:100%; padding:10px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 22px;  color:#41495D; letter-spacing: -.5px;}
+.inp input {width:100%; padding:10px 30px 10px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 22px;  color:#41495D; letter-spacing: -.5px;}
 .inp input[type=file] {display: none;}
-.inp-cal input {padding-left:36px; background:url(../images/common/ico_inp-cal.png) no-repeat left 12px center;}
+.inp-cal input {padding-left:36px; padding-right:12px; background:url(../images/common/ico_inp-cal.png) no-repeat left 12px center;}
 .inp.large input {height:62px;}
 .inp input[type=password] {padding-right:30px;}
 .inp input:disabled {background: #F6F6F6;  border: 1px solid #E7E7E7;}
@@ -298,6 +298,10 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .inp.inp-cal input::placeholder {color:#414C5D}
 .inp.inp-cal input::-webkit-input-placeholder {color: #414C5D;}
 .inp.inp-cal input:-ms-input-placeholder { color: #414C5D;}
+
+.filebox input[type="file"] { /* 파일 필드 숨기기 */ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0; }
+.filebox .upload-name {  display: inline-block; vertical-align: middle;  border: 1px solid #E7E7E7; color: #41495D;}
+.filebox .btn-remove {display:none;}
 
 /*===== chk =====*/
 .checkbox {position:relative;}
@@ -474,10 +478,10 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 .info-list .desc { margin-left: 8px; font-size: 13px; line-height: 19px; color: #7B7B7B;}
 
 .badge.position {display:inline-block; width:35px; height:21px; padding:2px; border-radius: 4px;border: 1px solid #E2E2E2; font-weight: 500; font-size: 12px; line-height: 15px; text-align: center; color: #7B7B7B; box-sizing: border-box;vertical-align: middle;}
-.badge.position.blue {background-color: #1D58FF; color: #fff;}
-.badge.position.gray {background-color: #EBEDF1; color:#9A9A9A}
-.badge.position.on {background-color:#1D58FF; color:#fff; }
-.list-linkbox.card .badge.position{vertical-align: -4px; margin-left:0; margin-right:8px; }
+.badge.position.blue {border-color: #1D58FF;background-color: #1D58FF; color: #fff;}
+.badge.position.gray {border-color: #EBEDF1;background-color: #EBEDF1; color:#9A9A9A}
+.badge.position.on {border-color:#1D58FF;background-color:#1D58FF; color:#fff; }
+
 
 .list-linkbox {margin-top:15px;}
 .list-linkbox .checkbox {vertical-align: middle;}

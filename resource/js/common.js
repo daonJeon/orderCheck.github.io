@@ -223,13 +223,17 @@ function agreeChkFunc (wrap, chkAllId,callback) {
   var wrapArea = document.querySelector(wrap);
   var chk = wrapArea.querySelectorAll("input[type=checkbox]:not(#"+chkAllId+")")
   var chk_all = wrapArea.querySelector("#"+chkAllId+"")
+
   // 모두 체크/해제
-  chk_all.addEventListener("change",function(e){
-    Array.prototype.forEach.call(chk, function(chk, idx){
-          if(e.target.checked) chk.checked = true
-          else chk.checked = false
-      })
-  })
+  if(chk_all != null ) {
+    chk_all.addEventListener("change",function(e){
+      Array.prototype.forEach.call(chk, function(chk, idx){
+            if(e.target.checked) chk.checked = true
+            else chk.checked = false
+            if(callback != null ) callback()
+        })
+    })
+  }
   //개별 체크 박스 제어
   Array.prototype.forEach.call(chk, function(item, idx){
     item.addEventListener("change",function(e){
@@ -239,7 +243,18 @@ function agreeChkFunc (wrap, chkAllId,callback) {
       if(callback != null ) callback()
     })
   })
+  if (document.querySelector(".btn-reset") != null) chkResetFunc(".btn-reset", ".manager-box input[type=checkbox]")
+}
 
+function chkResetFunc (btn,wrap) {
+  var resetBtn = document.querySelector(btn);
+  resetBtn.addEventListener("click",function(e){
+    var obj = document.querySelectorAll(wrap);
+
+    for (var i = 0; i < obj.length; i++) {
+      obj[i].checked = false;
+    }
+  })
 }
 
 function btnRemoveFunc (wrap,btnClass) {
@@ -269,16 +284,16 @@ function tabFunc (tabwrap,isFullSlider,callback) {
   function getSlider (wrap,pos,idx) {
     if(isFullSlider) {
       slider.style.width =wrap.parentNode.clientWidth + "px"
-      slider.style.left = pos[idx] + "px"
+      slider.style.left = pos[idx] +"px"
 
-    } else {
-      slider.style.width =wrap.clientWidth + "px"
-      slider.style.left = pos[idx] + "px"
+    } else {//로그인//담당 관리
+      slider.style.width =wrap.offsetWidth + 2+ "px"
+      slider.style.left = pos[idx]  + "px"
 
     }
   }
 
-  //클릭 이벤트
+
   Array.prototype.forEach.call(tabBtn, function(tab, idx){
     if(isFullSlider) {
       offsetPos.push(tabBtn[idx].parentElement.offsetLeft)
@@ -287,12 +302,12 @@ function tabFunc (tabwrap,isFullSlider,callback) {
     }
 
     if(tab.parentNode.classList.contains("on")) {
-      getSlider(tab,offsetPos,idx)
+      getSlider(tab,offsetPos,idx,)
       if(tabContent.length > 0) tabContent[idx].classList.add("active")
     } else {
       if(tabContent.length > 0) tabContent[idx].classList.remove("active")
     }
-
+  //클릭 이벤트
     tab.addEventListener("click", function (e) {
 
     Array.prototype.forEach.call(tabBtn, function(tab2, idx){
@@ -310,7 +325,7 @@ function tabFunc (tabwrap,isFullSlider,callback) {
 
 
   })
-  },200)//setTimeout
+  },300)//setTimeout
 }
 
 function accordionFunc (btnName) {
@@ -330,14 +345,15 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
   var scriptArea = document.querySelector(wrap);
   var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
+  var flag = '';
 
   //value값에 따라 초기값 세팅
   Array.prototype.forEach.call(input, function(inp, idx){
-    var flag = ''
-    maxIsTrue == true ? inp.value.length == inp.getAttribute("maxlength") : inp.value.length > 0
+    maxIsTrue == true ? flag = inp.value.length == inp.getAttribute("maxlength") : flag = inp.value.length > 0
     if(flag) loginBtnFlag.push(true)
     else loginBtnFlag.push(false)
   })
+
   loginBtnDisabled()
   inputValLengthChk ()
 
@@ -345,7 +361,6 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
     Array.prototype.forEach.call(input, function(inp, idx){
       inp.addEventListener("keyup", function (e) {
         var checkflag = inp.parentElement;
-        var flag = '';
 
         maxIsTrue == true ? flag =( inp.value.length == inp.getAttribute("maxlength")) : flag = inp.value.length > 0
         if(flag) {
@@ -355,6 +370,16 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
           loginBtnFlag[idx] = false;
           checkflag.classList.remove("on")
         }
+
+        loginBtnDisabled()
+      })
+
+      inp.addEventListener("change", function (e) {
+        Array.prototype.forEach.call(input, function(inp, idx){
+          maxIsTrue == true ? flag = inp.value.length == inp.getAttribute("maxlength") : flag = inp.value.length > 0
+          if(flag) loginBtnFlag.push(true)
+          else loginBtnFlag.push(false)
+        })
 
         loginBtnDisabled()
       })
@@ -371,11 +396,44 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
   }
 
 }
+// login chk
+function inpFileActiveFunc(wrap,btnClass) {//견적 업로드 수정 관련 input button 활성화
+
+  var scriptArea = document.querySelector(wrap);
+  var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number]")
+
+  btnDisabled()
+
+  Array.prototype.forEach.call(input, function(inp, idx){
+    inp.addEventListener("change", function (e) {
+      btnDisabled()
+    })
+    inp.addEventListener("input", function (e) {
+      btnDisabled()
+    })
+
+  })
+
+  function btnDisabled () {
+    var loginBtnFlag = [];
+    //value값에 따라 초기값 세팅
+    Array.prototype.forEach.call(input, function(inp, idx){
+      if(inp.value.length > 0) loginBtnFlag.push(true)
+      else loginBtnFlag.push(false)
+    })
+    var button = scriptArea.querySelector(btnClass)
+    var flag = loginBtnFlag.every(function(val) {return val == true})
+
+    if(flag) button.disabled = false//둘다 인풋 체크
+    else button.disabled = true
+  }
+
+}
 // chk
-function chkActiveFunc(wrap,btnClass) {
+function chkActiveFunc(wrap,allChk, btnClass) {
   var scriptArea = document.querySelector(wrap);
   var check = scriptArea.querySelectorAll("input[type=checkbox]:required")
-  var checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):required:checked")
+  var checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#"+allChk+"):required:checked")
   var confirmBtn = scriptArea.querySelector(btnClass)
 
   if(checked.length >= check.length) confirmBtn.disabled = false
@@ -383,7 +441,7 @@ function chkActiveFunc(wrap,btnClass) {
 
   Array.prototype.forEach.call(check, function(chk, idx){
     chk.addEventListener("click", function (e) {
-      checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#agree_all):checked")
+      checked = scriptArea.querySelectorAll("input[type=checkbox]:not(#"+allChk+"):checked")
       if(checked.length == check.length -1) confirmBtn.disabled = false
       else confirmBtn.disabled = true;
     })
@@ -520,8 +578,6 @@ var formControlFunc = function (wrap) {
       var classFlag = e.currentTarget.classList[1]
       if( classFlag =="copy") formCopy(e)
       else if( classFlag =="delete") formDelete(e)
-
-
     })
   })
   var formCopy = function (e) {
@@ -585,7 +641,6 @@ function inpEmptyFunc (ele) {
   })
 }
 
-layerLoadingByBtn (".tab-radio-box input[name='consult'] + label","layer-revise")
 function layerLoadingByBtn (b,layer) {
   var clickBtn = document.querySelectorAll(b)
 
@@ -596,12 +651,144 @@ function layerLoadingByBtn (b,layer) {
     })
   })
 }
+layerLoadingByBtn (".tab-radio-box input[name='consult'] + label","layer-revise")
 
-function init () {
-  //모든 페이지용 함수
-  clickAddClassFunc(".btn-side-open",".sidebar","open")
+function fileUpload (fileInp) {
+  var fileInput = document.querySelectorAll(fileInp)
+  var btnRemove = ''
 
-  dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')
+  if (fileInput.length == 0) return
+  Array.prototype.forEach.call(fileInput, function(inp, idx){
+    btnRemove = inp.nextElementSibling
+    inp.addEventListener("change",function(e){
+      var fileName = e.currentTarget.files[0].name
+      e.currentTarget.previousElementSibling.value = fileName
+
+      if(e.currentTarget.value < 1) inp.nextElementSibling.style.display = "none"
+      else inp.nextElementSibling.style.display = "block"
+      changeEvt(inp.previousElementSibling)
+    });
+  })
+
+  btnRemove.addEventListener("click",function(e) {
+    e.currentTarget.previousElementSibling.value = ''
+    e.currentTarget.previousElementSibling.previousElementSibling.value = ''
+    e.currentTarget.style.display = "none"
+    changeEvt(e.currentTarget.previousElementSibling.previousElementSibling)
+  })
+
+}
+fileUpload("input[type='file']")
+
+function changeEvt (element) {
+  if ("createEvent" in document) {
+    var evt = document.createEvent("HTMLEvents");
+    evt.initEvent("change", false, true);
+    element.dispatchEvent(evt);
+  } else{
+    element.fireEvent("onchange");
+  }
+}
+function keyUpEvt (element) {
+  var evt = document.createEvent("HTMLEvents");
+  evt.initEvent("change", false, true); // adding this created a magic and passes it as if keypressed
+  element.dispatchEvent(evt);
+  return false
+}
+
+function inpChangeFunc () {
+  $(".inp-select").on('change', "select", function() {
+    $(this).addClass("active").next().addClass("active")
+
+    if($(this).attr("name") == "range") selectInpRangeSet (".inp-select select[name=range]","2021.01.22") //두번째 매개변수에 가입일 전달해야함
+  });
+}
+inpChangeFunc()
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function numberToKorean(number){
+  var inputNumber  = number < 0 ? false : number;
+  var unitWords    = ['', '만', '억', '조', '경'];
+  var splitUnit    = 10000;
+  var splitCount   = unitWords.length;
+  var resultArray  = [];
+  var resultString = '';
+
+  for (var i = 0; i < splitCount; i++){
+    var unitResult = (inputNumber % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
+    unitResult = Math.floor(unitResult);
+    if (unitResult > 0){
+        resultArray[i] = unitResult;
+    }
+  }
+
+  for (var i = 0; i < resultArray.length; i++){
+    if(!resultArray[i]) continue;
+    resultString = String(resultArray[i]) + unitWords[i] + resultString;
+  }
+
+  return resultString;
+}
+
+function autoCommasFunc (inputName,callback) {
+  var input = document.getElementsByName(inputName)
+
+  Array.prototype.forEach.call(input, function(inp, idx){
+    inp.closest(".inp").nextElementSibling.style.display= "none"
+    inp.addEventListener("keyup",function(e){
+      var _val = e.currentTarget.value.replace(/[^0-9]/g,'')
+      this.value = numberWithCommas(_val);
+      e.currentTarget.closest(".inp").nextElementSibling.style.display= "block"
+
+      if(inp.value.length < 1) e.currentTarget.closest(".inp").nextElementSibling.querySelector(".tx-org").innerText = "0원"
+      else e.currentTarget.closest(".inp").nextElementSibling.querySelector(".tx-org").innerText =numberToKorean(_val) + "원"
+    })
+
+  })
+}
+autoCommasFunc("e_price")
+
+function inputPageSelect(selName,list,card) {
+  var select = document.getElementsByName(selName)
+  Array.prototype.forEach.call(select, function(sel, idx){
+
+    var wrap =  sel.closest(".content")
+    var listWrap = wrap.querySelector(list)
+    var cardWrap = wrap.querySelector(card)
+    if (sel.value == "list") {
+      cardWrap.style.display = "none"
+      listWrap.style.display = "block"
+    } else {
+      cardWrap.style.display = "flex"
+      listWrap.style.display = "none"
+    }
+
+    $(".inp-select").on('change', "select[name='"+selName+"']", function() {
+      var wrap =  sel.closest(".content")
+      var listWrap = wrap.querySelector(list)
+      var cardWrap = wrap.querySelector(card)
+      if (sel.value == "list") {
+        cardWrap.style.display = "none"
+        listWrap.style.display = "block"
+      } else {
+        cardWrap.style.display = "flex"
+        listWrap.style.display = "none"
+      }
+
+    })
+
+  })
+
+}
+inputPageSelect ("ui_select",".tbl-type1",".list-linkbox.card")
+
+function pageInit () {  //모든 페이지용 함수
+
+  clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
+  dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')//상단 드롭 메뉴
   dropFormMenuOpen(".btn-form-menu")
 
 }

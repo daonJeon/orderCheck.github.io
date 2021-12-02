@@ -72,6 +72,7 @@
 .tbl-top .cnt-title {font-size: 16px; line-height: 23px; }
 .tbl-top .btn {min-width: 90px}
 .tbl-top .searchbox {width:420px}
+.tbl-top .group button:last-child {margin-left:5px; }
 
 .tbl-top.start {margin-bottom:24px; justify-content: flex-start;}
 .tbl-top.start .title {margin-right:20px}
@@ -83,8 +84,8 @@
 .cnt-box .filter-box .checkbox:nth-child(-n + 3) {margin-bottom:12px;}
 .filter-box {margin-bottom:17px; }
 .filter-box .title {margin-bottom:16px; font-weight: bold; font-size: 18px; line-height: 26px; color: #41495D;}
+.filter-title .tx-gray {font-size: 13px; line-height: 19px; font-weight:normal; color: #9A9A9A !important;}
 .cnt-box .filter-title {display: block;}
-.cnt-box .filter-title .tx-gray {font-size: 13px; line-height: 19px; color: #9A9A9A !important;}
 
 
 .inp-row {display:flex; justify-content: space-between;}
@@ -173,12 +174,13 @@
 .manager-box .checkbox input.check,
 .manager-box .checkbox input.check + label,
 .manager-box .checkbox label > * {vertical-align: middle;}
-.manager-box .inbox {padding:16px 0; max-height:230px; overflow:auto;}
+.manager-box .inbox {padding:16px 0; height:230px; overflow:auto;}
 .manager-box .inbox .checkbox .box {margin-right:20px;}
 .manager-box .inbox .checkbox label {display:inline-block; padding:7px 0;}
 .manager-box .inbox .checkbox label > img + * {margin-left:8px}
 .manager-box .inbox .checkbox label > .txt {margin-left:6px}
 
+.manager-box + .layer-btn {margin-top:26px;}
 .layer-btn > .btn-bk-line{ min-width:auto; width:107px;}
 .layer-btn > .btn-bk { min-width:auto; width:90px;}
 
@@ -204,13 +206,19 @@
 
 .card .info-list {display:block; margin-top:27px}
 .list-linkbox.card  {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
-.list-linkbox.card  > li {position: relative; padding:20px 18px;width:33%;  border: 1px solid #E5E7EC; box-sizing: border-box; box-sizing: border-box;  border-radius: 6px;}
-.list-linkbox.card  > li + li {margin-left:.5%}
-.list-linkbox.card  .btn {position: absolute; right:10px; bottom:10px; z-index: 1; font-size:14px}
+.list-linkbox.card .txt {font-size: 14px; line-height: 20px; color: #555868; }
+.list-linkbox.card > li {position: relative; padding:20px 18px; width:calc( (100% - 30px)/3);  border: 1px solid #E5E7EC; box-sizing: border-box;  border-radius: 6px;}
+.list-linkbox.card > li:hover {background-color: #F9FAFE;}
+.list-linkbox.card > li + li {margin-left:15px}
+.list-linkbox.card > li:nth-child(n+4) {margin-top:15px}
+.list-linkbox.card > li:nth-child(3n+1) {margin-left:0}
+.list-linkbox.card .btn {position: absolute; width:102px; right:10px; bottom:10px; z-index: 1; font-size:14px}
 .list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
 .list-linkbox.card .info-list .desc {overflow:hidden}
+.list-linkbox.card .btn-link {font-weight: normal;}
 .list-linkbox.card .btn-link:last-child {float:right}
 .list-linkbox.card .info-list > li + li {margin-top:8px}
+.list-linkbox.card .badge.position{vertical-align: -4px; margin-left:0; margin-right:8px; }
 
 .list-linkbox.link  {border:none; padding:0; max-height:780px; overflow:auto }
 .list-linkbox.link > li + li {margin-top:12px;}
@@ -436,3 +444,31 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .temp-inp-box .list-cnt {border: 1px solid #E7E7E7;}
 .temp-inp-box .btn {width:100%}
 
+
+.daterangepicker .calendar-table table {border-collapse:separate}
+.daterangepicker .calendar-table table thead tr:nth-child(2) {display:none}
+.daterangepicker { background: #FFFFFF;  border: 1px solid #E7E7E7;  box-sizing: border-box;  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.12);  border-radius: 6px;}
+.daterangepicker .drp-calendar.left,
+.daterangepicker .drp-calendar.right {padding:20px 20px 0; box-sizing: border-box;}
+.daterangepicker:before, .daterangepicker:after {display:none}
+.daterangepicker .drp-selected {display: none;}
+.daterangepicker td.active, .daterangepicker td.active:hover {background: #02164F;}
+.daterangepicker td.in-range {background: #E1E5EF;}
+.daterangepicker td.in-range.end-date {background: #02164F;}
+.daterangepicker td.available:hover{background: #02164F; color:#fff; border-radius:50%}
+.daterangepicker th.available:hover {background: transparent; color:#fff; }
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {min-width:28px; height:29px;}
+.daterangepicker th.month {padding-bottom:10px; font-weight: bold; font-size: 13px; line-height: 26px; vertical-align: middle;  text-align: center; color: #000000;}
+.daterangepicker .calendar-table .next span,
+.daterangepicker .calendar-table .prev span {margin-top:-10px; display:block; padding:0; border:none; width:30px; height:30px; transform:none;}
+.daterangepicker .calendar-table .prev span {background: url(../images/common/ico_calendar-prev.png) no-repeat center;}
+.daterangepicker .calendar-table .next span {background: url(../images/common/ico_calendar-next.png) no-repeat center;}
+/* .daterangepicker .calendar-table.prev:before,
+.daterangepicker .calendar-table.next:after {position:absolute; top:0; left:0; border-radius:50%; content:''} */
+/* .daterangepicker td.start-date:before {display:inline-block; position:absolute;
+  top:0; right:0px; width:10px; height:29px; background-color: #E1E5EF;z-index: 1; content:''} */
+.daterangepicker td.start-date,.daterangepicker td.end-date,.daterangepicker td.start-date.end-date {position:relative; border-radius: 50%;}
+.daterangepicker .drp-buttons {border-top:none; padding:20px; }
+.daterangepicker .drp-buttons .btn {padding-top:9px; padding-bottom:9px; line-height:19px; font-size:13px; }
+.daterangepicker .drp-buttons .btn-reset {background:url(../images/common/ico_refresh.png) no-repeat left 14px center; padding-left:34px;}
+.daterangepicker .drp-buttons .btn-reset:hover {background-color: #E6E8ED}

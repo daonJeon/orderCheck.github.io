@@ -17,10 +17,10 @@
   <title>고객 관리 목록</title>
 
   <!-- css, js 연결 -->
-  <link rel="stylesheet" href="../resource/css/layout.css">
-  <link rel="stylesheet" href="../resource/css/contents.css">
   <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
   <link rel="stylesheet" type="text/css" href="../resource/css/vendor/daterangepicker.css" />
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
 
 </head>
 
@@ -160,7 +160,7 @@
               <div class="inp-row">
                 <!-- select -->
                 <div class="inp-select">
-                  <select name="range" style="width:100%;">
+                  <select name="areaType" style="width:100%;">
                     <option value="today">오늘</option>
                     <option value="yesterday">어제</option>
                     <option value="lastweek">지난 주</option>
@@ -377,7 +377,7 @@
           </div>
         </div>
         <div class="layer-btn tr">
-          <button type="button" class="btn-l btn-bk-line"><span><i class="ico refresh"></i> 초기화</span></button>
+          <button type="button" class="btn-l btn-bk-line btn-reset"><span><i class="ico refresh"></i> 초기화</span></button>
           <button type="button" class="btn-l btn-bk"><span>확인</span></button>
         </div>
         <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
@@ -394,14 +394,15 @@
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js"></script>
   <script>
-    init ()//공통 페이지용 함수
-    // sorting 삭제
+
+    //관리페이지용 공통 함수
+    pageInit ()
     //레이어팝업 : 매개변수 : ID명
     layerFunc (".open-layer")
     //필터 담당자 삭제
     btnRemoveFunc(".manager-list",".btn-sel")
     //체크 기능
-    agreeChkFunc(".manager-box","manager_all")
+
 
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
@@ -412,18 +413,26 @@
     });
     // date picker
     $('input[name="daterange"]').daterangepicker({
-      locale: {
-      "separator": " - ",                     // 시작일시와 종료일시 구분자
+      locale: {                    // 시작일시와 종료일시 구분자
       "format": 'YYYY.MM.DD',     // 일시 노출 포맷
       "applyLabel": "확인",                    // 확인 버튼 텍스트
-      "cancelLabel": "취소",                   // 취소 버튼 텍스트
+      "cancelLabel": "초기화",                   // 취소 버튼 텍스트
       "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"]
+      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
       },
-      opens: 'left',
-      timePicker: false
+      opens: 'center',
+      timePicker: false,
+      buttonClasses: "btn",
+      applyButtonClasses: "btn-bk",
+      cancelButtonClasses:"btn-bk-line btn-reset"
     }, function(start, end, label) {
+
       console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+    });
+    $('input[name="daterange"]').on('show.daterangepicker', function(ev, picker) {
+      //do something, like clearing an input
+      $(".inp-select select option:last-child").prop('selected', true)
+      $(".inp-select select").niceSelect("update")
     });
   </script>
 </body>
