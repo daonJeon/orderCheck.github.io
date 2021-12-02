@@ -651,6 +651,7 @@ function layerLoadingByBtn (b,layer) {
     })
   })
 }
+//고객관리 목록 상세에서 사용
 layerLoadingByBtn (".tab-radio-box input[name='consult'] + label","layer-revise")
 
 function fileUpload (fileInp) {
@@ -749,7 +750,7 @@ function autoCommasFunc (inputName,callback) {
 
   })
 }
-autoCommasFunc("e_price")
+
 
 function inputPageSelect(selName,list,card) {
   var select = document.getElementsByName(selName)
@@ -783,7 +784,7 @@ function inputPageSelect(selName,list,card) {
   })
 
 }
-inputPageSelect ("ui_select",".tbl-type1",".list-linkbox.card")
+
 
 function pageInit () {  //모든 페이지용 함수
 
