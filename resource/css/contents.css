@@ -454,13 +454,15 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .daterangepicker .drp-selected {display: none;}
 .daterangepicker td.active, .daterangepicker td.active:hover {background: #02164F;}
 .daterangepicker td.in-range {background: #E1E5EF;}
-.daterangepicker td.in-range.end-date {background: #02164F;}
-.daterangepicker td.available:hover{background: #02164F; color:#fff; border-radius:50%}
+.daterangepicker td.active.end-date {background: #02164F;}
+/* .daterangepicker td.available:hover{ background-color: #fff; color:#42495E} */
+/* .daterangepicker td.available:hover{position:relative; background: #02164F; color:#fff; border-radius:50%} */
+/* .daterangepicker td.available:hover::after {position: absolute; top:0; left:0; width:100%; height:100%; background-color: red; z-index: -1; content: '';} */
 .daterangepicker th.available:hover {background: transparent; color:#fff; }
 .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {min-width:28px; height:29px;}
 .daterangepicker th.month {padding-bottom:10px; font-weight: bold; font-size: 13px; line-height: 26px; vertical-align: middle;  text-align: center; color: #000000;}
 .daterangepicker .calendar-table .next span,
-.daterangepicker .calendar-table .prev span {margin-top:-10px; display:block; padding:0; border:none; width:30px; height:30px; transform:none;}
+.daterangepicker .calendar-table .prev span {margin-top:-12px; display:block; padding:0; border:none; width:30px; height:30px; transform:none;}
 .daterangepicker .calendar-table .prev span {background: url(../images/common/ico_calendar-prev.png) no-repeat center;}
 .daterangepicker .calendar-table .next span {background: url(../images/common/ico_calendar-next.png) no-repeat center;}
 /* .daterangepicker .calendar-table.prev:before,
@@ -472,3 +474,4 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .daterangepicker .drp-buttons .btn {padding-top:9px; padding-bottom:9px; line-height:19px; font-size:13px; }
 .daterangepicker .drp-buttons .btn-reset {background:url(../images/common/ico_refresh.png) no-repeat left 14px center; padding-left:34px;}
 .daterangepicker .drp-buttons .btn-reset:hover {background-color: #E6E8ED}
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date { background-color: #fff; border-color: transparent; color: #999; }

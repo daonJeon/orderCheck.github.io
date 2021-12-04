@@ -173,7 +173,7 @@
 }
 
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
-  background-color: #eee;
+  background-color: #E1E5EF;
   border-color: transparent;
   color: inherit;
 }
