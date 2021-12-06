@@ -12,7 +12,7 @@ function contentHeightFix (wrap, cntbox) {
   var page = document.querySelector(wrap)
   var contentbox = document.querySelector(cntbox)
 
-
+  if(contentbox == null ) return
   if(contentbox.classList.contains("narrow")) {
     setTimeout(function() {
       page.style.height = page.clientHeight + "px"
@@ -83,21 +83,7 @@ function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
 
 }
 
-//메인 , 드롭 메뉴
-function dropFormMenuOpen (btnName, dropBox, dropListBtn) {
-  var btnMenu = document.querySelectorAll(btnName)
-  Array.prototype.forEach.call(btnMenu, function(btn, idx){
-    btn.addEventListener("click",function(e) {
-      e.currentTarget.classList.toggle("on")
-      e.currentTarget.nextElementSibling.classList.toggle("on")
-    })
-    btn.classList.remove("on")
-    btn.nextElementSibling.classList.remove("on")
-  })
 
-
-
-}
 
 
 //우측 슬라이드 메뉴
@@ -110,15 +96,18 @@ slideMenu()
 
 //좌측 슬라이드 메뉴
 //클릭 이벤트 시, add class 용
-function clickAddClassFunc (clickBtn, addArea,className,callback) {
+function clickAddClassFunc (clickBtn, addArea,className,callback,typeone) {
   var btn = document.querySelectorAll(clickBtn);
   var wrap = document.querySelectorAll(addArea);
 
   Array.prototype.forEach.call(btn, function(b, idx){
     b.addEventListener("click", function (e) {
-      // Array.prototype.forEach.call(btn, function(b2, idx2){
-      //   wrap[idx2].classList.remove(className)
-      // })
+      if(typeone == true) {
+        Array.prototype.forEach.call(btn, function(b2, idx2){
+          wrap[idx2].classList.remove(className)
+        })
+      }
+
       wrap[idx].classList.toggle(className);
       if(callback != null) callback(e)
     });
@@ -175,7 +164,6 @@ function selectInpRangeSet(sel,joinDay) {//셀렉트 박스 - 인풋 연계
       endDay = new Date(now.setDate(now.getDate()));
     } else if(gap == 'lastweek') {
       //지난 주 월요일부터 금요일까지
-      console.log(now.getDay())
       startDay = new Date(now.setDate(now.getDate() - (now.getDay() + 6) ));
       endDay = new Date(now.setDate(now.getDate() + 4 ));
     }  else if(gap == 'lastmonth') {
@@ -186,7 +174,6 @@ function selectInpRangeSet(sel,joinDay) {//셀렉트 박스 - 인풋 연계
       endDay = new Date(now)
     } else if(gap == 'all') {
       var word = joinDay.split(".")
-      console.log(word)
       startDay = new Date(word[0],word[1]-1,word[2])
       endDay = new Date(now)
     } else {
@@ -302,7 +289,7 @@ function tabFunc (tabwrap,isFullSlider,callback) {
     }
 
     if(tab.parentNode.classList.contains("on")) {
-      getSlider(tab,offsetPos,idx,)
+      getSlider(tab,offsetPos,idx)
       if(tabContent.length > 0) tabContent[idx].classList.add("active")
     } else {
       if(tabContent.length > 0) tabContent[idx].classList.remove("active")
@@ -571,51 +558,85 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
 
 }
 
-var formControlFunc = function (wrap) {
-  var cntWrap = document.querySelectorAll(wrap)
-  Array.prototype.forEach.call(cntWrap, function(cnt, idx){
-    cnt.addEventListener("click",function (e) {
-      var classFlag = e.currentTarget.classList[1]
-      if( classFlag =="copy") formCopy(e)
-      else if( classFlag =="delete") formDelete(e)
-    })
-  })
-  var formCopy = function (e) {
-    var formList = document.querySelector(".estimate-list")
-    var formTitle = document.querySelectorAll(".estimate-list > li .txt")
-    var formLi =''
-    for (var title_index = 0; title_index < formTitle.length; title_index++) {
-      //e.currentTarget.closest(".btn-form").querySelector(".txt").innerText
+//메인 , 드롭 메뉴
+function dropFormMenuOpen (date) {
+  // 드롭다운 오픈 이벤트
+  document.querySelector('.estimate-list').addEventListener('click', function (e) {
+    var btnEl = e.target && e.target.closest('.btn-form-menu');
+    if(!btnEl) return;
+
+    var dropdownBoxes = e.currentTarget.querySelectorAll('.dropdown-box');
+    if(btnEl.nextElementSibling.classList.contains('on')) {
+      btnEl.nextElementSibling.classList.remove('on');
 
     }
-    var msg = "a"
+    else {
+      Array.prototype.forEach.call(dropdownBoxes, function(el) {
+        el.classList.remove('on');
+      })
+      btnEl.nextElementSibling.classList.add('on');
+    }
+  });
 
-    formLi += '<li>';
-		formLi += '<div class="btn-form">';
-		formLi += '<span class="txt">'+msg+'</span>';
-		formLi += '<div class="dropdown-wrap">';
-		formLi += '<button type="button" class="btn-form-menu"><span>메뉴열기</span></button>';
-		formLi += '<div class="dropdown-box">';
-		formLi += '<ul>';
-		formLi += '<li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>';
-		formLi += '<li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>';
-		formLi += '<li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크확인</span></a></li>';
-		formLi += '</ul>';
-		formLi += '</div>';
-		formLi += '</div>';
-		formLi += '</div>';
-		formLi += '</li>';
+  // 드롭다운 메뉴 클릭이벤트
+  document.querySelector('.estimate-list').addEventListener('click', function(e) {
+    var menuEl = e.target && e.target.closest('.btn-drop-menu');
+    var title;
+    if(!menuEl) return;
 
-  	formList.insertAdjacentHTML('beforeend', formLi);
+    switch(true) {
+      case menuEl.classList.contains('copy'):
+        var content = e.target.closest('.btn-form').querySelector('.txt').textContent;
+        var num = 0
+        Array.prototype.forEach.call(document.querySelectorAll('.btn-form .txt'), function(el) {
+          if(el.innerText.split("(")[0].trim() == content.split("(")[0].trim()) num++
+          title =  content.split("(")[0].trim() +"("+num+")"
 
-    dropFormMenuOpen(".btn-form-menu")
-    formControlFunc(".btn-drop-menu")
+        })
+        var today = new Date()
+        var date = today.getFullYear()+"."+ Number(today.getMonth() + 1) + "." + (today.getDate()<10? "0"+ today.getDate() :today.getDate())
+        copyCard(title,date);
+        break;
+
+      case menuEl.classList.contains('delete'):
+        // 삭제
+        e.target.closest(".btn-form").closest("li").parentElement.removeChild(e.target.closest(".btn-form").closest("li"))
+        break;
+
+      case menuEl.classList.contains('open-layer'):
+        // 레이어 오픈
+        break;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.dropdown-box'), function(el) {
+      el.classList.remove('on');
+    })
+  })
+
+  // 카드복제
+  function copyCard(content,date) {
+    var cardHTML = '<li>\
+      <div class="btn-form">\
+        <span class="txt" contenteditable="true">' + content + '</span>\
+        <span class="date" contenteditable="true">' + date + '</span>\
+        <div class="dropdown-wrap">\
+          <button type="button" class="btn-form-menu"><span>메뉴열기</span>\</button>\
+          <div class="dropdown-box">\
+            <ul>\
+              <li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>\
+              <li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>\
+              <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크확인</span></a></li>\
+            </ul>\
+          </div>\
+        </div>\
+      </div>\
+    </li>'
+
+    var formList = document.querySelector('.estimate-list');
+    formList.insertAdjacentHTML('beforeend', cardHTML);
   }
-  var formDelete = function (e) {
-    e.currentTarget.closest(".btn-form").parentNode.parentNode.removeChild(e.currentTarget.closest(".btn-form").parentNode)
-  }
-
 }
+
+
 
 function formSideFunc (btn,wrap) {
   var formBtn = document.querySelectorAll(btn)
@@ -785,13 +806,85 @@ function inputPageSelect(selName,list,card) {
 
 }
 
+function orderCheckOnOff (chk,tg) {
+  var chkArea = document.querySelectorAll(chk);
+  var tgArea = document.querySelectorAll(tg)
+  Array.prototype.forEach.call(chkArea, function(check, idx){
+    check.addEventListener("click",function(e){
+      Array.prototype.forEach.call(tgArea, function(target, idx){
+        if(e.currentTarget.checked) target.style.display="block"
+        else target.style.display="none"
+      })
+    })
+  })
+}
+
+function draggableSlider (sliderWrap) {
+  var slider = document.querySelector(sliderWrap);
+  var sliderGrabbed = false
+
+  slider.addEventListener("mousedown",function(e){
+    sliderGrabbed = true;
+    slider.style.cursor = "grabbing"
+  })
+
+  slider.addEventListener("mouseup",function(e){
+    sliderGrabbed = false;
+    slider.style.cursor = "grab"
+  })
+
+  slider.addEventListener("mouseleave",function(e){
+    sliderGrabbed = false;
+    slider.style.cursor = "grab"
+  })
+
+  slider.addEventListener("mousemove",function(e){
+    if(sliderGrabbed) {
+      slider.parentElement.scrollLeft -= e.movementX
+    }
+  })
+
+  slider.addEventListener("wheel",function(e){
+    e.preventDefault()
+    slider.parentElement.scrollLeft += e.deltaY
+  })
+
+}
+
+addDragEvent()
+function addDragEvent (drags, dragItems) {
+  var draggables = document.querySelectorAll(".draggable")
+  var dragListItems =document.querySelectorAll(".draggable-list li")
+
+  Array.prototype.forEach.call(draggables, function(drag, idx){
+    drag.addEventListener("dragstart",dragStart)
+  })
+
+  Array.prototype.forEach.call(dragListItems, function(dragListItem, idx){
+    dragListItem.addEventListener("dragover", dragOver)
+    dragListItem.addEventListener("drop", dragDrop)
+    dragListItem.addEventListener("dragenter", dragEnter)
+    dragListItem.addEventListener("dragleave", dragLeave)
+  })
+
+  function dragStart () {
+    console.log("Event : drag start")
+  }
+  function dragEnter () {
+    console.log("Event : dragenter")
+  }
+  function dragOver () {
+    console.log("Event : drag over")
+  }
+  function dragDrop () {
+    console.log("Event : drag drop")
+  }
+}
 
 function pageInit () {  //모든 페이지용 함수
-
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')//상단 드롭 메뉴
-  dropFormMenuOpen(".btn-form-menu")
-
+  dropFormMenuOpen('2021.12.26')
 }
 
 
