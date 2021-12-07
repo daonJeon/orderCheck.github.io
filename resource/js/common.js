@@ -72,14 +72,40 @@ if (!('remove' in Element.prototype)) {
 
 
 //메인 , 드롭 메뉴
-function dropMenuOpen (btnName, dropBox, dropBtn , textArea) {
+function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
-
   clickAddClassFunc (btnName,dropBox,"on")
-  clickRemoveClassFunc (btnMenu,dropBox,"on", function (target) {
-    if(textArea != null)  document.querySelector(btnName).querySelector(textArea).innerText = target.innerText
 
+  Array.prototype.forEach.call(btnMenu, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.preventDefault()
+      e.target.closest(removeArea).classList.remove(className);
+      if(applyFunc != null) {
+          if(typeof applyFunc == "string") {
+
+            Array.prototype.forEach.call(btnMenu, function(drop, idx){
+              drop.classList.remove("on")
+            })
+            target.classList.add("on")
+            target.closest(".dropdown-wrap").classList.add("active")
+            target.closest(".dropdown-box").classList.remove("on")
+            target.closest(".dropdown-wrap").querySelector(applyFunc).innerText = target.innerText
+
+            if(target.classList[1] != null) target.closest(".dropdown-wrap").querySelector(applyFunc).parentElement.classList.add(target.classList[1])
+          } else if (typeof applyFunc == "function" ) {
+            target.closest(".dropdown-wrap").classList.add("active")
+            applyFunc(target)
+          }
+
+        }
+    });
   })
+  //clickRemoveClassFunc (btnMenu,dropBox,"on", function (target) {
+
+  //
+
+  //   target.closest(".dropdown-box").classList.remove("on")
+  // })
 
 }
 
@@ -97,11 +123,13 @@ slideMenu()
 //좌측 슬라이드 메뉴
 //클릭 이벤트 시, add class 용
 function clickAddClassFunc (clickBtn, addArea,className,callback,typeone) {
+
   var btn = document.querySelectorAll(clickBtn);
   var wrap = document.querySelectorAll(addArea);
 
   Array.prototype.forEach.call(btn, function(b, idx){
     b.addEventListener("click", function (e) {
+      e.preventDefault()
       if(typeone == true) {
         Array.prototype.forEach.call(btn, function(b2, idx2){
           wrap[idx2].classList.remove(className)
@@ -120,6 +148,7 @@ function clickRemoveClassFunc (clickBtn, removeArea,className,callback) {
 
   Array.prototype.forEach.call(btn, function(b, idx){
     b.addEventListener("click", function (e) {
+      e.preventDefault()
       e.target.closest(removeArea).classList.remove(className);
       if(callback != null) callback(e.currentTarget)
     });
@@ -840,13 +869,21 @@ function draggableSlider (sliderWrap) {
 
   slider.addEventListener("mousemove",function(e){
     if(sliderGrabbed) {
-      slider.parentElement.scrollLeft -= e.movementX
+      if(e.target.classList[0] == "form-temp-box" || e.target.classList[0] == "template") {
+        slider.parentElement.scrollLeft -= e.movementX
+      }
+
     }
   })
 
   slider.addEventListener("wheel",function(e){
     e.preventDefault()
-    slider.parentElement.scrollLeft += e.deltaY
+
+    if(e.target.classList[0] == "form-temp-box" || e.target.classList[0] == "template") {
+      slider.parentElement.scrollLeft += e.deltaY
+    } else if(e.target.classList[0] == "btn-drop-menu") {
+      e.target.closest("ul").scrollTop += e.deltaY
+    }
   })
 
 }
@@ -881,9 +918,29 @@ function addDragEvent (drags, dragItems) {
   }
 }
 
+
+function pageInfoRemove () {
+  var wrap = document.querySelector(".page-info")
+  wrap.addEventListener("click" ,function(e){
+    if(e.target.className="btn-close") {
+      e.target.closest("li").parentElement.removeChild(e.target.closest("li"))
+    }
+  })
+
+}
+pageInfoRemove()
+
+
+
+
+
+
+
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
-  dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')//상단 드롭 메뉴
+  dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu','.name')//상단 드롭 메뉴
+  dropMenuOpen ('.dropdown-wrap.type02','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
+  dropMenuOpen ('.dropdown-wrap.type03','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', ".txt")//상단 드롭 메뉴
 
 }
 

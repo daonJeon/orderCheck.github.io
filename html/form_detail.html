@@ -109,24 +109,25 @@
           <aside class="side-form left">
             <div class="cnt-top">
               <h2 class="top-form-title">Page 1 title</h2>
-              <div class="dropdown-wrap">
+              <div class="dropdown-wrap type03">
                 <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
                 <div class="dropdown-box">
+                  <h2 class="drop-title">질문 유형 선택</h2>
                   <ul>
-                    <li><a href="#" class="btn-drop-menu">선택형</a></li>
-                    <li><a href="#" class="btn-drop-menu">단답형</a></li>
-                    <li><a href="#" class="btn-drop-menu">연락처</a></li>
-                    <li><a href="#" class="btn-drop-menu">주소</a></li>
-                    <li><a href="#" class="btn-drop-menu">날짜</a></li>
-                    <li><a href="#" class="btn-drop-menu">이메일</a></li>
-                    <li><a href="#" class="btn-drop-menu">파일</a></li>
-                    <li><a href="#" class="btn-drop-menu">동의</a></li>
+                    <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                    <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                    <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                    <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                    <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                    <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                    <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                    <li><a href="#" class="btn-drop-menu agree">동의</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="page-info">
-              <ul>
+            <div class="page-info" >
+              <ul id="sortable">
                 <li>
                   <button type="button" class="list-cnt"><span><i class="ico chat3"></i><var>성함</var></span></button>
                   <button type="button" class="btn-close"><span class="txt">삭제</span></button>
@@ -151,30 +152,30 @@
               </button>
               <div class="slider-drop-box">
                 <p class="tx-gray sm">질문을 희망하는 위치에 옮겨주세요</p>
-                <ul>
+                <ul id="draggable">
                   <li>
-                    <button type="button" class="list-cnt" draggable="true"><span><i class="ico chat3"></i><var>시공지 유형</var></span></button>
+                    <button type="button" class="list-cnt" data-value="list1"><span><i class="ico chat3"></i><var>시공지 유형</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt" draggable="true"><span><i class="ico call"></i><var>시공지 평형</var></span></button>
+                    <button type="button" class="list-cnt" data-value="list2"><span><i class="ico call"></i><var>시공지 평형</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt" draggable="true"><span><i class="ico location"></i><var>엘리베이터 유무</var></span></button>
+                    <button type="button" class="list-cnt" data-value="list3"><span><i class="ico location"></i><var>엘리베이터 유무</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt on" draggable="true"><span><i class="ico location"></i><var>시공 희망일</var></span></button>
+                    <button type="button" class="list-cnt on" data-value="list4"><span><i class="ico location"></i><var>시공 희망일</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt" draggable="true"><span><i class="ico chat3"></i><var>입주 예정일</var></span></button>
+                    <button type="button" class="list-cnt" data-value="list5"><span><i class="ico chat3"></i><var>입주 예정일</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt" draggable="true"><span><i class="ico call"></i><var>예산</var></span></button>
+                    <button type="button" class="list-cnt" data-value="list6"><span><i class="ico call"></i><var>예산</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt" draggable="true"><span><i class="ico location"></i><var>이메일</var></span></button>
+                    <button type="button" class="list-cnt" data-value="list7"><span><i class="ico location"></i><var>이메일</var></span></button>
                   </li>
                   <li>
-                    <button type="button" class="list-cnt on" draggable="true"><span><i class="ico location"></i><var>시공지 주소</var></span></button>
+                    <button type="button" class="list-cnt on" data-value="list8"><span><i class="ico location"></i><var>시공지 주소</var></span></button>
                   </li>
                 </ul>
               </div>
@@ -190,7 +191,7 @@
             <div class="cnt-top">
               <h2 class="top-form-title">질문 유형</h2>
               <div class="dropdown-wrap type02">
-                <button type="button" class="btn-drop"><span class="name">선택형</span></button>
+                <button type="button" class="btn-drop choice"><span class="txt">선택형</span></button>
                 <div class="dropdown-box">
                   <ul>
                     <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
@@ -269,7 +270,22 @@
                           </div>
                         </li>
                       </ul>
-                      <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                      <div class="dropdown-wrap type03 scroll">
+                        <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                        <div class="dropdown-box">
+                          <h2 class="drop-title">질문 유형 선택</h2>
+                          <ul>
+                            <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                            <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                            <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                            <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                            <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                            <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                            <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                            <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                          </ul>
+                        </div>
+                      </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
                       <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
                     </article>
@@ -303,7 +319,22 @@
                         </ul>
                         <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
                       </div>
-                      <button type="button" class="btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                      <div class="dropdown-wrap type03 scroll">
+                        <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                        <div class="dropdown-box">
+                          <h2 class="drop-title">질문 유형 선택</h2>
+                          <ul>
+                            <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                            <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                            <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                            <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                            <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                            <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                            <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                            <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                          </ul>
+                        </div>
+                      </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
                       <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
                     </article>
@@ -348,9 +379,11 @@
   </div>
 
   <!-- script -->
-  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script> -->
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script><!-- 임시!! 파일로 교체하기 -->
   <script src="../resource/js/common.js" ></script>
   <script>
     //공통 페이지용 함수
@@ -372,7 +405,41 @@
     clickAddClassFunc (".side-form .btm .slider-drop",".side-form .btm","open")
     //오더 체크 온/오프
     orderCheckOnOff (".switch #ordercheck",".template .btn-ordercheck")
+
     draggableSlider(".form-list-box .form-temp-list")
+
+
+	  $(function() {
+      //드래그
+      $( "ul, li" ).disableSelection();	//텍스트 드래그 방지
+
+      $(".slider-drop-box .list-cnt").on("click", function(event) {	//이동할 리스트 저장
+        var $item = $(this).children("var");
+
+        return false;
+      });
+
+     $("#sortable").sortable({	//리스트 항목 정렬
+       containment : "parent"
+     });
+
+     $("#draggable > li").draggable({	//추천질문 목록 드래그
+       helper: "clone"
+     });
+
+     $("#sortable, .form-temp-list > li").droppable({	//질문목록 드랍
+        accept: ".slider-drop-box .list-cnt",
+        drop: function(event, ui) {
+         addList(ui.draggable);
+       }
+     });
+
+     function addList($item) {
+       $('#sortable').append('<li>'+$item.text()+'</li>')
+       $('.form-temp-list >li ').append('<li><p>'+$item.text()+'</p><div><input text="text"></div></li>');
+     }
+
+    })
   </script>
 </body>
 </html>

@@ -26,7 +26,7 @@
 .btn-txt-prev > span i {position:relative; margin-right:20px; display:inline-block; width:16px; height:32px; overflow: hidden;vertical-align: -5px;}
 .btn-txt-prev > span i:before {display:inline-block; position:absolute; top:50%; left:7px; margin-top:-8px; width:12px; height:12px;  border:3px solid #9A9A9A; transform:rotate(45deg); content:''}
 
-.cnt-bottom {display:flex; justify-content: space-between; background-color: #fff; padding:14px 20px; }
+.cnt-bottom {display:flex; justify-content: space-between; background-color: #fff; padding:15px 20px; }
 .cnt-bottom img,
 .cnt-bottom .switch {vertical-align: middle;}
 .cnt-bottom .switch {margin-left:14px;}
@@ -383,10 +383,10 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .btn-type-temp.on > span:before {background-position: top right;}
 
 .side-form .cnt-top {padding:18px 30px;border-bottom:1px solid #E3E3E3; margin-bottom:0}
+.side-form.right .cnt-top {padding:18px 25px;border-bottom:1px solid #E3E3E3; margin-bottom:0}
 .side-form .cnt-top + .cnt-top {border-bottom:none}
 .top-form-title { font-weight: bold; font-size: 15px; line-height: 22px; color: #41495D;}
 .top-form-title + .both-side-box {margin-top:17px;}
-.top-form-title + .dropdown-wrap {margin-top:10px; margin-bottom: 16px;}
 
 .btn-plus {position: absolute;padding:8px; width:30px; height:30px; right:16px; top:15px;
   border: 1px solid #979EC5; box-sizing: border-box; border-radius: 6px; z-index: 1;}
@@ -399,7 +399,8 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .list-cnt {display:block; padding:10px 40px 10px; width:100%; text-align:left; background:#fff url(../images/common/ico_draw-cnt.png) no-repeat left 16px center; border-radius: 6px;font-size: 14px; line-height: 20px;}
 .list-cnt .ico {margin-right:8px}
 .page-info > ul > li .list-cnt {border: 1px solid #E3E3E3;}
-.page-info > ul > li .list-cnt.on {background-color: #EEF2FF; border: 1px solid #1D58FF; color: #1D58FF;}
+.page-info > ul > li .list-cnt.on,
+.page-info > ul > li .list-cnt:hover {background-color: #EEF2FF; border: 1px solid #1D58FF; color: #1D58FF;}
 .page-info > ul > li + li {margin-top:8px;}
 .page-info > ul > li .btn-close {display:none; top:50%; margin-top:-10px; right:10px;}
 .page-info > ul > li .list-cnt.on + .btn-close {display: block;}
@@ -418,7 +419,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .template {position: relative; padding:28px 28px 130px; width:600px; height:97%; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; overflow:auto}
 .template .info {margin-top: 48px;overflow: auto;height: calc(100% - 48px);}
 .template.new {border: 1px dashed #C7C7C7}
-.template .btn-plus {top:auto; bottom:80px; left:50%; margin-left:-15px; }
+.template .btn-plus {left:50%; margin-left:-15px; }
 .template.new {background:#fff url(../images/common/ico_temp-add.png) no-repeat center}
 .temp-box.on {background-color: rgba(29, 88, 255, 0.06); border: 1px solid #1D58FF;}
 .temp-box {margin-top:8px; padding:6px; border:1px solid #fff; border-radius: 6px;}
@@ -480,3 +481,43 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .daterangepicker .drp-buttons .btn-reset {background:url(../images/common/ico_refresh.png) no-repeat left 14px center; padding-left:34px;}
 .daterangepicker .drp-buttons .btn-reset:hover {background-color: #E6E8ED}
 .daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date { background-color: #fff; border-color: transparent; color: #999; }
+
+
+.side-form.left .dropdown-wrap {margin:0;display: block; right: -34px;top: -42px;}
+.side-form.left .dropdown-box {top:15px; left:auto; right:-220px}
+.side-form.right .dropdown-wrap {margin-top:10px; margin-bottom: 16px;}
+.drop-title {padding:10px 0; border-bottom:2px solid #7C8094; font-weight: bold; font-size: 14px; line-height: 20px;}
+.dropdown-wrap.type02 .btn-drop {padding:12px 30px 12px 43px; width:100%; border-radius: 6px; border: 1px solid #E7E7E7; background:url(../images/common/ico_accordion-arrow.png) no-repeat right center; text-align: left;}
+.dropdown-wrap.type02 .dropdown-box,
+.dropdown-wrap.type03 .dropdown-box {width:220px; box-sizing: border-box;}
+
+.dropdown-wrap.type02 .dropdown-box {top:52px;padding:0; box-sizing: border-box;}
+.dropdown-wrap.type02 .dropdown-box .btn-drop-menu,
+.dropdown-wrap.type03 .dropdown-box .btn-drop-menu {padding-left:27px; background-repeat: no-repeat; background-position:left 2px center;  }
+.dropdown-wrap.type02 .dropdown-box .btn-drop-menu {padding-left:40px; padding-right:12px; background-position:left 12px center; box-sizing: border-box;}
+.dropdown-wrap.type02 .dropdown-box .btn-drop-menu.on,
+.dropdown-wrap.type03 .dropdown-box .btn-drop-menu.on {font-weight: bold; }
+.dropdown-wrap.type02 .dropdown-box .btn-drop-menu:hover,
+.dropdown-wrap.type03 .dropdown-box .btn-drop-menu:hover {background-color:#E1E5EF;}
+
+.dropdown-wrap .dropdown-box .btn-drop-menu.choice {background-image: url(../images/common/ico_choice.png) }
+.dropdown-wrap .dropdown-box .btn-drop-menu.chat {background-image: url(../images/common/ico_chat3.png)}
+.dropdown-wrap .dropdown-box .btn-drop-menu.tel {background-image: url(../images/common/ico_call.png)}
+.dropdown-wrap .dropdown-box .btn-drop-menu.location {background-image: url(../images/common/ico_location.png)}
+.dropdown-wrap .dropdown-box .btn-drop-menu.calendar {background-image: url(../images/common/ico_cal.png)}
+.dropdown-wrap .dropdown-box .btn-drop-menu.email {background-image: url(../images/common/ico_cal.png)}
+.dropdown-wrap .dropdown-box .btn-drop-menu.file {background-image: url(../images/common/ico_folder2.png)}
+.dropdown-wrap .dropdown-box .btn-drop-menu.agree {background-image: url(../images/common/ico_agree.png)}
+
+.dropdown-wrap.type02 .btn-drop:before {position:absolute; left:12px; top:50%; width:20px; height:20px; margin-top:-9px; background-repeat:no-repeat; background-position:center; content:''}
+.dropdown-wrap.type02 .btn-drop.choice:before {background-image: url(../images/common/ico_choice.png) }
+.dropdown-wrap.type02 .btn-drop.chat:before {background-image: url(../images/common/ico_chat3.png)}
+.dropdown-wrap.type02 .btn-drop.tel:before {background-image: url(../images/common/ico_call.png)}
+.dropdown-wrap.type02 .btn-drop.location:before {background-image: url(../images/common/ico_location.png)}
+.dropdown-wrap.type02 .btn-drop.calendar:before {background-image: url(../images/common/ico_cal.png)}
+.dropdown-wrap.type02 .btn-drop.email:before {background-image: url(../images/common/ico_cal.png)}
+.dropdown-wrap.type02 .btn-drop.file:before {background-image: url(../images/common/ico_folder2.png)}
+.dropdown-wrap.type02 .btn-drop.agree:before {background-image: url(../images/common/ico_agree.png)}
+
+.form-temp-list .dropdown-wrap.type03 .dropdown-box {top:auto; bottom:-80px;  box-sizing: border-box; }
+.form-temp-list .dropdown-wrap.type03 .dropdown-box >ul {height:228px; overflow:auto;}
