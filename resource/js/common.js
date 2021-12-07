@@ -884,7 +884,7 @@ function addDragEvent (drags, dragItems) {
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.btn-drop','.dropdown-box','.btn-drop-menu','.name')//상단 드롭 메뉴
-  dropFormMenuOpen('2021.12.26')
+
 }
 
 

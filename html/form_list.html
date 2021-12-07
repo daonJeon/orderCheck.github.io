@@ -149,7 +149,7 @@
           <!-- tbl-top -->
           <div class="tbl-top start">
             <h3 class="title">신청폼 리스트</h3>
-            <div class="searchbox">
+            <div class="searchbox type02">
               <i class='ico search02'></i>
               <input type="text" placeholder=" 제목으로 검색하세요">
             </div>
@@ -164,7 +164,7 @@
             <li>
               <div class="btn-form">
                 <span class="txt">신청서 제목란입니다</span>
-
+                <span class="date">2021.12.26</span>
                 <div class="dropdown-wrap">
                   <button type="button" class="btn-form-menu"><span>메뉴열기</span></button>
                   <div class="dropdown-box">
@@ -233,11 +233,13 @@
   <script src="../resource/js/common.js" ></script>
   <script>
     //공통 페이지용 함수
-    init ()
+    pageInit ()
     //레이어
     layerFunc (".open-layer")
-    formControlFunc(".btn-drop-menu")
-    clickAddClassFunc(".btn-group-wrap .btn-l",".btn-group-wrap .btn-l","on")
+
+    dropFormMenuOpen('2021.12.26')
+    // 레이어 팝업 - 한개만
+    clickAddClassFunc(".btn-group-wrap .btn-l",".btn-group-wrap .btn-l","on",null, true)
   </script>
 </body>
 </html>

@@ -127,7 +127,7 @@ button:disabled {cursor:default}
 .switch input {opacity:0;width:0; height:0;}
 .switch .slider {position:absolute; cursor:pointer; width:auto; height:100%; top:0; left:0; right:0; bottom:0; background-color:#ccc; -webkit-transition:.4s; transition:.4s;}
 .switch .slider:before {position:absolute; content:""; height:24px; width:24px; left:4px; bottom:4px; background-color:white; -webkit-transition:.4s; transition:.4s;}
-.switch .slider:after {display:block; position:absolute; left:5px; top:50%;margin-top:-8px; line-height:14px;font-size:10px; color:#929292;  content:"OFF";transition:.6s;}
+.switch .slider:after {display:block; position:absolute; left:5px; top:50%;margin-top:-7px; line-height:14px;font-size:10px; color:#929292;  content:"OFF";transition:1s;}
 .switch input:checked + .slider{background-color:#02164F;}
 .switch input:focus + .slider {box-shadow:0 0 1px #02164F;}
 .switch input:checked + .slider:before {-webkit-transform:translateX(24px);-ms-transform:translateX(24px);transform:translateX(24px);}
@@ -156,6 +156,7 @@ div.switch.no-txt {display: block;}
 .filter-title {display:inline-block; margin-bottom:12px; font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
 .sub-gray-txt {width:100%; font-size: 14px; line-height: 20px; color: #7B7B7B;}
 .login-wrap .sub-gray-txt {display: block; text-align: center; margin-top:10px}
+
 /* list */
 .dot-list li {position: relative; padding-left:10px; font-size: 12px; line-height: 16px; color: #9A9A9A;}
 .dot-list li:before {position:absolute; top:8px; left:0; width:4px; height:4px; border-radius: 50%; background:#9A9A9A; content:''}
@@ -381,31 +382,32 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 .side-form.left.open+ aside.open+.content-section { min-width:1266px;width: calc(100% - 570px); right:270px;} */
 .form-list-wrap {position: relative; height:100%}
 .side-form {position: absolute; background-color: #fff; overflow:hidden;}
+.side-form.left {width:300px; left:-300px; border-right:1px solid #E3E3E3;}
+.side-form.right {width:270px; right:-270px; border-left:1px solid #E3E3E3}
+
 .side-form.left.open+ aside +.form-list-box { left: 300px; width: calc(100% - 300px);}
 .side-form.right.open+.form-list-box { width: calc(100% - 270px); padding-right:270px;}
 .side-form.left.open+ aside.open+.form-list-box { width: calc(100% - 570px); padding-right:270px;}
-.side-form.left {width:300px; left:-300px;}
-.side-form.right {width:270px; right:-270px}
 .side-form.left.open {width:300px;left:0}
 .side-form.right.open {width:270px;right:0}
-.side-form .top-cnt {}
+
 
 /* .input input {  padding: 0 20px 0 50px;  width: 100%;  height: 50px;  border-radius: 12px;  transition: all 0.5s ease;  background: #1d1b31;  font-weight: 400;  font-size: 15px;  color: #fff;} */
 /* search box */
 .searchbox { padding:0 18px; width:360px; height:44px; background: #E1E5EF; border-radius: 27px; font-size: 22px; box-sizing: border-box; }
 .searchbox i {color:#1D58FF;   vertical-align: middle;}
 .searchbox input { display: inline-block; padding: 12px 8px; font-weight: normal; text-align: left; vertical-align: middle; transition: all 0.3s ease-in-out; box-sizing: border-box ;
-  width:calc(100% - 40px); font-size:14px;}
-
+width:calc(100% - 40px); font-size:14px;}
+.searchbox.type02 {padding: 0 13px; width: 421px; background-color: #fff; border:1px solid #E7E7E7;border-radius: 6px;}
 /* dropdown */
 .dropdown-wrap {position: relative;}
 .dropdown-box {display:none; position:absolute; top:40px; width:100px; min-height:20px; padding:4px 12px; border:1px solid #ddd; box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25); border-radius: 4px; background-color: #fff; z-index: 1; background-color:#fff;}
 .dropdown-box.on {display: block;}
 .dropdown-box .btn-drop-menu {display:block; padding:10px 0;font-size: 14px; line-height: 20px; color: #41495D;}
 .dropdown-box li + li {border-top:1px solid #E6E6E6;}
+.header .dropdown-box {z-index: 200}
+.dropdown-wrap.type02 .btn-drop {padding:12px 30px 12px 13px; width:100%; border-radius: 6px; border: 1px solid #E7E7E7; background:url(../images/common/ico_accordion-arrow.png) no-repeat right center; text-align: left;}
 
-
-.btn-drop-type03 {padding:12px 30px 12px 13px; width:100%; border-radius: 6px; border: 1px solid #E7E7E7; background:url(../images/common/ico_accordion-arrow.png) no-repeat right center; text-align: left;}
 
 /* ico */
 .ico {display:inline-block; min-width:48px; width:48px; height:42px; background-repeat:no-repeat; background-position:center; transition:all .5s}
