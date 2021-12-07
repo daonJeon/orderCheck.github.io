@@ -379,11 +379,10 @@
   </div>
 
   <!-- script -->
-  <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-  <!-- <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script> -->
+  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
-  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script><!-- 임시!! 파일로 교체하기 -->
+  <script src="../resource/js/vendor/jquery-ui-1.11.2.js"></script><!-- 임시!! 파일로 교체하기 -->
   <script src="../resource/js/common.js" ></script>
   <script>
     //공통 페이지용 함수
@@ -411,7 +410,7 @@
 
 	  $(function() {
       //드래그
-      $( "ul, li" ).disableSelection();	//텍스트 드래그 방지
+      //$("#sortable, .form-temp-list > li,.slider-drop-box .list-cnt").disableSelection();	//텍스트 드래그 방지contenteditable="true
 
       $(".slider-drop-box .list-cnt").on("click", function(event) {	//이동할 리스트 저장
         var $item = $(this).children("var");

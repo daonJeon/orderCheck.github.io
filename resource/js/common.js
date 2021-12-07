@@ -76,25 +76,25 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
   clickAddClassFunc (btnName,dropBox,"on")
 
-  Array.prototype.forEach.call(btnMenu, function(b, idx){
-    b.addEventListener("click", function (e) {
+  Array.prototype.forEach.call(btnMenu, function(removeB, idx){
+    removeB.addEventListener("click", function (e) {
       e.preventDefault()
-      e.target.closest(removeArea).classList.remove(className);
+      e.target.closest(".dropdown-box").classList.remove("on")
       if(applyFunc != null) {
           if(typeof applyFunc == "string") {
 
             Array.prototype.forEach.call(btnMenu, function(drop, idx){
               drop.classList.remove("on")
             })
-            target.classList.add("on")
-            target.closest(".dropdown-wrap").classList.add("active")
-            target.closest(".dropdown-box").classList.remove("on")
-            target.closest(".dropdown-wrap").querySelector(applyFunc).innerText = target.innerText
+            e.target.classList.add("on")
+            e.target.closest(".dropdown-wrap").classList.add("active")
 
-            if(target.classList[1] != null) target.closest(".dropdown-wrap").querySelector(applyFunc).parentElement.classList.add(target.classList[1])
+            e.target.closest(".dropdown-wrap").querySelector(applyFunc).innerText = e.target.innerText
+
+            if(e.target.classList[1] != null) e.target.closest(".dropdown-wrap").querySelector(applyFunc).parentElement.classList.add(e.target.classList[1])
           } else if (typeof applyFunc == "function" ) {
-            target.closest(".dropdown-wrap").classList.add("active")
-            applyFunc(target)
+            e.target.closest(".dropdown-wrap").classList.add("active")
+            applyFunc(e.target)
           }
 
         }

@@ -394,7 +394,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .btn-plus:after{position:absolute; left: 7px; top: 13px; width:14px; height: 2px; background: #02164F; content:''}
 .btn-plus:after {transform:rotate(90deg)}
 
-.page-info {padding:18px 16px 0 30px;}
+.page-info {max-height:100%; overflow:auto; padding:18px 16px 0 30px;}
 .page-info > ul > li {position: relative;}
 .list-cnt {display:block; padding:10px 40px 10px; width:100%; text-align:left; background:#fff url(../images/common/ico_draw-cnt.png) no-repeat left 16px center; border-radius: 6px;font-size: 14px; line-height: 20px;}
 .list-cnt .ico {margin-right:8px}
@@ -424,7 +424,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .temp-box.on {background-color: rgba(29, 88, 255, 0.06); border: 1px solid #1D58FF;}
 .temp-box {margin-top:8px; padding:6px; border:1px solid #fff; border-radius: 6px;}
 
-.side-form .btm {position: absolute; width:100%; left:0; bottom: -417px; overflow: hidden; z-index: 1; transition:all 1s}
+.side-form .btm {position: absolute; width:100%; left:0; bottom: -417px; overflow: hidden; z-index: 1; transition:all 1s; background-color:#fff;}
 .side-form .btm .slider-drop{width:100%; border-top:1px solid #E3E3E3;; padding:19px 30px 18px; text-align: left; font-size:15px; line-height:22px;}
 .side-form .btm .slider-drop:after {display:inline-block; width:23px; height:23px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; vertical-align: middle; transition: all .5s;}
 .side-form .btm.open {bottom:0}
