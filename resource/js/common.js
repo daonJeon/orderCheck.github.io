@@ -145,7 +145,6 @@ function clickAddClassFunc (clickBtn, addArea,className,callback,typeone) {
 
   var btn = document.querySelectorAll(clickBtn);
   var wrap = document.querySelectorAll(addArea);
-
   Array.prototype.forEach.call(btn, function(b, idx){
     b.addEventListener("click", function (e) {
       e.preventDefault()
@@ -898,9 +897,11 @@ function draggableSlider (sliderWrap) {
   slider.addEventListener("wheel",function(e){
     e.preventDefault()
 
-    if(e.target.classList[0] == "form-temp-box" || e.target.classList[0] == "template" || e.target.classList[0] == "info") {
-      slider.parentElement.scrollLeft += e.deltaY
+    if(e.target.classList[0] == "form-temp-box" || e.target.classList[0] ==  "form-temp-list") {
+      slider.scrollLeft += e.deltaY
     } else if(e.target.classList[0] == "btn-drop-menu") {
+      e.target.closest("ul").scrollTop += e.deltaY
+    } else {
       e.target.closest("ul").scrollTop += e.deltaY
     }
   },{passive: false})

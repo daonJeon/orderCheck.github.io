@@ -372,15 +372,25 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
   font-weight: 500; font-size: 18px; line-height: 26px; color: #7B7B7B;}
 .btn-line-gray:hover, .btn-line-gray.on {color:#02164F; border-color:#02164F;}
 .btn-type-custom > span,
-.btn-type-temp > span {padding-left:34px;}
+.btn-type-temp > span,
+.btn-type-onepage> span,
+.btn-type-slide> span {padding-left:34px;}
+
 .btn-type-custom > span:before,
-.btn-type-temp > span:before {position:absolute; top:50%; left:0;  height:24px; margin-top:-11px; content:''}
+.btn-type-temp > span:before,
+.btn-type-onepage > span:before,
+.btn-type-slide > span:before {position:absolute; top:50%; left:0;  height:24px; margin-top:-11px; content:''}
+
+.btn-type-custom:hover > span:before,.btn-type-custom.on > span:before,
+.btn-type-temp:hover > span:before, .btn-type-temp.on > span:before,
+.btn-type-onepage:hover > span:before, .btn-type-onepage.on > span:before,
+.btn-type-slide:hover > span:before, .btn-type-slide.on > span:before {background-position: top right;}
+
 .btn-type-custom > span:before {width:24px; background:url(../images/common/ico_btn-custom.png) no-repeat;}
 .btn-type-temp > span:before {width:18px; background:url(../images/common/ico_btn-template.png) no-repeat;}
-.btn-type-custom:hover > span:before,
-.btn-type-custom.on > span:before,
-.btn-type-temp:hover > span:before,
-.btn-type-temp.on > span:before {background-position: top right;}
+.btn-type-onepage > span:before {width:24px; background:url(../images/common/ico_btn-onepage.png) no-repeat;}
+.btn-type-slide > span:before {width:26px; background:url(../images/common/ico_btn-slide.png) no-repeat;}
+
 
 .side-form .cnt-top {padding:18px 30px;border-bottom:1px solid #E3E3E3; margin-bottom:0}
 .side-form.right .cnt-top {padding:18px 25px;border-bottom:1px solid #E3E3E3; margin-bottom:0}
@@ -417,7 +427,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .form-temp-box .temp-box .inp + .inp {margin-top:8px}
 .form-temp-box .btn-ordercheck {position: absolute; right:24px; bottom:24px; z-index: 1;}
 
-.template {position: relative; padding:28px 28px 130px; width:600px; height:97%; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; overflow:auto}
+.template {position: relative; padding:28px 28px 130px; width:600px; height:650px; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; overflow:auto}
 .template .desc {display:block; margin-bottom:12px; font-weight:500; font-size: 12px; line-height: 17px; color: #41495D}
 .template .tx-gray {font-size: 11px; line-height: 16px; margin-bottom: 10px;}
 .template .info {margin-top: 48px;overflow: auto;height: calc(100% - 48px);}
