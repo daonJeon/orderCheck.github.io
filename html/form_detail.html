@@ -230,6 +230,15 @@
                   </span>
                 </li>
               </ul>
+
+              <h2 class="top-form-title">디자인</h2>
+              <span class="head">1줄 개수</span>
+              <div class="inp-select">
+                <select name="areaType" style="width:100%;">
+                  <option value="1">1줄</option>
+                  <option value="2">2줄</option>
+                  <option value="3">3줄</option>
+                </select>
             </div>
 
           </aside>
@@ -341,6 +350,64 @@
                     <p class="page">page2</p>
                   </li>
                   <li>
+                    <article class="template">
+                      <ul class="info">
+                        <li>
+                          <div class="inp">
+                            <input type="text" name="" id="" placeholder="페이지 제목" value="">
+                          </div>
+                          <div class="inp" style="margin-top:8px">
+                            <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
+                          </div>
+                        </li>
+                        <li class="temp-box">
+                          <p class="filter-title">질문 예시 텍스트입니다.</p>
+                          <p class="desc">부연설명 예시 텍스트입니다.</p>
+                          <p class="tx-gray">복수 선택 가능 문구 예시 텍스트입니다</p>
+                          <div class="btn-group-wrap">
+                            <span><button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button></span>
+                            <span><button type="button" class="btn-m btn-gray-line"><span class="txt">주방</span></button></span>
+                            <span><button type="button" class="btn-m btn-gray-line"><span class="txt">욕실</span></button></span>
+                          </div>
+                        </li>
+                        <li class="temp-box">
+                          <p class="filter-title">질문 예시 텍스트입니다.</p>
+                          <p class="tx-gray">복수 선택 가능 문구 예시 텍스트입니다</p>
+                          <div class="btn-group-wrap">
+                            <span><button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button></span>
+                            <span><button type="button" class="btn-m btn-gray-line"><span class="txt">주방</span></button></span>
+                          </div>
+                        </li>
+                        <li class="temp-box">
+                          <p class="filter-title">질문 예시 텍스트입니다.</p>
+                          <div class="btn-group-wrap">
+                            <button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button>
+                          </div>
+                        </li>
+
+                      </ul>
+                      <div class="dropdown-wrap type03 scroll">
+                        <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                        <div class="dropdown-box">
+                          <h2 class="drop-title">질문 유형 선택</h2>
+                          <ul>
+                            <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                            <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                            <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                            <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                            <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                            <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                            <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                            <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
+                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                    </article>
+                    <p class="page">page1</p>
+                  </li>
+                  <li>
                     <button type="button" class="template new"><span class="hide">새로운 템플릿</span></button>
                     <p class="page">page3</p>
                   </li>
@@ -398,9 +465,11 @@
 
     clickAddClassFunc (".list-cnt",".list-cnt","on")
 
-    clickAddClassFunc (".template .temp-box",".template .temp-box","on")
+    tempBoxOn ()
+
 
     //추천 질문 목록 - 복수 선택 가능
+    clickAddClassFunc (".template .btn-group-wrap button",".template .btn-group-wrap button","on")
     clickAddClassFunc (".side-form .btm .slider-drop",".side-form .btm","open")
     //오더 체크 온/오프
     orderCheckOnOff (".switch #ordercheck",".template .btn-ordercheck")
@@ -439,6 +508,8 @@
      }
 
     })
+
+    $('.inp-select select').niceSelect();
   </script>
 </body>
 </html>

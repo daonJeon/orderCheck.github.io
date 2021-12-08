@@ -80,6 +80,11 @@ button:disabled {cursor:default}
 .btn-bk-line:not(:disabled):hover {background-color: #E6E8ED;}
 .btn-bk-line:disabled {border-color:#CDCDCD; color:#9A9A9A; }
 
+.btn-gray-line { border: 1px solid #E6E6E6; box-sizing: border-box;font-weight: bold; line-height: 20px; }
+.btn-gray-line:not(:disabled).on,
+.btn-gray-line:not(:disabled):hover {background-color: #E6E8ED;}
+.btn-gray-line:disabled {border-color:#CDCDCD; color:#9A9A9A; }
+
 .btn-gray-line { border: 1px solid #CDD1DA; box-sizing: border-box;font-weight: bold; line-height: 20px; }
 
 .btn-light-blue { border: 1px solid #E1E5EF; background-color:#E1E5EF; box-sizing: border-box;font-weight: bold; line-height: 20px; color:#02164F;}

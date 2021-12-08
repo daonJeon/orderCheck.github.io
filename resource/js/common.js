@@ -1,3 +1,22 @@
+
+var passiveEvent = false;
+try {
+    var opts = Object.defineProperty({}, 'passive', {
+        get: function () {
+            passiveEvent = true;
+        }
+    });
+    window.addEventListener("test", null, opts);
+} catch (e) { }
+
+// in my case I need both passive and capture set to true, change as you need it.
+    passiveEvent = passiveEvent ? { capture: true, passive: true } : true;
+
+//if you need to handle mouse wheel scroll
+var supportedWheelEvent = string = "onwheel" in HTMLDivElement.prototype ? "wheel" :
+    document.onmousewheel !== undefined ? "mousewheel" : "DOMMouseScroll";
+
+
 var agent = navigator.userAgent.toLowerCase();
 if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
   //alert("인터넷 익스플로러 브라우저 입니다.");
@@ -879,12 +898,12 @@ function draggableSlider (sliderWrap) {
   slider.addEventListener("wheel",function(e){
     e.preventDefault()
 
-    if(e.target.classList[0] == "form-temp-box" || e.target.classList[0] == "template") {
+    if(e.target.classList[0] == "form-temp-box" || e.target.classList[0] == "template" || e.target.classList[0] == "info") {
       slider.parentElement.scrollLeft += e.deltaY
     } else if(e.target.classList[0] == "btn-drop-menu") {
       e.target.closest("ul").scrollTop += e.deltaY
     }
-  })
+  },{passive: false})
 
 }
 
@@ -931,6 +950,23 @@ function pageInfoRemove () {
 pageInfoRemove()
 
 
+function tempBoxOn () {
+  var btn = document.querySelectorAll(".template .temp-box");
+
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.preventDefault()
+      if(e.target.classList.contains("temp-box")) {
+        Array.prototype.forEach.call(btn, function(b2, idx2){
+          btn[idx2].classList.remove("on")
+        })
+
+        btn[idx].classList.toggle("on");
+
+      }
+    })
+  })
+}
 
 
 
