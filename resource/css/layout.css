@@ -475,10 +475,17 @@ width:calc(100% - 40px); font-size:14px;}
 
 .btn-round {display:inline-block; width:30px; height:30px; border-radius: 50%; border:1px solid #DFDFDF; text-indent:-9999px}
 .btn-round.send {background:url(../images/common/ico_round-send.png) no-repeat center}
+.btn-round.send + .btn-round.edit,
+.btn-round.edit + .btn-round.delete {margin-left:6px;}
+.btn-round.send:hover {background-image:url(../images/common/ico_round-send-hover.png)}
 .btn-round.edit {background:url(../images/common/ico_round-edit.png) no-repeat center}
 .btn-round.delete {background:url(../images/common/ico_round-remove.png) no-repeat center}
 .btn-round:disabled {background-color: #F0F0F0;;}
-.btn-link.down {padding-right:30px; background:url(../images/common/ico_download.png) no-repeat center right}
+.btn-link.down {position:relative; display:inline-block; padding-right:32px; }
+.btn-link.down:after {position:absolute; right:0;top:50%; margin-top:-11px; width:22px; height:22px; border-radius:50%; background:url(../images/common/ico_download.png) no-repeat center; content:''}
+.btn-link.down:hover:after {background-image:url(../images/common/ico_download-hover.png)}
+.del .btn-link.down:after,
+.btn-link.down:disabled:after{background-color:#F0F0F0;}
 .list-linkbox {padding:26px 18px; border: 1px solid #DFDFDF; box-sizing: border-box; border-radius: 6px;}
 .info-list .head {font-weight: 500; font-size: 13px; line-height: 19px; color: #555868;}
 .info-list .desc { margin-left: 8px; font-size: 13px; line-height: 19px; color: #7B7B7B;}

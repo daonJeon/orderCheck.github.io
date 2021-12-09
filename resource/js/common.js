@@ -943,13 +943,13 @@ function pageInfoRemove () {
 
   var wrap = document.querySelector(".page-info")
   wrap.addEventListener("click" ,function(e){
-    if(e.target.className="btn-close") {
+    if(e.target.className =="btn-close") {
       e.target.closest("li").parentElement.removeChild(e.target.closest("li"))
     }
   })
 
 }
-pageInfoRemove()
+
 
 
 function tempBoxOn () {
