@@ -375,7 +375,7 @@ function accordionFunc (btnName) {
 }
 
 // login chk
-function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일치할때만 실행
+function inpActiveFunc(wrap,btnClass,maxIsTrue) {//기본 : value 에 하나이상 글자 입력시, maxIsTrue maxlength 값 과일치할때만 실행
   var scriptArea = document.querySelector(wrap);
   var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
@@ -395,8 +395,8 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
     Array.prototype.forEach.call(input, function(inp, idx){
       inp.addEventListener("keyup", function (e) {
         var checkflag = inp.parentElement;
-
         maxIsTrue == true ? flag =( inp.value.length == inp.getAttribute("maxlength")) : flag = inp.value.length > 0
+
         if(flag) {
           loginBtnFlag[idx] = true;
           checkflag.classList.add("on")
@@ -404,19 +404,18 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//maxIsTrue maxlength 값과일
           loginBtnFlag[idx] = false;
           checkflag.classList.remove("on")
         }
-
         loginBtnDisabled()
       })
 
-      inp.addEventListener("change", function (e) {
-        Array.prototype.forEach.call(input, function(inp, idx){
-          maxIsTrue == true ? flag = inp.value.length == inp.getAttribute("maxlength") : flag = inp.value.length > 0
-          if(flag) loginBtnFlag.push(true)
-          else loginBtnFlag.push(false)
-        })
+      // inp.addEventListener("change", function (e) {
+      //   Array.prototype.forEach.call(input, function(inp, idx){
+      //     maxIsTrue == true ? flag = inp.value.length == inp.getAttribute("maxlength") : flag = inp.value.length > 0
+      //     if(flag) loginBtnFlag.push(true)
+      //     else loginBtnFlag.push(false)
+      //   })
 
-        loginBtnDisabled()
-      })
+      //   loginBtnDisabled()
+      // })
 
     })
 
