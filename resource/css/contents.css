@@ -417,7 +417,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .page-info > ul > li .list-cnt.on + .btn-close {display: block;}
 
 .form-list-box {position: relative;}
-.slider-area {position:relative; height:745px; cursor:grab; }
+.slider-area {position:relative; height:745px; }
 .form-temp-box {position:absolute; top:0; left:0; width:100%; height:100%; padding:27px 24px 24px; overflow: scroll; box-sizing: border-box;}
 .form-temp-box > ul { position:absolute; display:flex; justify-content:right; }
 .form-temp-box > ul > li .page {margin-top:14px; font-size: 15px; line-height: 22px; text-align: center; color: #41495D;}
@@ -430,7 +430,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .template {position: relative; padding:28px 28px 130px; width:600px; height:650px; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; overflow:auto}
 .template .desc {display:block; margin-bottom:12px; font-weight:500; font-size: 12px; line-height: 17px; color: #41495D}
 .template .tx-gray {font-size: 11px; line-height: 16px; margin-bottom: 10px;}
-.template .info {margin-top: 48px;overflow: auto;height: calc(100% - 48px);}
+.template .info {margin-top: 48px;height: calc(100% - 48px);}
 .template.new {border: 1px dashed #C7C7C7}
 .template .btn-plus {left:50%; margin-left:-15px; }
 .template.new {background:#fff url(../images/common/ico_temp-add.png) no-repeat center}
@@ -441,7 +441,7 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 .template .btn-group-wrap > span:first-child  {margin-left:0px;}
 .template .btn-group-wrap button {width:100%}
 
-.side-form .btm {position: absolute; width:100%; left:0; bottom: -417px; overflow: hidden; z-index: 1; transition:all 1s; background-color:#fff;}
+.side-form .btm {position: absolute; width:100%; left:0; bottom: -417px; z-index: 1; transition:all 1s; background-color:#fff;}
 .side-form .btm .slider-drop{width:100%; border-top:1px solid #E3E3E3;; padding:19px 30px 18px; text-align: left; font-size:15px; line-height:22px;}
 .side-form .btm .slider-drop:after {display:inline-block; width:23px; height:23px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; vertical-align: middle; transition: all .5s;}
 .side-form .btm.open {bottom:0}

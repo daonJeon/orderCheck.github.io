@@ -52,9 +52,10 @@
                 </button>
                 <div class="dropdown-box">
                   <ul>
-                    <li><a href="#" class="btn-drop-menu">버튼1</a></li>
-                    <li><a href="#" class="btn-drop-menu">버튼2</a></li>
-                    <li><a href="#" class="btn-drop-menu">버튼3</a></li>
+                    <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                    <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                    <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                    <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
                   </ul>
                 </div>
               </div>
@@ -153,6 +154,7 @@
               <div class="slider-drop-box">
                 <p class="tx-gray sm">질문을 희망하는 위치에 옮겨주세요</p>
                 <ul id="draggable">
+                  <li>aaaa</li>
                   <li>
                     <button type="button" class="list-cnt" data-value="list1"><span><i class="ico chat3"></i><var>시공지 유형</var></span></button>
                   </li>
@@ -494,7 +496,6 @@
     //오더 체크 온/오프
     orderCheckOnOff (".switch #ordercheck",".template .btn-ordercheck")
 
-    draggableSlider(".form-temp-box")
 
     // 레이어 팝업 - 한개만
 
@@ -519,12 +520,12 @@ $("#sortable, .form-temp-list > li .info,.slider-drop-box .list-cnt").disableSel
         return false;
       });
 
-      $("#sortable").sortable({	//리스트 항목 정렬
+      $("#sortable, .form-temp-list > li .info").sortable({	//리스트 항목 정렬
         containment : "parent"
       });
 
       $("#draggable > li").draggable({	//추천질문 목록 드래그
-        connectToSortable: "#sortable",
+        connectToSortable: "#sortable, .form-temp-list > li .info",
         helper: "clone"
       });
 
@@ -537,7 +538,7 @@ $("#sortable, .form-temp-list > li .info,.slider-drop-box .list-cnt").disableSel
 
       function addList($item) {
         $('#sortable').append('<li>'+$item.text()+'</li>')
-        $('.form-temp-list >li .info ').append('<li><p>'+$item.text()+'</p><div><input text="text"></div></li>');
+        $('.form-temp-list >li .info').append('<li><p>'+$item.text()+'</p><div><input text="text"></div></li>');
       }
 
     });

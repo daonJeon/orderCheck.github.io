@@ -940,6 +940,7 @@ function addDragEvent (drags, dragItems) {
 
 
 function pageInfoRemove () {
+
   var wrap = document.querySelector(".page-info")
   wrap.addEventListener("click" ,function(e){
     if(e.target.className="btn-close") {
