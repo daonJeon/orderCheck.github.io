@@ -310,6 +310,10 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .filebox .upload-name {  display: inline-block; vertical-align: middle;  border: 1px solid #E7E7E7; color: #41495D;}
 .filebox .btn-remove {display:none;}
 
+.textarea {padding:12px; font-family:inherit; font-size: 14px; line-height: 20px; letter-spacing: 1px;}
+.textarea::placeholder {color:#9A9A9A}
+.textarea::-webkit-input-placeholder {color: #9A9A9A;}
+.textarea:-ms-input-placeholder { color: #9A9A9A;}
 /*===== chk =====*/
 .checkbox {position:relative;}
 .checkbox input {position:absolute; top:0; left:0; width:1px; height:1px; opacity:0; filter:alpha(opacity=0); zoom:1; text-indent:-9999px; z-index:0; overflow:hidden;}
@@ -347,6 +351,12 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .layer-pop.confirm .inp + .layer-btn {margin-top:40px}
 .layer-pop.confirm .btn-group-wrap + .layer-btn {margin-top:36px}
 .layer-pop .layer-mid {max-height:550px; overflow: auto;}
+
+.layer-pop.type02 .layer-cnt {padding:26px 26px 30px}
+.layer-pop.type02 .btn-close {top:23px; right:23px}
+.layer-pop.type02 .revise-box {margin:0 }
+.layer-pop.type02 .revise-box .filter-title {margin-bottom:33px;}
+.layer-pop.type02 .textarea {height:300px}
 
 /* location */
 .location-wrap {display:flex;padding:0 33px;}

@@ -315,13 +315,15 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 
 /* drop menu */
 .drop-menu-wrap {position:relative;  }
-.drop-menu-list {position:absolute; top:79px; left:0; width:100%; max-height:0;overflow: hidden; text-align: center; box-sizing: border-box; background:#fff; z-index:100}
+.drop-menu-list {position:absolute; top:83px; left:0; width:100%; max-height:0;overflow: hidden; text-align: center; box-sizing: border-box; background:#fff; z-index:100}
 .drop-menu-list .btn-member-drop {border-radius:0; border:none;}
 .drop-menu-list .btn-member-drop:hover {background-color:#F2F4F8;}
 .drop-menu-list .btn-member-drop:hover .company,
 .drop-menu-list .btn-member-drop:hover .desc,
 .drop-menu-list .btn-member-drop:hover .unit{color:#02164F}
-.drop-menu-list > ul{border:1px solid #ddd; border-top:none}
+.drop-menu-list > ul{border:1px solid #ddd; border-radius: 6px; }
+.drop-menu-list > ul > li {border-bottom:1px solid #ddd;}
+.drop-menu-list > ul > li:last-child {border-bottom:none}
 .drop-menu-list .btn-member-drop .price {font-weight: bold;font-size: 16px;line-height: 23px;text-align: right;color: #02164F;}
 .drop-menu-list .btn-member-drop .unit {font-weight: 500; font-size: 15px; line-height: 22px;;}
 
@@ -448,7 +450,8 @@ var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; wid
 .form-temp-box .temp-box .inp + .inp {margin-top:8px}
 .form-temp-box .btn-ordercheck {position: absolute; right:24px; bottom:24px; z-index: 1;}
 
-.template {position: relative; padding:28px 28px 130px; width:600px; height:650px; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; overflow:auto}
+.template {position: relative; padding:28px 28px 28px; width:600px; height:650px; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; }
+.template .inbox {height:100%; overflow:auto}
 .template .desc {display:block; margin-bottom:12px; font-weight:500; font-size: 12px; line-height: 17px; color: #41495D}
 .template .tx-gray {font-size: 11px; line-height: 16px; margin-bottom: 10px;}
 .template .info {margin-top: 48px;height: calc(100% - 48px);}
@@ -559,3 +562,6 @@ var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; wid
 
 .form-temp-list .dropdown-wrap.type03 .dropdown-box {top:auto; bottom:-80px;  box-sizing: border-box; }
 .form-temp-list .dropdown-wrap.type03 .dropdown-box >ul {height:228px; overflow:auto;}
+
+.article-wrap { font-size: 14px; line-height: 20px; color: #9A9A9A;}
+.article-wrap.border {padding:12px; height:300px; border: 1px solid #E7E7E7; box-sizing: border-box; border-radius: 6px;}

@@ -380,9 +380,13 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue,requireIsTrue) {//기본 : value 
   var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
   var flag = '';
-  var loginBtn = scriptArea.querySelector(btnClass)
+
   if(requireIsTrue) input = scriptArea.querySelectorAll("input[type=text]:required, input[type=tel]:required,input[type=number]:required,input[type=password]:required")
-  loginBtn.disabled = true
+  var loginBtns = scriptArea.querySelectorAll(btnClass)
+  console.log(loginBtns)
+  Array.prototype.forEach.call(loginBtns, function(login, idx){
+    login.disabled = true
+  })
 
   //value값에 따라 초기값 세팅
   Array.prototype.forEach.call(input, function(inp, idx){
@@ -424,6 +428,7 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue,requireIsTrue) {//기본 : value 
 
   }
   function loginBtnDisabled () {
+    var loginBtn = scriptArea.querySelector(btnClass)
     var flag = loginBtnFlag.every(function(val) {return val == true})
     if(flag) loginBtn.disabled = false//둘다 인풋 체크
     else loginBtn.disabled = true
@@ -543,14 +548,14 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   var desc = document.querySelector(".desc")
   var price = document.querySelector(".price var")
 
-
+  btn.classList.add("active")
   //event
   btn.addEventListener("click",function(e){
     if(e.target.classList.contains("open")) {
       menuClose ()
     } else {
 
-      e.currentTarget.classList.remove("active")
+      //e.currentTarget.classList.remove("active")
       menuOpen ()
       dimCreate ()
     }
@@ -954,24 +959,6 @@ function pageInfoRemove () {
 
 
 
-function tempBoxOn () {
-  var btn = document.querySelectorAll(".template .temp-box");
-
-  Array.prototype.forEach.call(btn, function(b, idx){
-    b.addEventListener("click", function (e) {
-      e.preventDefault()
-      if(e.target.classList.contains("temp-box")) {
-        Array.prototype.forEach.call(btn, function(b2, idx2){
-          btn[idx2].classList.remove("on")
-        })
-
-        btn[idx].classList.toggle("on");
-
-      }
-    })
-  })
-}
-
 function ToastFunc(btn, msg, time) {
   var button = document.querySelector(btn)
   var toastCont = document.querySelector("#toast")
@@ -997,6 +984,10 @@ function ToastFunc(btn, msg, time) {
 
 }
 
+function templateFunc() {
+  tempBoxOn()
+  formRemove()
+}
 function formRemove() {
   var template = document.querySelectorAll(".template")
   Array.prototype.forEach.call(template, function(temp, idx){
@@ -1004,9 +995,26 @@ function formRemove() {
     temp.querySelector(".btn-close").addEventListener("click",function(e){
       e.currentTarget.closest(".template").parentElement.removeChild(e.currentTarget.closest(".template"))
     })
+
   })
 }
 
+function tempBoxOn () {
+  var btn = document.querySelectorAll(".template .temp-box");
+
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.preventDefault()
+      if(e.target.classList.contains("temp-box")) {
+        Array.prototype.forEach.call(btn, function(b2, idx2){
+          btn[idx2].classList.remove("on")
+        })
+        btn[idx].classList.toggle("on");
+
+      }
+    })
+  })
+}
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴

@@ -79,7 +79,7 @@
             </ul>
 
             <div class="btn-group">
-              <button type="button" class="btn-l btn-bk confirm" disabled><span>다음</span></button>
+              <button type="button" class="btn-l btn-bk confirm open-layer" data-info="layer-private-agree" disabled><span>다음</span></button>
             </div>
           </div>
         </div>
@@ -89,13 +89,30 @@
 
   </div>
 
-
+  <!-- 내용 수정 레이어 -->
+  <div class="layer-pop type02" id="layer-private-agree">
+    <div class="layer-cnt">
+      <div class="layer-mid">
+        <div class="revise-box">
+          <label for="textarea1" class="filter-title">메모</label>
+          <div class="article-wrap border">
+            예시텍스트입니다
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
 
 
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js"></script>
   <script>
+    //레이어
+    layerFunc (".open-layer")
+
     agreeChkFunc(".agree-wrap ","agree_all",function() {
       chkActiveFunc (".agree-wrap", "agree_all",".confirm")
     })
