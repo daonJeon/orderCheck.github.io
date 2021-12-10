@@ -997,6 +997,15 @@ function ToastFunc(btn, msg, time) {
 
 }
 
+function formRemove() {
+  var template = document.querySelectorAll(".template")
+  Array.prototype.forEach.call(template, function(temp, idx){
+
+    temp.querySelector(".btn-close").addEventListener("click",function(e){
+      e.currentTarget.closest(".template").parentElement.removeChild(e.currentTarget.closest(".template"))
+    })
+  })
+}
 
 
 function pageInit () {  //모든 페이지용 함수

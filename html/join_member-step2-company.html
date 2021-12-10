@@ -75,7 +75,7 @@
                     <input type="tel" id="user_card01-4" pattern="[0-9]{4}" maxlength="4">
                   </span>
                 </div>
-                <p class="warning-txt">카드 번호를 확인해주세요. 😵 </p>
+                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
 
 
                 <label for="user_date" class="inp-title">유효기간</label>
@@ -84,11 +84,11 @@
                   <span class="txt-form"> / </span>
                   <input type="tel" id="user_date02" maxlength="4" pattern="[0-9]{4}" placeholder="YYYY">
                 </div>
-                <p class="warning-txt">카드 유효기간을 확인해주세요. 😵 </p>
+                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
 
                 <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
                 <div class="inp pw">
-                  <input type="password" id="user_pw" pattern="[0-9]{2}" placeholder="**" >
+                  <input type="password" id="user_pw" pattern="[0-9]{2}" maxlength="2"  placeholder="**" >
                   <span class="txt-form">**</span>
                 </div>
 
@@ -96,18 +96,18 @@
                 <div class="inp">
                   <input type="tel" id="user_phone" pattern="[0-9]{6}" maxlength="6" placeholder="예:881030">
                 </div>
-                <p class="warning-txt">생년월일을 확인해주세요. 😵 </p>
+                <p class="warning-txt02">생년월일을 확인해주세요.</p>
 
                 <label for="user_email" class="inp-title">결제용 이메일</label>
                 <div class="inp">
                   <input type="text" id="user_email" placeholder="이메일">
                 </div>
-                <p class="warning-txt">정확한 이메일을 입력해주세요. 😵 </p>
+                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
                 <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
 
               </div>
               <div class="btn-group">
-                <button type="submit" class="btn-l btn-dark-gray confirm open-layer" data-info="layer-member-info"><span>다음 </span></button>
+                <button type="submit" class="btn-l btn-bk confirm open-layer" data-info="layer-member-info"><span>다음 </span></button>
               </div>
             </div>
             <div class="content active" id="tab2">
@@ -127,7 +127,7 @@
                     <input type="tel" id="user_card02-4" pattern="[0-9]{4}" maxlength="4">
                   </span>
                 </div>
-                <p class="warning-txt">카드 번호를 확인해주세요. 😵 </p>
+                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
 
                 <label for="user_date" class="inp-title">유효기간</label>
                 <div class="inp range">
@@ -135,7 +135,7 @@
                   <span class="txt-form"> / </span>
                   <input type="tel" id="user_date02" maxlength="4" pattern="[0-9]{4}" placeholder="YYYY">
                 </div>
-                <p class="warning-txt">카드 유효기간을 확인해주세요. 😵 </p>
+                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
 
                 <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
                 <div class="inp pw">
@@ -147,18 +147,18 @@
                 <div class="inp">
                   <input type="tel" id="user_phone" pattern="[0-9]{10}" maxlength="10" placeholder="예:881030">
                 </div>
-                <p class="warning-txt">사업자번호를 확인해주세요. 😵 </p>
+                <p class="warning-txt02">사업자번호를 확인해주세요.</p>
 
                 <label for="user_email" class="inp-title">결제용 이메일</label>
                 <div class="inp">
                   <input type="text" id="user_email" placeholder="이메일">
                 </div>
-                <p class="warning-txt">정확한 이메일을 입력해주세요. 😵 </p>
+                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
                 <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
 
               </div>
               <div class="btn-group">
-                <button type="submit" class="btn-l btn-dark-gray confirm open-layer" data-info="layer-member-info"><span>다음 </span></button>
+                <button type="submit" class="btn-l btn-bk confirm open-layer" data-info="layer-member-info"><span>다음 </span></button>
               </div>
             </div>
           </section>
@@ -178,7 +178,7 @@
   <script>
     //우측 탭
     tabFunc (".tab-wrap", true, function () {
-      inpActiveFunc (".login-wrap .content.active",".confirm") //인풋 들의 value 값이 타이핑 되면 버튼 활성화
+      inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
     }) //tab 영역 , slider 풀사이즈 여부
   </script>
 </body>

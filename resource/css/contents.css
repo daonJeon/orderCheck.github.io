@@ -250,7 +250,7 @@
 .login-wrap .title + .sub-txt {margin-top:16px}
 .login-wrap .login-top {margin-bottom:60px;}
 .login-wrap .inp:not(:last-child) {margin-bottom:12px;}
-.login-wrap .inp-line,
+.login-wrap .inp-line {margin-bottom:6px;}
 .auth-box .inp-line {margin-bottom:12px;}
 .login-wrap .inp-line .inp {margin-bottom:0px;}
 .login-wrap .inp:last-child{margin-bottom: 0;}
@@ -271,6 +271,7 @@
 .login-wrap .inp-line button {width:110px;}
 
 .warning-txt {padding:12px 14px; padding-left:10px; color:#FF4949; background: #FFDCDC; border-radius: 6px;}
+.warning-txt02 {margin-bottom:12px; font-size: 12px; line-height: 17px; color: #FF8159; text-align: left; }
 p.line {margin:10px 0; width:100%; height:1px; background-color: #E3E3E3;}
 p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-10px; margin-left:-22px; background-color: #fff; color:#9A9A9A; font-size: 14px; text-align: center; z-index: 1;}
 
@@ -292,7 +293,9 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .agree-box.all .checkbox input.check:checked + label .box.round:before,
 .agree-box.all .checkbox input.check:checked + label .box.round:after {background-color:#fff;}
 .agree-box .checkbox .box {margin-right:12px}
-.agree-box .btn-link {font-weight: 400;}
+.agree-box .btn-link {font-weight: 400; font-size:13px; line-height:19px; color:#9A9A9A}
+.agree-box.all .checkbox label {font-weight: 500; font-size: 16px; line-height: 23px; color: #41495D;}
+.agree-box .checkbox label {font-weight: 500; font-size: 14px; line-height: 20px;color: #41495D;}
 
 .tbl-top-type02 .sub-title {margin-top:20px}
 .tbl-top-type02 .btn-link-type02 {display:inline-block; margin-top:4px;}
@@ -304,8 +307,23 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .info-list.side .checkbox input.check:checked + label dt {font-weight:700; color:#02164F}
 .info-list.side .checkbox input.check:checked + label dd {font-weight:700; color:#02164F}
 .info-list.side .checkbox input.check:checked + label dd .unit {font-size:13px; line-height:18px; }
+.info-list.side .checkbox input.check:disabled + label .box {background-color:#D1D1D1}
+.info-list.side .checkbox input.check:disabled + label .box:before,
+.info-list.side .checkbox input.check:disabled + label .box:after {background-color:#fff}
 .info-list.side .checkbox input.check:disabled + label dt {color:#41495D}
 .info-list.side .checkbox input.check:disabled + label dd {font-weight:400; line-height:17px; font-size:12px; color:#9A9A9A}
+
+/* drop menu */
+.drop-menu-wrap {position:relative;  }
+.drop-menu-list {position:absolute; top:79px; left:0; width:100%; max-height:0;overflow: hidden; text-align: center; box-sizing: border-box; background:#fff; z-index:100}
+.drop-menu-list .btn-member-drop {border-radius:0; border:none;}
+.drop-menu-list .btn-member-drop:hover {background-color:#F2F4F8;}
+.drop-menu-list .btn-member-drop:hover .company,
+.drop-menu-list .btn-member-drop:hover .desc,
+.drop-menu-list .btn-member-drop:hover .unit{color:#02164F}
+.drop-menu-list > ul{border:1px solid #ddd; border-top:none}
+.drop-menu-list .btn-member-drop .price {font-weight: bold;font-size: 16px;line-height: 23px;text-align: right;color: #02164F;}
+.drop-menu-list .btn-member-drop .unit {font-weight: 500; font-size: 15px; line-height: 22px;;}
 
 .btn-member-drop {padding:18px 20px 18px 20px; width:100%; border-radius: 6px; border: 1px solid #E4E4E4}
 .btn-member-drop.btn-drop-type02 {padding-right:44px}
@@ -313,13 +331,16 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .btn-member-drop.active {border-color:#02164F;background: #F2F4F8; }
 .btn-member-drop.on {color:#1D58FF;background: rgba(29, 88, 255, 0.04); border-color:#1D58FF}
 .btn-member-drop.on .price {color:#1D58FF; }
-.btn-member-drop.active:after {transform:rotate(180deg)}
+.btn-member-drop.open:after {transform:rotate(180deg)}
+.btn-member-drop var.won:before {background-position:top 59% center}
 .btn-member-drop dl,
 .btn-member-drop dd {display: flex; justify-content: space-between; align-self: center;}
 .btn-member-drop dt {text-align: left;}
 .btn-member-drop .company {font-weight: 500; font-size: 14px; line-height: 20px; color: #41495D;}
 .btn-member-drop .desc {display:block; margin-top:6px; font-size: 12px; line-height: 17px; color: #9A9A9A;}
-.btn-member-drop .price {float:right; font-size: 18px; line-height: 26px;color: #02164F;}
+.btn-member-drop .price {float:right; font-size:bold; font-size: 18px; line-height: 26px;color: #02164F;}
+.btn-member-drop .unit {margin-left:4px; font-weight: 500; font-size: 15px; line-height: 22px;}
+
 .service-box {margin-top:20px;}
 .service-box .checkbox input.check + label dl,
 .service-box .total { justify-content:space-between; align-items:center; }
@@ -329,10 +350,10 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .service-box .total .sm {margin-top:3px; font-weight: 400; font-size: 12px; line-height: 17px;color:#9A9A9A }
 .service-box .total .total-price {color: #1D58FF; font-size: 13px; line-height: 19px;}
 .service-box var.won {margin-right:4px; font-weight: bold; font-size: 20px; line-height: 29px;}
-var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF; border-radius:50%; text-align:center; color:#fff; content:'₩'}
+var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF url(../images/common/ico_won.png) no-repeat left 59% top 59%; border-radius:50%; text-align:center; color:#fff; content:''}
 
 .btn-dark-gray {background: #A3A9BA; border-radius: 6px; color:#fff}
-.btn-dark-gray:disabled {background: #eee;}
+.btn-dark-gray:disabled {background: #8B92A6;}
 
 
 .member-info-title {font-weight: bold; font-size: 12px; line-height: 17px; color: #7B7B7B;}
@@ -349,8 +370,8 @@ var.won:before {display:inline-block; margin-right:6px; width:22px; height:22px;
 
 .login-wrap .inp-phone {margin-bottom:12px; display: flex; justify-content: space-between; align-items: center;}
 .login-wrap .inp-phone .inp {width:24%; margin-bottom:0}
-.inp.range input:first-child {width:60px;}
-.inp.range input:last-child {width:100px;}
+.inp.range input:first-child {padding:10px; width:60px;}
+.inp.range input:last-child {padding:10px; width:60px;}
 .inp.pw input {width:60px;}
 
 .estimate-list {display: flex; flex-wrap:wrap}

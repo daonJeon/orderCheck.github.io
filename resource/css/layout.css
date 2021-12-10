@@ -65,6 +65,7 @@ button:disabled {cursor:default}
 /* button */
 .tx-org {color:#FF8159 !important}
 .tx-gray {color:#7B7B7B !important}
+.tx-gray02 {color:#949494 !important}
 .tx-darkgray {color:#555868 !important; }
 .tx-blue {color:#1D58FF !important;}
 
@@ -76,7 +77,7 @@ button:disabled {cursor:default}
 .btn .ico, .btn-l .ico {vertical-align:-2px; margin-right:4px;}
 .btn >span, .btn-l > span {position:relative;}
 
-.btn-bk-line { border: 1px solid #02164F;box-sizing: border-box;font-weight: bold; line-height: 20px; }
+.btn-bk-line { border: 1px solid #02164F;box-sizing: border-box;font-weight: bold; line-height: 20px; color:#02164F}
 .btn-bk-line:not(:disabled):hover {background-color: #E6E8ED;}
 .btn-bk-line:disabled {border-color:#CDCDCD; color:#9A9A9A; }
 
@@ -105,13 +106,13 @@ button:disabled {cursor:default}
 .layer-btn button {margin-left:8px}
 
 .btn-gray {background-color:#EBEBEB; font-weight:700; font-size:16px; line-height:23px; color:#9A9A9A; }
-.btn-phone {padding:0; height:62px; line-height:62px; border:1px solid #02164F;background-color:#02164F;color:#fff}
-.btn-phone span {display: inline-block; padding-left:42px; background: url(../images/common/ico_phone.png) no-repeat left center;}
+.btn-phone {padding:0; height:62px; line-height:62px; border:1px solid #1D58FF;background-color:#1D58FF;color:#fff}
+.btn-phone span {display: inline-block; width:230px; box-sizing: border-box; padding-left:42px; background: url(../images/common/ico_phone.png) no-repeat left center;}
 .btn-phone.blue {background-color:#1D58FF; border-color:#1D58FF;}
 .btn-kakao {padding:0; height:62px; line-height:62px; border:1px solid #ffeb00;background-color:#ffeb00;color:#333}
-.btn-kakao span {display: inline-block; padding-left:42px; background: url(../images/common/ico_kakao.png) no-repeat left center;}
+.btn-kakao span {display: inline-block; width:230px; box-sizing: border-box; padding-left:42px; background: url(../images/common/ico_kakao.png) no-repeat left center;}
 .btn-apple {padding:0; height:62px; line-height:62px; border:1px solid #444;background-color:#444;;color:#fff}
-.btn-apple span {display: inline-block; padding-left:57px; min-width:170px; text-align: left; background: url(../images/common/ico_apple.png) no-repeat left center;}
+.btn-apple span {display: inline-block;width:230px; box-sizing: border-box;  padding-left:57px; min-width:170px; text-align: left; background: url(../images/common/ico_apple.png) no-repeat left center;}
 .btn-apple.darkgray {background-color:#444; border-color:#444;}
 .btn-facebook {border:1px solid #4267b2;background-color:#4267b2;color:#fff}
 .btn-naver {border:1px solid #1ec800;background-color:#1ec800;color:#fff;}
@@ -509,12 +510,7 @@ width:calc(100% - 40px); font-size:14px;}
 .tx-darkblue {color:#41495D !important}
 /* .btn-light-blue:disabled {background-color:rgba(225, 229, 239, 0.5) !important; color:#9A9A9A !important} */
 
-/* drop menu */
-.drop-menu-wrap {position:relative;  }
-.drop-menu-list {position:absolute; top:79px; left:0; width:100%; max-height:0;overflow: hidden; text-align: center; box-sizing: border-box; background:#fff; z-index:100}
-.drop-menu-list .btn-member-drop {border-radius:0; border:none;}
-.drop-menu-list .btn-member-drop:hover {background-color:#F2F4F8;}
-.drop-menu-list > ul{border:1px solid #ddd; border-top:none}
+
 
 .btn-drop-type02.open + .drop-menu-list {max-height:200px;}
 
@@ -524,7 +520,7 @@ width:calc(100% - 40px); font-size:14px;}
 
 /* btn-link-type02 */
 .btn-link-type02 .txt {position: relative; padding-right:30px;}
-.btn-link-type02 .txt:after {display:block; margin-top:-15px; position:absolute; top:50%; right:0px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; vertical-align: middle; transform:rotate(-90deg); content:''}
+.btn-link-type02 .txt:after {display:block; margin-top:-15px; position:absolute; top:50%; right:0px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; background-size:60%; transform:rotate(-90deg); color:#7b7b7b; content:''}
 
 .tbl-top-type02 {margin-bottom:30px; text-align: center;}
 .login-wrap .tab-wrap {width: 175px; margin:0 auto 20px}
@@ -533,6 +529,13 @@ width:calc(100% - 40px); font-size:14px;}
 .login-wrap .tab-btn {color:#9A9A9A}
 .login-wrap .tab-wrap .slider {border-radius: 7px;}
 .tab-wrap.type02 {width:auto; margin-top:40px; margin-bottom:38px;}
-.tab-wrap.type02 .tabs > li {width:50%}
+.tab-wrap.type02 .tabs > li {width:50%; border-bottom:1px solid #E6E6E6;}
 .tab-wrap.type02 .tabs li button {width:100%; padding-bottom:14px}
 .txt-form {margin:0 10px 0 8px}
+
+
+#toast {position:absolute; top:80px; left:0; right:0px; margin:0 auto; display: flex; border-radius:5px; margin-top:10px; flex-direction: column; align-items: center }
+.toast {width: 706px; height: 60px; padding:20px 20px 20px 54px; background: #1D58FF url(../resource/images/common/ico_toast.png) no-repeat left 25px center; box-shadow: 0px 2px 12px rgba(29, 88, 255, 0.51); border-radius: 10px; user-select: none;
+ font-size: 14px;line-height: 20px; color: #fff; box-sizing: border-box ; transition: all 1s; opacity: 0;}
+.toast+ .toast {margin-top:20px;}
+.toast.active {opacity: 1;}
