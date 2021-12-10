@@ -375,11 +375,14 @@ function accordionFunc (btnName) {
 }
 
 // login chk
-function inpActiveFunc(wrap,btnClass,maxIsTrue) {//기본 : value 에 하나이상 글자 입력시, maxIsTrue maxlength 값 과일치할때만 실행
+function inpActiveFunc(wrap,btnClass,maxIsTrue,requireIsTrue) {//기본 : value 에 하나이상 글자 입력시, maxIsTrue maxlength 값 과일치할때만 실행
   var scriptArea = document.querySelector(wrap);
   var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
   var flag = '';
+  var loginBtn = scriptArea.querySelector(btnClass)
+  if(requireIsTrue) input = scriptArea.querySelectorAll("input[type=text]:required, input[type=tel]:required,input[type=number]:required,input[type=password]:required")
+  loginBtn.disabled = true
 
   //value값에 따라 초기값 세팅
   Array.prototype.forEach.call(input, function(inp, idx){
@@ -421,9 +424,7 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue) {//기본 : value 에 하나이�
 
   }
   function loginBtnDisabled () {
-    var loginBtn = scriptArea.querySelector(btnClass)
     var flag = loginBtnFlag.every(function(val) {return val == true})
-
     if(flag) loginBtn.disabled = false//둘다 인풋 체크
     else loginBtn.disabled = true
   }
@@ -548,6 +549,8 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
     if(e.target.classList.contains("open")) {
       menuClose ()
     } else {
+
+      e.currentTarget.classList.remove("active")
       menuOpen ()
       dimCreate ()
     }
@@ -969,7 +972,30 @@ function tempBoxOn () {
   })
 }
 
+function ToastFunc(btn, msg, time) {
+  var button = document.querySelector(btn)
+  var toastCont = document.querySelector("#toast")
 
+  var randomMsg = msg
+
+  button.addEventListener("click", createToast)
+
+  function createToast () {
+    var toastEl = document.createElement("div")
+    toastEl.classList.add("toast")
+    toastEl.innerText = msg
+    toastCont.appendChild(toastEl)
+
+    setTimeout(function () {
+      toastEl.classList.add("active")
+    },10)
+    setTimeout(function () {
+      toastEl.remove()
+      toastEl.classList.remove("active")
+    },time)
+  }
+
+}
 
 
 
