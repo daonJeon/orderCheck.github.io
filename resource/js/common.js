@@ -383,7 +383,6 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue,requireIsTrue) {//기본 : value 
 
   if(requireIsTrue) input = scriptArea.querySelectorAll("input[type=text]:required, input[type=tel]:required,input[type=number]:required,input[type=password]:required")
   var loginBtns = scriptArea.querySelectorAll(btnClass)
-  console.log(loginBtns)
   Array.prototype.forEach.call(loginBtns, function(login, idx){
     login.disabled = true
   })
@@ -913,36 +912,6 @@ function draggableSlider (sliderWrap) {
     }
   },{passive: false})
 
-}
-
-addDragEvent()
-function addDragEvent (drags, dragItems) {
-  var draggables = document.querySelectorAll(".draggable")
-  var dragListItems =document.querySelectorAll(".draggable-list li")
-
-  Array.prototype.forEach.call(draggables, function(drag, idx){
-    drag.addEventListener("dragstart",dragStart)
-  })
-
-  Array.prototype.forEach.call(dragListItems, function(dragListItem, idx){
-    dragListItem.addEventListener("dragover", dragOver)
-    dragListItem.addEventListener("drop", dragDrop)
-    dragListItem.addEventListener("dragenter", dragEnter)
-    dragListItem.addEventListener("dragleave", dragLeave)
-  })
-
-  function dragStart () {
-    console.log("Event : drag start")
-  }
-  function dragEnter () {
-    console.log("Event : dragenter")
-  }
-  function dragOver () {
-    console.log("Event : drag over")
-  }
-  function dragDrop () {
-    console.log("Event : drag drop")
-  }
 }
 
 

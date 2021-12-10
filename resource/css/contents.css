@@ -327,7 +327,7 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .drop-menu-list .btn-member-drop .price {font-weight: bold;font-size: 16px;line-height: 23px;text-align: right;color: #02164F;}
 .drop-menu-list .btn-member-drop .unit {font-weight: 500; font-size: 15px; line-height: 22px;;}
 
-.btn-member-drop {padding:18px 20px 18px 20px; width:100%; border-radius: 6px; border: 1px solid #E4E4E4}
+.btn-member-drop {padding:18px 20px 18px 20px; width:100%; border-radius: 6px; border: 1px solid #E4E4E4; box-sizing: border-box;}
 .btn-member-drop.btn-drop-type02 {padding-right:44px}
 .btn-member-drop.btn-drop-type02:after {position:absolute; right:20px; top:50%; margin-top:-5px; width:0; height:0;border-left:7px solid transparent; border-right: 7px solid transparent; border-top: 10px solid #02164F; transition:all 1s; content:''}
 .btn-member-drop.active {border-color:#02164F;background: #F2F4F8; }
