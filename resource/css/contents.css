@@ -334,13 +334,13 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .btn-member-drop.on {color:#1D58FF;background: rgba(29, 88, 255, 0.04); border-color:#1D58FF}
 .btn-member-drop.on .price {color:#1D58FF; }
 .btn-member-drop.open:after {transform:rotate(180deg)}
-.btn-member-drop var.won:before {background-position:top 59% center}
+.btn-member-drop var.won:before {background-position:top 59% left 5px}
 .btn-member-drop dl,
 .btn-member-drop dd {display: flex; justify-content: space-between; align-self: center;}
 .btn-member-drop dt {text-align: left;}
 .btn-member-drop .company {font-weight: 500; font-size: 14px; line-height: 20px; color: #41495D;}
 .btn-member-drop .desc {display:block; margin-top:6px; font-size: 12px; line-height: 17px; color: #9A9A9A;}
-.btn-member-drop .price {float:right; font-size:bold; font-size: 18px; line-height: 26px;color: #02164F;}
+.btn-member-drop .price {float:right; font-weight:bold; font-size: 18px; line-height: 26px;color: #02164F;}
 .btn-member-drop .unit {margin-left:4px; font-weight: 500; font-size: 15px; line-height: 22px;}
 
 .service-box {margin-top:20px;}
@@ -353,6 +353,7 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .service-box .total .total-price {color: #1D58FF; font-size: 13px; line-height: 19px;}
 .service-box var.won {margin-right:4px; font-weight: bold; font-size: 20px; line-height: 29px;}
 var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF url(../images/common/ico_won.png) no-repeat left 59% top 59%; border-radius:50%; text-align:center; color:#fff; content:''}
+var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12px; font-weight:400; font-size:16px; line-height:22px; background: url(../images/common/ico_default-won.png) no-repeat left 59% top 59%; text-align:center; content:''}
 
 .btn-dark-gray {background: #A3A9BA; border-radius: 6px; color:#fff}
 .btn-dark-gray:disabled {background: #8B92A6;}
