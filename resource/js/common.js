@@ -552,9 +552,10 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   btn.addEventListener("click",function(e){
     if(e.target.classList.contains("open")) {
       menuClose ()
+      e.currentTarget.classList.add("active")
     } else {
 
-      //e.currentTarget.classList.remove("active")
+      e.currentTarget.classList.remove("active")
       menuOpen ()
       dimCreate ()
     }
