@@ -9,9 +9,12 @@
 .inp-title {font-size:20px;color:#fff}
 
 /* 폼상세 */
-.content-section.type02 {width:100%; left:0; background: #E5E5E5; min-width:auto}
+.content-section.type02 {width:100%; left:0; background: #E5E5E5; }
 .content-section.type02 .header {background:#fff}
 .content-section.type02 .cnt-box-wrap {padding:0; min-height:calc(100vh - 130px); flex-direction: column; justify-content: space-between; overflow:hidden}
+.content-section.type02 .cnt-box-side {display: flex; justify-content: space-between; overflow:hidden}
+
+
 
 .tbl-top.band {margin-bottom:0px; padding:11px 30px; background:#02164F; height:60px; box-sizing: border-box;}
 .tbl-top.band .title {font-size:18px; line-height:23px; color:#fff;}
@@ -93,6 +96,12 @@
 .inp-row .inp-select,
 .row-list .inp-select {display:inline-block; width:130px; vertical-align: middle;}
 .inp-row .inp-cal {display:inline-block; width:200px; margin-left:6px; vertical-align: middle;}
+
+.inp-row.email {align-items: center;}
+.inp-row.email .inp,
+.inp-row.email .inp-select {width:48.5%}
+.inp-row.email .txt-form {width:3%; vertical-align: middle;}
+
 .inp-select .nice-select {width:100%; height:44px; line-height:42px; padding-left:12px;}
 .inp-select .nice-select:active, .inp-select .nice-select.open, .inp-select .nice-select:focus {border-color:#E7E7E7; }
 .inp-select .nice-select .current { color:#9A9A9A}
@@ -392,6 +401,15 @@ var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12p
 
 .btn-group-wrap {display:flex;}
 .btn-group-wrap > span {flex:1}
+.btn-group-wrap.type02 , .btn-group-wrap.type03{flex-wrap: wrap;}
+.btn-group-wrap.type02 > li {width:49%; margin-bottom:9px; margin-left:1%}
+.btn-group-wrap.type03 > li {width:32%; margin-bottom:9px; margin-left:1%}
+.btn-group-wrap.type02 > li button,
+.btn-group-wrap.type03 > li button,
+.btn-group-wrap.type-col > li button {height:44px; font-weight:400; font-size: 14px; line-height: 20px; text-align: center;  color: #414C5D;}
+.btn-group-wrap.type-col {flex-direction:column; width:100%; }
+.btn-group-wrap.type-col > li button {margin-bottom:10px}
+
 .btn-line-gray {width:270px; padding:20px 10px; border: 1px solid #979EC5; box-sizing: border-box; border-radius: 6px;
   font-weight: 500; font-size: 18px; line-height: 26px; color: #7B7B7B;}
 .btn-line-gray:hover, .btn-line-gray.on {color:#02164F; border-color:#02164F;}
@@ -452,16 +470,18 @@ var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12p
 .form-temp-box .btn-ordercheck {position: absolute; right:24px; bottom:24px; z-index: 1;}
 
 .template {position: relative; padding:28px 28px 28px; width:600px; height:650px; background-color:#fff; border: 1px solid #C7C7C7; box-sizing: border-box; border-radius: 6px; }
+.template.input {padding-top:76px; }
+.template.input .info {margin-top:0}
 .template .inbox {height:100%; overflow:auto}
 .template .desc {display:block; margin-bottom:12px; font-weight:500; font-size: 12px; line-height: 17px; color: #41495D}
-.template .tx-gray {font-size: 11px; line-height: 16px; margin-bottom: 10px;}
-.template .info {margin-top: 48px;height: calc(100% - 48px);}
+.template .tx-gray {font-size: 11px; line-height: 16px; margin-bottom: 10px; color: #7B7B7B;}
+.template .info {margin-top: 48px;/*height: calc(100% - 48px);*/}
 .template.new {border: 1px dashed #C7C7C7}
 .template .btn-plus {left:50%; margin-left:-15px; }
 .template.new {background:#fff url(../images/common/ico_temp-add.png) no-repeat center}
 .temp-box.on {background-color: rgba(29, 88, 255, 0.06); border: 1px solid #1D58FF;}
 .temp-box {margin-top:8px; padding:6px; border:1px solid #fff; border-radius: 6px;}
-.temp-box .filter-title {margin-bottom:8px;}
+.temp-box .filter-title {margin-bottom:12px;}
 .template .btn-group-wrap > span {margin-left:10px;}
 .template .btn-group-wrap > span:first-child  {margin-left:0px;}
 .template .btn-group-wrap button {width:100%}
@@ -566,3 +586,24 @@ var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12p
 
 .article-wrap { font-size: 14px; line-height: 20px; color: #9A9A9A;}
 .article-wrap.border {padding:12px; height:300px; border: 1px solid #E7E7E7; box-sizing: border-box; border-radius: 6px;}
+
+.btn-link-type03 {font-weight: bold; font-size: 13px; line-height: 19px; color: #7B7B7B;}
+
+.file-box-wrap {}
+.file-row {display:flex; justify-content: space-between; font-weight: 500; font-size: 14px; line-height: 20px; color: #41495D;}
+.file-box-wrap .file-row.head {padding:14px 24px; background: #F6F6F6;  border: 1px solid #AFAFAF;  box-sizing: border-box;  border-radius: 6px 6px 0px 0px;}
+.file-box-wrap .file-row.body {padding:14px 24px; background: #FFFFFF; border-radius: 0px 0px 6px 6px;
+  border: 1px solid #AFAFAF; border-top:none}
+
+.thum-wrap {display:flex; align-items: center; padding:37px 26px; }
+.thum-img {width: 246px; height: 246px; background: #C4C4C4; border-radius: 6px;}
+.thum-img img {width:100%; height:100%; border-radius: inherit;}
+.thum-title {font-size: 16px; line-height: 23px;  color: #41495E;}
+.btn-thum-edit {width:30px; height:30px; text-indent:-9999px; background: url(../images/common/ico_round-setting.png) no-repeat center;}
+.thum-img + p {margin-top:10px; font-size: 14px; line-height: 20px; color: #7B7B7B;}
+.thum-box.right {margin-left:20px; }
+.thum-box.right .inp-line {margin:20px 0 14px; }
+.tx-info {padding-left:22px; background: url(../images/common/ico_info.png) no-repeat; font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;}

@@ -308,7 +308,7 @@ function tabFunc (tabwrap,isFullSlider,callback) {
   var wrap = document.querySelector(tabwrap)
   var tabBtn = wrap.querySelectorAll(".tab-btn")
   var slider = wrap.querySelector(".slider")
-  var tabContent = document.querySelectorAll(".content")
+  var tabContent = document.querySelectorAll(".tab-content .content")
   var offsetPos = []
 
   if(callback!= null ) callback()
@@ -360,6 +360,40 @@ function tabFunc (tabwrap,isFullSlider,callback) {
 
   })
   },300)//setTimeout
+}
+function tabBasicFunc (tabwrap,clickBtn, contentCnt,callback) {
+  var wrap = document.querySelector(tabwrap)
+  var tabBtn = wrap.querySelectorAll(clickBtn)
+  var tabContent = document.querySelectorAll(contentCnt)
+
+  if(callback!= null ) callback()
+
+
+
+
+  Array.prototype.forEach.call(tabBtn, function(tab, idx){
+    if(tab.parentNode.classList.contains("on")) {
+      if(tabContent.length > 0) tabContent[idx].classList.add("active")
+    } else {
+      if(tabContent.length > 0) tabContent[idx].classList.remove("active")
+    }
+  //클릭 이벤트
+    tab.addEventListener("click", function (e) {
+
+    Array.prototype.forEach.call(tabBtn, function(tab2, idx){
+      tab2.parentNode.classList.remove("on")
+        if(tabContent.length > 0) tabContent[idx].classList.remove("active")
+      })
+
+      var id = e.currentTarget.getAttribute("data-tab");
+      e.currentTarget.parentNode.classList.add("on")
+      if(tabContent.length > 0) document.getElementById(id).classList.add("active")
+      if(callback != null ) callback()
+
+    })
+
+
+  })
 }
 
 function accordionFunc (btnName) {
@@ -959,11 +993,10 @@ function templateFunc() {
   formRemove()
 }
 function formRemove() {
-  var template = document.querySelectorAll(".template")
+  var template = document.querySelectorAll(".template .btn-close")
   Array.prototype.forEach.call(template, function(temp, idx){
-
-    temp.querySelector(".btn-close").addEventListener("click",function(e){
-      e.currentTarget.closest(".template").parentElement.removeChild(e.currentTarget.closest(".template"))
+    temp.addEventListener("click",function(e){
+      e.currentTarget.closest(".template").parentElement.parentElement.removeChild(e.currentTarget.closest(".template").parentElement)
     })
 
   })
