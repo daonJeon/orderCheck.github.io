@@ -89,7 +89,7 @@
 
 
       <header class="tbl-top band">
-        <input type="text" value="제목 없는 신청폼" class="inp-title">
+        <input type="text" placeholder="제목 없는 신청폼" class="inp-title">
         <div class="tab-wrap">
           <ul class="tabs">
             <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>

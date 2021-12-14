@@ -348,13 +348,13 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .checkbox input.check:checked + label .box.round:before,
 .checkbox input.check:checked + label .box.round:after {background-color:#1D58FF;}
 
-.checkbox.simple .box {margin-right:12px;}
+/* .checkbox.simple .box {margin-right:12px;}
 .checkbox.simple .box:before,
 .checkbox.simple .box:after {content:unset}
-.checkbox.simple input.check:checked + label .box:before,
+/* .checkbox.simple input.check:checked + label .box:before,
 .checkbox.simple input.check:checked + label .box:after {display:block; position:absolute;background-color:#fff; transform:rotate(45deg); content:'';  }
 .checkbox.simple input.check:checked + label .box:before {width:2px; height:11px; top:3px; left:9px; }
-.checkbox.simple input.check:checked + label .box:after {width:4px; height:2px; top:9px; left:3px;}
+.checkbox.simple input.check:checked + label .box:after {width:4px; height:2px; top:9px; left:3px;} */ */
 
 .checkbox .btn-link {margin-left:6px; }
 

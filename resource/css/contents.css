@@ -6,7 +6,12 @@
 .content-section .header {height:70px; padding:0 30px; }
 
 
-.inp-title {font-size:20px;color:#fff}
+.inp-title {height:44px;font-weight: bold; font-size: 16px; line-height: 23px; color: #FFFFFF;}
+.inp-title:focus {border: 1px solid #8B94AE;border-radius: 6px;}
+
+.inp-title::placeholder { color: rgba(255, 255, 255, 0.7);}
+.inp-title::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.7);}
+.inp-title:-ms-input-placeholder { color: rgba(255, 255, 255, 0.7);}
 
 /* 폼상세 */
 .content-section.type02,
@@ -20,7 +25,7 @@
 
 
 
-.tbl-top.band {margin-bottom:0px; padding:11px 30px; background:#02164F; height:60px; box-sizing: border-box;}
+.tbl-top.band {margin-bottom:0px; padding:8px 30px; background:#02164F; height:60px; box-sizing: border-box;}
 .tbl-top.band .title {font-size:18px; line-height:23px; color:#fff;}
 .tbl-top.band .tabs {margin-top:6px; border-bottom:none}
 
@@ -630,12 +635,12 @@ button.box.active {border-color:#02164F}
 
 .btn-link-type03 {font-weight: 700; font-size: 13px; line-height: 19px; color: #7B7B7B;}
 
-.file-box-wrap {}
-.file-row {display:flex; justify-content: space-between; font-weight: 500; font-size: 14px; line-height: 20px; color: #41495D;}
+/* 파일 첨부 */
+.file-row, .file-row.body > li {display:flex; width:100%; justify-content: space-between; font-weight: 500; font-size: 14px; line-height: 20px; color: #41495D;}
 .file-box-wrap .file-row.head {padding:14px 24px; background: #F6F6F6;  border: 1px solid #AFAFAF;  box-sizing: border-box;  border-radius: 6px 6px 0px 0px;}
-.file-box-wrap .file-row.body {padding:14px 24px; background: #FFFFFF; border-radius: 0px 0px 6px 6px;
-  border: 1px solid #AFAFAF; border-top:none}
-
+.file-box-wrap .file-row.body {width:100%; flex-direction: column;padding:0 24px; background: #FFFFFF; border-radius: 0px 0px 6px 6px; border: 1px solid #AFAFAF; border-top:none; box-sizing: border-box;}
+.file-row.body > li {padding:14px 0;}
+.file-row.body > li + li {border-top:1px solid #EFEFEF;;}
 /* 썸네일 */
 .flexbox {display:flex; }
 .flexbox.top {align-items: flex-start;}
