@@ -92,9 +92,9 @@
         <input type="text" value="제목 없는 신청폼" class="inp-title">
         <div class="tab-wrap">
           <ul class="tabs">
-            <li class="on"><a href="../html/form_detail1.html" class="tab-btn">편집하기</a></li>
-            <li><a href="../html/form_share.html" class="tab-btn active">공유하기</a></li>
-            <li><a href="../html/form_setting.html" class="tab-btn">설정</a></li>
+            <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>
+            <li><button type="button" class="tab-btn">공유하기</button></li>
+            <li><button type="button" class="tab-btn">설정</button></li>
           </ul>
           <span class="slider" data-left="0"></span>
         </div>
@@ -254,49 +254,25 @@
                         <ul class="info">
                           <li>
                             <div class="inp">
-                              <input type="text" name="" id="" value="신청인 정보 (1/6)" readonly>
+                              <input type="text" name="" id="" value="시공 선택(1/5)" readonly>
                             </div>
                             <div class="inp">
-                              <input type="text" name="" id="" value="신청인 정보를 입력해주세요." readonly>
+                              <input type="text" name="" id="" value="희망하시는 시공을 모두 선택해주세요." readonly>
                             </div>
                           </li>
                           <li class="temp-box">
-                            <p class="filter-title tx-imp">성함</p>
-                            <div class="inp">
-                              <input type="text" name="" id="" placeholder="성함">
-                            </div>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title tx-imp">연락처</p>
-                            <div class="inp">
-                              <input type="text" name="" id="" placeholder="010-1234-5678 (‘-’ 없이 숫자 입력)">
-                            </div>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">이메일</p>
-                            <div class="inp-row email">
-                              <div class="inp">
-                                <input type="text" name="" id="" class="cal" placeholder="이메일">
-                              </div>
-                              <span class="txt-form">@</span>
-                              <!-- select -->
-                              <div class="inp-select">
-                              <select name="areaType" >
-                                <option value="default" disabled selected>도메인 선택</option>
-                                <option value="naver">naver</option>
-                                <option value="naver">naver</option>
-                              </select>
-                            </div>
-
-                            </div>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">신청 경로</p>
-                            <ul class="btn-group-wrap type02">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">블로그</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">인스타</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">지인 소개</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">매스컴(잡지, TV등)</span></button></li>
+                            <p class="filter-title tx-imp">시공 선택</p>
+                            <p class="sub-txt tx-gray">복수 선택 기능</p>
+                            <ul class="btn-group-wrap type03">
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">주방</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">욕실</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">도어</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">필름</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">도배</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">마루</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">장판</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">철거</span></button></li>
                             </ul>
                           </li>
                         </ul>
@@ -328,10 +304,10 @@
                         <ul class="info">
                           <li>
                             <div class="inp">
-                              <input type="text" name="" id="" value="시공지 정보 (2/6)" readonly>
+                              <input type="text" name="" id="" value="시공 선택(2/5)" readonly>
                             </div>
                             <div class="inp">
-                              <input type="text" name="" id="" value="입력해주신 정보는 도면과 평수를 확인하고 견적을 안내드리는데 이용됩니다."  readonly>
+                              <input type="text" name="" id=""  value="입력해주신 정보는 도면과 평수를 확인하고 견적을 안내드리는데 이용됩니다."  readonly>
                             </div>
                           </li>
                           <li class="temp-box">
@@ -347,79 +323,24 @@
                             <p class="filter-title tx-imp">시공 선택</p>
                             <ul class="btn-group-wrap type02">
                               <li><button type="button" class="btn-m btn-gray-line"><span class="txt">아파트</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">주상복합</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">단독주택</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">빌라</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">카페</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">사무실</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">학원</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">병원</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">식당</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">미용실</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">기타</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">단독주택/빌라</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">오피스텔/주상복합</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">상가</span></button></li>
                             </ul>
                           </li>
                           <li class="temp-box">
-                            <p class="filter-title tx-imp">시공지 평형</p>
+                            <p class="filter-title tx-imp">시공 평형</p>
                             <div class="inp">
-                              <input type="text" name="" id="">
-                              <span class="unit">평</span>
+                              <input type="text" name="" id="" placeholder="상세주소 입력">
+                              <span class="unit">원</span>
                             </div>
                           </li>
                           <li class="temp-box">
-                            <p class="filter-title tx-imp">방 개수</p>
-                            <div class="inp">
-                              <input type="text" name="" id="">
-                              <span class="unit">개</span>
-                            </div>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title tx-imp">욕실 개수</p>
-                            <div class="inp">
-                              <input type="text" name="" id="">
-                              <span class="unit">개</span>
-                            </div>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title tx-imp">준공 연도</p>
+                            <p class="filter-title tx-imp">엘레베이터 유무</p>
                             <ul class="btn-group-wrap type02">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">10년 미만</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">10년 이상 ~ 20년 미만</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">20년 이상 ~ 30년 미만</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">30년 이상</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">엘레베이터 있음</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">엘레베이터 없음</span></button></li>
                             </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">평면도 첨부</p>
-                            <!-- 파일 -->
-                            <div class="tbl-top">
-                              <button type="button" class="btn-link-type03"><span>삭제하기</span></button>
-                              <div class="inp-line">
-                                <span class="inp filebox">
-                                  <input type="file" name="" id="file1" placeholder="파일 검색">
-                                  <button type="button" class="pos btn-remove"><span class="txt hide">내용삭제</span></button>
-                                </span>
-                                <label for="file1" class="btn-m btn-bk-line"><span>파일 찾기</span></label>
-                              </div>
-
-                            </div>
-                            <div class="file-box-wrap">
-                              <div class="file-row head">
-                                <div class="checkbox simple">
-                                  <input type="checkbox" name="fileSelect" id="fileSelect01" class="check">
-                                  <label for="fileSelect01"><span class="box"></span><span class="">파일 명</span></label>
-                                </div>
-                                <span class="txt">파일 크기</span>
-                              </div>
-                              <div class="file-row body">
-                                <div class="checkbox simple">
-                                  <input type="checkbox" name="fileSelect" id="fileSelect02" class="check">
-                                  <label for="fileSelect02"><span class="box"></span><span class="">파일 명</span></label>
-                                </div>
-                                <span class="txt">파일 크기</span>
-                              </div>
-                            </div>
-                            <!-- //파일 -->
                           </li>
                         </ul>
                         <div class="dropdown-wrap type03 scroll">
@@ -450,7 +371,7 @@
                         <ul class="info">
                           <li>
                             <div class="inp">
-                              <input type="text" name="" id="" value="시공 일정 (3/6)" readonly>
+                              <input type="text" name="" id="" value="시공 일정 (3/5)" readonly>
                             </div>
                             <div class="inp">
                               <input type="text" name="" id="" value="시공을 희망하시는 날짜를 선택해주세요."  readonly>
@@ -459,13 +380,13 @@
                           <li class="temp-box">
                             <p class="filter-title tx-imp">시공 희망일</p>
                             <div class="inp inp-cal">
-                              <input type="text" name="date_build" id="" value="2021.10.30" >
+                              <input type="text" name="" id="" value="2021.10.30" >
                             </div>
                           </li>
                           <li class="temp-box">
                             <p class="filter-title tx-imp">입주 예정일</p>
                             <div class="inp inp-cal">
-                              <input type="text" name="date_moving" id="" value="2021.10.30" >
+                              <input type="text" name="" id="" value="2021.10.30" >
                             </div>
                           </li>
                         </ul>
@@ -497,7 +418,7 @@
                         <ul class="info">
                           <li>
                             <div class="inp">
-                              <input type="text" name="" id="" value="인테리어 예산 (4/6)" readonly>
+                              <input type="text" name="" id="" value="인테리어 예산 (4/5)" readonly>
                             </div>
                             <div class="inp">
                               <input type="text" name="" id="" value="선택하신 예산은 공사규모와 방향을 결정하는 중요한 요소입니다." readonly>
@@ -505,11 +426,17 @@
                           </li>
                           <li class="temp-box">
                             <p class="filter-title tx-imp">인테리어 예산</p>
-                            <ul class="btn-group-wrap type02">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">4천만 원 미만</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">4천만 원 이상 ~ 8천만 원 미만</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">8천만 원 이상 ~ 1억 2천만 원 미만</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">1억 2천만 원 이상</span></button></li>
+                            <ul class="btn-group-wrap type03">
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">1,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">2,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">3,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">4,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">5,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">6,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">7,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">8,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">9,000 만원</span></button></li>
+                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">1억원 이상</span></button></li>
                             </ul>
                           </li>
                         </ul>
@@ -535,272 +462,28 @@
                     </article>
                     <p class="page">page1</p>
                   </li>
-
                   <li>
                     <article class="template input">
                       <div class="inbox">
                         <ul class="info">
                           <li>
                             <div class="inp">
-                              <input type="text" name="" id="" value="시공 선택 (5/6)" readonly>
+                              <input type="text" name="" id="" value="신청인 정보 (5/5)" readonly>
                             </div>
                             <div class="inp">
-                              <input type="text" name="" id="" value="희망하시는 시공을 모두 선택해주세요."  readonly>
+                              <input type="text" name="" id="" value="신청인 정보를 입력해주세요."  readonly>
                             </div>
                           </li>
                           <li class="temp-box">
-                            <p class="filter-title">철거</p>
-                            <ul class="btn-group-wrap type-col">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">전체철거(확장+마감재+가구+욕실 등 전체)</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">부분철거(확장x)</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">확장</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">거실</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">주방</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">방</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">샷시</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">전체 내/외창 교체</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">부분 교체</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">창틀 필름</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">목공</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">천장몰딩/걸레받이</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">중문</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">문/문틀</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">파티션</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">천정등박스</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">도장</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type02">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">친환경 페인트</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">락카 페인트</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">발코니 탄성코트</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">발코니 수성페인트</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">도배</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">전체 실크</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">전체 합지</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">실크+합지</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">욕실</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">일반형</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">중급형</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">고급형</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">욕실 옵션</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">젠다이 설치</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">욕조</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">샤워부스</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">샤워파티션</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">해바라기 샤워기</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">하부장 세면대</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">바닥</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">강마루</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">강화마루</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">온돌마루</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">장판</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">원목마루</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">타일</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">타일</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">현관</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">다용도실</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">발코니</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">전기 및 조명</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">전기 배선</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">인터폰 교체</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">콘센트/스위치 커버 교체</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">조명 기구 교체</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">랜선</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">TV</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">주방</p>
-                            <ul class="btn-group-wrap type02">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">제작가구</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">브랜드(한샘,리바트 등)</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">주방 옵션</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">상부장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">하부장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">아일랜드</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">냉장고장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">키큰장</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">가구</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">신발장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">붙박이장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">창고수납장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">TV장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">월플렉스</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">설비</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">수도배관</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">난방공사</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">에어컨배관</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">필름</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type02">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">기존 가구(붙박이장,화장대,신발장)</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">기존 주방가구</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">기존 도어</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">현관 방화문</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">아트월</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">월플러스</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">타일</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">대리석</span></button></li>
-                            </ul>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">기타</p>
-                            <p class="tx-gray">복수 선택 가능</p>
-                            <ul class="btn-group-wrap type03">
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">문턱 제거 후 미장</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">빨래 건조대 </span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">커튼/블라인드</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">방문 손잡이</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">도어락 교체</span></button></li>
-                              <li><button type="button" class="btn-m btn-gray-line"><span class="txt">입주 청소</span></button></li>
-                            </ul>
-                          </li>
-
-                        </ul>
-                        <div class="dropdown-wrap type03 scroll">
-                          <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
-                          <div class="dropdown-box">
-                            <h2 class="drop-title">질문 유형 선택</h2>
-                            <ul>
-                              <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
-                              <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
-                              <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
-                              <li><a href="#" class="btn-drop-menu location">주소</a></li>
-                              <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
-                              <li><a href="#" class="btn-drop-menu email">이메일</a></li>
-                              <li><a href="#" class="btn-drop-menu file">파일</a></li>
-                              <li><a href="#" class="btn-drop-menu agree">동의</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
-                    </article>
-                    <p class="page">page2</p>
-                  </li>
-
-                  <li>
-                    <article class="template input">
-                      <div class="inbox">
-                        <ul class="info">
-                          <li>
+                            <p class="filter-title tx-imp">성함</p>
                             <div class="inp">
-                              <input type="text" name="" id="" value="상담 접수 (6/6)" readonly>
-                            </div>
-                            <div class="inp">
-                              <input type="text" name="" id="" value="추가 전달하시고 싶은 내용을 남겨주세요." readonly>
+                              <input type="text" name="" id="" placeholder="성함" >
                             </div>
                           </li>
                           <li class="temp-box">
-                            <p class="filter-title">희망 컨셉 첨부</p>
-                            <!-- 파일 -->
-                            <div class="tbl-top">
-                              <button type="button" class="btn-link-type03"><span>삭제하기</span></button>
-                              <div class="inp-line">
-                                <span class="inp filebox">
-                                  <input type="file" name="" id="file1" placeholder="파일 검색">
-                                  <button type="button" class="pos btn-remove"><span class="txt hide">내용삭제</span></button>
-                                </span>
-                                <label for="file1" class="btn-m btn-bk-line"><span>파일 찾기</span></label>
-                              </div>
-                            </div>
-                            <div class="file-box-wrap">
-                              <div class="file-row head">
-                                <div class="checkbox simple">
-                                  <input type="checkbox" name="fileSelect" id="fileSelect03" class="check"/>
-                                  <label for="fileSelect03"><span class="box"></span><span class="">파일 명</span></label>
-                                </div>
-                                <span class="txt">파일 크기</span>
-                              </div>
-                              <div class="file-row body">
-                                <div class="checkbox simple">
-                                  <input type="checkbox" name="fileSelect" id="fileSelect04" class="check"/>
-                                  <label for="fileSelect04"><span class="box"></span><span class="">txt</span></label>
-                                </div>
-                                <span class="txt">30MB</span>
-                              </div>
-                            </div>
-                            <!-- //파일 -->
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">연락 가능 시간</p>
+                            <p class="filter-title tx-imp">연락처</p>
                             <div class="inp">
-                              <input type="text" name="" id="" placeholder="연락이 가능한 시간 또는 어려운 시간을 남겨주세요" >
-                            </div>
-                          </li>
-                          <li class="temp-box">
-                            <p class="filter-title">기타 문의</p>
-                            <div class="inp">
-                              <input type="text" name="" id="" placeholder="문의 사항을 남겨주세요. (100자 이내)" >
+                              <input type="text" name="" id="" placeholder="010-1234-5678 (‘-’ 없이 숫자 입력)" >
                             </div>
                           </li>
                           <li class="temp-box">
@@ -810,7 +493,6 @@
                               <button type="button" class="btn-link"><span>보기</span></button>
                             </span>
                           </li>
-
                         </ul>
                         <div class="dropdown-wrap type03 scroll">
                           <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
@@ -832,7 +514,233 @@
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
                       <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
-                    <p class="page">page1</p>
+                    <p class="page">page2</p>
+                  </li>
+
+                  <li>
+                    <article class="template input">
+                      <div class="inbox">
+                        <ul class="info">
+                          <li>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="페이지 제목" value="">
+                            </div>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">고객명</p>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="고객명" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">연락처</p>
+                            <div class="inp">
+                              <input type="tel" name="" id="" placeholder="010-1234-5678 (‘-’ 없이 숫자 입력)" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">주소</p>
+                            <div class="inp">
+                               <input type="text" name="" placeholder="지번, 도로명, 건물명으로 검색">
+                            </div>
+                            <div class="inp">
+                              <input type="text" name="" placeholder="상세주소">
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dropdown-wrap type03 scroll">
+                          <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                          <div class="dropdown-box">
+                            <h2 class="drop-title">질문 유형 선택</h2>
+                            <ul>
+                              <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                              <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                              <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                              <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                              <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                              <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                              <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                              <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
+                    </article>
+                    <p class="page">page3</p>
+                  </li>
+                  <li>
+                    <article class="template input">
+                      <div class="inbox">
+                        <ul class="info">
+                          <li>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="페이지 제목" value="">
+                            </div>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">고객명</p>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="고객명" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">연락처</p>
+                            <div class="inp">
+                              <input type="tel" name="" id="" placeholder="010-1234-5678 (‘-’ 없이 숫자 입력)" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">주소</p>
+                            <div class="inp">
+                               <input type="text" name="" placeholder="지번, 도로명, 건물명으로 검색">
+                            </div>
+                            <div class="inp">
+                              <input type="text" name="" placeholder="상세주소">
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="dropdown-wrap type03 scroll">
+                          <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                          <div class="dropdown-box">
+                            <h2 class="drop-title">질문 유형 선택</h2>
+                            <ul>
+                              <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                              <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                              <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                              <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                              <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                              <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                              <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                              <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
+                    </article>
+                    <p class="page">page2</p>
+                  </li>
+                  <li>
+                    <article class="template input">
+                      <div class="inbox">
+                        <div class="top-temp-box">
+                          <h2 class="title"><span class="txt">시공 선택</span><span class="state">(1/5)</span></h2>
+                          <p class="tx-gray sm">희망하시는 시공을 모두 선택해주세요. 시공 개수에 따라 상담 시간이 길어질 수 있습니다.</p>
+                        </div>
+
+                        <div class="temp-inp-box">
+                          <ul class="info">
+                            <li>
+                              <div class="inp">
+                                <input type="text" name="" id="" placeholder="페이지 제목" value="">
+                              </div>
+                            </li>
+                            <li>
+                              <div class="inp">
+                                <input type="text" name="" id="" placeholder="부연설명 입력 (선택)" value="">
+                              </div>
+                            </li>
+                            <li>
+                              <button type="button" class="list-cnt"><span><var>선택지 입력</var></span></button>
+                            </li>
+                            <li>
+                              <button type="button" class="btn btn-bk-line"><span>+옵션 추가</span></button>
+                            </li>
+                          </ul>
+                          <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
+                        </div>
+                        <div class="dropdown-wrap type03 scroll">
+                          <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                          <div class="dropdown-box">
+                            <h2 class="drop-title">질문 유형 선택</h2>
+                            <ul>
+                              <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                              <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                              <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                              <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                              <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                              <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                              <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                              <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
+                    </article>
+                    <p class="page">page2</p>
+                  </li>
+                  <li>
+                    <article class="template input">
+                      <div class="inbox">
+                        <ul class="info">
+                          <li>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="페이지 제목" value="">
+                            </div>
+                            <div class="inp">
+                              <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">질문 예시 텍스트입니다.</p>
+                            <p class="desc">부연설명 예시 텍스트입니다.</p>
+                            <p class="tx-gray">복수 선택 가능 문구 예시 텍스트입니다</p>
+                            <div class="btn-group-wrap">
+                              <span><button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button></span>
+                              <span><button type="button" class="btn-m btn-gray-line"><span class="txt">주방</span></button></span>
+                              <span><button type="button" class="btn-m btn-gray-line"><span class="txt">욕실</span></button></span>
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">질문 예시 텍스트입니다.</p>
+                            <p class="tx-gray">복수 선택 가능 문구 예시 텍스트입니다</p>
+                            <div class="btn-group-wrap">
+                              <span><button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button></span>
+                              <span><button type="button" class="btn-m btn-gray-line"><span class="txt">주방</span></button></span>
+                            </div>
+                          </li>
+                          <li class="temp-box">
+                            <p class="filter-title">질문 예시 텍스트입니다.</p>
+                            <div class="btn-group-wrap">
+                              <button type="button" class="btn-m btn-gray-line"><span class="txt">창호</span></button>
+                            </div>
+                          </li>
+
+                        </ul>
+                        <div class="dropdown-wrap type03 scroll">
+                          <button type="button" class="btn-drop btn-plus"><span class="txt hide">메뉴 선택</span></button>
+                          <div class="dropdown-box">
+                            <h2 class="drop-title">질문 유형 선택</h2>
+                            <ul>
+                              <li><a href="#" class="btn-drop-menu choice">선택형</a></li>
+                              <li><a href="#" class="btn-drop-menu chat">단답형</a></li>
+                              <li><a href="#" class="btn-drop-menu tel">연락처</a></li>
+                              <li><a href="#" class="btn-drop-menu location">주소</a></li>
+                              <li><a href="#" class="btn-drop-menu calendar">날짜</a></li>
+                              <li><a href="#" class="btn-drop-menu email">이메일</a></li>
+                              <li><a href="#" class="btn-drop-menu file">파일</a></li>
+                              <li><a href="#" class="btn-drop-menu agree">동의</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
+                    </article>
+                    <p class="page">page3</p>
                   </li>
                   <li>
                     <button type="button" class="template new"><span class="hide">새로운 템플릿</span></button>
@@ -906,10 +814,17 @@
     }
     //레이어
     layerFunc (".open-layer")
-    clickAddClassFunc("#layer-type-preview .btn-group-wrap .btn-l","#layer-type-preview .btn-group-wrap .btn-l","on",null, true)
+    formSideFunc(".btn-form-arrow",".side-form")
+    inpEmptyFunc(".inp-title")
+    clickAddClassFunc (".list-cnt",".list-cnt","on")
+    templateFunc ()
 
-    templateFunc()
-    templateSideFunc()
+    clickAddClassFunc("#layer-type-preview .btn-group-wrap .btn-l","#layer-type-preview .btn-group-wrap .btn-l","on",null, true)
+    //추천 질문 목록 - 복수 선택 가능
+    clickAddClassFunc (".template .btn-group-wrap button",".template .btn-group-wrap button","on")
+    clickAddClassFunc (".side-form .btm .slider-drop",".side-form .btm","open")
+    //오더 체크 온/오프
+    orderCheckOnOff (".switch #ordercheck",".template .btn-ordercheck")
 
     // 레이어 팝업 - 한개만
     $('.inp-select select').niceSelect();
@@ -921,45 +836,6 @@
     }
     alertBtn.addEventListener('click', function(){
       layerConfirm(confirmCallback, '', '게시하시겠습니까?', '취소', '확인');
-    });
-
-    // date picker
-    $('input[name="date_build"]').daterangepicker({
-      locale: {                    // 시작일시와 종료일시 구분자
-      "format": 'YYYY.MM.DD',     // 일시 노출 포맷
-      "applyLabel": "확인",       // 확인 버튼 텍스트
-      "cancelLabel": "초기화",    // 취소 버튼 텍스트
-      "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-      },
-      opens: 'center',
-      timePicker: false,
-      singleDatePicker: true,
-      buttonClasses: "btn",
-      applyButtonClasses: "btn-bk",
-      cancelButtonClasses:"btn-bk-line btn-reset hide"
-    }, function(start, end, label) {
-      //선택 후 액션
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-    });
-    // date picker
-    $('input[name="date_moving"]').daterangepicker({
-      locale: {                    // 시작일시와 종료일시 구분자
-      "format": 'YYYY.MM.DD',     // 일시 노출 포맷
-      "applyLabel": "확인",       // 확인 버튼 텍스트
-      "cancelLabel": "초기화",    // 취소 버튼 텍스트
-      "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-      },
-      opens: 'center',
-      timePicker: false,
-      singleDatePicker: true,
-      buttonClasses: "btn",
-      applyButtonClasses: "btn-bk",
-      cancelButtonClasses:"btn-bk-line btn-reset hide"
-    }, function(start, end, label) {
-      //선택 후 액션
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
   </script>
 </body>

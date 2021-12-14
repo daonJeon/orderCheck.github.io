@@ -256,7 +256,7 @@
                             <div class="inp">
                               <input type="text" name="" id="" placeholder="시공 선택(1/5)" value="시공 선택(1/5)" readonly>
                             </div>
-                            <div class="inp" style="margin-top:8px">
+                            <div class="inp">
                               <input type="text" name="" id="" placeholder="희망하시는 시공을 모두 선택해주세요." value="희망하시는 시공을 모두 선택해주세요." readonly>
                             </div>
                           </li>
@@ -294,7 +294,7 @@
                         </div>
                       </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page1</p>
                   </li>
@@ -306,7 +306,7 @@
                             <div class="inp">
                               <input type="text" name="" id="" placeholder="시공 선택(2/5)" value="시공 선택(2/5)" readonly>
                             </div>
-                            <div class="inp" style="margin-top:8px">
+                            <div class="inp">
                               <input type="text" name="" id="" placeholder="입력해주신 정보는 도면과 평수를 확인하고 견적을 안내드리는데 이용됩니다." value="입력해주신 정보는 도면과 평수를 확인하고 견적을 안내드리는데 이용됩니다."  readonly>
                             </div>
                           </li>
@@ -315,7 +315,7 @@
                             <div class="inp">
                               <input type="text" name="" id="" placeholder="지번, 도로명, 건물명으로 검색" >
                             </div>
-                            <div class="inp" style="margin-top:8px">
+                            <div class="inp">
                               <input type="text" name="" id="" placeholder="상세주소 입력">
                             </div>
                           </li>
@@ -361,7 +361,7 @@
                         </div>
                       </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page2</p>
                   </li>
@@ -373,7 +373,7 @@
                             <div class="inp">
                               <input type="text" name="" id="" placeholder="페이지 제목" value="">
                             </div>
-                            <div class="inp" style="margin-top:8px">
+                            <div class="inp">
                               <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
                             </div>
                           </li>
@@ -417,7 +417,7 @@
                         </div>
                       </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page2</p>
                   </li>
@@ -469,7 +469,7 @@
                       </div>
 
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page2</p>
                   </li>
@@ -481,7 +481,7 @@
                             <div class="inp">
                               <input type="text" name="" id="" placeholder="페이지 제목" value="">
                             </div>
-                            <div class="inp" style="margin-top:8px">
+                            <div class="inp">
                               <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
                             </div>
                           </li>
@@ -530,7 +530,7 @@
                       </div>
 
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page3</p>
                   </li>

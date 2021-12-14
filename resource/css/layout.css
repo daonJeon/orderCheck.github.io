@@ -100,7 +100,7 @@ button:disabled {cursor:default}
 .btn-bk > i {margin-right:4px; vertical-align: -2px;}
 .btn-bk:disabled {background-color: #A3A9BA;}
 .btn-manager-add {text-align:left; padding:12px; width: 130px;height: 44px; background: #E1E5EF; border-radius: 6px;font-weight: bold; font-size: 14px; line-height: 20px; color: #02164F;}
-.btn-link {font-weight: bold; font-size: 13px; line-height: 19px;  text-decoration-line: underline;color:#7B7B7B;}
+.btn-link {font-weight: bold; font-size: 13px; line-height: 19px;  text-decoration: underline;color:#7B7B7B;}
 .btn-group button,
 .btn-group a {width:100%}
 .layer-btn button {margin-left:8px}
@@ -148,10 +148,22 @@ div.switch.no-txt {display: block;}
 .switch.no-txt input:focus + .slider {box-shadow:0 0 1px #02164F;}
 .switch.no-txt input:checked + .slider:before {-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px);}
 .switch.no-txt input:checked + .slider:after {content:''}
-
 /* Rounded sliders */
 .switch .slider.round {border-radius:34px;}
 .switch .slider.round:before {border-radius:50%;}
+
+.switch.mode {margin:20px auto 0; width:176px; height:50px;}
+.switch.mode .slider {background-color: #02164F;}
+.switch.mode .slider > span {position:absolute; top:12px; font-weight: 500; font-size: 18px; line-height: 26px; color:#fff;}
+.switch.mode .slider > .unchecked {left:37px; color:#414C5D;}
+.switch.mode .slider > .checked {right:22px}
+.switch.mode .slider .unchecked {opacity: 1;}
+.switch.mode input:checked + .slider .checked {opacity: 1; color:#414C5D;}
+.switch.mode input:checked + .slider .unchecked {opacity: 1; color:#fff;}
+.switch.mode .slider:before {width:84px; height:42px; border-radius: 30px;}
+.switch.mode .slider:after,
+.switch.mode input:checked + .slider:after {content:''}
+.switch.mode input:checked + .slider:before {-webkit-transform:translateX(84px);-ms-transform:translateX(84px);transform:translateX(84px);}
 
 /* title */
 .page-top .title,
@@ -255,7 +267,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .btn-form-menu > span {text-indent: -9999px; display:inline-block;}
 
 
-.btn-ordercheck {width: 160px; height: 51px;background: #1D58FF url(../images/common/ico_mark-txt.png) no-repeat center; box-shadow: 0px 4px 12px rgba(29, 88, 255, 0.46); border-radius: 40px;}
+.badge-ordercheck {width: 160px; height: 51px;background: #1D58FF url(../images/common/ico_mark-txt.png) no-repeat center; box-shadow: 0px 4px 12px rgba(29, 88, 255, 0.46); border-radius: 40px;}
 .btn-remove {width:20px; height:20px; background: url(../images/common/ico_remove.png) no-repeat center;}
 /* paging */
 .paging {margin:20px 0; text-align:center}
@@ -285,12 +297,12 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== Tab =====*/
 .tab-wrap {position:relative;}
 .tabs {display:flex; justify-content:start; border-bottom:1px solid #e6e6e6}
-.tabs li button {padding-bottom:8px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
+.tabs li .tab-btn {display:inline-block; padding-bottom:8px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
+.tabs li.on .tab-btn {font-weight: bold; color: #02164F;}
 .tabs li + li {margin-left:34px}
-.tabs li.on button {font-weight: bold; color: #02164F;}
 .tab-wrap .slider {display:block; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
 .tabs li.on var {display:inline-block; margin-left:2px}
-
+.tbl-top.band .tabs li .tab-btn {color:#fff}
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
@@ -304,6 +316,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .inp input::placeholder {color:#9A9A9A}
 .inp input::-webkit-input-placeholder {color: #9A9A9A;}
 .inp input:-ms-input-placeholder { color: #9A9A9A;}
+
+.inp.sm input {width:80px;}
+
 .inp.inp-cal input::placeholder {color:#414C5D}
 .inp.inp-cal input::-webkit-input-placeholder {color: #414C5D;}
 .inp.inp-cal input:-ms-input-placeholder { color: #414C5D;}
@@ -333,17 +348,23 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .checkbox input.check:checked + label .box.round:before,
 .checkbox input.check:checked + label .box.round:after {background-color:#1D58FF;}
 
+.checkbox.simple .box {margin-right:12px;}
+.checkbox.simple .box:before,
+.checkbox.simple .box:after {content:unset}
 .checkbox.simple input.check:checked + label .box:before,
-.checkbox.simple input.check:checked + label .box:after {display:block; position:absolute;background-color:#1D58FF; transform:rotate(45deg); content:'';  }
+.checkbox.simple input.check:checked + label .box:after {display:block; position:absolute;background-color:#fff; transform:rotate(45deg); content:'';  }
 .checkbox.simple input.check:checked + label .box:before {width:2px; height:11px; top:3px; left:9px; }
 .checkbox.simple input.check:checked + label .box:after {width:4px; height:2px; top:9px; left:3px;}
+
+.checkbox .btn-link {margin-left:6px; }
+
 /*===== radio =====*/
 .inp-radio {position:relative;}
-.inp-radio input.radio {position:relative; display:inline-block; vertical-align: middle;
+.inp-radio input.radio {position:relative;margin:0 6px 0 0; display:inline-block; vertical-align: middle;
 width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .inp-radio input.radio:checked::after {position:absolute; width:12px; height:12px; top:50%; left:50%; margin-left:-6px; margin-top:-6px; border-radius: 50%; background-color:#02164F; content:''}
 .inp-radio input.radio + label {vertical-align:middle;}
-
+.inp-radio + .inp-radio {margin-left:20px}
 
 /*===== layer =====*/
 .layer-pop {display:none; width: 100%;height: 100%;position: fixed;left: 0;top: 0; background:rgba(0,0,0,.3);z-index: 100;}
@@ -353,6 +374,8 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .layer-top .title-box h2 {border-bottom:1px solid rgba(0,0,0,0.03);}
 .layer-top .title .tx-gray {margin-top:3px; display:block; font-size: 12px; font-weight: 400; line-height: 17px; color: #7B7B7B;}
 .layer-cnt .info-txt {line-height:16px;font-size:13px;color:#959595}
+.layer-cnt .layer-btn {margin-top:26px;}
+
 #layer-manager-set .layer-cnt,
 .layer-pop.confirm .layer-cnt,
 .layer-pop.alert .layer-cnt {width:600px}
@@ -372,6 +395,8 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .layer-pop.type02 .revise-box .filter-title {margin-bottom:33px;}
 .layer-pop.type02 .textarea {height:300px}
 
+#layer-guide-white-label .layer-cnt {width:1100px;}
+#layer-guide-white-label .layer-mid {max-height:675px; overflow-x:hidden}
 /* location */
 .location-wrap {display:flex;padding:0 33px;}
 .location-wrap > li {color:#555868;}
@@ -394,7 +419,7 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 .sidebar,
 .side-form {   top: 0;  height: 100%;   z-index: 99;  transition: all 0.5s ease;}
 
-.sidebar {position: fixed; width: 50px;  left: 0; background: #02164F;  padding: 6px 16px;  }
+.sidebar {position: fixed; width: 50px; height:100%; left: 0; background: #02164F;  padding: 6px 16px;  }
 .sidebar.open {  width: 218px;}
 .sidebar .logo-details { height: 60px;  display: flex;  align-items: center;  position: relative;}
 .sidebar .logo-details .ico {  opacity: 0;  transition: all 0.5s ease;}
@@ -546,7 +571,7 @@ width:calc(100% - 40px); font-size:14px;}
 
 /* btn-link-type02 */
 .btn-link-type02 .txt {position: relative; padding-right:30px;}
-.btn-link-type02 .txt:after {display:block; margin-top:-15px; position:absolute; top:50%; right:0px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; background-size:60%; transform:rotate(-90deg); color:#7b7b7b; content:''}
+.btn-link-type02 .txt:after {display:block; margin-top:-14px; position:absolute; top:50%; right:0px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; background-size:60%; transform:rotate(-90deg); color:#7b7b7b; content:''}
 
 .tbl-top-type02 {margin-bottom:30px; text-align: center;}
 .login-wrap .tab-wrap {width: 175px; margin:0 auto 20px}
@@ -571,18 +596,32 @@ width:calc(100% - 40px); font-size:14px;}
 .left-bar-style,
 .right-bar-style {height:calc(100vh - 130px); background-color: #fff;}
 .left-bar-style {width: 300px; border-right:1px solid  #E3E3E3;}
-.right-bar-style {padding:18px 26px; width: 1620px;}
+.right-bar-style {padding:18px 26px 30px; width: 1620px; box-sizing: border-box;}
 .left-bar-style .tabs {flex-wrap:wrap; border-bottom:none}
 .left-bar-style .tabs li {position:relative; width:100%; margin-left:0}
 .left-bar-style .tabs li + li:before {position:absolute; top:0 ; left:0; right:0; margin:0 auto; width:240px; height:1px; background-color:#E3E3E3; content:''}
 .left-bar-style .tabs li button {width:100%; text-align: left; padding:19px 31px 19px 61px}
+.right-bar-style .tab-content02 {height:calc(100% - 136px)}
+.right-bar-style .content,
+.right-bar-style .manager-box {height:100%; }
 .right-bar-style .cnt-title {margin-top:0; font-size: 18px; line-height: 26px; color:#41495E}
+.right-bar-style .info {font-size: 14px; line-height: 20px; }
+.right-bar-style .cnt-title + .info {margin-top:18px; margin-bottom:36px;}
 
 .left-bar-style .tabs li button:hover,
 .left-bar-style .tabs li.on button {color:#1D58FF; }
+
 .btn-share-link {padding-left:60px; background:url(../images/common/ico_link.png) no-repeat left 30px center}
 .btn-share-link:hover ,
 .on .btn-share-link {background-image:url(../images/common/ico_link-hover.png)}
 .btn-share-web {padding-left:60px;background:url(../images/common/ico_web-share.png) no-repeat left 30px center}
 .btn-share-web:hover,
 .on .btn-share-web {background-image:url(../images/common/ico_web-share-hover.png)}
+.btn-setting-alarm {padding-left:60px; background:url(../images/common/ico_setting-alarm.png) no-repeat left 30px center}
+.btn-setting-alarm:hover,
+.on .btn-setting-alarm {background-image:url(../images/common/ico_setting-alarm-hover.png)}
+.btn-setting-label {padding-left:60px; background:url(../images/common/ico_setting-label.png) no-repeat left 30px center}
+.btn-setting-label:hover,
+.on .btn-setting-label {background-image:url(../images/common/ico_setting-label-hover.png)}
+
+.btn-info {display:inline-block; width:18px; height:18px; background: url(../images/common/ico_info.png) no-repeat center;}

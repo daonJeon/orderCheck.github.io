@@ -90,7 +90,7 @@ if (!('remove' in Element.prototype)) {
 
 
 
-//메인 , 드롭 메뉴
+//메인 , 드롭 메뉴삐상구
 function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
   clickAddClassFunc (btnName,dropBox,"on")
@@ -100,7 +100,8 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
       e.preventDefault()
       e.target.closest(".dropdown-box").classList.remove("on")
       if(applyFunc != null) {
-          if(typeof applyFunc == "string") {
+          if(typeof applyFunc == "string") {//텍스트라면 태그에 반영
+            console.log(applyFunc)
 
             Array.prototype.forEach.call(btnMenu, function(drop, idx){
               drop.classList.remove("on")
@@ -111,7 +112,7 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
             e.target.closest(".dropdown-wrap").querySelector(applyFunc).innerText = e.target.innerText
 
             if(e.target.classList[1] != null) e.target.closest(".dropdown-wrap").querySelector(applyFunc).parentElement.classList.add(e.target.classList[1])
-          } else if (typeof applyFunc == "function" ) {
+          } else if (typeof applyFunc == "function" ) {//함수라면 실행
             e.target.closest(".dropdown-wrap").classList.add("active")
             applyFunc(e.target)
           }
@@ -119,12 +120,6 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
         }
     });
   })
-  //clickRemoveClassFunc (btnMenu,dropBox,"on", function (target) {
-
-  //
-
-  //   target.closest(".dropdown-box").classList.remove("on")
-  // })
 
 }
 
@@ -142,7 +137,6 @@ slideMenu()
 //좌측 슬라이드 메뉴
 //클릭 이벤트 시, add class 용
 function clickAddClassFunc (clickBtn, addArea,className,callback,typeone) {
-
   var btn = document.querySelectorAll(clickBtn);
   var wrap = document.querySelectorAll(addArea);
   Array.prototype.forEach.call(btn, function(b, idx){
@@ -988,18 +982,23 @@ function ToastFunc(btn, msg, time) {
 
 }
 
-function templateFunc() {
-  tempBoxOn()
-  formRemove()
-}
+
 function formRemove() {
   var template = document.querySelectorAll(".template .btn-close")
   Array.prototype.forEach.call(template, function(temp, idx){
     temp.addEventListener("click",function(e){
       e.currentTarget.closest(".template").parentElement.parentElement.removeChild(e.currentTarget.closest(".template").parentElement)
+      templatePageChk(".form-temp-list > li .page")
     })
+  })
+}
+function templatePageChk (target) {
+  var pageTarget = document.querySelectorAll(target)
+  Array.prototype.forEach.call(pageTarget, function(page, idx){
+    page.innerText = "page "+(idx+1)
 
   })
+
 }
 
 function tempBoxOn () {
@@ -1019,12 +1018,79 @@ function tempBoxOn () {
   })
 }
 
-function pageInit () {  //모든 페이지용 함수
-  clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
-  dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu','.name')//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type02','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type03','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', ".txt")//상단 드롭 메뉴
+function checkOffCallback (wrap,callback, callback2) {
+  var checkbox = document.querySelectorAll(wrap);
 
+  Array.prototype.forEach.call(checkbox, function(check, idx){
+    check.addEventListener("change", function (e) {
+      e.preventDefault()
+      if(!e.target.checked) {
+        callback()
+
+      } else {
+        callback2()
+      }
+    })
+  })
 }
 
 
+function templateSlider (wrap,defaultPage) {
+  var showhideFlag = document.querySelectorAll(wrap);
+  var prevBtns = document.querySelectorAll(".btn-prev");
+  var nextBtns = document.querySelectorAll(".btn-next");
+
+  var showSection = defaultPage
+  showTemplate (showSection)
+
+  function showTemplate (showSection) {
+    Array.prototype.forEach.call(showhideFlag, function(flag, idx){
+      flag.classList.remove("on")
+      if(idx == showSection) flag.classList.add("on")
+      defaultPage = showSection
+    })
+  }
+
+  Array.prototype.forEach.call(prevBtns, function(prev, idx){
+    prev.addEventListener("click",function(){
+      showSection = defaultPage - 1
+      showTemplate (showSection)
+      defaultPage = showSection
+    })
+  })
+  Array.prototype.forEach.call(nextBtns, function(next, idx){
+    next.addEventListener("click",function(){
+      showSection = defaultPage + 1
+      showTemplate (showSection)
+      defaultPage = showSection
+    })
+  })
+
+
+}
+
+function pageInit () {  //모든 페이지용 함수
+  clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
+  dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu',null)//상단 드롭 메뉴
+  dropMenuOpen ('.dropdown-wrap.type02 .btn-drop','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
+  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null)//상단 드롭 메뉴
+
+}
+
+function templateFunc() {
+  inpEmptyFunc(".inp-title")
+  //tempBoxOn()
+  formRemove()//오더 체크 온/오프
+  orderCheckOnOff (".switch #ordercheck",".template .badge-ordercheck")
+  templatePageChk (".form-temp-list > li .page")
+  checkOffCallback(".label-set-box input[type=checkbox]", function (){
+    layerOpen ("layer-info-label")
+  })
+}
+function templateSideFunc() {
+  formSideFunc(".btn-form-arrow",".side-form")
+  clickAddClassFunc (".list-cnt",".list-cnt","on")
+  clickAddClassFunc (".template .btn-group-wrap button",".template .btn-group-wrap button","on")
+  clickAddClassFunc (".side-form .btm .slider-drop",".side-form .btm","open")
+
+}

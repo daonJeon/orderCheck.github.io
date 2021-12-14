@@ -87,8 +87,8 @@ function layerAllClose () {
 	})
 }
 
-function layerOpenFunc () {
-  layerBtn = document.querySelectorAll(".open-layer")
+function layerOpenFunc (openBtns,callback) {
+  layerBtn = document.querySelectorAll(openBtns)
   Array.prototype.forEach.call(layerBtn, function(btn, idx){
     btn.addEventListener("click",function (e) {
       var layer = btn.getAttribute("data-info")
@@ -96,6 +96,7 @@ function layerOpenFunc () {
 	    layerAllClose()
       layerOpen(layer);
       e.currentTarget.classList.add(onClass)
+      if(callback != null ) callback()
     })
   })
 }
@@ -108,8 +109,8 @@ function layerCloseFunc (layer) {
   })
 }
 
-function layerFunc (openBtns) {
-  layerOpenFunc()
+function layerFunc (openBtns,callback) {
+  layerOpenFunc(openBtns,callback)
   layerCloseFunc(layer)
 }
 //생성용 레이어

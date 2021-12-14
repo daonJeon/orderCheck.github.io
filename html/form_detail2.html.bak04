@@ -92,9 +92,9 @@
         <input type="text" value="제목 없는 신청폼" class="inp-title">
         <div class="tab-wrap">
           <ul class="tabs">
-            <li class="on"><a href="../html/form_detail1.html" class="tab-btn">편집하기</a></li>
-            <li><a href="../html/form_share.html" class="tab-btn active">공유하기</a></li>
-            <li><a href="../html/form_setting.html" class="tab-btn">설정</a></li>
+            <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>
+            <li><button type="button" class="tab-btn">공유하기</button></li>
+            <li><button type="button" class="tab-btn">설정</button></li>
           </ul>
           <span class="slider" data-left="0"></span>
         </div>
@@ -394,13 +394,7 @@
                             <!-- 파일 -->
                             <div class="tbl-top">
                               <button type="button" class="btn-link-type03"><span>삭제하기</span></button>
-                              <div class="inp-line">
-                                <span class="inp filebox">
-                                  <input type="file" name="" id="file1" placeholder="파일 검색">
-                                  <button type="button" class="pos btn-remove"><span class="txt hide">내용삭제</span></button>
-                                </span>
-                                <label for="file1" class="btn-m btn-bk-line"><span>파일 찾기</span></label>
-                              </div>
+                              <button type="button" class="btn btn-bk-line"><span>파일 찾기</span></button>
 
                             </div>
                             <div class="file-box-wrap">
@@ -459,13 +453,13 @@
                           <li class="temp-box">
                             <p class="filter-title tx-imp">시공 희망일</p>
                             <div class="inp inp-cal">
-                              <input type="text" name="date_build" id="" value="2021.10.30" >
+                              <input type="text" name="" id="" value="2021.10.30" >
                             </div>
                           </li>
                           <li class="temp-box">
                             <p class="filter-title tx-imp">입주 예정일</p>
                             <div class="inp inp-cal">
-                              <input type="text" name="date_moving" id="" value="2021.10.30" >
+                              <input type="text" name="" id="" value="2021.10.30" >
                             </div>
                           </li>
                         </ul>
@@ -765,28 +759,22 @@
                             <!-- 파일 -->
                             <div class="tbl-top">
                               <button type="button" class="btn-link-type03"><span>삭제하기</span></button>
-                              <div class="inp-line">
-                                <span class="inp filebox">
-                                  <input type="file" name="" id="file1" placeholder="파일 검색">
-                                  <button type="button" class="pos btn-remove"><span class="txt hide">내용삭제</span></button>
-                                </span>
-                                <label for="file1" class="btn-m btn-bk-line"><span>파일 찾기</span></label>
-                              </div>
+                              <button type="button" class="btn btn-bk-line"><span>파일 찾기</span></button>
                             </div>
                             <div class="file-box-wrap">
                               <div class="file-row head">
                                 <div class="checkbox simple">
-                                  <input type="checkbox" name="fileSelect" id="fileSelect03" class="check"/>
-                                  <label for="fileSelect03"><span class="box"></span><span class="">파일 명</span></label>
+                                  <input type="checkbox" name="fileSelect" id="fileSelect01" class="check"/>
+                                  <label for="fileSelect01"><span class="box"></span><span class="">파일 명</span></label>
                                 </div>
                                 <span class="txt">파일 크기</span>
                               </div>
                               <div class="file-row body">
                                 <div class="checkbox simple">
-                                  <input type="checkbox" name="fileSelect" id="fileSelect04" class="check"/>
-                                  <label for="fileSelect04"><span class="box"></span><span class="">txt</span></label>
+                                  <input type="checkbox" name="fileSelect" id="fileSelect02" class="check"/>
+                                  <label for="fileSelect02"><span class="box"></span><span class="">파일 명</span></label>
                                 </div>
-                                <span class="txt">30MB</span>
+                                <span class="txt">파일 크기</span>
                               </div>
                             </div>
                             <!-- //파일 -->
@@ -906,10 +894,17 @@
     }
     //레이어
     layerFunc (".open-layer")
-    clickAddClassFunc("#layer-type-preview .btn-group-wrap .btn-l","#layer-type-preview .btn-group-wrap .btn-l","on",null, true)
+    formSideFunc(".btn-form-arrow",".side-form")
+    inpEmptyFunc(".inp-title")
+    clickAddClassFunc (".list-cnt",".list-cnt","on")
+    templateFunc ()
 
-    templateFunc()
-    templateSideFunc()
+    clickAddClassFunc("#layer-type-preview .btn-group-wrap .btn-l","#layer-type-preview .btn-group-wrap .btn-l","on",null, true)
+    //추천 질문 목록 - 복수 선택 가능
+    clickAddClassFunc (".template .btn-group-wrap button",".template .btn-group-wrap button","on")
+    clickAddClassFunc (".side-form .btm .slider-drop",".side-form .btm","open")
+    //오더 체크 온/오프
+    orderCheckOnOff (".switch #ordercheck",".template .btn-ordercheck")
 
     // 레이어 팝업 - 한개만
     $('.inp-select select').niceSelect();
@@ -921,45 +916,6 @@
     }
     alertBtn.addEventListener('click', function(){
       layerConfirm(confirmCallback, '', '게시하시겠습니까?', '취소', '확인');
-    });
-
-    // date picker
-    $('input[name="date_build"]').daterangepicker({
-      locale: {                    // 시작일시와 종료일시 구분자
-      "format": 'YYYY.MM.DD',     // 일시 노출 포맷
-      "applyLabel": "확인",       // 확인 버튼 텍스트
-      "cancelLabel": "초기화",    // 취소 버튼 텍스트
-      "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-      },
-      opens: 'center',
-      timePicker: false,
-      singleDatePicker: true,
-      buttonClasses: "btn",
-      applyButtonClasses: "btn-bk",
-      cancelButtonClasses:"btn-bk-line btn-reset hide"
-    }, function(start, end, label) {
-      //선택 후 액션
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-    });
-    // date picker
-    $('input[name="date_moving"]').daterangepicker({
-      locale: {                    // 시작일시와 종료일시 구분자
-      "format": 'YYYY.MM.DD',     // 일시 노출 포맷
-      "applyLabel": "확인",       // 확인 버튼 텍스트
-      "cancelLabel": "초기화",    // 취소 버튼 텍스트
-      "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-      },
-      opens: 'center',
-      timePicker: false,
-      singleDatePicker: true,
-      buttonClasses: "btn",
-      applyButtonClasses: "btn-bk",
-      cancelButtonClasses:"btn-bk-line btn-reset hide"
-    }, function(start, end, label) {
-      //선택 후 액션
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
     });
   </script>
 </body>

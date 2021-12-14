@@ -255,7 +255,7 @@
                           <div class="inp">
                             <input type="text" name="" id="" placeholder="페이지 제목" value="">
                           </div>
-                          <div class="inp" style="margin-top:8px">
+                          <div class="inp">
                             <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
                           </div>
                         </li>
@@ -298,7 +298,7 @@
                         </div>
                       </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page1</p>
                   </li>
@@ -347,7 +347,7 @@
                         </div>
                       </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page2</p>
                   </li>
@@ -358,7 +358,7 @@
                           <div class="inp">
                             <input type="text" name="" id="" placeholder="페이지 제목" value="">
                           </div>
-                          <div class="inp" style="margin-top:8px">
+                          <div class="inp">
                             <input type="text" name="" id="" placeholder="페이지 부연설명 입력 (선택)" value="">
                           </div>
                         </li>
@@ -405,7 +405,7 @@
                         </div>
                       </div>
                       <button type="button" class="btn-close"><span class="txt hide">삭제</span></button>
-                      <button type="button" class="btn-ordercheck"><span class="txt hide">오더체크 이용중</span></button>
+                      <p class="badge-ordercheck"><span class="txt hide">오더체크 이용중</span></p>
                     </article>
                     <p class="page">page1</p>
                   </li>
