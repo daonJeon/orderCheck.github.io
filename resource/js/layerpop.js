@@ -100,18 +100,19 @@ function layerOpenFunc (openBtns,callback) {
     })
   })
 }
-function layerCloseFunc (layer) {
+function layerCloseFunc (layer,closeCallback) {
 
   Array.prototype.forEach.call(document.querySelectorAll(".layer-close"), function(close, idx){
   close.addEventListener("click",function (e) {
       layerClose(e.target);
+      if(closeCallback != null) closeCallback()
     })
   })
 }
 
-function layerFunc (openBtns,callback) {
+function layerFunc (openBtns,callback,closeCallback) {
   layerOpenFunc(openBtns,callback)
-  layerCloseFunc(layer)
+  layerCloseFunc(layer,closeCallback)
 }
 //생성용 레이어
 function layerAlert(title, msg, btn, tg) {

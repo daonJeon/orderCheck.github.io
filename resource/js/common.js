@@ -153,6 +153,23 @@ function clickAddClassFunc (clickBtn, addArea,className,callback,typeone) {
     });
   })
 }
+function clickTargetCloseAddFunc (clickBtn, addArea,className,callback,typeone) {
+  var btn = document.querySelectorAll(clickBtn);
+  Array.prototype.forEach.call(btn, function(b, idx){
+    var wrap = b.closest(addArea);
+    b.addEventListener("click", function (e) {
+      e.preventDefault()
+      if(typeone == true) {
+        Array.prototype.forEach.call(btn, function(b2, idx2){
+          wrap[idx2].classList.remove(className)
+        })
+      }
+
+      wrap.classList.toggle(className);
+      if(callback != null) callback(e)
+    });
+  })
+}
 
 function clickRemoveClassFunc (clickBtn, removeArea,className,callback) {
   var btn;

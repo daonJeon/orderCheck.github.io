@@ -308,7 +308,24 @@
       singleDatePicker: true,
       buttonClasses: "btn",
       applyButtonClasses: "btn-bk",
-      cancelButtonClasses:"btn-bk-line btn-reset hide"
+      cancelButtonClasses:"btn-bk-line btn-reset hide",
+      isCustomDate : function(tdDate) {//2021-12-16
+        var thisDate = tdDate._d
+        var today = new Date()
+        var thisYear =thisDate.getFullYear()
+        var thisMonth = thisDate.getMonth() + 1
+        var thisDay = thisDate.getDate()
+        var nowYear = today.getFullYear()
+        var nowMonth = today.getMonth() + 1
+        var nowDay = today.getDate()
+
+        if(thisYear == nowYear && thisMonth == nowMonth ) {
+          if($(".available").text() == nowDay) {
+            $(this).classList.add("today")
+          }
+        }
+
+      }
     }, function(start, end, label) {
       //선택 후 액션
       console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
