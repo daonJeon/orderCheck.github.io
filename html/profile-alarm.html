@@ -487,10 +487,14 @@
 
       Array.prototype.forEach.call(input, function(inp, idx){
         inp.classList.remove("edit")
+        if(inp.classList.contains("edit")) {
+          inp.querySelector("input").readOnly = false
+        } else {
+          inp.querySelector("input").readOnly = true
+        }
       })
 
     })
-
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
 
