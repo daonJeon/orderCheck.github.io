@@ -194,6 +194,7 @@
                             <input type="text" name="" id="" placeholder="고객명" value="홍길동">
                             <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
                           </div>
+                          <p class="warning-txt02">이름을 입력해주세요.</p>
                         </div>
 
                         <div class="filter-box">
@@ -224,9 +225,12 @@
                             <input type="text" name="" id="" value="sample@naver.com">
                             <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
                           </div>
+                          <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+                          <p class="warning-txt02">이미 가입된 이메일입니다.</p>
                         </div>
                         <div class="btn-group02" style="margin-top:40px">
-                          <button type="button" class="btn-link open-layer" data-info="layer-account-delete-error"><span>계정 삭제(회사)</span></button>
+                          <!-- <button type="button" class="btn-link open-layer" data-info="layer-account-delete-error"><span>계정 삭제(회사)</span></button>
+                          <button type="button" class="btn-link open-layer" data-info="layer-account-delete-confirm"><span>계정 삭제 확인</span></button> -->
                           <button type="button" class="btn-link open-layer" data-info="layer-account-delete"><span>계정 삭제</span></button>
                         </div>
 
@@ -324,62 +328,6 @@
   </div>
 
 
-  <div class="layer-pop" id="layer-manager-assign">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">담당자 배정</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="search-top">
-          <strong class="txt">팀원<var class="tx-org">12</var></strong>
-          <span class="tx-gray">(열람 가능한 팀원들만 노출됩니다.)</span>
-        </div>
-        <div class="inp-line">
-          <span class="inp">
-            <input type="text" name="" placeholder="팀원명을 검색하세요.">
-          </span>
-          <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
-        </div>
-        <div class="manager-box">
-          <div class="inbox">
-            <ul>
-              <li>
-                <span class="checkbox">
-                  <input type="checkbox" name="manager_select" id="manager01" class="check">
-                  <label for="manager01"><span class="box"></span><img src="../resource/images/thumnail/img_person2.png" alt="" /><strong>나</strong><span class="txt">홍길동</span></label>
-                </span>
-              </li>
-              <li>
-                <span class="checkbox">
-                  <input type="checkbox" name="manager_select" id="manager02" class="check">
-                  <label for="manager02"><span class="box"></span><img src="../resource/images/thumnail/img_person3.png" alt="" /><span class="txt">김수안</span></label>
-                </span>
-              </li>
-              <li>
-                <span class="checkbox">
-                  <input type="checkbox" name="manager_select" id="manager03" class="check">
-                  <label for="manager03"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
-                </span>
-              </li>
-              <li>
-                <span class="checkbox">
-                  <input type="checkbox" name="manager_select" id="manager04" class="check">
-                  <label for="manager04"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="layer-btn tr">
-          <button type="button" class="btn-l btn-bk-line btn-reset"><span><i class="ico refresh"></i> 초기화</span></button>
-          <button type="button" class="btn-l btn-bk"><span>확인</span></button>
-        </div>
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
-      </div>
-    </div>
-  </div>
-
-
   <!-- 비밀번호 변경 -->
   <div class="layer-pop" id="layer-password-change">
     <div class="layer-cnt">
@@ -429,6 +377,23 @@
     </div>
   </div>
 
+  <!-- 계정 삭제 확인 -->
+  <div class="layer-pop confirm" id="layer-account-delete-confirm">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">계정 삭제</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="confirm-msg">계정을 삭제하시겠습니까?<br> 계정을 삭제하면 모든 데이터가 사라지고 복구할 수 없습니다.</p>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
   <!-- 계정 삭제 -->
   <div class="layer-pop" id="layer-account-delete">
     <div class="layer-cnt">
@@ -444,6 +409,8 @@
               <option value="000" disabled>탈퇴 사유를 선택해주세요</option>
               <option value="001">1</option>
             </select>
+          <p class="warning-txt02">탈퇴 사유를 선택해주세요.</p>
+
           </div>
 
           <label for="user_auth" class="filter-title">비밀번호</label>

@@ -127,6 +127,8 @@ button:disabled {cursor:default}
 .btn-copy.on span {background-image: url(../images/common/ico_copy-hover.png)}
 .btn-down {font-weight: 500; font-size: 13px; line-height: 19px; color: #9A9A9A;}
 .btn-down span {display: inline-block; box-sizing: border-box; padding-left:20px; background: url(../images/common/ico_down.png) no-repeat left center;}
+.btn-down:hover {color: #1D58FF;}
+.btn-down:hover span {background-image: url(../images/common/ico_down-hover.png)}
 
 /* input */
 .inp-line {display:flex; align-items: center; justify-content:space-between;}
@@ -618,7 +620,7 @@ width:calc(100% - 40px); font-size:14px;}
 .left-bar-style,
 .right-bar-style {height:calc(100vh - 130px); background-color: #fff;}
 .left-bar-style {width: 300px; border-right:1px solid  #E3E3E3;}
-.right-bar-style {padding:18px 26px 30px; width: 1620px; box-sizing: border-box;}
+.right-bar-style {padding:18px 26px 30px; width: 100%; box-sizing: border-box;}
 .left-bar-style .tabs {flex-wrap:wrap; border-bottom:none}
 .left-bar-style .tabs li {position:relative; width:100%; margin-left:0}
 .left-bar-style .tabs li + li:before {position:absolute; top:0 ; left:0; right:0; margin:0 auto; width:240px; height:1px; background-color:#E3E3E3; content:''}
