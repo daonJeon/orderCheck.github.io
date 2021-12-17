@@ -100,6 +100,7 @@
 .filter-title .tx-gray {font-size: 13px; line-height: 19px; font-weight:normal; color: #9A9A9A !important;}
 .cnt-box .filter-title {display: block;}
 .filter-box .inp + .inp {margin-top:8px;}
+.filter-box .inp .pos.btn-edit {margin-top:-12px}
 
 .inp-row {display:flex; justify-content: space-between;}
 .inp-row .inp {width:49%}
@@ -113,7 +114,7 @@
 .inp-row.email .inp-select {width:48.5%}
 .inp-row.email .txt-form {width:3%; vertical-align: middle;}
 
-.inp-select .nice-select {width:100%; height:44px; line-height:42px; padding-left:12px;}
+.inp-select .nice-select {float:none; width:100%; height:44px; line-height:42px; padding-left:12px;}
 .inp-select .nice-select:active, .inp-select .nice-select.open, .inp-select .nice-select:focus {border-color:#E7E7E7; }
 .inp-select .nice-select .current { color:#9A9A9A}
 .inp-select .nice-select.active .current {color:#555868}

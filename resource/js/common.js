@@ -975,12 +975,13 @@ function pageInfoRemove () {
 
 
 function ToastFunc(btn, msg, time) {
-  var button = document.querySelector(btn)
+  var button = document.querySelectorAll(btn)
   var toastCont = document.querySelector("#toast")
 
   var randomMsg = msg
-
-  button.addEventListener("click", createToast)
+  Array.prototype.forEach.call(button, function(btn, idx){
+    btn.addEventListener("click", createToast)
+  })
 
   function createToast () {
     var toastEl = document.createElement("div")
