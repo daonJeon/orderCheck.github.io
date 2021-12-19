@@ -98,26 +98,31 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
   Array.prototype.forEach.call(btnMenu, function(removeB, idx){
     removeB.addEventListener("click", function (e) {
       e.preventDefault()
-      e.target.closest(".dropdown-box").classList.remove("on")
+      if(e.currentTarget.tagName == "LABEL") {
+        e.currentTarget.previousElementSibling.click()
+        e.currentTarget.closest(".dropdown-box").classList.remove("on")
+
+      } else {
+        e.target.closest(".dropdown-box").classList.remove("on")
+      }
       if(applyFunc != null) {
-          if(typeof applyFunc == "string") {//텍스트라면 태그에 반영
-            console.log(applyFunc)
+        if(typeof applyFunc == "string") {//텍스트라면 태그에 반영
 
-            Array.prototype.forEach.call(btnMenu, function(drop, idx){
-              drop.classList.remove("on")
-            })
-            e.target.classList.add("on")
-            e.target.closest(".dropdown-wrap").classList.add("active")
+          Array.prototype.forEach.call(btnMenu, function(drop, idx){
+            drop.classList.remove("on")
+          })
+          e.target.classList.add("on")
+          e.target.closest(".dropdown-wrap").classList.add("active")
 
-            e.target.closest(".dropdown-wrap").querySelector(applyFunc).innerText = e.target.innerText
+          e.target.closest(".dropdown-wrap").querySelector(applyFunc).innerText = e.target.innerText
 
-            if(e.target.classList[1] != null) e.target.closest(".dropdown-wrap").querySelector(applyFunc).parentElement.classList.add(e.target.classList[1])
-          } else if (typeof applyFunc == "function" ) {//함수라면 실행
-            e.target.closest(".dropdown-wrap").classList.add("active")
-            applyFunc(e.target)
-          }
-
+          if(e.target.classList[1] != null) e.target.closest(".dropdown-wrap").querySelector(applyFunc).parentElement.classList.add(e.target.classList[1])
+        } else if (typeof applyFunc == "function" ) {//함수라면 실행
+          e.target.closest(".dropdown-wrap").classList.add("active")
+          applyFunc(e.target)
         }
+
+      }
     });
   })
 
@@ -748,9 +753,11 @@ function formSideFunc (btn,wrap) {
   var sideRight = document.querySelector(wrap+".right")
   Array.prototype.forEach.call(formBtn, function(btn, idx){
     btn.addEventListener("click",function(e) {
+      console.log(e.currentTarget)
       var directionFlag = e.currentTarget.getAttribute("data-direction")
       if(directionFlag =="left") sideLeft.classList.toggle("open")
       else if(directionFlag =="right") sideRight.classList.toggle("open")
+      e.currentTarget.classList.toggle("open")
 
     })
   })
@@ -804,7 +811,7 @@ function fileUpload (fileInp) {
   })
 
 }
-fileUpload("input[type='file']")
+fileUpload(".inp.filebox input[type='file']")
 
 function changeEvt (element) {
   if ("createEvent" in document) {
@@ -981,6 +988,10 @@ function pageInfoRemove () {
 
 function ToastFunc(btn, msg, time) {
   var button = document.querySelectorAll(btn)
+
+  var toastArea = document.createElement("div");
+  toastArea.setAttribute("id","toast")
+  document.body.appendChild(toastArea);
   var toastCont = document.querySelector("#toast")
 
   var randomMsg = msg

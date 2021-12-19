@@ -704,7 +704,7 @@
                 html += '<th></th>';
             }
 
-            var dateHtml = this.locale.monthNames[calendar[1][1].month()] + calendar[1][1].format(" YYYY");
+            var dateHtml = calendar[1][1].format("YYYY ") +  this.locale.monthNames[calendar[1][1].month()];
 
             if (this.showDropdowns) {
                 var currentMonth = calendar[1][1].month();
@@ -736,7 +736,7 @@
                 }
                 yearHtml += '</select>';
 
-                dateHtml = monthHtml + yearHtml;
+                dateHtml = yearHtml + monthHtml;
             }
 
             html += '<th colspan="5" class="month">' + dateHtml + '</th>';
@@ -1440,11 +1440,11 @@
             }
 
             if (isLeft) {
-                this.leftCalendar.month.month(month).year(year);
+                this.leftCalendar.month.year(year).month(month);
                 if (this.linkedCalendars)
                     this.rightCalendar.month = this.leftCalendar.month.clone().add(1, 'month');
             } else {
-                this.rightCalendar.month.month(month).year(year);
+                this.rightCalendar.month.year(year).month(month);
                 if (this.linkedCalendars)
                     this.leftCalendar.month = this.rightCalendar.month.clone().subtract(1, 'month');
             }

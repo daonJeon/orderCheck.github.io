@@ -31,13 +31,13 @@
       <div class="header-wrap">
         <header id="header" class="header">
           <div class="title">
-            <button type="button" class="btn-txt-prev"><span><i></i>신청폼 리스트 돌아가기</span></button>
+            <button type="button" class="btn-txt-prev"><span>신청폼 리스트 돌아가기</span></button>
           </div>
           <ul class="menu">
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
-                <input type="text" placeholder="제목으로 검색하세요">
+                <input type="text" placeholder="검색하세요">
               </div>
             </li>
             <li>
@@ -89,7 +89,9 @@
 
 
       <header class="tbl-top band">
-        <input type="text" placeholder="제목 없는 신청폼" class="inp-title">
+        <div class="inp">
+          <input type="text" value="제목 없는 신청폼" placeholder="제목 없는 신청폼"class="inp-title">
+        </div>
         <div class="tab-wrap">
           <ul class="tabs">
             <li><a href="../html/form_detail1.html" class="tab-btn">편집하기</a></li>
@@ -119,7 +121,21 @@
               <div class="thum-wrap">
                 <div class="tbl-top">
                   <h3 class="thum-title">썸네일 이미지</h3>
-                  <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
+                  <div class="dropdown-wrap">
+                    <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
+                    <div class="dropdown-box">
+                      <ul>
+                        <li>
+                          <span class="inp">
+                            <input type="file" name="" id="file1" placeholder="파일 검색">
+                            <label for="file1" class="btn-drop-menu"><span>사진 수정</span></label>
+                          </span>
+                        </li>
+                        <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
+                      </ul>
+                    </div>
+                  </div>
+
                 </div>
                 <div class="flexbox center">
                   <div class="thum-box left">
@@ -143,14 +159,14 @@
                     <div class="inp-line url">
                       <span class="txt">https://</span>
                       <span class="inp">
-                        <input type="text" id="user_url" placeholder="주소 입력" readonly>
+                        <input type="text" id="user_url" placeholder="주소 입력">
                       </span>
                       <span class="inp">
                         <input type="text" id="user_url" value="/ordercheck.io">
                       </span>
                     </div>
                     <div class="flex-sidebox center">
-                      <button type="button" class="btn btn-bk-line"><span>링크복사</span></button>
+                      <button type="button" class="btn btn-bk-line pop-toast"><span>링크복사</span></button>
                       <button type="button" class="btn btn-domain"><span>도메인 연결</span></button>
                     </div>
                   </div>
@@ -189,7 +205,7 @@
                           <input type="text" id="inp_width" placeholder="" value="100">
                         </span>
                         <span class="inp-select unit">
-                          <select name="unit_width">
+                          <select name="unit_width" class="active">
                             <option value="percent">%</option>
                             <option value="pixel">px</option>
                           </select>
@@ -201,7 +217,7 @@
                           <input type="text" id="inp_height" placeholder="" value="400">
                         </span>
                         <span class="inp-select unit">
-                          <select name="unit_height">
+                          <select name="unit_height" class="active">
                             <option value="pixel">px</option>
                             <option value="percent">%</option>
                           </select>
@@ -218,6 +234,7 @@
           </section>
         </div>
       </div>
+
     </section>
 
   </div>
@@ -251,7 +268,7 @@
           <button type="button" class="box active"><span>https://www.figma.com/file/RhoRLD3p8DP1H20qa6Opye/%EC%98%A4%EB %8D%94% EC%B2%B4%ED%81%AC-%EC%BB%B4%ED%8E%8C?node-id=8 84%3A90 3</span></button>
         </div>
         <div class="layer-btn tr">
-          <button type="button" class="btn btn-bk"><span>코드 복사</span></button>
+          <button type="button" class="btn btn-bk pop-toast"><span>코드 복사</span></button>
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
@@ -267,6 +284,7 @@
   <script>
     //공통 페이지용 함수
     pageInit ()
+    ToastFunc(".pop-toast",'클립보드에 복사되었습니다.',2000)
     //우측 탭
     window.onload = function(){
       tabFunc (".tab-wrap",true)
@@ -277,6 +295,7 @@
     //inp
     $('.inp-select select').niceSelect();
     templateFunc()
+    dropMenuOpen(".thum-wrap .tbl-top .btn-thum-edit",".thum-wrap .tbl-top .dropdown-box",".thum-wrap .tbl-top .btn-drop-menu")
   </script>
 </body>
 </html>

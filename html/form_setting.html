@@ -33,13 +33,13 @@
       <div class="header-wrap">
         <header id="header" class="header">
           <div class="title">
-            <button type="button" class="btn-txt-prev"><span><i></i>신청폼 리스트 돌아가기</span></button>
+            <button type="button" class="btn-txt-prev"><span>신청폼 리스트 돌아가기</span></button>
           </div>
           <ul class="menu">
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
-                <input type="text" placeholder="제목으로 검색하세요">
+                <input type="text" placeholder="검색하세요">
               </div>
             </li>
             <li>
@@ -91,7 +91,9 @@
 
 
       <header class="tbl-top band">
-        <input type="text" placeholder="제목 없는 신청폼" class="inp-title">
+        <div class="inp">
+          <input type="text" value="제목 없는 신청폼" placeholder="제목 없는 신청폼"class="inp-title">
+        </div>
         <div class="tab-wrap">
           <ul class="tabs">
             <li><a href="../html/form_detail1.html" class="tab-btn">편집하기</a></li>
@@ -128,34 +130,24 @@
                 <div class="inbox">
                   <ul>
                     <li>
-                      <span class="checkbox">
-                        <input type="checkbox" name="manager_select" id="manager_empty" class="check">
-                        <label for="manager_empty"><span class="box"></span><img src="../resource/images/thumnail/img_person1.png" alt="" /><strong>담당자 없음</strong></label>
-                      </span>
+                      <div class="label">
+                        <img src="../resource/images/thumnail/img_person2.png" alt="" /><strong>나</strong> <span class="txt">홍길동</span>
+                      </div>
                     </li>
                     <li>
-                      <span class="checkbox">
-                        <input type="checkbox" name="manager_select" id="manager01" class="check">
-                        <label for="manager01"><span class="box"></span><img src="../resource/images/thumnail/img_person2.png" alt="" /><strong>나</strong><span class="txt">홍길동</span></label>
-                      </span>
+                      <div class="label">
+                        <img src="../resource/images/thumnail/img_person1.png" alt="" /><span class="txt">김수</span>
+                      </div>
                     </li>
                     <li>
-                      <span class="checkbox">
-                        <input type="checkbox" name="manager_select" id="manager02" class="check">
-                        <label for="manager02"><span class="box"></span><img src="../resource/images/thumnail/img_person3.png" alt="" /><span class="txt">김수안</span></label>
-                      </span>
+                      <div class="label">
+                        <img src="../resource/images/thumnail/img_person3.png" alt="" /><span class="txt">김수안</span>
+                      </div>
                     </li>
                     <li>
-                      <span class="checkbox">
-                        <input type="checkbox" name="manager_select" id="manager03" class="check">
-                        <label for="manager03"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
-                      </span>
-                    </li>
-                    <li>
-                      <span class="checkbox">
-                        <input type="checkbox" name="manager_select" id="manager04" class="check">
-                        <label for="manager04"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
-                      </span>
+                      <div class="label">
+                        <img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -186,7 +178,7 @@
         <h2 class="title">오더체크 이용중 표시 끄기</h2>
       </div>
       <div class="layer-mid">
-        <p class="info">오더체크 이용중 ‘끄기'를 진행하시려면 ‘화이트 라벨링' 부가 서비스 이용이 필요합니다. 플랜을 확인하고 ‘화이트 라벨링' 부가서비스 가입을 진행해주세요.</p>
+        <p class="info">오더체크 이용중 ‘끄기’ 를 진행하시려면 ‘화이트 라벨링’ 부가 서비스 이용이 필요합니다. 플랜을 확인하고 ‘화이트 라벨링’ 부가서비스 가입을 진행해주세요.</p>
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk"><span>플랜 변경</span></button>
