@@ -110,6 +110,9 @@ input[type=text]::-ms-clear { display:none;}
 .btn-group02.flex-sidebox {margin-top:30px;}
 
 .btn-gray {background-color:#EBEBEB; font-weight:700; font-size:16px; line-height:23px; color:#9A9A9A; }
+.btn-gray:hover {background-color: #CFCFCF;}
+.btn-gray:disabled {background-color: #CFCFCF; color:#fff}
+
 .btn-phone {padding:0; height:62px; line-height:62px; border:1px solid #1D58FF;background-color:#1D58FF;color:#fff}
 .btn-phone span {display: inline-block; width:230px; box-sizing: border-box; padding-left:42px; background: url(../images/common/ico_phone.png) no-repeat left center;}
 .btn-phone.blue {background-color:#1D58FF; border-color:#1D58FF;}
@@ -258,6 +261,11 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .gnb-box {position:fixed; top:0; width:200px; height:100%; z-index:100; transition:all 0.8s}
 .gnb-box.left {left:-100%}
 .gnb-box.right {right:-100%}
+
+
+
+
+
 .gnb-wrap.menu .btn-menu.open + .gnb-box,
 .gnb-box.right.open {right:0;  transition:all 0.8s}
 .gnb-box.left.open {left:0;  transition:all 0.8s}
@@ -313,8 +321,8 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== Tab =====*/
 .tab-wrap {position:relative;}
 .tabs {display:flex; justify-content:start; border-bottom:1px solid #e6e6e6}
-.tabs li .tab-btn {display:inline-block; padding-bottom:8px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
-.tabs li.on .tab-btn {font-weight: bold; color: #02164F;}
+.tabs li .tab-btn {display:inline-block; padding-bottom:8px;  font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
+.tabs li.on .tab-btn {font-weight: bold; font-weight: 500; color: #02164F;}
 .tabs li + li {margin-left:34px}
 .tab-wrap .slider {display:block; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
 .tabs li.on var {display:inline-block; margin-left:2px}
@@ -328,7 +336,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .inp.large input {height:62px;}
 .inp input[type=password] {padding-right:30px;}
 .inp input:disabled {background: #F6F6F6;  border: 1px solid #E7E7E7;}
-.inp input:focus {border-color:#1D58FF}
+.inp input:focus {border-color:#1D58FF; caret-color: #1D58FF;}
 .inp input::placeholder {color:#9A9A9A}
 .inp input::-webkit-input-placeholder {color: #9A9A9A;}
 .inp input:-ms-input-placeholder { color: #9A9A9A;}
@@ -386,14 +394,14 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 
 /*===== layer =====*/
 .layer-pop {display:none; width: 100%;height: 100%;position: fixed;left: 0;top: 0; background:rgba(0,0,0,.3);z-index: 100;}
-.layer-pop .layer-cnt {position:absolute; width:600px; left:50%;top:50%;border-radius:12px; padding:30px 24px; transform:translate(-50%,-50%); background-color:#fff;box-sizing:border-box;z-index:1000}
+.layer-pop .layer-cnt {position:absolute; width:600px; left:50%;top:50%;border-radius:12px; padding:30px 24px 10px; transform:translate(-50%,-50%); background-color:#fff;box-sizing:border-box;z-index:1000}
 .layer-pop.open {display:block}
 .layer-top .title {padding:0px 0px 25px;font-size:18px;}
 .layer-top .title-box h2 {border-bottom:1px solid rgba(0,0,0,0.03);}
 .layer-top .title .tx-gray {margin-top:3px; display:block; font-size: 12px; font-weight: 400; line-height: 17px; color: #7B7B7B;}
 .layer-cnt .info-txt {line-height:16px;font-size:13px;color:#959595}
 .layer-cnt .info-txt02 {margin:5px 0 20px; line-height:22px;font-size:15px;color:#555868}
-.layer-cnt .layer-btn {margin-top:26px;}
+.layer-cnt .layer-btn {margin-top:26px; margin-bottom:20px}
 
 #layer-manager-set .layer-cnt,
 .layer-pop.confirm .layer-cnt,
@@ -474,7 +482,8 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 .searchbox i {color:#1D58FF;   vertical-align: middle;}
 .searchbox input { display: inline-block; padding: 12px 8px; font-weight: normal; text-align: left; vertical-align: middle; transition: all 0.3s ease-in-out; box-sizing: border-box ;
 width:calc(100% - 40px); font-size:14px;}
-.searchbox.type02 {padding: 0 13px; width: 421px; background-color: #fff; border:1px solid #E7E7E7;border-radius: 6px;}
+.searchbox.type02 {position:relative; padding: 0 13px; width: 421px; background-color: #fff; border:1px solid #E7E7E7;border-radius: 6px;}
+.searchbox.type02 .btn-close {top:50%; right:10px; margin-top:-10px;}
 /* dropdown */
 .dropdown-wrap {position: relative;}
 .dropdown-box {display:none; position:absolute; top:40px; width:100px; min-height:20px; padding:4px 12px; border:1px solid #ddd; box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25); border-radius: 4px; background-color: #fff; z-index: 2; background-color:#fff;}
@@ -524,6 +533,15 @@ width:calc(100% - 40px); font-size:14px;}
 .ico.send { min-width:auto; width:20px; height:20px; background-image:url(../images/common/ico_send-hover.png); vertical-align: -5px; }
 .ico.kakao { min-width:auto; width:20px; height:20px; background-image:url(../images/common/ico_kakao-balloon.png); vertical-align: -5px; }
 .ico.email { min-width:auto; width:20px; height:20px; background-image:url(../images/common/ico_envelop.png); vertical-align: -5px; }
+.ico.storage { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_storage.png); vertical-align: -5px; }
+.ico.storageFolder { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_storage-folder.png); vertical-align: -5px; }
+.ico.zip { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_zip.png); vertical-align: -5px; }
+.ico.pic { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_picture.png); vertical-align: -5px; }
+.ico.pdf { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_pdf.png); vertical-align: -5px; }
+.ico.excel { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_excel.png); vertical-align: -5px; }
+.ico.ppt { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_ppt.png); vertical-align: -5px; }
+.ico.docx { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_docx.png); vertical-align: -5px; }
+.ico.hwp { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_hwp.png); vertical-align: -5px; }
 
 .sidebar.open .ico {width:28px; height:28px;}
 .sidebar li a .links_name { padding-left:12px; color: #fff; font-size: 15px; font-weight: 400; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.4s;}

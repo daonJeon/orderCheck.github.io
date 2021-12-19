@@ -160,8 +160,10 @@ function clickTargetCloseAddFunc (clickBtn, addArea,className,callback,typeone) 
     b.addEventListener("click", function (e) {
       e.preventDefault()
       if(typeone == true) {
-        Array.prototype.forEach.call(btn, function(b2, idx2){
-          wrap[idx2].classList.remove(className)
+        var area = document.querySelectorAll(addArea)
+        Array.prototype.forEach.call(area, function(area1, idx2){
+
+          area1.classList.remove(className)
         })
       }
 
@@ -599,7 +601,6 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
       menuClose ()
       e.currentTarget.classList.add("active")
     } else {
-
       e.currentTarget.classList.remove("active")
       menuOpen ()
       dimCreate ()
@@ -608,6 +609,10 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   Array.prototype.forEach.call(menuBtn, function(btn, idx){
     btn.addEventListener("click",function(e){
       clickResultApply (e)
+      Array.prototype.forEach.call(menuBtn, function(btn, idx){
+        btn.classList.remove("selected")
+      })
+      e.currentTarget.classList.add("selected")
       menuClose ()
     })
 
@@ -1013,7 +1018,7 @@ function formRemove() {
 function templatePageChk (target) {
   var pageTarget = document.querySelectorAll(target)
   Array.prototype.forEach.call(pageTarget, function(page, idx){
-    page.innerText = "page "+(idx+1)
+    page.innerText = " Page "+(idx+1) + " "
 
   })
 
