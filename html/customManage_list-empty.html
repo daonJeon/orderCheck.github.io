@@ -452,6 +452,10 @@
       $(".inp-select select option:last-child").prop('selected', true)
       $(".inp-select select").niceSelect("update")
     });
+    $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {//2021-12-20
+      $(this).addClass("selected")
+    });
+
   </script>
 </body>
 
