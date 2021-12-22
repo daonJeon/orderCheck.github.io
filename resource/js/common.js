@@ -161,8 +161,8 @@ function clickAddClassFunc (clickBtn, addArea,className,callback,typeone) {
 function clickTargetCloseAddFunc (clickBtn, addArea,className,callback,typeone) {
   var btn = document.querySelectorAll(clickBtn);
   Array.prototype.forEach.call(btn, function(b, idx){
-    var wrap = b.closest(addArea);
     b.addEventListener("click", function (e) {
+      var wrap = e.currentTarget.closest(addArea);
       e.preventDefault()
       if(typeone == true) {
         var area = document.querySelectorAll(addArea)
