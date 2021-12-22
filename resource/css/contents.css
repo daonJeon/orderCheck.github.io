@@ -620,7 +620,9 @@ button.box.active {border-color:#02164F}
 .daterangepicker .calendar-table.next:after {position:absolute; top:0; left:0; border-radius:50%; content:''} */
 /* .daterangepicker td.start-date:before {display:inline-block; position:absolute;
   top:0; right:0px; width:10px; height:29px; background-color: #E1E5EF;z-index: 1; content:''} */
-.daterangepicker td.start-date,.daterangepicker td.end-date,.daterangepicker td.start-date.end-date {position:relative; border-radius: 50%;}
+.daterangepicker td.start-date,.daterangepicker td.end-date,.daterangepicker td.start-date.end-date {position:relative; border-radius: 50%; border-color:transparent}
+.daterangepicker td.start-date {background: url(../images/common/bg_calendar-start.png) no-repeat center}
+.daterangepicker td.end-date {background: url(../images/common/bg_calendar-end.png) no-repeat center}
 .daterangepicker .drp-buttons {border-top:none; padding:20px; }
 .daterangepicker .drp-buttons .btn {padding:10px 7px 9px; min-width:84px; line-height:19px; font-size:13px; }
 .daterangepicker .drp-buttons .btn-reset {background:url(../images/common/ico_refresh.png) no-repeat left 14px center; padding-left:34px;}
