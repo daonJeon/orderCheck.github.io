@@ -93,10 +93,19 @@ if (!('remove' in Element.prototype)) {
 //메인 , 드롭 메뉴삐상구
 function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
+  var dimFlag = 0
   clickAddClassFunc (btnName,dropBox,"on")
+  //모든 드롭 다운 메뉴에 dim 순회
+  var dropDownMenu = document.querySelectorAll(btnName)
+  Array.prototype.forEach.call(dropDownMenu, function(menu, idx){
+    if(dimFlag == 0) dimCreate(menu.closest(".dropdown-wrap"))
+  })
+  dimFlag = 1
+  dimRemove ()
 
-  Array.prototype.forEach.call(btnMenu, function(removeB, idx){
-    removeB.addEventListener("click", function (e) {
+  Array.prototype.forEach.call(btnMenu, function(menu, idx){
+
+    menu.addEventListener("click", function (e) {
       e.preventDefault()
       if(e.currentTarget.tagName == "LABEL") {
         e.currentTarget.previousElementSibling.click()
@@ -124,7 +133,31 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
 
       }
     });
+
   })
+
+  function dimCreate (wrap) {
+    var dimElement = document.createElement("div")
+    dimElement.classList.add("dim")
+    wrap.closest(".dropdown-wrap").appendChild(dimElement)
+  }
+  function dimRemove () {
+    var dims = document.querySelectorAll(".dim")
+    //event
+
+      Array.prototype.forEach.call(dims, function(dim, idx){
+        if (dim != null) {
+        dim.addEventListener("click",function(e){
+          Array.prototype.forEach.call(document.querySelectorAll(".dropdown-box"), function(box, idx){
+            box.classList.remove("on")
+          })
+
+        })
+        }
+      })
+
+
+  }
 
 }
 
@@ -1168,46 +1201,12 @@ function alarmListFunc (applyBtn,closestArea) {
     b.addEventListener("click", function (e) {
       e.preventDefault()
       e.currentTarget.closest("li").classList.remove("active");
-      //alarmActiveCheck(e.currentTarget.closest(closestArea),applyBtn)
     });
   })
   //체크!
 
 }
 alarmListFunc(".btn-alarm-item",".alarm-list")
-alarmActiveCheck()
-
-function alarmActiveCheck (applyWraps,applyBtn) {
-  var btns = document.querySelectorAll(".alarm-list .btn-alarm-item")
-  Array.prototype.forEach.call(btns, function(btn, idx){
-    var thisElement =  btn.closest("li")
-    var prevElement =  btn.closest("li").previousElementSibling
-    var nextElement =  btn.closest("li").nextElementSibling
-    console.log(nextElement)
-
-    if(prevElement != null || nextElement != null ) {
-      if(!prevElement.classList.contains("active") && thisElement.classList.contains("active") && nextElement.classList.contains("active") ){//start
-        thisElement.classList.remove("in-range");
-        thisElement.classList.remove("start");
-        thisElement.classList.remove("end");
-        thisElement.classList.add("start");
-      } else if(prevElement.classList.contains("active") && thisElement.classList.contains("active") && nextElement.classList.contains("active") ){//in range
-        thisElement.classList.remove("in-range");
-        thisElement.classList.remove("start");
-        thisElement.classList.remove("end");
-        thisElement.classList.add("in-range");
-      } else if(prevElement.classList.contains("active") && thisElement.classList.contains("active") && !nextElement.classList.contains("active") ){//in range
-        thisElement.classList.remove("in-range");
-        thisElement.classList.remove("start");
-        thisElement.classList.remove("end");
-        thisElement.classList.add("in-range");
-      }
-
-    }
-
-  })
-
-}
 
 
 

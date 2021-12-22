@@ -796,7 +796,7 @@ ul.inp-line > li {display: flex; align-items: center;}
 .btn-alarm-item .main-txt {display:block; font-size: 14px; line-height: 20px; }
 .btn-alarm-item .main-txt strong {font-weight: 700;}
 .btn-alarm-item .sub-txt {display:block; font-size: 13px; line-height: 19px;}
-.alarm-list .btn-show-menu {position:absolute; top:17px; right:4px; z-index: 1;}
+.alarm-list .btn-show-menu {position:absolute; padding:4px; top:13px; right:0px; z-index: 1;}
 .btn-show-menu {width:16px; height:16px; background: url(../images/common/ico_draw-cnt.png) no-repeat center;}
 li.active .btn-alarm-item {position:relative; padding-top:15px; padding-bottom:14px; }
 li.active .btn-alarm-item:before {background-color: rgba(29, 88, 255, 0.06);}

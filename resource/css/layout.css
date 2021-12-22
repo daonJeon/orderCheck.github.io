@@ -501,7 +501,7 @@ width:calc(100% - 40px); font-size:14px;}
 .dropdown-box .btn-drop-menu {display:block; width:100%; padding:10px 12px;font-size: 14px; line-height: 20px; color: #41495D; text-align:left; cursor: pointer; box-sizing: border-box;}
 .dropdown-box li {position: relative;}
 .dropdown-box li + li:before {display:block; margin:0 auto; width:calc(100% - 24px); height:1px; background:#E6E6E6; content:''}
-
+.dropdown-box.on + .dim {display:block}
 
 .header .dropdown-box {z-index: 200}
 .btn-drop-menu.depth2 {background:url(../images/common/ico_polygon.png) no-repeat right 10px center}
