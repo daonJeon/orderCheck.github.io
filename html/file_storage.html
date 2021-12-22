@@ -14,7 +14,7 @@
   <meta name="keywords" content="">
   <meta name="description" content="">
 
-  <title>내 프로필</title>
+  <title>파일 보관함</title>
 
   <!-- css, js 연결 -->
   <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
@@ -79,12 +79,12 @@
           </li>
         </ul>
     </nav>
-    <section id="content" class="content-section type04">
+    <section id="content" class="content-section">
       <!-- #include file="include_header.html" -->
       <!-- header -->
       <div class="header-wrap">
         <header id="header" class="header">
-          <h2 class="title">프로필 설정</h2>
+          <h2 class="title">파일보관함</h2>
           <ul class="menu">
             <li>
               <div class="searchbox">
@@ -142,171 +142,160 @@
       <!-- location -->
       <ul class="location-wrap">
         <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
-        <li><a href="myprofile.html">프로필 설정</a></li>
+        <li><a href="file_storage.html">파일보관함</a></li>
+        <li>홍길동</li>
+        <li>실측사진</li>
       </ul>
       <!-- //location -->
 
-      <div class="cnt-box-wrap">
+      <div class="cnt-box-wrap filePage">
           <!-- cnt-inner -->
           <div class="cnt-inner">
 
             <div class="content-box">
-              <!-- tabs -->
-              <div class="tab-wrap">
-                <ul class="tabs">
-                  <li><button type="button" class="tab-btn active" data-tab="tab1">내 프로필</button></li>
-                  <li class="on"><button type="button" class="tab-btn" data-tab="tab2">회사 정보</button></li>
-                </ul>
-                <span class="slider" data-left="0"></span>
+              <div class="searchbox type02">
+                <i class="ico search"></i>
+                <input type="text" placeholder="고객명, 연락처, 폴더/파일명으로 검색">
               </div>
-              <!-- //tabs -->
-              <section class="tab-content">
-                <div class="content active" id="tab1">
-                  <h2 class="filter-title">프로필 이미지</h2>
-                  <div class="profile-box">
-                    <div class="profile-head">
-                      <div class="profile">
-                        <!-- dropdown-wrap -->
-                        <div class="dropdown-wrap">
-                          <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
-                          <div class="dropdown-box">
-                            <ul>
-                              <li><button type="button" class="btn-drop-menu">사진변경</button></li>
-                              <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- //dropdown-wrap -->
 
-                      </div>
-                    </div>
-                    <div class="profile-cnt">
-                      <div class="filter-box">
-                        <p class="filter-title">개인 코드 <button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
-                        <div class="inp">
-                          <input type="text" name="" id="" value="sklksl234" disabled>
-                        </div>
-                      </div>
-
-                      <div class="filter-box">
-                        <p class="filter-title">이름</p>
-                        <div class="inp">
-                          <input type="text" name="" id="" placeholder="고객명" value="홍길동" readonly>
-                          <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
-                        </div>
-                        <p class="warning-txt02">이름을 입력해주세요.</p>
-                      </div>
-
-                      <div class="filter-box">
-                        <p class="filter-title">이용중인 버전</p>
-                        <div class="inp">
-                          <input type="text" name="" id="" value="스타터" disabled>
-                        </div>
-                      </div>
-
-                      <div class="filter-box">
-                        <p class="filter-title">휴대폰 번호</p>
-                        <div class="inp">
-                          <input type="tel" name="" id="" value="010-1234-5678" disabled>
-                        </div>
-                      </div>
-
-                      <div class="filter-box">
-                        <p class="filter-title">비밀번호</p>
-                        <div class="inp">
-                          <input type="password" name="" id="" value="123456" readonly>
-                          <button type="button" class="pos btn-edit open-layer" data-info="layer-password-change"><span class="txt hide">수정</span></button>
-                        </div>
-                      </div>
-
-                      <div class="filter-box">
-                        <p class="filter-title">이메일</p>
-                        <div class="inp">
-                          <input type="text" name="" id="" value="sample@naver.com" readonly>
-                          <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
-                        </div>
-                        <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
-                        <p class="warning-txt02">이미 가입된 이메일입니다.</p>
-                      </div>
-                      <div class="btn-group02" style="margin-top:40px">
-                        <!-- <button type="button" class="btn-link open-layer" data-info="layer-account-delete-error"><span>계정 삭제(회사)</span></button>
-                        <button type="button" class="btn-link open-layer" data-info="layer-account-delete-confirm"><span>계정 삭제 확인</span></button> -->
-                        <button type="button" class="btn-link open-layer" data-info="layer-account-delete"><span>계정 삭제</span></button>
-                      </div>
-
+              <div class="border-topbox flexbox">
+                <div class="border-box">
+                  <div class="search-top">
+                    <strong class="txt">전체<var class="tx-org">2</var></strong>
+                  </div>
+                  <div class="profile-list">
+                    <div class="inbox">
+                      <ul>
+                        <li><button type="button" class="btn-profile"><span><img src="../resource/images/thumnail/img_person1.png" alt=""><span class="info"><span class="name">김수안</span><span class="txt">010-1234-5678</span></span></span></button></li>
+                        <li class="on"><button type="button" class="btn-profile"><span><img src="../resource/images/thumnail/img_person2.png" alt=""><span class="info"><span class="name">김수안무거북이와두루미</span><span class="txt">010-1234-5678</span></span></span></button></li>
+                        <li><button type="button" class="btn-profile"><span><img src="../resource/images/thumnail/img_person3.png" alt=""><span class="info"><span class="name">현대 L&C | 허각</span><span class="txt">010-1234-5678</span></span></span></button></li>
+                      </ul>
                     </div>
                   </div>
 
-              </div>
-                <div class="content active" id="tab2">
-                  <div class="data-empty-box customer">
-                    <div class="txt-group">
-                      <p class="txt">소속된 회사가 없습니다</p>
-                      <p class="sub-txt">회사를 생성하거나 회사 URL을 통해 기존 회사에 참여하세요</p>
-                      <div class="btn-group02">
-                        <button type="button" class="btn btn-bk-line open-layer" data-info="layer-company-enroll"><span>회사 생성하기</span></button>
-                        <button type="button" class="btn btn-bk open-layer" data-info="layer-company-in"><span>회사 참여하기</span></button>
+                </div>
+                <div class="cnt-box">
+                  <div class="tbl-top">
+                    <h3 class="cnt-title02">김수안무거북이와두루미삼천갑자</h3>
+                    <div class="flexbox">
+                      <span class="inp-select">
+                        <select name="" id="">
+                          <option value="name">이름</option>
+                          <option value="uploadDate">업로드일</option>
+                        </select>
+                      </span>
+                      <span class="inp-select">
+                        <select name="" id="">
+                          <option value="up">오름차순</option>
+                          <option value="down">내림차순</option>
+                        </select>
+                      </span>
+
+                    </div>
+
+                  </div>
+                  <p class="filter-title">폴더</p>
+                  <button type="button" class="btn-folder"><span>실측 사진</span></button>
+                  <p class="filter-title">파일</p>
+                  <ul class="file-box flexbox">
+                    <li>
+                      <div class="imgs">
+                        <img src="../resource/images/common/@temp_file-list.png" alt="">
+                        <p class="txt">도면.jpeg</p>
                       </div>
+                      <!-- btn-file-list -->
+                      <div class="dropdown-wrap fileList">
+                        <div class="dropdown-box">
+                          <ul>
+                            <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-rename"><span>이름 바꾸기</span></a></li>
+                            <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-detail"><span>상세 정보</span></a></li>
+                            <li><a href="#" class="btn-drop-menu download"><span>다운로드</span></a></li>
+                            <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-delete"><span>삭제</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //btn-file-list -->
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                  <div class="dropdown-wrap fileBox">
+                    <div class="dropdown-box">
+                      <ul>
+                        <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-new"><span>새 폴더</span></a></li>
+                        <li><a href="#" class="btn-drop-menu"><span>파일 업로드</span></a></li>
+                        <li><a href="#" class="btn-drop-menu"><span>폴더 업로드</span></a></li>
+                      </ul>
                     </div>
                   </div>
 
+                </div>
               </div>
-
-              </section>
-
-
 
             </div>
           </div>
           <!-- //cnt-inner -->
       </div>
-      <div id="toast"></div>
     </section>
 
   </div>
 
 
-  <!-- 비밀번호 변경 -->
-  <div class="layer-pop" id="layer-password-change">
+  <!-- 이름 바꾸기 -->
+  <div class="layer-pop confirm" id="layer-file-rename">
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">비밀번호 변경</h2>
+        <h2 class="title">이름 바꾸기</h2>
       </div>
       <div class="layer-mid">
-        <div class="form-area">
-          <label for="user_phone" class="filter-title">새 비밀번호</label>
-          <div class="inp">
-            <input type="password" id="user_phone" placeholder="새로운 비밀번호를 입력해주세요."/>
-            <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
-          </div>
-          <p class="warning-txt02">영문, 숫자, 특수문자 혼합 8~16자리로 입력해주세요. </p>
-
-          <label for="user_auth" class="filter-title">비밀번호 확인</label>
-          <div class="inp">
-            <input type="password" id="user_auth" placeholder="새로운 비밀번호를 다시 입력해주세요.">
-            <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
-          </div>
-          <p class="warning-txt02">비밀번호가 일치하지 않습니다.</p>
+        <label for="filleRename" class="filter-title">이름</label>
+        <div class="inp">
+          <input type="text" name="" id="filleRename" placeholder="실측사진">
         </div>
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk layer-close confirm"><span>확인</span></button>
+          <button type="button" class="btn btn-bk open-layer" data-info="layer-type-select"><span>확인</span></button>
         </div>
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
       </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 신청폼 제목 -->
+  <div class="layer-pop confirm" id="layer-file-new">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">새 폴더</h2>
+      </div>
+      <div class="layer-mid">
+        <label for="filleRename" class="filter-title">이름</label>
+        <div class="inp">
+          <input type="text" name="" id="filleRename" placeholder="제목없는 폴더">
+        </div>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk open-layer" data-info="layer-type-select"><span>확인</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
     </div>
   </div>
 
   <!-- 계정 삭제 오류 -->
-  <div class="layer-pop confirm" id="layer-account-delete-error">
+  <div class="layer-pop confirm" id="layer-file-delete">
     <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">계정 삭제</h2>
-      </div>
       <div class="layer-mid">
-        <p class="confirm-msg">계정을 삭제하려면 현재 속해 있는 회사에서<br>나온 후 다시 시도해주세요</p>
+        <p class="confirm-msg">삭제하시겠습니까?</p>
         <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
         </div>
       </div>
@@ -315,15 +304,36 @@
   </div>
 
   <!-- 계정 삭제 확인 -->
-  <div class="layer-pop confirm" id="layer-account-delete-confirm">
+  <div class="layer-pop confirm" id="layer-file-detail">
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">계정 삭제</h2>
+        <h2 class="title">도면.jpg 상세 정보</h2>
       </div>
       <div class="layer-mid">
-        <p class="confirm-msg">계정을 삭제하시겠습니까?<br> 계정을 삭제하면 모든 데이터가 사라지고 복구할 수 없습니다.</p>
+        <ul class="info-list row">
+          <li>
+            <strong class="head">종류</strong>
+            <var class="cnt">jpg 파일</var>
+          </li>
+          <li>
+            <strong class="head">크기</strong>
+            <var class="cnt">454.22MB</var>
+          </li>
+          <li>
+            <strong class="head">위치</strong>
+            <var class="cnt">현대L&C ㅣ 박용섭</var>
+          </li>
+          <li>
+            <strong class="head">게시자</strong>
+            <var class="cnt">홍길동</var>
+          </li>
+          <li>
+            <strong class="head">업로드일</strong>
+            <var class="cnt">2021.10.31</var>
+          </li>
+        </ul>
+
         <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
         </div>
       </div>
@@ -427,7 +437,6 @@
       </div>
       <div class="layer-mid">
         <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다. 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
-
         <div class="layer-btn tr">
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>요금제 가입</span></button>
         </div>
@@ -435,6 +444,8 @@
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
     </div>
   </div>
+
+
 
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
@@ -447,8 +458,7 @@
     //관리페이지용 공통 함수
     pageInit ()
     //우측 탭
-    tabFunc (".tab-wrap")
-
+    clickTargetCloseAddFunc(".profile-list .btn-profile","li","on",null,true)
     clickTargetCloseAddFunc(".pos.btn-edit",".inp","edit", function (e){
       if(e.currentTarget.closest(".inp").classList.contains("edit")) {
         e.currentTarget.previousElementSibling.readOnly = false
@@ -457,6 +467,7 @@
       }
     })
     //레이어
+
     layerFunc (".open-layer",null, function (){
       var input = document.querySelectorAll(".inp")
 
@@ -475,7 +486,103 @@
     $('.inp-select select').niceSelect();
 
     dropMenuOpen(".profile-head .profile .btn-thum-edit",".profile-head .profile .dropdown-box",".profile-head .profile .btn-drop-menu")
+
     inpTypeSwitch()
+
+
+    function fileBoxDropMenuFunc () {
+      var dropMenuWrap = document.querySelector(".dropdown-wrap.fileBox")
+      var dropMenuBox = document.querySelector(".dropdown-wrap.fileBox .dropdown-box")
+      var dropMenuDim = document.querySelector(".dropdown-wrap.fileBox .dim")
+      var dropMenuAll = document.querySelectorAll(".dropdown-wrap")
+
+      document.querySelector(".filePage .cnt-box").addEventListener("mousedown",function(e){
+
+        if(e.target.className == "cnt-box"||e.target.className == "tbl-top") {
+          var isRightButton;
+          e = e || window.event;
+
+          if ("which" in e) isRightButton = e.which == 3;
+          else if ("button" in e) isRightButton = e.button == 2;
+
+          if(isRightButton) {
+            e.preventDefault()
+
+            Array.prototype.forEach.call(dropMenuAll, function(dropAll, idx){
+              dropAll.querySelector(".dropdown-box").classList.remove("on")
+            })
+
+            dropMenuBox.classList.add("on");
+            dropMenuBox.style.top = (e.clientY -20) + "px"
+            dropMenuBox.style.left = (e.clientX - 20) + "px"
+
+            e.target.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+          }
+
+        }
+
+      })
+      document.querySelector(".filePage .cnt-box").addEventListener("click",function(e){
+        var target;
+        e.target.tagName == "SPAN"? target = e.target.parentElement : target = e.target
+        dropMenuDim.style.display = "none"
+          dropMenuBox.classList.remove("on");
+
+      })
+
+    }
+    fileBoxDropMenuFunc()
+
+    function fileListDropMenuFunc () {
+      var dropMenuAll = document.querySelectorAll(".dropdown-wrap")
+      var dropMenuDim = document.querySelector(".dropdown-wrap.fileList .dim")
+
+      document.querySelector(".file-box").addEventListener("mousedown",function(e){
+        var dropMenuBox = e.target.closest("li").querySelector(".dropdown-box")
+        if(e.target.tagName == "IMG"||e.target.tagName == "LI") {
+
+          Array.prototype.forEach.call(dropMenuAll, function(dropAll, idx){
+            dropAll.querySelector(".dropdown-box").classList.remove("on")
+          })
+
+          var isRightButton;
+          e = e || window.event;
+
+          if ("which" in e) isRightButton = e.which == 3;
+          else if ("button" in e) isRightButton = e.button == 2;
+
+          if(isRightButton) {
+            e.preventDefault()
+
+            if(dropMenuBox != null) dropMenuBox.classList.add("on");
+
+          }
+
+          e.target.addEventListener('contextmenu', function(e) {
+              e.preventDefault();
+          });
+        }
+        dropMenuDim.addEventListener('click', function(e) {
+          alert()
+            e.preventDefault();
+            dropMenuDim.style.display = "none"
+            dropMenuBox.classList.remove("on");
+        });
+
+      })
+      document.querySelector(".filePage .cnt-box").addEventListener("click",function(e){
+        Array.prototype.forEach.call(dropMenuAll, function(dropAll, idx){
+          dropAll.querySelector(".dropdown-box").classList.remove("on")
+        })
+
+      })
+
+    }
+    fileListDropMenuFunc()
+
   </script>
 </body>
 </html>

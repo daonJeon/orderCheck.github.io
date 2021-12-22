@@ -321,13 +321,15 @@ function btnRemoveFunc (wrap,btnClass) {
   })
 }
 
-function tabFunc (tabwrap,isFullSlider,callback) {
+function tabFunc (tabwrap,isFullSlider,callback,tabCntClass) {
   setTimeout(function(e) {
   var wrap = document.querySelector(tabwrap)
   var tabBtn = wrap.querySelectorAll(".tab-btn")
   var slider = wrap.querySelector(".slider")
   var tabContent = document.querySelectorAll(".tab-content .content")
   var offsetPos = []
+
+  if(tabCntClass != null ) tabContent = document.querySelectorAll(tabCntClass)
 
   if(callback!= null ) callback()
 
@@ -998,7 +1000,7 @@ function ToastFunc(btn, msg, time) {
   Array.prototype.forEach.call(button, function(btn, idx){
     btn.addEventListener("click", createToast)
   })
-
+  if(btn == null ) createToast()
   function createToast () {
     var toastEl = document.createElement("div")
     toastEl.classList.add("toast")
@@ -1099,9 +1101,53 @@ function templateSlider (wrap,defaultPage) {
       defaultPage = showSection
     })
   })
-
-
 }
+
+//알림용 드롭메뉴
+function alarmDropMenu () {
+  var target = document.querySelectorAll(".btn-drop-menu.recall")
+   Array.prototype.forEach.call(target, function(ele, idx){
+    ele.addEventListener("click",function(e){
+      e.currentTarget.nextElementSibling.classList.add("on")
+    })
+
+  })
+  var target = document.querySelectorAll(".btn-drop-menu.del")
+    Array.prototype.forEach.call(target, function(ele, idx){
+      ele.addEventListener("click",function(e){
+      e.currentTarget.closest(".alarm-box").classList.add("edit")
+      //e.currentTarget.closest(".dropdown-box.depth2").classList.remove("on")
+      e.currentTarget.closest(".dropdown-box.depth1").classList.remove("on")
+    })
+
+  })
+
+  var target = document.querySelectorAll(".btn-drop-menu.confirm")
+    Array.prototype.forEach.call(target, function(ele, idx){
+      ele.addEventListener("click",function(e){
+      e.currentTarget.closest(".active").classList.remove("active")
+      e.currentTarget.closest(".dropdown-box.depth1").classList.remove("on")
+    })
+
+  })
+
+  var depth2Menu = document.querySelectorAll(".btn-drop-menu.dep2")
+  Array.prototype.forEach.call(depth2Menu, function(dep2, idx){
+    dep2.addEventListener("click",function(e){
+      var flag = e.currentTarget.getAttribute("data-time")
+      var msg = ''
+      if(flag == "30m") msg = "30분 후에 다시 알림이 설정되었습니다."
+      else if(flag == "1h") msg = "1시간 후에 다시 알림이 설정되었습니다."
+      if(flag == "tomorrow") msg = "내일 다시 알림이 설정되었습니다."
+      e.currentTarget.closest(".dropdown-box.depth2").classList.remove("on")
+      e.currentTarget.closest(".dropdown-box.depth1").classList.remove("on")
+      ToastFunc(null,msg,2000)
+
+    })
+  })
+}
+
+
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴

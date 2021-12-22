@@ -31,13 +31,13 @@
       <div class="header-wrap">
         <header id="header" class="header">
           <div class="title">
-            <button type="button" class="btn-txt-prev"><span><i></i>신청폼 리스트 돌아가기</span></button>
+            <button type="button" class="btn-txt-prev"><span>신청폼 리스트 돌아가기</span></button>
           </div>
           <ul class="menu">
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
-                <input type="text" placeholder="제목으로 검색하세요">
+                <input type="text" placeholder="검색하세요">
               </div>
             </li>
             <li>
@@ -89,7 +89,9 @@
 
 
       <header class="tbl-top band">
-        <input type="text" placeholder="제목 없는 신청폼" class="inp-title">
+        <div class="inp">
+          <input type="text" value="제목 없는 신청폼" placeholder="제목 없는 신청폼"class="inp-title">
+        </div>
         <div class="tab-wrap">
           <ul class="tabs">
             <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>
@@ -419,9 +421,7 @@
 
             <footer class="cnt-bottom">
               <button type="button" class="btn-form-arrow" title="사이드오픈" data-direction="left">
-                <span>
-                  <img src="../resource/images/common/ico_form-arrow-left.png" alt=""/>
-                </span>
+                <span class="hide">사이드 메뉴 열기</span>
               </button>
 
               <div>
@@ -433,9 +433,7 @@
               </div>
 
               <button type="button" class="btn-form-arrow" title="사이드오픈" data-direction="right">
-                <span>
-                  <img src="../resource/images/common/ico_form-arrow-right.png" alt=""/>
-                </span>
+                 <span class="hide">사이드 메뉴 열기</span>
               </button>
 
             </footer>

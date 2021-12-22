@@ -79,7 +79,7 @@
           </li>
         </ul>
     </nav>
-    <section id="content" class="content-section">
+    <section id="content" class="content-section type04">
       <!-- #include file="include_header.html" -->
       <!-- header -->
       <div class="header-wrap">
@@ -150,7 +150,7 @@
           <!-- cnt-inner -->
           <div class="cnt-inner">
 
-            <div class="line">
+            <div class="content-box">
               <!-- tabs -->
               <div class="tab-wrap">
                 <ul class="tabs">
@@ -254,7 +254,6 @@
                           </div>
                         </div>
                         <!-- //dropdown-wrap -->
-
                       </div>
                     </div>
                     <div class="profile-cnt">
@@ -309,12 +308,8 @@
 
                     </div>
                   </div>
-
-              </div>
-
+                </div>
               </section>
-
-
 
             </div>
           </div>
@@ -365,8 +360,7 @@
         <h2 class="title">계정 삭제</h2>
       </div>
       <div class="layer-mid">
-        <p class="confirm-msg">계정을 삭제하려면 현재 속해 있는 회사에서
-          나온 후 다시 시도해주세요</p>
+        <p class="confirm-msg">계정을 삭제하려면 현재 속해 있는 회사에서<br>나온 후 다시 시도해주세요</p>
         <div class="layer-btn tr">
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
         </div>
@@ -488,7 +482,6 @@
       </div>
       <div class="layer-mid">
         <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다. 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
-
         <div class="layer-btn tr">
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>요금제 가입</span></button>
         </div>
@@ -503,13 +496,14 @@
      <button type="button" class="btn-link open-layer" data-info="layer-account-delete-error"><span>계정 삭제(회사)</span></button>
     <button type="button" class="btn-link open-layer" data-info="layer-account-delete-confirm"><span>계정 삭제 확인</span></button>
   </div>
+
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js" ></script>
   <script>
-    ToastFunc(".pop-toast",'클립보드에 복사되었습니다.110',2000)
+    ToastFunc(".pop-toast",'클립보드에 복사되었습니다.',2000)
 
     //관리페이지용 공통 함수
     pageInit ()

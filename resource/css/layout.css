@@ -74,7 +74,8 @@ input[type=text]::-ms-clear { display:none;}
 .btn { min-width: 90px; padding:11px 10px; border-radius: 6px;text-align: center; font-size:14px; transition: all .3s; }
 .btn-l {min-width:auto; padding:16px 14px 17px; line-height:20px; font-size:16px; border-radius: 6px;text-align: center; transition: all .3s; }
 .btn-m {min-width:auto; padding:8px 17px 7px; line-height:20px; font-size:14px; border-radius: 6px;text-align: center; transition: all .3s; }
-
+.btn-s {min-width:auto; padding:6px 13px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; }
+.btn-s + .btn-s {margin-left:4px}
 .btn .ico, .btn-l .ico {vertical-align:-2px; margin-right:4px;}
 .btn >span, .btn-l > span {position:relative;}
 
@@ -206,7 +207,9 @@ div.switch.no-txt {display: block;}
 .cnt-inner .right {width:100%; min-width:1247px; margin-left:20px;}
 
 .cnt-inner .line {padding:20px 26px; border: 1px solid #CDD1DA; border-radius: 10px; box-sizing: border-box; background-color:#fff}
-.cnt-inner .line .content {padding:20px 0; height: 100%; box-sizing: border-box;}
+.cnt-inner .line .content,
+.cnt-inner .content-box .content  {padding:20px 0; height: 100%; box-sizing: border-box;}
+.cnt-inner .content-box {padding:20px 26px;border-radius: 10px; box-sizing: border-box; background-color:#fff}
 
 .subpage {padding:110px 0 20px; min-height:100vh; display: flex; align-items: center; box-sizing: border-box;}
 .subpage .header {position:fixed; width:100%; top:0; left:0; justify-content: center; padding:34px 0; z-index: 1; background-color: #fff;}
@@ -260,26 +263,26 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .gnb-box {position:fixed; top:0; width:200px; height:100%; z-index:100; transition:all 0.8s}
 .gnb-box.left {left:-100%}
 .gnb-box.right {right:-100%}
-
-
+.gnb-box.right.alarm {width:440px;padding:22px 15px; box-sizing: border-box;}
+.gnb-box.right .btm {position: absolute; width:100%; padding: 17px 20px 20px; left:0; bottom: 0px; z-index: 1; border-top:1px solid #E3E3E3}
+.gnb-box.right .data-empty-box {height:calc(100vh - 153px); overflow: auto;}
+.gnb-box.right .data-empty-box .txt {font-weight: 400;}
 
 
 
 .gnb-wrap.menu .btn-menu.open + .gnb-box,
 .gnb-box.right.open {right:0;  transition:all 0.8s}
 .gnb-box.left.open {left:0;  transition:all 0.8s}
-.btn-close,
-.btn-side-close {position:absolute; width:20px; height:20px; top:31px; right:32px; z-index:1; transition:.3s all;}
+
+.btn-side-close {position:absolute; top:23px; right:20px; width:24px; height:24px; background:url(../images/common/ico_close-type02.png) no-repeat center}
+.btn-close {position:absolute; width:20px; height:20px; top:31px; right:32px; z-index:1; transition:.3s all;}
 .btn-close:hover,
 .btn-side-close:hover {transform:rotate(90deg)}
 .btn-close .txt,
 .btn-side-close .txt {position: absolute; left:-9999px; z-index: 1;}
-.btn-close:before, .btn-close:after,
-.btn-side-close:before, .btn-side-close:after {position:absolute; left:0; top:10px; width:100%; height:2px; background:#BCBCBC; content:''}
-.btn-close:before,
-.btn-side-close:before {transform:rotate(45deg)}
-.btn-close:after,
-.btn-side-close:after {transform:rotate(-45deg)}
+.btn-close:before, .btn-close:after{position:absolute; left:0; top:10px; width:100%; height:2px; background:#BCBCBC; content:''}
+.btn-close:before {transform:rotate(45deg)}
+.btn-close:after {transform:rotate(-45deg)}
 .btn-manager-add .ico.plus,
 .btn-bk .ico.plus {margin-right:5px}
 .btn-bk .ico.plus:after,
@@ -320,12 +323,13 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== Tab =====*/
 .tab-wrap {position:relative;}
 .tabs {display:flex; justify-content:start; border-bottom:1px solid #e6e6e6}
-.tabs li .tab-btn {display:inline-block; padding-bottom:8px;  font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
-.tabs li.on .tab-btn {font-weight: bold; font-weight: 500; color: #02164F;}
+.tabs li .tab-btn, .tabs li .tab-btn02 {display:inline-block; padding-bottom:8px;  font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
+.tabs li.on .tab-btn, .tabs li.on .tab-btn02 {font-weight: bold; font-weight: 500; color: #02164F;}
 .tabs li + li {margin-left:34px}
 .tab-wrap .slider {display:block; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
 .tabs li.on var {display:inline-block; margin-left:2px}
-.tbl-top.band .tabs li .tab-btn {color:#fff}
+.tbl-top.band .tabs li .tab-btn,
+.tbl-top.band .tabs li .tab-btn02 {color:#fff}
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
@@ -492,13 +496,16 @@ width:calc(100% - 40px); font-size:14px;}
 .searchbox.type02 .btn-close {top:50%; right:10px; margin-top:-10px;}
 /* dropdown */
 .dropdown-wrap {position: relative;}
-.dropdown-box {display:none; position:absolute; top:40px; width:100px; min-height:20px; padding:4px 12px; border:1px solid #ddd; box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25); border-radius: 4px; background-color: #fff; z-index: 2; background-color:#fff;}
+.dropdown-box {display:none; position:absolute; top:40px; width:126px; min-height:20px; border:1px solid #ddd; box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25); border-radius: 4px; background-color: #fff; z-index: 2; background-color:#fff;}
 .dropdown-box.on {display: block;}
-.dropdown-box .btn-drop-menu {display:block; padding:10px 0;font-size: 14px; line-height: 20px; color: #41495D;cursor: pointer;}
-.dropdown-box li + li {border-top:1px solid #E6E6E6;}
+.dropdown-box .btn-drop-menu {display:block; width:100%; padding:10px 12px;font-size: 14px; line-height: 20px; color: #41495D; text-align:left; cursor: pointer; box-sizing: border-box;}
+.dropdown-box li {position: relative;}
+.dropdown-box li + li:before {display:block; margin:0 auto; width:calc(100% - 24px); height:1px; background:#E6E6E6; content:''}
+
+
 .header .dropdown-box {z-index: 200}
-
-
+.btn-drop-menu.depth2 {background:url(../images/common/ico_polygon.png) no-repeat right 10px center}
+.btn-drop-menu.depth2 + .dropdown-box {top:0; right:127px;}
 /* ico */
 .ico {display:inline-block; min-width:48px; width:48px; height:42px; background-repeat:no-repeat; background-position:center; transition:all .5s}
 .ico.home {background-image:url(../images/nav/ico_home.png)  }
