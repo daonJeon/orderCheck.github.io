@@ -1125,7 +1125,7 @@ function alarmDropMenu () {
   var target = document.querySelectorAll(".btn-drop-menu.confirm")
     Array.prototype.forEach.call(target, function(ele, idx){
       ele.addEventListener("click",function(e){
-      e.currentTarget.closest(".active").classList.remove("active")
+      e.currentTarget.closest("li.active").classList.remove("active")
       e.currentTarget.closest(".dropdown-box.depth1").classList.remove("on")
     })
 
@@ -1145,6 +1145,68 @@ function alarmDropMenu () {
 
     })
   })
+}
+
+function alarmAllChecked (btn,applyWrap) {
+  var doneBtn = document.querySelectorAll(btn)
+  var applyArea = document.querySelectorAll(applyWrap)
+  Array.prototype.forEach.call(doneBtn, function(done, idx){
+    done.addEventListener("click",function(e){
+      Array.prototype.forEach.call(applyArea, function(area, idx){
+        area.classList.remove("active")
+
+      })
+
+    })
+  })
+}
+
+function alarmListFunc (applyBtn,closestArea) {
+  var btn =  document.querySelectorAll(applyBtn)
+
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.preventDefault()
+      e.currentTarget.closest("li").classList.remove("active");
+      //alarmActiveCheck(e.currentTarget.closest(closestArea),applyBtn)
+    });
+  })
+  //체크!
+
+}
+alarmListFunc(".btn-alarm-item",".alarm-list")
+alarmActiveCheck()
+
+function alarmActiveCheck (applyWraps,applyBtn) {
+  var btns = document.querySelectorAll(".alarm-list .btn-alarm-item")
+  Array.prototype.forEach.call(btns, function(btn, idx){
+    var thisElement =  btn.closest("li")
+    var prevElement =  btn.closest("li").previousElementSibling
+    var nextElement =  btn.closest("li").nextElementSibling
+    console.log(nextElement)
+
+    if(prevElement != null || nextElement != null ) {
+      if(!prevElement.classList.contains("active") && thisElement.classList.contains("active") && nextElement.classList.contains("active") ){//start
+        thisElement.classList.remove("in-range");
+        thisElement.classList.remove("start");
+        thisElement.classList.remove("end");
+        thisElement.classList.add("start");
+      } else if(prevElement.classList.contains("active") && thisElement.classList.contains("active") && nextElement.classList.contains("active") ){//in range
+        thisElement.classList.remove("in-range");
+        thisElement.classList.remove("start");
+        thisElement.classList.remove("end");
+        thisElement.classList.add("in-range");
+      } else if(prevElement.classList.contains("active") && thisElement.classList.contains("active") && !nextElement.classList.contains("active") ){//in range
+        thisElement.classList.remove("in-range");
+        thisElement.classList.remove("start");
+        thisElement.classList.remove("end");
+        thisElement.classList.add("in-range");
+      }
+
+    }
+
+  })
+
 }
 
 

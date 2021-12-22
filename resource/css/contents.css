@@ -798,10 +798,13 @@ ul.inp-line > li {display: flex; align-items: center;}
 .btn-alarm-item .sub-txt {display:block; font-size: 13px; line-height: 19px;}
 .alarm-list .btn-show-menu {position:absolute; top:17px; right:4px; z-index: 1;}
 .btn-show-menu {width:16px; height:16px; background: url(../images/common/ico_draw-cnt.png) no-repeat center;}
-.active .btn-alarm-item {position:relative; padding-top:15px; padding-bottom:14px; }
-.active .btn-alarm-item:before {background-color: rgba(29, 88, 255, 0.06);}
-.active .btn-alarm-item .main-txt {color:#41495D}
-.active .btn-alarm-item .sub-txt {color:#7B7B7B}
+li.active .btn-alarm-item {position:relative; padding-top:15px; padding-bottom:14px; }
+li.active .btn-alarm-item:before {background-color: rgba(29, 88, 255, 0.06);}
+li.active .btn-alarm-item .main-txt {color:#41495D}
+li.active .btn-alarm-item .sub-txt {color:#7B7B7B}
+li.active + li.active:before {position:absolute; top:-10px; left:0; width:10px; height:20px; background:#F6F9FF; z-index: 1; content:''}
+li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; height:20px; background:#F6F9FF; z-index: 1; content:''}
+
 .alarm-list > li.active {background-color: #F6F9FF; border-radius: 10px;}
 .alarm-list > li.active:first-child {border-top-left-radius: 10px; border-top-right-radius: 10px;}
 .alarm-list > li + li.active {border-radius: 10px;}
