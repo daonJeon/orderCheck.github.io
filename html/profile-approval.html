@@ -150,7 +150,7 @@
           <!-- cnt-inner -->
           <div class="cnt-inner">
 
-            <div class="content-box">
+            <div class="content-box profile">
               <!-- tabs -->
               <div class="tab-wrap">
                 <ul class="tabs">
@@ -162,16 +162,21 @@
               <!-- //tabs -->
               <section class="tab-content">
                 <div class="content active" id="tab1">
-                  <h2 class="filter-title">프로필 이미지</h2>
+                  <h2 class="inp-title">프로필 이미지</h2>
                   <div class="profile-box">
                     <div class="profile-head">
                       <div class="profile">
                         <!-- dropdown-wrap -->
-                        <div class="dropdown-wrap">
+                        <div class="dropdown-wrap hover">
                           <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
                           <div class="dropdown-box">
                             <ul>
-                              <li><button type="button" class="btn-drop-menu">사진변경</button></li>
+                              <li>
+                                <span class="inp">
+                                  <input type="file" name="" id="file1" placeholder="파일 검색">
+                                  <label for="file1" class="btn-drop-menu"><span>사진 변경</span></label>
+                                </span>
+                              </li>
                               <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
                             </ul>
                           </div>
@@ -207,7 +212,7 @@
                       <div class="filter-box">
                         <p class="filter-title">휴대폰 번호</p>
                         <div class="inp">
-                          <input type="tel" name="" id="" value="010-1234-5678" disabled>
+                          <input type="tel" name="" id="" value="010.1234.5678" disabled>
                         </div>
                       </div>
 
@@ -409,7 +414,7 @@
           <label for="user_companyUrl" class="filter-title">회사 URL</label>
           <div class="inp-line url">
             <span class="inp">
-              <input type="text" id="user_companyUrl" placeholder="URL 주소를 입력해주세요.">
+              <input type="text" id="user_companyUrl" placeholder="회사 URL">
             </span>
             <span class="url-address">.ordercheck.io</span>
           </div>
@@ -434,6 +439,7 @@
         <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다. 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
 
         <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>요금제 가입</span></button>
         </div>
       </div>

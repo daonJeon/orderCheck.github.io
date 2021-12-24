@@ -74,7 +74,7 @@
 .btn-drop .arrow:after {position:absolute; right:0; top:50%; margin-top:-3px; border-top-color: #818181; }
 
 .cnt-box-wrap {display:flex; padding:30px;}
-.cnt-box {padding:28px 20px; background:#fff; border-radius: 16px;}
+.cnt-box {padding:28px 20px; background:#fff; border-radius: 16px; box-sizing: border-box;}
 .cnt-box.left {flex-basis: 380px; min-width: 340px}
 .cnt-box.right {width:100%; margin-left:20px; }
 .cnt-box:first-child:last-child {width:100%}
@@ -226,9 +226,10 @@
 .manager-box.page .inbox .label {display:flex; align-items: center; padding:7px 0; }
 
 .manager-box + .layer-btn {margin-top:26px;}
-.layer-btn > .btn-bk-line{ min-width:auto; width:107px;}
-.layer-btn > .btn-bk { min-width:auto; width:90px;}
-
+.layer-btn > .btn-bk-line{ min-width:auto; width:107px; font-size:16px;font-weight:bold}
+.layer-btn > .btn-bk { min-width:auto; width:90px; font-size:16px;font-weight:bold}
+.layer-btn > button,
+.layer-btn > a {height:55px}
 .accordion-box { border:1px solid #E5E7EC; border-radius: 8px; overflow: hidden; }
 .accordion-box.active {border-color:#02164F}
 .accordion-box + .accordion-box {margin-top:12px}
@@ -330,7 +331,8 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .pos.btn-pw-show.active {background-image:url(../images/common/ico_pw-show-active.png)}
 .pos.btn-edit {width:24px; height:24px; background:url(../images/common/ico_edit.png) no-repeat center; }
 .edit .pos.btn-edit,
-.pos.btn-edit.active {background-image:url(../images/common/ico_edit-on.png)}
+.pos.btn-edit.active,
+.pos.btn-edit:hover {background-image:url(../images/common/ico_edit-on.png)}
 
 
 .auth-box {width:420px; margin:28px auto 50px; text-align: center;}
@@ -529,7 +531,6 @@ button.box.active {border-color:#02164F}
 .form-list-box > .form-temp-list .template.pc .tx-gray.lg > span {display:inline-block; }
 .form-list-box > .form-temp-list .template {margin:0 auto;width:480px; height:700px}
 .form-list-box > .form-temp-list .template.pc {width:100%; }
-.form-list-box > .form-temp-list .template.pc .inbox {}
 .form-list-box > .form-temp-list .template.pc .inbox > * {width:550px; margin:0 auto; }
 
 .form-list-box > .form-temp-list .template .btn-group {margin:40px 0 60px; }
@@ -673,6 +674,7 @@ button.box.active {border-color:#02164F}
 .flex-sidebox {display:flex; justify-content: space-between;}
 .flex-sidebox.top {align-items: flex-start;}
 .flex-sidebox.center {align-items: center;}
+.flex-sidebox.end {align-items: flex-end;}
 
 .inp-line .label {margin-right:6px;font-weight: bold; font-size: 14px; line-height: 20px; color: #414C5D;}
 ul.inp-line > li + li {margin-left:36px}
@@ -709,6 +711,8 @@ ul.inp-line > li {display: flex; align-items: center;}
 .profile-box .profile-cnt {width:400px;}
 
 .line-box {padding:16px; border: 1px solid #E7E7E7; box-sizing: border-box; border-radius: 6px;}
+.line-box,
+.line-box .filter-title { color:#555868}
 .line-box .head {width:64%;}
 .alarm-wrap {width:700px}
 .alarm-wrap .line-box + .line-box {margin-top:10px}
@@ -717,6 +721,7 @@ ul.inp-line > li {display: flex; align-items: center;}
 .line-box .cell-box {display:flex; width:36%;}
 .alarm-wrap .tbl-top .cell-box .cell,
 .line-box .cell-box .cell {width:50%; text-align: center;}
+.line-box .cell-box .checkbox .box{ margin:0; margin-left:32px;}
 
 .border-topbox { height:calc(100% - 54px); margin-top:14px; padding-top:20px; border-top:2px solid #02164F; box-sizing: border-box;}
 .border-box { padding:16px 0; width:360px; height:100%; background: #F9F9F9; border: 1px solid #E6E6E6; border-radius: 6px; box-sizing: border-box;}
@@ -843,3 +848,5 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .content-box.alarm .alarm-list {padding-bottom:12px; border-bottom:1px solid #F2F2F2;}
 .content-box.alarm .alarm-list:last-child {border-bottom:none}
 .alarm-box .empty-box {margin-bottom:20px; padding:60px 0 60px; border-bottom:1px solid #F2F2F2;}
+
+.content-box.profile .inp-title {margin-bottom:20px;}

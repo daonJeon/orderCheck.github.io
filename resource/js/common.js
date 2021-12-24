@@ -91,13 +91,11 @@ if (!('remove' in Element.prototype)) {
 
 
 //메인 , 드롭 메뉴삐상구
-function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
+function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc, callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
   var dimFlag = 0
-  clickAddClassFunc (btnName,dropBox,"on",function(e){
-    console.log(e.currentTarget.nextElementSibling.style)
-    e.currentTarget.nextElementSibling.style.left = e.pageX + "px"
-    e.currentTarget.nextElementSibling.style.top = e.pageY + "px"
+  clickAddClassFunc (btnName,dropBox,"on", function(){
+    if(callback != null) callback()
   })
   //모든 드롭 다운 메뉴에 dim 순회
   var dropDownMenu = document.querySelectorAll(btnName)
@@ -1218,15 +1216,44 @@ function alarmListFunc (applyBtn,closestArea) {
 }
 alarmListFunc(".btn-alarm-item",".alarm-list")
 
+function inpEditFunc (){
+  var btn = document.querySelectorAll(".pos.btn-edit")//3
+  Array.prototype.forEach.call(btn, function(b, idx){
+    var input = b.closest(".inp")
+    var dimElement = document.createElement("div")
+    dimElement.classList.add("dim")
+    input.appendChild(dimElement)
+    var dim = input.querySelector(".dim")
 
+    dim.style.display ="none"
+    b.addEventListener("click",function(e){
+      input.classList.toggle("edit")
+      if(input.classList.contains("edit")) {
+        input.classList.add("active")
+        e.currentTarget.previousElementSibling.readOnly = false
+      } else {
+        input.classList.remove("active")
+        e.currentTarget.previousElementSibling.readOnly = true
+      }
+    })  
+
+    dim.addEventListener("click",function(e){
+      dim.parentElement.removeChild(dim)
+      alert("dimcloase")
+    })  
+
+  })
+}
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu',null)//상단 드롭 메뉴
   dropMenuOpen ('.dropdown-wrap.type02 .btn-drop','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null, function (){
-    alert()
-  })//상단 드롭 메뉴
+  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null, function(e){
+    console.log(e.currentTarget.nextElementSibling.style)
+    e.currentTarget.nextElementSibling.style.left = e.pageX + "px"
+    e.currentTarget.nextElementSibling.style.top = e.pageY + "px"
+  })
 
 }
 
