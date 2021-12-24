@@ -92,13 +92,15 @@
         <div class="inp">
           <input type="text" value="제목 없는 신청폼" placeholder="제목 없는 신청폼"class="inp-title">
         </div>
-        <div class="tab-wrap">
-          <ul class="tabs">
-            <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>
-            <li><button type="button" class="tab-btn">공유하기</button></li>
-            <li><button type="button" class="tab-btn">설정</button></li>
-          </ul>
-          <span class="slider" data-left="0"></span>
+        <div class="band-center tc">
+          <div class="tab-wrap">
+            <ul class="tabs">
+              <li class="on"><button type="button" class="tab-btn active">편집하기</button></li>
+              <li><button type="button" class="tab-btn">공유하기</button></li>
+              <li><button type="button" class="tab-btn">설정</button></li>
+            </ul>
+            <span class="slider" data-left="0"></span>
+          </div>
         </div>
         <div class="row-list">
 

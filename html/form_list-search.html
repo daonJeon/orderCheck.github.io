@@ -88,7 +88,7 @@
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
-                <input type="text" placeholder=" 검색하세요">
+                <input type="text" placeholder="검색하세요">
               </div>
             </li>
             <li>
@@ -152,19 +152,32 @@
             <h3 class="title">신청폼 리스트</h3>
             <div class="searchbox type02">
               <i class='ico search02'></i>
-              <input type="text" placeholder="제목으로 검색">
+              <input type="text" placeholder="제목으로 검색" value="상담">
+              <button type="button" class="pos btn-delete"><span class="hide">삭제</span></button>
             </div>
           </div>
           <!-- //tbl-top -->
           <ul class="estimate-list">
             <li>
-              <button type="button" class="btn-form-add open-layer" data-info="layer-form-title">
-                <span>신청폼 생성하기</span>
-              </button>
+              <div class="btn-form">
+                <span class="txt"><strong class="tx-blue">상담</strong> 신청</span>
+                <span class="date">2021.12.26</span>
+                <div class="dropdown-wrap">
+                  <button type="button" class="btn-form-menu"><span>메뉴열기</span></button>
+                  <div class="dropdown-box">
+                    <ul>
+                      <li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>
+                      <li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>
+                      <li><a href="#" class="btn-drop-menu" onclick='ToastFunc(null,"클립보드에 복사되었습니다.",2000)'><span>링크 복사</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
             </li>
             <li>
               <div class="btn-form">
-                <span class="txt">신청서 제목란입니다</span>
+                <span class="txt">방문 <strong class="tx-blue">상담</strong> 신청</span>
                 <span class="date">2021.12.26</span>
                 <div class="dropdown-wrap">
                   <button type="button" class="btn-form-menu"><span>메뉴열기</span></button>

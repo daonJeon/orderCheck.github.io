@@ -94,7 +94,11 @@ if (!('remove' in Element.prototype)) {
 function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
   var dimFlag = 0
-  clickAddClassFunc (btnName,dropBox,"on")
+  clickAddClassFunc (btnName,dropBox,"on",function(e){
+    console.log(e.currentTarget.nextElementSibling.style)
+    e.currentTarget.nextElementSibling.style.left = e.pageX + "px"
+    e.currentTarget.nextElementSibling.style.top = e.pageY + "px"
+  })
   //모든 드롭 다운 메뉴에 dim 순회
   var dropDownMenu = document.querySelectorAll(btnName)
   Array.prototype.forEach.call(dropDownMenu, function(menu, idx){
@@ -120,6 +124,7 @@ function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc,callback) {
           Array.prototype.forEach.call(btnMenu, function(drop, idx){
             drop.classList.remove("on")
           })
+
           e.target.classList.add("on")
           e.target.closest(".dropdown-wrap").classList.add("active")
 
@@ -760,15 +765,15 @@ function dropFormMenuOpen (date) {
   function copyCard(content,date) {
     var cardHTML = '<li>\
       <div class="btn-form">\
-        <span class="txt" contenteditable="true">' + content + '</span>\
-        <span class="date" contenteditable="true">' + date + '</span>\
+        <span class="txt">' + content + '</span>\
+        <span class="date">' + date + '</span>\
         <div class="dropdown-wrap">\
           <button type="button" class="btn-form-menu"><span>메뉴열기</span>\</button>\
           <div class="dropdown-box">\
             <ul>\
               <li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>\
               <li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>\
-              <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크확인</span></a></li>\
+              <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크 복사</span></a></li>\
             </ul>\
           </div>\
         </div>\
@@ -1030,10 +1035,15 @@ function ToastFunc(btn, msg, time) {
   var toastCont = document.querySelector("#toast")
 
   var randomMsg = msg
-  Array.prototype.forEach.call(button, function(btn, idx){
-    btn.addEventListener("click", createToast)
-  })
-  if(btn == null ) createToast()
+  if(btn == null ) {
+    createToast()
+  } else {
+    Array.prototype.forEach.call(button, function(btn, idx){
+      btn.addEventListener("click", createToast)
+    })
+
+  }
+  
   function createToast () {
     var toastEl = document.createElement("div")
     toastEl.classList.add("toast")
@@ -1214,7 +1224,9 @@ function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu',null)//상단 드롭 메뉴
   dropMenuOpen ('.dropdown-wrap.type02 .btn-drop','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null)//상단 드롭 메뉴
+  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null, function (){
+    alert()
+  })//상단 드롭 메뉴
 
 }
 

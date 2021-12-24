@@ -92,13 +92,15 @@
         <div class="inp">
           <input type="text" value="제목 없는 신청폼" placeholder="제목 없는 신청폼"class="inp-title">
         </div>
-        <div class="tab-wrap">
-          <ul class="tabs">
-            <li><a href="../html/form_detail1.html" class="tab-btn">편집하기</a></li>
-            <li class="on"><a href="../html/form_share.html" class="tab-btn active">공유하기</a></li>
-            <li><a href="../html/form_setting.html" class="tab-btn">설정</a></li>
-          </ul>
-          <span class="slider" data-left="0"></span>
+        <div class="band-center tc">
+          <div class="tab-wrap">
+            <ul class="tabs">
+              <li><a href="../html/form_detail1.html" class="tab-btn">편집하기</a></li>
+              <li class="on"><a href="../html/form_share.html" class="tab-btn active">공유하기</a></li>
+              <li><a href="../html/form_setting.html" class="tab-btn">설정</a></li>
+            </ul>
+            <span class="slider" data-left="0"></span>
+          </div>
         </div>
         <div class="row-list">
 
@@ -128,7 +130,7 @@
                         <li>
                           <span class="inp">
                             <input type="file" name="" id="file1" placeholder="파일 검색">
-                            <label for="file1" class="btn-drop-menu"><span>사진 수정</span></label>
+                            <label for="file1" class="btn-drop-menu"><span>사진 변경</span></label>
                           </span>
                         </li>
                         <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
@@ -159,15 +161,18 @@
                     <div class="inp-line url">
                       <span class="txt">https://</span>
                       <span class="inp">
-                        <input type="text" id="user_url" placeholder="주소 입력">
+                        <input type="text" id="user_url01" placeholder="주소 입력" value="abcdefghijklmnopqrstuvwxyz123456" readonly>
                       </span>
                       <span class="inp">
-                        <input type="text" id="user_url" value="/ordercheck.io">
+                        <input type="text" id="user_url02" value="/ordercheck.io">
+                      </span>
+                      <span class="inp">
+                        <input type="text" id="user_url03" value="/abcdefghij">
                       </span>
                     </div>
                     <div class="flex-sidebox center">
                       <button type="button" class="btn btn-bk-line pop-toast"><span>링크복사</span></button>
-                      <button type="button" class="btn btn-domain"><span>도메인 연결</span></button>
+                      <button type="button" class="btn btn-domain open-layer" data-info="layer-link-edit"><span>링크 편집</span></button>
                     </div>
                   </div>
                 </div>
@@ -265,10 +270,26 @@
       </div>
       <div class="layer-mid">
         <div class="layer-inner">
-          <button type="button" class="box active"><span>https://www.figma.com/file/RhoRLD3p8DP1H20qa6Opye/%EC%98%A4%EB %8D%94% EC%B2%B4%ED%81%AC-%EC%BB%B4%ED%8E%8C?node-id=8 84%3A90 3</span></button>
+          <button type="button" class="box active tl"><span>https://www.figma.com/file/RhoRLD3p8DP1H20qa6Opye/%EC%98%A4%EB %8D%94% EC%B2%B4%ED%81%AC-%EC%BB%B4%ED%8E%8C?node-id=8 84%3A90 3</span></button>
         </div>
         <div class="layer-btn tr">
           <button type="button" class="btn btn-bk pop-toast"><span>코드 복사</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+  <!-- 링크 편집 -->
+  <div class="layer-pop" id="layer-link-edit">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">링크 편집</h2>
+      </div>
+      <div class="layer-mid">
+        <p style="padding-top:8px">링크 변경은 오더체크 팀으로 문의해주세요</p>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>문의하기</span></button>
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
