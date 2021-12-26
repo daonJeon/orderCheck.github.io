@@ -196,13 +196,19 @@
 
         <div class="cnt-box-wrap">
           <div class="cnt-box team">
-            <p>회사의 URL을 공유하고 팀원을 초대해보세요!<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
+            <div class="invite-wrap">
+              <p>회사의 URL을 공유하고 팀원을 초대해보세요!<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
+              <span class="inp" style="padding:20px 0 30px">
+                <input type="text" name="" placeholder="검색어 입력" value="https://sample" style="width:448px">
+              </span>
+            </div>
+
             <div class="tab-wrap">
               <ul class="tabs">
                 <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">SMS로 초대</button></li>
                 <li><button type="button" class="tab-btn" data-tab="tab2">메일로 초대</li>
               </ul>
-              <span class="slider" data-left="0" style="width: 60px; left: 0px;"></span>
+              <span class="slider" data-left="0"></span>
             </div>
             <section class="tab-content">
               <div class="content" id="tab1">
@@ -249,7 +255,6 @@
                         <th scope="col">가입 일시</th>
                         <th scope="col">개인 코드</th>
                         <th scope="col">권한</th>
-
                       </tr>
                     </thead>
                     <tbody>
@@ -280,7 +285,6 @@
                         <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
                         <td><button type="button" class="open-layer" data-info="layer-team-list"><span>영업 매니저</span></button></td>
                       </tr>
-
                     </tbody>
                   </table>
                 </div>
