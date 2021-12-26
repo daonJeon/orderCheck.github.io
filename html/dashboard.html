@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>대시보드</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/vendor/apexcharts.css">
+  <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+
+</head>
+
+<body>
+  <div id="wrap">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
+        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class='ico home'></i>
+            <span class="links_name">홈</span>
+          </a>
+        </li>
+        <li class="on">
+          <a href="customManage_list.html">
+            <i class="ico user"></i>
+            <span class="links_name">고객 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="file_storage.html">
+            <i class='ico file'></i>
+            <span class="links_name">파일 보관함</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='ico chat'></i>
+            <span class="links_name">채팅</span>
+          </a>
+        </li>
+        <li>
+          <a href="form_list.html">
+            <i class='ico form'></i>
+            <span class="links_name">상담 신청폼</span>
+          </a>
+        </li>
+       </ul>
+        <ul class="btm">
+          <li>
+            <a href="#">
+              <i class='ico help'></i>
+              <span class="links_name">자주 묻는 질문</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='ico setting'></i>
+              <span class="links_name">설정</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+    <section id="content" class="dashboard">
+      <!-- #include file="include_header.html" -->
+      <!-- header -->
+      <div class="header-wrap">
+        <header id="header" class="header">
+          <h2 class="title hide">대시보드</h2>
+          <ul class="menu">
+            <li>
+              <div class="searchbox">
+                <i class='ico search'></i>
+                <input type="text" placeholder="검색해보세요.">
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-wrap">
+                <button type="button" class="btn-drop">
+                  <div class="profile-details">
+                    <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                    <span class="name">홍길동님</span>
+                    <i class="arrow down"></i>
+                  </div>
+
+                </button>
+                <div class="dropdown-box">
+                  <ul>
+                    <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                    <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                    <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                    <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+            <li><button type="button" class="btn-menu" data-info="alarm"><i class="ico alarm"></i></button></li>
+          </ul>
+        </header>
+        <!-- /header -->
+        <aside id="side_right_menu" class="side-menu">
+          <div class="gnb-box right mail">
+              <ul class="clear">
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                  <li><a href="#">메뉴3</a></li>
+              </ul>
+              <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+          </div>
+          
+          <div class="gnb-box right alarm">
+              <ul class="clear">
+                  <li><a href="#">메뉴21</a></li>
+                  <li><a href="#">메뉴22</a></li>
+                  <li><a href="#">메뉴23</a></li>
+              </ul>
+              <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+          </div>
+        </aside>
+      </div>
+     
+      <div class="main-box-wrap">
+        <section class="main-top-box flexbox center">
+          <a href="#" class="cnt-box customer">
+            <dl class="info-cnt">
+              <dt class="profile-name">상담 전 고객</dt>
+              <dd>
+                <var class="num">3,420</var>
+                <span class="unit">명</span>
+              </dd>
+            </dl>
+          </a>
+          <a href="#" class="cnt-box issue">
+            <dl class="info-cnt">
+              <dt class="profile-name">이슈 고객</dt>
+              <dd>
+                <var class="num">590</var>
+                <span class="unit">명</span>
+              </dd>
+            </dl>
+          </a>
+          <a href="#" class="cnt-box estimate">
+            <dl class="info-cnt">
+              <dt class="profile-name">이번 달 상담신청</dt>
+              <dd>
+                <var class="num">0</var>
+                <span class="unit">건</span>
+              </dd>
+            </dl>
+          </a>
+          <a href="#" class="cnt-box alarm">
+            <dl class="info-cnt">
+              <dt class="profile-name">미확인 알림</dt>
+              <dd>
+                <var class="num">10,293</var>
+                <span class="unit">개</span>
+              </dd>
+            </dl>
+          </a>
+          <div class="cnt-box wide">
+            <div class="profile-head flexbox center">
+              <!-- <span class="profile"></span> -->
+              <!-- <p><a href="#" class="profile-name">로그잇 인테리어</a></p> -->
+              <a href="#" class="btn-l btn-light-blue"><span>회사 참여</span></a>
+              <p class="pos top alert">소속된 회사가 없습니다!</p>
+            </div>
+            <div class="profile-info flex-sidebox center">
+              <span class="name">홍길동</span>
+              <button type="button" class="btn-code-confirm pop-toast"><span>코드 확인</span></button>
+              <button type="button" class="btn-code-confirm on open-layer" data-info="layer-code-confirm"><span>코드 확인</span></button>
+            </div>
+          </div>
+        </section>
+        <section class="main-btm-box flexbox">
+          <!-- btm-cnt-box -->
+          <article class="btm-cnt-box circle">
+            <h2 class="board-cnt-title">지난 일주일</h2>
+            <div class="cnt-box">
+              <h3 class="inp-title">계약 가능성</h3>
+              <div class="chart-circle-wrap" id="chart01">
+                
+              </div>
+              <span class="num02">총 <strong><var>20</var>명</strong></span>
+              <ul class="custom-legend type01">
+                <li><span class="dot"></span> 없음, 50% 미만</li>
+                <li><span class="dot"></span> 계약완료, 50% 이상</li>
+              </ul>
+            </div>
+          </article>
+          <!-- //btm-cnt-box -->
+          <!-- btm-cnt-box -->
+          <article class="btm-cnt-box normal">
+            <h2 class="board-cnt-title">지난 일주일</h2>
+            <div class="cnt-box">
+              <ul class="custom-legend type02">
+                <li><span class="dot"></span> 상담 신청수</li>
+                <li><span class="dot"></span> 견적 발행수</li>
+                <li><span class="dot"></span> 계약 완료수</li>
+              </ul>
+
+              <div class="chart-wrap" id="chart02"></div>
+            </div>
+          </article>
+          <!-- //btm-cnt-box -->
+           <!-- btm-cnt-box -->
+           <article class="btm-cnt-box flex-colbox">
+            <div class="col-wrap approval">
+              <h2 class="board-cnt-title">가입 대기 중인 알림</h2>
+              <article class="cnt-box flex-sidebox">
+                <p>
+                  <var class="num">10,293</var>
+                  <span class="unit">개</span>
+                </p>
+                <button type="button" class="btn btn-blue"><span>확인하기</span></button>
+              </article>
+            </div>
+            <div class="col-wrap history">
+              <h2 class="board-cnt-title">최근 방문 기록</h2>
+              <article class="cnt-box">
+                <div class="inbox">
+                  <div class="tbl-type2">
+                    <table>
+                      <caption>고객 리스트 정보</caption>
+                      <colgroup>
+                        <col style="width:60%">
+                        <col style="width:27%">
+                        <col style="width:13%">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">위치</th>
+                          <th scope="col" colspan="2">날짜</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>고객 관리 &gt; 홍길동</td>
+                          <td> 오전 10:30</td>
+                          <td class="remove">
+                            <button type="button" class="btn-tbl-remove"><span class="hide">삭제</span></button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </article>
+          <!--//btm-cnt-box -->
+        </section>
+         
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- 개인 코드 확인 -->
+  <div class="layer-pop" id="layer-code-confirm">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="board-cnt-title">개인 코드 확인</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="layer-inner">
+          <p style="margin-bottom:30px;">거래처에 개인 코드를 공유하고 발주를 편하게 관리해보세요</p>
+          <button type="button" class="box active"><span>QZE426Y</span></button>
+        </div>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-bk pop-toast"><span>복사하기</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- script -->
+  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="../resource/js/vendor/apexcharts.min.js"></script>
+  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script src="../resource/js/common.js" ></script>
+  <script>
+    //레이어
+    layerFunc (".open-layer")
+
+    ToastFunc(".pop-toast",'회사 참여 이후 사용가능합니다.',2000)
+
+  </script>
+
+  <script>
+     var options = {
+          series: [44, 55],
+          chart: {
+          type: 'donut',
+          height:254,
+        },
+        legend: {
+          show: false,
+          horizontalAlign: "left"
+        },
+        colors: ['#1D58FF', '#CF97FF']
+
+        };
+
+    var chart01 = new ApexCharts(document.querySelector("#chart01"), options);
+    chart01.render();
+
+        
+    var options02 = {
+      chart: {
+        type: 'line',
+        width: '100%',
+        height: '100%',
+        dropShadow: {
+          enabled: true,
+          top: 1,
+          left: 1,
+          blur: 2,
+          opacity: 0.2,
+        },
+        toolbar: {
+          show: false
+        }
+      },
+      colors: ['#1D58FF', '#FFA51D', '#E11960'],
+      series: [{
+        name: '상담 신청수',
+        type: 'column',
+        data: [56, 31, 44, 33,47, 45, 74,]
+      },
+      {
+        name: '견적 발행수',
+        type: 'column',
+        data: [31, 32, 56, 44, 19,47, 45]
+      },
+      {name: "계약 완료수",
+        type: 'line',
+        data: [47, 45, 74, 32, 56, 31, 44]
+      }],
+      stroke: {
+        width: [4, 4, 4]
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "40%"
+        }
+      },
+      xaxis: {
+        categories: ["12-5", "13-5", "14-5", "15-5", "16-5", "17-5", "18-5"]
+      },
+      yaxis: [{
+          seriesName: '상담 신청수',
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: true,
+          },
+        },
+        {
+          seriesName: '상담 신청수',
+          show: false
+        }, {
+          opposite: true,
+          seriesName: '계약 완료수',
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: true,
+          },
+        }
+      ],
+      tooltip: {
+        shared: false,
+        intersect: true,
+        x: {
+          show: false
+        }
+      },
+      legend: {
+        show: false,
+        position: 'top',
+        fontSize: '16px',
+        fontFamily: "'Noto Sans KR', sans-serif",
+        horizontalAlign: "left",
+        labels: {
+          colors: "#414C5D",
+          useSeriesColors: false
+        },
+        markers: {
+        width: 14,
+        height: 14,
+        size: 0,
+        radius: 3,
+        offsetX :0
+      },
+      itemMargin: {
+          horizontal: 0,
+          vertical: 0
+      },
+      },
+      
+      
+      grid: {
+        padding: {
+          top: 20,
+          bottom: 10,
+          left: 0
+        }
+      },
+      
+    }
+    var chart02 = new ApexCharts(document.querySelector("#chart02"), options02);
+    chart02.render();
+      
+  </script>
+</body>
+</html>

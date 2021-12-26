@@ -90,7 +90,7 @@ if (!('remove' in Element.prototype)) {
 
 
 
-//메인 , 드롭 메뉴삐상구
+//메인 , 드롭 메뉴
 function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc, callback) {
   var btnMenu = document.querySelectorAll(dropBtn)
   var dimFlag = 0
@@ -791,7 +791,7 @@ function formSideFunc (btn,wrap) {
   var sideRight = document.querySelector(wrap+".right")
   Array.prototype.forEach.call(formBtn, function(btn, idx){
     btn.addEventListener("click",function(e) {
-      console.log(e.currentTarget)
+      
       var directionFlag = e.currentTarget.getAttribute("data-direction")
       if(directionFlag =="left") sideLeft.classList.toggle("open")
       else if(directionFlag =="right") sideRight.classList.toggle("open")
@@ -1190,9 +1190,9 @@ function alarmDropMenu () {
 
 function alarmAllChecked (btn,applyWrap) {
   var doneBtn = document.querySelectorAll(btn)
-  var applyArea = document.querySelectorAll(applyWrap)
   Array.prototype.forEach.call(doneBtn, function(done, idx){
     done.addEventListener("click",function(e){
+      var applyArea = document.querySelectorAll(applyWrap)
       Array.prototype.forEach.call(applyArea, function(area, idx){
         area.classList.remove("active")
 
