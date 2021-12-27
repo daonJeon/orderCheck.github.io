@@ -459,7 +459,7 @@
     //관리페이지용 공통 함수
     pageInit ()
     //우측 탭
-    clickTargetCloseAddFunc(".profile-list .btn-profile","li","on",null,true)
+    btnProfileFunc()
     clickTargetCloseAddFunc(".pos.btn-edit",".inp","edit", function (e){
       if(e.currentTarget.closest(".inp").classList.contains("edit")) {
         e.currentTarget.previousElementSibling.readOnly = false

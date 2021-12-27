@@ -208,6 +208,7 @@ function clickTargetCloseAddFunc (clickBtn, addArea,className,callback,typeone) 
   var btn = document.querySelectorAll(clickBtn);
   Array.prototype.forEach.call(btn, function(b, idx){
     b.addEventListener("click", function (e) {
+      console.dir(e)
       var wrap = e.currentTarget.closest(addArea);
       e.preventDefault()
       if(typeone == true) {
@@ -781,7 +782,7 @@ function dropFormMenuOpen (date) {
             <ul>\
               <li><a href="#" class="btn-drop-menu copy"><span>복제하기</span></a></li>\
               <li><a href="#" class="btn-drop-menu delete"><span>삭제하기</span></a></li>\
-              <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-info-url"><span>링크 복사</span></a></li>\
+              <li><button type="button" class="btn-drop-menu" onclick="ToastFunc(null,\'클립보드에 복사되었습니다.\',2000)"><span>링크 복사</span></button></li>\
             </ul>\
           </div>\
         </div>\
@@ -1256,6 +1257,23 @@ function inpEditFunc (){
 
   })
 }
+
+function btnProfileFunc () {
+  var btn = document.querySelectorAll(".profile-list .btn-profile");
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      var wrap = e.currentTarget.closest("li");
+      e.preventDefault()
+      var area = document.querySelectorAll(".profile-list li")
+      Array.prototype.forEach.call(area, function(area1, idx2){
+        area1.classList.remove("on")
+      })
+
+      wrap.classList.toggle("on");
+    });
+  })
+}
+
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴

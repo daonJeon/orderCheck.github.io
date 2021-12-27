@@ -127,7 +127,7 @@
               </ul>
               <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
           </div>
-          
+
           <div class="gnb-box right alarm">
               <ul class="clear">
                   <li><a href="#">메뉴21</a></li>
@@ -138,7 +138,7 @@
           </div>
         </aside>
       </div>
-     
+
       <div class="main-box-wrap">
         <section class="main-top-box flexbox center">
           <a href="#" class="cnt-box customer">
@@ -198,7 +198,7 @@
             <div class="cnt-box">
               <h3 class="inp-title">계약 가능성</h3>
               <div class="chart-circle-wrap" id="chart01">
-                
+
               </div>
               <span class="num02">총 <strong><var>20</var>명</strong></span>
               <ul class="custom-legend type01">
@@ -311,7 +311,7 @@
           </article>
           <!--//btm-cnt-box -->
         </section>
-         
+
         </div>
       </div>
     </section>
@@ -345,6 +345,7 @@
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js" ></script>
   <script>
+       pageInit()
     //레이어
     layerFunc (".open-layer")
 
@@ -370,7 +371,7 @@
     var chart01 = new ApexCharts(document.querySelector("#chart01"), options);
     chart01.render();
 
-        
+
     var options02 = {
       chart: {
         type: 'line',
@@ -465,8 +466,8 @@
           vertical: 0
       },
       },
-      
-      
+
+
       grid: {
         padding: {
           top: 20,
@@ -474,11 +475,11 @@
           left: 0
         }
       },
-      
+
     }
     var chart02 = new ApexCharts(document.querySelector("#chart02"), options02);
     chart02.render();
-      
+
   </script>
 </body>
 </html>

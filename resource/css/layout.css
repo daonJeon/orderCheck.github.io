@@ -34,7 +34,7 @@ p {margin:0;padding:0}
 a {text-decoration:none;color:inherit}
 button {background:none;border:0;cursor:pointer}
 address,var,em,i {font-style:normal}
-table {border-spacing:0;border-collapse:collapse;table-layout:fixed}
+table {border-spacing:0;border-collapse:collapse;/*table-layout:fixed*/}
 caption {overflow:hidden;width:0;height:0;}
 html {font-smoothing:antialiased!important;-moz-font-smoothing:antialiased!important; -webkit-font-smoothing:antialiased!important;text-rendering:optimizeSpeed;}
 pre {font-family: inherit;}
@@ -481,8 +481,7 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 ::-webkit-scrollbar-button {  background-color: #fff;  width: 6px;  height: 0px;}
 
 /* nav */
-.sidebar,
-.side-form {   top: 0;  height: 100%;   z-index: 99;  transition: all 0.5s ease;}
+.sidebar,.side-form {   top: 0;  height: 100%;   z-index: 99;  transition: all 0.4s ease;}
 
 .sidebar {position: fixed; width: 80px; height:100%; left: 0; background: #02164F;  padding: 6px 16px; box-sizing: border-box;  }
 .sidebar.open {  width: 218px;}
@@ -496,7 +495,7 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 .sidebar li a {display: flex; width:48px; height:42px; border-radius: 8px;  align-items: center;  text-decoration: none;  transition: all 0.4s ease;  background: #02164F; }
 .sidebar.open li a {width:100%}
 .sidebar .nav-list li.on a { background: #1D58FF; color:#fff}
-.sidebar.open~.content-section { left: 250px; width: calc(100% - 250px);}
+.sidebar.open~.content-section { left: 218px; width: calc(100% - 218px);}
 .sidebar .btm li.on a,
 .sidebar .btm li a:hover {background: rgba(255, 255, 255, 0.26); border-radius: 25px;}
 /* .side-form.left.open+ aside +.content-section {min-width:1536px; left: 300px; width: calc(100% - 300px);}

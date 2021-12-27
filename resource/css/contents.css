@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.content-section {  position: relative;  min-width:1842px; background: #F7F8FB;  min-height: 100vh; top: 0;  left: 80px;  width: calc(100% - 80px);  z-index: 2; }
+.content-section {  position: relative;  /*min-width:1842px;*/ background: #F7F8FB;  min-height: 100vh; top: 0;  left: 80px;  width: calc(100% - 80px);  z-index: 2; }
 .content-section .title { display: inline-block; color: #41495E; line-height: 32px; font-size: 22px; font-weight: 700;}
 .content-section .title .tx-org {font-size: 18px; line-height: 26px;}
 .content-section .title + .filter-box {margin-top:30px;}
@@ -54,7 +54,7 @@
 .dashboard .profile-head .alert {padding-left:30px; background:url(../images/main/ico_main-alert.png) no-repeat left center; font-weight: bold; font-size: 15px; line-height: 22px;color:#FF8159}
 .dashboard .profile-head .pos.top {top:0; left:0; transform:none; right:auto}
 .flex-colbox {display:flex; flex-direction: column;}
-.dashboard .col-wrap.approval .cnt-box{height:118px; }
+.dashboard .col-wrap.approval .cnt-box{height:118px;min-height:118px; }
 .dashboard .col-wrap.history .cnt-box{height:100%  }
 /* .dashboard .col-wrap.history .cnt-box{height:402px; } */
 .dashboard .btm-cnt-box.normal ,
@@ -160,7 +160,7 @@
 .cnt-box-wrap {display:flex; padding:30px;}
 .cnt-box {padding:28px 20px; background:#fff; border-radius: 16px; box-sizing: border-box;}
 .cnt-box.left {flex-basis: 380px; min-width: 380px}
-.cnt-box.right {width:100%; margin-left:20px; }
+.cnt-box.right {width:calc(100% - 400px); margin-left:20px; }
 .cnt-box:first-child:last-child {width:100%; margin:0}
 .cnt-box.left .btn-group {margin-top:52px}
 
