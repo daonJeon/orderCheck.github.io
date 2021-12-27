@@ -91,12 +91,22 @@ if (!('remove' in Element.prototype)) {
 
 
 //메인 , 드롭 메뉴
-function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc, callback) {
+function dropMenuOpen (btnName, dropBox, dropBtn , applyFunc, callback,boxPos) {
   var btnMenu = document.querySelectorAll(dropBtn)
   var dimFlag = 0
-  clickAddClassFunc (btnName,dropBox,"on", function(){
-    if(callback != null) callback()
+  var btn = document.querySelectorAll(btnName);
+  var wrap = document.querySelectorAll(dropBox);
+
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.preventDefault()
+
+      if(boxPos != null) boxPos(e)
+      wrap[idx].classList.toggle("on");
+      if(callback != null) callback(e)
+    });
   })
+
   //모든 드롭 다운 메뉴에 dim 순회
   var dropDownMenu = document.querySelectorAll(btnName)
   Array.prototype.forEach.call(dropDownMenu, function(menu, idx){
@@ -392,7 +402,7 @@ function tabFunc (tabwrap,isFullSlider,callback,tabCntClass) {
     }
 
     if(tab.parentNode.classList.contains("on")) {
-      getSlider(tab,offsetPos,idx)
+      //getSlider(tab,offsetPos,idx)
       if(tabContent.length > 0) tabContent[idx].classList.add("active")
     } else {
       if(tabContent.length > 0) tabContent[idx].classList.remove("active")
@@ -406,7 +416,7 @@ function tabFunc (tabwrap,isFullSlider,callback,tabCntClass) {
       })
 
       var id = e.currentTarget.getAttribute("data-tab");
-      getSlider(e.currentTarget,offsetPos,idx)
+      //getSlider(e.currentTarget,offsetPos,idx)
       e.currentTarget.parentNode.classList.add("on")
       if(tabContent.length > 0) document.getElementById(id).classList.add("active")
       if(callback != null ) callback()
@@ -791,7 +801,7 @@ function formSideFunc (btn,wrap) {
   var sideRight = document.querySelector(wrap+".right")
   Array.prototype.forEach.call(formBtn, function(btn, idx){
     btn.addEventListener("click",function(e) {
-      
+
       var directionFlag = e.currentTarget.getAttribute("data-direction")
       if(directionFlag =="left") sideLeft.classList.toggle("open")
       else if(directionFlag =="right") sideRight.classList.toggle("open")
@@ -1041,7 +1051,7 @@ function ToastFunc(btn, msg, time) {
     })
 
   }
-  
+
   function createToast () {
     var toastEl = document.createElement("div")
     toastEl.classList.add("toast")
@@ -1220,27 +1230,29 @@ function inpEditFunc (){
   var btn = document.querySelectorAll(".pos.btn-edit")//3
   Array.prototype.forEach.call(btn, function(b, idx){
     var input = b.closest(".inp")
-    var dimElement = document.createElement("div")
-    dimElement.classList.add("dim")
-    input.appendChild(dimElement)
-    var dim = input.querySelector(".dim")
 
-    dim.style.display ="none"
+
     b.addEventListener("click",function(e){
       input.classList.toggle("edit")
+      console.log(e.currentTarget)
       if(input.classList.contains("edit")) {
         input.classList.add("active")
-        e.currentTarget.previousElementSibling.readOnly = false
+       e.currentTarget.previousElementSibling.readOnly = false
       } else {
         input.classList.remove("active")
-        e.currentTarget.previousElementSibling.readOnly = true
+       e.currentTarget.previousElementSibling.readOnly = true
       }
-    })  
+    })
 
-    dim.addEventListener("click",function(e){
-      dim.parentElement.removeChild(dim)
-      alert("dimcloase")
-    })  
+    b.previousElementSibling.addEventListener("focus",function(e){
+      input.classList.remove("active")
+    })
+    b.previousElementSibling.addEventListener("focusout",function(e){
+      input.classList.remove("edit")
+      input.classList.remove("active")
+       e.currentTarget.readOnly = true
+    })
+
 
   })
 }
@@ -1249,8 +1261,7 @@ function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu',null)//상단 드롭 메뉴
   dropMenuOpen ('.dropdown-wrap.type02 .btn-drop','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null, function(e){
-    console.log(e.currentTarget.nextElementSibling.style)
+  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null,null, function(e){
     e.currentTarget.nextElementSibling.style.left = e.pageX + "px"
     e.currentTarget.nextElementSibling.style.top = e.pageY + "px"
   })

@@ -134,8 +134,8 @@ input[type=text]::-ms-clear { display:none;}
 .btn-copy.on span {background-image: url(../images/common/ico_copy-hover.png)}
 .btn-down {font-weight: 500; font-size: 13px; line-height: 19px; color: #9A9A9A;}
 .btn-down span {display: inline-block; box-sizing: border-box; padding-left:20px; background: url(../images/common/ico_down.png) no-repeat left center;}
-.btn-down:hover {color: #1D58FF;}
-.btn-down:hover span {background-image: url(../images/common/ico_down-hover.png)}
+.btn-down.on {color: #1D58FF;}
+.btn-down.on span {background-image: url(../images/common/ico_down-hover.png)}
 
 /* input */
 .inp-line {display:flex; align-items: center; justify-content:space-between;}
@@ -338,18 +338,24 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== Tab =====*/
 .tab-wrap {position:relative;}
 .tabs {display:flex; justify-content:start; border-bottom:1px solid #e6e6e6}
-.tabs li .tab-btn, .tabs li .tab-btn02 {display:inline-block; padding-bottom:8px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
+.tabs li, .tabs li { position:relative;}
+.tabs li .tab-btn, .tabs li .tab-btn02 { display:inline-block; padding-bottom:8px; padding-right:3px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -1px;}
 .tabs li.on .tab-btn, .tabs li.on .tab-btn02 {font-weight: bold;  color: #02164F;}
+.tabs li.on .tab-btn:after,
+.tabs li.on .tab-btn02:after {display:block; position:absolute; width:100%; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px; content:''}
+
 .tabs li + li {margin-left:34px}
-.tab-wrap .slider {display:block; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
+.tab-wrap .slider {display:none; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
 .tabs li.on var {display:inline-block; margin-left:2px}
 .tbl-top.band .tabs li .tab-btn,
 .tbl-top.band .tabs li .tab-btn02 {color:#fff; font-weight:400}
-.tbl-top.band .tabs li.on .tab-btn {font-weight:bold}
+.tbl-top.band .tabs li.on .tab-btn {font-weight:bold; padding-right:4px;}
+.tbl-top.band .tabs li.on .tab-btn:after {background-color:#fff; border-radius: 0; height:2px;}
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
 .inp input {width:100%; padding:10px 30px 10px 12px; border: 1px solid #E7E7E7;  box-sizing: border-box;  border-radius: 6px; font-size: 14px;  line-height: 22px;  color:#41495D; letter-spacing: -.5px;}
+.inp input:read-only:focus {border-color:#E7E7E7}
 .inp input[type=file] {display: none;}
 .inp-cal input {padding-left:36px; padding-right:12px; background:url(../images/common/ico_inp-cal.png) no-repeat left 12px center; color:#9A9A9A}
 .inp-cal input.selected {color:#41495D}
@@ -361,9 +367,10 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .inp input::placeholder {color:#9A9A9A}
 .inp input::-webkit-input-placeholder {color: #9A9A9A;}
 .inp input:-ms-input-placeholder { color: #9A9A9A;}
-.inp.edit.active input { color:#1D58FF}
 .inp.edit input { border-color:#1D58FF}
-.inp.edit input:focus + .btn-edit {display:none}
+.inp.active input { color:#1D58FF}
+.inp.active input:focus + .btn-edit {display:none}
+.inp.active input:read-only:focus + .btn-edit {display:block}
 
 .inp.sm input {width:80px;}
 

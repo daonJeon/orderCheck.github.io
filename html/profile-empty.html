@@ -281,14 +281,14 @@
         <div class="form-area">
           <label for="user_phone" class="filter-title">새 비밀번호</label>
           <div class="inp">
-            <input type="password" id="user_phone" placeholder="새로운 비밀번호를 입력해주세요."/>
+            <input type="password" id="user_phone" placeholder="새 비밀번호"/>
             <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
           </div>
           <p class="warning-txt02">영문, 숫자, 특수문자 혼합 8~16자리로 입력해주세요. </p>
 
-          <label for="user_auth" class="filter-title">비밀번호 확인</label>
+          <label for="user_auth" class="filter-title">새 비밀번호 확인</label>
           <div class="inp">
-            <input type="password" id="user_auth" placeholder="새로운 비밀번호를 다시 입력해주세요.">
+            <input type="password" id="user_auth" placeholder="새 비밀번호 확인">
             <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
           </div>
           <p class="warning-txt02">비밀번호가 일치하지 않습니다.</p>
@@ -348,7 +348,7 @@
           <label for="user_phone" class="filter-title">탈퇴 사유</label>
           <div class="inp-select">
             <select name="areaType" style="width:100%;">
-              <option value="000" disabled>탈퇴 사유를 선택해주세요</option>
+              <option value="000" disabled selected>탈퇴 사유를 선택해주세요</option>
               <option value="001">1</option>
             </select>
           </div>
@@ -356,7 +356,7 @@
 
           <label for="user_auth" class="filter-title">비밀번호</label>
           <div class="inp">
-            <input type="password" id="user_auth" placeholder="비밀번호를 입력해주세요.">
+            <input type="password" id="user_auth" placeholder="비밀번호">
             <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
           </div>
           <p class="warning-txt02">비밀번호가 일치하지 않습니다.</p>
@@ -372,7 +372,7 @@
   </div>
 
   <!-- 회사 나가기 -->
-  <div class="layer-pop" id="layer-company-out">
+  <div class="layer-pop" id="layer-company-out-confirm">
     <div class="layer-cnt">
       <div class="layer-top">
         <h2 class="title">회사 나가기</h2>
@@ -413,6 +413,7 @@
             </span>
             <span class="url-address">.ordercheck.io</span>
           </div>
+          <p class="warning-txt02">등록되지 않은 회사 도메인입니다.</p>
         </div>
 
         <div class="layer-btn tr">
@@ -431,7 +432,7 @@
         <h2 class="title">회사 생성하기</h2>
       </div>
       <div class="layer-mid">
-        <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다. 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
+        <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다.<br> 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
@@ -455,27 +456,9 @@
     //우측 탭
     tabFunc (".tab-wrap")
 
-    clickTargetCloseAddFunc(".pos.btn-edit",".inp","edit", function (e){
-      if(e.currentTarget.closest(".inp").classList.contains("edit")) {
-        e.currentTarget.previousElementSibling.readOnly = false
-      } else {
-        e.currentTarget.previousElementSibling.readOnly = true
-      }
-    })
+    inpEditFunc ()
     //레이어
-    layerFunc (".open-layer",null, function (){
-      var input = document.querySelectorAll(".inp")
-
-      Array.prototype.forEach.call(input, function(inp, idx){
-        inp.classList.remove("edit")
-        if(inp.classList.contains("edit")) {
-          inp.querySelector("input").readOnly = false
-        } else {
-          inp.querySelector("input").readOnly = true
-        }
-      })
-
-    })
+    layerFunc (".open-layer")
 
     //select box = jquery plugin
     $('.inp-select select').niceSelect();

@@ -252,49 +252,49 @@
                       <div class="filter-box">
                         <p class="filter-title">회사 명</p>
                         <div class="inp">
-                          <input type="text" name="" id="" value="오더킹">
+                          <input type="text" name="" id="" value="오더킹" readonly>
                         </div>
                       </div>
 
                       <div class="filter-box">
                         <p class="filter-title">회사 URL<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
                         <div class="inp">
-                          <input type="text" name="" id="" value="www.sample1233.com">
+                          <input type="text" name="" id="" value="www.sample1233.com" readonly>
                         </div>
                       </div>
 
                       <div class="filter-box">
                         <p class="filter-title">대표자 명</p>
                         <div class="inp">
-                          <input type="text" name="" id="" value="홍길동">
+                          <input type="text" name="" id="" value="홍길동" readonly>
                         </div>
                       </div>
 
                       <div class="filter-box">
                         <p class="filter-title">회사 주소<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
                         <span class="inp">
-                          <input type="text" name="" value="서울시 강남구 도산대로1234-56">
+                          <input type="text" name="" value="서울시 강남구 도산대로1234-56" readonly>
                         </span>
                         <div class="inp">
-                          <input type="text" name="" placeholder="123호">
+                          <input type="text" name="" placeholder="123호" readonly>
                         </div>
                       </div>
 
                       <div class="filter-box">
                         <p class="filter-title">사업자 번호<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
                         <div class="inp">
-                          <input type="tel" name="" id="" value="123-1566789-09876">
+                          <input type="tel" name="" id="" value="123-1566789-09876" readonly>
                         </div>
                       </div>
 
                       <div class="filter-box">
-                        <p class="filter-title">사업자등록증<button type="button" class="btn-down"><span>다운로드</span></button></p>
+                        <p class="filter-title">사업자등록증<button type="button" class="btn-down on"><span>다운로드</span></button></p>
                         <div class="inp">
-                          <input type="text" name="" id="" value="sample.jpg">
+                          <input type="text" name="" id="" value="sample.jpg" readonly>
                         </div>
                       </div>
-                      <div class="btn-group02 flex-sidebox end">
-                        <button type="button" class="btn-link open-layer" data-info="layer-company-out"><span>회사 나가기</span></button>
+                      <div class="btn-group02 flex-sidebox center">
+                        <button type="button" class="btn-link open-layer" data-info="layer-company-out-confirm"><span>회사 나가기</span></button>
                         <button type="button" class="btn btn-light-blue btn-inp-revise"><span>회사 정보 수정</span></button>
                       </div>
 
@@ -329,7 +329,7 @@
 
           <label for="user_auth" class="filter-title">새 비밀번호 확인</label>
           <div class="inp">
-            <input type="password" id="user_auth" placeholder="새 비밀번호">
+            <input type="password" id="user_auth" placeholder="새 비밀번호 확인">
             <button type="button" class="pos btn-pw-show"><span class="txt hide">비밀번호 보기</span></button>
           </div>
           <p class="warning-txt02">비밀번호가 일치하지 않습니다.</p>
@@ -389,7 +389,7 @@
           <label for="user_phone" class="filter-title">탈퇴 사유</label>
           <div class="inp-select">
             <select name="areaType" style="width:100%;">
-              <option value="000" disabled selected>탈퇴 사유 선택</option>
+              <option value="000" disabled selected>탈퇴 사유를 선택해주세요</option>
               <option value="001">1</option>
             </select>
           </div>
@@ -413,7 +413,7 @@
   </div>
 
   <!-- 회사 나가기 -->
-  <div class="layer-pop" id="layer-company-out">
+  <div class="layer-pop" id="layer-company-out-confirm">
     <div class="layer-cnt">
       <div class="layer-top">
         <h2 class="title">회사 나가기</h2>
@@ -454,6 +454,7 @@
             </span>
             <span class="url-address">.ordercheck.io</span>
           </div>
+          <p class="warning-txt02">등록되지 않은 회사 도메인입니다.</p>
         </div>
 
         <div class="layer-btn tr">
@@ -472,7 +473,7 @@
         <h2 class="title">회사 생성하기</h2>
       </div>
       <div class="layer-mid">
-        <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다. 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
+        <p class="confirm-msg">신규 회사 생성은 유료 플랜에서만 가능합니다.<br> 요금제를 확인하고 희망하는 요금제 가입을 진행해주세요.</p>
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>요금제 가입</span></button>
@@ -482,13 +483,31 @@
     </div>
   </div>
 
-  <!-- 개발 시 삭제 -->
-  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:100px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
-    <h2 style="border-bottom:1px solid #ddd; width:100%; line-height:30px; ">레이어</h2>
-     <button type="button" class="btn-link open-layer" data-info="layer-account-delete-error"><span>계정 삭제(회사)</span></button>
-    <button type="button" class="btn-link open-layer" data-info="layer-account-delete-confirm"><span>계정 삭제 확인</span></button>
+  <!-- 회사 나가기 -->
+  <div class="layer-pop confirm" id="layer-company-out">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">회사 나가기</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="confirm-msg">회사를 나가시겠습니까?<br> 회사 내에서 이용한 내역은 삭제되지 않으며, 이용 내역에 더이상 접근할 수 없습니다</p>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>회사 나가기</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
   </div>
 
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+     <button type="button" class="btn-link open-layer" data-info="layer-account-delete-error" style="font-size:16px"><span>계정 삭제(회사)</span></button>
+    <button type="button" class="btn-link open-layer" data-info="layer-account-delete-confirm" style="font-size:16px"><span>계정 삭제 확인</span></button>
+     <button type="button" class="btn-link open-layer" data-info="layer-company-out" style="font-size:16px"><span>계정 나가기</span></button>
+     <button type="button" class="btn-link open-layer" data-info="layer-company-out-confirm" style="font-size:16px"><span>계정 나가기 비번확인</span></button>
+  </div>
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
@@ -502,24 +521,9 @@
     //우측 탭
     tabFunc (".tab-wrap")
 
-
-
     inpEditFunc ()
-    
     //레이어
-    layerFunc (".open-layer",null, function (){
-      var input = document.querySelectorAll(".inp")
-
-      Array.prototype.forEach.call(input, function(inp, idx){
-        inp.classList.remove("edit")
-        if(inp.classList.contains("edit")) {
-          inp.querySelector("input").readOnly = false
-        } else {
-          inp.querySelector("input").readOnly = true
-        }
-      })
-
-    })
+    layerFunc (".open-layer")
 
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
