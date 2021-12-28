@@ -64,6 +64,7 @@
 .btm-cnt-box.circle .cnt-box,
 .dashboard .btm-cnt-box.normal .cnt-box {min-height:453px}
 .dashboard .btm-cnt-box.normal {width:48.5%}
+.dashboard .btm-cnt-box.circle .cnt-box,
 .dashboard .btm-cnt-box.normal .cnt-box {width:100% }
 .dashboard .main-btm-box {width:100%; height:calc(100vh - 428px);}
 .main-top-box {margin-bottom:40px; }
