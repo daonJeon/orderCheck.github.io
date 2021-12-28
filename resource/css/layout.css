@@ -428,7 +428,8 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 /*===== layer =====*/
 .layer-pop {display:none; width: 100%;height: 100%;position: fixed;left: 0;top: 0; background:rgba(0,0,0,.3);z-index: 100;}
 .layer-pop .btn-close {right:23px}
-.layer-pop .layer-cnt {position:absolute; width:600px; left:50%;top:50%;border-radius:12px; padding:30px 4px 10px 24px; transform:translate(-50%,-50%); background-color:#fff;box-sizing:border-box;z-index:1000}
+.layer-pop .layer-cnt {position:absolute; width:600px; left:50%;top:50%;box-shadow: 2px 6px 15px rgba(0, 0, 0, 0.12);
+  border-radius: 10px; padding:30px 4px 10px 24px; transform:translate(-50%,-50%); background-color:#fff;box-sizing:border-box;z-index:1000}
 .layer-pop.open {display:block}
 .layer-top .title {padding:0px 0px 25px;font-size:18px;}
 .layer-top .title-box h2 {border-bottom:1px solid rgba(0,0,0,0.03);}
@@ -540,7 +541,8 @@ width:calc(100% - 40px); font-size:14px;}
 .dropdown-box li + li:before {display:block; margin:0 auto; width:calc(100% - 24px); height:1px; background:#E6E6E6; content:''}
 .dropdown-box.on + .dim {display:block}
 
-.header .dropdown-box {z-index: 200}
+.header .dropdown-box {left:99px; z-index: 200}
+.header .dropdown-wrap .arrow.down:after {border-width:7px}
 .btn-drop-menu.depth2 {background:url(../images/common/ico_polygon.png) no-repeat right 10px center}
 .btn-drop-menu.depth2 + .dropdown-box {top:0; right:127px;}
 /* ico */

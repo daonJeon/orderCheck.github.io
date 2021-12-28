@@ -6,13 +6,15 @@ var cntwrap = '#wrap',  // 페이지 컨텐츠 영역
 	layercnt = '.layer-cnt', // 레이어 팝업 내 컨텐츠 영역 클래스
 	closebtn = '.layer-close',
 	onClass = 'now-open'; // 레이어 팝업 오픈 시킨 버튼에 지정될 임시 클래스
+var body = document.querySelector('body');
+var scrollPosition = 0;
 
 function popSet(tg, btn, bgSet, middle){
 	if(bgSet == null) {
-		//tabIndexOff(cntwrap);
-	} else {
-		layerset = bgSet;
-		//indexOffScroll(cntwrap);
+    bodyFixed()
+  } else {
+    layerset = bgSet;
+    bodyScrollEnable()
 	}
 	if(middle == true)	popPos(tg);
 	else null;
@@ -49,13 +51,13 @@ pos = 레이어 위치 관련 변수 - 값이 없을 경우 - 화면 중앙
 */
 
 // 버튼용 함수
-function layerOpenBtn(e, pos){
+function layerOpenBtn(e, pos, bgSet){
 	var btn = e,
 	tg = btn.getAttribute('data-info');
 
   document.querySelector('#'+tg+'').style.display = "block"
   //document.querySelector('#'+tg+''+ layercnt).setAttribute('tabindex','0')//.focus()
-  popSet(document.querySelector('#'+tg+''), btn, null , true);
+  popSet(document.querySelector('#'+tg+''), btn, bgSet , true);
 }
 
 // 이벤트 호출용 함수
@@ -66,7 +68,7 @@ function layerOpen(e, pos, bgset){
   document.querySelector('#'+tg+'').classList.add(onClass);
   //document.querySelector('#'+tg+''+layercnt).setAttribute('tabindex','0')//.focus()
 
-  popSet(tg, null, null, null);
+  popSet(tg, null, bgSet, null);
 }
 
 //닫기용 함수 - 레이어 전체
@@ -76,6 +78,7 @@ function layerClose(e){
 	//if(layerset != null) indexOnScroll(cntwrap);
 	//else tabIndexOn(cntwrap);
 	document.querySelector('.'+onClass).classList.remove(onClass);
+  bodyScrollEnable()
 	//layerset = null;
 }
 
@@ -99,20 +102,42 @@ function layerOpenFunc (openBtns,callback) {
       if(callback != null ) callback()
     })
   })
+
 }
 function layerCloseFunc (layer,closeCallback) {
-
   Array.prototype.forEach.call(document.querySelectorAll(".layer-close"), function(close, idx){
   close.addEventListener("click",function (e) {
       layerClose(e.target);
       if(closeCallback != null) closeCallback()
     })
   })
+
 }
 
 function layerFunc (openBtns,callback,closeCallback) {
+
+
   layerOpenFunc(openBtns,callback)
   layerCloseFunc(layer,closeCallback)
+}
+
+
+
+// 팝업 오픈
+function bodyFixed() {
+  scrollPosition = window.pageYOffset;
+  body.style.overflow = 'hidden';
+  body.style.position = 'fixed';
+  body.style.top = -scrollPosition+'px';
+  body.style.width = '100%';
+}
+// 팝업 닫기
+function bodyScrollEnable() {
+  body.style.removeProperty('overflow');
+  body.style.removeProperty('position');
+  body.style.removeProperty('top');
+  body.style.removeProperty('width');
+  window.scrollTo(0, scrollPosition);
 }
 //생성용 레이어
 function layerAlert(title, msg, btn, tg) {
