@@ -55,12 +55,6 @@
             <span class="links_name">파일 보관함</span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class='ico chat'></i>
-            <span class="links_name">채팅</span>
-          </a>
-        </li>
         <li class="on">
           <a href="form_list.html">
             <i class='ico form'></i>
@@ -82,6 +76,8 @@
             </a>
           </li>
         </ul>
+
+        <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
     </nav>
     <section id="content" class="content-section">
         <!-- header -->
@@ -96,21 +92,22 @@
               </div>
             </li>
             <li>
-              <div class="dropdwon-wrap">
-                <a href="#" class="btn-drop">
+              <div class="dropdown-wrap">
+                <button type="button" class="btn-drop">
                   <div class="profile-details">
                     <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
                     <span class="name">홍길동님</span>
                     <i class="arrow down"></i>
                   </div>
-                </a>
+
+                </button>
                 <div class="dropdown-box">
                   <ul>
                     <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
                     <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
                     <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
                     <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
-                 </ul>
+                  </ul>
                 </div>
               </div>
             </li>

@@ -1274,15 +1274,20 @@ function btnProfileFunc () {
   })
 }
 
+function tblLineRemove () {
+  var btn = document.querySelectorAll(".btn-tbl-remove")
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      b.closest("tr").parentElement.removeChild(b.closest("tr"))
+    })
+  })
+}
+
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu',null)//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type02 .btn-drop','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
-  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null,null, function(e){
-    e.currentTarget.nextElementSibling.style.left = e.pageX + "px"
-    e.currentTarget.nextElementSibling.style.top = e.pageY + "px"
-  })
+  clickAddClassFunc (".btn-lnb-close",".sidebar","open")
 
 }
 
@@ -1295,11 +1300,17 @@ function templateFunc() {
   checkOffCallback(".label-set-box input[type=checkbox]", function (){
     layerOpen ("layer-info-label")
   })
+  dropMenuOpen ('.dropdown-wrap.type03 .btn-drop','.dropdown-wrap.type03 .dropdown-box','.dropdown-wrap.type03 .btn-drop-menu', null,null, function(e){
+    e.currentTarget.nextElementSibling.style.left = e.pageX + "px"
+    e.currentTarget.nextElementSibling.style.top = e.pageY + "px"
+  })
 }
 function templateSideFunc() {
   formSideFunc(".btn-form-arrow",".side-form")
   clickAddClassFunc (".list-cnt",".list-cnt","on")
   clickAddClassFunc (".template .btn-group-wrap button",".template .btn-group-wrap button","on")
   clickAddClassFunc (".side-form .btm .slider-drop",".side-form .btm","open")
+  dropMenuOpen ('.dropdown-wrap.type02 .btn-drop','.dropdown-wrap.type02 .dropdown-box','.dropdown-wrap.type02 .btn-drop-menu', ".txt")//상단 드롭 메뉴
+
 
 }
