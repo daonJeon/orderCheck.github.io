@@ -297,7 +297,8 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 
 
 .badge-ordercheck {width: 160px; height: 51px;background: #1D58FF url(../images/common/ico_mark-txt.png) no-repeat center; box-shadow: 0px 4px 12px rgba(29, 88, 255, 0.46); border-radius: 40px;}
-.btn-remove {width:20px; height:20px; background: url(../images/common/ico_close-type03.png) no-repeat center;}
+.btn-remove,
+.btn-line-remove {width:20px; height:20px; background: url(../images/common/ico_close-type03.png) no-repeat center;}
 .btn-delete {width:20px; height:20px; background: url(../images/common/ico_inp-remove.png) no-repeat center;}
 
 /* paging */
@@ -434,6 +435,7 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .layer-top .title .tx-gray {margin-top:3px; display:block; font-size: 12px; font-weight: 400; line-height: 17px; color: #7B7B7B;}
 .layer-cnt .info-txt {line-height:16px;font-size:13px;color:#959595}
 .layer-cnt .info-txt02 {margin:5px 0 20px; line-height:22px;font-size:15px;color:#555868}
+.layer-cnt .info-txt03 {margin:8px 0 20px; font-size: 14px; line-height: 26px; color: #41495D;}
 .layer-cnt .layer-top,
 .layer-cnt .layer-mid {padding-right:20px;}
 .layer-cnt .layer-btn {margin-top:26px; margin-bottom:20px}
@@ -687,8 +689,8 @@ width:calc(100% - 40px); font-size:14px;}
 
 .left-bar-style,
 .right-bar-style {height:calc(100vh - 130px); background-color: #fff;}
-.left-bar-style {width: 290px; border-right:1px solid  #E3E3E3;}
-.right-bar-style {padding:18px 26px 30px; width: calc(100% - 290px); box-sizing: border-box;}
+.left-bar-style {width: 300px; border-right:1px solid  #E3E3E3;}
+.right-bar-style {padding:18px 26px 30px; width: calc(100% - 300px); box-sizing: border-box;}
 
 .left-bar-style .tabs {flex-wrap:wrap; border-bottom:none}
 .left-bar-style .tabs li {position:relative; width:100%; margin-left:0}

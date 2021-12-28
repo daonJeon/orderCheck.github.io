@@ -597,12 +597,22 @@ function inpTypeSwitch () {
 }
 
 function autoHypenTelFunc (inputID,callback) {//매개변수 설명 : input ID / 하이픈 적용되어야하는 텀 (number or array)
-  var input = document.querySelector("#"+inputID)
-  input.addEventListener("keyup",function(e){
-    var _val = this.value.trim()
-    this.value = autoHypenTel(_val,callback,e.currentTarget)
+  if(inputID.slice(undefined, 1) == ".") {
+    var inputs = document.querySelectorAll(inputID)
+    Array.prototype.forEach.call(inputs, function(inp, idx){
+      inp.addEventListener("keyup",function(e){
+        var _val = this.value.trim()
+        this.value = autoHypenTel(_val,callback,e.currentTarget)
+      })
+    })
+  } else {
+    var input = document.querySelector("#"+inputID)
+    input.addEventListener("keyup",function(e){
+      var _val = this.value.trim()
+      this.value = autoHypenTel(_val,callback,e.currentTarget)
+    })
+  }
 
-  })
   //휴대폰용 하이픈 자동 추가
   function autoHypenTel (str,callback,target) {
     str = str.replace(/[^0-9]/g,'')
@@ -1286,13 +1296,57 @@ function tblLineRemove () {
 function inputValueRemove () {
   var btn = document.querySelectorAll(".searchbox .btn-remove, .inp .btn-remove")
   Array.prototype.forEach.call(btn, function(b, idx){
+    b.style.display ="none"
+    b.previousElementSibling.addEventListener("input", function (e) {
+      e.currentTarget.nextElementSibling.style.display = "block"
+    })
     b.addEventListener("click", function (e) {
-      alert()
-
+      e.currentTarget.previousElementSibling.value=""
+      e.currentTarget.style.display = "none"
     })
   })
 }
 inputValueRemove ()
+
+function inputLineAdd () {
+  var btn = document.querySelectorAll(".btn-line-plus")
+  Array.prototype.forEach.call(btn, function(b, idx){
+    var addWrap = b.closest(".btm-btn-group").previousElementSibling
+    b.addEventListener("click", function (e) {
+      var targetAttr = e.currentTarget.getAttribute("data-info")
+      var html = ''
+      if(targetAttr == "phone") {
+        html += '<div class="inp">'
+        html += '<input type="tel" class="numberInp" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" maxlength="13" placeholder="‘-’ 없이 휴대폰 번호 입력">'
+        html += '<button type="button" class="pos btn-line-remove"><span class="txt hide">내용삭제</span></button>'
+        html += '</div>'
+      } else if(targetAttr == "mail") {
+        html += '<div class="inp">'
+        html += '<input type="tel" placeholder="이메일 주소">'
+        html += '<button type="button" class="pos btn-line-remove"><span class="txt hide">내용삭제</span></button>'
+        html += '</div>'
+
+      }
+      addWrap.insertAdjacentHTML('beforeend', html);
+
+    })
+    addWrap.addEventListener("click",function(e){
+      if(e.target.classList.contains("btn-line-remove")) e.target.closest(".inp").parentElement.removeChild(e.target.closest(".inp"))
+    })
+
+  })
+}
+inputLineAdd ()
+
+function inputLineRemove () {
+  var btn = document.querySelectorAll(".btn-line-remove")
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      e.currentTarget.closest(".inp").parentElement.removeChild(e.currentTarget.closest(".inp"))
+    })
+  })
+}
+inputLineRemove ()
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴

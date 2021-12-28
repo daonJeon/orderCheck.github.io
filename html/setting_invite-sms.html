@@ -192,38 +192,48 @@
         <div class="cnt-box-wrap">
           <div class="cnt-box team">
             <div class="invite-wrap">
-              <p>회사의 URL을 공유하고 팀원을 초대해보세요!<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
-              <span class="inp" style="padding:20px 0 30px">
+              <p class="tx-info">회사의 URL을 공유하고 팀원을 초대해보세요!<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
+              <div class="inp">
                 <input type="text" name="" placeholder="검색어 입력" value="https://sample" style="width:448px" readonly>
-              </span>
-            </div>
-
-            <div class="tab-wrap">
-              <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">SMS로 초대</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab2">메일로 초대</li>
-              </ul>
-              <span class="slider" data-left="0"></span>
-            </div>
-            <section class="tab-content">
-              <div class="content" id="tab1">
-                <p>SMS 발송시 문자 잔액이 차감됩니다.</p>
-                <div class="inp">
-                  <input type="tel" id="user_id" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" maxlength="13" placeholder="‘-’ 없이 휴대폰 번호 입력" required="">
-                </div>
-                <div class="inp">
-                  <input type="tel" id="user_id" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" maxlength="13" placeholder="‘-’ 없이 휴대폰 번호 입력" required="">
-                  
-                </div>
-                <div class="flex-sidebox">
-                  <button type="button" class="btn"><span><i class="ico plus"></i>보낼 사람 추가하기</span></button>
-                  <button type="button" class="btn btn-bk"><span>발송</span></button>
-                </div>
               </div>
-              <div class="content" id="tab2">
-
+            </div>
+            <div class="invite-btm">
+              <div class="tab-wrap">
+                <ul class="tabs">
+                  <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">SMS로 초대</button></li>
+                  <li><button type="button" class="tab-btn" data-tab="tab2">메일로 초대</li>
+                </ul>
+                <span class="slider" data-left="0"></span>
               </div>
-            </section>
+              <section class="tab-content">
+                <div class="content" id="tab1">
+                  <p class="tx-info">SMS 발송시 문자 잔액이 차감됩니다.</p>
+                  <div class="inp-add-wrap">
+                    <div class="inp">
+                      <input type="tel" class="numberInp" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" maxlength="13" placeholder="‘-’ 없이 휴대폰 번호 입력">
+                    </div>
+                    <p class="warning-txt02">정확한 연락처를 입력해주세요. </p>
+                  </div>
+                  <div class="btm-btn-group flex-sidebox">
+                    <button type="button" class="btn btn-line-plus" data-info="phone"><span><i class="ico plus"></i><strong>보낼 사람 추가하기</strong></span></button>
+                    <button type="button" class="btn btn-bk pop-toast02"><span>발송</span></button>
+                  </div>
+                </div>
+                <div class="content" id="tab2">
+                  <p class="tx-info">SMS 발송시 문자 잔액이 차감됩니다.</p>
+                  <div class="inp-add-wrap">
+                    <div class="inp">
+                      <input type="tel" placeholder="이메일 주소">
+                    </div>
+                    <p class="warning-txt02">정확한 이메일 주소를 입력해주세요.</p>
+                  </div>
+                  <div class="btm-btn-group flex-sidebox">
+                    <button type="button" class="btn btn-line-plus" data-info="mail"><span><i class="ico plus"></i><strong>보낼 사람 추가하기</strong></span></button>
+                    <button type="button" class="btn btn-bk pop-toast02"><span>발송</span></button>
+                  </div>
+                </div>
+              </section>
+            </div>
 
           </div>
         </div>
@@ -232,118 +242,16 @@
   </div>
 
 
-  <!-- 팀원 상세 레이어 -->
-  <div class="layer-pop confirm" id="layer-team-list">
+  <!-- 문자 잔액 부족 -->
+  <div class="layer-pop" id="layer-sending-fail">
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">팀원 상세</h2>
+        <h2 class="title">문자 잔액 부족</h2>
       </div>
       <div class="layer-mid">
-        <h2 class="inp-title">프로필 이미지</h2>
-        <div class="profile-box col">
-          <div class="profile-head">
-            <div class="profile">
-              <!-- dropdown-wrap -->
-              <div class="dropdown-wrap hover">
-                <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
-                <div class="dropdown-box">
-                  <ul>
-                    <li>
-                      <span class="inp">
-                        <input type="file" name="" id="file1" placeholder="파일 검색">
-                        <label for="file1" class="btn-drop-menu"><span>사진 변경</span></label>
-                      </span>
-                    </li>
-                    <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
-                  </ul>
-                </div>
-              <div class="dim"></div></div>
-              <!-- //dropdown-wrap -->
-
-            </div>
-          </div>
-          <div class="profile-cnt">
-            <div class="filter-box">
-              <p class="filter-title">개인 코드 </p>
-              <div class="inp">
-                <input type="text" name="" id="" value="sklksl234" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">이름</p>
-              <div class="inp">
-                <input type="text" name="" id="" placeholder="고객명" value="홍길동" readonly>
-              </div>
-              <p class="warning-txt02">이름을 입력해주세요.</p>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">연락처</p>
-              <div class="inp">
-                <input type="tel" name="" id="" value="010.1234.5678" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">이메일 주소</p>
-              <div class="inp">
-                <input type="text" name="" id="" value="sample@naver.com" readonly>
-              </div>
-              <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
-              <p class="warning-txt02">이미 가입된 이메일입니다.</p>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">가입 일시</p>
-              <div class="inp">
-                <input type="text" name="" id="" value="2021.10.30 14.30" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">개인 코드</p>
-              <div class="inp">
-                <input type="text" name="" id="" value="ank289" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">권한</p>
-              <!-- select -->
-              <div class="inp-select">
-                <select name="">
-                  <option value="name">팀원</option>
-                </select>
-              </div>
-              <!-- //select -->
-            </div>
-
-            <div class="btn-group02" style="margin-top:40px">
-              <button type="button" class="btn-link open-layer" data-info="layer-team-delete"><span>팀원 삭제</span></button>
-            </div>
-          </div>
-        </div>
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk btn-ok"><span>저장</span></button>
-        </div>
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
-  </div>
-
-  <!-- 계정 삭제 -->
-  <div class="layer-pop" id="layer-team-delete">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">팀원 삭제</h2>
-      </div>
-      <div class="layer-mid">
-        <p class="info-txt02">팀원을 삭제하시겠습니까? <br>팀원이 회사 내에서 이용한 내역은 삭제되지 않으며, 삭제 이후 팀원은 이용 내역에 더이상 접근할 수 없습니다.</p>
+        <p class="info-txt03">문자 잔액이 부족하여 초대장 발송이 실패했습니다.<br> 메일로 초대를 진행하거나 문자 잔액을 충전해주세요.</p>
 
         <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
         </div>
       </div>
@@ -351,6 +259,11 @@
     </div>
   </div>
 
+    <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-sending-fail" style="font-size:16px"><span>문자 잔액 부족</span></button>
+  </div>
 
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
@@ -367,7 +280,9 @@
     //레이어팝업 : 매개변수 : ID명
     layerFunc (".open-layer")
     tabFunc (".tab-wrap")
-    autoHypenTelFunc ("user_id") // input 내 벨류 입력시, 4자리마다 하이픈 추가
+    autoHypenTelFunc (".numberInp") // input 내 벨류 입력시, 4자리마다 하이픈 추가
+    ToastFunc(".pop-toast",'클립보드에 복사되었습니다.',2000)
+    ToastFunc(".pop-toast02",'초대장이 발송되었습니다.',2000)
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
 
