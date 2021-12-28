@@ -1283,6 +1283,16 @@ function tblLineRemove () {
   })
 }
 
+function inputValueRemove () {
+  var btn = document.querySelectorAll(".searchbox .btn-remove, .inp .btn-remove")
+  Array.prototype.forEach.call(btn, function(b, idx){
+    b.addEventListener("click", function (e) {
+      alert()
+
+    })
+  })
+}
+inputValueRemove ()
 
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴

@@ -35,7 +35,7 @@
 
       <ul class="nav-list">
         <li>
-          <a href="#">
+          <a href="dashboard.html">
             <i class='ico home'></i>
             <span class="links_name">홈</span>
           </a>
@@ -194,7 +194,7 @@
             <div class="invite-wrap">
               <p>회사의 URL을 공유하고 팀원을 초대해보세요!<button type="button" class="btn-copy on pop-toast"><span>복사하기</span></button></p>
               <span class="inp" style="padding:20px 0 30px">
-                <input type="text" name="" placeholder="검색어 입력" value="https://sample" style="width:448px">
+                <input type="text" name="" placeholder="검색어 입력" value="https://sample" style="width:448px" readonly>
               </span>
             </div>
 
@@ -207,171 +207,21 @@
             </div>
             <section class="tab-content">
               <div class="content" id="tab1">
-                <div class="tbl-top">
-                  <div class="search-box-wrap flexbox">
-                    <!-- select -->
-                    <div class="inp-select">
-                      <select name="team_search">
-                        <option value="name">이름</option>
-                        <option value="mail">이메일</option>
-                        <option value="tel">연락처</option>
-                        <option value="auth">권한</option>
-                      </select>
-                      <!-- select -->
-                    </div>
-                    <div class="inp-line">
-                      <span class="inp">
-                        <input type="text" name="" placeholder="검색어 입력">
-                      </span>
-                      <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-bk"><span>팀원 초대하기</span></a>
+                <p>SMS 발송시 문자 잔액이 차감됩니다.</p>
+                <div class="inp">
+                  <input type="tel" id="user_id" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" maxlength="13" placeholder="‘-’ 없이 휴대폰 번호 입력" required="">
                 </div>
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:6%">
-                      <col style="width:20%">
-                      <col style="width:22%">
-                      <col style="width:30%">
-                      <col style="width:11%">
-                      <col style="width:9%">
-                      <col style="width:13%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">이름</th>
-                        <th scope="col">연락처</th>
-                        <th scope="col">이메일 주소</th>
-                        <th scope="col">가입 일시</th>
-                        <th scope="col">개인 코드</th>
-                        <th scope="col">권한</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>50</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span><strong class="tx-bold">나</strong>홍길동</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>팀원</span></button></td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>49</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>김수안무거북이와</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>소유주</span></button></td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>48</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>김수안무</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>영업 매니저</span></button></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="inp">
+                  <input type="tel" id="user_id" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" maxlength="13" placeholder="‘-’ 없이 휴대폰 번호 입력" required="">
+                  
+                </div>
+                <div class="flex-sidebox">
+                  <button type="button" class="btn"><span><i class="ico plus"></i>보낼 사람 추가하기</span></button>
+                  <button type="button" class="btn btn-bk"><span>발송</span></button>
                 </div>
               </div>
               <div class="content" id="tab2">
-                <div class="tbl-top">
-                  <div class="search-box-wrap flexbox">
-                    <!-- select -->
-                    <div class="inp-select">
-                      <select name="team_search">
-                        <option value="name">이름</option>
-                        <option value="mail">이메일</option>
-                        <option value="tel">연락처</option>
-                        <option value="auth">권한</option>
-                      </select>
-                      <!-- select -->
-                    </div>
-                    <div class="inp-line">
-                      <span class="inp">
-                        <input type="text" name="" placeholder="검색어 입력">
-                      </span>
-                      <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
-                    </div>
-                  </div>
-                  <a href="#" class="btn btn-bk"><span>팀원 초대하기</span></a>
-                </div>
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:6%">
-                      <col style="width:20%">
-                      <col style="width:11%">
-                      <col style="width:41%">
-                      <col style="width:11%">
-                      <col style="width:11%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">이름</th>
-                        <th scope="col">연락처</th>
-                        <th scope="col">이메일 주소</th>
-                        <th scope="col">가입 요청일</th>
-                        <th scope="col">승인/거절</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>50</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>홍길동</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td>
-                          <div class="flex-box center">
-                            <button type="button" class="btn-s btn-bk-line open-layer" data-info="layer-team-list"><span>승인</span></button>
-                            <button type="button" class="btn-s btn-gray open-layer" data-info="layer-team-list"><span>거절</span></button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>49</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>홍길동</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td>
-                          <div class="flex-box center">
-                            <button type="button" class="btn-s btn-bk-line open-layer" data-info="layer-team-list"><span>승인</span></button>
-                            <button type="button" class="btn-s btn-gray open-layer" data-info="layer-team-list"><span>거절</span></button>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>48</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>홍길동</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td>
-                          <div class="flex-box center">
-                            <button type="button" class="btn-s btn-bk-line open-layer" data-info="layer-team-list"><span>승인</span></button>
-                            <button type="button" class="btn-s btn-gray open-layer" data-info="layer-team-list"><span>거절</span></button>
-                          </div>
-                        </td>
-                      </tr>
 
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </section>
 
@@ -517,57 +367,9 @@
     //레이어팝업 : 매개변수 : ID명
     layerFunc (".open-layer")
     tabFunc (".tab-wrap")
-
+    autoHypenTelFunc ("user_id") // input 내 벨류 입력시, 4자리마다 하이픈 추가
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
-    //select option 값에 따른 input date 변경
-    $(".inp-select").on('change', "select", function() {
-      $(this).addClass("active").next().addClass("active")
-      if($(this).attr("name") == "range") selectInpRangeSet (".inp-select select[name=range]","2021.01.22") //두번째 매개변수에 가입일 전달해야함
-    });
-    // date picker
-    $('input[name="daterange"]').daterangepicker({
-      locale: {                    // 시작일시와 종료일시 구분자
-      "format": 'YYYY.MM.DD',     // 일시 노출 포맷
-      "applyLabel": "확인",                    // 확인 버튼 텍스트
-      "cancelLabel": "초기화",                   // 취소 버튼 텍스트
-      "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
-      "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-      },
-      opens: 'center',
-      timePicker: false,
-      buttonClasses: "btn",
-      applyButtonClasses: "btn-bk",
-      cancelButtonClasses:"btn-bk-line btn-reset",
-      isCustomDate : function(tdDate) {//2021-12-16
-        var thisDate = tdDate._d
-        var today = new Date()
-        var thisYear =thisDate.getFullYear()
-        var thisMonth = thisDate.getMonth() + 1
-        var thisDay = thisDate.getDate()
-        var nowYear = today.getFullYear()
-        var nowMonth = today.getMonth() + 1
-        var nowDay = today.getDate()
-
-        if(thisYear == nowYear && thisMonth == nowMonth ) {
-          if($(".available").text() == nowDay) {
-            $(this).classList.add("today")
-          }
-        }
-
-      }
-    }, function(start, end, label) {
-
-      console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-    });
-    $('input[name="daterange"]').on('show.daterangepicker', function(ev, picker) {
-      //do something, like clearing an input
-      $(".inp-select select option:last-child").prop('selected', true)
-      $(".inp-select select").niceSelect("update")
-    });
-    $('input[name="daterange"]').on('apply.daterangepicker', function(ev, picker) {//2021-12-20
-      $(this).addClass("selected")
-    });
 
   </script>
 </body>
