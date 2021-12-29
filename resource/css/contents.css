@@ -224,10 +224,12 @@
 .inp-select .nice-select {float:none; width:100%; height:44px; line-height:42px; padding-left:12px;}
 .inp-select .nice-select:active, .inp-select .nice-select.open, .inp-select .nice-select:focus {border-color:#E7E7E7; }
 .inp-select .nice-select .current { color:#555868 }/*#9A9A9A */
-.inp-select.type02 .nice-select .current { color:#9A9A9A }/* */
+.inp-select.type02 .nice-select .current,
+.inp-select.type03 .nice-select .current { color:#9A9A9A }/* */
 .inp-select .nice-select.active .current {color:#555868}
 .inp-select .nice-select .list {width:100%; top:92%; margin-top:2px; border-top-left-radius: 0; border-top-right-radius: 0;}
-.inp-select.type02 .nice-select.active .current {color:#555868}
+.inp-select.type02 .nice-select.active .current,
+.inp-select.type03 .nice-select.active .current {color:#555868}
 .inp-select .nice-select .option {color:#41495D}
 
 .inp-select .nice-select .option + .option {border-top:1px solid #E7E7E7}
@@ -748,7 +750,7 @@ button.box.active {border-color:#02164F}
 .dropdown-wrap.hover .btn-drop-menu:hover {background-color:#E1E5EF;}
 
 .form-temp-list .dropdown-wrap.type03 .dropdown-box {position:fixed; top:auto;  box-sizing: border-box; }
-.form-temp-list .dropdown-wrap.type03 .dropdown-box >ul {height:160px; overflow:auto;}
+.form-temp-list .dropdown-wrap.type03 .dropdown-box >ul {height:128px; overflow:auto;}
 
 .article-wrap { font-size: 14px; line-height: 20px; color: #9A9A9A;}
 .article-wrap.border {padding:12px; height:300px; border: 1px solid #E7E7E7; box-sizing: border-box; border-radius: 6px;}
