@@ -19,7 +19,7 @@
 .setting-nav .depth2 {margin:10px 0 12px; padding-left:14px}
 .setting-nav .depth2 > li a {display: block; width:100%; padding:6px 8px; border-radius: 4px; box-sizing: border-box; font-size: 14px;
   line-height: 20px;  color: #555868;}
-.setting-nav .depth2 > li.on a {background-color:rgba(29, 88, 255, 0.16);}
+.setting-nav .depth2 > li.on a {background-color:rgba(29, 88, 255, 0.16);font-weight:bold; color: #41495D;}
 .setting-nav .depth2 > li.warn a {padding-right:18px; background:url(../images/setting/ico_setting-warning.png) no-repeat right center}
 
 /* dashboard */
@@ -506,7 +506,7 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .service-box {margin-top:20px;}
 .service-box .checkbox input.check + label dl,
 .service-box .total { justify-content:space-between; align-items:center; }
-.service-box .checkbox input.check + label dl {display:inline-flex; margin-left:5px; width:calc(100% - 30px)}
+.service-box .checkbox input.check + label dl {display:inline-flex; margin-left:2px; width:calc(100% - 30px)}
 .service-box .total {display:flex;padding:24px 0 10px; border-top:1px solid #E4E4E4;}
 .service-box .total .head:not(.sm) {font-weight: bold; font-size: 16px; line-height: 23px;color:#02164F }
 .service-box .total .sm {margin-top:3px; font-weight: 400; font-size: 12px; line-height: 17px;color:#9A9A9A }
@@ -807,7 +807,6 @@ ul.inp-line > li {display: flex; align-items: center;}
 .cnt-inner:first-child:last-child,
 .cnt-inner .line:first-child:last-child ,
 .cnt-inner .content-box:first-child:last-child {width:100%;}
-.tbl-top + .profile-box {margin-top:20px;}
 
 .profile-box {display: flex;}
 .profile-head .profile {position:relative; margin-right:70px; width: 108px; height: 108px; border-radius:50%; background:url(../images/setting/bg_company-logo.png) no-repeat center/cover}
@@ -818,6 +817,7 @@ ul.inp-line > li {display: flex; align-items: center;}
 .profile-head .profile img {width:100%; height:100%; border-radius: 50%;}
 .profile-head .profile .nologo {display:flex; justify-content: center; align-items: center; width:100%; height:100%; background-color: #CBD1E0; border-radius: 50%;font-weight: bold; font-size: 30px; line-height: 43px;  color: #FFFFFF;
 user-select: none;}
+.profile-head .profile .nologo.lg {line-height: 67px; font-size: 46px;}
 
 .line-box {padding:16px; border: 1px solid #E7E7E7; box-sizing: border-box; border-radius: 6px;}
 .line-box,
@@ -972,10 +972,14 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .btn-line-plus {color:#02164F}
 .tbl-type1 .tx-bold {margin-right:8px}
 
-.team .tbl-top {padding-top:20px;}
-.invite-wrap p .btn-copy {margin-left:10px;}
-.invite-wrap .inp {padding:20px 0 30px;}
-.invite-btm .tab-wrap {margin-bottom:20px;}
+.setting-top-wrap p .btn-copy {margin-left:10px;}
+.setting-top-wrap .inp {padding-bottom:10px;}
+.setting-top-wrap .inp.inp-bold {width:400px;}
+.setting-top-wrap .inp.inp-bold input {font-weight:bold}
+.setting-top-wrap {margin-bottom:20px}
+.setting-top-wrap .inp-title {margin-bottom:20px;}
+.setting-top-wrap .tx-info + .inp {margin-top:20px}
+.team .tab-wrap {margin-bottom:20px;}
 .invite-btm .inp {margin-top:14px;}
 .invite-btm .inp + .inp {margin-top:10px;}
 .invite-btm .warning-txt02 {margin:6px 0 16px}
@@ -983,6 +987,7 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .inp-add-wrap,
 .invite-btm .btm-btn-group {width:448px;}
 .invite-btm .btm-btn-group {margin-top:14px;}
+
 /* 레이어 프로필 */
 .profile-box.col {flex-direction: column;}
 .profile-box.col .profile-head .profile {margin:0 auto}

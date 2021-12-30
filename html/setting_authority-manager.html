@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-2">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>설정</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/daterangepicker.css" />
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
+        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="dashboard.html">
+            <i class='ico home'></i>
+            <span class="links_name">홈</span>
+          </a>
+        </li>
+        <li>
+          <a href="customManage_list.html">
+            <i class="ico user"></i>
+            <span class="links_name">고객 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="file_storage.html">
+            <i class='ico file'></i>
+            <span class="links_name">파일 보관함</span>
+          </a>
+        </li>
+        <li>
+          <a href="form_list.html">
+            <i class='ico form'></i>
+            <span class="links_name">상담 신청폼</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="btm">
+        <li>
+          <a href="#">
+            <i class='ico help'></i>
+            <span class="links_name">자주 묻는 질문</span>
+          </a>
+        </li>
+        <li class="on">
+          <a href="setting_limit-plan.html">
+            <i class='ico setting'></i>
+            <span class="links_name">설정</span>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
+    </nav>
+    <section id="content" class="content-section setting">
+      <!-- #include file="include_header.html" -->
+        <aside class="setting-nav">
+          <div class="inbox">
+            <h2 class="inp-title">설정</h2>
+            <ul class="depth1">
+              <li>
+                <a href="#" class="menu-name company"><span>회사 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>회사 정보</span></a></li>
+                  <li><a href="setting_employee.html" class="btn-nav-dep2"><span>팀원 관리</span></a></li>
+                  <li><a href="setting_invite-sms.html" class="btn-nav-dep2"><span>팀원 초대</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name security"><span>권한 관리</span></a>
+                <ul class="depth2">
+                  <li class="on"><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name card"><span>결제 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name layout"><span>신청폼 설정</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name chat"><span>채팅 설정</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- header -->
+        <div class="header-wrap">
+          <header id="header" class="header">
+            <h2 class="title">권한 템플릿</h2>
+
+            <ul class="menu">
+              <li>
+                <div class="searchbox">
+                  <i class='ico search'></i>
+                  <input type="text" placeholder="검색해보세요.">
+                </div>
+              </li>
+              <li>
+                <div class="dropdown-wrap">
+                  <button type="button" class="btn-drop">
+                    <div class="profile-details">
+                      <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                      <span class="name">홍길동님</span>
+                      <i class="arrow down"></i>
+                    </div>
+
+                  </button>
+                  <div class="dropdown-box">
+                    <ul>
+                      <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                      <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                      <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                      <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                   </ul>
+                  </div>
+                </div>
+              </li>
+              <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+              <li><button type="button" class="btn-menu" data-info="alarm"><i class="ico alarm"></i></button></li>
+            </ul>
+          </header>
+          <!-- /header -->
+
+          <aside id="side_right_menu" class="side-menu">
+            <div class="gnb-box right mail">
+                <ul class="clear">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+            <div class="gnb-box right alarm">
+                <ul class="clear">
+                    <li><a href="#">메뉴21</a></li>
+                    <li><a href="#">메뉴22</a></li>
+                    <li><a href="#">메뉴23</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+           </aside>
+        </div>
+
+        <!-- location -->
+        <ul class="location-wrap">
+          <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
+          <li><a href="setting_limit-plan.html">설정</a></li>
+          <li>권한 템플릿</li>
+          <li>영업매니저</li>
+        </ul>
+        <!-- //location -->
+
+        <div class="cnt-box-wrap">
+          <div class="cnt-box team">
+            <div class="setting-top-wrap flex-sidebox">
+              <div class="inp inp-bold">
+                <input type="text" value="팀원"/>
+              </div>
+              <div class="btn-group03">
+                <a href="setting_authority.html" class="btn btn-bk-line"><span>취소</span></a>
+                <button type="button" class="btn btn-bk"><span>추가</span></button>
+              </div>
+            </div>
+            <!-- 리스트 -->
+            <div class="tbl-type3">
+              <table>
+                <caption>권한 템플릿 정보</caption>
+                <colgroup>
+                  <col style="width:52%">
+                  <col style="width:24%">
+                  <col style="width:24%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">권한 목록</th>
+                    <th scope="col">권한 있음</th>
+                    <th scope="col">권한 없음</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check1" id="check1" class="check" checked>
+                        <label for="check1"><span class="box"></span><strong>회사 정보</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section1">
+                    <td>회사 정보 편집</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio1" id="radio1-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio1" id="radio1-2" class="radio no no1">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check2" id="check2" class="check" checked>
+                        <label for="check2"><span class="box"></span><strong>팀원 관리</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section2">
+                    <td>팀원 승인</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio2" id="radio2-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio2" id="radio2-2" class="radio no no2">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section2">
+                    <td>팀원 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio3" id="radio3-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio3" id="radio3-2" class="radio no no2">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section2">
+                    <td>팀원 상세 편집</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio4" id="radio4-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio4" id="radio4-2" class="radio no no2">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check3" id="check3" class="check" checked>
+                        <label for="check3"><span class="box"></span><strong>팀원 초대</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section3">
+                    <td>SMS/이메일로 초대</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio5" id="radio5-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio5" id="radio5-2" class="radio no no3">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check4" id="check4" class="check" checked>
+                        <label for="check4"><span class="box"></span><strong>권한 관리</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section4">
+                    <td>템플릿 생성</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio6" id="radio6-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio6" id="radio6-2" class="radio no no4">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section4">
+                    <td>템플릿 수정</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio7" id="radio7-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio7" id="radio7-2" class="radio no no4">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section4">
+                    <td>템플릿 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio8" id="radio8-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio8" id="radio8-2" class="radio no no4">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check5" id="check5" class="check" checked>
+                        <label for="check5"><span class="box"></span><strong>고객 관리</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section5">
+                    <td>신규 고객 등록</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio9" id="radio9-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio9" id="radio9-2" class="radio no no5">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section5">
+                    <td>기본 정보 수정</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio10" id="radio10-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio10" id="radio10-2" class="radio no no5">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section5">
+                    <td>고객 연동</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio11" id="radio11-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio11" id="radio11-2" class="radio no no5">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section5">
+                    <td>고객 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio12" id="radio12-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio12" id="radio12-2" class="radio no no5">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check6" id="check6" class="check" checked>
+                        <label for="check6"><span class="box"></span><strong>견적 관리</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section6">
+                    <td>견적 업로드 및 공유</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio13" id="radio13-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio13" id="radio13-2" class="radio no no6">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section6">
+                    <td>견적 다운로드</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio14" id="radio14-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio14" id="radio14-2" class="radio no no6">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section6">
+                    <td>견적 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio15" id="radio15-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio15" id="radio15-2" class="radio no no6">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check7" id="check7" class="check" checked>
+                        <label for="check7"><span class="box"></span><strong>파일 보관함</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section7">
+                    <td>파일 업로드</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio16" id="radio16-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio16" id="radio16-2" class="radio no no7">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section7">
+                    <td>파일 다운로드</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio17" id="radio17-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio17" id="radio17-2" class="radio no no7">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section7">
+                    <td>파일 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio18" id="radio18-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio18" id="radio18-2" class="radio no no7">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check8" id="check8" class="check" checked>
+                        <label for="check8"><span class="box"></span><strong>상담 신청폼</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section8">
+                    <td>신청폼 생성</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio19" id="radio19-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio19" id="radio19-2" class="radio no no8">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section8">
+                    <td>신청폼 수정</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio20" id="radio20-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio20" id="radio20-2" class="radio no no8">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section8">
+                    <td>신청폼 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio21" id="radio21-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio21" id="radio21-2" class="radio no no8">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section8">
+                    <td>열람 권한 변경</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio22" id="radio22-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio22" id="radio22-2" class="radio no no8">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section8">
+                    <td>화이트 라벨링 변경</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio23" id="radio23-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio23" id="radio23-2" class="radio no no8">
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check9" id="check9" class="check" checked>
+                        <label for="check9"><span class="box"></span><strong>채팅</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section9">
+                    <td>메세지 보내기</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio24" id="radio24-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio24" id="radio24-2" class="radio no no9">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section9">
+                    <td>채팅방 생성</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio25" id="radio25-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio25" id="radio25-2" class="radio no no9">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section9">
+                    <td>채팅방 삭제</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio26" id="radio26-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio26" id="radio26-2" class="radio no no9">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section9">
+                    <td>자주 쓰는 답변 템플릿 설정</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio27" id="radio27-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio27" id="radio27-2" class="radio no no9">
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="related-section9">
+                    <td>채팅 운영 및 안내 설정</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio28" id="radio28-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio28" id="radio28-2" class="radio no no9">
+                      </span>
+                    </td>
+                  </tr>
+
+
+                  <tr class="chk-line">
+                    <td>
+                      <div class="checkbox">
+                        <input type="checkbox" name="check10" id="check10" class="check" checked>
+                        <label for="check10"><span class="box"></span><strong>통계 분석</strong></label>
+                      </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr class="related-section10">
+                    <td>접근 가능</td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio29" id="radio29-1" class="radio" checked>
+                      </span>
+                    </td>
+                    <td>
+                      <span class="inp-radio">
+                        <input type="radio" name="radio29" id="radio29-2" class="radio no no10">
+                      </span>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+            <!-- //리스트 -->
+            <div class="tl mt40">
+              <button type="button" class="btn-link open-layer" data-info="layer-authority-delete"><span>템플릿 삭제</span></button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </div>
+
+
+  <!-- 계정 삭제 -->
+  <div class="layer-pop" id="layer-authority-delete">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">템플릿 삭제</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">템플릿을 삭제하시겠습니까?<br> 템플릿 삭제 시 이 템플릿에 속한 팀원들은 모두 “팀원” 템플릿으로 이동합니다.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>삭제</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 페이지 나가기 -->
+  <div class="layer-pop confirm" id="layer-authority-out">
+    <div class="layer-cnt">
+      <div class="layer-mid">
+        <p class="confirm-msg">현재 페이지에서 나가시겠습니까?<br> 변경 사항이 저장되지 않을 수 있습니다.</p>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+     <button type="button" class="btn-link open-layer" data-info="layer-authority-out" style="font-size:16px"><span>페이지 나가기</span></button>
+  </div>
+
+  <!-- script -->
+  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script src="../resource/js/common.js"></script>
+  <script>
+
+    //관리페이지용 공통 함수
+    pageInit ()
+    //레이어팝업 : 매개변수 : ID명
+    layerFunc (".open-layer")
+    //select box = jquery plugin
+    $('.inp-select select').niceSelect();
+
+    function tableRowControl () {
+      var chks = document.querySelectorAll("input[type=checkbox]")
+      Array.prototype.forEach.call(chks, function(chk, idx){
+        chk.addEventListener("click",function(e){
+          var num = e.currentTarget.getAttribute("id").split("check")[1]
+          console.log(num)
+          rowShowHide(e,idx)
+        })
+
+      })
+
+
+
+      var relatedRadio = document.querySelectorAll("input[type=radio]")
+      Array.prototype.forEach.call(relatedRadio, function(radio, idx){
+        radio.addEventListener("change",function(e){
+
+          var num = e.currentTarget.classList[2].split("no")[1]
+          var chk1 = document.querySelectorAll("input[type=radio].no"+num+":checked");
+          var chk2 = document.querySelectorAll("input[type=radio].no"+num)
+
+          if(chk1.length == chk2.length) {
+            document.querySelector("#check"+num).checked=false
+          }
+        })
+      })
+
+
+      function rowShowHide(e,idx) {
+        var relatedSections = document.querySelectorAll(".related-section"+(idx+1))
+        Array.prototype.forEach.call(relatedSections, function(section, idx){
+          if(e.currentTarget.checked) {
+            section.style.display="table-row"
+          } else {
+            section.style.display="none"
+          }
+        })
+      }
+    }
+    tableRowControl ()
+  </script>
+</body>
+
+</html>
