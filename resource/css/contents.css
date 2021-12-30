@@ -812,7 +812,7 @@ ul.inp-line > li {display: flex; align-items: center;}
 .profile-head .profile {position:relative; margin-right:70px; width: 108px; height: 108px; border-radius:50%; background:url(../images/setting/bg_company-logo.png) no-repeat center/cover}
 .profile-head .profile .dropdown-wrap,
 .profile-head .profile .btn-thum-edit {position: absolute; right: 0; bottom:0;}
-.profile-head .profile .dropdown-box{top:0}
+.profile-head .profile .dropdown-box{top:5px; left:-30px}
 .profile-box .profile-cnt {width:400px;}
 .profile-head .profile img {width:100%; height:100%; border-radius: 50%;}
 .profile-head .profile .nologo {display:flex; justify-content: center; align-items: center; width:100%; height:100%; background-color: #CBD1E0; border-radius: 50%;font-weight: bold; font-size: 30px; line-height: 43px;  color: #FFFFFF;
