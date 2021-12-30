@@ -1348,6 +1348,55 @@ function inputLineRemove () {
 }
 inputLineRemove ()
 
+//설정 - 권한 관리 매니저 페이지 사용
+function tableRowControl () {
+  var chks = document.querySelectorAll("input[type=checkbox]")
+  Array.prototype.forEach.call(chks, function(chk, idx){
+    chk.addEventListener("click",function(e){
+      var num = e.currentTarget.getAttribute("id").split("check")[1]
+      var radios = document.querySelectorAll(".related-section"+num+" .no")
+      Array.prototype.forEach.call(radios, function(radio, idx){
+        radio.checked = true
+      })
+      rowShowHide(e,idx)
+    })
+
+  })
+
+
+
+  var relatedRadio = document.querySelectorAll("input[type=radio]")
+  Array.prototype.forEach.call(relatedRadio, function(radio, idx){
+    radio.addEventListener("change",function(e){
+
+      var num = e.currentTarget.classList[2].split("no")[1]
+      var chk1 = document.querySelectorAll("input[type=radio].no"+num+":checked");
+      var chk2 = document.querySelectorAll("input[type=radio].no"+num)
+
+      if(chk1.length == chk2.length) {
+        document.querySelector("#check"+num).checked=false
+      }
+    })
+  })
+
+
+  function rowShowHide(e,idx) {
+    var relatedSections = document.querySelectorAll(".related-section"+(idx+1))
+    Array.prototype.forEach.call(relatedSections, function(section, idx){
+      if(e.currentTarget.checked) {
+        section.style.display="table-row"
+      } else {
+        section.style.display="none"
+      }
+    })
+  }
+}
+
+
+
+
+
+//공통
 function pageInit () {  //모든 페이지용 함수
   clickAddClassFunc(".btn-side-open",".sidebar","open")//사이드 메뉴
   dropMenuOpen ('.header .btn-drop','.header .dropdown-box','.header .btn-drop-menu',null)//상단 드롭 메뉴

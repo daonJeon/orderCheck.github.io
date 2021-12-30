@@ -769,45 +769,6 @@
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
 
-    function tableRowControl () {
-      var chks = document.querySelectorAll("input[type=checkbox]")
-      Array.prototype.forEach.call(chks, function(chk, idx){
-        chk.addEventListener("click",function(e){
-          var num = e.currentTarget.getAttribute("id").split("check")[1]
-          console.log(num)
-          rowShowHide(e,idx)
-        })
-
-      })
-
-
-
-      var relatedRadio = document.querySelectorAll("input[type=radio]")
-      Array.prototype.forEach.call(relatedRadio, function(radio, idx){
-        radio.addEventListener("change",function(e){
-
-          var num = e.currentTarget.classList[2].split("no")[1]
-          var chk1 = document.querySelectorAll("input[type=radio].no"+num+":checked");
-          var chk2 = document.querySelectorAll("input[type=radio].no"+num)
-
-          if(chk1.length == chk2.length) {
-            document.querySelector("#check"+num).checked=false
-          }
-        })
-      })
-
-
-      function rowShowHide(e,idx) {
-        var relatedSections = document.querySelectorAll(".related-section"+(idx+1))
-        Array.prototype.forEach.call(relatedSections, function(section, idx){
-          if(e.currentTarget.checked) {
-            section.style.display="table-row"
-          } else {
-            section.style.display="none"
-          }
-        })
-      }
-    }
     tableRowControl ()
   </script>
 </body>
