@@ -63,6 +63,8 @@ input[type=text]::-ms-clear { display:none;}
 .clear:after { display: block; content: ""; clear: both; }
 .hide { position:absolute; top:0; left:0; width:1px; height:1px; opacity:0; filter:alpha(opacity=0); zoom:1; text-indent:-9999px; z-index:0; overflow:hidden; }
 
+.mt40 {margin-top:40px}
+
 /* button */
 .tx-org {color:#FF8159 !important}
 .tx-gray {color:#7B7B7B !important}
@@ -203,6 +205,7 @@ div.switch.no-txt {display: block;}
 .login-wrap .sub-gray-txt {display: block; text-align: center; margin-top:10px}
 .page-top.top-line {padding:30px; margin:26px 0 40px; border:1px solid #ddd; border-radius:0; box-sizing: border-box;}
 .page-top.top-line .title {display:block}
+
 /* list */
 .dot-list li {position: relative; padding-left:10px; font-size: 12px; line-height: 16px; color: #9A9A9A;}
 .dot-list li:before {position:absolute; top:8px; left:0; width:4px; height:4px; border-radius: 50%; background:#9A9A9A; content:''}
@@ -280,7 +283,6 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .gnb-box.right .data-empty-box .txt {font-weight: 400;}
 
 
-
 .gnb-wrap.menu .btn-menu.open + .gnb-box,
 .gnb-box.right.open {right:0;  transition:all 0.8s}
 .gnb-box.left.open {left:0;  transition:all 0.8s}
@@ -355,7 +357,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .tbl-type3 tr.del td .btn-link {font-weight:400; color:#9A9A9A;}
 .tbl-type3 .inp-radio input.radio {margin:0}
 
-.mt40 {margin-top:40px}
+
 /*===== SELECT =====*/
 
 
@@ -413,6 +415,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .textarea::placeholder {color:#9A9A9A}
 .textarea::-webkit-input-placeholder {color: #9A9A9A;}
 .textarea:-ms-input-placeholder { color: #9A9A9A;}
+
 /*===== chk =====*/
 .checkbox {position:relative;}
 .checkbox input {position:absolute; top:0; left:0; width:1px; height:1px; opacity:0; filter:alpha(opacity=0); zoom:1; text-indent:-9999px; z-index:0; overflow:hidden;}
@@ -523,7 +526,9 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 .sidebar .logo-details .btn-side-open { position: absolute; top:5px;left:0;  width: 50px; height: 50px;  font-size: 22px;  color: #fff; z-index: 1;}
 .sidebar .nav-list { margin-top: 34px; height: 100%;}
 .sidebar .nav-list > li {position: relative; margin: 8px 0; list-style: none;}
-.sidebar li a {display: flex; width:48px; height:42px; border-radius: 8px;  align-items: center;  text-decoration: none;  transition: all 0.4s ease;  background: #02164F; }
+.sidebar li a {display: flex; width:42px; height:42px; border-radius: 8px;  align-items: center;  text-decoration: none;  transition: all 0.4s ease;  background: #02164F; }
+.sidebar li a .ico {min-width:42px; width:42px}
+
 .sidebar.open li a {width:100%}
 .sidebar .nav-list li.on a { background: #1D58FF; color:#fff}
 .sidebar.open~.content-section { left: 218px; width: calc(100% - 218px);}
@@ -624,7 +629,8 @@ width:calc(100% - 40px); font-size:14px;}
 .sidebar li a .links_name { padding-left:12px; color: #fff; font-size: 15px; font-weight: 400; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.4s;}
 .sidebar.open li a .links_name {  opacity: 1;  pointer-events: auto;}
 .sidebar li a:hover .links_name {  transition: all 0.5s ease;}
-.sidebar .btm {position: absolute; width:calc(100% - 32px); left:16px; bottom: 30px; overflow: hidden;}
+.sidebar .btm {position: absolute;width: calc(100% - 38px);left: 30px;bottom: 30px;overflow: hidden;}
+
 .sidebar li .profile-details { display: flex; align-items: center; flex-wrap: nowrap;}
 .sidebar li img { width: 45px; height: 45px; object-fit: cover; border-radius: 6px; margin-right: 10px;}
 .sidebar .btm .name, .sidebar .btm .job {font-size: 15px; font-weight: 400; color: #fff; white-space: nowrap; }
@@ -638,7 +644,7 @@ width:calc(100% - 40px); font-size:14px;}
 .data-empty-box.customer .txt {padding-top:160px; background: url(../images/common/bg_empty-customer.png) no-repeat top 20px center;}
 .data-empty-box.customer .txt-group {text-align: center; }
 .data-empty-box.customer .txt-group .sub-txt {margin-top:12px; font-size: 14px; line-height: 20px; color: #9A9A9A;}
-.data-empty-box.customer .txt-group .btn-group02 .btn {width:120px;}
+.data-empty-box.customer .txt-group .btn {line-height:20px;padding-left: 13px;padding-right: 13px;}
 
 .tab-content {position:relative; height: 100%;}
 .tab-content > .content,

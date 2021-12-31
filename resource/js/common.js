@@ -596,7 +596,7 @@ function inpTypeSwitch () {
   })
 }
 
-function autoHypenTelFunc (inputID,callback) {//매개변수 설명 : input ID / 하이픈 적용되어야하는 텀 (number or array)
+function autoHypenTelFunc (inputID,callback) {
   if(inputID.slice(undefined, 1) == ".") {
     var inputs = document.querySelectorAll(inputID)
     Array.prototype.forEach.call(inputs, function(inp, idx){
@@ -640,6 +640,52 @@ function autoHypenTelFunc (inputID,callback) {//매개변수 설명 : input ID /
       tmp += str.substr(3, 4);
       tmp += '-';
       tmp += str.substr(7);
+
+      return tmp;
+    }
+
+  }
+
+}
+
+//사업자 등록 번호용
+function autoHypenNumFunc (inputID,callback) {
+  if(inputID.slice(undefined, 1) == ".") {
+    var inputs = document.querySelectorAll(inputID)
+    Array.prototype.forEach.call(inputs, function(inp, idx){
+      inp.addEventListener("keyup",function(e){
+        var _val = this.value.trim()
+        this.value = autoHypenTel(_val,callback,e.currentTarget)
+      })
+    })
+  } else {
+    var input = document.querySelector("#"+inputID)
+    input.addEventListener("keyup",function(e){
+      var _val = this.value.trim()
+      this.value = autoHypenTel(_val,callback,e.currentTarget)
+    })
+  }
+
+  //휴대폰용 하이픈 자동 추가
+  function autoHypenTel (str,callback,target) {
+    str = str.replace(/[^0-9]/g,'')
+    var tmp = '';
+
+    if(callback != null) callback(target)
+
+    if (str.length < 4) {
+      return str;
+    } else if (str.length < 6) {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3);
+      return tmp;
+    } else {
+      tmp += str.substr(0, 3);
+      tmp += '-';
+      tmp += str.substr(3, 2);
+      tmp += '-';
+      tmp += str.substr(5);
 
       return tmp;
     }
@@ -852,6 +898,7 @@ function fileUpload (fileInp) {
   if (fileInput.length == 0) return
   Array.prototype.forEach.call(fileInput, function(inp, idx){
     btnRemove = inp.nextElementSibling
+    console.log(inp)
     inp.addEventListener("change",function(e){
       var fileName = e.currentTarget.files[0].name
       e.currentTarget.previousElementSibling.value = fileName
@@ -1242,10 +1289,11 @@ function inpEditFunc (){
   Array.prototype.forEach.call(btn, function(b, idx){
     var input = b.closest(".inp")
 
+    b.previousElementSibling.readOnly = true
 
     b.addEventListener("click",function(e){
       input.classList.toggle("edit")
-      console.log(e.currentTarget)
+
       if(input.classList.contains("edit")) {
         input.classList.add("active")
        e.currentTarget.previousElementSibling.readOnly = false
