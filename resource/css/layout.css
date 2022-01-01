@@ -74,6 +74,9 @@ input[type=text]::-ms-clear { display:none;}
 
 /*===== btn =====*/
 .btn { min-width: 90px; padding:11px 10px; border-radius: 6px;text-align: center; font-size:14px; transition: all .3s; box-sizing: border-box;}
+.btn02,
+.btn02.btn-bk,
+.btn02.btn-gray { padding:10px 10px; border-radius: 6px; line-height:23px; text-align: center; font-size:16px; transition: all .3s; box-sizing: border-box;}
 .btn-l {min-width:auto; padding:16px 14px 17px; line-height:20px; font-size:16px; border-radius: 6px;text-align: center; transition: all .3s; box-sizing: border-box; }
 .btn-m {min-width:auto; padding:8px 17px 7px; line-height:20px; font-size:14px; border-radius: 6px;text-align: center; transition: all .3s; box-sizing: border-box; }
 .btn-s {min-width:auto; padding:6px 13px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; box-sizing: border-box;}
@@ -191,6 +194,20 @@ div.switch.no-txt {display: block;}
 .switch.mode .slider:after,
 .switch.mode input:checked + .slider:after {content:''}
 .switch.mode input:checked + .slider:before {-webkit-transform:translateX(84px);-ms-transform:translateX(84px);transform:translateX(84px);}
+
+.switch.mode02 {margin-bottom:12px; width:228px; height:44px;}
+.switch.mode02 .slider {background-color: #02164F;}
+.switch.mode02 .slider > span {position:absolute; top:50%; transform:translateY(-50%); font-weight: 500; font-size: 14px; line-height: 20px; color:#fff;}
+.switch.mode02 .slider > .unchecked {left:52px; color:#414C5D;}
+.switch.mode02 .slider > .checked {right:22px}
+.switch.mode02 .slider .unchecked {opacity: 1;}
+.switch.mode02 input:checked + .slider .checked {opacity: 1; color:#414C5D;}
+.switch.mode02 input:checked + .slider .unchecked {opacity: 1; color:#fff;}
+.switch.mode02 .slider:before {width:110px; height:36px; border-radius: 30px; box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.2);}
+.switch.mode02 .slider:after,
+.switch.mode02 input:checked + .slider:after {content:''}
+.switch.mode02 input:checked + .slider:before {-webkit-transform:translateX(110px);-ms-transform:translateX(110px);transform:translateX(110px);}
+
 
 /* title */
 .page-top .title,
@@ -709,6 +726,9 @@ width:calc(100% - 40px); font-size:14px;}
 .tab-wrap.type02 {width:auto; margin-top:40px; margin-bottom:38px;}
 .tab-wrap.type02 .tabs > li {width:50%; border-bottom:1px solid #E6E6E6;}
 .tab-wrap.type02 .tabs li button {width:100%; padding-bottom:14px}
+.tab-wrap.type03 {width:auto; margin-top:20px; margin-bottom:20px;}
+.tab-wrap.type03 .tabs > li {width:50%; }
+.tab-wrap.type03 .tabs li button {width:100%;}
 .txt-form {margin:0 10px 0 8px}
 
 /* toast */

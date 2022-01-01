@@ -209,18 +209,17 @@
                   </div>
                   <div class="flex-sidebox">
                     <h3 class="filter-title">현재 구독중인 플랜</h3>
-                    <span class="tx-gray">월 결제</span>
-                    <!-- <span class="switch mode">
-                      <input type="checkbox" id="" checked="">
-                      <label for="" class="slider round"><span class="unchecked">월</span><span class="checked">연(10%할인)</span></label>
-                    </span> -->
+                    <span class="switch mode02">
+                      <input type="checkbox" id="switchMode02" checked="">
+                      <label for="switchMode02" class="slider round"><span class="unchecked">월</span><span class="checked">연(10%할인)</span></label>
+                    </span>
                   </div>
 
                   <div class="dropdown-wrap">
-                    <button type="button" class="btn-member-drop active">
+                    <button type="button" class="btn-member-drop btn-drop-type02">
                       <dl>
                         <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                        <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                        <dd><strong class="price"><var>무료</var></strong></dd><!-- 2021-12-12 -->
                       </dl>
                     </button>
                     <div class="drop-menu-list">
@@ -228,16 +227,32 @@
                         <li>
                           <button type="button" class="btn-member-drop">
                             <dl>
-                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                              <dt><span class="company">프리</span> <span class="desc">월 상담 신청 3건 이하</span></dt>
+                              <dd><span class="price"><var>무료</var></span></dd>
                             </dl>
                           </button>
                         </li>
                         <li>
                           <button type="button" class="btn-member-drop">
                             <dl>
-                              <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">93,300</var><span class="unit">월</span></strong></dd>
+                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd>
+                            </dl>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-member-drop">
+                            <dl>
+                              <dt><span class="company">프로</span> <span class="desc">월 상담 신청 100건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">75,800</var><span class="unit">월</span></strong></dd>
+                            </dl>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-member-drop">
+                            <dl>
+                              <dt><span class="company">컴퍼니</span> <span class="desc">월 상담 신청 410건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">227,200</var><span class="unit">월</span></strong></dd>
                             </dl>
                           </button>
                         </li>
@@ -248,38 +263,34 @@
                     <h2 class="filter-title">부가 서비스</h2>
                     <ul class="info-list side">
                       <li>
-                        <dl class="info-list-item">
-                          <dt><span class="label-head">채팅</span></dt>
-                          <dd>
-                            <strong class="label-desc">₩ <var>36,000</var>
-                            <span class="unit">월</span></strong>
-                          </dd>
-                        </dl>
+                        <div class="checkbox">
+                          <input type="checkbox" name="service" id="service01" class="check" disabled>
+                          <label for="service01"><span class="box"></span><dl><dt class="label-head">화이트 라벨링</dt><dd class="label-desc">프로 플랜부터 가능</dd></dl></label>
+                        </div>
                       </li>
                       <li>
-                        <dl class="info-list-item">
-                          <dt><span class="label-head">통계 분석</span></dt>
-                          <dd>
-                            <strong class="label-desc">₩ <var>36,000</var>
-                            <span class="unit">월</span></strong>
-                          </dd>
-                        </dl>
+                        <div class="checkbox">
+                          <input type="checkbox" name="service" id="service02" class="check" disabled>
+                          <label for="service02"><span class="box"></span><dl><dt><span class="label-head">채팅</span></dt><dd class="label-desc">유료 플랜부터 가능</dd></dl></label>
+                        </div>
                       </li>
-                      <li class="btn-line-group side">
-                        <a href="#" class="btn-link-type02" target="_blank"><span class="txt">자세한 가격 및 기능</span></a>
-                        <button type="button" class="btn02 btn-bk open-layer" data-info="layer-member-join"><span>구독 변경</span></button>
+                      <li>
+                        <div class="checkbox">
+                          <input type="checkbox" name="service" id="service03" class="check" disabled>
+                          <label for="service03"><span class="box"></span><dl><dt><span class="label-head">통계/분석</span></dt><dd class="label-desc">유료 플랜부터 가능</dd></dl></label>
+                        </div>
                       </li>
-                      
+                      <li class="total">
+                        <div class="head">합계<p class="sm">모든 이용 요금은 세금(10%) 별도입니다</p></div>
+                        <span class="total-price"><var class="won">0</var><span class="unit">월</span></span>
+                      </li>
                     </ul>
-
-                  </div>
-
-
-                  <div class="setting-info-box update">
-                    <div class="inbox">
-                      <span class="txt">2021.10.20 갱신 예정</span>
+                    <div class="btn-line-group tr">
+                      <button type="button" class="btn02 btn-gray"><span>취소</span></button>
+                      <button type="button" class="btn02 btn-bk open-layer" data-info="layer-member-join"><span>구독 변경</span></button>
                     </div>
                   </div>
+
                   <!-- //setting-info-box -->
                 </div>
 
@@ -440,217 +451,24 @@
       </div>
     </div>
   </div>
-  <!-- 카드 등록 -->
-  <div class="layer-pop" id="layer-card-enroll">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">카드 등록</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="login-wrap">
-          <div class="tbl-top-type02">
-            <p class="sub-txt tl">무료 체험기간 14일 이후 부터 결제가 진행됩니다.</p>
-            <p class="sm tl">오더체크는 어떠한 결제정보도 직접 저장하거나 접근하지 않습니다.<br> 검증된 타사 결제 시스템을 통해 모든 카드정보는 암호화되어 해당 결제 회사에서 관리됩니다.</p>
-          </div>
 
-          <div class="btn-member-drop on">
-            <dl>
-              <dt><span class="company">월 결제 금액(VAT 금액)</span> <span class="desc"><var>2021.11.30</var>부터 시작</span></dt>
-              <dd><strong class="price"><var class="won">91,300</var></strong></dd>
-            </dl>
-          </div>
-
-          <div class="tab-wrap type03">
-            <ul class="tabs">
-              <li class="on"><button type="button" class="tab-btn active" data-tab="payTab1">개인카드</button></li>
-              <li><button type="button" class="tab-btn" data-tab="payTab2">법인카드</button></li>
-            </ul>
-            <span class="slider" data-left="0"></span>
-          </div>
-
-          <section class="tab-content">
-            <div class="content active" id="payTab1">
-              <div class="form-area">
-                <label for="user_card01-1" class="inp-title">카드 번호</label>
-                <div class="inp-phone">
-                  <span class="inp">
-                    <input type="tel" id="user_card01-1" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                  <span class="inp">
-                    <input type="tel" id="user_card01-2" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                  <span class="inp">
-                    <input type="tel" id="user_card01-3" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                  <span class="inp">
-                    <input type="tel" id="user_card01-4" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                </div>
-                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
-
-
-                <label for="user_date" class="inp-title">유효기간</label>
-                <div class="inp range">
-                  <input type="tel" id="user_date" maxlength="2" pattern="[0-9]{2}" placeholder="MM"required>
-                  <span class="txt-form"> / </span>
-                  <input type="tel" id="user_date02" maxlength="2" pattern="[0-9]{2}" placeholder="YY"required>
-                </div>
-                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
-
-                <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
-                <div class="inp pw">
-                  <input type="password" id="user_pw" pattern="[0-9]{2}" maxlength="2" placeholder="**" required>
-                  <span class="txt-form">**</span>
-                </div>
-
-                <label for="user_phone" class="inp-title">생년월일 6자리</label>
-                <div class="inp">
-                  <input type="tel" id="user_phone" pattern="[0-9]{6}" maxlength="6" placeholder="예:881030" required>
-                </div>
-                <p class="warning-txt02">생년월일을 확인해주세요.</p>
-
-                <label for="user_email" class="inp-title">결제용 이메일</label>
-                <div class="inp">
-                  <input type="text" id="user_email" placeholder="이메일">
-                </div>
-                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
-                <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
-
-              </div>
-              <div class="layer-btn tr">
-                <button type="button" class="btn-l btn-bk confirm"><span>다음</span></button>
-              </div>
-            </div>
-            <div class="content" id="payTab2">
-              <div class="form-area">
-                <label for="user_card02-1" class="inp-title">카드 번호</label>
-                <div class="inp-phone">
-                  <span class="inp">
-                    <input type="tel" id="user_card02-1" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                  <span class="inp">
-                    <input type="tel" id="user_card02-2" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                  <span class="inp">
-                    <input type="tel" id="user_card02-3" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                  <span class="inp">
-                    <input type="tel" id="user_card02-4" pattern="[0-9]{4}" maxlength="4" required>
-                  </span>
-                </div>
-                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
-
-                <label for="user_date" class="inp-title">유효기간</label>
-                <div class="inp range">
-                  <input type="tel" id="user_date" maxlength="2" pattern="[0-9]{2}" placeholder="MM" required>
-                  <span class="txt-form"> / </span>
-                  <input type="tel" id="user_date02" maxlength="4" pattern="[0-9]{4}" placeholder="YYYY" required>
-                </div>
-                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
-
-                <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
-                <div class="inp pw">
-                  <input type="password" id="user_pw" placeholder="**" pattern="[0-9]{2}" required>
-                  <span class="txt-form">**</span>
-                </div>
-
-                <label for="user_phone" class="inp-title">사업자등록번호 10자리</label>
-                <div class="inp">
-                  <input type="tel" id="user_phone" pattern="[0-9]{10}" maxlength="10" placeholder="예:881030" required>
-                </div>
-                <p class="warning-txt02">사업자번호를 확인해주세요.</p>
-
-                <label for="user_email" class="inp-title">결제용 이메일</label>
-                <div class="inp">
-                  <input type="text" id="user_email" placeholder="이메일">
-                </div>
-                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
-                <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
-
-              </div>
-              <div class="layer-btn tr">
-                <button type="button" class="btn-l btn-bk confirm"><span>다음</span></button>
-              </div>
-            </div>
-          </section>
-        </div>        
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
-      </div>
-    </div>
-  </div>
-  
-  <!-- 회사 생성 -->
-  <div class="layer-pop" id="layer-company-enroll02">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">회사 생성</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="login-wrap">
-          <div class="form-area">
-            <label for="user_companyName" class="filter-title">회사 이름</label>
-            <div class="inp">
-              <input type="text" id="user_companyName" placeholder="회사 이름">
-            </div>
-            <label for="user_companyUrl" class="filter-title">회사 URL</label>
-            <div class="inp-line url">
-              <div class="inp">
-                <input type="text" id="user_companyUrl" placeholder="회사 URL">
-              </div>
-              <span class="url-address">.ordercheck.io</span>
-            </div>
-            <p class="warning-txt02">등록되지 않은 회사 도메인입니다.</p>
-          </div>
-          <div class="layer-btn tr">
-            <button type="button" class="btn btn-bk layer-close confirm"><span>14일 무료 시작</span></button>
-          </div>
-        </div>
-
-
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
-  </div>
-
-  <!-- 개발 시 삭제 -->
-  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
-    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
-      <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button>
-  </div>
 
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
-  <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
-  <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
-  <!-- <script src="../resource/js/table_sort.js"></script> 테이블 소팅 기능 -->
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js"></script>
   <script>
 
     //관리페이지용 공통 함수
     pageInit ()
-    tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
     //레이어팝업 : 매개변수 : ID명
-    layerFunc (".open-layer",function(e){
-      //레이어별 실행되어야할 함수 추가
-      if(e.currentTarget.getAttribute("data-info") == "layer-card-enroll") {
-        tabFunc (".tab-wrap.type03", true, function () {        
-          inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
-        }, ".login-wrap .tab-content .content") //tab 영역 , slider 풀사이즈 여부
-
-      }
-      else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {
-        
-        inpActiveFunc ("#layer-company-enroll02 .login-wrap",".confirm") 
-      }
-
-    })
+    layerFunc (".open-layer")
+    tabFunc (".tab-wrap")
 
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
-
+    dropMenuShowHide('.setting-lg-box .dropdown-wrap','.btn-drop-type02','.drop-menu-list')
 
   </script>
 </body>

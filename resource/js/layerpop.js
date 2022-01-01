@@ -99,7 +99,7 @@ function layerOpenFunc (openBtns,callback) {
 	    layerAllClose()
       layerOpen(layer);
       e.currentTarget.classList.add(onClass)
-      if(callback != null ) callback()
+      if(callback != null ) callback(e)
     })
   })
 
@@ -115,8 +115,6 @@ function layerCloseFunc (layer,closeCallback) {
 }
 
 function layerFunc (openBtns,callback,closeCallback) {
-
-
   layerOpenFunc(openBtns,callback)
   layerCloseFunc(layer,closeCallback)
 }

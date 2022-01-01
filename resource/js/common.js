@@ -481,7 +481,7 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue,requireIsTrue) {//기본 : value 
   var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
   var flag = '';
-
+  
   if(requireIsTrue) input = scriptArea.querySelectorAll("input[type=text]:required, input[type=tel]:required,input[type=number]:required,input[type=password]:required")
   var loginBtns = scriptArea.querySelectorAll(btnClass)
   Array.prototype.forEach.call(loginBtns, function(login, idx){
@@ -700,9 +700,9 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
   var btn = dropWrap.querySelector(clickBtn)
   var menu = document.querySelector(menuList)
   var menuBtn = menu.querySelectorAll(".btn-member-drop")
-  var company = document.querySelector(".company")
-  var desc = document.querySelector(".desc")
-  var price = document.querySelector(".price var")
+  var company = dropWrap.querySelector(".company")
+  var desc = dropWrap.querySelector(".desc")
+  var price = dropWrap.querySelector(".price var")
 
   btn.classList.add("active")
   //event
@@ -745,12 +745,19 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
     var selCompany = target.querySelector(".company").innerText
     var selDesc = target.querySelector(".desc").innerText
     var selPrice = target.querySelector(".price var").innerText
-
-
+    if (target.querySelector(".price var").innerText == "무료") {      
+      price.classList.remove("d-won")
+      price.nextElementSibling.style.display ="none"
+    } else {
+      price.classList.add("d-won")
+      price.nextElementSibling.style.display ="inline-block"      
+    }
+    
+    
     company.innerText = selCompany
     desc.innerText = selDesc
     price.innerText = selPrice
-
+    
     btn.classList.add("active")
   }
   function dimCreate () {
