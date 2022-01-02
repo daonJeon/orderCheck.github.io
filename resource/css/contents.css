@@ -1001,7 +1001,7 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .btn-line-plus {color:#02164F}
 .tbl-type1 .tx-bold {margin-right:8px}
 
-.setting > .tx-alert01:first-child {margin-bottom:30px;}
+.setting .flex-sidebox.center .tx-alert01:first-child {margin-bottom:30px;}
 .setting .switch.no-txt {margin-left:10px}
 .setting .tx-alert01 span.inp {display:inline-block; margin:0 6px; width: 100px;}
 .setting .tx-alert01 span.inp input {padding-right:10px;}

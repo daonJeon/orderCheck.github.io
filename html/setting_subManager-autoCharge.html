@@ -270,7 +270,7 @@
               <div class="content" id="tab2">
 
                 <!-- 리스트 -->
-                <div class="tbl-type1" style="display:none">
+                <div class="tbl-type1">
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
@@ -282,34 +282,30 @@
                     </colgroup>
                     <thead>
                       <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">플랜</th>
-                        <th scope="col">구독 시작</th>
-                        <th scope="col">구독 종료</th>
-                        <th scope="col">상태</th>
+                        <th scope="col">발신 번호</th>
+                        <th scope="col">수신 번호</th>
+                        <th scope="col">방식</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">시간</th>
+                        <th scope="col">가격</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="#"><span>12345567</span></a></td>
-                        <td><a href="#"><span>프로</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><span class="badge consulting">구독 중</span></td>
+                        <td>02.1234.5678</td>
+                        <td>010.1234.5678</td>
+                        <td>LMS</td>
+                        <td>[오더킹]<br> 고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br> -<br> 등기 연락처의 경우 담당 플래너 연락처로 기재해주세요. https;//ordercheck.io/sample1234</td>
+                        <td>2021.12.30 14:30</td>
+                        <td>₩ 60</td>
                       </tr>
                       <tr>
-                        <td><a href="#"><span>12345567</span></a></td>
-                        <td><a href="#"><span>프로</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><span class="badge complete">완료</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><span>12345567</span></a></td>
-                        <td><a href="#"><span>스타터</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><span class="badge complete">완료</span></td>
+                        <td>02.1234.5678</td>
+                        <td>010.1234.5678</td>
+                        <td>SMS</td>
+                        <td>[오더킹]<br> 고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br> 등기 연락처의 경우 담당 플래너 연락처로 기재해주세요.</td>
+                        <td>2021.12.30 14:30</td>
+                        <td>₩ 60</td>
                       </tr>
 
                     </tbody>
@@ -317,7 +313,7 @@
                 </div>
 
                 <!-- empty -->
-                <div class="data-empty-box customer">
+                <div class="data-empty-box customer" style="display:none">
                   <div class="txt-group">
                     <p class="txt">구독 내용이 없습니다</p>
 
@@ -326,52 +322,6 @@
                   </div>
                 </div>
 
-              </div>
-              <div class="content" id="tab3">
-                <div class="pos" style="top:-31px; right:0;">
-                  <a href="#" class="btn btn-bk"><span>쿠폰 등록</span></a>
-                </div>
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:20%">
-                      <col style="width:53%">
-                      <col style="width:18%">
-                      <col style="width:9%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">할인 쿠폰 코드</th>
-                        <th scope="col">종류</th>
-                        <th scope="col">사용 기간</th>
-                        <th scope="col">구분</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 중</span></button></td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 완료</span></button></td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 완료</span></button></td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </section>
 
