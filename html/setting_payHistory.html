@@ -204,7 +204,14 @@
               <div class="content" id="tab1">
 
                 <div class="pay-sliderbox">
-                  <div>1</div>
+                  <div>
+                    <img src="../resource/images/pay/img_pay-card01.png" alt="" >
+                    <span class="checkbox">
+                      <input type="checkbox" name="" id=""/>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
                   <div>2</div>
                 </div>
 
@@ -604,9 +611,9 @@
     tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
 
     $('.pay-sliderbox').slick({
-      dots: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+      dots: false,
+      slidesToShow: 6,
+      slidesToScroll: 6,
     });
 
     //레이어팝업 : 매개변수 : ID명
