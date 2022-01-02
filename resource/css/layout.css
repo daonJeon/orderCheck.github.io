@@ -72,14 +72,19 @@ input[type=text]::-ms-clear { display:none;}
 .tx-darkgray {color:#555868 !important; }
 .tx-blue {color:#1D58FF !important;}
 
+.tx-alert01 {font-size: 15px;line-height: 22px; color: #555868;}
+.tx-alert02 {font-size: 14px;line-height: 20px; color: #555868;}
+
+
 /*===== btn =====*/
 .btn { min-width: 90px; padding:11px 10px; border-radius: 6px;text-align: center; font-size:14px; transition: all .3s; box-sizing: border-box;}
 .btn02,
 .btn02.btn-bk,
 .btn02.btn-gray { padding:10px 10px; border-radius: 6px; line-height:23px; text-align: center; font-size:16px; transition: all .3s; box-sizing: border-box;}
+.btn03 { min-width: 90px; padding:7px 10px; border-radius: 6px;text-align: center; line-height:22px; font-size:15px; transition: all .3s; box-sizing: border-box;}/* 90/40 */
 .btn-l {min-width:auto; padding:16px 14px 17px; line-height:20px; font-size:16px; border-radius: 6px;text-align: center; transition: all .3s; box-sizing: border-box; }
 .btn-m {min-width:auto; padding:8px 17px 7px; line-height:20px; font-size:14px; border-radius: 6px;text-align: center; transition: all .3s; box-sizing: border-box; }
-.btn-s {min-width:auto; padding:6px 13px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; box-sizing: border-box;}
+.btn-s {min-width:auto; padding:5px 13px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; box-sizing: border-box;}
 .btn-s + .btn-s {margin-left:4px}
 .btn .ico, .btn-l .ico {vertical-align:-2px; margin-right:4px;}
 .btn >span, .btn-l > span {position:relative;}
@@ -149,6 +154,9 @@ input[type=text]::-ms-clear { display:none;}
 .btn-down span {display: inline-block; box-sizing: border-box; padding-left:20px; background: url(../images/common/ico_down.png) no-repeat left center;}
 .btn-down.on {color: #1D58FF;}
 .btn-down.on span {background-image: url(../images/common/ico_down-hover.png)}
+
+.btn-round-gray {background: #EBEBEB; padding:6px 12px; border-radius: 24px; font-size: 13px; line-height: 19px;text-align: center; color:#7B7B7B; transition:background-color .4s}
+.btn-round-gray:hover {background: #1D58FF; color:#fff}
 
 /* input */
 .inp-line {display:flex; align-items: center; justify-content:space-between;}
@@ -482,9 +490,17 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .layer-cnt .info-txt {line-height:16px;font-size:13px;color:#959595}
 .layer-cnt .info-txt02 {margin:5px 0 20px; line-height:22px;font-size:15px;color:#555868}
 .layer-cnt .info-txt03 {margin:8px 0 20px; font-size: 14px; line-height: 26px; color: #41495D;}
+.layer-cnt .info-txt04 {margin:5px 0 20px; line-height:22px;font-size:14px;color:#41495D}
 .layer-cnt .layer-top,
 .layer-cnt .layer-mid {padding-right:20px;}
 .layer-cnt .layer-btn {margin-top:26px; margin-bottom:20px}
+.layer-btn > .btn-bk-line{ min-width:auto; width:107px; font-size:16px;font-weight:bold}
+.layer-btn > .btn-bk { min-width:auto; min-width:90px; font-size:16px;font-weight:bold}
+.layer-btn > button,
+.layer-btn > a {height:55px; line-height:31px; display:inline-block;}
+.layer-btn > .btn + .btn {margin-left:8px}
+
+
 
 #layer-manager-set .layer-cnt,
 .layer-pop.confirm .layer-cnt,
@@ -641,12 +657,13 @@ width:calc(100% - 40px); font-size:14px;}
 .ico.ppt { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_ppt.png); vertical-align: -5px; }
 .ico.docx { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_docx.png); vertical-align: -5px; }
 .ico.hwp { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_hwp.png); vertical-align: -5px; }
+.ico.info { min-width:auto; width:18px; height:18px; background-image:url(../images/common/ico_info.png); vertical-align: -2px; }
 
 .sidebar.open .ico {width:28px; height:28px;}
 .sidebar li a .links_name { padding-left:12px; color: #fff; font-size: 15px; font-weight: 400; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.4s;}
 .sidebar.open li a .links_name {  opacity: 1;  pointer-events: auto;}
 .sidebar li a:hover .links_name {  transition: all 0.5s ease;}
-.sidebar .btm {position: absolute;width: calc(100% - 38px);left: 30px;bottom: 30px;overflow: hidden;}
+.sidebar .btm {position: absolute;width: calc(100% - 38px);left: 19px;bottom: 30px;overflow: hidden;}
 
 .sidebar li .profile-details { display: flex; align-items: center; flex-wrap: nowrap;}
 .sidebar li img { width: 45px; height: 45px; object-fit: cover; border-radius: 6px; margin-right: 10px;}
@@ -724,8 +741,8 @@ width:calc(100% - 40px); font-size:14px;}
 .login-wrap .tab-btn {color:#9A9A9A}
 .login-wrap .tab-wrap .slider {border-radius: 7px;}
 .tab-wrap.type02 {width:auto; margin-top:40px; margin-bottom:38px;}
-.tab-wrap.type02 .tabs > li {width:50%; border-bottom:1px solid #E6E6E6;}
-.tab-wrap.type02 .tabs li button {width:100%; padding-bottom:14px}
+.tab-wrap.type02 .tabs > li {width:50%; padding:0; border-bottom:1px solid #E6E6E6;}
+.tab-wrap.type02 .tabs li button {width:100%; /*padding-bottom:14px*/}
 .tab-wrap.type03 {width:auto; margin-top:20px; margin-bottom:20px;}
 .tab-wrap.type03 .tabs > li {width:50%; }
 .tab-wrap.type03 .tabs li button {width:100%;}

@@ -954,6 +954,10 @@ inpChangeFunc()
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+function removeCommas(str) {
+  n = parseInt(str.replace(/,/g,""));
+  return n;
+}
 
 function numberToKorean(number){
   var inputNumber  = number < 0 ? false : number;
@@ -979,6 +983,7 @@ function numberToKorean(number){
   return resultString;
 }
 
+//견적 수정 레이어에 삽입된 input commas/target value apply
 function autoCommasFunc (inputName,callback) {
   var input = document.getElementsByName(inputName)
 
@@ -1034,6 +1039,12 @@ function orderCheckOnOff (chk,tg) {
   var chkArea = document.querySelectorAll(chk);
   var tgArea = document.querySelectorAll(tg)
   Array.prototype.forEach.call(chkArea, function(check, idx){
+
+    Array.prototype.forEach.call(tgArea, function(target, idx){
+      if (check.checked) target.style.display="block"
+      else target.style.display="none"
+    })
+
     check.addEventListener("click",function(e){
       Array.prototype.forEach.call(tgArea, function(target, idx){
         if(e.currentTarget.checked) target.style.display="block"
@@ -1042,6 +1053,24 @@ function orderCheckOnOff (chk,tg) {
     })
   })
 }
+
+function sliderOnOff (chk,offCallback,onCallback) {
+  var chkArea = document.querySelectorAll(chk);
+  
+  Array.prototype.forEach.call(chkArea, function(check, idx){
+    if (check.checked) onCallback()
+    else offCallback()
+
+    check.addEventListener("click",function(e){
+      if(e.currentTarget.checked) {
+        if(onCallback != null ) onCallback(e)
+      } else {
+        if(onCallback != null ) offCallback(e)
+      }
+    })
+  })
+}
+
 
 function draggableSlider (sliderWrap) {
   var slider = document.querySelector(sliderWrap);
@@ -1447,9 +1476,51 @@ function tableRowControl () {
   }
 }
 
+//설정 문자 충전 레이어(layer-pay-charge) 계산 함수 
+function priceCalculateFunc (clickBtn,targetInp) {
+  var clickedBtn = document.querySelectorAll(clickBtn);
+  var inputTarget = document.querySelector(targetInp+" input");
 
+  Array.prototype.forEach.call(clickedBtn, function(btn, idx){
+    btn.addEventListener("click",function(e){
+      var add = parseInt(e.currentTarget.getAttribute("data-num"))
+      var origin = parseInt(inputTarget.value.replace(/,|₩|' '/g,""));
+      
+      inputTarget.value= origin + add
+      inputTarget.value = '₩ ' + numberWithCommas(inputTarget.value)
+    })
+  })
+}
 
+//설정 자동 충전 페이지 기능
+function priceCalculatePage (clickBtn,targetInp,callback) {
+  var clickedBtn = document.querySelectorAll(clickBtn);
+  var inputTarget = document.querySelector(targetInp+" input");
 
+  Array.prototype.forEach.call(clickedBtn, function(btn, idx){
+    btn.addEventListener("click",function(e){
+      var add = parseInt(e.currentTarget.getAttribute("data-num"))
+      var origin = parseInt(inputTarget.value.replace(/,|₩|' '/g,""));
+      
+      inputTarget.value= origin + add
+      inputTarget.value = '₩ ' + numberWithCommas(inputTarget.value)
+      if(callback != null ) callback(e)
+    })
+  })
+}
+
+function priceCalInp (){
+  var inps = document.querySelectorAll(".tx-alert01 .inp input")
+  Array.prototype.forEach.call(inps, function(inp, idx){
+    inp.addEventListener("focus",function(e){
+      e.currentTarget.closest(".inp").querySelector(".btn-round-group").style.display="flex"
+    })
+    // inp.addEventListener("focusout",function(e){
+    //   e.currentTarget.closest(".inp").querySelector(".btn-round-group").style.display="none"
+    // })
+  })
+}
+priceCalInp()
 
 //공통
 function pageInit () {  //모든 페이지용 함수
@@ -1463,7 +1534,7 @@ function templateFunc() {
   inpEmptyFunc(".inp-title")
   //tempBoxOn()
   formRemove()//오더 체크 온/오프
-  orderCheckOnOff (".switch #ordercheck",".template .badge-ordercheck")
+  orderCheckOnOff (".switch #ordercheck",".template .badge-ordercheck")  
   templatePageChk (".form-temp-list > li .page")
   checkOffCallback(".label-set-box input[type=checkbox]", function (){
     layerOpen ("layer-info-label")

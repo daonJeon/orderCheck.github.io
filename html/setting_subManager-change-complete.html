@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>설정</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/daterangepicker.css" />
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
+        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="dashboard.html">
+            <i class='ico home'></i>
+            <span class="links_name">홈</span>
+          </a>
+        </li>
+        <li>
+          <a href="customManage_list.html">
+            <i class="ico user"></i>
+            <span class="links_name">고객 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="file_storage.html">
+            <i class='ico file'></i>
+            <span class="links_name">파일 보관함</span>
+          </a>
+        </li>
+        <li>
+          <a href="form_list.html">
+            <i class='ico form'></i>
+            <span class="links_name">상담 신청폼</span>
+          </a>
+        </li>
+       </ul>
+        <ul class="btm">
+          <li>
+            <a href="#">
+              <i class='ico help'></i>
+              <span class="links_name">자주 묻는 질문</span>
+            </a>
+          </li>
+          <li class="on">
+            <a href="setting_limit-plan.html">
+              <i class='ico setting'></i>
+              <span class="links_name">설정</span>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
+    </nav>
+    <section id="content" class="content-section setting">
+      <!-- #include file="include_header.html" -->
+        <aside class="setting-nav">
+          <div class="inbox">
+            <h2 class="inp-title">설정</h2>
+            <ul class="depth1">
+              <li>
+                <a href="#" class="menu-name company"><span>회사 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
+                  <li><a href="setting_employee.html" class="btn-nav-dep2"><span>팀원 관리</span></a></li>
+                  <li><a href="setting_invite-sms.html" class="btn-nav-dep2"><span>팀원 초대</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name security"><span>권한 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name card"><span>결제 관리</span></a>
+                <ul class="depth2">
+                  <li class="on"><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name layout"><span>신청폼 설정</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name chat"><span>채팅 설정</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- header -->
+        <div class="header-wrap">
+          <header id="header" class="header">
+            <h2 class="title">구독 관리</h2>
+
+            <ul class="menu">
+              <li>
+                <div class="searchbox">
+                  <i class='ico search'></i>
+                  <input type="text" placeholder="검색해보세요.">
+                </div>
+              </li>
+              <li>
+                <div class="dropdown-wrap">
+                  <button type="button" class="btn-drop">
+                    <div class="profile-details">
+                      <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                      <span class="name">홍길동님</span>
+                      <i class="arrow down"></i>
+                    </div>
+
+                  </button>
+                  <div class="dropdown-box">
+                    <ul>
+                      <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                      <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                      <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                      <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                   </ul>
+                  </div>
+                </div>
+              </li>
+              <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+              <li><button type="button" class="btn-menu" data-info="alarm"><i class="ico alarm"></i></button></li>
+            </ul>
+          </header>
+          <!-- /header -->
+
+          <aside id="side_right_menu" class="side-menu">
+            <div class="gnb-box right mail">
+                <ul class="clear">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+            <div class="gnb-box right alarm">
+                <ul class="clear">
+                    <li><a href="#">메뉴21</a></li>
+                    <li><a href="#">메뉴22</a></li>
+                    <li><a href="#">메뉴23</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+           </aside>
+        </div>
+
+        <!-- location -->
+        <ul class="location-wrap">
+          <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
+          <li><a href="setting_limit-plan.html">설정</a></li>
+          <li>구독 관리</li>
+        </ul>
+        <!-- //location -->
+
+        <div class="cnt-box-wrap">
+          <div class="cnt-box setting">
+
+            <div class="tab-wrap">
+              <ul class="tabs">
+                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">플랜 관리</button></li>
+                <li><button type="button" class="tab-btn" data-tab="tab2">구독 내역</button></li>
+                <li><button type="button" class="tab-btn" data-tab="tab3">쿠폰</button></li>
+              </ul>
+              <span class="slider" data-left="0"></span>
+            </div>
+            <section class="tab-content">
+              <div class="content" id="tab1">
+                <div class="setting-lg-box">
+                  <!-- setting-info-box -->
+                  <div class="setting-info-box type02 counting">
+                    <div class="inbox">
+                      <span class="txt">한 달 상담 신청수</span>
+                      <strong class="num">12</strong>
+                    </div>
+                  </div>
+                  <div class="flex-sidebox">
+                    <h3 class="filter-title">현재 구독중인 플랜</h3>
+                    <span class="tx-gray">월 결제</span>
+                    <!-- <span class="switch mode">
+                      <input type="checkbox" id="" checked="">
+                      <label for="" class="slider round"><span class="unchecked">월</span><span class="checked">연(10%할인)</span></label>
+                    </span> -->
+                  </div>
+
+                  <div class="dropdown-wrap">
+                    <button type="button" class="btn-member-drop active">
+                      <dl>
+                        <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                        <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                      </dl>
+                    </button>
+                    <div class="drop-menu-list">
+                      <ul>
+                        <li>
+                          <button type="button" class="btn-member-drop">
+                            <dl>
+                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                            </dl>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-member-drop">
+                            <dl>
+                              <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">93,300</var><span class="unit">월</span></strong></dd>
+                            </dl>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="service-box">
+                    <h2 class="filter-title">부가 서비스</h2>
+                    <ul class="info-list side">
+                      <li>
+                        <dl class="info-list-item">
+                          <dt><span class="label-head">채팅</span></dt>
+                          <dd>
+                            <strong class="label-desc">₩ <var>36,000</var>
+                            <span class="unit">월</span></strong>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl class="info-list-item">
+                          <dt><span class="label-head">통계 분석</span></dt>
+                          <dd>
+                            <strong class="label-desc">₩ <var>36,000</var>
+                            <span class="unit">월</span></strong>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li class="btn-line-group side">
+                        <a href="#" class="btn-link-type02" target="_blank"><span class="txt">자세한 가격 및 기능</span></a>
+                        <button type="button" class="btn02 btn-bk open-layer" data-info="layer-member-join"><span>구독 변경</span></button>
+                      </li>
+                      
+                    </ul>
+
+                  </div>
+
+
+                  <!-- //setting-info-box -->
+                </div>
+                <div class="setting-lg-box">
+                  <!-- setting-info-box -->                 
+                  <div class="flex-sidebox">
+                    <h3 class="filter-title"><span class="tx-blue">2021.10.30 시작</span></h3>
+                    <span class="tx-gray">월 결제</span>
+                  </div>
+
+                  <div class="dropdown-wrap">
+                    <button type="button" class="btn-member-drop on">
+                      <dl>
+                        <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                        <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                      </dl>
+                    </button>
+                    <div class="drop-menu-list">
+                      <ul>
+                        <li>
+                          <button type="button" class="btn-member-drop">
+                            <dl>
+                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                            </dl>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button" class="btn-member-drop">
+                            <dl>
+                              <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
+                              <dd><strong class="price"><var class="d-won">93,300</var><span class="unit">월</span></strong></dd>
+                            </dl>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="service-box">
+                    <ul class="info-list side">
+                      <li>
+                        <dl class="info-list-item">
+                          <dt><span class="label-head">채팅</span></dt>
+                          <dd>
+                            <strong class="label-desc">₩ <var>36,000</var>
+                            <span class="unit">월</span></strong>
+                          </dd>
+                        </dl>
+                      </li>
+                      <li>
+                        <dl class="info-list-item">
+                          <dt><span class="label-head">통계 분석</span></dt>
+                          <dd>
+                            <strong class="label-desc">₩ <var>36,000</var>
+                            <span class="unit">월</span></strong>
+                          </dd>
+                        </dl>
+                      </li>
+                      
+                    </ul>
+
+                  </div>
+
+
+                  <!-- //setting-info-box -->
+                </div>
+
+              </div>
+              <div class="content" id="tab2">
+
+                <!-- 리스트 -->
+                <div class="tbl-type1" style="display:none">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:19%">
+                      <col style="width:48%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">플랜</th>
+                        <th scope="col">구독 시작</th>
+                        <th scope="col">구독 종료</th>
+                        <th scope="col">상태</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><a href="#"><span>12345567</span></a></td>
+                        <td><a href="#"><span>프로</span></a></td>
+                        <td><a href="#"><span>2021.12.30</span></a></td>
+                        <td><a href="#"><span>2021.12.30</span></a></td>
+                        <td><span class="badge consulting">구독 중</span></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#"><span>12345567</span></a></td>
+                        <td><a href="#"><span>프로</span></a></td>
+                        <td><a href="#"><span>2021.12.30</span></a></td>
+                        <td><a href="#"><span>2021.12.30</span></a></td>
+                        <td><span class="badge complete">완료</span></td>
+                      </tr>
+                      <tr>
+                        <td><a href="#"><span>12345567</span></a></td>
+                        <td><a href="#"><span>스타터</span></a></td>
+                        <td><a href="#"><span>2021.12.30</span></a></td>
+                        <td><a href="#"><span>2021.12.30</span></a></td>
+                        <td><span class="badge complete">완료</span></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- empty -->
+                <div class="data-empty-box customer">
+                  <div class="txt-group">
+                    <p class="txt">구독 내용이 없습니다</p>
+
+                    <button type="button" class="btn btn-blue open-layer" data-info="layer-company-in"><span>구독 설정</span></button>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="content" id="tab3">
+                <div class="pos" style="top:-31px; right:0;">
+                  <a href="#" class="btn btn-bk"><span>쿠폰 등록</span></a>
+                </div>
+                <!-- 리스트 -->
+                <div class="tbl-type1">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:20%">
+                      <col style="width:53%">
+                      <col style="width:18%">
+                      <col style="width:9%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">할인 쿠폰 코드</th>
+                        <th scope="col">종류</th>
+                        <th scope="col">사용 기간</th>
+                        <th scope="col">구분</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 중</span></button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 완료</span></button></td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 완료</span></button></td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+    </section>
+
+  </div>
+
+
+  <!-- 요금제 가입 -->
+  <div class="layer-pop" id="layer-member-join">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">요금제 가입</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="member-box">
+          <div class="info-box">
+            <div class="box">
+              <p class="member-info-title">14일 무료 체험</p>
+              <ul class="member-info-list">
+                <li>
+                  <span class="head">무료 체험기간</span>
+                  <span class="desc">2021.08.18 ~ 2021.08.18</span>
+                </li>
+              </ul>
+            </div>
+            <div class="box active">
+              <p class="member-info-title">무료 체험 후 예정된 연 정기구독</p>
+              <ul class="member-info-list">
+                <li><span class="head">구독 기간</span><span class="desc">2021.08.18 ~ 2021.08.18</span></li>
+                <li><span class="head">결제 시작일</span><span class="desc">2021.08.18</span></li>
+                <li><span class="head">결제 금액</span><span class="desc">1,000,000원</span></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="dot-list">
+            <li>무료체험 기간 종료 시 다음날부터 구독료가 결제됩니다.<br> 결제를 원하지 않으시면 구독을 무료로 변경해두세요.</li>
+            <li>구독기간은 자동 갱신됩니다. 구독결제 갱신을 중단하시려면 구독기간 종료일 전까지 구독을 해지하세요.</li>
+            <li>세금(10%)이 별도 추가됩니다.</li>
+          </ul>
+        </div>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn-l btn-bk"><span>확인</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- 카드 등록 -->
+  <div class="layer-pop" id="layer-card-enroll">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">카드 등록</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="tbl-top-type02">
+            <p class="sub-txt tl">무료 체험기간 14일 이후 부터 결제가 진행됩니다.</p>
+            <p class="sm tl">오더체크는 어떠한 결제정보도 직접 저장하거나 접근하지 않습니다.<br> 검증된 타사 결제 시스템을 통해 모든 카드정보는 암호화되어 해당 결제 회사에서 관리됩니다.</p>
+          </div>
+
+          <div class="btn-member-drop on">
+            <dl>
+              <dt><span class="company">월 결제 금액(VAT 금액)</span> <span class="desc"><var>2021.11.30</var>부터 시작</span></dt>
+              <dd><strong class="price"><var class="won">91,300</var></strong></dd>
+            </dl>
+          </div>
+
+          <div class="tab-wrap type03">
+            <ul class="tabs">
+              <li class="on"><button type="button" class="tab-btn active" data-tab="payTab1">개인카드</button></li>
+              <li><button type="button" class="tab-btn" data-tab="payTab2">법인카드</button></li>
+            </ul>
+            <span class="slider" data-left="0"></span>
+          </div>
+
+          <section class="tab-content">
+            <div class="content active" id="payTab1">
+              <div class="form-area">
+                <label for="user_card01-1" class="inp-title">카드 번호</label>
+                <div class="inp-phone">
+                  <span class="inp">
+                    <input type="tel" id="user_card01-1" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card01-2" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card01-3" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card01-4" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                </div>
+                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
+
+
+                <label for="user_date" class="inp-title">유효기간</label>
+                <div class="inp range">
+                  <input type="tel" id="user_date" maxlength="2" pattern="[0-9]{2}" placeholder="MM"required>
+                  <span class="txt-form"> / </span>
+                  <input type="tel" id="user_date02" maxlength="2" pattern="[0-9]{2}" placeholder="YY"required>
+                </div>
+                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
+
+                <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
+                <div class="inp pw">
+                  <input type="password" id="user_pw" pattern="[0-9]{2}" maxlength="2" placeholder="**" required>
+                  <span class="txt-form">**</span>
+                </div>
+
+                <label for="user_phone" class="inp-title">생년월일 6자리</label>
+                <div class="inp">
+                  <input type="tel" id="user_phone" pattern="[0-9]{6}" maxlength="6" placeholder="예:881030" required>
+                </div>
+                <p class="warning-txt02">생년월일을 확인해주세요.</p>
+
+                <label for="user_email" class="inp-title">결제용 이메일</label>
+                <div class="inp">
+                  <input type="text" id="user_email" placeholder="이메일">
+                </div>
+                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+                <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
+
+              </div>
+              <div class="layer-btn tr">
+                <button type="button" class="btn-l btn-bk confirm"><span>다음</span></button>
+              </div>
+            </div>
+            <div class="content" id="payTab2">
+              <div class="form-area">
+                <label for="user_card02-1" class="inp-title">카드 번호</label>
+                <div class="inp-phone">
+                  <span class="inp">
+                    <input type="tel" id="user_card02-1" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card02-2" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card02-3" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card02-4" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                </div>
+                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
+
+                <label for="user_date" class="inp-title">유효기간</label>
+                <div class="inp range">
+                  <input type="tel" id="user_date" maxlength="2" pattern="[0-9]{2}" placeholder="MM" required>
+                  <span class="txt-form"> / </span>
+                  <input type="tel" id="user_date02" maxlength="4" pattern="[0-9]{4}" placeholder="YYYY" required>
+                </div>
+                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
+
+                <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
+                <div class="inp pw">
+                  <input type="password" id="user_pw" placeholder="**" pattern="[0-9]{2}" required>
+                  <span class="txt-form">**</span>
+                </div>
+
+                <label for="user_phone" class="inp-title">사업자등록번호 10자리</label>
+                <div class="inp">
+                  <input type="tel" id="user_phone" pattern="[0-9]{10}" maxlength="10" placeholder="예:881030" required>
+                </div>
+                <p class="warning-txt02">사업자번호를 확인해주세요.</p>
+
+                <label for="user_email" class="inp-title">결제용 이메일</label>
+                <div class="inp">
+                  <input type="text" id="user_email" placeholder="이메일">
+                </div>
+                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+                <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
+
+              </div>
+              <div class="layer-btn tr">
+                <button type="button" class="btn-l btn-bk confirm"><span>다음</span></button>
+              </div>
+            </div>
+          </section>
+        </div>        
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 회사 생성 -->
+  <div class="layer-pop" id="layer-company-enroll02">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">회사 생성</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="form-area">
+            <label for="user_companyName" class="filter-title">회사 이름</label>
+            <div class="inp">
+              <input type="text" id="user_companyName" placeholder="회사 이름">
+            </div>
+            <label for="user_companyUrl" class="filter-title">회사 URL</label>
+            <div class="inp-line url">
+              <div class="inp">
+                <input type="text" id="user_companyUrl" placeholder="회사 URL">
+              </div>
+              <span class="url-address">.ordercheck.io</span>
+            </div>
+            <p class="warning-txt02">등록되지 않은 회사 도메인입니다.</p>
+          </div>
+          <div class="layer-btn tr">
+            <button type="button" class="btn btn-bk layer-close confirm"><span>14일 무료 시작</span></button>
+          </div>
+        </div>
+
+
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 구독 해지 -->
+  <div class="layer-pop" id="layer-subscription-cancel">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">구독 해지</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">지금 프리 프랜으로 변경하시더라도 <br>
+          2022.02.18 까지 현재 구독 항목을 계속 이용하실 수 있습니다.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>구독 해지</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 결제 실패 -->
+  <div class="layer-pop" id="layer-pay-fail">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">결제 실패</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">결제 실패하여 플랜 이용이 중지되었습니다.<br> 기본 결제 카드를 변경해주세요. 계속해서 결제가 실패하는 경우 고객센터에 문의해주세요.<br> 결제 완료 전까지 전체 팀원들의 로그인이 제한됩니다.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-bk"><span>카드 변경</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-subscription-cancel" style="font-size:16px"><span>구독 해지</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail" style="font-size:16px"><span>결제 실패</span></button><br>
+  </div>
+
+  <!-- script -->
+  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
+  <!-- <script src="../resource/js/table_sort.js"></script> 테이블 소팅 기능 -->
+  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script src="../resource/js/common.js"></script>
+  <script>
+
+    //관리페이지용 공통 함수
+    pageInit ()
+    tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
+    //레이어팝업 : 매개변수 : ID명
+    layerFunc (".open-layer",function(e){
+      //레이어별 실행되어야할 함수 추가
+      if(e.currentTarget.getAttribute("data-info") == "layer-card-enroll") {
+        tabFunc (".tab-wrap.type03", true, function () {        
+          inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
+        }, ".login-wrap .tab-content .content") //tab 영역 , slider 풀사이즈 여부
+
+      }
+      else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {
+        
+        inpActiveFunc ("#layer-company-enroll02 .login-wrap",".confirm") 
+      }
+
+    })
+
+    //select box = jquery plugin
+    $('.inp-select select').niceSelect();
+
+
+  </script>
+</body>
+
+</html>
