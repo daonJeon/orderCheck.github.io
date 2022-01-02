@@ -1511,13 +1511,30 @@ function priceCalculatePage (clickBtn,targetInp,callback) {
 
 function priceCalInp (){
   var inps = document.querySelectorAll(".tx-alert01 .inp input")
+  var groups = document.querySelectorAll(".tx-alert01 .btn-round-group")
+
+  priceCalculatePage(".setting .btn-cal-inp01 .btn-cal-price",".setting .btn-cal-inp01",function (e){
+    e.currentTarget.closest(".btn-round-group").style.display ="none"
+  })
+  priceCalculatePage(".setting .btn-cal-inp02 .btn-cal-price",".setting .btn-cal-inp02",function (e){
+    e.currentTarget.closest(".btn-round-group").style.display ="none"
+  })
+
   Array.prototype.forEach.call(inps, function(inp, idx){
     inp.addEventListener("focus",function(e){
       e.currentTarget.closest(".inp").querySelector(".btn-round-group").style.display="flex"
     })
-    // inp.addEventListener("focusout",function(e){
-    //   e.currentTarget.closest(".inp").querySelector(".btn-round-group").style.display="none"
-    // })
+    
+    inp.addEventListener("focusout",function(e){
+      console.log(e.target.className)
+      setTimeout(function(){
+        Array.prototype.forEach.call(groups, function(group, idx){
+          group.style.display="none"
+        })
+
+      },100)
+      
+    })
   })
 }
 priceCalInp()
