@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>설정</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/slick-theme.css"/>
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
+        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="dashboard.html">
+            <i class='ico home'></i>
+            <span class="links_name">홈</span>
+          </a>
+        </li>
+        <li>
+          <a href="customManage_list.html">
+            <i class="ico user"></i>
+            <span class="links_name">고객 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="file_storage.html">
+            <i class='ico file'></i>
+            <span class="links_name">파일 보관함</span>
+          </a>
+        </li>
+        <li>
+          <a href="form_list.html">
+            <i class='ico form'></i>
+            <span class="links_name">상담 신청폼</span>
+          </a>
+        </li>
+       </ul>
+        <ul class="btm">
+          <li>
+            <a href="#">
+              <i class='ico help'></i>
+              <span class="links_name">자주 묻는 질문</span>
+            </a>
+          </li>
+          <li class="on">
+            <a href="setting_limit-plan.html">
+              <i class='ico setting'></i>
+              <span class="links_name">설정</span>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
+    </nav>
+    <section id="content" class="content-section setting">
+      <!-- #include file="include_header.html" -->
+        <aside class="setting-nav">
+          <div class="inbox">
+            <h2 class="inp-title">설정</h2>
+            <ul class="depth1">
+              <li>
+                <a href="#" class="menu-name company"><span>회사 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 관리</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name security"><span>권한 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name card"><span>결제 관리</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name layout"><span>신청폼 설정</span></a>
+                <ul class="depth2">
+                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="menu-name chat"><span>채팅 설정</span></a>
+                <ul class="depth2">
+                  <li class="on"><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- header -->
+        <div class="header-wrap">
+          <header id="header" class="header">
+            <h2 class="title">자주 쓰는 답변 템플릿</h2>
+
+            <ul class="menu">
+              <li>
+                <div class="searchbox">
+                  <i class='ico search'></i>
+                  <input type="text" placeholder="검색해보세요.">
+                </div>
+              </li>
+              <li>
+                <div class="dropdown-wrap">
+                  <button type="button" class="btn-drop">
+                    <div class="profile-details">
+                      <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                      <span class="name">홍길동님</span>
+                      <i class="arrow down"></i>
+                    </div>
+
+                  </button>
+                  <div class="dropdown-box">
+                    <ul>
+                      <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                      <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                      <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                      <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                   </ul>
+                  </div>
+                </div>
+              </li>
+              <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+              <li><button type="button" class="btn-menu" data-info="alarm"><i class="ico alarm"></i></button></li>
+            </ul>
+          </header>
+          <!-- /header -->
+
+          <aside id="side_right_menu" class="side-menu">
+            <div class="gnb-box right mail">
+                <ul class="clear">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+            <div class="gnb-box right alarm">
+                <ul class="clear">
+                    <li><a href="#">메뉴21</a></li>
+                    <li><a href="#">메뉴22</a></li>
+                    <li><a href="#">메뉴23</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+           </aside>
+        </div>
+
+        <!-- location -->
+        <ul class="location-wrap">
+          <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
+          <li><a href="setting_limit-plan.html">설정</a></li>
+          <li><a href="setting_template.html">자주 쓰는 템플릿</a></li>
+        </ul>
+        <!-- //location -->
+
+        <div class="cnt-box-wrap">
+          <div class="cnt-box setting">
+            <p class="inp-title">템플릿 목록</p>
+            <div class="tbl-top">
+              <div class="search-box-wrap flexbox">
+                <!-- select -->
+                <div class="inp-select">
+                  <select name="team_search">
+                    <option value="name">제목</option>
+                  </select>
+                </div>
+                <!-- //select -->
+                <div class="inp-line">
+                  <span class="inp">
+                    <input type="text" name="" placeholder="검색어를 입력해주세요" value="">
+                  </span>
+                  <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
+                </div>
+              </div>
+              <a href="#" class="btn btn-bk open-layer" data-info="layer-template-add"><span>템플릿 추가</span></a>
+            </div>
+
+            <!-- 리스트 -->
+            <div class="tbl-type1">
+              <table>
+                <caption>고객 리스트 정보</caption>
+                <colgroup>
+                  <col style="width:19%">
+                  <col style="width:73%">
+                  <col style="width:8%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">내용</th>
+                    <th scope="col">수정</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>전화상담</td>
+                    <td>상담 문의 주셔서 감사합니다!<br>
+                      전화 상담은 상담 접수는 순차적으로 도와드립니다-전화 상담은 상담 접수는 순차적으로 도와드립니다-전화 상담은 상담 접수는 순차적으로 도와드립니다-전화 상담은 상담 접수는 순차적으로 도와드립니다-</td>
+                    <td>수정</td>
+                  </tr>
+                  <tr>
+                    <td>전화상담</td>
+                    <td>[오더킹]<br>
+                      고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br>
+                      등기 연락처의 경우 담당 플래너 연락처로 기재해주세요.</td>
+                    <td><strong class="tx-org">수정</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+  </div>
+
+  <!-- 템플릿 추가 -->
+  <div class="layer-pop" id="layer-template-add">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">템플릿 추가</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap form-area">
+          <label for="templateTitle" class="inp-title">제목</label>
+          <div class="inp">
+            <input type="text" id="templateTitle" placeholder="제목을 입력해주세요 (20자 이하)">
+          </div>
+          <label for="templateCnt" class="inp-title">내용</label>
+          <div class="textarea-revise-box">
+            <textarea id="templateCnt" class="textarea" placeholder="내용을 입력해주세요 (공백포함 1300자 이하)"></textarea>
+            <div class="box">
+              <button type="button" class="btn-s btn-bk-line"><span>링크 수정</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>추가</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 템플릿 수정 -->
+  <div class="layer-pop" id="layer-template-revise">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">템플릿 수정</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap form-area">
+          <label for="templateTitle" class="inp-title">제목</label>
+          <div class="inp">
+            <input type="text" id="templateTitle" placeholder="제목을 입력해주세요 (20자 이하)" value="/웹사이트">
+          </div>
+          <label for="templateCnt" class="inp-title">내용</label>
+          <div class="textarea-revise-box">
+            <pre class="textarea">예시텍스트<br>웹사이트 방문기 <a href="#" class="tx-blue">오더킹</a></pre>
+            <!-- <textarea id="templateCnt" class="textarea" placeholder="내용을 입력해주세요 (공백포함 1300자 이하)"></textarea> -->
+            <div class="box">
+              <button type="button" class="btn-s btn-bk-line open-layer" data-info="layer-link-revise"><span>링크 수정</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn-link fl"><span>템플릿 삭제</span></button>
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>수정</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 링크 수정 -->
+  <div class="layer-pop" id="layer-link-revise">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">링크 수정</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap form-area">
+          <label for="linkTitle" class="inp-title">표시할 텍스트</label>
+          <div class="inp">
+            <input type="text" id="linkTitle" >
+          </div>
+          <label for="linkUrl" class="inp-title">연결할 링크 URL</label>
+          <div class="inp">
+            <input type="text" id="linkUrl" >
+          </div>
+
+        </div>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>확인</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-template-add" style="font-size:16px"><span>템플릿 추가</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-template-revise" style="font-size:16px"><span>템플릿 수정</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-link-revise" style="font-size:16px"><span>링크 수정</span></button><br>
+  </div>
+
+  <!-- script -->
+  <script type="text/javascript" src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
+  <script type="text/javascript" src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script type="text/javascript" src="../resource/js/common.js"></script>
+  <script>
+
+    //관리페이지용 공통 함수
+    pageInit ()
+    tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
+
+
+
+    //레이어팝업 : 매개변수 : ID명
+    layerFunc (".open-layer",function(e){
+      //레이어별 실행되어야할 함수 추가
+      if(e.currentTarget.getAttribute("data-info") == "layer-card-enroll") {
+        tabFunc (".tab-wrap.type03", true, function () {
+          inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
+        }, ".login-wrap .tab-content .content") //tab 영역 , slider 풀사이즈 여부
+      }
+      else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {
+        inpActiveFunc ("#layer-company-enroll02 .login-wrap",".confirm")
+      }
+
+    })
+
+    //select box = jquery plugin
+    $('.inp-select select').niceSelect();
+
+    sliderOnOff (".switch #autoCharge",function(){
+      document.querySelector(".sliderOffShow").style.display="block"
+      document.querySelector(".sliderOnShow").style.display="none"
+    },function(){
+      document.querySelector(".sliderOnShow").style.display="block"
+      document.querySelector(".sliderOffShow").style.display="none"
+    })
+
+    priceCalculateFunc(".layer-pop .btn-cal-price",".layer-pop .btn-cal-inp")
+
+    ToastFunc(".btn-pop","문자 충전이 성공적으로 완료되었습니다",2000)
+    ToastFunc(".btn-pop2","결제 실패 카드는 기본 결제 카드로 변경이 불가합니다.",2000)
+
+
+  </script>
+  <script type="text/javascript" src="../resource/js/vendor/slick.min.js"></script>
+  <script>
+        $('.pay-sliderbox').slick({
+          slidesToScroll: 1,
+          infinite: false,
+          swipeToSlide: true,
+          variableWidth: true
+        });
+
+  </script>
+</body>
+
+</html>

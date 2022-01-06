@@ -78,6 +78,7 @@ input[type=text]::-ms-clear { display:none;}
 
 /*===== btn =====*/
 .btn { min-width: 90px; padding:11px 10px; border-radius: 6px;text-align: center; font-size:14px; transition: all .3s; box-sizing: border-box;}
+.btn.sm {line-height:16px;}
 .btn02,
 .btn02.btn-bk,
 .btn02.btn-gray { padding:10px 10px; border-radius: 6px; line-height:23px; text-align: center; font-size:16px; transition: all .3s; box-sizing: border-box;}
@@ -458,6 +459,13 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .checkbox input.check:checked + label .box.round { background-color:#fff; border-color:#1D58FF; }
 .checkbox input.check:checked + label .box.round:before,
 .checkbox input.check:checked + label .box.round:after {background-color:#1D58FF;}
+
+.checkbox.type02 .box {background:#AEC0E9; border-color:#AEC0E9; border-radius:50%}
+.checkbox.type02 .box:before,
+.checkbox.type02 .box:after {background-color:#fff;}
+.checkbox.type02 input.check:checked + label .box {background-color:#fff}
+.checkbox.type02 input.check:checked + label .box::before,
+.checkbox.type02 input.check:checked + label .box:after {background-color: #02164F;}
 
 /* .checkbox.simple .box {margin-right:12px;}
 .checkbox.simple .box:before,

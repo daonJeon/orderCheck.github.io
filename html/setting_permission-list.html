@@ -101,13 +101,13 @@
                 <ul class="depth2">
                   <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
                   <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
-                  <li class="on"><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
                 </ul>
               </li>
               <li>
                 <a href="#" class="menu-name layout"><span>신청폼 설정</span></a>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                  <li class="on"><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
                   <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
                 </ul>
               </li>
@@ -183,185 +183,54 @@
         <ul class="location-wrap">
           <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
           <li><a href="setting_limit-plan.html">설정</a></li>
-          <li><a href="setting_payHistory.html">결제 내역</a></li>
+          <li><a href="setting_permission-list.html">열람 권한</a></li>
         </ul>
         <!-- //location -->
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
-            <p class="tx-alert01">구독 금액 및 자동 문자 충전 금액 등을 결제할 수 있는 수단을 설정해주세요.<br>
-              결제된 구독 및 자동 문자 충전은 영수증에서 확인해주세요.</p>
+            <p class="inp-title">신청폼 목록</p>
+            <p class="tx-alert01">신청폼으로 접수된 신청 내역을 확인할 수 있는 팀원을 설정해보세요.</p>
 
-            <div class="tab-wrap">
-              <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">카드</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab2">영수증</button></li>
-              </ul>
-              <span class="slider" data-left="0"></span>
+            <div class="tbl-type1">
+              <table>
+                <caption>고객 리스트 정보</caption>
+                <colgroup>
+                  <col style="width:28%">
+                  <col style="width:32%">
+                  <col style="width:18%">
+                  <col style="width:22%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">신청폼 제목</th>
+                    <th scope="col">생성일</th>
+                    <th scope="col">생성자</th>
+                    <th scope="col">열람 가능 팀원</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#">상담 신청 1</a></td>
+                    <td><a href="#">2021.12.30</a></td>
+                    <td><a href="#">홍길동</a></td>
+                    <td><button type="button" class="btn-s btn-bk-line"><span>팀원 설정</span></button></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">방문 상담 신청</a></td>
+                    <td><a href="#">2021.12.30</a></td>
+                    <td><a href="#">홍길동</a></td>
+                    <td>홍길동 외 4 명</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">방문 상담 신청</a></td>
+                    <td><a href="#">2021.12.30</a></td>
+                    <td><a href="#">홍길동</a></td>
+                    <td>홍길동 외 4 명</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            <section class="tab-content height-type02">
-              <div class="content" id="tab1">
-
-                <div class="pay-sliderbox">
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="btn-pop2"><img src="../resource/images/pay/img_pay-card01.png" alt="" ></button>
-                    <div class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard01" class="check">
-                      <label for="payCard01"><span class="box"></span></label>
-                    </div>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                    <div class="warning-info">
-                      <span class="info-txt">결제 실패</span>
-                    </div>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card02.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard02" class="check">
-                      <label for="payCard02"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card03.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard03" class="check">
-                      <label for="payCard03"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card04.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard04" class="check">
-                      <label for="payCard04"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card05.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard05" class="check">
-                      <label for="payCard05"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card06.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard06" class="check">
-                      <label for="payCard06"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card07.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard07" class="check">
-                      <label for="payCard07"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card08.png" alt="" ></button>
-                    <span class="checkbox type02">
-                      <input type="checkbox" name="payCard" id="payCard08" class="check">
-                      <label for="payCard08"><span class="box"></span></label>
-                    </span>
-                    <span class="serial-num">**** 1234 5678 ****</span>
-                    <span class="expire-date">유효기간 10/11</span>
-                  </div>
-                  <div class="slider-item card-info-wrap">
-                    <button type="button"><img src="../resource/images/pay/img_pay-new.png" alt="" ></button>
-                  </div>
-                </div>
-
-                <div class="inp-add-wrap">
-                  <label for="user_email" class="filter-title">결제용 이메일</label>
-                  <div class="inp">
-                    <input type="text" id="user_email" placeholder="이메일">
-                  </div>
-                  <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
-                  <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
-                </div>
-
-
-
-              </div>
-              <div class="content" id="tab2">
-                <div class="tbl-top">
-                  <div class="inp-select">
-                    <select name="" id="">
-                      <option value="all">전체</option>
-                      <option value="sub">구독</option>
-                      <option value="auto">자동 문자</option>
-                    </select>
-                  </div>
-                </div>
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:14%">
-                      <col style="width:48%">
-                      <col style="width:11%">
-                      <col style="width:18%">
-                      <col style="width:8%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">종류</th>
-                        <th scope="col">날짜</th>
-                        <th scope="col">결제 금액</th>
-                        <th scope="col">결제 상태</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="#">123456</a></td>
-                        <td><a href="#">구독</a></td>
-                        <td><a href="#">2021.12.30</a></td>
-                        <td><a href="#">₩ 100,000</a></td>
-                        <td><a href="#">실패</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">123456</a></td>
-                        <td><a href="#">자동문자</a></td>
-                        <td><a href="#">2021.12.30</a></td>
-                        <td><a href="#">₩ 100,000</a></td>
-                        <td><a href="#">성공</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">123456</a></td>
-                        <td><a href="#">자동문자</a></td>
-                        <td><a href="#">2021.12.30</a></td>
-                        <td><a href="#">₩ 100,000</a></td>
-                        <td><a href="#">성공</a></td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-
-                <!-- empty -->
-                <div class="data-empty-box customer" style="display:none">
-                  <div class="txt-group">
-                    <p class="txt">결제 영수증이 없습니다</p>
-                  </div>
-                </div>
-
-              </div>
-            </section>
 
           </div>
         </div>

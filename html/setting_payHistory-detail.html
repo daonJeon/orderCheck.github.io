@@ -19,6 +19,8 @@
   <!-- css, js 연결 -->
   <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
   <link rel="stylesheet" type="text/css" href="../resource/css/vendor/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/slick-theme.css"/>
   <link rel="stylesheet" href="../resource/css/layout.css">
   <link rel="stylesheet" href="../resource/css/contents.css">
 
@@ -85,8 +87,7 @@
                 <a href="#" class="menu-name company"><span>회사 관리</span></a>
                 <ul class="depth2">
                   <li><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
-                  <li><a href="setting_employee.html" class="btn-nav-dep2"><span>팀원 관리</span></a></li>
-                  <li><a href="setting_invite-sms.html" class="btn-nav-dep2"><span>팀원 초대</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 관리</span></a></li>
                 </ul>
               </li>
               <li>
@@ -99,8 +100,8 @@
                 <a href="#" class="menu-name card"><span>결제 관리</span></a>
                 <ul class="depth2">
                   <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
-                  <li class="on"><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li class="on"><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
                 </ul>
               </li>
               <li>
@@ -123,7 +124,7 @@
         <!-- header -->
         <div class="header-wrap">
           <header id="header" class="header">
-            <h2 class="title">자동 문자 충전</h2>
+            <h2 class="title">결제 내역</h2>
 
             <ul class="menu">
               <li>
@@ -182,143 +183,158 @@
         <ul class="location-wrap">
           <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
           <li><a href="setting_limit-plan.html">설정</a></li>
-          <li><a href="setting_autoCharge.html">자동 문자 충전</a></li>
+          <li><a href="setting_payHistory.html">결제 내역</a></li>
         </ul>
         <!-- //location -->
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
-            <div class="flex-sidebox center">
-              <p class="tx-alert01">오더체크 앱 푸시 알림을 수신하지 못한 경우 알림을 카카오 알림톡 또는 문자로 다시 한번 발송해보세요.<br>
-                알림톡 및 문자 메세지 비용은 문자 잔액에서 차감되며, 구독중인 플랜과 상관없이 사용량에 따라 자동충전해서 사용하세요.
-                <a href="#" target="_blank" class="ico info"><span class="hide">정보 페이지로 이동</span></a></p>
-                <button type="button" class="btn03 btn-bk"><span>금액 안내</span></button>
-            </div>
+            <p class="tx-alert01">구독 금액 및 자동 문자 충전 금액 등을 결제할 수 있는 수단을 설정해주세요.<br>
+              결제된 구독 및 자동 문자 충전은 영수증에서 확인해주세요.</p>
 
             <div class="tab-wrap">
               <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">문자 잔액</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab2">전송 내역</button></li>
+                <li><button type="button" class="tab-btn active" data-tab="tab1">카드</button></li>
+                <li class="on"><button type="button" class="tab-btn" data-tab="tab2">영수증</button></li>
               </ul>
               <span class="slider" data-left="0"></span>
             </div>
+
             <section class="tab-content height-type02">
               <div class="content" id="tab1">
-                <div class="setting-lg-box">
-                  <!-- setting-info-box -->
-                  <div class="setting-info-box type02 message">
-                    <div class="inbox flex-sidebox center">
-                        <div>
-                          <span class="txt">문자 잔액</span>
-                          <strong class="num">₩ 100</strong>
-                        </div>
-                      <button type="button" class="btn-s btn-bk-line open-layer" data-info="layer-message-charge"><span>문자 충전</span></button>
+
+                <div class="pay-sliderbox">
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="btn-pop2"><img src="../resource/images/pay/img_pay-card01.png" alt="" ></button>
+                    <div class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard01" class="check">
+                      <label for="payCard01"><span class="box"></span></label>
+                    </div>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                    <div class="warning-info">
+                      <span class="info-txt">결제 실패</span>
                     </div>
                   </div>
-                  <!-- //setting-info-box -->
-
-                  <div class="label-set-box flexbox center">
-                    <span class="tx-alert02">자동 충전 설정</span>
-                    <span class="switch no-txt">
-                      <input type="checkbox" id="autoCharge">
-                      <label for="autoCharge" class="slider round"></label>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card02.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard02" class="check">
+                      <label for="payCard02"><span class="box"></span></label>
                     </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card03.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard03" class="check">
+                      <label for="payCard03"><span class="box"></span></label>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card04.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard04" class="check">
+                      <label for="payCard04"><span class="box"></span></label>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card05.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard05" class="check">
+                      <label for="payCard05"><span class="box"></span></label>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card06.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard06" class="check">
+                      <label for="payCard06"><span class="box"></span></label>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card07.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard07" class="check">
+                      <label for="payCard07"><span class="box"></span></label>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button" class="open-layer" data-info="layer-card-info"><img src="../resource/images/pay/img_pay-card08.png" alt="" ></button>
+                    <span class="checkbox type02">
+                      <input type="checkbox" name="payCard" id="payCard08" class="check">
+                      <label for="payCard08"><span class="box"></span></label>
+                    </span>
+                    <span class="serial-num">**** 1234 5678 ****</span>
+                    <span class="expire-date">유효기간 10/11</span>
+                  </div>
+                  <div class="slider-item card-info-wrap">
+                    <button type="button"><img src="../resource/images/pay/img_pay-new.png" alt="" ></button>
                   </div>
                 </div>
-                <!-- setting-info-box -->
-                <div class="setting-info-box expire sliderOffShow">
-                  <div class="inbox">
-                    <span class="txt">문자 금액 자동충전이 꺼져있는 경우, 문자 잔액 소진시 알림톡 및 문자 푸시 전송이 되지 않을 수 있음에 주의하세요.</span>
-                  </div>
-                </div>
-                <!-- //setting-info-box -->
-                <div class="sliderOnShow">
-                  <p class="tx-alert01">
-                    문자 잔액이
-                    <span class="inp hide-warning btn-cal-inp01">
-                      <input type="text" name="" id="inputRest1" value="₩ 0"/>
-                      <span class="warning-txt02">충전 가능한 최소 금액은 ₩ 5,000, 최소 단위는 ₩ 1,000입니다.</span>
-                      <!-- btn-calculate-group -->
-                      <span class="btn-round-group">
-                        <button type="button" class="btn-round-gray btn-cal-price" data-num="10000"><span>+10,000</span></button>
-                        <button type="button" class="btn-round-gray btn-cal-price" data-num="5000"><span>+5,000</span></button>
-                        <button type="button" class="btn-round-gray btn-cal-price" data-num="1000"><span>+1,000</span></button>
-                      </span>
-                    </span>
-                    이하인 경우
-                    <span class="inp hide-warning btn-cal-inp02">
-                      <input type="text" name="" id="inputRest2" value="₩10,000"/>
-                      <span class="warning-txt02">충전 가능한 최소 금액은 ₩ 5,000, 최소 단위는 ₩ 1,000입니다.</span>
-                      <!-- btn-calculate-group -->
-                      <span class="btn-round-group">
-                        <button type="button" class="btn-round-gray btn-cal-price" data-num="10000"><span>+10,000</span></button>
-                        <button type="button" class="btn-round-gray btn-cal-price" data-num="5000"><span>+5,000</span></button>
-                        <button type="button" class="btn-round-gray btn-cal-price" data-num="1000"><span>+1,000</span></button>
-                      </span>
-                    </span>
-                    을 자동 충전 합니다.
-                  </p>
 
-                  <ul class="dot-list">
-                    <li>최소 금액이 현재 잔액보다 크면 저장과 동시에 결제가 진행됩니다.</li>
-                  </ul>
+                <div class="inp-add-wrap">
+                  <label for="user_email" class="filter-title">결제용 이메일</label>
+                  <div class="inp">
+                    <input type="text" id="user_email" placeholder="이메일">
+                  </div>
+                  <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+                  <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
                 </div>
+
 
 
               </div>
               <div class="content" id="tab2">
-
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:11%">
-                      <col style="width:11%">
-                      <col style="width:8%">
-                      <col style="width:51%">
-                      <col style="width:11%">
-                      <col style="width:8%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">발신 번호</th>
-                        <th scope="col">수신 번호</th>
-                        <th scope="col">방식</th>
-                        <th scope="col">내용</th>
-                        <th scope="col">시간</th>
-                        <th scope="col">가격</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>02.1234.5678</td>
-                        <td>010.1234.5678</td>
-                        <td>LMS</td>
-                        <td>[오더킹]<br> 고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br> -<br> 등기 연락처의 경우 담당 플래너 연락처로 기재해주세요. https;//ordercheck.io/sample1234</td>
-                        <td>2021.12.30 14:30</td>
-                        <td>₩ 60</td>
-                      </tr>
-                      <tr>
-                        <td>02.1234.5678</td>
-                        <td>010.1234.5678</td>
-                        <td>SMS</td>
-                        <td>[오더킹]<br> 고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br> 등기 연락처의 경우 담당 플래너 연락처로 기재해주세요.</td>
-                        <td>2021.12.30 14:30</td>
-                        <td>₩ 60</td>
-                      </tr>
-
-                    </tbody>
-                  </table>
+                <div class="receipt-wrap">
+                  <div class="tbl-top">
+                    <span class="tx-gray">123456789</span>
+                    <button type="button" class="btn sm btn-bk-line"><span>신용카드 매출 전표</span></button>
+                  </div>
+                  <div class="receipt-box">
+                    <div class="logo"><img src="../resource/images/pay/ico_receipt-logo.png" alt="오더체크 로고 "></div>
+                    <ul class="both-side">
+                      <li><span class="head">회사명</span><span class="desc">오더킹</span></li>
+                      <li><span class="head">영수증 ID</span><span class="desc">320828</span></li>
+                      <li><span class="head">종류</span><span class="desc">구독</span></li>
+                      <li><span class="head">카드번호</span><span class="desc">하나 **** 1234 1234 ****</span></li>
+                      <li><span class="head">청구일</span><span class="desc">2021.10.30</span></li>
+                      <li><span class="head">결제 상태</span><span class="desc">성공</span></li>
+                    </ul>
+                    <ul class="both-side head">
+                      <li><span class="head">항목</span><span class="desc">검색</span></li>
+                    </ul>
+                    <ul class="both-side">
+                      <li><span class="head">유료 플랜-스타터</span><span class="desc">₩ 35,000</span></li>
+                      <li><span class="head">채팅</span><span class="desc">₩ 55,000</span></li>
+                      <li><span class="head">통계/분석</span><span class="desc">₩ 55,000</span></li>
+                    </ul>
+                    <ul class="both-side head">
+                      <li><span class="head">항목 소계</span><span class="desc">₩ 145,000</span></li>
+                      <li><span class="head">세금 (10%)</span><span class="desc">₩ 15,000</span></li>
+                    </ul>
+                    <ul class="both-side total">
+                      <li><span class="head">결제 합계</span><span class="desc">₩ 15,000</span></li>
+                    </ul>
+                  </div>
                 </div>
+                <!-- 리스트 -->
 
                 <!-- empty -->
                 <div class="data-empty-box customer" style="display:none">
                   <div class="txt-group">
-                    <p class="txt">구독 내용이 없습니다</p>
-
-                    <button type="button" class="btn btn-blue open-layer" data-info="layer-company-in"><span>구독 설정</span></button>
-
+                    <p class="txt">결제 영수증이 없습니다</p>
                   </div>
                 </div>
 
@@ -331,68 +347,93 @@
 
   </div>
 
-
-  <!-- 요금제 가입 -->
-  <div class="layer-pop" id="layer-member-join">
+  <!-- 카드 정보 -->
+  <div class="layer-pop" id="layer-card-info">
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">요금제 가입</h2>
+        <h2 class="title">카드 정보</h2>
       </div>
       <div class="layer-mid">
-        <div class="member-box">
-          <div class="info-box">
-            <div class="box">
-              <p class="member-info-title">14일 무료 체험</p>
-              <ul class="member-info-list">
-                <li>
-                  <span class="head">무료 체험기간</span>
-                  <span class="desc">2021.08.18 ~ 2021.08.18</span>
-                </li>
-              </ul>
-            </div>
-            <div class="box active">
-              <p class="member-info-title">무료 체험 후 예정된 연 정기구독</p>
-              <ul class="member-info-list">
-                <li><span class="head">구독 기간</span><span class="desc">2021.08.18 ~ 2021.08.18</span></li>
-                <li><span class="head">결제 시작일</span><span class="desc">2021.08.18</span></li>
-                <li><span class="head">결제 금액</span><span class="desc">1,000,000원</span></li>
-              </ul>
-            </div>
+        <div class="card-info-wrap only">
+          <img src="../resource/images/pay/img_pay-card01.png" alt="" >
+          <div class="checkbox type02">
+            <input type="checkbox" name="payCard" id="" class="check">
+            <label for=""><span class="box"></span></label>
           </div>
-          <ul class="dot-list">
-            <li>무료체험 기간 종료 시 다음날부터 구독료가 결제됩니다.<br> 결제를 원하지 않으시면 구독을 무료로 변경해두세요.</li>
-            <li>구독기간은 자동 갱신됩니다. 구독결제 갱신을 중단하시려면 구독기간 종료일 전까지 구독을 해지하세요.</li>
-            <li>세금(10%)이 별도 추가됩니다.</li>
-          </ul>
+          <span class="serial-num">**** 1234 5678 ****</span>
+          <span class="expire-date">유효기간 10/11</span>
         </div>
 
         <div class="layer-btn tr">
-          <button type="button" class="btn-l btn-bk"><span>확인</span></button>
+          <button type="button" class="btn-link fl"><span>카드 삭제</span></button>
+          <a href="#" class="btn btn-bk"><span>카드 변경</span></a>
         </div>
         <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
       </div>
     </div>
   </div>
+
+  <!-- 결제 삭제 실패 : 기본 결제 카드 실패 -->
+  <div class="layer-pop confirm" id="layer-card-delete-fail">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">결제 삭제</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="confirm-msg">기본 결제 카드로 지정된 카드는 삭제할 수 없습니다.<br> 기본 결제 카드 변경 후 다시 시도해주세요.</p>
+
+        <div class="layer-btn tr">
+          <a href="#" class="btn btn-bk"><span>확인</span></a>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 카드 삭제 -->
+  <div class="layer-pop confirm" id="layer-card-delete">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">카드 삭제</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="confirm-msg">롯데 **** 1234 1234 **** 카드를 삭제하시겠습니까?</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <a href="#" class="btn btn-bk"><span>확인</span></a>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 기본 결제 카드 변경 -->
+  <div class="layer-pop" id="layer-card-change">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">기본 결제 카드 변경</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">롯데 **** 1234 1234 **** 를 기본 결제 카드로 변경하시겠습니까?<br> 다음 결제일인 2021.09.01 부터 변경하시 카드로 결제가 진행됩니다.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <a href="#" class="btn btn-bk"><span>변경</span></a>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
   <!-- 카드 등록 -->
-  <div class="layer-pop" id="layer-card-enroll">
+  <div class="layer-pop" id="layer-card-enroll-pay">
     <div class="layer-cnt">
       <div class="layer-top">
         <h2 class="title">카드 등록</h2>
       </div>
       <div class="layer-mid">
         <div class="login-wrap">
-          <div class="tbl-top-type02">
-            <p class="sub-txt tl">무료 체험기간 14일 이후 부터 결제가 진행됩니다.</p>
-            <p class="sm tl">오더체크는 어떠한 결제정보도 직접 저장하거나 접근하지 않습니다.<br> 검증된 타사 결제 시스템을 통해 모든 카드정보는 암호화되어 해당 결제 회사에서 관리됩니다.</p>
-          </div>
-
-          <div class="btn-member-drop on">
-            <dl>
-              <dt><span class="company">월 결제 금액(VAT 금액)</span> <span class="desc"><var>2021.11.30</var>부터 시작</span></dt>
-              <dd><strong class="price"><var class="won">91,300</var></strong></dd>
-            </dl>
-          </div>
-
           <div class="tab-wrap type03">
             <ul class="tabs">
               <li class="on"><button type="button" class="tab-btn active" data-tab="payTab1">개인카드</button></li>
@@ -512,142 +553,32 @@
     </div>
   </div>
 
-  <!-- 회사 생성 -->
-  <div class="layer-pop" id="layer-company-enroll02">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">회사 생성</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="login-wrap">
-          <div class="form-area">
-            <label for="user_companyName" class="filter-title">회사 이름</label>
-            <div class="inp">
-              <input type="text" id="user_companyName" placeholder="회사 이름">
-            </div>
-            <label for="user_companyUrl" class="filter-title">회사 URL</label>
-            <div class="inp-line url">
-              <div class="inp">
-                <input type="text" id="user_companyUrl" placeholder="회사 URL">
-              </div>
-              <span class="url-address">.ordercheck.io</span>
-            </div>
-            <p class="warning-txt02">등록되지 않은 회사 도메인입니다.</p>
-          </div>
-          <div class="layer-btn tr">
-            <button type="button" class="btn btn-bk layer-close confirm"><span>14일 무료 시작</span></button>
-          </div>
-        </div>
-
-
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
-  </div>
-
-  <!-- 결제 실패 -->
-  <div class="layer-pop" id="layer-pay-fail02">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">결제 실패</h2>
-      </div>
-      <div class="layer-mid">
-        <p class="info-txt02">결제 실패하여 자동 문자 충전이 중지되었습니다.<br> 기본 결제 카드를 변경해주세요. 계속해서 결제가 실패하는 경우 고객센터에 문의해주세요.</p>
-
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray"><span>충전 중지</span></button>
-          <button type="button" class="btn btn-bk"><span>카드 변경</span></button>
-        </div>
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 결제 실패 : 카드 등록 실패 -->
-  <div class="layer-pop" id="layer-pay-fail03">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">결제 실패</h2>
-      </div>
-      <div class="layer-mid">
-        <p class="info-txt02">등록된 카드가 없습니다. 카드를 등록하고 문자 충전을 다시 시도해주세요.</p>
-
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray"><span>취소</span></button>
-          <button type="button" class="btn btn-bk"><span>카드 등록</span></button>
-        </div>
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 결제 실패 : 카드 결제 실패 -->
-  <div class="layer-pop" id="layer-pay-fail04">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">결제 실패</h2>
-      </div>
-      <div class="layer-mid">
-        <p class="info-txt02">결제 실패하였습니다. 기본 결제 카드를 변경한 후 문자 충전을 다시 시도해주세요.</p>
-
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray"><span>취소</span></button>
-          <a href="#" class="btn btn-bk"><span>카드 변경</span></a>
-        </div>
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- 문자 충전 -->
-  <div class="layer-pop" id="layer-pay-charge">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">문자 충전</h2>
-      </div>
-      <div class="layer-mid">
-        <h3 class="filter-title">충전 금액</h3>
-        <div class="inp btn-cal-inp">
-          <input type="text" name="" id="" value="₩ 10000" placeholder="₩ 0"/>
-        </div>
-        <p class="warning-txt02">충전 가능한 최소 금액은 ₩ 5,000, 최소 단위는 ₩ 1,000입니다.</p>
-        <!-- btn-calculate-group -->
-        <div class="btn-round-group">
-          <button type="button" class="btn-round-gray btn-cal-price" data-num="10000"><span>+10,000</span></button>
-          <button type="button" class="btn-round-gray btn-cal-price" data-num="5000"><span>+5,000</span></button>
-          <button type="button" class="btn-round-gray btn-cal-price" data-num="1000"><span>+1,000</span></button>
-        </div>
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray"><span>취소</span></button>
-          <button type="button" class="btn btn-bk btn-pop"><span>충전</span></button>
-        </div>
-        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
-      </div>
-    </div>
-  </div>
 
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
-      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail02" style="font-size:16px"><span>결제 실패</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail03" style="font-size:16px"><span>결제 실패 : 카드 등록</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail04" style="font-size:16px"><span>결제 실패 : 카드 결제 실패</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-pay-charge" style="font-size:16px"><span>문자 충전</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-info" style="font-size:16px"><span>카드 정보</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-delete" style="font-size:16px"><span>카드 삭제</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-delete-fail" style="font-size:16px"><span>기본 카드 삭제 실패</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-change" style="font-size:16px"><span>기본 결제 카드 변경</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-enroll-pay" style="font-size:16px"><span>카드 등록</span></button><br>
   </div>
 
   <!-- script -->
-  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
-  <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
-  <!-- <script src="../resource/js/table_sort.js"></script> 테이블 소팅 기능 -->
-  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
-  <script src="../resource/js/common.js"></script>
+  <script type="text/javascript" src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script type="text/javascript" src="../resource/js/common.js"></script>
   <script>
 
     //관리페이지용 공통 함수
     pageInit ()
     tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
+
+
+
     //레이어팝업 : 매개변수 : ID명
     layerFunc (".open-layer",function(e){
       //레이어별 실행되어야할 함수 추가
@@ -676,8 +607,18 @@
     priceCalculateFunc(".layer-pop .btn-cal-price",".layer-pop .btn-cal-inp")
 
     ToastFunc(".btn-pop","문자 충전이 성공적으로 완료되었습니다",2000)
+    ToastFunc(".btn-pop2","결제 실패 카드는 기본 결제 카드로 변경이 불가합니다.",2000)
 
 
+  </script>
+  <script type="text/javascript" src="../resource/js/vendor/slick.min.js"></script>
+  <script>
+        $('.pay-sliderbox').slick({
+          slidesToScroll: 1,
+          infinite: false,
+          swipeToSlide: true,
+          variableWidth: true
+        });
 
   </script>
 </body>
