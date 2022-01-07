@@ -1538,6 +1538,41 @@ function priceCalInp (){
   })
 }
 priceCalInp()
+function operationFunc (){
+  var wraps = document.querySelectorAll(".inp-line-operation")
+  Array.prototype.forEach.call(wraps, function(wrap, idx){
+    
+  })
+  var checks = document.querySelectorAll(".inp-line-operation .checkbox input")
+  Array.prototype.forEach.call(checks, function(check, idx){
+    inputChecks(check)
+    check.addEventListener("click",function(e){
+      inputChecks(e.currentTarget)
+    })
+  })
+  
+
+  function inputChecks (checks){
+    var selects = checks.closest(".inp-line-operation").querySelectorAll(".inp-select select")
+    if(checks.checked) {
+      Array.prototype.forEach.call(selects, function(select, idx){
+        select.disabled = false
+        select.nextElementSibling.classList.remove("disabled")
+        select.nextElementSibling.querySelector(".current").innerText = select.nextElementSibling.querySelector(".selected").innerText
+
+
+      })
+    } else {
+      Array.prototype.forEach.call(selects, function(select, idx){
+
+        select.disabled = true
+        select.nextElementSibling.classList.add("disabled") 
+        select.nextElementSibling.querySelector(".current").innerText = "휴무" 
+     })
+    }
+  }
+}
+
 
 //공통
 function pageInit () {  //모든 페이지용 함수
