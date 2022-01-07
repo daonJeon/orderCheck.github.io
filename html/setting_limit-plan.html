@@ -79,12 +79,12 @@
       <!-- #include file="include_header.html" -->
         <aside class="setting-nav">
           <div class="inbox">
-            <h2 class="inp-title">설정</h2>
+            <h2 class="inp-title">회사 정보</h2>
             <ul class="depth1">
               <li>
                 <span class="menu-name company">회사 관리</span>
                 <ul class="depth2">
-                  <li><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
+                  <li class="on"><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
                   <li><a href="setting_employee.html" class="btn-nav-dep2"><span>팀원 관리</span></a></li>
                   <li><a href="setting_invite-sms.html" class="btn-nav-dep2"><span>팀원 초대</span></a></li>
                 </ul>
@@ -92,7 +92,7 @@
               <li>
                 <span class="menu-name security">권한 관리</span>
                 <ul class="depth2">
-                  <li class="on"><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
+                  <li><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
                 </ul>
               </li>
               <li>
@@ -123,7 +123,7 @@
         <!-- header -->
         <div class="header-wrap">
           <header id="header" class="header">
-            <h2 class="title">권한 템플릿</h2>
+            <h2 class="title">설정</h2>
 
             <ul class="menu">
               <li>
@@ -182,62 +182,114 @@
         <ul class="location-wrap">
           <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
           <li><a href="setting_company-info.html">설정</a></li>
-          <li>권한 템플릿</li>
+          <li><a href="setting_company-info.html">회사 정보</a></li>
         </ul>
         <!-- //location -->
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
-            <div class="setting-top-wrap">
-              <p class="inp-title">템플릿 목록</p>
+            <!-- 유료 플랜 -->
+            <div class="setting-info-box">
+              <div class="inbox">
+                <span class="txt">사용하시려면 유료 플랜을 구독해주세요.</span>
+                <a href="setting_subManager-plan.html" class="btn-paid-plan"><span>구독 설정</span></a>
+              </div>
             </div>
-              <div class="tbl-top">
-                <div class="search-box-wrap flexbox">
-                  <!-- select -->
-                  <div class="inp-select">
-                    <select name="templateSearch">
-                      <option value="name">템플릿명</option>
-                      <option value="mail">생성자</option>
-                    </select>
-                    <!-- select -->
+            <!-- //유료 플랜 -->
+            <div class="setting-top-wrap">
+              <h2 class="inp-title">회사 로고</h2>
+            </div>
+            <div class="profile-box">
+              <div class="profile-head">
+                <div class="profile">
+                  <!-- dropdown-wrap -->
+                  <div class="dropdown-wrap hover">
+                    <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
+                    <div class="dropdown-box">
+                      <ul>
+                        <li>
+                          <span class="inp">
+                            <input type="file" name="" id="file1" placeholder="파일 검색">
+                            <label for="file1" class="btn-drop-menu"><span>사진 변경</span></label>
+                          </span>
+                        </li>
+                        <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
+                      </ul>
+                    </div>
                   </div>
-                  <div class="inp-line">
+                  <!-- //dropdown-wrap -->
+
+                </div>
+              </div>
+              <div class="profile-cnt">
+                <div class="filter-box">
+                  <p class="filter-title">회사 명</p>
+                  <div class="inp">
+                    <input type="text" name="" id="" value="오더킹">
+                    <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
+                  </div>
+                  <p class="warning-txt02">10자 이내로 입력해주세요.</p>
+                </div>
+
+                <div class="filter-box">
+                  <p class="filter-title">회사 URL</p>
+                  <div class="inp-line url">
                     <span class="inp">
-                      <input type="text" name="" placeholder="검색어를 입력해주세요">
+                      <input type="text" id="user_companyUrl" placeholder="URL주소를 입력" value="sample1233">
+                      <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
                     </span>
-                    <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
+                    <span class="url-address">.ordercheck.io</span>
+                  </div>
+                  <p class="warning-txt02">영문, 숫자 혼합 3-50자로 입력해주세요.</p>
+                  <p class="warning-txt02">해당 회사 도메인은 이미 사용되었습니다.</p>
+                </div>
+
+                <div class="filter-box">
+                  <p class="filter-title">대표자 명</p>
+                  <div class="inp">
+                    <input type="text" name="" id="" value="홍길동" disabled>
                   </div>
                 </div>
-                <a href="#" class="btn btn-bk open-layer" data-info="layer-auth-set"><span>템플릿 추가</span></a>
+
+                <div class="filter-box">
+                  <p class="filter-title">회사 주소</p>
+                  <div class="inp-line">
+                    <span class="inp">
+                      <input type="text" name="" placeholder="지번, 도로명, 건물명으로 검색" value="서울시 강남구 도산대로1234-56">
+                    </span>
+                    <button type="submit" class="btn btn-light-blue"><span>주소 검색</span></button>
+                  </div>
+                  <div class="inp">
+                    <input type="text" name="" placeholder="상세 주소" value="123호">
+                    <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
+                  </div>
+                </div>
+
+                <div class="filter-box">
+                  <p class="filter-title">사업자 번호</p>
+                  <div class="inp">
+                    <input type="tel" name="" id="" placeholder="사업자 번호" value="123-89-09876" maxlength="12" class="numberInp">
+                    <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button>
+                  </div>
+                  <p class="warning-txt02">사업자 번호를 확인해주세요.</p>
+                </div>
+
+                <div class="filter-box">
+                  <p class="filter-title">사업자등록증</p>
+
+                  <div class="inp-line">
+                    <span class="inp filebox">
+                      <input type="text" class="upload-name" value="" placeholder="파일 선택" readonly>
+                      <input type="file" name="" id="file2" placeholder="파일 선택">
+                      <button type="button" class="pos btn-remove"><span class="txt hide">내용삭제</span></button>
+                    </span>
+                    <label for="file2" class="btn btn-light-blue"><span>첨부하기</span></label>
+                  </div>
+                  <p class="warning-txt02">견적 파일은 1개까지 첨부할 수 있습니다.</p>
+                </div>
+
               </div>
-              <!-- 리스트 -->
-              <div class="tbl-type1">
-                <table>
-                  <caption>고객 리스트 정보</caption>
-                  <colgroup>
-                    <col style="width:28%">
-                    <col style="width:32%">
-                    <col style="width:18%">
-                    <col style="width:22%">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">템플릿명</th>
-                      <th scope="col">등록일</th>
-                      <th scope="col">생성자</th>
-                      <th scope="col">최근 수정</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="#"><span>영업사원</span></a></td>
-                      <td><a href="#"><span>2021.12.30</span></a></td>
-                      <td><a href="#"><span>홍길동</span></a></td>
-                      <td><a href="#"><span>2021.12.30 홍길동</span></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            </div>
 
           </div>
         </div>
@@ -246,114 +298,81 @@
   </div>
 
 
-  <!-- 팀원 상세 레이어 -->
-  <div class="layer-pop confirm" id="layer-team-list">
+  <!-- 견적 공유 레이어 -->
+  <div class="layer-pop confirm" id="layer-customer-share">
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">팀원 상세</h2>
+        <h2 class="title">고객 정보 공유<span class="tx-gray sm">공유할 고객 정보를 선택해주세요</span></h2>
+
       </div>
       <div class="layer-mid">
-        <h2 class="filter-title">프로필 이미지</h2>
-        <div class="profile-box col">
-          <div class="profile-head">
-            <div class="profile"></div>
-          </div>
-          <div class="profile-cnt">
+        <div class="filter-wrap">
+          <div class="filter-box">
 
-            <div class="filter-box">
-              <p class="filter-title">이름</p>
-              <div class="inp">
-                <input type="text" name="" id="" placeholder="고객명" value="홍길동" readonly>
-              </div>
-              <p class="warning-txt02">이름을 입력해주세요.</p>
+            <div class="checkbox">
+              <input type="checkbox" name="customer_info" id="customer_name" class="check" >
+              <label for="customer_name"><span class="box"></span><span class="filter-title">고객명</span></label>
             </div>
-
-            <div class="filter-box">
-              <p class="filter-title">연락처</p>
-              <div class="inp">
-                <input type="tel" name="" id="" value="010.1234.5678" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">이메일 주소</p>
-              <div class="inp">
-                <input type="text" name="" id="" value="sample@naver.com" readonly>
-              </div>
-              <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
-              <p class="warning-txt02">이미 가입된 이메일입니다.</p>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">가입 일시</p>
-              <div class="inp">
-                <input type="text" name="" id="" value="2021.10.30 14.30" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">개인 코드</p>
-              <div class="inp">
-                <input type="text" name="" id="" value="ank289" disabled>
-              </div>
-            </div>
-
-            <div class="filter-box">
-              <p class="filter-title">권한</p>
-              <!-- select -->
-              <div class="inp-select">
-                <select name="">
-                  <option value="name">팀원</option>
-                </select>
-              </div>
-              <!-- //select -->
-            </div>
-
-            <div class="btn-group02" style="margin-top:-7px; margin-bottom:10px;">
-              <button type="button" class="btn-link open-layer" data-info="layer-team-delete"><span>팀원 삭제</span></button>
+            <div class="inp">
+              <input type="text" name="" id="" placeholder="고객명" value="홍길동" readonly>
             </div>
           </div>
-        </div>
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk btn-ok"><span>저장</span></button>
-        </div>
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
-  </div>
 
-  <!-- 계정 삭제 -->
-  <div class="layer-pop" id="layer-team-delete">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">팀원 삭제</h2>
-      </div>
-      <div class="layer-mid">
-        <p class="info-txt04">팀원을 삭제하시겠습니까? <br>팀원이 회사 내에서 이용한 내역은 삭제되지 않으며, 삭제 이후 팀원은 이용 내역에 더이상 접근할 수 없습니다.</p>
+          <div class="filter-box">
+            <div class="checkbox">
+              <input type="checkbox" name="customer_info" id="customer_phone" class="check">
+              <label for="customer_phone"><span class="box"></span><span class="filter-title">연락처</span></label>
+            </div>
+            <div class="inp">
+              <input type="tel" name="" id="" placeholder="연락처" value="010-1234-5678">
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <div class="checkbox">
+              <input type="checkbox" name="customer_info" id="customer_address" class="check">
+              <label for="customer_address"><span class="box"></span><span class="filter-title">주소</span></label>
+            </div>
+
+            <div class="inp-line">
+              <span class="inp">
+                <input type="text" name="" value="서울특별시 동작구 구원로45">
+              </span>
+              <button type="submit" class="btn btn-light-blue" disabled><span>주소 검색</span></button>
+            </div>
+            <div class="inp">
+              <input type="text" name="" placeholder="상세주소" value="우우건물 103-1034">
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <div class="checkbox">
+              <input type="checkbox" name="customer_info" id="customer_area" class="check">
+              <label for="customer_area"><span class="box"></span><span class="filter-title">평형</span></label>
+            </div>
+            <div class="inp-row">
+
+             <div class="inp">
+               <input type="text" name="" id="" class="cal" value="1,000">
+               <span class="unit">평</span>
+             </div>
+             <!-- select -->
+             <div class="inp-select">
+              <select name="areaType" style="width:100%;">
+                <option value="000">공급</option>
+                <option value="001">전용</option>
+              </select>
+            </div>
+
+            </div>
+          </div>
+
+        </div><!-- filter wrap-->
+
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
-        </div>
-      </div>
-      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
-    </div>
-  </div>
-
-  <!-- 권한 템플릿 제목 -->
-  <div class="layer-pop confirm" id="layer-auth-set">
-    <div class="layer-cnt">
-      <div class="layer-top">
-        <h2 class="title">권한 템플릿 제목</h2>
-      </div>
-      <div class="layer-mid">
-        <div class="inp on">
-          <input type="text" name="" id="" placeholder="제목없는 권한 템플릿" value="제목없는 권한 템플릿">
-        </div>
-
-        <div class="layer-btn tr">
-          <button type="button" class="btn btn-bk open-layer" data-info="layer-type-select"><span>확인</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>공유</span></button>
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
@@ -371,9 +390,12 @@
     pageInit ()
     //레이어팝업 : 매개변수 : ID명
     layerFunc (".open-layer")
+
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
-
+    dropMenuOpen(".profile-head .profile .btn-thum-edit",".profile-head .profile .dropdown-box",".profile-head .profile .btn-drop-menu")
+    inpEditFunc ()
+    autoHypenNumFunc (".numberInp")
   </script>
 </body>
 

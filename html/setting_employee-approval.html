@@ -82,7 +82,7 @@
             <h2 class="inp-title">설정</h2>
             <ul class="depth1">
               <li>
-                <a href="#" class="menu-name company"><span>회사 관리</span></a>
+                <span class="menu-name company">회사 관리</span>
                 <ul class="depth2">
                   <li><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
                   <li class="on"><a href="setting_employee.html" class="btn-nav-dep2"><span>팀원 관리</span></a></li>
@@ -90,13 +90,13 @@
                 </ul>
               </li>
               <li>
-                <a href="#" class="menu-name security"><span>권한 관리</span></a>
+                <span class="menu-name security">권한 관리</span>
                 <ul class="depth2">
                   <li><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
                 </ul>
               </li>
               <li>
-                <a href="#" class="menu-name card"><span>결제 관리</span></a>
+                <span class="menu-name card">결제 관리</span>
                 <ul class="depth2">
                   <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
                   <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
@@ -104,14 +104,14 @@
                 </ul>
               </li>
               <li>
-                <a href="#" class="menu-name layout"><span>신청폼 설정</span></a>
+                <span class="menu-name layout">신청폼 설정</span>                
                 <ul class="depth2">
                   <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
                   <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
                 </ul>
               </li>
               <li>
-                <a href="#" class="menu-name chat"><span>채팅 설정</span></a>
+                <span class="menu-name chat">채팅 설정</span>
                 <ul class="depth2">
                   <li><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
                   <li><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
@@ -181,25 +181,17 @@
         <!-- location -->
         <ul class="location-wrap">
           <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
-          <li><a href="setting_limit-plan.html">설정</a></li>
-          <li>팀원 관리</li>
+          <li><a href="setting_company-info.html">설정</a></li>
+          <li><a href="setting_employee.html">팀원 관리</a></li>
         </ul>
         <!-- //location -->
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
-            <!-- 유료 플랜 -->
-            <div class="setting-info-box">
-              <div class="inbox">
-                <span class="txt">사용하시려면 유료 플랜을 구독해주세요</span>
-                <a href="#" class="btn-paid-plan"><span>구독 설정</span></a>
-              </div>
-            </div>
-            <!-- //유료 플랜 -->
             <div class="tab-wrap">
               <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">팀원</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab2">가입 대기 <var class="tx-org">2</var></button></li>
+                <li><button type="button" class="tab-btn active" data-tab="tab1">팀원</button></li>
+                <li class="on"><button type="button" class="tab-btn" data-tab="tab2">가입대기<var class="tx-org">2</var></button></li>
               </ul>
               <span class="slider" data-left="0"></span>
             </div>
@@ -215,24 +207,24 @@
                         <option value="tel">연락처</option>
                         <option value="auth">권한</option>
                       </select>
+                      <!-- select -->
                     </div>
-                    <!-- //select -->
                     <div class="inp-line">
                       <span class="inp">
-                        <input type="text" name="" placeholder="검색어를 입력해주세요" value="이지">
+                        <input type="text" name="" placeholder="검색어를 입력">
                       </span>
                       <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
                     </div>
                   </div>
-                  <a href="#" class="btn btn-bk"><span>팀원 초대하기</span></a>
+                  <button type="button" class="btn02 btn-bk open-layer" data-info="layer-team-list"><span>팀원 초대하기</span></button>
                 </div>
                 <!-- 리스트 -->
                 <div class="tbl-type1">
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
-                      <col style="width:6%">
-                      <col style="width:20%">
+                      <col style="width:5.5%">
+                      <col style="width:20.5%">
                       <col style="width:11%">
                       <col style="width:30%">
                       <col style="width:11%">
@@ -253,85 +245,103 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>50</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>김<strong class="tx-blue">이지</strong></span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>팀원</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>50</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span><strong class="tx-bold">나</strong>홍길동</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>팀원</span></button></td>
                       </tr>
                       <tr>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>49</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span><strong class="tx-blue">이지</strong>아</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
-                        <td><button type="buton" class="open-layer" data-info="layer-team-list"><span>소유주</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>49</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>김수안무거북이와</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>소유주</span></button></td>
                       </tr>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>48</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>김수안무</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>FNO239J</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>영업 매니저</span></button></td>
+                      </tr>
+
                     </tbody>
                   </table>
                 </div>
-            </div>
+              </div>
               <div class="content" id="tab2">
-                <h2 class="inp-title">회사 로고</h2>
-                <div class="profile-box">
-                  <div class="profile-head">
-                    <div class="profile">
-                      <span class="nologo lg">오</span>
-                    </div>
-                  </div>
-                  <div class="profile-cnt">
-                    <div class="filter-box">
-                      <p class="filter-title">회사 명</p>
-                      <div class="inp">
-                        <input type="text" name="" id="" value="오더킹">
-                      </div>
-                    </div>
+                <!-- 리스트 -->
+                <div class="tbl-type1">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:6%">
+                      <col style="width:20%">
+                      <col style="width:11%">
+                      <col style="width:41%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">이메일 주소</th>
+                        <th scope="col">가입 요청일</th>
+                        <th scope="col" class="tc">승인/거절</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>50</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>홍길동</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
+                        <td>
+                          <div class="flexbox center">
+                            <button type="button" class="btn-s btn-bk-line btn-employee-confirm"><span>승인</span></button>
+                            <button type="button" class="btn-s btn-gray  btn-employee-refuse"><span>거절</span></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>49</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>홍길동</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
+                        <td>
+                          <div class="flexbox center">
+                            <button type="button" class="btn-s btn-bk-line btn-employee-confirm"><span>승인</span></button>
+                            <button type="button" class="btn-s btn-gray  btn-employee-refuse"><span>거절</span></button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>48</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>홍길동</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>010.1234.5678</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>sample@naver.com</span></button></td>
+                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30  14:30</span></button></td>
+                        <td>
+                          <div class="flexbox center">
+                            <button type="button" class="btn-s btn-bk-line btn-employee-confirm"><span>승인</span></button>
+                            <button type="button" class="btn-s btn-gray  btn-employee-refuse"><span>거절</span></button>
+                          </div>
+                        </td>
+                      </tr>
 
-                    <div class="filter-box">
-                      <p class="filter-title">회사 URL</p>
-                      <div class="inp">
-                        <input type="text" name="" id="" value="www.sample1233.com">
-                      </div>
-                    </div>
-
-                    <div class="filter-box">
-                      <p class="filter-title">대표자 명</p>
-                      <div class="inp">
-                        <input type="text" name="" id="" value="홍길동">
-                      </div>
-                    </div>
-
-                    <div class="filter-box">
-                      <p class="filter-title">회사 주소</p>
-                      <span class="inp">
-                        <input type="text" name="" value="서울시 강남구 도산대로1234-56">
-                      </span>
-                      <div class="inp">
-                        <input type="text" name="" placeholder="123호">
-                      </div>
-                    </div>
-
-                    <div class="filter-box">
-                      <p class="filter-title">사업자 번호</p>
-                      <div class="inp">
-                        <input type="tel" name="" id="" value="123-1566789-09876">
-                      </div>
-                    </div>
-
-                    <div class="filter-box">
-                      <p class="filter-title">사업자등록증</p>
-                      <div class="inp">
-                        <input type="text" name="" id="" value="sample.jpg">
-                      </div>
-                    </div>
-                    <div class="btn-group02 flex-sidebox end">
-                      <button type="button" class="btn-link"><span>팀원 삭제</span></button>
-                    </div>
-
-                  </div>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </section>
@@ -342,6 +352,7 @@
 
   </div>
 
+
   <!-- 팀원 상세 레이어 -->
   <div class="layer-pop confirm" id="layer-team-list">
     <div class="layer-cnt">
@@ -349,36 +360,12 @@
         <h2 class="title">팀원 상세</h2>
       </div>
       <div class="layer-mid">
-        <h2 class="inp-title">프로필 이미지</h2>
+        <h2 class="filter-title">프로필 이미지</h2>
         <div class="profile-box col">
           <div class="profile-head">
-            <div class="profile">
-              <!-- dropdown-wrap -->
-              <div class="dropdown-wrap hover">
-                <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
-                <div class="dropdown-box">
-                  <ul>
-                    <li>
-                      <span class="inp">
-                        <input type="file" name="" id="file1" placeholder="파일 검색">
-                        <label for="file1" class="btn-drop-menu"><span>사진 변경</span></label>
-                      </span>
-                    </li>
-                    <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
-                  </ul>
-                </div>
-              <div class="dim"></div></div>
-              <!-- //dropdown-wrap -->
-
-            </div>
+            <div class="profile"></div>
           </div>
           <div class="profile-cnt">
-            <div class="filter-box">
-              <p class="filter-title">개인 코드 </p>
-              <div class="inp">
-                <input type="text" name="" id="" value="sklksl234" disabled>
-              </div>
-            </div>
 
             <div class="filter-box">
               <p class="filter-title">이름</p>
@@ -429,7 +416,7 @@
               <!-- //select -->
             </div>
 
-            <div class="btn-group02" style="margin-top:40px">
+            <div class="btn-group02" style="margin-top:-7px; margin-bottom:10px;">
               <button type="button" class="btn-link open-layer" data-info="layer-team-delete"><span>팀원 삭제</span></button>
             </div>
           </div>
@@ -450,7 +437,7 @@
         <h2 class="title">팀원 삭제</h2>
       </div>
       <div class="layer-mid">
-        <p class="info-txt02">팀원을 삭제하시겠습니까? <br>팀원이 회사 내에서 이용한 내역은 삭제되지 않으며, 삭제 이후 팀원은 이용 내역에 더이상 접근할 수 없습니다.</p>
+        <p class="info-txt04">팀원을 삭제하시겠습니까? <br>팀원이 회사 내에서 이용한 내역은 삭제되지 않으며, 삭제 이후 팀원은 이용 내역에 더이상 접근할 수 없습니다.</p>
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
@@ -461,6 +448,12 @@
     </div>
   </div>
 
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+     <button type="button" class="btn-link open-layer" data-info="layer-team-list" style="font-size:16px"><span>팀원 상세 레이어</span></button>
+     <button type="button" class="btn-link open-layer" data-info="layer-team-delete" style="font-size:16px"><span>계정 삭제 레이어</span></button>
+  </div>
 
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
