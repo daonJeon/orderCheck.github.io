@@ -294,6 +294,7 @@
 .badge.issue {background-color:#FFC1C1}
 .badge.self {width:90px;background-color:#556277; color:#fff}
 .badge.other {width:90px;background-color:#ABB0BE; color:#fff}
+.setting .tbl-type1 .badge {width:66px;}
 
 .sort-wrap {position: relative; width:20px 30px; margin-left:6px;}
 .sort-wrap .btn-sort:after {position: absolute; left:50%; border-top-color:#7C8094; border-bottom-color:#7C8094}
@@ -437,7 +438,7 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .edit .pos.btn-edit,
 .pos.btn-edit.active,
 .pos.btn-edit:hover {background-image:url(../images/common/ico_edit-on.png)}
-
+.pos.setting-coupon {right:0; top:-42px}
 
 .auth-box {width:420px; margin:28px auto 50px; text-align: center;}
 .auth-box .msg {margin-bottom:40px; font-size:15px; line-height:24px; color:#41495D}

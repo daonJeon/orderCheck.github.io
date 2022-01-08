@@ -367,8 +367,8 @@
 
               </div>
               <div class="content" id="tab3">
-                <div class="pos" style="top:-31px; right:0;">
-                  <a href="#" class="btn btn-bk"><span>쿠폰 등록</span></a>
+                <div class="pos setting-coupon" >
+                  <button type="button" class="btn03 btn-bk open-layer" data-info="layer-coupon-enroll"><span>쿠폰 등록</span></button>
                 </div>
                 <!-- 리스트 -->
                 <div class="tbl-type1">
@@ -634,13 +634,38 @@
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
     </div>
   </div>
+  
+  <!-- 쿠폰 등록 -->
+  <div class="layer-pop" id="layer-coupon-enroll">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">쿠폰 등록</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="form-area">
+            <label for="couponCode" class="filter-title">쿠폰 코드</label>
+            <div class="inp">
+              <input type="text" id="couponCode" placeholder="쿠폰 코드">
+            </div>
+          </div>
+          <div class="layer-btn tr">
+            <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+            <button type="button" class="btn btn-bk layer-close"><span>등록</span></button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
 
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
       <button type="button" class="btn-link open-layer" data-info="layer-member-join" style="font-size:16px"><span>요금제 가입</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button>
+      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-coupon-enroll" style="font-size:16px"><span>쿠폰 등록</span></button>
   </div>
 
   <!-- script -->

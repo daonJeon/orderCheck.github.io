@@ -182,7 +182,7 @@
         <ul class="location-wrap">
           <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
           <li><a href="setting_company-info.html">설정</a></li>
-          <li>구독 관리</li>
+          <li><a href="setting_subManager-history.html">구독 관리</a></li>
         </ul>
         <!-- //location -->
 
@@ -191,8 +191,8 @@
 
             <div class="tab-wrap">
               <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">플랜 관리</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab2">구독 내역</button></li>
+                <li><button type="button" class="tab-btn active" data-tab="tab1">플랜 관리</button></li>
+                <li class="on"><button type="button" class="tab-btn" data-tab="tab2">구독 내역</button></li>
                 <li><button type="button" class="tab-btn" data-tab="tab3">쿠폰</button></li>
               </ul>
               <span class="slider" data-left="0"></span>
@@ -210,6 +210,10 @@
                   <div class="flex-sidebox">
                     <h3 class="filter-title">현재 구독중인 플랜</h3>
                     <span class="tx-gray">월 결제</span>
+                    <!-- <span class="switch mode">
+                      <input type="checkbox" id="" checked="">
+                      <label for="" class="slider round"><span class="unchecked">월</span><span class="checked">연(10%할인)</span></label>
+                    </span> -->
                   </div>
 
                   <div class="dropdown-wrap">
@@ -271,7 +275,7 @@
                   </div>
 
 
-                  <div class="setting-info-box expire">
+                  <div class="setting-info-box update">
                     <div class="inbox">
                       <span class="txt">2021.10.20 갱신 예정</span>
                     </div>
@@ -630,13 +634,39 @@
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
     </div>
   </div>
+  
+  <!-- 쿠폰 등록 -->
+  <div class="layer-pop" id="layer-coupon-enroll">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">쿠폰 등록</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="form-area">
+            <label for="couponCode" class="filter-title">쿠폰 코드</label>
+            <div class="inp">
+              <input type="text" id="couponCode" placeholder="쿠폰 코드">
+            </div>
+          </div>
+          <div class="layer-btn tr">
+            <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+            <button type="button" class="btn btn-bk layer-close"><span>등록</span></button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
 
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
       <button type="button" class="btn-link open-layer" data-info="layer-member-join" style="font-size:16px"><span>요금제 가입</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 생성</span></button>
+      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-coupon-enroll" style="font-size:16px"><span>쿠폰 등록</span></button>
   </div>
 
   <!-- script -->

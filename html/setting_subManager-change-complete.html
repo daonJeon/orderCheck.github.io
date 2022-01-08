@@ -381,8 +381,8 @@
 
               </div>
               <div class="content" id="tab3">
-                <div class="pos" style="top:-31px; right:0;">
-                  <a href="#" class="btn btn-bk"><span>쿠폰 등록</span></a>
+                <div class="pos setting-coupon">
+                  <button type="button" class="btn03 btn-bk open-layer" data-info="layer-coupon-enroll"><span>쿠폰 등록</span></button>
                 </div>
                 <!-- 리스트 -->
                 <div class="tbl-type1">
@@ -683,6 +683,31 @@
       </div>
     </div>
   </div>
+  
+  <!-- 쿠폰 등록 -->
+  <div class="layer-pop" id="layer-coupon-enroll">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">쿠폰 등록</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="form-area">
+            <label for="couponCode" class="filter-title">쿠폰 코드</label>
+            <div class="inp">
+              <input type="text" id="couponCode" placeholder="쿠폰 코드">
+            </div>
+          </div>
+          <div class="layer-btn tr">
+            <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+            <button type="button" class="btn btn-bk layer-close"><span>등록</span></button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
 
 
   <!-- 개발 시 삭제 -->
@@ -693,6 +718,7 @@
       <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-subscription-cancel" style="font-size:16px"><span>구독 해지</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-pay-fail" style="font-size:16px"><span>결제 실패</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-coupon-enroll" style="font-size:16px"><span>쿠폰 등록</span></button>
   </div>
 
   <!-- script -->
