@@ -401,6 +401,7 @@
 .login-wrap .title + .sub-txt {margin-top:16px}
 .login-wrap .login-top {margin-bottom:60px;}
 .login-wrap .inp:not(:last-child) {margin-bottom:12px;}
+.layer-pop .login-wrap .inp:not(:last-child) {margin-bottom:16px;}
 .login-wrap .inp-line {margin-bottom:6px;}
 .auth-box .inp-line {margin-bottom:12px;}
 .login-wrap .inp-line .inp {margin-bottom:0px;}
@@ -491,11 +492,13 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .drop-menu-list .btn-member-drop span.price {font-weight:400; color:#41495D; }
 .drop-menu-list .btn-member-drop .unit {font-weight: 500; font-size: 15px; line-height: 22px;;}
 
-.btn-member-drop {padding:18px 20px 18px 20px; width:100%; border-radius: 6px; border: 1px solid #E4E4E4; box-sizing: border-box;}
+.btn-member-drop {padding:17px 20px 17px 20px; width:100%; border-radius: 6px; border: 1px solid #E4E4E4; box-sizing: border-box;}
 .btn-member-drop.btn-drop-type02 {padding-right:44px}
 .btn-member-drop.btn-drop-type02:after {position:absolute; right:20px; top:50%; margin-top:-5px; width:0; height:0;border-left:7px solid transparent; border-right: 7px solid transparent; border-top: 10px solid #02164F; transition:all 1s; content:''}
 .btn-member-drop.active {border-color:#02164F;background: #F2F4F8; }
 .btn-member-drop.on {color:#1D58FF;background: rgba(29, 88, 255, 0.04); border-color:#1D58FF}
+.btn-member-drop.type02.on {background: #F1F5FF; border: 1px solid #1D58FF;}
+.btn-member-drop.on .company,
 .btn-member-drop.on .price {color:#1D58FF; }
 .btn-member-drop.open:after {transform:rotate(180deg)}
 .btn-member-drop var.won:before {background-position:top 59% left 5px}
@@ -506,13 +509,22 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .btn-member-drop .desc {display:block; margin-top:6px; font-size: 12px; line-height: 17px; color: #9A9A9A;}
 .btn-member-drop .price {float:right; font-weight:bold; font-size: 18px; line-height: 26px;color: #02164F;}
 .btn-member-drop .unit {margin-left:4px; font-weight: 500; font-size: 15px; line-height: 22px;}
+.btn-member-drop.on + .dot-list {margin-bottom:4px}
+.btn-member-drop.type02.on + .service-box {margin-top:14px}
 
 .service-box {margin-top:20px;}
+.service-box .filter-title {margin-bottom:18px}
 .service-box .filter-box {margin-bottom:18px}
+.service-box .info-list.side > li + li {margin-top:12px}
+.service-box .info-list.side > li + li.total {margin-top:25px}
+.service-box .info-list.side > li + li.btn-line-group {margin-top:24px}
+
 .service-box .checkbox input.check + label dl,
 .service-box dl.info-list-item,
 .service-box .total,
 .service-box .btn-line-group.side {display:flex; justify-content:space-between; align-items:center; }
+.service-box .btn-line-group.side .btn02 {font-weight: 500;}
+.service-box .btn-line-group.side .btn-link-type02 .txt:after{ background-size:78%}
 .service-box .btn-line-group.tr {margin-top:20px}
 .service-box li.btn-line-group { margin-bottom:40px; border-top:1px solid #E4E4E4; padding-top:24px;}
 .service-box .btn-line-group.right {text-align: right;}
@@ -532,7 +544,15 @@ var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12p
 .btn-member-drop.on var.d-won:before {background-image: url(../images/common/ico_blue-won.png) }
 .service-box dl.info-list-item .label-head {font-size:16px; color: #41495D;}
 .service-box dl.info-list-item strong.label-desc {font-weight: bold; line-height:22px; font-size:15px; color: #02164F;}
+.service-box dl.info-list-item strong.label-desc var {color:inherit}
 .service-box dl.info-list-item strong.label-desc .unit {font-weight: bold; font-size: 13px; line-height: 19px; color: #02164F;}
+.service-box ul.info-list .label-desc var {font-weight: bold; line-height:22px; font-size:15px; color: #555868;}
+.service-box ul.info-list .label-desc .unit {font-weight: bold; line-height:18px; font-size:13px; color: #9A9A9A;}
+.service-box .checkbox input.check:checked + label .label-head {font-weight: bold;}
+.service-box .checkbox input.check:checked + label strong.label-head {font-weight: bold; color:#02164F}
+.service-box .checkbox input.check:checked + label .unit {color: inherit;}
+.service-box .checkbox input.check:checked + label var {color:#02164F}
+.service-box .total-price .unit {font-weight: bold;}
 
 .btn-dark-gray {background: #A3A9BA; border-radius: 6px; color:#fff}
 .btn-dark-gray:disabled {background: #8B92A6;}
@@ -547,7 +567,7 @@ var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12p
 .member-box .info-box .box .member-info-list > li + li {margin-top:4px}
 .member-box .info-box .box .member-info-list .head {font-weight: bold; font-size: 14px; line-height: 20px; color: #41495D;}
 .member-box .info-box .box .member-info-list .desc {margin-left:10px; font-size: 13px; line-height: 19px; color: #7B7B7B;}
-.member-box .dot-list {margin:20px 0 36px }
+.member-box .dot-list {margin:22px 0 36px }
 
 button.box {width:100%; padding:12px; border:1px solid #E9E9E9; border-radius: 6px;}
 button.box.active {border-color:#02164F}
@@ -984,11 +1004,11 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .setting-info-box .txt {display:inline-block; padding:8px 0; font-weight: bold; font-size: 15px; line-height: 22px; color: #1D58FF;}
 .setting-info-box .btn-paid-plan {position:absolute; width:92px; right:-107px; z-index: 1;}
 
-.setting-info-box.type02 {margin-bottom:26px;background:rgba(29, 88, 255, 0.06);}
+.setting-info-box.type02 {padding:6px 16px; margin-bottom:26px;background:rgba(29, 88, 255, 0.06);}
 .setting-info-box.counting .txt {padding-left:24px; background:url(../images/common/ico_teamwork.png) no-repeat left center; font-weight: 400; color:#41495D}
-.setting-info-box.counting .num {margin-left:8px; color:#41495D}
+.setting-info-box.counting .num {margin-left:10px; color:#41495D}
 
-.setting-info-box.update {padding:14px 12px;}
+.setting-info-box.update {padding:14px 12px; background-color: #F1F5FF;}
 .setting-info-box.update .txt {padding:0; /*padding-left:30px; background:url(../images/setting/ico_update-alert.png) no-repeat left center;*/}
 
 .setting-info-box.expire {padding:14px 12px; background-color: rgba(255, 129, 89, 0.13);}
@@ -998,6 +1018,8 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .setting-info-box.message .txt {padding:0; padding-left:24px; background:url(../images/common/ico_message-alert.png) no-repeat left center; color:#41495D}
 .setting-info-box.message .num {margin-left:10px}
 .setting-info-box.message .inbox {display:flex}
+
+.setting-info-box:first-child + .flex-sidebox .filter-title {margin-bottom:12px;}
 
 .btn-paid-plan {padding:9px 10px; background: #1D58FF url(../images/setting/ico_btn-follow.png) no-repeat right 6px center; box-shadow: 0px 2px 5px rgba(29, 88, 255, 0.49); border-radius: 26px; text-align:left; font-size: 13px;  line-height: 19px; color:#fff; box-sizing:border-box}
 .btn-paid-plan > span {vertical-align: 1px;}
@@ -1060,7 +1082,9 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .inp-add-wrap .inp:first-child {margin-top:20px}
 .invite-btm .btm-btn-group {margin-top:14px;}
 .setting-lg-box {width:600px}
+.setting-lg-box + .setting-lg-box {padding-top:40px; margin-top:-20px; border-top:2px solid #7C8094;}
 .setting-lg-box .setting-info-box {display:block;}
+.setting-lg-box .setting-info-box:first-child {margin-top:20px}
 .setting-lg-box .label-set-box {margin-bottom:40px;}
 .hide-warning.inp .warning-txt02,
 .setting .btn-round-group {display:none; position:absolute; left:0; top:40px; z-index: 1;}
@@ -1075,9 +1099,9 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .profile-box.col .profile-head .profile {margin:0 auto}
 .profile-box.col .profile-cnt {width:100%}
 
-.blue-badge {padding:2px 8px; border: 1px solid #1D58FF;  box-sizing: border-box;  border-radius: 4px;font-weight: bold; font-size: 12px; line-height: 18px; text-align: center; color: #1D58FF;}
-.cnt-box.setting .filter-title .tx-blue.sm {margin-left:6px; font-weight: bold; font-size: 12px; line-height: 17px;}
-.cnt-box.setting .filter-title .blue-badge {margin-left:10px;}
+.blue-badge {display:inline-block; padding:4px 8px; border: 1px solid #1D58FF;  box-sizing: border-box;  border-radius: 4px;font-weight: bold; font-size: 12px; line-height: 15px; text-align: center; color: #1D58FF;}
+.cnt-box.setting .filter-title .tx-blue.sm {margin-left:6px; font-weight: 400; font-size: 12px; line-height: 17px;}
+.cnt-box.setting .filter-title .blue-badge {margin-left:8px;}
 
 .login-wrap .btn-member-drop + .dot-list {margin-top:20px}
 
@@ -1085,7 +1109,7 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .btn-round-group {display:flex; margin-top:10px;}
 .btn-round-group .btn-round-gray + .btn-round-gray {margin-left:6px;}
 
-.pay-sliderbox {margin-bottom:37px; width:100%;}
+.pay-sliderbox {margin-top:20px; margin-bottom:37px; width:100%;}
 .pay-sliderbox .slick-slide {position:relative; width:100%; height:100%; margin-left:16px}
 .pay-sliderbox .slick-slide:first-child {margin-left:0}
 .pay-sliderbox .slick-list { width: 100%; }

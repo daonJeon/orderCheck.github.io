@@ -104,7 +104,7 @@ input[type=text]::-ms-clear { display:none;}
 .btn-light-blue:not(:disabled):hover {box-shadow: 0px 2px 14px rgba(144, 162, 205, 0.66);}
 .btn-light-blue:disabled {background-color: #E1E5EF; color:#fff;}
 
-.btn-bk {/*min-width:120px;*/ background-color: #02164F; font-weight:bold; border:1px solid #02164F; line-height: 24px; color: #FFFFFF;}
+.btn-bk {/*min-width:120px;*/ display:inline-block; background-color: #02164F; font-weight:bold; border:1px solid #02164F; line-height: 24px; color: #FFFFFF;}
 .btn-bk:not(:disabled):hover { box-shadow: 0px 2px 14px rgba(2, 22, 79, 0.66);}
 .btn-bk:disabled { border-color:#8B92A6; background-color: #8B92A6;}
 .btn-bk:disabled { border-color:#A3A9BA; background-color: #A3A9BA; }
@@ -235,9 +235,10 @@ div.switch.no-txt {display: block;}
 .page-top.top-line .title {display:block}
 
 /* list */
-.dot-list li {position: relative; padding-left:10px; font-size: 12px; line-height: 16px; color: #9A9A9A;}
-.dot-list li:before {position:absolute; top:8px; left:0; width:4px; height:4px; border-radius: 50%; background:#9A9A9A; content:''}
+.dot-list li {position: relative; padding-left:19px; font-size: 12px; line-height: 16px; color: #9A9A9A;}
+.dot-list li:before {position:absolute; top:8px; left:8px; width:3px; height:3px; border-radius: 50%; background:#9A9A9A; content:''}
 .dot-list li + li {margin-top:8px;}
+
 
 /* layout */
 .header { display:flex; justify-content: space-between; align-items: center; }/* #footer */
@@ -404,6 +405,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /* .tabs li .tab-btn02:after {display:block; position:absolute; width:0; height:5px; left: 50%;transform: translateX(-50%); bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px; content:'';transition: width .5s ease,background-color .5s ease;} */
 .tabs li .tab-btn02:after {display:block; width:0; height:5px; margin:8px auto 0;  border-radius: 6px 6px 0px 0px; content:'';transition: width .5s ease,background-color .5s ease;}
 .tabs li.on .tab-btn:after, .tabs li.on .tab-btn02:after {width:100%; background: #02164F;transition: width .5s ease,background-color .5s ease;}
+.tab-wrap.type03 .tabs li.on .tab-btn:after {border-radius: 0; height:3px; margin-top:11px}
 
 .tabs li + li {margin-left:34px}
 .tab-wrap .slider {display:none; position:absolute; width:0px; height:5px; left:0; bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px;  transition:all .5s}
@@ -456,8 +458,8 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .checkbox .box {position:relative; display:inline-block; width:18px; height:18px; border:1px solid #E2E2E2; vertical-align: top; margin:2px 8px 0 0; border-radius:4px}
 .checkbox .box:before,
 .checkbox .box:after {display:block; position:absolute; transform:rotate(45deg); content:''; background:#ccc; }
-.checkbox .box:before {width:2px; height:11px; top:3px; left:9px; }
-.checkbox .box:after {width:4px; height:2px; top:9px; left:3px;}
+.checkbox .box:before {width:2px; height:11px; top:4px; left:10px; }
+.checkbox .box:after {width:5px; height:2px; top:9px; left:3px;}
 .checkbox input.check:checked + label .box::before,
 .checkbox input.check:checked + label .box:after {background-color: #fff;}
 .checkbox input.check:checked + label .box {background:#02164F; border-color:#02164F}
@@ -507,14 +509,16 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .layer-cnt .info-txt02 {margin:5px 0 20px; line-height:26px;font-size:15px;color:#555868}
 .layer-cnt .info-txt03 {margin:8px 0 20px; font-size: 14px; line-height: 26px; color: #41495D;}
 .layer-cnt .info-txt04 {margin:5px 0 20px; line-height:26px;font-size:14px;color:#41495D}
+.layer-cnt .login-wrap .info-txt04 {line-height:20px; margin-bottom:14px}
 .layer-cnt .layer-top,
 .layer-cnt .layer-mid {padding-right:20px;}
 .layer-cnt .layer-btn {margin-top:26px; margin-bottom:20px}
 .layer-btn > .btn-bk-line{ min-width:auto; width:107px; font-size:16px;font-weight:bold}
 .layer-btn > .btn-bk { min-width:auto; min-width:90px; font-size:16px;font-weight:bold}
 .layer-btn > button,
-.layer-btn > a {height:55px; line-height:31px; display:inline-block;}
+.layer-btn > a {height:55px; line-height:21px; display:inline-block;}
 .layer-btn > .btn + .btn {margin-left:8px}
+.layer-btn.tr > .btn-bk {display: inline-block; width:auto}
 
 
 
@@ -705,7 +709,7 @@ width:calc(100% - 40px); font-size:14px;}
 .data-empty-box.customer .txt {padding-top:160px; background: url(../images/common/bg_empty-customer.png) no-repeat top 20px center;}
 .data-empty-box.customer .txt-group {text-align: center; }
 .data-empty-box.customer .txt-group .sub-txt {margin-top:12px; font-size: 14px; line-height: 20px; color: #9A9A9A;}
-.data-empty-box.customer .txt-group .btn {line-height:20px;padding-left: 13px;padding-right: 13px;}
+.data-empty-box.customer .txt-group .btn {margin-top:20px; line-height:23px;padding-left: 13px;padding-right: 13px; font-weight:500}
 
 .tab-content {position:relative; height: 100%;}
 .tab-content > .content,
@@ -758,7 +762,7 @@ width:calc(100% - 40px); font-size:14px;}
 .dim {position:fixed; top:0; left:0; width:100%; height:100%; background:transparent; z-index:1;}
 
 /* btn-link-type02 */
-.btn-link-type02 .txt {position: relative; padding-right:30px;}
+.btn-link-type02 .txt {position: relative; font-weight:500; padding-right:30px;}
 .btn-link-type02 .txt:after {display:block; margin-top:-14px; position:absolute; top:50%; right:0px; width:30px; height:30px; background:url(../images/common/ico_accordion-arrow.png) no-repeat center; content:''; background-size:60%; transform:rotate(-90deg); color:#7b7b7b; content:''}
 
 .tbl-top-type02 {margin-bottom:30px; text-align: center;}
@@ -770,8 +774,8 @@ width:calc(100% - 40px); font-size:14px;}
 .tab-wrap.type02 {width:auto; margin-top:40px; margin-bottom:38px;}
 .tab-wrap.type02 .tabs > li {width:50%; padding:0; border-bottom:1px solid #E6E6E6;}
 .tab-wrap.type02 .tabs li button {width:100%; /*padding-bottom:14px*/}
-.tab-wrap.type03 {width:auto; margin-top:20px; margin-bottom:20px;}
-.tab-wrap.type03 .tabs > li {width:50%; }
+.tab-wrap.type03 {width:auto; margin-top:20px; margin-bottom:20px; border-bottom:1px solid #E6E6E6;}
+.tab-wrap.type03 .tabs > li {width:50%; padding:0; }
 .tab-wrap.type03 .tabs li button {width:100%;}
 .txt-form {margin:0 10px 0 8px}
 

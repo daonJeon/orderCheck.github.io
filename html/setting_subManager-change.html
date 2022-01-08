@@ -265,7 +265,7 @@
                       <li>
                         <div class="checkbox">
                           <input type="checkbox" name="service" id="service01" class="check" disabled="">
-                          <label for="service01"><span class="box"></span><dl><dt class="label-head">화이트 라벨링</dt><dd class="label-desc">팀 플랜부터 가능</dd></dl></label>
+                          <label for="service01"><span class="box"></span><dl><dt class="label-head">화이트 라벨링</dt><dd class="label-desc">프로 플랜부터 가능</dd></dl></label>
                         </div>
                       </li>
                       <li>
@@ -287,7 +287,7 @@
                     </ul>
                     <div class="btn-line-group tr">
                       <button type="button" class="btn02 btn-gray"><span>취소</span></button>
-                      <button type="button" class="btn02 btn-bk open-layer" data-info="layer-member-join"><span>구독 변경</span></button>
+                      <a href="#" class="btn02 btn-bk"><span>구독 변경</span></a>
                     </div>
                   </div>
 
@@ -343,7 +343,29 @@
                     </tbody>
                   </table>
                 </div>
-
+                
+                <!-- 리스트 -->
+                <div class="tbl-type1">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:19%">
+                      <col style="width:48%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">플랜</th>
+                        <th scope="col">구독 시작</th>
+                        <th scope="col">구독 종료</th>
+                        <th scope="col">상태</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
                 <!-- empty -->
                 <div class="data-empty-box customer">
                   <div class="txt-group">
@@ -411,8 +433,8 @@
 
 
 
-  <!-- 요금제 가입 -->
-  <div class="layer-pop" id="layer-member-join">
+   <!-- 요금제 가입 -->
+   <div class="layer-pop" id="layer-member-join">
     <div class="layer-cnt">
       <div class="layer-top">
         <h2 class="title">요금제 가입</h2>
@@ -452,8 +474,224 @@
       </div>
     </div>
   </div>
+  <!-- 카드 등록 -->
+  <div class="layer-pop" id="layer-card-enroll">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">카드 등록</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="tbl-top-type02">
+            <p class="sub-txt tl">무료 체험기간 14일 이후 부터 결제가 진행됩니다.</p>
+            <p class="sm tl">오더체크는 어떠한 결제정보도 직접 저장하거나 접근하지 않습니다.<br> 검증된 타사 결제 시스템을 통해 모든 카드정보는 암호화되어 해당 결제 회사에서 관리됩니다.</p>
+          </div>
+
+          <div class="btn-member-drop on">
+            <dl>
+              <dt><span class="company">월 결제 금액(VAT 금액)</span> <span class="desc"><var>2021.11.30</var>부터 시작</span></dt>
+              <dd><strong class="price"><var class="won">91,300</var></strong></dd>
+            </dl>
+          </div>
+
+          <div class="tab-wrap type03">
+            <ul class="tabs">
+              <li class="on"><button type="button" class="tab-btn active" data-tab="payTab1">개인카드</button></li>
+              <li><button type="button" class="tab-btn" data-tab="payTab2">법인카드</button></li>
+            </ul>
+            <span class="slider" data-left="0"></span>
+          </div>
+
+          <section class="tab-content">
+            <div class="content active" id="payTab1">
+              <div class="form-area">
+                <label for="user_card01-1" class="inp-title">카드 번호</label>
+                <div class="inp-phone">
+                  <span class="inp">
+                    <input type="tel" id="user_card01-1" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card01-2" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card01-3" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card01-4" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                </div>
+                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
 
 
+                <label for="user_date" class="inp-title">유효기간</label>
+                <div class="inp range">
+                  <input type="tel" id="user_date" maxlength="2" pattern="[0-9]{2}" placeholder="MM"required>
+                  <span class="txt-form"> / </span>
+                  <input type="tel" id="user_date02" maxlength="2" pattern="[0-9]{2}" placeholder="YY"required>
+                </div>
+                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
+
+                <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
+                <div class="inp pw">
+                  <input type="password" id="user_pw" pattern="[0-9]{2}" maxlength="2" placeholder="**" required>
+                  <span class="txt-form">**</span>
+                </div>
+
+                <label for="user_phone" class="inp-title">생년월일 6자리</label>
+                <div class="inp">
+                  <input type="tel" id="user_phone" pattern="[0-9]{6}" maxlength="6" placeholder="예:881030" required>
+                </div>
+                <p class="warning-txt02">생년월일을 확인해주세요.</p>
+
+                <label for="user_email" class="inp-title">결제용 이메일</label>
+                <div class="inp">
+                  <input type="text" id="user_email" placeholder="이메일">
+                </div>
+                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+                <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
+
+              </div>
+              <div class="layer-btn tr">
+                <button type="button" class="btn-l btn-bk confirm"><span>다음</span></button>
+              </div>
+            </div>
+            <div class="content" id="payTab2">
+              <div class="form-area">
+                <label for="user_card02-1" class="inp-title">카드 번호</label>
+                <div class="inp-phone">
+                  <span class="inp">
+                    <input type="tel" id="user_card02-1" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card02-2" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card02-3" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                  <span class="inp">
+                    <input type="tel" id="user_card02-4" pattern="[0-9]{4}" maxlength="4" required>
+                  </span>
+                </div>
+                <p class="warning-txt02">카드 번호를 확인해주세요.</p>
+
+                <label for="user_date" class="inp-title">유효기간</label>
+                <div class="inp range">
+                  <input type="tel" id="user_date" maxlength="2" pattern="[0-9]{2}" placeholder="MM" required>
+                  <span class="txt-form"> / </span>
+                  <input type="tel" id="user_date02" maxlength="4" pattern="[0-9]{4}" placeholder="YYYY" required>
+                </div>
+                <p class="warning-txt02">카드 유효기간을 확인해주세요.</p>
+
+                <label for="user_pw" class="inp-title">비밀번호 앞 2자리</label>
+                <div class="inp pw">
+                  <input type="password" id="user_pw" placeholder="**" pattern="[0-9]{2}" required>
+                  <span class="txt-form">**</span>
+                </div>
+
+                <label for="user_phone" class="inp-title">사업자등록번호 10자리</label>
+                <div class="inp">
+                  <input type="tel" id="user_phone" pattern="[0-9]{10}" maxlength="10" placeholder="예:881030" required>
+                </div>
+                <p class="warning-txt02">사업자번호를 확인해주세요.</p>
+
+                <label for="user_email" class="inp-title">결제용 이메일</label>
+                <div class="inp">
+                  <input type="text" id="user_email" placeholder="이메일">
+                </div>
+                <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+                <p class="tx-gray">미입력 시 결제 관련 메일을 수신할 수 없습니다.</p>
+
+              </div>
+              <div class="layer-btn tr">
+                <button type="button" class="btn-l btn-bk confirm"><span>다음</span></button>
+              </div>
+            </div>
+          </section>
+        </div>        
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 회사 생성 -->
+  <div class="layer-pop" id="layer-company-enroll02">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">회사 생성</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap">
+          <div class="form-area">
+            <label for="user_companyName" class="filter-title">회사 이름</label>
+            <div class="inp">
+              <input type="text" id="user_companyName" placeholder="회사 이름">
+            </div>
+            <label for="user_companyUrl" class="filter-title">회사 URL</label>
+            <div class="inp-line url">
+              <div class="inp">
+                <input type="text" id="user_companyUrl" placeholder="회사 URL">
+              </div>
+              <span class="url-address">.ordercheck.io</span>
+            </div>
+            <p class="warning-txt02">등록되지 않은 회사 도메인입니다.</p>
+          </div>
+          <div class="layer-btn tr">
+            <button type="button" class="btn btn-bk layer-close confirm"><span>14일 무료 시작</span></button>
+          </div>
+        </div>
+
+
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 구독 해지 -->
+  <div class="layer-pop" id="layer-subscription-cancel">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">구독 해지</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">지금 프리 프랜으로 변경하시더라도 <br>
+          2022.02.18 까지 현재 구독 항목을 계속 이용하실 수 있습니다.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>구독 해지</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 결제 실패 -->
+  <div class="layer-pop" id="layer-pay-fail">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">결제 실패</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">결제 실패하여 플랜 이용이 중지되었습니다.<br> 기본 결제 카드를 변경해주세요. 계속해서 결제가 실패하는 경우 고객센터에 문의해주세요.<br> 결제 완료 전까지 전체 팀원들의 로그인이 제한됩니다.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-bk"><span>카드 변경</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-member-join" style="font-size:16px"><span>요금제 가입</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-subscription-cancel" style="font-size:16px"><span>구독 해지</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail" style="font-size:16px"><span>결제 실패</span></button><br>
+  </div>
+  
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>

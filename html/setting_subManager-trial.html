@@ -263,7 +263,7 @@
                       </li>
                       <li class="btn-line-group side">
                         <a href="#" class="btn-link-type02" target="_blank"><span class="txt">자세한 가격 및 기능</span></a>
-                        <button type="button" class="btn02 btn-bk open-layer" data-info="layer-member-join"><span>구독 변경</span></button>
+                        <a href="#" class="btn02 btn-bk"><span>구독 변경</span></a>
                       </li>
                       
                     </ul>
@@ -328,7 +328,29 @@
                     </tbody>
                   </table>
                 </div>
-
+                
+                <!-- 리스트 -->
+                <div class="tbl-type1">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:19%">
+                      <col style="width:48%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">플랜</th>
+                        <th scope="col">구독 시작</th>
+                        <th scope="col">구독 종료</th>
+                        <th scope="col">상태</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
                 <!-- empty -->
                 <div class="data-empty-box customer">
                   <div class="txt-group">
@@ -436,6 +458,7 @@
       </div>
     </div>
   </div>
+
   <!-- 카드 등록 -->
   <div class="layer-pop" id="layer-card-enroll">
     <div class="layer-cnt">
@@ -641,8 +664,9 @@
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-member-join" style="font-size:16px"><span>요금제 가입</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button>
+      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-subscription-change" style="font-size:16px"><span>구독 변경</span></button>
   </div>
 
@@ -651,7 +675,6 @@
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
-  <!-- <script src="../resource/js/table_sort.js"></script> 테이블 소팅 기능 -->
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js"></script>
   <script>

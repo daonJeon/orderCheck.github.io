@@ -215,35 +215,13 @@
                       <label for="" class="slider round"><span class="unchecked">월</span><span class="checked">연(10%할인)</span></label>
                     </span> -->
                   </div>
-
-                  <div class="dropdown-wrap">
-                    <button type="button" class="btn-member-drop active">
-                      <dl>
-                        <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                        <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
-                      </dl>
-                    </button>
-                    <div class="drop-menu-list">
-                      <ul>
-                        <li>
-                          <button type="button" class="btn-member-drop">
-                            <dl>
-                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
-                            </dl>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="btn-member-drop">
-                            <dl>
-                              <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">93,300</var><span class="unit">월</span></strong></dd>
-                            </dl>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="btn-member-drop active">
+                    <dl>
+                      <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                      <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                    </dl>
                   </div>
+
                   <div class="service-box">
                     <h2 class="filter-title">부가 서비스</h2>
                     <ul class="info-list side">
@@ -267,7 +245,7 @@
                       </li>
                       <li class="btn-line-group side">
                         <a href="#" class="btn-link-type02" target="_blank"><span class="txt">자세한 가격 및 기능</span></a>
-                        <button type="button" class="btn02 btn-bk open-layer" data-info="layer-member-join"><span>구독 변경</span></button>
+                        <a href="#" class="btn02 btn-bk"><span>구독 변경</span></a>
                       </li>
                       
                     </ul>
@@ -283,35 +261,13 @@
                     <h3 class="filter-title"><span class="tx-blue">2021.10.30 시작</span></h3>
                     <span class="tx-gray">월 결제</span>
                   </div>
-
-                  <div class="dropdown-wrap">
-                    <button type="button" class="btn-member-drop on">
-                      <dl>
-                        <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                        <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
-                      </dl>
-                    </button>
-                    <div class="drop-menu-list">
-                      <ul>
-                        <li>
-                          <button type="button" class="btn-member-drop">
-                            <dl>
-                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
-                            </dl>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="btn-member-drop">
-                            <dl>
-                              <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">93,300</var><span class="unit">월</span></strong></dd>
-                            </dl>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="btn-member-drop type02 on">
+                    <dl>
+                      <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
+                      <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
+                    </dl>
                   </div>
+
                   <div class="service-box">
                     <ul class="info-list side">
                       <li>
@@ -391,6 +347,28 @@
                   </table>
                 </div>
 
+                <!-- 리스트 -->
+                <div class="tbl-type1">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:19%">
+                      <col style="width:48%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                      <col style="width:11%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">플랜</th>
+                        <th scope="col">구독 시작</th>
+                        <th scope="col">구독 종료</th>
+                        <th scope="col">상태</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
                 <!-- empty -->
                 <div class="data-empty-box customer">
                   <div class="txt-group">
@@ -710,6 +688,7 @@
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-member-join" style="font-size:16px"><span>요금제 가입</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 등록</span></button><br>
       <button type="button" class="btn-link open-layer" data-info="layer-subscription-cancel" style="font-size:16px"><span>구독 해지</span></button><br>
@@ -721,7 +700,6 @@
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
-  <!-- <script src="../resource/js/table_sort.js"></script> 테이블 소팅 기능 -->
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js"></script>
   <script>
@@ -736,10 +714,8 @@
         tabFunc (".tab-wrap.type03", true, function () {        
           inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
         }, ".login-wrap .tab-content .content") //tab 영역 , slider 풀사이즈 여부
-
       }
-      else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {
-        
+      else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {      
         inpActiveFunc ("#layer-company-enroll02 .login-wrap",".confirm") 
       }
 
