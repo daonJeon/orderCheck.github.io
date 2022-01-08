@@ -540,7 +540,7 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .service-box var.won {margin-right:4px; font-weight: bold; font-size: 20px; line-height: 29px;}
 
 
-var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF url(../images/common/ico_won.png) no-repeat left 59% top 59%; border-radius:50%; text-align:center; color:#fff; content:''}
+var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF url(../images/common/ico_won.png) no-repeat left 56% top 59%; border-radius:50%; text-align:center; color:#fff; content:''}
 var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12px; font-weight:400; font-size:16px; line-height:22px; background: url(../images/common/ico_default-won.png) no-repeat left 59% top 59%; text-align:center; content:''}
 .btn-member-drop.on var.d-won:before {background-image: url(../images/common/ico_blue-won.png) }
 .service-box dl.info-list-item .label-head {font-size:16px; color: #41495D;}
@@ -1151,3 +1151,10 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .textarea-revise-box {border:1px solid #E7E7E7; border-radius: 6px; }
 .textarea-revise-box .textarea {border:none}
 .textarea-revise-box .box {padding:8px 12px; border-top:1px solid #E7E7E7;}
+
+.subscription-box {margin-top:20px; width:640px; padding:22px 20px 12px; border: 1px solid #E4E4E4; box-sizing: border-box; border-radius: 6px;}
+.subscription-box .service-box {margin-top:12px;}
+.subscription-box .badge { height:25px; width:60px; font-weight:500; font-size:12px; line-height:25px; }
+.subscription-box .top .num {margin-left:4px; font-size: 13px; line-height: 19px; color: #555868;}
+.subscription-box .service-box .filter-title .range {margin-left:12px; font-weight:400; font-size: 14px; line-height: 20px; color: #555868;}
+.subscription-box .service-box var.won {margin-right:0; }
