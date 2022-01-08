@@ -175,7 +175,7 @@
 .profile-details .arrow {background-color: #818181;}
 
 .btn-drop {position:relative; }
-.btn-drop .arrow:after {position:absolute; right:0; top:50%; margin-top:-3px; border-top-color: #818181; }
+.btn-drop .arrow:after {position:absolute; right:2px; top:50%; margin-top:-2px; border-top-color: #818181; }
 
 .cnt-box-wrap {display:flex; padding:30px;}
 .cnt-box {padding:28px 20px; background:#fff; border-radius: 16px; box-sizing: border-box;}
@@ -909,7 +909,7 @@ user-select: none;}
 .btn-alarm-item { width:100%; padding:6px 24px 5px 57px; box-sizing: border-box; color:#7B7B7B; text-align: left;}
 .btn-alarm-item:before {position:absolute; top:50%; left:4px; margin-top:-19px; width:38px; height:38px; border-radius:50%; background-color:#F2F2F2; content:''; background-repeat: no-repeat; background-position:center;}
 .btn-alarm-item .main-txt {display:block; font-size: 14px; line-height: 20px; }
-.btn-alarm-item .main-txt strong {font-weight: 700;}
+.checkbox .btn-alarm-item .main-txt strong {font-weight: 700; vertical-align: top;}
 .btn-alarm-item .sub-txt {display:block; font-size: 13px; line-height: 19px;}
 .alarm-list .btn-show-menu {position:absolute; padding:4px; top:13px; right:0px; z-index: 1;}
 .btn-show-menu {width:16px; height:16px; background: url(../images/common/ico_draw-cnt.png) no-repeat center;}
@@ -1004,10 +1004,11 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 
 .search-box-wrap > .inp-select {margin-right:10px;}
 .search-box-wrap .inp {width:290px}
+.search-box-wrap .btn-light-blue {min-width:80px}
 .setting .tbl-top {margin-top:20px; margin-bottom:8px}
 .setting .tbl-top .btn02 {width:119px; font-size:16px; font-weight: 500;}
 
-.btn-line-plus {color:#02164F}
+
 .tbl-type1 .tx-bold {margin-right:8px}
 .setting .cnt-box {padding-top:20px;}
 .setting .inp-title {margin-bottom:20px;}
@@ -1021,10 +1022,12 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .setting .tab-wrap {margin-bottom:4px;}
 .setting-top-wrap p .btn-copy {margin-left:10px;}
 .setting-top-wrap .inp {padding-bottom:10px;}
-.setting-top-wrap .inp.inp-bold {width:400px;}
-.setting-top-wrap .inp.inp-bold input {font-weight:bold}
+.setting-top-wrap .inp.inp-bold {width:400px; padding-bottom:0;}
+.setting-top-wrap .inp.inp-bold input {font-weight: bold; font-size: 15px; line-height: 22px; color: #41495D;}
 .setting-top-wrap {margin-bottom:20px}
 .setting-top-wrap .inp-title {margin-bottom:20px;}
+.tx-info {font-size: 15px; line-height: 22px; color: #555868}
+.content .tx-info:first-child {margin-top:20px}
 .setting-top-wrap .tx-info + .inp {margin-top:20px}
 .setting-top-wrap .tbl-top {margin-bottom:10px}
 
@@ -1051,9 +1054,10 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .invite-btm .inp {margin-top:14px;}
 .invite-btm .inp + .inp {margin-top:10px;}
 .invite-btm .warning-txt02 {margin:6px 0 16px}
-.invite-btm .btn-bk {height:44px; line-height:20px;}
+.invite-btm .btn-bk {min-width:80px; height:44px; line-height:20px; font-weight: 500;}
 .inp-add-wrap,
 .invite-btm .btm-btn-group {width:448px;}
+.inp-add-wrap .inp:first-child {margin-top:20px}
 .invite-btm .btm-btn-group {margin-top:14px;}
 .setting-lg-box {width:600px}
 .setting-lg-box .setting-info-box {display:block;}
