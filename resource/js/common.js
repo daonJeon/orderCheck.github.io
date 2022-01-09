@@ -481,7 +481,7 @@ function inpActiveFunc(wrap,btnClass,maxIsTrue,requireIsTrue) {//기본 : value 
   var input = scriptArea.querySelectorAll("input[type=text], input[type=tel],input[type=number],input[type=password]")
   var loginBtnFlag = [];
   var flag = '';
-  
+
   if(requireIsTrue) input = scriptArea.querySelectorAll("input[type=text]:required, input[type=tel]:required,input[type=number]:required,input[type=password]:required")
   var loginBtns = scriptArea.querySelectorAll(btnClass)
   Array.prototype.forEach.call(loginBtns, function(login, idx){
@@ -745,19 +745,19 @@ function dropMenuShowHide (wrap,clickBtn,menuList ) {
     var selCompany = target.querySelector(".company").innerText
     var selDesc = target.querySelector(".desc").innerText
     var selPrice = target.querySelector(".price var").innerText
-    if (target.querySelector(".price var").innerText == "무료") {      
+    if (target.querySelector(".price var").innerText == "무료") {
       price.classList.remove("d-won")
       price.nextElementSibling.style.display ="none"
     } else {
       price.classList.add("d-won")
-      price.nextElementSibling.style.display ="inline-block"      
+      price.nextElementSibling.style.display ="inline-block"
     }
-    
-    
+
+
     company.innerText = selCompany
     desc.innerText = selDesc
     price.innerText = selPrice
-    
+
     btn.classList.add("active")
   }
   function dimCreate () {
@@ -1056,7 +1056,7 @@ function orderCheckOnOff (chk,tg) {
 
 function sliderOnOff (chk,offCallback,onCallback) {
   var chkArea = document.querySelectorAll(chk);
-  
+
   Array.prototype.forEach.call(chkArea, function(check, idx){
     if (check.checked) onCallback()
     else offCallback()
@@ -1476,7 +1476,7 @@ function tableRowControl () {
   }
 }
 
-//설정 문자 충전 레이어(layer-pay-charge) 계산 함수 
+//설정 문자 충전 레이어(layer-pay-charge) 계산 함수
 function priceCalculateFunc (clickBtn,targetInp) {
   var clickedBtn = document.querySelectorAll(clickBtn);
   var inputTarget = document.querySelector(targetInp+" input");
@@ -1485,7 +1485,7 @@ function priceCalculateFunc (clickBtn,targetInp) {
     btn.addEventListener("click",function(e){
       var add = parseInt(e.currentTarget.getAttribute("data-num"))
       var origin = parseInt(inputTarget.value.replace(/,|₩|' '/g,""));
-      
+
       inputTarget.value= origin + add
       inputTarget.value = '₩ ' + numberWithCommas(inputTarget.value)
     })
@@ -1501,7 +1501,7 @@ function priceCalculatePage (clickBtn,targetInp,callback) {
     btn.addEventListener("click",function(e){
       var add = parseInt(e.currentTarget.getAttribute("data-num"))
       var origin = parseInt(inputTarget.value.replace(/,|₩|' '/g,""));
-      
+
       inputTarget.value= origin + add
       inputTarget.value = '₩ ' + numberWithCommas(inputTarget.value)
       if(callback != null ) callback(e)
@@ -1514,34 +1514,29 @@ function priceCalInp (){
   var groups = document.querySelectorAll(".tx-alert01 .btn-round-group")
 
   priceCalculatePage(".setting .btn-cal-inp01 .btn-cal-price",".setting .btn-cal-inp01",function (e){
-    e.currentTarget.closest(".btn-round-group").style.display ="none"
+    e.currentTarget.closest(".btn-round-group").classList.remove("open")
   })
   priceCalculatePage(".setting .btn-cal-inp02 .btn-cal-price",".setting .btn-cal-inp02",function (e){
-    e.currentTarget.closest(".btn-round-group").style.display ="none"
+    e.currentTarget.closest(".btn-round-group").classList.remove("open")
   })
 
   Array.prototype.forEach.call(inps, function(inp, idx){
     inp.addEventListener("focus",function(e){
-      e.currentTarget.closest(".inp").querySelector(".btn-round-group").style.display="flex"
-    })
-    
-    inp.addEventListener("focusout",function(e){
-      console.log(e.target.className)
-      setTimeout(function(){
-        Array.prototype.forEach.call(groups, function(group, idx){
-          group.style.display="none"
+      Array.prototype.forEach.call(inps, function(inp, idx){
+        Array.prototype.forEach.call(inps, function(inp, idx){
+          inp.closest(".inp").querySelector(".btn-round-group").classList.remove("open")
         })
-
-      },100)
-      
+      })
+      e.currentTarget.closest(".inp").querySelector(".btn-round-group").classList.add("open")
     })
   })
+
 }
 priceCalInp()
 function operationFunc (){
   var wraps = document.querySelectorAll(".inp-line-operation")
   Array.prototype.forEach.call(wraps, function(wrap, idx){
-    
+
   })
   var checks = document.querySelectorAll(".inp-line-operation .checkbox input")
   Array.prototype.forEach.call(checks, function(check, idx){
@@ -1550,7 +1545,7 @@ function operationFunc (){
       inputChecks(e.currentTarget)
     })
   })
-  
+
 
   function inputChecks (checks){
     var selects = checks.closest(".inp-line-operation").querySelectorAll(".inp-select select")
@@ -1566,8 +1561,8 @@ function operationFunc (){
       Array.prototype.forEach.call(selects, function(select, idx){
 
         select.disabled = true
-        select.nextElementSibling.classList.add("disabled") 
-        select.nextElementSibling.querySelector(".current").innerText = "휴무" 
+        select.nextElementSibling.classList.add("disabled")
+        select.nextElementSibling.querySelector(".current").innerText = "휴무"
      })
     }
   }
@@ -1586,7 +1581,7 @@ function templateFunc() {
   inpEmptyFunc(".inp-title")
   //tempBoxOn()
   formRemove()//오더 체크 온/오프
-  orderCheckOnOff (".switch #ordercheck",".template .badge-ordercheck")  
+  orderCheckOnOff (".switch #ordercheck",".template .badge-ordercheck")
   templatePageChk (".form-temp-list > li .page")
   checkOffCallback(".label-set-box input[type=checkbox]", function (){
     layerOpen ("layer-info-label")

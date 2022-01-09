@@ -59,21 +59,21 @@
           </a>
         </li>
        </ul>
-        <ul class="btm">
-          <li>
-            <a href="#">
-              <i class='ico help'></i>
-              <span class="links_name">자주 묻는 질문</span>
-            </a>
-          </li>
-          <li class="on">
-            <a href="setting_limit-plan.html">
-              <i class='ico setting'></i>
-              <span class="links_name">설정</span>
-            </a>
-          </li>
-        </ul>
-        <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
+      <ul class="btm">
+        <li>
+          <a href="#">
+            <i class='ico help'></i>
+            <span class="links_name">자주 묻는 질문</span>
+          </a>
+        </li>
+        <li class="on">
+          <a href="setting_limit-plan.html">
+            <i class='ico setting'></i>
+            <span class="links_name">설정</span>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
     </nav>
     <section id="content" class="content-section setting">
       <!-- #include file="include_header.html" -->
@@ -98,8 +98,8 @@
               <li>
                 <span class="menu-name card">결제 관리</span>
                 <ul class="depth2">
-                  <li class="on"><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
-                  <li><a href="setting_autoCharge.html" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="setting_subManager-plan.html" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li class="on"><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
                   <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 내역</span></a></li>
                 </ul>
               </li>
@@ -123,7 +123,7 @@
         <!-- header -->
         <div class="header-wrap">
           <header id="header" class="header">
-            <h2 class="title">구독 관리</h2>
+            <h2 class="title">자동 문자 충전</h2>
 
             <ul class="menu">
               <li>
@@ -182,177 +182,141 @@
         <ul class="location-wrap">
           <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
           <li><a href="setting_company-info.html">설정</a></li>
-          <li>구독 관리</li>
+          <li><a href="setting_autoCharge.html">자동 문자 충전</a></li>
         </ul>
         <!-- //location -->
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
+            <div class="flex-sidebox top">
+              <p class="tx-alert01">오더체크 앱 푸시 알림을 수신하지 못한 경우 알림을 카카오 알림톡 또는 문자로 다시 한번 발송해보세요.<br>
+                알림톡 및 문자 메세지 비용은 문자 잔액에서 차감되며, 구독중인 플랜과 상관없이 사용량에 따라 자동충전해서 사용하세요.
+                <a href="#" target="_blank" class="ico info"><span class="hide">정보 페이지로 이동</span></a></p>
+                <button type="button" class="btn03 btn-bk"><span>금액 안내</span></button>
+            </div>
 
             <div class="tab-wrap">
               <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">플랜 관리</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab2">구독 내역</button></li>
-                <li><button type="button" class="tab-btn" data-tab="tab3">쿠폰</button></li>
+                <li><button type="button" class="tab-btn active" data-tab="tab1">문자 잔액</button></li>
+                <li class="on"><button type="button" class="tab-btn" data-tab="tab2">전송 내역</button></li>
               </ul>
               <span class="slider" data-left="0"></span>
             </div>
-            <section class="tab-content">
+            <section class="tab-content height-type02">
               <div class="content" id="tab1">
                 <div class="setting-lg-box">
                   <!-- setting-info-box -->
-                  <div class="setting-info-box type02 counting">
-                    <div class="inbox">
-                      <span class="txt">한 달 상담 신청수</span>
-                      <strong class="num">12</strong>
-                    </div>
-                  </div>
-                  <div class="flex-sidebox">
-                    <h3 class="filter-title">현재 구독중인 플랜</h3>
-                    <span class="tx-gray">월 결제</span>
-                  </div>
-
-                  <div class="dropdown-wrap">
-                    <button type="button" class="btn-member-drop active">
-                      <dl>
-                        <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                        <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
-                      </dl>
-                    </button>
-                    <div class="drop-menu-list">
-                      <ul>
-                        <li>
-                          <button type="button" class="btn-member-drop">
-                            <dl>
-                              <dt><span class="company">스타터</span> <span class="desc">월 상담 신청 40건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">43,000</var><span class="unit">월</span></strong></dd><!-- 2021-12-12 -->
-                            </dl>
-                          </button>
-                        </li>
-                        <li>
-                          <button type="button" class="btn-member-drop">
-                            <dl>
-                              <dt><span class="company">컴퍼니2</span> <span class="desc">월 상담 신청 430건 이하</span></dt>
-                              <dd><strong class="price"><var class="d-won">93,300</var><span class="unit">월</span></strong></dd>
-                            </dl>
-                          </button>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="service-box">
-                    <h2 class="filter-title">부가 서비스</h2>
-                    <ul class="info-list side">
-                      <li>
-                        <dl class="info-list-item">
-                          <dt><span class="label-head">채팅</span></dt>
-                          <dd>
-                            <strong class="label-desc">₩ <var>36,000</var>
-                            <span class="unit">월</span></strong>
-                          </dd>
-                        </dl>
-                      </li>
-                      <li>
-                        <dl class="info-list-item">
-                          <dt><span class="label-head">통계 분석</span></dt>
-                          <dd>
-                            <strong class="label-desc">₩ <var>36,000</var>
-                            <span class="unit">월</span></strong>
-                          </dd>
-                        </dl>
-                      </li>
-                      <li class="btn-line-group side">
-                        <a href="#" class="btn-link-type02" target="_blank"><span class="txt">자세한 가격 및 기능</span></a>
-                        <a href="#" class="btn02 btn-bk"><span>구독 변경</span></a>
-                      </li>
-
-                    </ul>
-
-                  </div>
-
-
-                  <div class="setting-info-box expire">
-                    <div class="inbox">
-                      <span class="txt">2021.10.20 갱신 예정</span>
+                  <div class="setting-info-box type02 message">
+                    <div class="inbox flex-sidebox center">
+                        <div>
+                          <span class="txt">문자 잔액</span>
+                          <strong class="num">₩ 100</strong>
+                        </div>
+                      <button type="button" class="btn-s btn-bk-line open-layer" data-info="layer-message-charge"><span>문자 충전</span></button>
                     </div>
                   </div>
                   <!-- //setting-info-box -->
+
+                  <div class="label-set-box flexbox center">
+                    <span class="tx-alert02">자동 충전 설정</span>
+                    <span class="switch no-txt">
+                      <input type="checkbox" id="autoCharge">
+                      <label for="autoCharge" class="slider round"></label>
+                    </span>
+                  </div>
+                </div>
+                <!-- setting-info-box -->
+                <div class="setting-info-box expire sliderOffShow">
+                  <div class="inbox">
+                    <span class="txt">문자 금액 자동충전이 꺼져있는 경우, 문자 잔액 소진시 알림톡 및 문자 푸시 전송이 되지 않을 수 있음에 주의하세요.</span>
+                  </div>
+                </div>
+                <!-- //setting-info-box -->
+                <div class="price-calculate-box sliderOnShow">
+                  <p class="tx-alert01">
+                    문자 잔액이
+                    <span class="inp hide-warning btn-cal-inp01">
+                      <input type="text" name="" id="inputRest1" value="₩ 0"/>
+                      <!-- btn-calculate-group -->
+                      <span class="btn-round-group">
+                        <button type="button" class="btn-round-gray btn-cal-price" data-num="10000"><span>+10,000</span></button>
+                        <button type="button" class="btn-round-gray btn-cal-price" data-num="5000"><span>+5,000</span></button>
+                        <button type="button" class="btn-round-gray btn-cal-price" data-num="1000"><span>+1,000</span></button>
+                      </span>
+                      <span class="warning-txt02">충전 가능한 최소 금액은 ₩ 5,000, 최소 단위는 ₩ 1,000입니다.</span>
+                    </span>
+                    이하인 경우
+                    <span class="inp hide-warning btn-cal-inp02">
+                      <input type="text" name="" id="inputRest2" value="₩10,000"/>
+                      <!-- btn-calculate-group -->
+                      <span class="btn-round-group">
+                        <button type="button" class="btn-round-gray btn-cal-price" data-num="10000"><span>+10,000</span></button>
+                        <button type="button" class="btn-round-gray btn-cal-price" data-num="5000"><span>+5,000</span></button>
+                        <button type="button" class="btn-round-gray btn-cal-price" data-num="1000"><span>+1,000</span></button>
+                      </span>
+                      <span class="warning-txt02">충전 가능한 최소 금액은 ₩ 5,000, 최소 단위는 ₩ 1,000입니다.</span>
+                    </span>
+                    을 자동 충전합니다.
+                  </p>
+
+                  <ul class="dot-list">
+                    <li>최소 금액이 현재 잔액보다 크면 저장과 동시에 결제가 진행됩니다.</li>
+                  </ul>
+                  <div class="btn-line-group tr">
+                    <button type="button" class="btn02 btn-gray"><span>취소</span></button>
+                    <button type="button" class="btn02 btn-bk"><span>저장</span></button>
+                  </div>
                 </div>
 
               </div>
               <div class="content" id="tab2">
 
                 <!-- 리스트 -->
-                <div class="tbl-type1" style="display:none">
+                <div class="tbl-type1 lineAdjust">
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
-                      <col style="width:19%">
-                      <col style="width:48%">
                       <col style="width:11%">
                       <col style="width:11%">
+                      <col style="width:8%">
+                      <col style="width:51%">
                       <col style="width:11%">
+                      <col style="width:8%">
                     </colgroup>
                     <thead>
                       <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">플랜</th>
-                        <th scope="col">구독 시작</th>
-                        <th scope="col">구독 종료</th>
-                        <th scope="col">상태</th>
+                        <th scope="col">발신 번호</th>
+                        <th scope="col">수신 번호</th>
+                        <th scope="col">방식</th>
+                        <th scope="col">내용</th>
+                        <th scope="col">시간</th>
+                        <th scope="col">가격</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><a href="#"><span>12345567</span></a></td>
-                        <td><a href="#"><span>프로</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><span class="badge consulting">구독 중</span></td>
+                        <td>02.1234.5678</td>
+                        <td>010.1234.5678</td>
+                        <td>LMS</td>
+                        <td>[오더킹]<br> 고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br> -<br> 등기 연락처의 경우 담당 플래너 연락처로 기재해주세요. https;//ordercheck.io/sample1234</td>
+                        <td>2021.12.30 14:30</td>
+                        <td>₩ 60</td>
                       </tr>
                       <tr>
-                        <td><a href="#"><span>12345567</span></a></td>
-                        <td><a href="#"><span>프로</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><span class="badge complete">완료</span></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><span>12345567</span></a></td>
-                        <td><a href="#"><span>스타터</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><a href="#"><span>2021.12.30</span></a></td>
-                        <td><span class="badge complete">완료</span></td>
+                        <td>02.1234.5678</td>
+                        <td>010.1234.5678</td>
+                        <td>SMS</td>
+                        <td>[오더킹]<br> 고객님께서 11월 8일 19:00에 문의하신 내용에 답변을 하였습니다.<br> 등기 연락처의 경우 담당 플래너 연락처로 기재해주세요.</td>
+                        <td>2021.12.30 14:30</td>
+                        <td>₩ 60</td>
                       </tr>
 
                     </tbody>
                   </table>
                 </div>
 
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:19%">
-                      <col style="width:48%">
-                      <col style="width:11%">
-                      <col style="width:11%">
-                      <col style="width:11%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">플랜</th>
-                        <th scope="col">구독 시작</th>
-                        <th scope="col">구독 종료</th>
-                        <th scope="col">상태</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
                 <!-- empty -->
-                <div class="data-empty-box customer">
+                <div class="data-empty-box customer" style="display:none">
                   <div class="txt-group">
                     <p class="txt">구독 내용이 없습니다</p>
 
@@ -361,52 +325,6 @@
                   </div>
                 </div>
 
-              </div>
-              <div class="content" id="tab3">
-                <div class="pos setting-coupon" >
-                  <button type="button" class="btn03 btn-bk open-layer" data-info="layer-coupon-enroll"><span>쿠폰 등록</span></button>
-                </div>
-                <!-- 리스트 -->
-                <div class="tbl-type1">
-                  <table>
-                    <caption>고객 리스트 정보</caption>
-                    <colgroup>
-                      <col style="width:20%">
-                      <col style="width:53%">
-                      <col style="width:18%">
-                      <col style="width:9%">
-                    </colgroup>
-                    <thead>
-                      <tr>
-                        <th scope="col">할인 쿠폰 코드</th>
-                        <th scope="col">종류</th>
-                        <th scope="col">사용 기간</th>
-                        <th scope="col">구분</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 중</span></button></td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 완료</span></button></td>
-                      </tr>
-                      <tr>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>12345567</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>플랜 및 부가서비스 3종 3개월 무료 이용권</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>2021.12.30 - 2021.12.30</span></button></td>
-                        <td><button type="button" class="open-layer" data-info="layer-team-list"><span>사용 완료</span></button></td>
-                      </tr>
-
-                    </tbody>
-                  </table>
-                </div>
               </div>
             </section>
 
@@ -458,7 +376,6 @@
       </div>
     </div>
   </div>
-
   <!-- 카드 등록 -->
   <div class="layer-pop" id="layer-card-enroll">
     <div class="layer-cnt">
@@ -631,12 +548,94 @@
     </div>
   </div>
 
+  <!-- 결제 실패 -->
+  <div class="layer-pop" id="layer-pay-fail02">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">결제 실패</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">결제 실패하여 자동 문자 충전이 중지되었습니다.<br> 기본 결제 카드를 변경해주세요. 계속해서 결제가 실패하는 경우 고객센터에 문의해주세요.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>충전 중지</span></button>
+          <button type="button" class="btn btn-bk"><span>카드 변경</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 결제 실패 : 카드 등록 실패 -->
+  <div class="layer-pop" id="layer-pay-fail03">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">결제 실패</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">등록된 카드가 없습니다. 카드를 등록하고 문자 충전을 다시 시도해주세요.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>카드 등록</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 결제 실패 : 카드 결제 실패 -->
+  <div class="layer-pop" id="layer-pay-fail04">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">결제 실패</h2>
+      </div>
+      <div class="layer-mid">
+        <p class="info-txt02">결제 실패하였습니다. 기본 결제 카드를 변경한 후 문자 충전을 다시 시도해주세요.</p>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>확인</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 문자 충전 -->
+  <div class="layer-pop" id="layer-pay-charge">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">문자 충전</h2>
+      </div>
+      <div class="layer-mid">
+        <h3 class="filter-title">충전 금액</h3>
+        <div class="inp btn-cal-inp">
+          <input type="text" name="" id="" value="₩ 10000" placeholder="₩ 0"/>
+        </div>
+        <p class="warning-txt02">충전 가능한 최소 금액은 ₩ 5,000, 최소 단위는 ₩ 1,000입니다.</p>
+        <!-- btn-calculate-group -->
+        <div class="btn-round-group">
+          <button type="button" class="btn-round-gray btn-cal-price" data-num="10000"><span>+10,000</span></button>
+          <button type="button" class="btn-round-gray btn-cal-price" data-num="5000"><span>+5,000</span></button>
+          <button type="button" class="btn-round-gray btn-cal-price" data-num="1000"><span>+1,000</span></button>
+        </div>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray"><span>취소</span></button>
+          <button type="button" class="btn btn-bk btn-pop"><span>충전</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
-      <button type="button" class="btn-link open-layer" data-info="layer-member-join" style="font-size:16px"><span>요금제 가입</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-card-enroll" style="font-size:16px"><span>카드 등록</span></button><br>
-      <button type="button" class="btn-link open-layer" data-info="layer-company-enroll02" style="font-size:16px"><span>회사 생성</span></button>
+      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail02" style="font-size:16px"><span>결제 실패</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail03" style="font-size:16px"><span>결제 실패 : 카드 등록</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-pay-fail04" style="font-size:16px"><span>결제 실패 : 카드 결제 실패</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-pay-charge" style="font-size:16px"><span>문자 충전</span></button><br>
   </div>
 
   <!-- script -->
@@ -644,6 +643,7 @@
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
   <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
+  <!-- <script src="../resource/js/table_sort.js"></script> 테이블 소팅 기능 -->
   <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
   <script src="../resource/js/common.js"></script>
   <script>
@@ -658,10 +658,8 @@
         tabFunc (".tab-wrap.type03", true, function () {
           inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
         }, ".login-wrap .tab-content .content") //tab 영역 , slider 풀사이즈 여부
-
       }
       else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {
-
         inpActiveFunc ("#layer-company-enroll02 .login-wrap",".confirm")
       }
 
@@ -669,6 +667,19 @@
 
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
+
+    sliderOnOff (".switch #autoCharge",function(){
+      document.querySelector(".sliderOffShow").style.display="inline-block"
+      document.querySelector(".sliderOnShow").style.display="none"
+    },function(){
+      document.querySelector(".sliderOnShow").style.display="inline-block"
+      document.querySelector(".sliderOffShow").style.display="none"
+    })
+
+    priceCalculateFunc(".layer-pop .btn-cal-price",".layer-pop .btn-cal-inp")
+
+    ToastFunc(".btn-pop","문자 충전이 성공적으로 완료되었습니다",2000)
+
 
 
   </script>

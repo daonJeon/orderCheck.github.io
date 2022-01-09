@@ -107,8 +107,8 @@
               <li>
                 <span class="menu-name layout">신청폼 설정</span>
                 <ul class="depth2">
-                  <li><a href="setting_permission-list.html" class="btn-nav-dep2"><span>열람 권한</span></a></li>
-                  <li class="on"><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                  <li class="on"><a href="setting_permission-list.html" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                 <li><a href="setting_permission-white.html" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
                 </ul>
               </li>
               <li>
@@ -124,7 +124,7 @@
         <!-- header -->
         <div class="header-wrap">
           <header id="header" class="header">
-            <h2 class="title">화이트 라벨링</h2>
+            <h2 class="title">열람 권한</h2>
 
             <ul class="menu">
               <li>
@@ -189,16 +189,95 @@
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
-            <p class="tx-alert01 tx-gray">오더체크 이용중 표시를 끄고 신청폼 하단의 오더체크 브랜딩을 지워보세요.
-              <a href="#" target="_blank" class="ico info"><span class="hide">정보 페이지로 이동</span></a></p>
-
-            <div class="label-set-box flexbox center">
-              <strong class="filter-title">화이트 라벨링</strong>
-              <span class="switch">
-                <input type="checkbox" id="whiteLabeling">
-                <label for="whiteLabeling" class="slider round"></label>
-              </span>
+            <div class="permission-top flex-sidebox">
+              <strong class="cnt-title02">신청폼 <var>1</var></strong>
+              <div class="btns">
+                <button type="button" class="btn btn-gray"><span>취소</span></button>
+                <button type="button" class="btn btn-bk"><span>저장</span></button>
+              </div>
             </div>
+
+            <div class="permission-setbox flex-sidebox">
+              <div class="left">
+                <div class="search-top flex-sidebox center">
+                  <strong class="txt">팀원<var class="tx-org">12</var></strong>
+                  <button type="button" class="btn-xs btn-bk-line"><span>전체 선택</span></button>
+                </div>
+
+                <section class="line-box">
+                  <!-- tbl-top -->
+                  <div class="tbl-top">
+                    <div class="inp-line">
+                      <span class="inp">
+                        <input type="text" name="" placeholder="담당자명을 검색하세요.">
+                      </span>
+                      <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
+                    </div>
+                  </div>
+                  <!-- tbl-top -->
+                  <div class="manager-box">
+                    <div class="inbox">
+                      <ul>
+                        <li>
+                          <span class="checkbox">
+                            <input type="checkbox" name="manager_select" id="manager00" class="check">
+                            <label for="manager00"><span class="box"></span><strong style="margin-left:43px">담당자 없음</strong></label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="checkbox">
+                            <input type="checkbox" name="manager_select" id="manager01" class="check">
+                            <label for="manager01"><span class="box"></span><img src="../resource/images/thumnail/img_person2.png" alt=""><strong>나</strong><span class="txt">홍길동</span></label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="checkbox">
+                            <input type="checkbox" name="manager_select" id="manager02" class="check">
+                            <label for="manager02"><span class="box"></span><img src="../resource/images/thumnail/img_person3.png" alt=""><span class="txt">김수안</span></label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="checkbox">
+                            <input type="checkbox" name="manager_select" id="manager03" class="check">
+                            <label for="manager03"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt=""><span class="txt">김수안무</span></label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="checkbox">
+                            <input type="checkbox" name="manager_select" id="manager04" class="check">
+                            <label for="manager04"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt=""><span class="txt">김수안무</span></label>
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </section>
+              </div>
+              <div class="right">
+                <div class="search-top flex-sidebox center">
+                  <strong class="txt">선택된 팀원<var class="tx-org">5</var></strong>
+                  <button type="button" class="btn-xs btn-gray-line type02"><span>전체 해제</span></button>
+                </div>
+
+                <section class="line-box select-box">
+                  <div class="inbox">
+                    <ul>
+                      <li>
+                        <span class="thum flexbox center"><span style="margin-left:43px">허각</span></span>
+                        <button type="button" class="btn-close type02"><span class="hide">삭제</span></button>
+                      </li>
+                      <li>
+                        <span class="thum flexbox center"><img src="../resource/images/thumnail/img_person2.png" alt=""><strong>나</strong><span class="txt">홍길동</span></span>
+                        <button type="button" class="btn-close type02"><span class="hide">삭제</span></button>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+              <button tuype="button" class="pos select-button"><span>선택하기</span></button>
+            </div>
+
 
           </div>
         </div>
@@ -434,7 +513,6 @@
 
     //관리페이지용 공통 함수
     pageInit ()
-    tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
 
 
 
