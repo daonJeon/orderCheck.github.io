@@ -603,7 +603,7 @@ body{ scrollbar-base-color: #fff; scrollbar-face-color: #747474; scrollbar-3dlig
 
 .sidebar.open li a {width:100%}
 .sidebar .nav-list li.on a { background: #1D58FF; color:#fff}
-.sidebar.open~.content-section { left: 218px; width: calc(100% - 218px);}
+/* .sidebar.open~.content-section { left: 218px; width: calc(100% - 218px);} */
 .sidebar .btm li.on a,
 .sidebar .btm li a:hover {background: rgba(255, 255, 255, 0.26); border-radius: 25px;}
 /* .side-form.left.open+ aside +.content-section {min-width:1536px; left: 300px; width: calc(100% - 300px);}
@@ -778,7 +778,7 @@ width:calc(100% - 40px); font-size:14px;}
 .tbl-top-type02 {margin-bottom:30px; text-align: center;}
 .login-wrap .tab-wrap {width: 175px; margin:0 auto 20px}
 .login-wrap .tab-wrap .tabs {border-bottom:none; justify-content: center;}
-.login-wrap .tab-wrap .tabs > li {text-align: center; margin:0; padding: 0 18px; }
+.login-wrap .tab-wrap .tabs > li {text-align: center; margin:0; padding: 0 15px; }
 .login-wrap .tab-btn {color:#9A9A9A}
 .login-wrap .tab-wrap .slider {border-radius: 7px;}
 .tab-wrap.type02 {width:auto; margin-top:40px; margin-bottom:38px;}

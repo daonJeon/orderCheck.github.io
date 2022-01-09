@@ -486,12 +486,12 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .drop-menu-list .btn-member-drop.selected .unit{ color:#02164F}
 .drop-menu-list .btn-member-drop.selected .company {font-weight:bold;}
 
-.drop-menu-list > ul{border:1px solid #ddd; border-radius: 6px; }
-.drop-menu-list > ul > li {border-bottom:1px solid #ddd;}
+.btn-member-drop.open + .drop-menu-list {border:1px solid #E7E7E7;; border-radius: 6px; }
+.drop-menu-list > ul > li {border-bottom:1px solid #E7E7E7;;}
 .drop-menu-list > ul > li:last-child {border-bottom:none}
 .drop-menu-list .btn-member-drop .price {font-size: 16px;line-height: 23px;text-align: right;color: #02164F;}
 .drop-menu-list .btn-member-drop strong.price {font-weight: bold;}
-.drop-menu-list .btn-member-drop span.price {font-weight:400; color:#41495D; }
+.drop-menu-list .btn-member-drop span.price {font-weight:bold; color:#41495D; }
 .drop-menu-list .btn-member-drop .unit {font-weight: 500; font-size: 15px; line-height: 22px;;}
 
 .btn-member-drop {padding:17px 20px 17px 20px; width:100%; border-radius: 6px; border: 1px solid #E4E4E4; box-sizing: border-box;}
