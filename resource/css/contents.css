@@ -487,7 +487,10 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .drop-menu-list .btn-member-drop.selected .company {font-weight:bold;}
 
 .btn-member-drop.open + .drop-menu-list {border:1px solid #E7E7E7;; border-radius: 6px; }
-.drop-menu-list > ul > li {border-bottom:1px solid #E7E7E7;;}
+.btn-drop-type02.open + .drop-menu-list {max-height:241px;}
+.drop-menu-list > ul {max-height:241px; overflow: auto;}
+.drop-menu-list {transition:all 0.35s ease-in;}
+.drop-menu-list > ul > li {border-bottom:1px solid #E7E7E7;}
 .drop-menu-list > ul > li:last-child {border-bottom:none}
 .drop-menu-list .btn-member-drop .price {font-size: 16px;line-height: 23px;text-align: right;color: #02164F;}
 .drop-menu-list .btn-member-drop strong.price {font-weight: bold;}
@@ -498,6 +501,7 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .btn-member-drop.btn-drop-type02 {padding-right:44px}
 .btn-member-drop.btn-drop-type02:after {position:absolute; right:20px; top:50%; margin-top:-5px; width:0; height:0;border-left:7px solid transparent; border-right: 7px solid transparent; border-top: 10px solid #02164F; transition:all 1s; content:''}
 .btn-member-drop.active {border-color:#02164F;background: #F2F4F8; }
+div.btn-member-drop.type02.on,div.btn-member-drop.active {user-select: none;}
 .btn-member-drop.on {color:#1D58FF;background: rgba(29, 88, 255, 0.04); border-color:#1D58FF}
 .btn-member-drop.type02.on {background: #F1F5FF; border: 1px solid #1D58FF;}
 .btn-member-drop.on .company,
@@ -540,13 +544,12 @@ p.line .txt {position:absolute; left:50%; width:44px; height:20px; margin-top:-1
 .service-box .total .total-price {color: #1D58FF; font-size: 13px; line-height: 19px;}
 .service-box var.won {margin-right:4px; font-weight: bold; font-size: 20px; line-height: 29px;}
 
-.setting .btn-line-group .btn02.btn-gray {border:1px solid #EBEBEB; width:90px}
-.setting .btn-line-group .btn02.btn-bk {width:90px}
+.setting .btn-line-group .btn02.btn-gray {border:1px solid #EBEBEB; width:100px; font-weight:500}
+.setting .btn-line-group .btn02.btn-bk {width:100px; font-weight:500}
 
 var.won:before {display:inline-block; vertical-align:-4px; margin-right:6px; width:22px; height:22px; font-weight:400; font-size:16px; line-height:22px; background: #1D58FF url(../images/common/ico_won.png) no-repeat left 56% top 59%; border-radius:50%; text-align:center; color:#fff; content:''}
 var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12px; font-weight:400; font-size:16px; line-height:22px; background: url(../images/common/ico_default-won.png) no-repeat left 59% top 59%; text-align:center; content:''}
 .btn-member-drop.on var.d-won:before {background-image: url(../images/common/ico_blue-won.png) }
-.service-box dl.info-list-item .label-head {font-size:16px; color: #41495D;}
 .service-box dl.info-list-item strong.label-desc {font-weight: bold; line-height:22px; font-size:15px; color: #02164F;}
 .service-box dl.info-list-item strong.label-desc var {color:inherit}
 .service-box dl.info-list-item strong.label-desc .unit {font-weight: bold; font-size: 13px; line-height: 19px; color: #02164F;}
@@ -556,7 +559,9 @@ var.d-won:before {display:inline-block; margin-right:6px; width:15px; height:12p
 .service-box .checkbox input.check:checked + label strong.label-head {font-weight: bold; color:#02164F}
 .service-box .checkbox input.check:checked + label .unit {color: inherit;}
 .service-box .checkbox input.check:checked + label var {color:#02164F}
-.service-box .total-price .unit {font-weight: bold;}
+.service-box .total-price .unit {font-weight: bold; font-size:13px; line-height:19px; vertical-align: 4px;}
+.service-box .total-price var.won:before {vertical-align: -2px;}
+.service-box .info-list.side .label-head {font-size:16px; color: #41495D;}
 
 .btn-dark-gray {background: #A3A9BA; border-radius: 6px; color:#fff}
 .btn-dark-gray:disabled {background: #8B92A6;}
