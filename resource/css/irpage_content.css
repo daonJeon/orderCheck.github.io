@@ -35,11 +35,11 @@
 
 .section {text-align: center;}
 .section .title02 {margin-bottom:56px}
-.secion01 {padding-top:180px; margin-bottom:90px; background:url(../images/irpage/main_bg01.png) no-repeat; max-height:1070px}
-.secion01 .btn-groups {margin-bottom:50px}
-.secion01 .item-box {position: relative; max-width:1280px; margin:0 auto; padding-bottom:25px; padding-right:25px;}
-.secion01 .item01 {}
-.secion01 .item02 {position:absolute; right:0; bottom:0px; width:27%}
+.section01 {padding-top:180px; margin-bottom:90px; background:url(../images/irpage/main_bg01.png) no-repeat; max-height:1070px}
+.section01 .btn-groups {margin-bottom:50px}
+.section01 .item-box {position: relative; max-width:1280px; margin:0 auto; padding-bottom:25px; padding-right:25px;}
+.section01 .item01 {}
+.section01 .item02 {position:absolute; right:0; bottom:0px; width:27%}
 .section02 .tab-wrap {margin-bottom:50px}
 .section02 {padding-top:70px; background:linear-gradient(0deg, #F9F9FD 0%, rgba(249, 249, 253, 0) 98.69%);}
 .section02 .item-box {min-height:392px;}
