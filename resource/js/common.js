@@ -368,10 +368,11 @@ function btnRemoveFunc (wrap,btnClass) {
   })
 }
 
-function tabFunc (tabwrap,isFullSlider,callback,tabCntClass) {
+function tabFunc (tabwrap,isFullSlider,callback,tabCntClass,tabBtnClass) {
   setTimeout(function(e) {
   var wrap = document.querySelector(tabwrap)
   var tabBtn = wrap.querySelectorAll(".tab-btn")
+  if(tabBtnClass != null ) tabBtn = wrap.querySelectorAll(tabBtnClass)
   var slider = wrap.querySelector(".slider")
   var tabContent = document.querySelectorAll(".tab-content .content")
   var offsetPos = []

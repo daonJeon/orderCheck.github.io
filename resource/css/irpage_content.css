@@ -1,0 +1,90 @@
+.btn-rounding {border-radius: 10px;text-align: center;font-weight: bold; font-size: 15px; line-height: 19px;}
+.btn-rounding.bk {padding:10px 19px; border:1px solid #02164F; background: #02164F; color:#fff}
+.btn-rounding.bk-line {padding:10px 14px; border: 1px solid #02164F; color: #02164F; }
+.btn-rounding + .btn-rounding {margin-left:6px}
+
+.btn-white-round {padding:14px 30px; background: #FFFFFF; border-radius: 30px; font-weight:bold; color:#1D58FF}
+.btn-large-rounding {padding:14px 30px; background: #1D58FF; border-radius: 30px;font-weight: bold; font-size: 16px;  line-height: 138%; color: #FFFFFF;}
+.btn-arrow {}
+.txt-arrow {line-height:23px; padding-right:27px; background:url(../images/irpage/main_visual02-arrow.svg) no-repeat right center;}
+
+.ir-header {padding:15px 40px; display:flex; justify-content: space-between; align-items: center; box-sizing: border-box;}
+.ir-header,
+.content-section {margin:0 auto; min-width:1914px;}
+
+.ir-header > * {width:200px;}
+.ir-header .tab-wrap {width:374px;}
+.ir-header .dropdown-box {width: 160px;}
+.tab-wrap { display:flex; justify-content: center;}
+.tab-wrap > li + li {margin-left:60px}
+.tab-wrap > li:after {display:block; width:0;  background: #1D58FF; border-radius: 4px; height:4px; margin:4px auto 0; transition:all .5s; content:''}
+.tab-wrap > li.on:after {width:100%}
+.tab-wrap > li .btn-tab {font-weight: 500; font-size: 16px;color: #41495D;}
+.tab-wrap > li.on .btn-tab {font-weight:bold; color: #1D58FF;}
+.ir-header .btn-groups {font-weight: 500; line-height:21px; font-size: 16px;text-align: right;}
+
+
+.title {margin-bottom:16px; font-weight: bold; font-size: 42px; line-height: 130%;color: #41495D;}
+.title02 { font-weight: bold; font-size: 30px; line-height: 130%; text-align: center; color: #41495D;}
+.title03 {margin-bottom:32px;font-weight: bold; font-size: 30px; line-height: 42px; text-align: center; color: #41495D;}
+.title04 {margin-bottom:30px;font-weight: bold; font-size: 32px; line-height: 51px; text-align: center; color: #fff;}
+.sub-txt {margin-bottom:26px; font-size: 18px; line-height: 138%;color: #555868;}
+.sub-txt02 {margin-bottom:88px;font-size: 18px; line-height: 140%; color: #555868;}
+.sub-txt03 {font-weight: bold; font-size: 16px; line-height: 130%;color: #9A9A9A;}
+.sub-txt04 {margin-bottom:16px; font-weight: bold; font-size: 18px; line-height: 26px; color: #414C5D;}
+
+.section {text-align: center;}
+.section .title02 {margin-bottom:56px}
+.secion01 {padding-top:180px; margin-bottom:90px; background:url(../images/irpage/main_bg01.png) no-repeat; max-height:1070px}
+.secion01 .btn-groups {margin-bottom:50px}
+.secion01 .item-box {position: relative; max-width:1280px; margin:0 auto; padding-bottom:25px; padding-right:25px;}
+.secion01 .item01 {}
+.secion01 .item02 {position:absolute; right:0; bottom:0px; width:27%}
+.section02 .tab-wrap {margin-bottom:50px}
+.section02 {padding-top:70px; background:linear-gradient(0deg, #F9F9FD 0%, rgba(249, 249, 253, 0) 98.69%);}
+.section02 .item-box {min-height:392px;}
+.section02 .tab-content {display: inline-block; padding:32px 16% 48px; background: url(../images/irpage/main_visual02-item02.png) no-repeat left 90px top,
+  url(../images/irpage/main_visual02-item01.png) no-repeat right bottom; margin-bottom:34px}
+
+.feature-box {padding:160px 0 180px; display: flex; justify-content: flex-start;text-align: left;}
+.feature-box > li {flex:1}
+.feature-box .icon { display:block; margin-bottom:32px; width:108px; height:108px; background-repeat:no-repeat }
+.feature-box li:first-child .icon {background-image: url(../images/irpage/main_visual03-mark01.svg);}
+.feature-box li:nth-child(2) .icon {background-image: url(../images/irpage/main_visual03-mark02.svg)}
+.feature-box li:last-child .icon {background-image: url(../images/irpage/main_visual03-mark03.svg)}
+.feature-box .main-txt {margin-bottom:20px; font-weight: bold; font-size: 24px; line-height: 130%; color: #555868;}
+.feature-box .sub-txt {margin-bottom:0; font-size: 18px; line-height: 130%; color: #7B7B7B;}
+.section .inbox {width:1280px; margin:0 auto}
+.section04 {padding-bottom:53px}
+.section04 .slider-box {width:1400px; padding:0 76px 0 153px}
+.section04 .slider-box .item-box {padding-bottom:38px}
+.section .slider-box .item01 {position: absolute; left:0; bottom:38px}
+.section .slider-box .item02 {margin-left:169px}
+.section .slider-box .item03 {position: absolute; right:54px; bottom:0}
+.section06 {padding:100px 0; background: #1D58FF url(../images/irpage/main_visual06.svg) no-repeat right bottom;}
+
+.slider-box .slick-prev,.slider-box .slick-next {width:29px; height:56px}
+.slider-box .slick-prev {background:url(../images/irpage/ico_sliderbox-prev.svg) no-repeat}
+.slider-box .slick-next {background:url(../images/irpage/ico_sliderbox-next.svg) no-repeat}
+.slider-box .slick-slide {position: relative;}
+
+
+.double-colbox {position: relative; display: flex; align-items: center;min-height:500px;}
+.double-colbox .inbox {display: flex; align-items: center;min-height:500px;}
+.double-colbox:after {position:absolute; left:50%; width:50%; height:100%; background: rgba(29, 88, 255, 0.04); content:''; z-index: -1;}
+.double-colbox .colbox {width:50%; text-align: left;}
+.double-colbox .colbox.right {padding-left:80px;}
+.double-colbox .colbox .logo {margin-bottom:58px}
+.double-colbox .colbox .title02 {text-align: left;}
+.double-colbox .colbox .main-txt {margin-bottom:24px}
+
+.inp-select-wrap {margin-bottom:44px}
+.inp-select-wrap .unit {margin-left:6px; font-weight: bold; font-size: 14px; line-height: 20px; text-align: right; color: #41495D; vertical-align: middle;}
+.commend-line .txt-product {font-size: 18px; line-height: 130%; color: #1D58FF;}
+.commend-line .txt-product strong {font-size: 20px; line-height: 26px;}
+.txt-product {position: relative; padding-bottom:4px;margin-right:10px;}
+.txt-product:after {position:absolute; height:16px; left:0; right:0; bottom:0; background:rgba(29, 88, 255, 0.18);content:''}
+
+.inp-select-type02 {display: inline-block; vertical-align: middle;}
+.inp-select-type02 .nice-select {width:300px; padding:12px; border: 1px solid #02164F; font-size: 14px; line-height: 20px; color: #41495D; border-radius: 6px;}
+.inp-select-type02 .nice-select .list {width: 100%;}
