@@ -8,7 +8,7 @@
 .btn-arrow {}
 .txt-arrow {line-height:23px; padding-right:27px; background:url(../images/irpage/main_visual02-arrow.svg) no-repeat right center;}
 
-.ir-header {padding:15px 40px; display:flex; justify-content: space-between; align-items: center; box-sizing: border-box;}
+.ir-header {padding:15px 40px; display:flex; justify-content: space-between; align-items: center; box-sizing: border-box; position:absolute; top:0; left:0} /* 2022-01-18 */
 .ir-header,
 .content-section {margin:0 auto; min-width:1914px;}
 
@@ -88,3 +88,15 @@
 .inp-select-type02 {display: inline-block; vertical-align: middle;}
 .inp-select-type02 .nice-select {width:300px; padding:12px; border: 1px solid #02164F; font-size: 14px; line-height: 20px; color: #41495D; border-radius: 6px;}
 .inp-select-type02 .nice-select .list {width: 100%;}
+
+/* -------- 제품소개 -------- */
+.prod_info .section{box-sizing:border-box}
+.prod_info .section01{background:url('../images/irpage/pdt_bg01.svg') no-repeat center top; min-height:887px; padding-top:170px; margin-bottom:0}
+.prod_info .section01 .title{font-size:34px; line-height:140%; margin-bottom:24px}
+.prod_info .section01 .sub-txt{margin-bottom:10px}
+.prod_info .section02{background:url('../images/irpage/pdt_bg02.svg') no-repeat center bottom; padding-top:100px}
+.prod_info .section02 .tab-content{display:block; background:none; padding:0; margin-bottom:0}
+.prod_info .section02 .tab-content .content .item-box{display:-webkit-flex; display:flex; justify-content:space-between; align-items:center; min-height:initial; padding:0 260px}
+.prod_info .section02 .tab-content .content .item-box > div{text-align:left}
+.prod_info .section02 .tab-content .content .item-box > div > span:first-child{color:#1D58FF; background:#DDE6FF; font-size:16px; font-weight:bold; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; padding:8.5px 19.5px}
+/* -------- //제품소개 -------- */
