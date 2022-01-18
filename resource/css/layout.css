@@ -429,6 +429,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .tab-wrap.type04 li.on .btn-tab {font-weight:bold; color: #1D58FF; }
 .tab-wrap.type04 li.on .btn-tab:after {position:absolute; display:block; width:100%; margin-top:6px; height:4px; background: #1D58FF; border-radius: 30px; content:''}
 
+/* 2022-01-18 */
+.tab-wrap.type05 .tabs{border-bottom:none; display:block}
+
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
