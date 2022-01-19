@@ -1,3 +1,5 @@
+body.hidden {overflow: hidden;}
+
 .btn-rounding {border-radius: 10px;text-align: center;font-weight: bold; font-size: 15px; line-height: 19px;}
 .btn-rounding.bk {padding:10px 19px; border:1px solid #02164F; background: #02164F; color:#fff}
 .btn-rounding.bk-line {padding:10px 14px; border: 1px solid #02164F; color: #02164F; }
@@ -22,16 +24,22 @@
 .tab-wrap > li .btn-tab {font-weight: 500; font-size: 16px;color: #41495D;}
 .tab-wrap > li.on .btn-tab {font-weight:bold; color: #1D58FF;}
 .ir-header .btn-groups {font-weight: 500; line-height:21px; font-size: 16px;text-align: right;}
+.tab-wrap > li .dropdown-wrap .btn-tab {padding-right:16px; background:url(../images/irpage/ico_main-select-arrow.svg) no-repeat right center}
 
 
 .title {margin-bottom:16px; font-weight: bold; font-size: 42px; line-height: 130%;color: #41495D;}
 .title02 { font-weight: bold; font-size: 30px; line-height: 130%; text-align: center; color: #41495D;}
 .title03 {margin-bottom:32px;font-weight: bold; font-size: 30px; line-height: 42px; text-align: center; color: #41495D;}
 .title04 {margin-bottom:30px;font-weight: bold; font-size: 32px; line-height: 51px; text-align: center; color: #fff;}
+.title05 {font-weight: bold; font-size: 34px; line-height: 54px; color: #41495D;}
+.title06 {margin-bottom:22px; font-weight: bold; font-size: 36px; line-height: 52px; color: #41495D;}
+
 .sub-txt {margin-bottom:26px; font-size: 18px; line-height: 138%;color: #555868;}
 .sub-txt02 {margin-bottom:88px;font-size: 18px; line-height: 140%; color: #555868;}
 .sub-txt03 {font-weight: bold; font-size: 16px; line-height: 130%;color: #9A9A9A;}
 .sub-txt04 {margin-bottom:16px; font-weight: bold; font-size: 18px; line-height: 26px; color: #414C5D;}
+.sub-txt05 {margin-bottom:50px; font-weight: 500; font-size: 24px; line-height: 36px; color: #9A9A9A;}
+.sub-txt06 {margin-bottom:13px; font-weight: 500; font-size: 18px; line-height: 26px; color: rgba(255, 255, 255, 0.7); }
 
 .section {text-align: center;}
 .section .title02 {margin-bottom:56px}
@@ -62,6 +70,7 @@
 .section .slider-box .item02 {margin-left:169px}
 .section .slider-box .item03 {position: absolute; right:54px; bottom:0}
 .start-box {padding:100px 0; background: #1D58FF url(../images/irpage/main_visual06.svg) no-repeat right bottom;} /* 2022-01-19 */
+.start-box.type02 {padding:94px 0 93px;}
 
 .slider-box .slick-prev,.slider-box .slick-next {width:29px; height:56px}
 .slider-box .slick-prev {background:url(../images/irpage/ico_sliderbox-prev.svg) no-repeat}
@@ -222,3 +231,17 @@
 .price_info .section04 .item-box{padding:130px 260px 119px}
 .price_info .section04 .item-box > h3{font-size:32px; line-height:46px; margin-bottom:60px}
 /* -------- //가격안내 -------- */
+
+
+/* 회사 소개 */
+.company .section01 {width:100%; background:url('../images/irpage/com_bg01.svg') no-repeat center top; padding-top:171px; padding-bottom:139px; margin-bottom:0; overflow: hidden;}
+.company .section01:before,
+.company .section01:after {position: absolute; z-index: 0;}
+.company .section01:before {top:110px; left:248px; width:455px; height:455px; background:url('../images/irpage/com_bg02.svg') no-repeat center; content:''}
+.company .section01:after {top:267px; right:-190px; width:677px; height:677px; background:url('../images/irpage/com_bg03.svg') no-repeat center; content:''}
+
+.company .section01 .title05 {position: relative; z-index: 1;}
+.company .section02 {background: #fff;}
+.company .section02 .item-box {margin:0 auto; width:981px; display: flex; align-items: center;}
+.company .section02 .item-box p {margin-left:101px; text-align:left; font-weight: 500; font-size: 18px; line-height: 170%; letter-spacing: -1px; color: #41495D;}
+.company .section03 {padding:50px 0 111px; background:linear-gradient(0deg, #F9F9FD 0%, rgba(249, 249, 253, 0) 98.69%);}
