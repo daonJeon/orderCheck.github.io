@@ -100,3 +100,37 @@
 .prod_info .section02 .tab-content .content .item-box > div{text-align:left}
 .prod_info .section02 .tab-content .content .item-box > div > span:first-child{color:#1D58FF; background:#DDE6FF; font-size:16px; font-weight:bold; -webkit-border-radius:7px; -moz-border-radius:7px; border-radius:7px; padding:8.5px 19.5px}
 /* -------- //제품소개 -------- */
+
+.inp-select-type02 .nice-select:after { display: none }
+.inp-select-type02 .nice-select:before {
+  position:absolute; top:50%; right:12px;
+  display: block; width: 12px; height:8px; margin-top: -4px;
+  pointer-events: none;
+  background: url(../images/irpage/ico_main-select-arrow.svg) no-repeat center;
+  -webkit-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; content: '';
+  }
+.inp-select-type02 .nice-select.open:before { -webkit-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg);  }
+
+.footer {padding:60px 0 70px; background:#02164F}
+.inbox02 {width:1400px; margin:0 auto;}
+.footer .inbox02 {display: flex; justify-content: space-between; align-items: flex-end;}
+.footer .logo {margin-bottom:50px;}
+.footer-list > li {display: inline-block; margin-bottom:8px;}
+.footer-list > li .txt {font-size: 15px; line-height: 130%; color: rgba(255, 255, 255, 0.6);}
+.footer-list > li strong {margin-right:6px; font-weight: bold; font-size: 15px; line-height: 130%; color: rgba(255, 255, 255, 0.7);}
+.footer-list > li + li {margin-left:20px; }
+.footer-list > li + li:before {display: inline-block; margin-right:20px; width:2px; height:14px; background:#9AA2B9; content: ''; vertical-align: middle;}
+.footer-list > li + li.line {display:block; margin-left:0;}
+.footer-list > li + li.line:before { content:unset;}
+
+.footer .footer-btm {margin-top:15px; display: flex;}
+.footer .footer-btm li + li {margin-left:26px}
+.footer .footer-btm li a {font-weight: bold; font-size: 16px; line-height: 130%;color: rgba(255, 255, 255, 0.8);}
+
+.footer-right {display: flex;}
+.footer-menu + .footer-menu {margin-left:60px;}
+.footer-menu {display: flex;}
+.footer-menu dt {margin-right:20px; font-weight: bold; font-size: 16px; line-height: 130%; color: rgba(255, 255, 255, 0.7);}
+.footer-menu dd a {font-size: 16px; line-height: 21px; color: rgba(255, 255, 255, 0.6);}
+.footer-menu dd > ul > li {margin-bottom:14px;}
+.footer-menu dd > ul > li:last-child {margin-bottom:0}
