@@ -429,6 +429,13 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .tab-wrap.type04 li.on .btn-tab {font-weight:bold; color: #1D58FF; }
 .tab-wrap.type04 li.on .btn-tab:after {position:absolute; display:block; width:100%; margin-top:6px; height:4px; background: #1D58FF; border-radius: 30px; content:''}
 
+/* 2022-01-18 */
+.tab-wrap.type05 .tabs{border-bottom:none; display:block}
+.tab-wrap.type05 .tabs li + li{margin-left:0; margin-top:60px}
+.tab-wrap.type05 .tabs li button span{color:#7B7B7B; font-size:20px; line-height:130%; font-weight:bold}
+.tab-wrap.type05 .tabs li.on button span{color:#02164F; position:relative}
+.tab-wrap.type05 .tabs li.on button span:after{position:absolute; width:100%; height:4px; left:0; bottom:-7px; display:block; content:""; clear:both; -webkit-border-radius:6px; -moz-border-radius:6px; border-radius:6px; background:#02164F}
+
 /*===== input =====*/
 .inp {position: relative;}
 .inp .unit {position: absolute; top:50%; right:10px; transform:translateY(-50%);z-index: 1;}
