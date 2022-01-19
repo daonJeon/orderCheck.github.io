@@ -206,14 +206,18 @@
 .price_info .section03 .item-box > .accor-wrap > ul > li{background:rgba(255,255,255, 0.1); -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px;}
 .price_info .section03 .item-box > .accor-wrap > ul > li + li{margin-top:10px}
 .price_info .section03 .item-box > .accor-wrap > ul > li > button{width:100%; font-size:16px; line-height:130%; color:#ffffff; padding:18px 64px; background:url('../images/irpage/price_acc-arrow.svg') no-repeat 24px 50%; text-align:left}
-.price_info .section03 .item-box > .accor-wrap > ul > li > div{display:none; padding:2px 64px 20px}
-.price_info .section03 .item-box > .accor-wrap > ul > li > div > p{color:#415284; line-height:160%; text-align:left}
+.price_info .section03 .item-box > .accor-wrap > ul > li > div{ }
+.price_info .section03 .item-box > .accor-wrap > ul > li > div > p{padding:2px 64px 20px; color:#415284; line-height:160%; text-align:left}
 .price_info .section03 .item-box > .accor-wrap > ul > li.active{background:#EAEFFF}
 .price_info .section03 .item-box > .accor-wrap > ul > li.active > button{font-weight:bold; background-image:url('../images/irpage/price_acc-arrow-open.svg'); color:#02164F}
 .price_info .section03 .item-box > .accor-wrap + div{text-align:center}
 .price_info .section03 .item-box > .accor-wrap + div > span, .price_info .section03 .item-box > .accor-wrap + div > a{color:#ffffff}
 .price_info .section03 .item-box > .accor-wrap + div > span{opacity:0.7; filter:Alpha(opacity=70); font-size:16px}
 .price_info .section03 .item-box > .accor-wrap + div > a{text-decoration:underline; font-size:15px; font-weight:bold; margin-left:10px}
+
+.price_info .section03 .item-box > .accor-wrap .accor-cnt {max-height:0; overflow: hidden; transition:all .3s}
+.price_info .section03 .item-box > .accor-wrap .active .accor-cnt {display: block; max-height:200px; overflow: auto;}
+
 .price_info .section04{padding-bottom:0}
 .price_info .section04 .item-box{padding:130px 260px 119px}
 .price_info .section04 .item-box > h3{font-size:32px; line-height:46px; margin-bottom:60px}

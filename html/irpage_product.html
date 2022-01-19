@@ -78,7 +78,7 @@
             <li><button type="button" class="btn-tab" data-tab="tab5"><span>회사 관리</span></button></li>
           </ul>
         </div>
-        <div class="tab-content">
+        <div class="tab-content dep1">
           <!-- tab1 -->
           <div class="content" id="tab1">
             <div class="item-box">
@@ -110,8 +110,8 @@
 					<li><button type="button" class="btn-tab" data-tab="tab2-4"><span>고객 정보 공유</span></button></li>
 				  </ul>
 				</div>
-				<div class="tab-content">
-					<div class="content active" id="tab2-1"><img src="../resource/images/irpage/pdt_visual02-item03.svg" alt="원하는 고객 정보만 모아서 한눈에 볼 수 있어요" /></div>
+				<div class="tab-content dep2">
+					<div class="content" id="tab2-1"><img src="../resource/images/irpage/pdt_visual02-item03.svg" alt="원하는 고객 정보만 모아서 한눈에 볼 수 있어요" /></div>
 					<div class="content" id="tab2-2"><img src="../resource/images/irpage/pdt_visual02-item04.svg" alt="상담 진행 과정을 기록하고 고객 히스토리를 관리해보세요!" /></div>
 					<div class="content" id="tab2-3"><img src="../resource/images/irpage/pdt_visual02-item05.svg" alt="흩어진 견적 파일을 한 곳에 모아보세요" /></div>
 					<div class="content" id="tab2-4"><img src="../resource/images/irpage/pdt_visual02-item06.svg" alt="거래처에 전달해야 하는 고객 정보 이제 선택적으로 간편 복사하세요" /></div>
@@ -222,6 +222,7 @@
 				<p>개별 신청폼의 응답 내용 접근 권한을 관리하고<br>업무 담당자에 따라 데이터를 안전하게 공유하세요.</p>
 			</div>
 			<img src="../resource/images/irpage/pdt_visual06-item01.svg" alt="">
+
 		</div>
       </section>
       <section class="section start-box" id="startBox">
@@ -284,7 +285,8 @@
     dropMenuOpen ('.dropdown-wrap .btn-drop','.dropdown-wrap .dropdown-box','.dropdown-wrap .btn-drop-menu', null)
 
     //페이지 내 tab
-    tabFunc("#content2 .tab-wrap.type04",null,null,".tab-content .content",".btn-tab")
+    tabFunc("#content2 .tab-wrap.type04",null,null,".tab-content.dep1 > .content",".btn-tab")
+    tabFunc("#content2 .tab-wrap.type05",null,null,".tab-content.dep2 > .content",".btn-tab")
     $('.slider-box').slick({
       slidesToScroll: 1,
       infinite: false,

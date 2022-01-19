@@ -181,30 +181,30 @@
 			<div class="accor-wrap">
 				<ul>
 					<li>
-						<button type="button">상담 신청 수는 어떻게 산정하나요?</button>
-						<div>내용</div>
+						<button type="button" class="tab-acc">상담 신청 수는 어떻게 산정하나요?</button>
+						<div class="accor-cnt">내용</div>
 					</li>
 					<li>
-						<button type="button">선불 결제는 언제, 어떤 방식으로 이루어지나요?</button>
-						<div>내용</div>
+						<button type="button" class="tab-acc">선불 결제는 언제, 어떤 방식으로 이루어지나요?</button>
+						<div class="accor-cnt">내용</div>
 					</li>
 					<li>
-						<button type="button">14일 무료 체험 동안 무엇이 가능한가요? 체험이 끝나면 어떻게 되나요?</button>
-						<div>내용</div>
+						<button type="button" class="tab-acc">14일 무료 체험 동안 무엇이 가능한가요? 체험이 끝나면 어떻게 되나요?</button>
+						<div class="accor-cnt">내용</div>
 					</li>
 					<li class="active">
-						<button type="button">연 결제는 어떤 건가요?</button>
-						<div style="display:block">
+						<button type="button" class="tab-acc">연 결제는 어떤 건가요?</button>
+						<div class="accor-cnt">
 							<p>오더체크를 더 저렴하게(10%) 이용할 수 있는 1년 약정 회원권입니다. <br>1년치 플랜을 미리 선불로 한꺼번에 구매하는 것이기 때문에 무료체험 기간 이후 1년치 이용료가 한 번에 결제됩니다.<br>연 결제의 경우 중도 해약 및 환불이 가능하며, 환불 정책은 아래 질문을 참고해주세요.<br>자세한 내용은 채팅을 통해 질문해주시기 바랍니다.</p>
 						</div>
 					</li>
 					<li>
-						<button type="button">환불 정책은 어떻게 되나요?</button>
-						<div>내용</div>
+						<button type="button" class="tab-acc">환불 정책은 어떻게 되나요?</button>
+						<div class="accor-cnt">내용</div>
 					</li>
 					<li>
-						<button type="button">푸시 메세지는 무엇인가요? 요금은 어떻게 정해지나요?</button>
-						<div>내용</div>
+						<button type="button" class="tab-acc">푸시 메세지는 무엇인가요? 요금은 어떻게 정해지나요?</button>
+						<div class="accor-cnt">내용</div>
 					</li>
 				</ul>
 			</div>
@@ -218,6 +218,147 @@
          <div class="item-box">
 			<h3>무료 유료 플랜 비교</h3>
 			<img src="../resource/images/irpage/price_visual04-item01.svg" alt=""/>
+      <div class="hide">
+        <table>
+          <caption>무료 유료 플랜 비교 - 기본 기능</caption>
+          <thead>
+            <tr>
+              <th scope="col">상세 기능</th>
+              <th scope="col">무료</th>
+              <th scope="col">유료</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">고객 수기 등록</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">고객 정보 조회 및 수정</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">진행 상태, 계약 가능성 관리</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">견적 발송</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">견적 업로드 및 다운로드</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">고객 연동</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">파일 업로드 및 다운로드</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">상담 신청 템플릿</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">상담 신청 폼 개설</th>
+              <td>1개</td>
+              <td>무제한</td>
+            </tr>
+            <tr>
+              <th scope="row">상담 신청 링크 공유</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">상담 접수 고객 정보 자동 생성</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">상담 접수 알림</th>
+              <td>가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">회사 URL 생성</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">팀원 추가 및 관리 (팀원 수에 따른 과금 없음)</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">권한 관리</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">푸시 메세지 (문자, 알림톡)</th>
+              <td>상담 접수</td>
+              <td>상담접수 + 답변알림</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <caption>무료 유료 플랜 비교 - 부가 기능</caption>
+          <thead>
+            <tr>
+              <th scope="col">상세 기능</th>
+              <th scope="col">무료</th>
+              <th scope="col">유료</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">상담신청 폼 오더체크 브랜딩 표시 제거</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">상담신청 폼 오더체크 블랜딩 표시 제거</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">고객 상담 메신저 (상담 수에 따른 과금 없음)</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">사내 메신저 (팀원 수에 따른 과금 없음)</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">상담 운영시간 설정</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">부재중 메시지 설정</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+            <tr>
+              <th scope="row">자주 쓰는 답변</th>
+              <td>불가능</td>
+              <td>가능</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 		</div>
       </section>
       <section class="section start-box" id="startBox">
@@ -281,12 +422,15 @@
 
     //페이지 내 tab
     tabFunc("#content2 .tab-wrap.type04",null,null,".tab-content .content",".btn-tab")
+
     $('.slider-box').slick({
       slidesToScroll: 1,
       infinite: false,
       swipeToSlide: true,
       arrows: true,
     });
+
+    clickTargetCloseAddFunc (".tab-acc","li","active")
   </script>
 </body>
 </html>
