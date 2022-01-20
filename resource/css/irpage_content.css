@@ -176,11 +176,11 @@ body.hidden {overflow: hidden;}
 /* -------- 가격안내 -------- */
 .price_info .section{min-height:initial}
 .price_info .section .item-box{padding:0 260px; min-height:initial}
-.price_info .section01{margin:0; padding:130px 0 0; background:url('../images/irpage/price_bg01.svg') no-repeat top center; text-align:left}
-.price_info .section01 .item-box{max-width:initial}
+.price_info .section01{margin:0; padding:0; background:url('../images/irpage/price_bg01.svg') no-repeat top center; text-align:left; max-height:initial}
+.price_info .section01 .item-box{max-width:initial; padding:237px 260px 150px}
 .price_info .section01 .item-box .title{font-size:40px; line-height:160%; margin-bottom:130px; text-align:center}
 .price_info .section01 .item-box .plan-select{}
-.price_info .section01 .item-box .plan-select > li{position:relative; background:#ffffff; -webkit-border-radius:12px; -moz-border-radius:12px; border-radius:12px; box-shadow:0px 2px 24px rgba(0, 0, 0, .12); padding:49px 40px 40px 248px}
+.price_info .section01 .item-box .plan-select > li{position:relative; background:#ffffff; -webkit-border-radius:12px; -moz-border-radius:12px; border-radius:12px; box-shadow:0px 2px 24px rgba(0, 0, 0, .12); padding:49px 52px 40px 248px}
 .price_info .section01 .item-box .plan-select > li + li{margin-top:24px}
 .price_info .section01 .item-box .plan-select > li > input.type01{position:absolute; top:47px; left:50px; background:url('../images/irpage/ico_check-price01.svg') no-repeat center; width:26px; height:26px}
 .price_info .section01 .item-box .plan-select > li > input.type01:checked{background-image:url('../images/irpage/ico_check-price01_chk.svg')}
@@ -194,14 +194,52 @@ body.hidden {overflow: hidden;}
 .price_info .section01 .item-box .plan-select > li > .dot-list > li{color:#555868; font-size:17px; line-height:130%; padding-left:26px}
 .price_info .section01 .item-box .plan-select > li > .dot-list > li:before{background:#555868; width:5px; height:5px}
 .price_info .section01 .item-box .plan-select > li > .dot-list > li > span{color:#9A9A9A; font-size:15px}
-.price_info .section01 .item-box .plan-select > li > .plan-list{display:block}
+.price_info .section01 .item-box .plan-select > li > .plan-list{display:block; margin-left:-210px}
 .price_info .section01 .item-box .plan-select > li > .plan-list > div:first-child{text-align:right; margin-bottom:18px}
 .price_info .section01 .item-box .plan-select > li > .plan-list > div:first-child > label{position:relative; font-size:15px; font-weight:bold; line-height:130%; padding-right:60px}
 .price_info .section01 .item-box .plan-select > li > .plan-list > div:first-child > label:before{position:absolute; top:50%; margin-top:-14px; right:0; display:block; content:""; clear:both; width:48px; height:28px; -webkit-border-radius:40px; -moz-border-radius:40px; border-radius:40px; background:#C1C1C1}
 .price_info .section01 .item-box .plan-select > li > .plan-list > div:first-child > label:after{position:absolute; top:50%; margin-top:-10px; right:24px; display:block; content:""; clear:both; width:20px; height:20px; -webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%; background:#ffffff}
 .price_info .section01 .item-box .plan-select > li > .plan-list > div:first-child > input:checked + label:before{background:#02164F}
 .price_info .section01 .item-box .plan-select > li > .plan-list > div:first-child > input:checked  + label:after{right:4px}
-
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs{border-bottom:none}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li{border:2px solid #F2F2F2; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; width:100%}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li.on{border-color:#1D58FF}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li + li{margin-left:17px}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li > button{text-align:left; background:url('../images/irpage/ico_check-price02.svg') no-repeat calc(100% - 20px) 23px; padding:20px}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li.on > button{background-color:rgba(29,88,255, .06); background-image:url('../images/irpage/ico_check-price01.svg')}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li > button > span{display:inline-block; width:100%}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li > button > span.tit{font-size:24px; line-height:140%; font-weight:bold; color:#555868}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li > button > span.cnt{font-size:15px; line-height:150%; color:#7B7B7B; margin:10px 0 36px}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li > button > span.price{text-align:right; font-size:14px; line-height:150%; color:#41495D}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li > button > span.price strong{font-size:20px; font-weight:normal}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li.on > button > span.tit, .price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li.on > button > span.price{color:#1D58FF}
+.price_info .section01 .item-box .plan-select > li > .plan-list > .tabs > li.on > button > span.cnt{color:#41495D}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content{margin-left:-210px; margin-top:25px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content{position:relative; background:#F1F1F1; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; padding:24px 34px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content:before{position:absolute; display:block; width:26px; height:14px; top:-12px; content:""; clear:both; background:url('../images/irpage/ico_price_arrow.svg') no-repeat top center}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content:first-child:before{left:110px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content:nth-child(2):before{left:382px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content:nth-child(3):before{left:637px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content:nth-child(4):before{left:897px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content:nth-child(5):before{left:1171px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content > p{font-size:16px; color:#41495D; line-height:150%}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content > p + p{margin-top:10px}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content > p > span:not(.high-light){color:#7B7B7B}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content > p > span.high-light{position:relative}
+.price_info .section01 .item-box .plan-select > li > .plan-list + .tab-content .content > p > span.high-light:after{position:absolute; display:block; content:""; clear:both; bottom:0; left:0; width:100%; height:10px; background:rgba(29,88,255, .24)}
+.price_info .section01 .item-box .plan-select > li > .table-wrap{margin-left:-210px; margin-top:30px}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr td:last-child{text-align:right}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr:first-child td{font-size:14px; padding-bottom:6px}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr:first-child td:first-child{color:#7B7B7B; font-weight:bold}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr:first-child td:last-child{color:#9A9A9A}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr th{font-size:16px; color:#41495D; font-weight:normal; padding:6px 0}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr th + td{font-size:13px; color:#41495D; font-weight:bold; padding:6px 0}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr:last-child th, .price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr:last-child th + td{padding-bottom:0}
+.price_info .section01 .item-box .plan-select > li > .table-wrap table tbody tr th + td > span{font-size:15px}
+.price_info .section01 .item-box .plan-select + .dot-list{margin-top:26px}
+.price_info .section01 .item-box .plan-select + .dot-list > li{font-size:16px}
+.price_info .section01 .item-box .plan-select + .dot-list > li + li{margin-top:13px}
+.price_info .section01 .item-box .plan-select + .dot-list > li > a{font-size:15px; font-weight:bold; color:#41495D; margin-left:5px}
 .price_info .section02{padding-top:0; background:#FAFAFA}
 .price_info .section02 .item-box{display:-webkit-flex; display:flex; justify-content:space-between; align-items:center; padding:75px 260px 90px}
 .price_info .section02 .item-box > div{text-align:left}
@@ -215,7 +253,7 @@ body.hidden {overflow: hidden;}
 .price_info .section03 .item-box > .accor-wrap > ul > li{background:rgba(255,255,255, 0.1); -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px;}
 .price_info .section03 .item-box > .accor-wrap > ul > li + li{margin-top:10px}
 .price_info .section03 .item-box > .accor-wrap > ul > li > button{width:100%; font-size:16px; line-height:130%; color:#ffffff; padding:18px 64px; background:url('../images/irpage/price_acc-arrow.svg') no-repeat 24px 50%; text-align:left}
-.price_info .section03 .item-box > .accor-wrap > ul > li > div{ }
+.price_info .section03 .item-box > .accor-wrap > ul > li > div{}
 .price_info .section03 .item-box > .accor-wrap > ul > li > div > p{padding:2px 64px 20px; color:#415284; line-height:160%; text-align:left}
 .price_info .section03 .item-box > .accor-wrap > ul > li.active{background:#EAEFFF}
 .price_info .section03 .item-box > .accor-wrap > ul > li.active > button{font-weight:bold; background-image:url('../images/irpage/price_acc-arrow-open.svg'); color:#02164F}
@@ -223,10 +261,8 @@ body.hidden {overflow: hidden;}
 .price_info .section03 .item-box > .accor-wrap + div > span, .price_info .section03 .item-box > .accor-wrap + div > a{color:#ffffff}
 .price_info .section03 .item-box > .accor-wrap + div > span{opacity:0.7; filter:Alpha(opacity=70); font-size:16px}
 .price_info .section03 .item-box > .accor-wrap + div > a{text-decoration:underline; font-size:15px; font-weight:bold; margin-left:10px}
-
 .price_info .section03 .item-box > .accor-wrap .accor-cnt {max-height:0; overflow: hidden; transition:all .3s}
 .price_info .section03 .item-box > .accor-wrap .active .accor-cnt {display: block; max-height:200px; overflow: auto;}
-
 .price_info .section04{padding-bottom:0}
 .price_info .section04 .item-box{padding:130px 260px 119px}
 .price_info .section04 .item-box > h3{font-size:32px; line-height:46px; margin-bottom:60px}
