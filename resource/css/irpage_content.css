@@ -1,4 +1,4 @@
-body.hidden {overflow: hidden;}
+body.hidden {overflow-x: hidden;}
 
 .btn-rounding {border-radius: 10px;text-align: center;font-weight: bold; font-size: 15px; line-height: 19px;}
 .btn-rounding.bk {padding:10px 19px; border:1px solid #02164F; background: #02164F; color:#fff}
