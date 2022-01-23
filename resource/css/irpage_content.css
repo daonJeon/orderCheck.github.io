@@ -55,7 +55,7 @@ body.hidden {overflow-x: hidden;}
 .term-section {padding-top:210px; padding-bottom:220px;}
 .section {text-align: center;}
 .section .title02 {margin-bottom:56px}
-.section01 {padding-top:182px; margin-bottom:90px; background:url(../images/irpage/main_bg01.png) no-repeat; max-height:1070px}
+.section01 {padding-top:182px; margin-bottom:90px; background:url(../images/irpage/main_bg01.svg) no-repeat; max-height:1070px}
 .section01 .btn-groups {margin-bottom:23px}
 .section01 .item-box {position: relative; max-width:1365px; margin:0 auto; padding-bottom:25px; padding-right:25px; text-align:left}
 .section01 .item01 {}
@@ -63,9 +63,9 @@ body.hidden {overflow-x: hidden;}
 .section02 .tab-wrap {margin-left:60px; margin-bottom:22px}
 .section02 {padding-top:33px; background:linear-gradient(0deg, #F9F9FD 0%, rgba(249, 249, 253, 0) 98.69%);}
 .section02 .item-box {min-height:392px;}
-.section02 .tab-content {display: inline-block; margin-left:60px; padding:32px 190px 48px 97px; background: url(../images/irpage/main_visual02-item02.png) no-repeat left 36px top 32px,
-url(../images/irpage/main_visual02-item01.png) no-repeat right 36px bottom 36px;}
-
+.section02 .tab-content {display: inline-block; margin-left:60px; padding:32px 190px 48px 97px; background: url(../images/irpage/main_visual02-mark01.svg) no-repeat left 36px top 32px,
+url(../images/irpage/main_visual02-mark02.svg) no-repeat right 36px bottom 36px;}
+.main .section02 .item-box {min-width:1026px;}
 .section .inbox {width:1280px; margin:0 auto}
 .inbox02 {width:1400px; margin:0 auto;}
 
