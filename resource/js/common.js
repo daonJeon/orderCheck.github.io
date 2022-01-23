@@ -1569,6 +1569,14 @@ function operationFunc (){
   }
 }
 
+function getIndex(ele) {
+  var _i = 0;
+  while((ele = ele.previousSibling) != null ) {
+    _i++;
+  }
+
+  return _i;
+}
 
 //공통
 function pageInit () {  //모든 페이지용 함수

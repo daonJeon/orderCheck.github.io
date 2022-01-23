@@ -42,7 +42,7 @@
         <li>
           <!-- dropdown-wrap -->
           <div class="dropdown-wrap">
-            <button type="button" class="btn-drop btn-tab"><span>고객 지원</span></button>
+            <button type="button" class="btn-drop btn-tab"><span>고객지원</span></button>
             <div class="dropdown-box">
               <ul>
                 <li><a href="#" class="btn-drop-menu"><span>사용 가이드</span></a></li>
@@ -60,7 +60,7 @@
     </header>
     <!-- /header -->
 
-    <div id="content" class="content-section">
+    <div id="content" class="content-section main">
       <section class="section section01" id="content1">
         <h2 class="title">온라인 인테리어 관리 솔루션</h2>
         <p class="sub-txt">오더체크와 함께하는 손쉬운 고객 응대의 시작<br> 인테리어도 이제 온라인에서 편리해집니다!</p>
@@ -68,12 +68,12 @@
           <button type="button" class="btn-large-rounding blue"><span>무료로 시작</span></button>
         </div>
         <div class="item-box">
-          <img src="../resource/images/irpage/main_visual01-item01.png" class="item item01" alt=""/>
-          <img src="../resource/images/irpage/main_visual01-item02.png" class="item item02" alt=""/>
+          <img src="../resource/images/irpage/main_visual01-item01.svg" class="item item01" alt=""/>
+          <img src="../resource/images/irpage/main_visual01-item02.svg" class="item item02" alt=""/>
         </div>
 
       </section>
-      <section class="section section02" id="content2">
+      <section class="section section02 tab-arrow-wrap" id="content2">
         <h2 class="title02">고객 응대 관리</h2>
         <div class="tab-wrap type04">
           <ul class="tabs">
@@ -89,21 +89,21 @@
           <!-- tab1 -->
           <div class="content" id="tab1">
             <div class="item-box">
-              <img src="../resource/images/irpage/main_visual02-mark.png" class="item item01" alt=""/>
+              <img src="../resource/images/irpage/main_visual02-item01.svg" class="item item01" alt=""/>
             </div>
           </div>
           <!-- //tab1 -->
           <!-- tab2 -->
           <div class="content" id="tab2">
             <div class="item-box">
-              <img src="../resource/images/irpage/main_visual02-mark.png" class="item item01" alt=""/>
+              <img src="../resource/images/irpage/main_visual02-item02.svg" class="item item01" alt=""/>
             </div>
           </div>
           <!-- //tab2 -->
           <!-- tab3 -->
           <div class="content" id="tab3">
             <div class="item-box">
-              <img src="../resource/images/irpage/main_visual02-mark.png" class="item item01" alt=""/>
+              <img src="../resource/images/irpage/main_visual02-item03.svg" class="item item01" alt=""/>
             </div>
           </div>
           <!-- //tab3 -->
@@ -111,7 +111,7 @@
           <!-- tab4 -->
           <div class="content" id="tab4">
             <div class="item-box">
-              <img src="../resource/images/irpage/main_visual02-mark.png" class="item item01" alt=""/>
+              <img src="../resource/images/irpage/main_visual02-item04.svg" class="item item01" alt=""/>
             </div>
           </div>
           <!-- //tab4 -->
@@ -119,7 +119,7 @@
           <!-- tab5 -->
           <div class="content" id="tab5">
             <div class="item-box">
-              <img src="../resource/images/irpage/main_visual02-mark.png" class="item item01" alt=""/>
+              <img src="../resource/images/irpage/main_visual02-item05.svg" class="item item01" alt=""/>
             </div>
           </div>
           <!-- //tab5 -->
@@ -156,26 +156,24 @@
           <div class="slider-box">
             <div class="item-box">
               <img src="../resource/images/irpage/main_visual04-item01.svg" class="item item01" alt=""/>
-              <img src="../resource/images/irpage/main_visual04-item02.svg" class="item item02" alt=""/>
-              <img src="../resource/images/irpage/main_visual04-item03.svg" class="item item03" alt=""/>
             </div>
             <div class="item-box">
-              <img src="../resource/images/irpage/main_visual04-item01.svg" class="item item01" alt=""/>
               <img src="../resource/images/irpage/main_visual04-item02.svg" class="item item02" alt=""/>
-              <img src="../resource/images/irpage/main_visual04-item03.svg" class="item item03" alt=""/>
             </div>
           </div>
         </div>
       </section>
       <section class="section section05" id="content5">
         <div class="double-colbox">
-          <div class="inbox">
-            <div class="colbox left">
+          <div class="colbox left">
+            <div>
               <h2 class="logo"><img src="../resource/images/irpage/main_visual05-logo.svg" alt="오더체크" /></h2>
               <p class="title02">나에게 맞는 가장<br>합리적인 금액으로 시작하세요!</p>
               <span class="sub-txt03 txt-arrow">추천 요금제 확인하기</span>
             </div>
-            <div class="colbox right">
+          </div>
+          <div class="colbox right">
+            <div>
               <p class="sub-txt04">월 예상 상담 신청 수는?</p>
               <p class="inp-select-wrap">
                 <span class="inp-select-type02">
@@ -201,7 +199,7 @@
     <footer id="footer" class="footer">
       <div class="inbox02">
         <div class="footer-left">
-          <h3 class="logo"><img src="../resource/images/irpage/logo_btm.png" alt=""/></h3>
+          <h3 class="logo"><img src="../resource/images/irpage/logo_btm.svg" alt=""/></h3>
           <ul class="footer-list">
             <li><strong>(주) 오더체크 </strong></li>
             <li><strong>대표</strong><span class="txt">정운갑</span></li>
@@ -251,13 +249,35 @@
 
     //페이지 내 tab
     tabFunc("#content2 .tab-wrap.type04",null,null,".tab-content .content",".btn-tab")
-    tabFunc("#content2 .tab-wrap.type05",null,null,".tab-content .content",".btn-tab")
+
     $('.slider-box').slick({
       slidesToScroll: 1,
       infinite: false,
       swipeToSlide: true,
       arrows: true,
     });
+
+    function tabSliderWrap () {//section2 tab
+      var initialNum = getIndex(document.querySelector(".tab-arrow-wrap .tabs li.on"))
+      var totalNum = document.querySelectorAll(".tab-arrow-wrap .tabs li").length
+      document.querySelector(".tab-arrow-wrap .btn-arrow").addEventListener("click",function () {
+        console.log(totalNum)
+        if(totalNum - 1 == initialNum ) {
+          document.querySelector(".tab-arrow-wrap .tabs li.on").classList.remove("on")
+          document.querySelector(".tab-arrow-wrap .tabs li:first-child").classList.add("on")
+          document.querySelector(".tab-arrow-wrap .tab-content .content.active").classList.remove("active")
+          document.querySelector(".tab-arrow-wrap .tab-content .content:first-child").classList.add("active")
+          initialNum = 1
+        } else {
+          document.querySelector(".tab-arrow-wrap .tabs li.on").nextElementSibling.classList.add("on")
+          document.querySelector(".tab-arrow-wrap .tabs li.on").classList.remove("on")
+          document.querySelector(".tab-arrow-wrap .tab-content .content.active").nextElementSibling.classList.add("active")
+          document.querySelector(".tab-arrow-wrap .tab-content .content.active").classList.remove("active")
+          initialNum++
+        }
+      })
+    }
+    tabSliderWrap()
   </script>
 </body>
 </html>
