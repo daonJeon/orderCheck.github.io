@@ -1291,6 +1291,14 @@ function alarmDropMenu () {
 
     })
   })
+
+  var cancel = document.querySelectorAll(".btn-edit-cancel")
+  Array.prototype.forEach.call(cancel, function(btn, idx){
+    btn.addEventListener("click",function(e){
+    e.currentTarget.closest(".alarm-box").classList.remove("edit")
+  })
+
+})
 }
 
 function alarmAllChecked (btn,applyWrap) {

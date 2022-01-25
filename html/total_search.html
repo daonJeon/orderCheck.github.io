@@ -85,6 +85,7 @@
               <div class="searchbox">
                 <i class='ico search'></i>
                 <input type="text" placeholder="검색해보세요.">
+                <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
               </div>
             </li>
             <li>
@@ -145,37 +146,53 @@
           <!-- cnt-inner -->
           <div class="cnt-inner">
             <div class="content-box">
-              <h2 class="title">검색 결과 <strong class="tx-org">25</strong></h2>
+              <h2 class="title">검색결과 <strong class="tx-org">25</strong></h2>
               <div class="table-wrap search">
                 <a href="#" class="btn-link-type02" target="_blank"><span class="txt">고객관리 <span class="tx-org">6</span></span></a>
                 <div class="tbl-type1 tbl-sort">
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
-                      <col style="width:300px">
-                      <col style="width:128px">
-                      <col style="width:332px">
-                      <col style="width:174px">
-                      <col style="width:167px">
-                      <col style="width:138px">
+                      <col style="width:390px">
+                      <col style="width:175px">
+                      <col style="width:790px">
+                      <col style="width:140px">
+                      <col style="width:111px">
+                      <col style="width:118px">
                     </colgroup>
                     <thead>
                       <tr>
                         <th scope="col">고객명</th>
                         <th scope="col">연락처</th>
                         <th scope="col">주소</th>
-                        <th scope="col">문의일자</th>
+                        <th scope="col">문의 일자</th>
                         <th scope="col">상태</th>
                         <th scope="col">담당자</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="left"><a href="#">홍<span class="tx-blue">길동</span></a></td>
-                        <td><a href="#">010.1234.<span class="tx-blue">5678</span></a></td>
-                        <td class="left"><a href="#">서울특별시 성<span class="tx-blue">복구 도산대로 1234 101동 1010호</span></a></td>
+                        <td class="left"><a href="#">홍<strong class="tx-blue">길동</strong></a></td>
+                        <td><a href="#">010.1234.<strong class="tx-blue">5678</strong></a></td>
+                        <td class="left"><a href="#">서울특별시 성<strong class="tx-blue">복구 도산대로 1234 101동 1010호</strong></a></td>
                         <td><a href="#">2021.12.30</a></td>
                         <td><a href="#"><span class="badge apply">상담신청</span></a></td>
+                        <td><a href="#">담당자 없음</a></td>
+                      </tr>
+                      <tr>
+                        <td class="left"><a href="#">홍<strong class="tx-blue">길동</strong></a></td>
+                        <td><a href="#">010.1234.<strong class="tx-blue">5678</strong></a></td>
+                        <td class="left"><a href="#">서울특별시 성<strong class="tx-blue">복구 도산대로 1234 101동 1010호</strong></a></td>
+                        <td><a href="#">2021.12.30</a></td>
+                        <td><a href="#"><span class="badge consulting">상담중</span></a></td>
+                        <td><a href="#"><span class="badge self">나(홍길동)</span></a></td>
+                      </tr>
+                      <tr>
+                        <td class="left"><a href="#">홍<strong class="tx-blue">길동</strong></a></td>
+                        <td><a href="#">010.1234.<strong class="tx-blue">5678</strong></a></td>
+                        <td class="left"><a href="#">서울특별시 성<strong class="tx-blue">복구 도산대로 1234 101동 1010호</strong></a></td>
+                        <td><a href="#">2021.12.30</a></td>
+                        <td><a href="#"><span class="badge complete">상담완료</span></a></td>
                         <td><a href="#">담당자 없음</a></td>
                       </tr>
                     </tbody>
@@ -188,9 +205,9 @@
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
-                      <col style="width:45%">
-                      <col style="width:45%">
-                      <col style="width:10%">
+                      <col style="width:32%">
+                      <col style="width:60%">
+                      <col style="width:8%">
                     </colgroup>
                     <thead>
                       <tr>
@@ -201,28 +218,23 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><i class="ico storage"></i><var>홍길동 010.1234.5678</var></td>
+                        <td><i class="ico pic"></i><var>홍<strong class="tx-blue">길동</strong></var></td>
                         <td>-</td>
                         <td>2021.10.31</td>
                       </tr>
                       <tr>
-                        <td><i class="ico ppt"></i><var>인테리어 제안서.ppt</var></td>
+                        <td><i class="ico ppt"></i><var>김수안무거북이와</var></td>
                         <td>심청이</td>
                         <td>2021.10.31</td>
                       </tr>
                       <tr>
-                        <td><i class="ico docx"></i><var>김수안무. docx</var></td>
+                        <td><i class="ico docx"></i><var>김수안무</var></td>
                         <td>바이지은 &gt; 홍길동 &gt; 실측사진 &gt; 주방</td>
                         <td>2021.10.31</td>
                       </tr>
                       <tr>
-                        <td><i class="ico excel"></i><var>김수안무거북이와.xlsx</var></td>
+                        <td><i class="ico excel"></i><var>김수안무거북이와</var></td>
                         <td>심청이</td>
-                        <td>2021.10.31</td>
-                      </tr>
-                      <tr>
-                        <td><i class="ico pdf"></i><var>김수안무.pdf</var></td>
-                        <td>바이지은 &gt; 홍길동 &gt; 실측사진 &gt; 주방</td>
                         <td>2021.10.31</td>
                       </tr>
                     </tbody>
@@ -235,8 +247,8 @@
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
-                      <col style="width:90%">
-                      <col style="width:10%">
+                      <col style="width:92%">
+                      <col style="width:8%">
                     </colgroup>
                     <thead>
                       <tr>
