@@ -915,14 +915,16 @@ function fileUpload (fileInp) {
       else inp.nextElementSibling.style.display = "block"
       changeEvt(inp.previousElementSibling)
     });
+
+
+    btnRemove.addEventListener("click",function(e) {
+      e.currentTarget.previousElementSibling.value = ''
+      e.currentTarget.previousElementSibling.previousElementSibling.value = ''
+      e.currentTarget.style.display = "none"
+      changeEvt(e.currentTarget.previousElementSibling.previousElementSibling)
+    })
   })
 
-  btnRemove.addEventListener("click",function(e) {
-    e.currentTarget.previousElementSibling.value = ''
-    e.currentTarget.previousElementSibling.previousElementSibling.value = ''
-    e.currentTarget.style.display = "none"
-    changeEvt(e.currentTarget.previousElementSibling.previousElementSibling)
-  })
 
 }
 fileUpload(".inp.filebox input[type='file']")
@@ -972,13 +974,13 @@ function numberToKorean(number){
     var unitResult = (inputNumber % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
     unitResult = Math.floor(unitResult);
     if (unitResult > 0){
-        resultArray[i] = unitResult;
+        resultArray[i] = numberWithCommas(unitResult);
     }
   }
 
   for (var i = 0; i < resultArray.length; i++){
     if(!resultArray[i]) continue;
-    resultString = String(resultArray[i]) + unitWords[i] + resultString;
+    resultString = String(resultArray[i]) + unitWords[i] + " " + resultString;
   }
 
   return resultString;
@@ -989,7 +991,6 @@ function autoCommasFunc (inputName,callback) {
   var input = document.getElementsByName(inputName)
 
   Array.prototype.forEach.call(input, function(inp, idx){
-    inp.closest(".inp").nextElementSibling.style.display= "none"
     inp.addEventListener("keyup",function(e){
       var _val = e.currentTarget.value.replace(/[^0-9]/g,'')
       this.value = numberWithCommas(_val);
@@ -1394,6 +1395,7 @@ function inputValueRemove () {
       e.currentTarget.nextElementSibling.style.display = "block"
     })
     b.addEventListener("click", function (e) {
+      console.log(e.currentTarget.previousElementSibling)
       e.currentTarget.previousElementSibling.value=""
       e.currentTarget.style.display = "none"
     })

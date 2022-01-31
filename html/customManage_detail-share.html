@@ -150,7 +150,7 @@
               <button type="button" class="btn btn-bk-line open-layer" data-info="layer-customer-share"><span><i class="ico sharing"></i>고객 정보 공유</span></button>
               <button type="button" class="btn btn-bk-line"><span><i class="ico chat2"></i>메세지 보내기</span></button>
               <button type="button" class="btn btn-bk-line"><span><i class="ico folder"></i>파일 관리</span></button>
-              <button type="button" class="btn btn-bk open-confirm"><span>저장하기</span></button>
+              <!-- 2022-01-31 저장하기 삭제 -->
               <!-- <button type="button" class="btn btn-bk open-layer" data-info="layer-revise"><span>저장하기</span></button> --><!-- 수정 레이어용 -->
             </div>
           </div>
@@ -162,6 +162,7 @@
                 <p class="filter-title">고객명</p>
                 <div class="inp">
                   <input type="text" name="" id="" placeholder="고객명" value="">
+                  <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button><!-- 2022-01-31 -->
                 </div>
               </div>
 
@@ -169,6 +170,7 @@
                 <p class="filter-title">연락처</p>
                 <div class="inp">
                   <input type="tel" name="" id="" placeholder="연락처" value="">
+                  <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button><!-- 2022-01-31 -->
                 </div>
               </div>
 
@@ -189,8 +191,9 @@
                 <p class="filter-title">평형</p>
                 <div class="inp-row">
 
-                  <div class="inp">
+                  <div class="inp ui-unit"><!-- 2022-01-31 -->
                     <input type="text" name="" id="" class="cal" value="000">
+                    <button type="button" class="pos btn-edit"><span class="txt hide">수정</span></button><!-- 2022-01-31 -->
                     <span class="unit">평</span>
                   </div>
                   <!-- select -->
@@ -354,12 +357,33 @@
                         <button type="button" class="accordion-title"><span class="badge refuse">거절</span><span class="date">2021.10.21</span></button>
                         <div class="accordion-cnt">
                           <div class="inner">
-                            <div class="inp">
-                              <input type="text" name="" id="" placeholder="내용을 입력해주세요" style="width:100%"/>
-                            </div>
+                            <!-- 2022-01-31 -->
+                            <p class="txt">예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다.</p>
                           </div>
                         </div><!-- //accordion-ncnt-->
                       </div>
+
+                      <div class="accordion-box">
+                        <button type="button" class="accordion-title"><span class="badge issue">이슈</span><span class="date">2021.10.21</span></button>
+                        <div class="accordion-cnt">
+                          <div class="inner">
+                            <!-- 2022-01-31 -->
+                            <p class="txt">예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다.</p>
+                          </div>
+                        </div><!-- //accordion-ncnt-->
+                      </div>
+
+                      <div class="accordion-box">
+                        <button type="button" class="accordion-title"><span class="badge consulting">상담 중</span><span class="date">2021.10.21</span></button>
+                        <div class="accordion-cnt">
+                          <div class="inner">
+                            <!-- 2022-01-31 -->
+                            <p class="txt">예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다. 예시 텍스트 입니다.</p>
+                          </div>
+                        </div><!-- //accordion-ncnt-->
+                      </div>
+
+
                     </div>
                     <!-- //accordion box -->
                     <!-- data empty box -->
@@ -385,15 +409,16 @@
                     <div class="tbl-type1" style="display:none">
                       <table>
                         <caption>고객 리스트 정보</caption>
+                        <!-- 2022-01-31 -->
                         <colgroup>
-                          <col style="width:73px">
-                          <col style="width:77px">
-                          <col style="width:119px">
-                          <col style="width:196px">
-                          <col style="width:143px">
-                          <col style="width:174px">
-                          <col style="width:79px">
-                          <col style="width:130px">
+                          <col style="width:52px">
+                          <col style="width:63px">
+                          <col style="width:111px">
+                          <col style="width:206px">
+                          <col style="width:222px">
+                          <col style="width:155px">
+                          <col style="width:93px">
+                          <col style="width:126px">
                         </colgroup>
                         <thead>
                           <tr>
@@ -492,11 +517,11 @@
                       <li>
                         <div class="tbl-top">
                           <div class="top-title">
-                            <span class="badge position blue">대표</span><var class="name">n차 견적서 </var>
+                            <button type="button" class="badge position gray">대표</button><var class="name">n차 견적서 </var><!-- 2022-01-31  -->
                           </div>
                           <div class="group">
-                            <button type="button" class="btn-round edit open-layer" data-info="layer-estimate-edit"><span>글쓰기</span></button>
-                            <button type="button" class="btn-round delete open-layer" data-info="layer-estimate-delete"><span>지우기</span></button>
+                            <button type="button" class="btn-round edit gray"><span>글쓰기</span></button><!-- 2022-01-31 -->
+                            <button type="button" class="btn-round delete gray"><span>지우기</span></button><!-- 2022-01-31 -->
                           </div>
                         </div>
                         <p class="txt">도배, 마루 견적서</p>
@@ -513,7 +538,7 @@
                       <li>
                         <div class="tbl-top">
                           <div class="top-title">
-                            <span class="badge position gray">대표</span><var class="name">n차 견적서</var>
+                            <span class="badge position on">대표</span><var class="name">n차 견적서</var><!-- 2022-01-31 -->
                           </div>
                           <div class="group">
                             <button type="button" class="btn-round edit open-layer" data-info="layer-estimate-edit"><span>글쓰기</span></button>
@@ -537,8 +562,8 @@
                             <span class="badge position gray">대표</span><var class="name">n차 견적서</var>
                           </div>
                           <div class="group">
-                            <button type="button" class="btn-round edit open-layer" data-info="layer-estimate-edit"><span>글쓰기</span></button>
-                            <button type="button" class="btn-round delete open-layer" data-info="layer-estimate-delete"><span>지우기</span></button>
+                            <button type="button" class="btn-round edit gray"><span>글쓰기</span></button><!-- 2022-01-31 -->
+                            <button type="button" class="btn-round delete gray"><span>지우기</span></button><!-- 2022-01-31 -->
                           </div>
                         </div>
                         <p class="txt">도배, 마루 견적서</p>
@@ -560,36 +585,39 @@
                     <label for="interlink_all"><span class="box"></span><span>전체 연동하기</span></label>
                   </div>
 
-                  <!-- 링크 -->
-                  <ul class="list-linkbox link">
-                    <li>
-                      <a href="#">
-                        <div class="checkbox">
-                          <input type="checkbox" name="interlink" id="interlink01" class="check">
-                          <label for="interlink01"><span class="box"></span><span><span class="badge position on">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var></span></label>
-                        </div>
-                        <ul class="info-list">
-                          <li><span class="head">번호</span><span class="desc">010.1234.5678</span></li>
-                          <li><span class="head">주소</span><span class="desc">서울특별시 성복구 길음동1232-13 현미건물 3층</span></li>
-                        </ul>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <div class="checkbox">
-                          <input type="checkbox" name="interlink" id="interlink02" class="check">
-                          <label for="interlink02"><span class="box"></span><span><span class="badge position">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var></span></label>
-                        </div>
-                        <ul class="info-list">
-                          <li><span class="head">번호</span><span class="desc">010.1234.5678</span></li>
-                          <li><span class="head">주소</span><span class="desc">서울특별시 성복구 길음동1232-13 현미건물 3층</span></li>
-                        </ul>
-                      </a>
-                    </li>
-                  </ul>
+                  <!-- 링크 2022-02-31 -->
+                  <div class="list-linkbox-wrap">
+                    <ul class="list-linkbox link">
+                      <li>
+                        <a href="#">
+                          <div class="checkbox">
+                            <input type="checkbox" name="interlink" id="interlink01" class="check">
+                            <label for="interlink01"><span><span class="box"></span><button type="button" class="badge position on">대표</button><!-- 2022-01-31  --><var class="name">홍길동</var><var class="date">21.10.31</var></span></label>
+                          </div>
+                          <ul class="info-list">
+                            <li><span class="head">연락처</span><span class="desc">010.1234.5678</span></li><!-- 2022-01-31 -->
+                            <li><span class="head">주소</span><span class="desc">서울특별시 성복구 길음동1232-13 현미건물 3층</span></li>
+                          </ul>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="checkbox">
+                            <input type="checkbox" name="interlink" id="interlink02" class="check">
+                            <label for="interlink02"><span><span class="box"></span><button type="button" class="badge position">대표</button><!-- 2022-01-31  --><var class="name">홍길동</var><var class="date">21.10.31</var></span></label>
+                          </div>
+                          <ul class="info-list">
+                            <li><span class="head">연락처</span><span class="desc">010.1234.5678</span></li><!-- 2022-01-31 -->
+                            <li><span class="head">주소</span><span class="desc">서울특별시 성복구 길음동1232-13 현미건물 3층</span></li>
+                          </ul>
+                        </a>
+                      </li>
+                    </ul>
 
-                  <div class="btn-group btm">
-                    <button type="button" class="btn-l btn-bk open-layer" data-info="layer-info-total"><span>연동하기</span></button>
+                    <div class="btn-group btm">
+                      <button type="button" class="btn-l btn-bk open-layer" data-info="layer-info-total"><span>연동하기</span></button>
+                    </div>
+
                   </div>
                 </div>
               </section>
@@ -618,7 +646,7 @@
         </div>
         <div class="inp-line">
           <span class="inp">
-            <input type="text" name="" placeholder="팀원명을 검색하세요.">
+            <input type="text" name="" placeholder="팀원명으로 검색"><!-- 2022-01-31 -->
           </span>
           <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
         </div>
@@ -661,7 +689,7 @@
     </div>
   </div>
 
-  <div class="layer-pop" id="layer-estimate-upload">
+  <div class="layer-pop" id="layer-estimate-upload"><!-- 2022-01-31 -->
     <div class="layer-cnt">
       <div class="layer-top">
         <h2 class="title">견적 업로드</h2>
@@ -680,8 +708,8 @@
             </div>
             <span class="tx-warn tx-org">견적 파일은 1개까지 첨부할 수 있습니다.</span>
           </div>
-
           <div class="filter-box">
+            <h2 class="title">견적 정보</h2><!-- 2022-01-31 -->
             <p class="filter-title">견적 제목</p>
             <span class="inp">
               <input type="text" name="" placeholder="시공명_견적서">
@@ -694,21 +722,20 @@
               <span class="inp">
                 <input type="text" name="" value="서울시 강남구 도산대로 145 (인무빌딩)" readonly>
               </span>
-              <button type="submit" class="btn btn-light-blue" disabled><span>주소 검색</span></button>
+              <button type="button" class="btn btn-light-blue disabled" ><span>주소 검색</span></button>
             </div>
             <div class="inp">
               <input type="text" name="" placeholder="상세주소" value="1310호" readonly>
             </div>
-            <span class="tx-warn tx-org">견적 주소는 고객 주소로 변경이 불가합니다.</span>
           </div>
 
           <div class="filter-box">
             <p class="filter-title">견적 금액</p>
             <span class="inp">
-              <input type="text" name="e_price" placeholder="0" value="123450000">
+              <input type="text" name="e_price" maxlength="15" placeholder="0"><!-- 2022-01-31 -->
               <span class="unit">원</span>
             </span>
-            <div class="tx-warn">고객 견적서에 <span class="tx-org">x억 x,xxx,x만원</span>으로 표출됩니다.</div>
+            <div class="tx-warn">고객 견적서에 <span class="tx-org">0원</span>으로 표출됩니다.</div>
           </div>
 
         </div><!-- filter wrap-->
@@ -723,13 +750,16 @@
   </div>
 
   <!-- 내용 수정 레이어 -->
-  <div class="layer-pop confirm" id="layer-revise">
+  <div class="layer-pop" id="layer-revise"><!-- 2022-01-31 -->
     <div class="layer-cnt">
       <div class="layer-mid">
-        <p class="confirm-msg">내용을 수정하시겠습니까?</p>
+        <p class="confirm-msg">고객 상태를 변경하시겠습니까?</p><!-- 2022-01-31 -->
         <div class="revise-box">
+          <p class="row"><span class="filter-title">상태</span><span class="badge consulting">상담 중</span></p><!-- 2022-01-31 -->
+
           <label for="textarea1" class="filter-title">메모</label>
-          <textarea name="" id="textarea1" class="textarea"></textarea>
+          <textarea name="" id="textarea1" class="textarea" placeholder="메모"></textarea><!-- 2022-01-31 -->
+
         </div>
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
@@ -748,7 +778,7 @@
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>삭제</span></button><!-- 2022-01-31 -->
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
@@ -766,7 +796,6 @@
           <p class="msg">n차 견적서를 삭제합니다.</p>
           <a href="sampletext.pdf" class="btn-link" target="_blank" download>sampletext.pdf</a>
         </div>
-
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
           <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
@@ -787,16 +816,15 @@
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>삭제</span></button><!-- 2022-01-31 -->
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
     </div>
   </div>
 
-
   <!-- 견적 공유 레이어 -->
-  <div class="layer-pop confirm" id="layer-estimate-share">
+  <div class="layer-pop" id="layer-estimate-share"><!-- 2022-01-31 confirm 삭제 -->
     <div class="layer-cnt">
       <div class="layer-top">
         <h2 class="title">견적 공유하기</h2>
@@ -816,7 +844,7 @@
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>공유</span></button><!-- 2022-01-31 -->
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
@@ -835,7 +863,7 @@
             <p class="filter-title">파일</p>
             <div class="inp-line">
               <span class="inp filebox">
-                <input type="text" class="upload-name" value="" placeholder="첨부파일" readonly>
+                <input type="text" class="upload-name" value="" placeholder="파일 검색" readonly><!-- 2022-01-31 -->
                 <input type="file" name="" id="file2" placeholder="파일 검색">
                 <button type="button" class="pos btn-remove"><span class="txt hide">내용삭제</span></button>
               </span>
@@ -863,16 +891,15 @@
             <div class="inp">
               <input type="text" name="" placeholder="상세주소" value="1310호" readonly>
             </div>
-            <span class="tx-warn tx-org">견적 주소는 고객 주소로 변경이 불가합니다.</span>
           </div>
 
           <div class="filter-box">
             <p class="filter-title">견적 금액</p>
             <span class="inp">
-              <input type="text" name="e_price" placeholder="0" value="123450000">
+              <input type="text" name="e_price" maxlength="15" placeholder="0">
               <span class="unit">원</span>
             </span>
-            <div class="tx-warn">고객 견적서에 <span class="tx-org">x억 x,xxx,x만원</span>으로 표출됩니다.</div>
+            <div class="tx-warn">고객 견적서에 <span class="tx-org">0원</span>으로 표출됩니다.</div>
           </div>
 
         </div><!-- filter wrap-->
@@ -887,10 +914,10 @@
   </div>
 
   <!-- 고객 연동 레이어 -->
-  <div class="layer-pop confirm" id="layer-info-total">
+  <div class="layer-pop" id="layer-info-total"><!-- 2022-01-31 -->
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">고객 연동</h2>
+        <h2 class="title">연동하기</h2><!-- 2022-01-31 -->
       </div>
       <div class="layer-mid">
         <div class="msg-box">
@@ -902,7 +929,7 @@
             <li>
               <span class="badge position blue">대표</span><var class="name">홍길동</var><var class="date">21.10.31</var></span>
               <ul class="info-list">
-                <li><span class="head">번호</span><span class="desc">010.1234.5678</span></li>
+                <li><span class="head">연락처</span><span class="desc">010.1234.5678</span></li><!-- 2022-01-31 -->
                 <li><span class="head">주소</span><span class="desc">서울특별시 성복구 길음동1232-13 현미건물 3층</span></li>
               </ul>
             </li>
@@ -913,7 +940,7 @@
 
         <div class="layer-btn tr">
           <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
-          <button type="button" class="btn btn-bk layer-close btn-ok"><span>확인</span></button>
+          <button type="button" class="btn btn-bk layer-close btn-ok"><span>연동</span></button><!-- 2022-01-31 -->
         </div>
       </div>
       <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
@@ -1001,6 +1028,14 @@
     </div>
   </div>
 
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-revise" style="font-size:16px"><span>수정하기</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-estimate-upload" style="font-size:16px"><span>견적 업로드</span></button><br>
+      <button type="button" class="btn-link open-layer" data-info="layer-estimate-edit" style="font-size:16px"><span>견적 수정</span></button><br>
+  </div>
+
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
   <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
@@ -1018,23 +1053,58 @@
     //input button 활성화 - file 포함 시
     inpFileActiveFunc ("#layer-estimate-upload .layer-cnt",".confirm")
     inpFileActiveFunc ("#layer-estimate-edit .layer-cnt",".confirm")
+
     //체크 기능
     agreeChkFunc(".manager-box","manager_all")
     agreeChkFunc ("#tab3", "interlink_all")
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
-
+    //2022-01-31
     autoCommasFunc("e_price")
     inputPageSelect ("ui_select",".tbl-type1",".list-linkbox.card")
+    //2022-01-31
+    ToastFunc("#layer-custom-delete .btn-ok",'고객 정보가 삭제되었습니다',2000)
+    ToastFunc("#layer-customer-share .btn-ok",'클립보드에 복사되었습니다',2000)
 
-    //alert
-    var alertBtn = document.querySelector('.open-confirm');
-    var confirmCallback = function(){
-        console.log('컨펌용 콜백');
+    //2022-01-31
+    function listLinkBoxFunc() {
+      var roundBtn = document.querySelectorAll(".list-linkbox.card .btn-round")
+      var shareBtn = document.querySelectorAll(".list-linkbox.card .btn.btn-gray")
+      var badgedBtn = document.querySelectorAll(".list-linkbox .badge.position")
+
+      Array.prototype.forEach.call(roundBtn, function(round, idx){
+        round.addEventListener("click",function(e){
+          ToastFunc(null,'공유가 완료된 견적서는 수정 및 삭제가 불가합니다',2000)
+
+        })
+      })
+      Array.prototype.forEach.call(shareBtn, function(share, idx){
+        share.addEventListener("click",function(e){
+          ToastFunc(null,'이미 공유 완료된 견적서입니다',2000)
+        })
+      })
+      Array.prototype.forEach.call(badgedBtn, function(badge, idx){
+        badge.addEventListener("click",function(e){
+          e.preventDefault();
+          Array.prototype.forEach.call(badgedBtn, function(badge, idx){
+            badge.classList.remove("on")
+          })
+          e.currentTarget.classList.add("on")
+        })
+      })
+
     }
-    alertBtn.addEventListener('click', function(){
-      layerConfirm(confirmCallback, '', '내용을 수정하시겠습니까?', '취소', '확인');
-    });
+    listLinkBoxFunc()
+
+    inpEditFunc ()//2022-01-31
+    //alert
+    // var alertBtn = document.querySelector('.open-confirm');
+    // var confirmCallback = function(){
+    //     console.log('컨펌용 콜백');
+    // }
+    // alertBtn.addEventListener('click', function(){
+    //   layerConfirm(confirmCallback, '', '내용을 수정하시겠습니까?', '취소', '확인');
+    // });
   </script>
 </body>
 </html>
