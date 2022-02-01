@@ -268,6 +268,8 @@
 .inp-select li.disabled {display:none}
 .inp-select .nice-select .option.selected {background-color:#E1E5EF; font-weight:bold; color:#02164F;}
 
+span.inp-select + span.inp-select {margin-left:6px}
+
 .row-list {display:flex; }
 .row-list > * + * {margin-left:10px;}
 .row-list .inp{ width:280px;}
@@ -1261,3 +1263,50 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .select-box > .inbox li .btn-close {margin-top:-10px}
 .select-box > .inbox li img {margin-right:12px;}
 .select-box > .inbox li .txt {margin-left:6px}
+
+/* 통계 분석 */
+.static-inpbox {margin-bottom:16px}
+.static-inpbox span.inp-select .nice-select {display: inline-block; width:auto; }
+.static-inpbox span.inp-select .nice-select .current {color:#9A9A9A}
+.inp-select select[name="year"] + .nice-select {width:100px}
+.inp-select select[name="month"] + .nice-select {width:80px}
+.customer-state-box {margin-bottom:20px; display:flex}
+.customer-state-box > li {position: relative; }
+.customer-state-box > li + li {margin-left:40px; padding-left:40px; }
+.customer-state-box > li + li:before {position:absolute; top:0 ; bottom:0; left:0px; margin:auto; display: inline-block; width:1px; height:54px; background: #E6E6E6; content:''}
+.customer-state-box .profile-name {margin-bottom:7px; font-weight: bold; font-size: 15px; line-height: 22px; color: #7C8094;}
+.customer-state-box .info-cnt {display: inline-block;}
+.customer-state-box .info-cnt .num {display: inline-block; padding-right:4px; max-width: 295px; font-family: Lato; font-weight: 500;font-style: italic;font-size: 36px;line-height: 43px;color: #4E4B5C;overflow: hidden;}
+.customer-state-box .info-cnt strong.num {font-weight:bold}
+.customer-state-box .info-cnt .unit {font-weight: 500; font-size: 16px; line-height: 23px; color: #4E4B5C; vertical-align: 10px;}
+.cnt-wrapbox {display: flex; margin-bottom:20px;}
+.cnt-wrapbox .cnt-box.colbox {padding:22px 20px; border: 1px solid #E6E6E6; box-sizing: border-box; border-radius: 10px;}
+.cnt-wrapbox ul.cnt-box.colbox {display: flex; width:1200px; }
+.cnt-wrapbox div.cnt-box.colbox {width:520px; padding-bottom:8px }
+.cnt-wrapbox .cnt-box.colbox > li + li {border-left: 1px solid #02164F;}
+.cnt-wrapbox .cnt-box.colbox .filter-title {margin-bottom:6px}
+.cnt-wrapbox .tx-gray {margin-bottom:30px}
+
+.bar-chart-wrap {margin-top:8px}
+.bar-chart-wrap > li {position: relative; padding-right:90px; padding-top:16px; padding-bottom:16px; }
+.bar-chart-wrap > li + li {border-top:1px solid #F3F3F3;}
+.bar-chart-wrap > li .bars {position:relative; width:100%; margin-right:90px; height:10px; background: rgba(29, 88, 255, 0.06); border-radius: 12px;}
+.bar-chart-wrap > li .bars .bar {position:absolute; top:0; left:0; width:100%; height:100%; background: #1D58FF; border-radius: 12px;}
+.bar-chart-wrap > li .value {position: absolute; bottom:16px; right:0; color: #1D58FF;}
+.bar-chart-wrap > li .name {display:block; margin-bottom:12px; font-weight: bold; font-size: 14px; line-height: 20px; color: #555868;}
+.bar-chart-wrap > li .value var {padding-right:4px;max-width: 67px;font-style: italic;font-weight: 500;font-size: 22px;line-height: 26px;color: #1D58FF;overflow: hidden;display: inline-block;vertical-align: -5px;}
+.bar-chart-wrap > li .value .unit {font-size:14px; line-height:21px}
+
+.cnt-inner .content-box.statics .filter-title02 {margin-bottom:14px}
+.cnt-wrapbox.col2 {margin-bottom:14px; justify-content: space-between;}
+.cnt-wrapbox.col2 div.cnt-box.colbox {width:calc(50% - 10px); height:294px;}
+.cnt-wrapbox.col2 div.cnt-box.colbox:first-child .analysis-section {height:210px;}
+.cnt-wrapbox.col2 div.cnt-box.colbox:first-child .filter-title {margin-bottom:21px}
+.cnt-wrapbox.col2 div.cnt-box.colbox:nth-child(2) .analysis-section {height:178px;}
+.cnt-wrapbox.col2 div.cnt-box.colbox:nth-child(2) .filter-title {margin-bottom:12px}
+.cnt-wrapbox .tx-gray.dot {position:relative;  margin-left:10px; padding-left:8px;}
+.cnt-wrapbox .tx-gray.dot:before {position:absolute; top:2px; left:0px; display: inline-block; width:6px; height:6px; border-radius: 50%; background: #1D58FF; content:''}
+.analysis-section {height:100%;background: #EAEAEA;}
+.num-info {margin-bottom:10px}
+.num-info .num {font-style: italic; padding-right:4px; font-weight: bold; font-size: 26px; line-height: 31px; color: #555868;}
+.num-info .unit { font-weight: 400; font-size: 14px; line-height: 21px; color: #555868;}
