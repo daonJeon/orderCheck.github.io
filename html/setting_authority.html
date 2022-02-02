@@ -98,23 +98,23 @@
               <li>
                 <span class="menu-name card">결제 관리</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                  <li><a href="setting_subManager-plan.html" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="setting_autoCharge.html" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 내역</span></a></li>
                 </ul>
               </li>
               <li>
-                <span class="menu-name layout">신청폼 설정</span>                
+                <span class="menu-name layout">신청폼 설정</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                  <li><a href="setting_permission-list.html" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                 <li><a href="setting_permission-white.html" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
                 </ul>
               </li>
               <li>
                 <span class="menu-name chat">채팅 설정</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
+                  <li><a href="setting_template.html" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li><a href="setting_chatting.html" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
                 </ul>
               </li>
             </ul>
@@ -130,6 +130,7 @@
                 <div class="searchbox">
                   <i class='ico search'></i>
                   <input type="text" placeholder="검색해보세요.">
+                  <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
                 </div>
               </li>
               <li>
@@ -191,65 +192,65 @@
             <div class="setting-top-wrap">
               <p class="inp-title">템플릿 목록</p>
             </div>
-              <div class="tbl-top">
-                <div class="search-box-wrap flexbox">
+            <div class="tbl-top">
+              <div class="search-box-wrap flexbox">
+                <!-- select -->
+                <div class="inp-select">
+                  <select name="templateSearch">
+                    <option value="name">템플릿명</option>
+                    <option value="mail">생성자</option>
+                  </select>
                   <!-- select -->
-                  <div class="inp-select">
-                    <select name="templateSearch">
-                      <option value="name">템플릿명</option>
-                      <option value="mail">생성자</option>
-                    </select>
-                    <!-- select -->
-                  </div>
-                  <div class="inp-line">
-                    <span class="inp">
-                      <input type="text" name="" placeholder="검색어 입력">
-                    </span>
-                    <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
-                  </div>
                 </div>
-                <a href="#" class="btn02 btn-bk open-layer" data-info="layer-auth-set"><span>템플릿 추가</span></a>
+                <div class="inp-line">
+                  <span class="inp">
+                    <input type="text" name="" placeholder="검색어 입력">
+                  </span>
+                  <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
+                </div>
               </div>
-              <!-- 리스트 -->
-              <div class="tbl-type1">
-                <table>
-                  <caption>고객 리스트 정보</caption>
-                  <colgroup>
-                    <col style="width:28%">
-                    <col style="width:32%">
-                    <col style="width:18%">
-                    <col style="width:22%">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">템플릿명</th>
-                      <th scope="col">등록일</th>
-                      <th scope="col">생성자</th>
-                      <th scope="col">최근 수정</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="#"><span>영업사원</span></a></td>
-                      <td><a href="#"><span>2021.12.30</span></a></td>
-                      <td><a href="#"><span>홍길동</span></a></td>
-                      <td><a href="#"><span>2021.12.30 14:30 홍길동</span></a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="#"><span>팀원</span></a></td>
-                      <td><a href="#"><span>2021.12.30</span></a></td>
-                      <td><a href="#"><span>홍길동</span></a></td>
-                      <td><a href="#"><span>-</span></a></td>
-                    </tr>
-                    <tr>
-                      <td><a href="#"><span>소유주</span></a></td>
-                      <td><a href="#"><span>2021.12.30</span></a></td>
-                      <td><a href="#"><span>홍길동</span></a></td>
-                      <td><a href="#"><span>-</span></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <a href="#" class="btn02 btn-bk open-layer" data-info="layer-auth-set"><span>템플릿 추가</span></a>
+            </div>
+            <!-- 리스트 -->
+            <div class="tbl-type1">
+              <table>
+                <caption>고객 리스트 정보</caption>
+                <colgroup>
+                  <col style="width:28%">
+                  <col style="width:32%">
+                  <col style="width:18%">
+                  <col style="width:22%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">템플릿명</th>
+                    <th scope="col">등록일</th>
+                    <th scope="col">생성자</th>
+                    <th scope="col">최근 수정</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="#"><span>영업사원</span></a></td>
+                    <td><a href="#"><span>2021.12.30</span></a></td>
+                    <td><a href="#"><span>홍길동</span></a></td>
+                    <td><a href="#"><span>2021.12.30 14:30 홍길동</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><span>팀원</span></a></td>
+                    <td><a href="#"><span>2021.12.30</span></a></td>
+                    <td><a href="#"><span>홍길동</span></a></td>
+                    <td><a href="#"><span>-</span></a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><span>소유주</span></a></td>
+                    <td><a href="#"><span>2021.12.30</span></a></td>
+                    <td><a href="#"><span>홍길동</span></a></td>
+                    <td><a href="#"><span>-</span></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
           </div>
         </div>

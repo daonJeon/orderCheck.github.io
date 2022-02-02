@@ -87,6 +87,7 @@
                 <div class="searchbox">
                   <i class='ico search'></i>
                   <input type="text" placeholder="검색해보세요.">
+                  <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
                 </div>
               </li>
               <li>
@@ -258,7 +259,7 @@
                 </div>
 
                 <span class="inp">
-                  <input type="text" name="" placeholder="고객명/연락처/주소를 검색하세요.">
+                  <input type="text" name="" placeholder="고객명,연락처,주소로 검색"><!-- 2022-01-31 -->
                 </span>
                 <button type="button" class="btn btn-bk-line"><span>검색</span></button>
                 <button type="button" class="btn btn-bk open-layer" data-info="layer-customer-enroll"><span><i class="ico plus"></i>신규고객등록</span></button>
@@ -269,13 +270,14 @@
               <table>
                 <caption>고객 리스트 정보</caption>
                 <colgroup>
-                  <col style="width:100px">
-                  <col style="width:300px">
-                  <col style="width:128px">
-                  <col style="width:332px">
+                  <!-- 2022-01-31 -->
+                  <col style="width:83px">
+                  <col style="width:313px">
                   <col style="width:174px">
-                  <col style="width:167px">
-                  <col style="width:138px">
+                  <col style="width:383px">
+                  <col style="width:148px">
+                  <col style="width:109px">
+                  <col style="width:129px">
                 </colgroup>
                 <thead>
                   <tr>
@@ -444,7 +446,7 @@
         </div>
         <div class="inp-line">
           <span class="inp">
-            <input type="text" name="" placeholder="담당자명을 검색하세요.">
+            <input type="text" name="" placeholder="담당자명으로 검색"><!-- 2022-01-31 -->
           </span>
           <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
         </div>
@@ -508,7 +510,7 @@
             <div class="inp">
               <input type="text" name="" id="" placeholder="고객명" value="">
             </div>
-            <span class="tx-warn tx-org">고객명을 알맞게 입력해주세요</span>
+            <p class="tx-warn tx-org">고객명을 알맞게 입력해주세요</p><!-- 2022-01-31 -->
           </div>
 
           <div class="filter-box">
@@ -516,19 +518,22 @@
             <div class="inp">
               <input type="tel" name="" id="" placeholder="연락처" value="">
             </div>
+            <p class="tx-warn tx-org">정확한 연락처를 입력해주세요</p><!-- 2022-01-31 -->
+            <p class="tx-warn tx-org">연락처를 입력해주세요</p><!-- 2022-01-31 -->
           </div>
 
           <div class="filter-box">
             <p class="filter-title">주소</p>
             <div class="inp-line">
               <span class="inp">
-                <input type="text" name="" >
+                <input type="text" name="지번,도로명,건물명" ><!-- 2022-01-31 -->
               </span>
               <button type="submit" class="btn btn-light-blue"><span>주소 검색</span></button>
             </div>
             <div class="inp">
               <input type="text" name="" placeholder="상세주소">
             </div>
+            <p class="tx-warn tx-org">지번,도로명,건물명 주소를 입력해주세요</p><!-- 2022-01-31 -->
           </div>
 
           <div class="filter-box">
@@ -536,25 +541,28 @@
             <div class="inp-row">
 
              <div class="inp">
-               <input type="text" name="" id="" class="cal" value="000">
+               <input type="text" name="" id="" class="cal" value="0"><!-- 2022-01-31 -->
                <span class="unit">평</span>
              </div>
              <!-- select -->
              <div class="inp-select">
-              <select name="areaType" style="width:100%;">
-                <option value="000">공급</option>
-                <option value="001">전용</option>
-              </select>
+               <select name="areaType" style="width:100%;">
+                  <option value="000">공급</option>
+                  <option value="001">전용</option>
+                </select>
+              </div>
             </div>
-
-            </div>
+            <p class="tx-warn tx-org">평형을 입력해주세요</p><!-- 2022-01-31 -->
           </div>
 
           <div class="filter-box">
             <p class="filter-title">담당자</p>
-            <span class="inp">
-              <input type="text" name="" placeholder="담당자 없음">
-            </span>
+            <div class="inp-line">
+              <span class="inp">
+                <input type="text" name="" placeholder="담당자 없음">
+              </span>
+              <button type="button" class="btn btn-light-blue open-layer" data-info="layer-manager-assign"><span>담당자 배정</span></button>
+            </div>
           </div>
         </div><!-- filter wrap-->
 
@@ -598,7 +606,7 @@
       "daysOfWeek": ["일", "월", "화", "수", "목", "금", "토"],
       "monthNames": ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
       },
-      opens: 'center',
+      opens: 'right',//2022-01-31
       timePicker: false,
       buttonClasses: "btn",
       applyButtonClasses: "btn-bk",

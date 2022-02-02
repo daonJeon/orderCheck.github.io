@@ -79,12 +79,13 @@
       <!-- header -->
       <div class="header-wrap">
         <header id="header" class="header">
-          <h2 class="title">파일보관함</h2>
+          <h2 class="title">파일 보관함</h2>
           <ul class="menu">
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
                 <input type="text" placeholder="검색해보세요.">
+                <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
               </div>
             </li>
             <li>
@@ -137,9 +138,8 @@
       <!-- location -->
       <ul class="location-wrap">
         <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
-        <li><a href="file_storage.html">파일보관함</a></li>
-        <li>홍길동</li>
-        <li>실측사진</li>
+        <li><a href="file_storage.html">파일 보관함</a></li>
+        <li>김수안무거북이와두루미</li>
       </ul>
       <!-- //location -->
 
@@ -149,7 +149,7 @@
 
             <div class="content-box">
               <div class="searchbox type02">
-                <i class="ico search"></i>
+                <i class="ico search02"></i>
                 <input type="text" placeholder="고객명, 연락처, 폴더/파일명으로 검색">
                 <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button>
               </div>
@@ -157,7 +157,7 @@
               <div class="border-topbox flexbox">
                 <div class="border-box">
                   <div class="search-top">
-                    <strong class="txt">전체<var class="tx-org">2</var></strong>
+                    <p class="txt">전체<strong class="tx-org">3</strong></p><!-- 2022-01-25 -->
                   </div>
                   <div class="profile-list">
                     <div class="inbox">
@@ -171,8 +171,8 @@
 
                 </div>
                 <div class="cnt-box">
-                  <div class="tbl-top">
-                    <h3 class="cnt-title02">김수안무거북이와두루미삼천갑자</h3>
+                  <div class="flex-sidebox top">
+                    <h3 class="cnt-title02">김수안무거북이와두루미</h3>
                     <div class="flexbox">
                       <span class="inp-select">
                         <select name="" id="">
@@ -191,10 +191,24 @@
 
                   </div>
                   <p class="filter-title">폴더</p>
-                  <button type="button" class="btn-folder"><span>실측 사진</span></button>
+                  <div class="item-wrap">
+                    <button type="button" class="btn-folder">실측 사진</button><!-- 2022-01-25 -->
+                    <!-- btn-file-list -->
+                    <div class="dropdown-wrap fileList pos02">
+                      <div class="dropdown-box">
+                        <ul>
+                          <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-rename"><span>이름 바꾸기</span></a></li>
+                          <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-detail"><span>상세 정보</span></a></li>
+                          <li><a href="#" class="btn-drop-menu download"><span>다운로드</span></a></li>
+                          <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-delete"><span>삭제</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- //btn-file-list -->
+                  </div>
                   <p class="filter-title">파일</p>
                   <ul class="file-box flexbox">
-                    <li>
+                    <li class="item-wrap">
                       <div class="imgs">
                         <img src="../resource/images/common/@temp_file-list.png" alt="">
                         <p class="txt">도면.jpeg</p>
@@ -212,21 +226,31 @@
                       </div>
                       <!-- //btn-file-list -->
                     </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
+                    <li class="item-wrap"></li>
                   </ul>
                   <div class="dropdown-wrap fileBox">
                     <div class="dropdown-box">
                       <ul>
                         <li><a href="#" class="btn-drop-menu open-layer" data-info="layer-file-new"><span>새 폴더</span></a></li>
-                        <li><a href="#" class="btn-drop-menu"><span>파일 업로드</span></a></li>
-                        <li><a href="#" class="btn-drop-menu"><span>폴더 업로드</span></a></li>
+                        <li>
+                          <span class="inp">
+                            <input type="file" name="" id="file1" placeholder="파일 검색">
+                            <label for="file1" class="btn-drop-menu"><span>파일 업로드</span></label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="inp">
+                            <input type="file" name="" id="file2" placeholder="파일 검색">
+                            <label for="file2" class="btn-drop-menu"><span>폴더 업로드</span></label>
+                          </span>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -252,7 +276,7 @@
       <div class="layer-mid">
         <label for="filleRename" class="filter-title">이름</label>
         <div class="inp">
-          <input type="text" name="" id="filleRename" placeholder="실측사진">
+          <input type="text" name="" id="filleRename" value="도면.jpeg">
         </div>
 
         <div class="layer-btn tr">
@@ -303,7 +327,7 @@
   <div class="layer-pop confirm" id="layer-file-detail">
     <div class="layer-cnt">
       <div class="layer-top">
-        <h2 class="title">도면.jpg 상세 정보</h2>
+        <h2 class="title">도면.jpeg 상세 정보</h2>
       </div>
       <div class="layer-mid">
         <ul class="info-list row">
@@ -487,12 +511,17 @@
     inpTypeSwitch()
 
 
+
     function fileBoxDropMenuFunc () {
       var dropMenuWrap = document.querySelector(".dropdown-wrap.fileBox")
       var dropMenuBox = document.querySelector(".dropdown-wrap.fileBox .dropdown-box")
       var dropMenuDim = document.querySelector(".dropdown-wrap.fileBox .dim")
       var dropMenuAll = document.querySelectorAll(".dropdown-wrap")
+      var targetEle = ''
 
+      document.querySelector(".filePage .cnt-box, .btn-folder").addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+      });
       document.querySelector(".filePage .cnt-box").addEventListener("mousedown",function(e){
 
         if(e.target.className == "cnt-box"||e.target.className == "tbl-top") {
@@ -522,10 +551,11 @@
         }
 
       })
+
       document.querySelector(".filePage .cnt-box").addEventListener("click",function(e){
         var target;
         e.target.tagName == "SPAN"? target = e.target.parentElement : target = e.target
-        dropMenuDim.style.display = "none"
+       // dropMenuDim.style.display = "none"
           dropMenuBox.classList.remove("on");
 
       })
@@ -537,9 +567,9 @@
       var dropMenuAll = document.querySelectorAll(".dropdown-wrap")
       var dropMenuDim = document.querySelector(".dropdown-wrap.fileList .dim")
 
-      document.querySelector(".file-box").addEventListener("mousedown",function(e){
-        var dropMenuBox = e.target.closest("li").querySelector(".dropdown-box")
-        if(e.target.tagName == "IMG"||e.target.tagName == "LI") {
+      document.querySelector(".file-box,.filePage .cnt-box").addEventListener("mousedown",function(e){
+        var dropMenuBox = e.target.closest(".item-wrap").querySelector(".dropdown-box")
+        if(e.target.tagName == "IMG"||e.target.tagName == "LI"||e.target.className == "btn-folder") {
 
           Array.prototype.forEach.call(dropMenuAll, function(dropAll, idx){
             dropAll.querySelector(".dropdown-box").classList.remove("on")
@@ -562,12 +592,11 @@
               e.preventDefault();
           });
         }
-        dropMenuDim.addEventListener('click', function(e) {
-          alert()
-            e.preventDefault();
-            dropMenuDim.style.display = "none"
-            dropMenuBox.classList.remove("on");
-        });
+        // dropMenuDim.addEventListener('click', function(e) {
+        //     e.preventDefault();
+        //     dropMenuDim.style.display = "none"
+        //     dropMenuBox.classList.remove("on");
+        // });
 
       })
       document.querySelector(".filePage .cnt-box").addEventListener("click",function(e){

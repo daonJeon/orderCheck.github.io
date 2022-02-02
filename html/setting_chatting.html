@@ -99,22 +99,22 @@
               <li>
                 <span class="menu-name card">결제 관리</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                  <li><a href="setting_subManager-plan.html" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="setting_autoCharge.html" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 내역</span></a></li>
                 </ul>
               </li>
               <li>
-                <span class="menu-name layout">신청폼 설정</span>                
+                <span class="menu-name layout">신청폼 설정</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                  <li><a href="setting_permission-list.html" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                 <li><a href="setting_permission-white.html" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
                 </ul>
               </li>
               <li>
                 <span class="menu-name chat">채팅 설정</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li><a href="setting_template.html" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
                   <li class="on"><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
                 </ul>
               </li>
@@ -131,6 +131,7 @@
                 <div class="searchbox">
                   <i class='ico search'></i>
                   <input type="text" placeholder="검색해보세요.">
+                  <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
                 </div>
               </li>
               <li>
@@ -191,7 +192,7 @@
           <div class="cnt-box setting">
             <div class="tab-wrap">
               <ul class="tabs">
-                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">운영 시간</button></li>
+                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">운영시간</button></li>
                 <li><button type="button" class="tab-btn" data-tab="tab2">부재중 안내</button></li>
                 <li><button type="button" class="tab-btn" data-tab="tab3">휴무일 설정</button></li>
               </ul>
@@ -453,12 +454,12 @@
 
               </div>
               <div class="content" id="tab3">
-                <div class="flex-sidebox center">
+                <div class="tbl-top">
                   <p class="tx-alert01">공휴일 및 임시 휴일을 설정해보세요.<br>
                     설정한 기간 및 휴일에 고객이 메세지를 보낸 경우 부재중 안내 메세지가 발송됩니다.</p>
                     <button type="button" class="btn02 btn-bk"><span>휴무일 추가</span></button>
                 </div>
-                
+
                 <!-- 리스트 -->
                 <div class="tbl-type1">
                   <table>
@@ -585,7 +586,7 @@
                 </span>
                 <span class="txt-form">일</span>
               </div>
-              
+
             </div>
         </div>
 

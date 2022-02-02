@@ -99,23 +99,23 @@
               <li>
                 <span class="menu-name card">결제 관리</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>구독 관리</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2">자동 문자 충전</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                  <li><a href="setting_subManager-plan.html" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="setting_autoCharge.html" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 내역</span></a></li>
                 </ul>
               </li>
               <li>
-                <span class="menu-name layout">신청폼 설정</span>                
+                <span class="menu-name layout">신청폼 설정</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                  <li><a href="setting_permission-list.html" class="btn-nav-dep2"><span>열람 권한</span></a></li>
                   <li class="on"><a href="#" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
                 </ul>
               </li>
               <li>
                 <span class="menu-name chat">채팅 설정</span>
                 <ul class="depth2">
-                  <li><a href="#" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
-                  <li><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
+                  <li><a href="setting_template.html" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li><a href="setting_chatting.html" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
                 </ul>
               </li>
             </ul>
@@ -124,13 +124,14 @@
         <!-- header -->
         <div class="header-wrap">
           <header id="header" class="header">
-            <h2 class="title">결제 내역</h2>
+            <h2 class="title">화이트 라벨링</h2>
 
             <ul class="menu">
               <li>
                 <div class="searchbox">
                   <i class='ico search'></i>
                   <input type="text" placeholder="검색해보세요.">
+                  <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
                 </div>
               </li>
               <li>
@@ -189,8 +190,7 @@
 
         <div class="cnt-box-wrap">
           <div class="cnt-box setting">
-            <p class="inp-title">신청폼 목록</p>
-            <p class="tx-alert01">오더체크 이용중 표시를 끄고 신청폼 하단의 오더체크 브랜딩을 지워보세요.
+            <p class="tx-alert01 tx-gray">오더체크 이용중 표시를 끄고 신청폼 하단의 오더체크 브랜딩을 지워보세요.
               <a href="#" target="_blank" class="ico info"><span class="hide">정보 페이지로 이동</span></a></p>
 
             <div class="label-set-box flexbox center">
@@ -226,7 +226,7 @@
 
         <div class="layer-btn tr">
           <button type="button" class="btn-link fl"><span>카드 삭제</span></button>
-          <a href="#" class="btn btn-bk"><span>카드 변경</span></a>
+          <button type="button" class="btn btn-bk"><span>확인</span></button>
         </div>
         <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
       </div>

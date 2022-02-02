@@ -1163,11 +1163,11 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .gnb-box.right.chatting .search {position: absolute; bottom:14px; right:5px;}
 .chatting-box .btn-drop {padding-right: 20px; font-weight: bold; font-size: 14px; line-height: 20px; color: #41495D;}
 .chatting-box .dropdown-wrap {display: inline-block;}
-.chatting-box .dropdown-wrap + .dropdown-wrap {margin-left:20px}
+.chatting-box .dropdown-wrap + .dropdown-wrap {margin-left:20px }
 .chatting-box .top {padding:20px 0; display: flex; align-items:center; justify-content: space-between;}
 .chatting-box .top .btn-plus {position: relative; top:0; right:0; background-color: #E1E5EF; border-color:#E1E5EF ;}
 .chatting-box .top .btn-plus:before,
-.chatting-box .top .btn-plus:after {left:10px; width:10px}
+.chatting-box .top .btn-plus:after {left:10px; width:10px;} 
 .chatting-box .badge {position: absolute; bottom: 0; right: 0; display:inline-block; width:auto; height:auto; padding:1px 8px 3px; background: #1D58FF; border-radius: 13px;font-weight: 500;
   font-size: 11px; line-height: 16px; text-align: center;	color: #FFFFFF;}
 .chatting-box .info .time {width:100%; white-space: nowrap; font-size: 13px;line-height: 19px;color: #9A9A9A;}

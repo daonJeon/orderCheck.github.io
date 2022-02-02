@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>설정</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/daterangepicker.css" />
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../resource/css/vendor/slick-theme.css"/>
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+</head>
+
+<body>
+
+  <div id="wrap">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
+        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="dashboard.html">
+            <i class='ico home'></i>
+            <span class="links_name">홈</span>
+          </a>
+        </li>
+        <li>
+          <a href="customManage_list.html">
+            <i class="ico user"></i>
+            <span class="links_name">고객 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="file_storage.html">
+            <i class='ico file'></i>
+            <span class="links_name">파일 보관함</span>
+          </a>
+        </li>
+        <li>
+          <a href="form_list.html">
+            <i class='ico form'></i>
+            <span class="links_name">상담 신청폼</span>
+          </a>
+        </li>
+       </ul>
+      <ul class="btm">
+        <li>
+          <a href="#">
+            <i class='ico help'></i>
+            <span class="links_name">자주 묻는 질문</span>
+          </a>
+        </li>
+        <li class="on">
+          <a href="setting_limit-plan.html">
+            <i class='ico setting'></i>
+            <span class="links_name">설정</span>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
+    </nav>
+    <section id="content" class="content-section setting">
+      <!-- #include file="include_header.html" -->
+        <aside class="setting-nav">
+          <div class="inbox">
+            <h2 class="inp-title">설정</h2>
+            <ul class="depth1">
+              <li>
+                <span class="menu-name company">회사 관리</span>
+                <ul class="depth2">
+                  <li><a href="setting_company-info.html" class="btn-nav-dep2"><span>회사 정보</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 관리</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="menu-name security">권한 관리</span>
+                <ul class="depth2">
+                  <li><a href="setting_authority.html"class="btn-nav-dep2"><span>권한 템플릿</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="menu-name card">결제 관리</span>
+                <ul class="depth2">
+                  <li><a href="setting_subManager-plan.html" class="btn-nav-dep2"><span>구독 관리</span></a></li>
+                  <li><a href="setting_autoCharge.html" class="btn-nav-dep2">자동 문자 충전</span></a></li>
+                  <li><a href="setting_payHistory.html" class="btn-nav-dep2"><span>결제 내역</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="menu-name layout">신청폼 설정</span>
+                <ul class="depth2">
+                  <li><a href="setting_permission-list.html" class="btn-nav-dep2"><span>열람 권한</span></a></li>
+                 <li><a href="setting_permission-white.html" class="btn-nav-dep2"><span>화이트 라벨링</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <span class="menu-name chat">채팅 설정</span>
+                <ul class="depth2">
+                  <li><a href="setting_template.html" class="btn-nav-dep2"><span>자주 쓰는 답변 템플릿</span></a></li>
+                  <li class="on"><a href="#" class="btn-nav-dep2"><span>채팅 운영 및 안내</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <!-- header -->
+        <div class="header-wrap">
+          <header id="header" class="header">
+            <h2 class="title">채팅 운영 및 안내</h2>
+
+            <ul class="menu">
+              <li>
+                <div class="searchbox">
+                  <i class='ico search'></i>
+                  <input type="text" placeholder="검색해보세요.">
+                  <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
+                </div>
+              </li>
+              <li>
+                <div class="dropdown-wrap">
+                  <button type="button" class="btn-drop">
+                    <div class="profile-details">
+                      <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                      <span class="name">홍길동님</span>
+                      <i class="arrow down"></i>
+                    </div>
+
+                  </button>
+                  <div class="dropdown-box">
+                    <ul>
+                      <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                      <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                      <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                      <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                   </ul>
+                  </div>
+                </div>
+              </li>
+              <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+              <li><button type="button" class="btn-menu" data-info="alarm"><i class="ico alarm"></i></button></li>
+            </ul>
+          </header>
+          <!-- /header -->
+
+          <aside id="side_right_menu" class="side-menu">
+            <div class="gnb-box right mail">
+                <ul class="clear">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+            <div class="gnb-box right alarm">
+                <ul class="clear">
+                    <li><a href="#">메뉴21</a></li>
+                    <li><a href="#">메뉴22</a></li>
+                    <li><a href="#">메뉴23</a></li>
+                </ul>
+                <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+            </div>
+           </aside>
+        </div>
+
+        <!-- location -->
+        <ul class="location-wrap">
+          <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
+          <li><a href="setting_company-info.html">설정</a></li>
+          <li><a href="setting_chatting.html">채팅 운영 및 안내</a></li>
+        </ul>
+        <!-- //location -->
+
+        <div class="cnt-box-wrap">
+          <div class="cnt-box setting">
+            <div class="tab-wrap">
+              <ul class="tabs">
+                <li><button type="button" class="tab-btn active" data-tab="tab1">운영시간</button></li>
+                <li><button type="button" class="tab-btn" data-tab="tab2">부재중 안내</button></li>
+                <li class="on"><button type="button" class="tab-btn" data-tab="tab3">휴무일 설정</button></li>
+              </ul>
+              <span class="slider" data-left="0"></span>
+            </div>
+            <section class="tab-content height-type02">
+              <div class="content" id="tab1">
+                <p class="tx-info02">요일을 선택하고 운영시간을 설정해보세요.<br>
+                  설정한 운영시간 외 시간 및 점심시간은 부재중 시간으로 자동 설정됩니다.</p>
+                <div class="operation-wrap">
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate01" class="check">
+                      <label for="operationDate01"><span class="box"></span><span class="txt">월요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate02" class="check">
+                      <label for="operationDate02"><span class="box"></span><span class="txt">화요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate03" class="check">
+                      <label for="operationDate03"><span class="box"></span><span class="txt">수요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate04" class="check">
+                      <label for="operationDate04"><span class="box"></span><span class="txt">목요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate05" class="check">
+                      <label for="operationDate05"><span class="box"></span><span class="txt">금요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate06" class="check">
+                      <label for="operationDate06"><span class="box"></span><span class="txt">토요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate07" class="check">
+                      <label for="operationDate07"><span class="box"></span><span class="txt">일요일</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                  <div class="inp-line-operation line">
+                    <span class="checkbox">
+                      <input type="checkbox" name="operationDate" id="operationDate08" class="check" checked>
+                      <label for="operationDate08"><span class="box"></span><span class="txt">점심시간</span></label>
+                    </span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                    <span class="txt-form">-</span>
+                    <span class="inp-select">
+                      <select name="" id="">
+                        <option value="off" class="off" disabled>휴무</option>
+                        <option value="10">10:00</option>
+                        <option value="11">11:00</option>
+                        <option value="12">12:00</option>
+                        <option value="13">13:00</option>
+                        <option value="14">14:00</option>
+                        <option value="15">15:00</option>
+                      </select>
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="content" id="tab2">
+                <div class="setting-top-wrap">
+                  <p class="tx-alert01">설정한 부재중 시간에 고객이 메세지를 보낸경우 표시되는 부재중 안내 메세지를 설정해보세요.</p>
+                </div>
+                <div class="login-wrap msgbox-wrap">
+                  <label for="absenceMsg" class="inp-title">메세지</label>
+                  <div class="textarea-revise-box">
+                    <textarea id="absenceMsg" class="textarea" placeholder="메세지를 입력해주세요"></textarea>
+                    <div class="box">
+                      <button type="button" class="btn-s btn-bk-line"><span>링크 수정</span></button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="content" id="tab3">
+                <div class="tbl-top ">
+                  <p class="tx-alert01">공휴일 및 임시 휴일을 설정해보세요.<br>
+                    설정한 기간 및 휴일에 고객이 메세지를 보낸 경우 부재중 안내 메세지가 발송됩니다.</p>
+                    <button type="button" class="btn02 btn-bk"><span>휴무일 추가</span></button>
+                </div>
+
+                <!-- 리스트 -->
+                <div class="tbl-type1">
+                  <table>
+                    <caption>고객 리스트 정보</caption>
+                    <colgroup>
+                      <col style="width:71%">
+                      <col style="width:21%">
+                      <col style="width:8%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">기간명</th>
+                        <th scope="col">휴무 기간</th>
+                        <th scope="col">수정</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>임시 휴무</td>
+                        <td>2021.12.30 - 2021.12.30</td>
+                        <td>수정</td>
+                      </tr>
+                      <tr>
+                        <td>추석 휴무</td>
+                        <td>2021.12.30 - 2021.12.30</td>
+                        <td>수정</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- empty -->
+                <div class="data-empty-box customer" style="display:none">
+                  <div class="txt-group">
+                    <p class="txt">구독 내용이 없습니다</p>
+
+                    <button type="button" class="btn btn-blue open-layer" data-info="layer-company-in"><span>구독 설정</span></button>
+
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+
+          </div>
+        </div>
+    </section>
+
+  </div>
+
+  <!-- 휴무일 추가 -->
+  <div class="layer-pop" id="layer-offday-add">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">휴무일 추가</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="login-wrap form-area">
+          <label for="offdayRange" class="inp-title">기간 명</label>
+          <div class="inp">
+            <input type="text" id="offdayRange">
+          </div>
+          <label for="templateCnt" class="inp-title">휴무 기간</label>
+          <div class="range-inp-line">
+              <div class="startday range-box">
+                <span class="inp-select">
+                  <select name="" id="">
+                    <option value="2021">2021</option>
+                  </select>
+                </span>
+                <span class="txt-form">년</span>
+                <span class="inp-select">
+                  <select name="" id="">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                  </select>
+                </span>
+                <span class="txt-form">월</span>
+                <span class="inp-select">
+                  <select name="" id="">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                  </select>
+                </span>
+                <span class="txt-form">일</span>
+              </div>
+              <span class="txt-form">-</span>
+              <div class="endday range-box">
+                <span class="inp-select">
+                  <select name="" id="">
+                    <option value="2021">2021</option>
+                  </select>
+                </span>
+                <span class="txt-form">년</span>
+                <span class="inp-select">
+                  <select name="" id="">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                  </select>
+                </span>
+                <span class="txt-form">월</span>
+                <span class="inp-select">
+                  <select name="" id="">
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                  </select>
+                </span>
+                <span class="txt-form">일</span>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-gray layer-close"><span>취소</span></button>
+          <button type="button" class="btn btn-bk"><span>확인</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- 개발 시 삭제 -->
+  <div id="fixmenu" style="position:fixed; bottom:0; right:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
+    <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
+      <button type="button" class="btn-link open-layer" data-info="layer-offday-add" style="font-size:16px"><span>휴무일 추가</span></button><br>
+  </div>
+
+  <!-- script -->
+  <script type="text/javascript" src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/moment.min.js"></script>
+  <script type="text/javascript" src="../resource/js/vendor/daterangepicker.js"></script>
+  <script type="text/javascript" src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script type="text/javascript" src="../resource/js/common.js"></script>
+  <script>
+
+    //관리페이지용 공통 함수
+    pageInit ()
+    tabFunc (".setting .tab-wrap",null,null, ".cnt-box.setting .tab-content .content")
+
+
+
+    //레이어팝업 : 매개변수 : ID명
+    layerFunc (".open-layer",function(e){
+      //레이어별 실행되어야할 함수 추가
+      if(e.currentTarget.getAttribute("data-info") == "layer-card-enroll") {
+        tabFunc (".tab-wrap.type03", true, function () {
+          inpActiveFunc (".login-wrap .content.active",".confirm",null, true) //인풋 들의 value 값이 타이핑 되면 버튼 활성화
+        }, ".login-wrap .tab-content .content") //tab 영역 , slider 풀사이즈 여부
+      }
+      else if(e.currentTarget.getAttribute("data-info") == "layer-company-enroll02") {
+        inpActiveFunc ("#layer-company-enroll02 .login-wrap",".confirm")
+      }
+
+    })
+
+    //select box = jquery plugin
+    $('.inp-select select').niceSelect();
+
+    sliderOnOff (".switch #autoCharge",function(){
+      document.querySelector(".sliderOffShow").style.display="block"
+      document.querySelector(".sliderOnShow").style.display="none"
+    },function(){
+      document.querySelector(".sliderOnShow").style.display="block"
+      document.querySelector(".sliderOffShow").style.display="none"
+    })
+
+    priceCalculateFunc(".layer-pop .btn-cal-price",".layer-pop .btn-cal-inp")
+
+    ToastFunc(".btn-pop","문자 충전이 성공적으로 완료되었습니다",2000)
+    ToastFunc(".btn-pop2","결제 실패 카드는 기본 결제 카드로 변경이 불가합니다.",2000)
+    operationFunc()
+
+  </script>
+  <script type="text/javascript" src="../resource/js/vendor/slick.min.js"></script>
+  <script>
+        $('.pay-sliderbox').slick({
+          slidesToScroll: 1,
+          infinite: false,
+          swipeToSlide: true,
+          variableWidth: true
+        });
+
+  </script>
+</body>
+
+</html>

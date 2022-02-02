@@ -85,6 +85,7 @@
               <div class="searchbox">
                 <i class='ico search'></i>
                 <input type="text" placeholder="검색해보세요.">
+                <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
               </div>
             </li>
             <li>
@@ -139,7 +140,7 @@
           </div>
           <div class="gnb-box right alarm">
             <div class="inbox">
-              <h3 class="filter-title">알림</h3>
+              <h3 class="filter-title02">알림</h3>
               <div class="tab-wrap">
                 <ul class="tabs">
                   <li class="on"><button type="button" class="tab-btn" data-tab="alarmTab1">전체</button></li>
@@ -152,16 +153,16 @@
                 <div class="content" id="alarmTab1">
                   <div class="alarm-box">
                     <div class="flex-sidebox center">
-                      <strong class="txt">선택된 알림 <span class="tx-org">3</span></strong>
+                      <strong class="result-txt">선택된 알림 <span class="tx-org">3</span></strong>
                       <div class="btns">
-                        <button type="button" class="btn-s btn-gray-line"><span>취소</span></button>
+                        <button type="button" class="btn-s btn-gray-line btn-edit-cancel"><span>취소</span></button>
                         <button type="button" class="btn-s btn-bk-line"><span>삭제</span></button>
                       </div>
                     </div>
                     <ul class="alarm-list">
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarm01" class="check">
+                          <input type="checkbox" name="alarm01" id="alarm01" class="check">
                           <label for="alarm01" class="">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -176,7 +177,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -197,7 +198,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarm02" class="check">
+                          <input type="checkbox" name="alarm01" id="alarm02" class="check">
                           <label for="alarm02">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -212,7 +213,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -232,7 +233,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarm03" class="check">
+                          <input type="checkbox" name="alarm01" id="alarm03" class="check">
                           <label for="alarm03">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -247,7 +248,42 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
+                              <li>
+                                <div class="dropdown-wrap">
+                                  <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
+                                  <div class="dropdown-box depth2">
+                                    <ul>
+                                      <li><button type="button" class="btn-drop-menu dep2 type01" data-time="30m"><span>30분 후</span></button></li>
+                                      <li><button type="button" class="btn-drop-menu dep2 type02" data-time="1h"><span>1시간 후</span></button></li>
+                                      <li><button type="button" class="btn-drop-menu dep2 type03" data-time="tomorrow"><span>내일</span></button></li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- //dropmenu -->
+                      </li>
+                      <li class="active">
+                        <span class="checkbox">
+                          <input type="checkbox" name="alarm01" id="alarm04" class="check">
+                          <label for="alarm04">
+                            <span class="box"></span>
+                            <span class="info btn-alarm-item type02">
+                              <span class="main-txt"><strong>홍길동님</strong>이 <strong>[마루 발주]</strong> 신청폼을 변경하였습니다.</span>
+                              <span class="sub-txt">2일전</span>
+                            </span>
+                          </label>
+                        </span>
+                        <!-- dropmenu -->
+                        <div class="dropdown-wrap hover">
+                          <button type="button" class="btn-show-menu depth1"><span class="hide">메뉴 보기</span></button>
+                          <div class="dropdown-box depth1">
+                            <ul>
+                              <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -267,11 +303,11 @@
                       </li>
                       <li>
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarm04" class="check">
-                          <label for="alarm04">
+                          <input type="checkbox" name="alarm01" id="alarm05" class="check">
+                          <label for="alarm05">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
-                              <span class="main-txt"><strong>홍길동님</strong>이 <strong>[마루 발주]</strong> 신청폼을 변경하였습니다.</span>
+                            <span class="info btn-alarm-item type02">
+                              <span class="main-txt"><strong>스터디 플랜</strong>결제가 <strong>실패</strong>하였습니다.</span>
                               <span class="sub-txt">2일전</span>
                             </span>
                           </label>
@@ -282,7 +318,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -302,11 +338,11 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarm05" class="check">
-                          <label for="alarm05">
+                          <input type="checkbox" name="alarm01" id="alarm06" class="check">
+                          <label for="alarm06">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
-                              <span class="main-txt"><strong>오더체크 무료체험기간</strong> 종료 <strong>1일 전</strong></span>
+                            <span class="info btn-alarm-item type03">
+                              <span class="main-txt"><strong>오더체크 무료체험기간</strong> 종료 <strong>1일 전</strong> 입니다</span>
                               <span class="sub-txt">30분전</span>
                             </span>
                           </label>
@@ -317,7 +353,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -387,9 +423,9 @@
                 <div class="content" id="tab1">
                   <div class="alarm-box">
                     <div class="flexbox center">
-                      <strong class="txt">선택된 알림 <span class="tx-org">3</span></strong>
+                      <strong class="result-txt">선택된 알림 <span class="tx-org">3</span></strong>
                       <div class="btns">
-                        <button type="button" class="btn-s btn-gray-line"><span>취소</span></button>
+                        <button type="button" class="btn-s btn-gray-line btn-edit-cancel"><span>취소</span></button>
                         <button type="button" class="btn-s btn-bk-line"><span>삭제</span></button>
                       </div>
                     </div>
@@ -397,10 +433,10 @@
                     <ul class="alarm-list">
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage01" class="check">
-                          <label for="alarmPage01" classPage="">
+                          <input type="checkbox" name="alarm01" id="alarmPage01" class="check">
+                          <label for="alarmPage01">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
+                            <span class="info btn-alarm-item type02">
                               <span class="main-txt"><strong>스터디 플랜</strong>결제가 <strong>실패</strong>하였습니다.</span>
                               <span class="sub-txt">2일전</span>
                             </span>
@@ -412,7 +448,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -433,7 +469,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage02" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage02" class="check">
                           <label for="alarmPage02">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -448,7 +484,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -468,7 +504,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage03" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage03" class="check">
                           <label for="alarmPage03">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -483,7 +519,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -503,10 +539,10 @@
                       </li>
                       <li>
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage04" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage04" class="check">
                           <label for="alarmPage04">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
+                            <span class="info btn-alarm-item type02">
                               <span class="main-txt"><strong>홍길동님</strong>이 <strong>[마루 발주]</strong> 신청폼을 변경하였습니다.</span>
                               <span class="sub-txt">2일전</span>
                             </span>
@@ -518,7 +554,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -538,11 +574,11 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage05" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage05" class="check">
                           <label for="alarmPage05">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
-                              <span class="main-txt"><strong>오더체크 무료체험기간</strong> 종료 <strong>1일 전</strong></span>
+                            <span class="info btn-alarm-item type03">
+                              <span class="main-txt"><strong>오더체크 무료체험기간</strong> 종료 <strong>1일 전</strong> 입니다</span>
                               <span class="sub-txt">30분전</span>
                             </span>
                           </label>
@@ -553,7 +589,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -576,10 +612,10 @@
                     <ul class="alarm-list">
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage06" class="check">
-                          <label for="alarmPage06" classPage="">
+                          <input type="checkbox" name="alarm01" id="alarmPage06" class="check">
+                          <label for="alarmPage06">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
+                            <span class="info btn-alarm-item type02">
                               <span class="main-txt"><strong>스터디 플랜</strong>결제가 <strong>실패</strong>하였습니다.</span>
                               <span class="sub-txt">2일전</span>
                             </span>
@@ -591,7 +627,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -612,7 +648,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage07" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage07" class="check">
                           <label for="alarmPage07">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -627,7 +663,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -647,7 +683,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage08" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage08" class="check">
                           <label for="alarmPage08">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -662,7 +698,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -682,10 +718,10 @@
                       </li>
                       <li>
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage09" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage09" class="check">
                           <label for="alarmPage09">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
+                            <span class="info btn-alarm-item type02">
                               <span class="main-txt"><strong>홍길동님</strong>이 <strong>[마루 발주]</strong> 신청폼을 변경하였습니다.</span>
                               <span class="sub-txt">2일전</span>
                             </span>
@@ -697,7 +733,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -717,11 +753,11 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage10" class="check">
+                          <input type="checkbox" name="alarm01" id="alarmPage10" class="check">
                           <label for="alarmPage10">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
-                              <span class="main-txt"><strong>오더체크 무료체험기간</strong> 종료 <strong>1일 전</strong></span>
+                            <span class="info btn-alarm-item type03">
+                              <span class="main-txt"><strong>오더체크 무료체험기간</strong> 종료 <strong>1일 전</strong> 입니다</span>
                               <span class="sub-txt">30분전</span>
                             </span>
                           </label>
@@ -732,7 +768,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -751,14 +787,14 @@
                         <!-- //dropmenu -->
                       </li>
                     </ul>
-                    <h3 class="term-title">어제</h3>
+                    <h3 class="term-title">최근 14일</h3>
                     <ul class="alarm-list">
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage11" class="check">
-                          <label for="alarmPage11" classPage="">
+                          <input type="checkbox" name="alarm01" id="alarmPage11" class="check">
+                          <label for="alarmPage11">
                             <span class="box"></span>
-                            <span class="info btn-alarm-item type01">
+                            <span class="info btn-alarm-item type02">
                               <span class="main-txt"><strong>스터디 플랜</strong>결제가 <strong>실패</strong>하였습니다.</span>
                               <span class="sub-txt">2일전</span>
                             </span>
@@ -770,7 +806,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>
@@ -791,7 +827,7 @@
                       </li>
                       <li class="active">
                         <span class="checkbox">
-                          <input type="checkbox" name="estimate" id="alarmPage12" class="check">
+                          <input type="checkbox" name="alarmPage" id="alarmPage12" class="check">
                           <label for="alarmPage12">
                             <span class="box"></span>
                             <span class="info btn-alarm-item type01">
@@ -806,7 +842,7 @@
                           <div class="dropdown-box depth1">
                             <ul>
                               <li><button type="button" class="btn-drop-menu dep1 confirm"><span>확인</span></button></li>
-                              <li><button type="button" class="btn-drop-menu dep1 del"><span>사진 삭제</span></button></li>
+                              <li><button type="button" class="btn-drop-menu dep1 del"><span>삭제</span></button></li>
                               <li>
                                 <div class="dropdown-wrap">
                                   <button type="button" class="btn-drop-menu depth2 recall"><span>다시 알림</span></button>

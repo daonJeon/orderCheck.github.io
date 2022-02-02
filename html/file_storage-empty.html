@@ -79,12 +79,13 @@
       <!-- header -->
       <div class="header-wrap">
         <header id="header" class="header">
-          <h2 class="title">파일보관함</h2>
+          <h2 class="title">파일 보관함</h2>
           <ul class="menu">
             <li>
               <div class="searchbox">
                 <i class='ico search'></i>
                 <input type="text" placeholder="검색해보세요.">
+                <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
               </div>
             </li>
             <li>
@@ -137,31 +138,32 @@
       <!-- location -->
       <ul class="location-wrap">
         <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
-        <li><a href="file_storage.html">파일보관함</a></li>
+        <li><a href="file_storage.html">파일 보관함</a></li>
       </ul>
       <!-- //location -->
 
-      <div class="cnt-box-wrap filePage">
+      <div class="cnt-box-wrap filePage search">
           <!-- cnt-inner -->
           <div class="cnt-inner">
 
             <div class="content-box">
-              <div class="background-box" style="">
+              <div class="file-top-wrap">
                 <div class="searchbox type02">
-                  <i class="ico search"></i>
+                  <i class="ico search02"></i>
                   <input type="text" placeholder="고객명, 연락처, 폴더/파일명으로 검색">
                   <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button>
                 </div>
-                <strong class="txt"><var class="tx-org">0</var>개의 검색결과입니다.</strong>
+                <p class="txt">검색 결과<strong class="tx-org">0</strong></p>
 
               </div>
+
               <div class="table-wrap file">
                 <div class="tbl-type1">
                   <table>
                     <caption>고객 리스트 정보</caption>
                     <colgroup>
-                      <col style="width:31%">
-                      <col style="width:61%">
+                      <col style="width:32%">
+                      <col style="width:60%">
                       <col style="width:8%">
                     </colgroup>
                     <thead>
