@@ -117,7 +117,7 @@ html, body {
   font-size: 14px;
   font-family: 'Noto Sans KR', sans-serif;
   color: #41495E;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 
 button[class*="btn"] {
@@ -324,7 +324,7 @@ input[type=text]::-ms-clear {
 
 .btn-s {
   min-width: auto;
-  padding: 5px 13px;
+  padding: 5px 12px;
   font-size: 13px;
   line-height: 19px;
   border-radius: 5px;
@@ -337,6 +337,19 @@ input[type=text]::-ms-clear {
 
 .btn-s + .btn-s {
   margin-left: 6px;
+}
+
+.btn-xs {
+  width: 70px;
+  padding: 5px;
+  font-size: 13px;
+  line-height: 19px;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn .ico, .btn-l .ico {

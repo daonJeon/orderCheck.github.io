@@ -43,7 +43,7 @@ table{ border-collapse:collapse;border-collapse:separate;/* IE th border 제어�
 caption { height: 1px; overflow: hidden; line-height: 0; margin-top: -1px; color: transparent; }
 strong {font-weight: bold;}
 img {max-width: 100%; vertical-align: top;}
-html, body { font-size:14px; font-family: 'Noto Sans KR', sans-serif; color:#41495E; letter-spacing:-0.3px;}
+html, body { font-size:14px; font-family: 'Noto Sans KR', sans-serif; color:#41495E; letter-spacing:-0.2px;}
 button[class*="btn"] { display: inline-block;}
 input[type=checkbox], input[type=radio] {-webkit-appearance:none; -moz-appearance: none; appearance: none;}
 input,button { font-family: inherit; }
@@ -85,8 +85,9 @@ input[type=text]::-ms-clear { display:none;}
 .btn03 { min-width: 90px; padding:7px 10px; border-radius: 6px;text-align: center; line-height:22px; font-size:15px; transition: all .3s; box-sizing: border-box;}/* 90/40 */
 .btn-l {min-width:auto; padding:16px 14px 17px; line-height:20px; font-size:16px; border-radius: 6px;text-align: center; transition: all .3s; box-sizing: border-box; }
 .btn-m {min-width:auto; padding:8px 17px 7px; line-height:20px; font-size:14px; border-radius: 6px;text-align: center; transition: all .3s; box-sizing: border-box; }
-.btn-s {min-width:auto; padding:5px 13px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; box-sizing: border-box;}
+.btn-s {min-width:auto; padding:5px 12px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; box-sizing: border-box;}
 .btn-s + .btn-s {margin-left:6px}
+.btn-xs {width:70px; padding:5px; font-size: 13px; line-height: 19px; border-radius: 5px; text-align: center; transition: all .3s; box-sizing: border-box;}
 .btn .ico, .btn-l .ico {vertical-align:-2px; margin-right:4px;}
 .btn >span, .btn-l > span {position:relative;}
 
