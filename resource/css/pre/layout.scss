@@ -696,6 +696,10 @@ width:calc(100% - 40px); font-size:14px;}
 .ico.docx { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_docx.png); vertical-align: -5px; }
 .ico.hwp { min-width:auto; width:22px; height:22px; background-image:url(../images/common/ico_hwp.png); vertical-align: -5px; }
 .ico.info { min-width:auto; width:18px; height:18px; background-image:url(../images/common/ico_info.png); vertical-align: -2px; }
+.ico.statics {width:21px; height:21px; background-image:url(../images/common/ico_statics.png); vertical-align: -2px; }
+.on .ico.statics,
+.ico.statics:hover {background-image:url(../images/common/ico_statics-hover.png); vertical-align: -2px;  }
+
 
 .sidebar.open .ico {width:28px; height:28px;}
 .sidebar li a .links_name { padding-left:12px; color: #fff; font-size: 15px; font-weight: 400; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.4s;}
@@ -718,7 +722,7 @@ width:calc(100% - 40px); font-size:14px;}
 .data-empty-box.customer .txt-group .sub-txt {margin-top:12px; font-size: 14px; line-height: 20px; color: #9A9A9A;}
 .data-empty-box.customer .txt-group .btn {margin-top:20px; line-height:23px;padding-left: 13px;padding-right: 13px; font-weight:500}
 
-.tab-content {position:relative; height: 100%;}
+.tab-content {position:relative; height: 100%; 	}
 .tab-content > .content,
 .tab-content02 > .content,
 .tab-content03 > .content {display: none;}

@@ -230,8 +230,30 @@
                         </dd>
                       </dl>
                     </li>
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">평균 응답 소요 시간</dt>
+                        <dd>
+                          <var class="num">04:23</var>
+                        </dd>
+                      </dl>
+                    </li>
                   </ul>
                   <div class="cnt-wrapbox">
+                    <div class="cnt-box colbox">
+                      <ul class="custom-legend type02">
+                        <li><input type="checkbox" checked onclick="toggleSeries(this)" value="상담 신청수"><span class="dot"></span> 상담 신청수</li>
+                        <li><input type="checkbox" checked onclick="toggleSeries(this)" value="견적 발행수"><span class="dot"></span> 견적 발행수</li>
+                      </ul>
+                      <div class="chart-wrap" id="chart01"></div>
+                    </div>  
+                    <div class="cnt-box colbox">
+                      <h3 class="filter-title">상담 접수일 분포 <span class="tx-gray">(최근 12개월 기준)</span></h3>
+                      <div class="analysis-section">
+                        
+                      </div>
+                    </div>
+
                     <div class="cnt-box colbox">
                       <h3 class="filter-title">상위 지역</h3>
                       <ul class="bar-chart-wrap">
@@ -292,9 +314,6 @@
                   </div>
                 </div>
                 <div class="content" id="tab2">
-                  <div class="data-empty-box">
-                    <p class="txt">새로운 알림이 없습니다.</p>
-                  </div>
                 </div>
             </div>
           </div>
@@ -333,40 +352,197 @@
     alarmDropMenu()//알림용 드롭 메뉴 추가 기능
     alarmAllChecked(".btn-alarm-all",".content-box.alarm .content.active .alarm-list > li")
 
-    var options01 = {
-        series: [44, 55],
-        chart: {
-        type: 'donut',
-        height:254,
+    var options = {
+      chart: {
+        type: 'line',
+        width: '790px',
+        height: '293px',
+        dropShadow: {
+          enabled: true,
+          top: 1,
+          left: 1,
+          blur: 2,
+          opacity: 0.2,
+        },
         toolbar: {
-        show: false
+          show: false
         },
         zoom: {
           enabled: false
+        },
+        animations: {
+            enabled: true,
+
+        }
+      },
+      states: {
+          hover: {
+              filter: {
+                  type: 'none',
+              }
+          },
+      },
+      colors: ['#1D58FF', '#FFA51D'],
+      series: [{
+        name: '상담 신청수',
+        type: 'line',
+        data: [56, 31, 44, 33,47, 45, 74,]
+      },
+      {
+        name: '견적 발행수',
+        type: 'line',
+        data: [31, 32, 56, 44, 19,47, 45]
+      }],
+      stroke: {
+        width: [4, 4, 4]
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "40%"
+        }
+      },
+      xaxis: {
+        categories: ["2022.01.28", "2022.01.27", "2022.01.26", "2022.01.25", "2022.01.24", "2022.01.23", "2022.01.22"],
+        labels: {
+          show: true,
+          style: {
+              colors: "#BDC6D3",
+              fontSize: '12px',
+              fontFamily: 'Noto Sans KR',
+              fontWeight: 600,
+          },
+
+        },tooltip: {
+          enabled: false
+        },
+        axisTicks: {
+          show: false
+        },
+        axisBorder: {
+          show: false,
+        },
+
+
+      },
+      yaxis: [{
+          seriesName: '상담 신청수',
+          tickAmount: 5,
+          labels: {
+            show: true,
+            style: {
+                colors: "#BDC6D3",
+                fontSize: '12px',
+                fontFamily: 'Noto Sans KR',
+                fontWeight: 400,
+            },
+          },
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: false,
+          },
+        },
+        {
+          seriesName: '상담 신청수',
+          tickAmount: 5,
+          show: false
+        }, {
+          opposite: true,
+          seriesName: '계약 완료수',
+          tickAmount: 5,
+          labels: {
+            show: true,
+            style: {
+                colors: "#BDC6D3",
+                fontSize: '12px',
+                fontFamily: 'Noto Sans KR',
+                fontWeight: 400,
+            },
+          },
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: false,
+          },
+        }
+      ],
+      tooltip: {
+        shared: true,
+        intersect: false,
+        x: {
+          show: false
         }
       },
       legend: {
         show: false,
-        horizontalAlign: "left"
-      },
-      colors: ['#1D58FF', '#FFA51D'],
-      dataLabels: {
-        enabled: false
-      },
-      tooltip: {
-        y: {
-          formatter: (value) => { return value + "%    " },
-          title: {
-              formatter: (seriesName) => '',
-          },
+        position: 'top',
+        fontSize: '16px',
+        fontFamily: "'Noto Sans KR', sans-serif",
+        horizontalAlign: "left",
+        labels: {
+          colors: "#414C5D",
+          useSeriesColors: false
         },
+        markers: {
+        width: 14,
+        height: 14,
+        size: 0,
+        radius: 3,
+        offsetX :0
+      },
+      itemMargin: {
+          horizontal: 0,
+          vertical: 0
+      },
+      },
+      grid: {
+        padding: {
+          top: 20,
+          bottom: 10,
+          left: 10
+        },
+        borderColor: '#E8EEF6',
+        strokeDashArray: 11,
+      },
+      annotations: {
+        xaxis: [
+          {
+            x: "15-5",
+            borderColor: '#323B6E',
+          },
+          {
+            x: "14-5",
+            x2: "16-5",
+            fillColor: '#DAE9FF'
+          }
+        ],
+
       }
 
-    };
+    }
+    var chart = new ApexCharts(document.querySelector("#chart01"), options);
+    chart.render();
 
-    var chart01 = new ApexCharts(document.querySelector("#chart01"), options01);
-    chart01.render();
 
+    checkLegends()
+    function checkLegends() {
+      var allLegends = document.querySelectorAll(".custom-legend.type02 input[type='checkbox']")
+      var colorArr = chart.w.config.colors
+
+      for(var i = 0; i < allLegends.length; i++) {
+        allLegends[i].nextElementSibling.style.backgroundColor = colorArr[i]
+        if(!allLegends[i].checked) {
+          chart.toggleSeries(allLegends[i].value)
+        }
+      }
+    }
+
+    // toggleSeries accepts a single argument which should match the series name you're trying to toggle
+    function toggleSeries(checkbox) {
+      chart.toggleSeries(checkbox.value)
+    }
   </script>
 </body>
 </html>
