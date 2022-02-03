@@ -207,7 +207,8 @@
 .cnt-box.right > .tbl-top {margin-top:-10px}
 .cnt-box.right > .tbl-top .cnt-title {margin-top:2px}
 .cnt-box.right > .tbl-top .btn {height:44px; line-height:20px; }
-.cnt-box.right > .tbl-top .btn-bk {padding:11px 15px; font-size:14px; font-weight: normal;}
+.cnt-box.right > .tbl-top .btn-bk {padding:11px 14px; font-size:14px; font-weight: normal; letter-spacing:0px;}
+.cnt-box.right > .tbl-top .btn-bk .ico.plus {margin-right:2px}
 
 .tbl-top.start {margin-bottom:24px; justify-content: flex-start;}
 .tbl-top.start .title {margin-right:20px}
@@ -228,7 +229,7 @@
 .filter-box .inp .pos.btn-edit {margin-top:-12px}
 .filter-box .inp.ui-unit input {padding-right:60px; }
 .filter-box .inp.ui-unit .pos.btn-edit {right:38px;}
-.filter-box .inp.ui-unit .unit {right:12px}
+.filter-box .inp.ui-unit .unit {right:12px; color:#41495D}
 
 .inp-row {display:flex; justify-content: space-between;}
 .inp-row .inp {width:49%}
@@ -296,7 +297,7 @@
 .cnt-title .ico {margin-right:10px}
 .manager-list .btn-manager-add,
 .manager-list .btn-sel {margin-bottom:10px; }
-.manager-list .btn-manager-add {margin-right:16px}
+.manager-list .btn-manager-add {margin-right:6px}
 .manager-list .btn-sel {display:inline-flex; padding:0 12px 0 18px; width:92px; height:40px; justify-content: space-between; align-items:center; margin-right:10px; background: #F6F6F6; border: 1px solid #E7E7E7; border-radius: 30px; box-sizing: border-box; }
 .manager-list .btn-sel .txt {margin-right:10px; font-size: 14px; line-height: 20px;  color: #414C5D; vertical-align: middle;}
 .manager-list .btn-manager-add> span,
@@ -328,7 +329,8 @@
 .search-top .txt {margin-right:10px; line-height:22px; font-size:15px; font-weight:bold; }
 .search-top .tx-gray { font-size:13px; }
 .search-top + .inp-line {margin-bottom:6px;}
-.search-top + .inp-line + .manager-box {margin-top:20px; border-top:1px solid #E6E6E6;}
+.search-top + .inp-line + .manager-box .inbox {margin-top:20px; border-top:1px solid #E6E6E6;}
+.search-top + .inp-line + .manager-box .checkbox + .inbox {margin-top:0px; border-top:none}
 
 .manager-box > .checkbox {display:block; padding:16px 0; border-bottom:1px solid #E6E6E6 }
 .manager-box strong {font-weight: 700; color:#41495D}
@@ -336,7 +338,7 @@
 .manager-box .checkbox input.check,
 .manager-box .checkbox input.check + label,
 .manager-box .checkbox label > * {vertical-align: middle;}
-.manager-box .inbox {padding:16px 0; height:230px; overflow:auto;}
+.manager-box .inbox {padding:16px 0; height:209px; overflow:auto;}
 .manager-box .inbox .checkbox .box {margin-right:20px;}
 .manager-box .inbox .checkbox label {display:inline-block; padding:7px 0;}
 .manager-box .inbox .checkbox label > img + * ,
@@ -364,18 +366,20 @@
 .accordion .accordion-title + .accordion-cnt .inner .txt {font-size: 13px; line-height: 21px; color:#7b7b7b}
 .accordion .accordion-cnt .inner {margin: 0 21px 0 61px; padding:17px 0;}
 .accordion .accordion-cnt{	max-height:0;	transition:max-height 0.3s ease-in-out ; overflow: auto; transition-delay:.3s; transition-duration:.5s;}
-.accordion .active .accordion-cnt {	max-height:310px}
-.accordion-cnt dl .head {display:block; float:left; width:90px; color:#555868}
-.accordion-cnt dl .head + dd {overflow: hidden;}
+.accordion .active .accordion-cnt {	max-height:345px}
+.accordion-cnt dl .head {display:block; font-weight: 500; font-size:14px; float:left; width:90px; color:#555868}
+.accordion-cnt dl .head + dd {overflow: hidden;margin-bottom:3px}
 .accordion-cnt dl dd + dd {width:100%; padding-left:90px;}
-.accordion-cnt .info-list > li {margin-bottom:10px; font-size:13px}
+.accordion-cnt .info-list > li {margin-bottom:12px; font-size:13px}
 .accordion-cnt .info-list > li .ico {margin-right:8px}
-.accordion-cnt .info-list > li strong {color:#555868}
+.accordion-cnt .info-list > li strong { font-size:13px; font-weight: 500; color:#555868}
 .accordion-cnt .info-list > li var {color:#7B7B7B}
-.accordion-cnt .info-list > li strong + var {margin-left:5px}
+.accordion-cnt .info-list > li strong + var {font-size:13px; margin-left:5px}
+.accordion-cnt dl dd:last-child   {margin-bottom:0}
+.accordion-cnt dl dd:last-child .info-list > li:last-child {margin-bottom:0}
 
 .card .info-list {display:block; margin-top:27px}
-.list-linkbox-wrap {position: relative; padding-bottom:87px;}
+.list-linkbox-wrap {position:relative; padding-bottom:87px;}
 .list-linkbox.card  {border:none; padding:0; display: flex; justify-content: flex-start; flex-wrap: wrap; align-items: center;}
 .list-linkbox.card .txt {font-size: 14px; line-height: 20px; color: #555868; }
 .list-linkbox.card > li {position: relative; padding:20px 18px; width:calc( (100% - 30px)/3);  border: 1px solid #E5E7EC; box-sizing: border-box;  border-radius: 6px;}
@@ -383,8 +387,9 @@
 .list-linkbox.card > li + li {margin-left:15px}
 .list-linkbox.card > li:nth-child(n+4) {margin-top:15px}
 .list-linkbox.card > li:nth-child(3n+1) {margin-left:0}
-.list-linkbox.card .btn {position: absolute; width:102px; right:10px; bottom:10px; z-index: 1; font-size:14px}
-.list-linkbox.card .info-list .head {display: block; width:100px; float: left;}
+.list-linkbox.card .btn {position: absolute; min-width:80px; width:80px; height:35px; line-height:35px; padding:0; right:18px; bottom:16px; z-index: 1; font-size:13px}
+.list-linkbox.card .btn .ico.send {margin-right:0}
+.list-linkbox.card .info-list .head {display: block; width:75px; float: left;}
 .list-linkbox.card .info-list .desc {overflow:hidden}
 .list-linkbox.card .btn-link {font-weight: normal;}
 .list-linkbox.card .btn-link:last-child {float:right}
@@ -400,6 +405,7 @@
 .list-linkbox.link .info-list {margin-top:27px}
 .list-linkbox.link .info-list > li + li {margin-top:8px}
 .list-linkbox .checkbox .box {vertical-align: middle;}
+.cnt-inner .right .list-linkbox.link  {border:none; padding:0; max-height:calc(100vh - 360px); overflow:auto; }
 
 .btn-group.btm {position:absolute; bottom:0; left:0; width:100%; }
 .btn-group.btm button {width:200px; line-height:22px; }
