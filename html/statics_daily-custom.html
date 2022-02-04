@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="website">
+  <meta name="naver-site-verification" content="">
+  <meta property="og:image" content="">
+  <meta http-equiv="Cache-Control" content="No-Cache">
+  <meta http-equiv="Pragma" content="No-Cache">
+  <meta name="language" content="ko">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <title>통계/분석 - 고객관리</title>
+
+  <!-- css, js 연결 -->
+  <link rel="stylesheet" href="../resource/css/vendor/nice-select.css">
+  <link rel="stylesheet" href="../resource/css/layout.css">
+  <link rel="stylesheet" href="../resource/css/contents.css">
+
+
+</head>
+
+<body>
+  <div id="wrap">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <button type="button" class="btn-side-open"><img src="../resource/images/common/ico_logo-mark.png" alt="오더체크"></button>
+        <h1 class="logo_name"><img src="../resource/images/common/ico_logo-name.png" alt="오더체크"/></h1>
+      </div>
+
+      <ul class="nav-list">
+        <li>
+          <a href="dashboard.html">
+            <i class='ico home'></i>
+            <span class="links_name">홈</span>
+          </a>
+        </li>
+        <li>
+          <a href="customManage_list.html">
+            <i class="ico user"></i>
+            <span class="links_name">고객 관리</span>
+          </a>
+        </li>
+        <li>
+          <a href="file_storage.html">
+            <i class='ico file'></i>
+            <span class="links_name">파일 보관함</span>
+          </a>
+        </li>
+        <li>
+          <a href="form_list.html">
+            <i class='ico form'></i>
+            <span class="links_name">상담 신청폼</span>
+          </a>
+        </li>
+        <li class="on">
+          <a href="statics_daily.html">
+            <i class='ico statics'></i>
+            <span class="links_name">통계/분석</span>
+          </a>
+        </li>
+       </ul>
+      <ul class="btm">
+        <li>
+          <a href="#">
+            <i class='ico help'></i>
+            <span class="links_name">자주 묻는 질문</span>
+          </a>
+        </li>
+        <li>
+          <a href="setting_company-info.html">
+            <i class='ico setting'></i>
+            <span class="links_name">설정</span>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="btn-lnb-close"><span class="hide">메뉴 닫기</span></button><!-- 2021-12-27 -->
+    </nav>
+    <section id="content" class="content-section">
+      <!-- #include file="include_header.html" -->
+      <!-- header -->
+      <div class="header-wrap">
+        <header id="header" class="header">
+          <h2 class="title">메인</h2>
+          <ul class="menu">
+            <li>
+              <div class="searchbox">
+                <i class='ico search'></i>
+                <input type="text" placeholder="검색해보세요.">
+                <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button><!-- 2022-01-25 추가 -->
+              </div>
+            </li>
+            <li>
+              <div class="dropdown-wrap">
+                <button type="button" class="btn-drop">
+                  <div class="profile-details">
+                    <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                    <span class="name">홍길동님</span>
+                    <i class="arrow down"></i>
+                  </div>
+
+                </button>
+                <div class="dropdown-box">
+                  <ul>
+                    <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                    <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                    <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                    <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><button type="button" class="btn-menu" data-info="mail"><i class="ico mail"></i></button></li>
+            <li>
+              <div class="tooltip">
+              <button type="button" class="btn-menu on" data-info="alarm"><i class="ico alarm"></i></button>
+                <div class="tooltiptext tooltip-top">
+                  <dl class="flexbox">
+                    <dt><img src="../resource/images/common/ico_tooltip01.png" alt="고객수"></dt>
+                    <dd>0</dd>
+                    <dt><img src="../resource/images/common/ico_tooltip02.png" alt="파일수"></dt>
+                    <dd>32</dd>
+                    <dt><img src="../resource/images/common/ico_tooltip03.png" alt="오더체크 수"></dt>
+                    <dd>4,230</dd>
+                  </dl>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </header>
+        <!-- /header -->
+
+        <!-- 2021-12-20 -->
+        <aside id="side_right_menu" class="side-menu">
+          <div class="gnb-box right mail">
+              <ul class="clear">
+                  <li><a href="#">메뉴1</a></li>
+                  <li><a href="#">메뉴2</a></li>
+                  <li><a href="#">메뉴3</a></li>
+              </ul>
+              <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+          </div>
+          <div class="gnb-box right alarm">
+            <button type="button" class="btn-side-close close-box"><span class="txt">닫기</span></button>
+          </div>
+        </aside>
+      </div>
+
+      <!-- location -->
+      <ul class="location-wrap">
+        <li><a href="dahboard.html" target="_blank"><img src="../resource/images/nav/ico_home-bk.png" alt=""/></a></li>
+        <li><a href="customManage_list.html">고객관리</a></li>
+        <li>홍길동</li>
+      </ul>
+      <!-- //location -->
+
+      <div class="cnt-box-wrap">
+          <!-- cnt-inner -->
+          <div class="cnt-inner">
+            <div class="content-box statics">
+              <div class="tab-wrap">
+                <ul class="tabs">
+                  <li class="on"><button type="button" class="tab-btn" data-tab="tab1">고객 관리</button></li>
+                  <li><button type="button" class="tab-btn" data-tab="tab2">상담 신청폼</button></li>
+                </ul>
+                <span class="slider" data-left="0"></span>
+              </div>
+
+              <section class="tab-content">
+                <div class="content custom" id="tab1">
+                  <div class="static-inpbox">
+                    <!-- select -->
+                    <span class="inp-select">
+                      <select name="year">
+                        <option value="2022">2022년</option>
+                        <option value="2021">2021년</option>
+                        <option value="2020">2020년</option>
+                        <option value="2019">2019년</option>
+                        <option value="2018">2018년</option>
+                      </select>
+                    </span>
+                    <!-- select -->
+                    <span class="inp-select">
+                      <select name="month">
+                        <option value="01">01월</option>
+                        <option value="02">02월</option>
+                        <option value="03">03월</option>
+                        <option value="04">04월</option>
+                        <option value="05">05월</option>
+                        <option value="06">06월</option>
+                        <option value="07">07월</option>
+                        <option value="08">08월</option>
+                        <option value="08">08월</option>
+                        <option value="09">09월</option>
+                        <option value="10">10월</option>
+                        <option value="11">11월</option>
+                        <option value="12">12월</option>
+                      </select>
+                    </span>
+                  </div>
+                  <h2 class="filter-title02">고객 현황</h2>
+                  <ul class="customer-state-box">
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">상담 신청 수</dt>
+                        <dd>
+                          <strong class="num">590</strong>
+                          <span class="unit">명</span>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">견적 발행 수</dt>
+                        <dd>
+                          <strong class="num">34</strong>
+                          <span class="unit">명</span>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">계약 수</dt>
+                        <dd>
+                          <strong class="num">590</strong>
+                          <span class="unit">명</span>
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                  <div class="cnt-wrapbox line01">
+                    <ul class="cnt-box colbox">
+                      <li>
+                        <p class="filter-title03">필터</p>
+                        <p class="tx-gray">비교를 희망하는 데이터를 선택해주세요. (최대 2개)</p>
+                        <div class="filter-box">
+                          <span class="checkbox">
+                            <input type="checkbox" name="consulting_state" id="consulting_apply" class="check">
+                            <label for="consulting_apply"><span class="box"></span><span>상담 신청</span></label>
+                          </span>
+                          <span class="checkbox">
+                            <input type="checkbox" name="consulting_state" id="consulting_issue" class="check">
+                            <label for="consulting_issue"><span class="box"></span><span>견적 발행</span></label>
+                          </span>
+                          <span class="checkbox">
+                            <input type="checkbox" name="consulting_state" id="consulting_contract" class="check">
+                            <label for="consulting_contract"><span class="box"></span><span>계약</span></label>
+                          </span>
+                        </div>
+                        <button type="button" class="btn btn-bk"><span>적용</span></button>
+                      </li>
+                      <li>
+                        <ul class="custom-legend type02 chart01">
+                          <li><input type="checkbox" checked onclick="toggleSeries(this)" value="상담 신청수"><span class="dot"></span> 상담 신청수</li>
+                          <li><input type="checkbox" checked onclick="toggleSeries(this)" value="견적 발행수"><span class="dot"></span> 견적 발행수</li>
+                        </ul>
+                        <div class="chart-wrap" id="chart01"></div>
+                      </li>
+                    </ul>
+                    <div class="cnt-box colbox">
+                      <h3 class="filter-title03">상위 지역</h3>
+                      <ul class="bar-chart-wrap">
+                        <li>
+                          <span class="name">강남구</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:60%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>210</var><span class="unit">명</span></span>
+                        </li>
+                        <li>
+                          <span class="name">성남시 분당구</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:80%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>3,200</var><span class="unit">명</span></span>
+                        </li>
+                        <li>
+                          <span class="name">송파구</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:30%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>58</var><span class="unit">명</span></span>
+                        </li>
+                        <li>
+                          <span class="name">용산구</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:20%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>10</var><span class="unit">명</span></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h2 class="filter-title02">계약 고객 분석</h2>
+                  <div class="cnt-wrapbox col2 line02">
+                    <div class="cnt-box colbox">
+                      <h3 class="filter-title03">상담 접수일 분포 <span class="tx-gray">(최근 12개월 기준)</span></h3>
+                      <div class="analysis-section">
+                        
+                      </div>
+                    </div>
+                    <div class="cnt-box colbox">
+                      <h3 class="filter-title03">평균 계약 금액 <span class="tx-gray dot">해당 월의 계약 전환 고객의 대표 견적금액을 기준으로 집계됩니다.</span></h3>
+                      <p class="num-info"><span class="num">8,627</span><span class="unit">만원</span></p>
+                      <div class="analysis-section">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content form" id="tab2">
+                  <div class="static-inpbox">
+                    <!-- select -->
+                    <span class="inp-select">
+                      <select name="year">
+                        <option value="2022">2022년</option>
+                        <option value="2021">2021년</option>
+                        <option value="2020">2020년</option>
+                        <option value="2019">2019년</option>
+                        <option value="2018">2018년</option>
+                      </select>
+                    </span>
+                    <!-- select -->
+                    <span class="inp-select">
+                      <select name="month">
+                        <option value="01">01월</option>
+                        <option value="02">02월</option>
+                        <option value="03">03월</option>
+                        <option value="04">04월</option>
+                        <option value="05">05월</option>
+                        <option value="06">06월</option>
+                        <option value="07">07월</option>
+                        <option value="08">08월</option>
+                        <option value="08">08월</option>
+                        <option value="09">09월</option>
+                        <option value="10">10월</option>
+                        <option value="11">11월</option>
+                        <option value="12">12월</option>
+                      </select>
+                    </span>
+                  </div>
+                  <h2 class="filter-title02">고객 현황</h2>
+                  <ul class="customer-state-box">
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">상담 신청 수</dt>
+                        <dd>
+                          <var class="num">590</var>
+                          <span class="unit">명</span>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">견적 발행 수</dt>
+                        <dd>
+                          <var class="num">34</var>
+                          <span class="unit">명</span>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">계약 수</dt>
+                        <dd>
+                          <var class="num">590</var>
+                          <span class="unit">명</span>
+                        </dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl class="info-cnt">
+                        <dt class="profile-name">평균 응답 소요 시간</dt>
+                        <dd>
+                          <var class="num">04:23</var>
+                        </dd>
+                      </dl>
+                    </li>
+                  </ul>
+                  <div class="cnt-wrapbox line01">
+                    <div class="cnt-box colbox large">
+                      <ul class="custom-legend type02 chart02">
+                        <li><input type="checkbox" checked onclick="toggleSeries(this)" value="상담 신청수"><span class="dot"></span> 상담 신청수</li>
+                        <li><input type="checkbox" checked onclick="toggleSeries(this)" value="견적 발행수"><span class="dot"></span> 견적 발행수</li>
+                      </ul>
+                      <div class="chart-wrap" id="chart02"></div>
+                    </div>  
+                    <div class="cnt-box colbox">
+                      <h3 class="filter-title03">페이지 별 접속자</h3>
+                      <div class="analysis-section">
+                        
+                      </div>
+                    </div>
+
+                    <div class="cnt-box colbox ">
+                      <h3 class="filter-title03">이탈률이 높은 페이지</h3>
+                      <ul class="bar-chart-wrap">
+                        <li>
+                          <span class="name">Page 01</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:60%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>210</var><span class="unit">명</span></span>
+                        </li>
+                        <li>
+                          <span class="name">Page 01</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:60%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>3,200</var><span class="unit">명</span></span>
+                        </li>
+                        <li>
+                          <span class="name">Page 01</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:60%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>58</var><span class="unit">명</span></span>
+                        </li>
+                        <li>
+                          <span class="name">Page 01</span>
+                          <ul class="bars">
+                            <li><!-- 개발 : 퍼센트로 조절 -->
+                              <span class="bar" style="width:60%"></span>
+                            </li>
+                          </ul>
+                          <span class="value"><var>10</var><span class="unit">명</span></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h2 class="filter-title02">접속자 분석</h2>
+                  <div class="cnt-wrapbox line02">
+                    <div class="cnt-box colbox large">
+                      <div class="flex-sidebox center">
+                        <h3 class="filter-title03">평균 접속자</h3>
+                        <div class="inp-select">
+                          <select name="day" id="">
+                            <option value="day">일</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="analysis-section">
+                        
+                      </div>
+                    </div>
+                    <div class="cnt-box colbox">
+                      <div class="tab-wrap">
+                        <ul class="tabs">
+                          <li class="on"><button type="button" class="tab-btn" data-tab="tab-user1">상위 지역</button></li>
+                          <li><button type="button" class="tab-btn" data-tab="tab-user2">유입 디바이스</button></li>
+                        </ul>
+                        <span class="slider" data-left="0"></span>
+                      </div>
+                      <section class="tab-content02 staticScroll">
+                        <div class="content" id="tab-user1">
+                          <ul class="bar-chart-wrap">
+                            <li>
+                              <span class="name">강남구</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>210</var><span class="unit">명</span></span>
+                            </li>
+                            <li>
+                              <span class="name">성남시 분당구</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>3,200</var><span class="unit">명</span></span>
+                            </li>
+                            <li>
+                              <span class="name">송파구</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>58</var><span class="unit">명</span></span>
+                            </li>
+                            <li>
+                              <span class="name">용산구</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>10</var><span class="unit">명</span></span>
+                            </li>
+                            <li>
+                              <span class="name">용산구</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>10</var><span class="unit">명</span></span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="content" id="tab-user2">
+                          <ul class="bar-chart-wrap">
+                            <li>
+                              <span class="name">브라우저</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>210</var><span class="unit">명</span></span>
+                            </li>
+                            <li>
+                              <span class="name">아이폰</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>3,200</var><span class="unit">명</span></span>
+                            </li>
+                            <li>
+                              <span class="name">안드로이드</span>
+                              <ul class="bars">
+                                <li><!-- 개발 : 퍼센트로 조절 -->
+                                  <span class="bar" style="width:60%"></span>
+                                </li>
+                              </ul>
+                              <span class="value"><var>58</var><span class="unit">명</span></span>
+                            </li>
+                           
+                          </ul>
+                        </div>
+                      </section>
+                      
+                    </div>
+                    <div class="cnt-box colbox">  
+                      <h3 class="filter-title03">유입 페이지 <span class="tx-gray">(상위 10개)</span></h3>
+                      <div class="tbl-type2 staticScroll">
+                        <table>
+                          <caption>유입 페이지 정보</caption>
+                          <colgroup>
+                            <col style="width:64%">
+                            <col style="width:18%">
+                            <col style="width:18%">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th scope="col">도메인</th>
+                              <th scope="col">클릭수</th>
+                              <th scope="col">참여율</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>blog.naver.com</td>
+                              <td>190</td>
+                              <td>3,023</td>
+                            </tr>
+                            <tr>
+                              <td>instagram.com</td>
+                              <td>23</td>
+                              <td>342</td>
+                            </tr>
+                            <tr>
+                              <td>m.search.naver.com</td>
+                              <td>341</td>
+                              <td>23</td>
+                            </tr>
+                            <tr>
+                              <td>google.com</td>
+                              <td>1,2204</td>
+                              <td>300</td>
+                            </tr>
+                            <tr>
+                              <td>blog.naver.com</td>
+                              <td>190</td>
+                              <td>3,023</td>
+                            </tr>
+                            <tr>
+                              <td>instagram.com</td>
+                              <td>23</td>
+                              <td>342</td>
+                            </tr>
+                            <tr>
+                              <td>m.search.naver.com</td>
+                              <td>341</td>
+                              <td>23</td>
+                            </tr>
+                            <tr>
+                              <td>google.com</td>
+                              <td>1,2204</td>
+                              <td>300</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- //cnt-inner -->
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- script -->
+  <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
+  <script src="../resource/js/vendor/ResizeObserver.min.js"></script>
+  <script src="../resource/js/vendor/polyfill.min.js"></script>
+  <script src="../resource/js/vendor/eligrey-classlist-js-polyfill"></script>
+  <script src="../resource/js/vendor/umd.js"></script>
+  <script src="../resource/js/vendor/apexcharts.min.js"></script>
+  <script src="../resource/js/vendor/jquery.nice-select.min.js"></script>
+  <script src="../resource/js/layerpop.js"></script><!-- 레이어팝업 -->
+  <script src="../resource/js/common.js" ></script>
+  <script>
+    pageInit ()
+
+    //select box = jquery plugin
+    $('.inp-select select').niceSelect();
+
+    dropMenuOpen(".btn-show-menu.depth1",".btn-show-menu.depth1 + .dropdown-box",".btn-drop-menu.dep1")
+    dropMenuOpen(".btn-show-menu.depth2",".btn-show-menu.depth2 + .dropdown-box",".btn-drop-menu.dep2")
+
+    //페이지 내 tab
+    tabFunc(".content-box .tab-wrap")
+    tabFunc(".cnt-box.colbox .tab-wrap",null,null,".tab-content02 .content")
+
+    //알림 팝업 호출
+    document.querySelector(".tooltip").classList.add("active")
+    //알림 팝업 삭제
+    setTimeout(function (){
+      document.querySelector(".tooltip").classList.remove("active")
+    },2000)
+
+    alarmDropMenu()//알림용 드롭 메뉴 추가 기능
+    alarmAllChecked(".btn-alarm-all",".content-box.alarm .content.active .alarm-list > li")
+
+    var options01 = {
+      chart: {
+        type: 'line',
+        width: '780px',
+        height: '293px',
+        dropShadow: {
+          enabled: true,
+          top: 1,
+          left: 1,
+          blur: 2,
+          opacity: 0.2,
+        },
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        },
+        animations: {
+            enabled: true,
+
+        }
+      },
+      states: {
+          hover: {
+              filter: {
+                  type: 'none',
+              }
+          },
+      },
+      colors: ['#1D58FF', '#FFA51D'],
+      series: [{
+        name: '상담 신청수',
+        type: 'line',
+        data: [56, 31, 44, 33,47, 45, 74,]
+      },
+      {
+        name: '견적 발행수',
+        type: 'line',
+        data: [31, 32, 56, 44, 19,47, 45]
+      }],
+      stroke: {
+        width: [4, 4, 4]
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "40%"
+        }
+      },
+      xaxis: {
+        categories: ["2022.01.28", "2022.01.27", "2022.01.26", "2022.01.25", "2022.01.24", "2022.01.23", "2022.01.22"],
+        labels: {
+          show: true,
+          style: {
+              colors: "#BDC6D3",
+              fontSize: '12px',
+              fontFamily: 'Noto Sans KR',
+              fontWeight: 600,
+          },
+
+        },tooltip: {
+          enabled: false
+        },
+        axisTicks: {
+          show: false
+        },
+        axisBorder: {
+          show: false,
+        },
+
+
+      },
+      yaxis: [{
+          seriesName: '상담 신청수',
+          tickAmount: 5,
+          labels: {
+            show: true,
+            style: {
+                colors: "#BDC6D3",
+                fontSize: '12px',
+                fontFamily: 'Noto Sans KR',
+                fontWeight: 400,
+            },
+          },
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: false,
+          },
+        },
+        {
+          seriesName: '상담 신청수',
+          tickAmount: 5,
+          show: false
+        }, {
+          opposite: true,
+          seriesName: '계약 완료수',
+          tickAmount: 5,
+          labels: {
+            show: true,
+            style: {
+                colors: "#BDC6D3",
+                fontSize: '12px',
+                fontFamily: 'Noto Sans KR',
+                fontWeight: 400,
+            },
+          },
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: false,
+          },
+        }
+      ],
+      tooltip: {
+        shared: true,
+        intersect: false,
+        x: {
+          show: false
+        }
+      },
+      legend: {
+        show: false,
+        position: 'top',
+        fontSize: '16px',
+        fontFamily: "'Noto Sans KR', sans-serif",
+        horizontalAlign: "left",
+        labels: {
+          colors: "#414C5D",
+          useSeriesColors: false
+        },
+        markers: {
+        width: 14,
+        height: 14,
+        size: 0,
+        radius: 3,
+        offsetX :0
+      },
+      itemMargin: {
+          horizontal: 0,
+          vertical: 0
+      },
+      },
+      grid: {
+        padding: {
+          top: 20,
+          bottom: 10,
+          left: 10
+        },
+        borderColor: '#E8EEF6',
+        strokeDashArray: 11,
+      },
+      annotations: {
+        xaxis: [
+          {
+            x: "15-5",
+            borderColor: '#323B6E',
+          },
+          {
+            x: "14-5",
+            x2: "16-5",
+            fillColor: '#DAE9FF'
+          }
+        ],
+
+      }
+
+    }
+    var chart01 = new ApexCharts(document.querySelector("#chart01"), options01);
+    chart01.render();
+
+    var options02 = {
+      chart: {
+        type: 'line',
+        width: '600px',
+        height: '293px',
+        dropShadow: {
+          enabled: true,
+          top: 1,
+          left: 1,
+          blur: 2,
+          opacity: 0.2,
+        },
+        toolbar: {
+          show: false
+        },
+        zoom: {
+          enabled: false
+        },
+        animations: {
+            enabled: true,
+
+        }
+      },
+      states: {
+          hover: {
+              filter: {
+                  type: 'none',
+              }
+          },
+      },
+      colors: ['#1D58FF', '#FFA51D'],
+      series: [{
+        name: '상담 신청수',
+        type: 'line',
+        data: [56, 31, 44, 33,47, 45, 74,]
+      },
+      {
+        name: '견적 발행수',
+        type: 'line',
+        data: [31, 32, 56, 44, 19,47, 45]
+      }],
+      stroke: {
+        width: [4, 4, 4]
+      },
+      plotOptions: {
+        bar: {
+          columnWidth: "40%"
+        }
+      },
+      xaxis: {
+        categories: ["2022.01.28", "2022.01.27", "2022.01.26", "2022.01.25", "2022.01.24", "2022.01.23", "2022.01.22"],
+        labels: {
+          show: true,
+          style: {
+              colors: "#BDC6D3",
+              fontSize: '12px',
+              fontFamily: 'Noto Sans KR',
+              fontWeight: 600,
+          },
+
+        },tooltip: {
+          enabled: false
+        },
+        axisTicks: {
+          show: false
+        },
+        axisBorder: {
+          show: false,
+        },
+
+
+      },
+      yaxis: [{
+          seriesName: '상담 신청수',
+          tickAmount: 5,
+          labels: {
+            show: true,
+            style: {
+                colors: "#BDC6D3",
+                fontSize: '12px',
+                fontFamily: 'Noto Sans KR',
+                fontWeight: 400,
+            },
+          },
+          axisTicks: {
+            show: true,
+          },
+          axisBorder: {
+            show: false,
+          },
+        },
+        {
+          seriesName: '상담 신청수',
+          tickAmount: 5,
+          show: false
+        }, {
+          opposite: true,
+          seriesName: '계약 완료수',
+          tickAmount: 5,
+          labels: {
+            show: true,
+            style: {
+                colors: "#BDC6D3",
+                fontSize: '12px',
+                fontFamily: 'Noto Sans KR',
+                fontWeight: 400,
+            },
+          },
+          axisTicks: {
+            show: true
+          },
+          axisBorder: {
+            show: false,
+          },
+        }
+      ],
+      tooltip: {
+        shared: true,
+        intersect: false,
+        x: {
+          show: false
+        }
+      },
+      legend: {
+        show: false,
+        position: 'top',
+        fontSize: '16px',
+        fontFamily: "'Noto Sans KR', sans-serif",
+        horizontalAlign: "left",
+        labels: {
+          colors: "#414C5D",
+          useSeriesColors: false
+        },
+        markers: {
+        width: 14,
+        height: 14,
+        size: 0,
+        radius: 3,
+        offsetX :0
+      },
+      itemMargin: {
+          horizontal: 0,
+          vertical: 0
+      },
+      },
+      grid: {
+        padding: {
+          top: 20,
+          bottom: 10,
+          left: 10
+        },
+        borderColor: '#E8EEF6',
+        strokeDashArray: 11,
+      },
+      annotations: {
+        xaxis: [
+          {
+            x: "15-5",
+            borderColor: '#323B6E',
+          },
+          {
+            x: "14-5",
+            x2: "16-5",
+            fillColor: '#DAE9FF'
+          }
+        ],
+
+      }
+
+    }
+    var chart02 = new ApexCharts(document.querySelector("#chart02"), options02);
+    chart02.render();
+
+
+    checkLegends(".custom-legend.type02.chart01")
+    checkLegends(".custom-legend.type02.chart02")
+    function checkLegends (wrapCnt) {
+      var wrap = document.querySelector(wrapCnt)
+      var allLegends = wrap.querySelectorAll("input[type='checkbox']")
+      var colorArr = chart01.w.config.colors
+
+      for(var i = 0; i < allLegends.length; i++) {
+        allLegends[i].nextElementSibling.style.backgroundColor = colorArr[i]
+        if(!allLegends[i].checked) {
+          chart01.toggleSeries(allLegends[i].value)
+        }
+      }
+    }
+
+    // toggleSeries accepts a single argument which should match the series name you're trying to toggle
+    function toggleSeries(checkbox) {
+      chart01.toggleSeries(checkbox.value)
+      chart02.toggleSeries(checkbox.value)
+    }
+  </script>
+</body>
+</html>

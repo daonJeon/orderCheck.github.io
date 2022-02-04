@@ -1086,6 +1086,14 @@ div.switch.no-txt {
   color: #41495D;
 }
 
+.filter-title03 {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  color: #414C5D;
+}
+
 .filter-title .btn-copy,
 .filter-title .btn-down {
   margin-left: 10px;
