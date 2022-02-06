@@ -153,24 +153,24 @@
                   <div class="content" id="alarmTab1">
                     <div class="alarm-box">
                       <div class="flex-sidebox center">
-                      <div class="dropdown-wrap">
-                <button type="button" class="btn-drop">
-                  <div class="profile-details">
-                    <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
-                    <span class="name">홍길동님</span>
-                    <i class="arrow down"></i>
-                  </div>
+                        <div class="dropdown-wrap">
+                          <button type="button" class="btn-drop">
+                            <div class="profile-details">
+                              <img src="../resource/images/profile.jpg" class="img" alt="profileImg">
+                              <span class="name">홍길동님</span>
+                              <i class="arrow down"></i>
+                            </div>
 
-                </button>
-                <div class="dropdown-box on">
-                  <ul>
-                    <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
-                    <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
-                    <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
-                    <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
-                  </ul>
-                </div>
-              <div class="dim"></div></div>
+                          </button>
+                          <div class="dropdown-box on">
+                            <ul>
+                              <li><a href="#" class="btn-drop-menu">내 프로필</a></li>
+                              <li><a href="#" class="btn-drop-menu">회사 정보</a></li>
+                              <li><a href="#" class="btn-drop-menu">알림 설정</a></li>
+                              <li><a href="#" class="btn-drop-menu">로그아웃</a></li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                       <ul class="alarm-list">
                         <li class="active">
@@ -379,6 +379,13 @@
                     <li><button type="button" class="tab-btn" data-tab="chatTab2">연락처</button></li>
                   </ul>
                   <button type="button" class="search"><span><img src="../resource/images/common/ico_chat-search.png" alt="검색하기"></span></button>
+                  <div class="search-box-dropmenu">
+                    <div class="searchbox type02">
+                      <i class="ico search02"></i>
+                      <input type="text" placeholder="검색하세요">
+                      <button type="button" class="pos btn-remove"><span class="hide">내용 삭제</span></button>
+                    </div>
+                  </div>
                   <span class="slider" data-left="0"></span>
                 </div>
 
@@ -390,7 +397,7 @@
                           <span class="inp-select">
                             <select name="option01" id="">
                               <option value="all">전체</option>
-                              <option value="employee">직원</option>
+                              <option value="employee">고객</option>
                               <option value="team">팀원</option>
                             </select>
                           </span>
@@ -402,9 +409,10 @@
                         </div>
                         <button type="button" class="btn-plus"><span class="hide">더하기</span></button>
                       </div>
+
                       <ul class="chatting-list">
-                        <li>
-                          <button type="button" class="btn-chat-list">
+                        <li class="on">
+                          <button type="button" class="btn-chat-list open-layer" data-info="layer-pop-chatting">
                             <div>
                               <div class="head">
                                 <i class="chat-profile"></i>
@@ -465,11 +473,99 @@
                         </li>
                       </ul>
 
+                      <!-- 부가 서비스 필요 -->
+                      <div class="data-empty-box center" style="display: none;">
+                        <div>
+                          <strong class="txt">사용하시려면 부가 서비스가 필요합니다.<br> ‘채팅’ 기능을 구독해주세요.</strong>
+                          <button type="button" class="btn-blue"><span>구독 설정</span></button>
+                        </div>
+                      </div>
+                      <!-- 부가 서비스 필요 -->
                     </div>
                   </div>
                   <div class="content" id="chatTab2">
-                    <div class="data-empty-box">
-                      <p class="txt">비어 있는 채팅 목록입니다 </p>
+                    <div class="chatting-box">
+                      <div class="top">
+                        <div>
+                          <span class="inp-select">
+                            <select name="option01" id="">
+                              <option value="all">전체</option>
+                              <option value="employee">고객</option>
+                              <option value="team">팀원</option>
+                            </select>
+                          </span>
+                        </div>
+                        <button type="button" class="btn-plus"><span class="hide">더하기</span></button>
+                      </div>
+
+                      <div class="accordion type02">
+                        <div class="accordion-box">
+                          <button type="button" class="accordion-title"><span>고객 <span class="tx-org">2</span></span></button>
+                          <div class="accordion-cnt">
+                            <ul class="chatting-list address">
+                              <li class="on">
+                                <button type="button" class="btn-chat-list">
+                                  <div>
+                                    <div class="head">
+                                      <i class="chat-profile logo">김</i>
+                                      <span class="name"><strong>김오더</strong></span>
+                                      <span class="msg">010.1234.5678</span>
+                                    </div>
+                                  </div>
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="btn-chat-list">
+                                  <div>
+                                    <div class="head">
+                                      <i class="chat-profile logo darkgreen">홍</i>
+                                      <span class="name"><strong>홍길동</strong></span>
+                                      <span class="msg">010.1234.5678</span>
+                                    </div>
+                                  </div>
+                                </button>
+                              </li>
+                            </ul>
+                          </div><!-- //accordion-ncnt-->
+                        </div>
+                      </div>
+                      <div class="accordion type02">
+                        <div class="accordion-box">
+                          <button type="button" class="accordion-title"><span>팀원 <span class="tx-org">2</span></span></button>
+                          <div class="accordion-cnt">
+                            <ul class="chatting-list address">
+                              <li class="on">
+                                <button type="button" class="btn-chat-list">
+                                  <div>
+                                    <div class="head">
+                                      <i class="chat-profile logo">김</i>
+                                      <span class="name"><strong>김오더</strong></span>
+                                      <span class="msg">010.1234.5678</span>
+                                    </div>
+                                  </div>
+                                </button>
+                              </li>
+                              <li>
+                                <button type="button" class="btn-chat-list">
+                                  <div>
+                                    <div class="head">
+                                      <i class="chat-profile logo darkgreen">홍</i>
+                                      <span class="name"><strong>홍길동</strong></span>
+                                      <span class="msg">010.1234.5678</span>
+                                    </div>
+                                  </div>
+                                </button>
+                              </li>
+                            </ul>
+                          </div><!-- //accordion-ncnt-->
+                        </div>
+                      </div>
+
+                      <!-- 빈 화면 -->
+                      <div class="data-empty-box" style="display: none;">
+                        <p class="txt">비어 있는 채팅 목록입니다 </p>
+                      </div>
+                      <!-- 빈 화면 -->
                     </div>
                   </div>
                 </section>
@@ -975,10 +1071,232 @@
 
   </div>
 
+
+
+  <div class="layer-pop" id="layer-chatting-new">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">새로운 채팅</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="search-top">
+          <strong class="txt">고객 선택</strong>
+        </div>
+        <div class="inp-line">
+          <span class="inp">
+            <input type="text" name="" placeholder="고객명, 연락처로 검색">
+          </span>
+          <button type="submit" class="btn btn-light-blue"><span>검색</span></button>
+        </div>
+        <div class="manager-box">
+          <div class="inbox">
+            <ul>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager00" class="check">
+                  <label for="manager00"><span class="box"></span><img src="../resource/images/thumnail/img_person2.png" alt="" /><strong>담당자 없음</strong></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager01" class="check">
+                  <label for="manager01"><span class="box"></span><img src="../resource/images/thumnail/img_person2.png" alt="" /><strong>나</strong><span class="txt">홍길동</span></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager02" class="check">
+                  <label for="manager02"><span class="box"></span><img src="../resource/images/thumnail/img_person3.png" alt="" /><span class="txt">김수안</span></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager03" class="check">
+                  <label for="manager03"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
+                </span>
+              </li>
+              <li>
+                <span class="checkbox">
+                  <input type="checkbox" name="manager_select" id="manager04" class="check">
+                  <label for="manager04"><span class="box"></span><img src="../resource/images/thumnail/img_person4.png" alt="" /><span class="txt">김수안무</span></label>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <p><strong>김이지, 배성희, 박지민, 허재</strong> 총 <strong class="tx-blue">4 명</strong>을 채팅방에 초대합니다.</p>
+        </div>
+        <div class="layer-btn tr">
+          <button type="button" class="btn-l btn-gray"><span>취소</span></button>
+          <button type="button" class="btn-l btn-bk"><span>생성</span></button>
+        </div>
+        <button type="button" class="btn-close layer-close"><span class="txt">닫기</span></button>
+      </div>
+    </div>
+  </div>
+  <!-- 고객 정보 레이어 -->
+  <div class="layer-pop" id="layer-customer-info">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">고객 정보</h2>
+      </div>
+      <div class="layer-mid">
+        <div class="filter-wrap">
+          <div class="filter-box">
+            <p class="filter-title">고객명</p>
+            <div class="inp">
+              <input type="text" name="" id="" placeholder="고객명" value="홍길동" readonly>
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">연락처</p>
+            
+            <div class="inp">
+              <input type="tel" name="" id="" placeholder="연락처" value="010-1234-5678">
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">주소</p>
+            
+            <div class="inp-line">
+              <span class="inp">
+                <input type="text" name="" value="서울특별시 동작구 구원로45">
+              </span>
+              <button type="submit" class="btn btn-light-blue" disabled><span>주소 검색</span></button>
+            </div>
+            <div class="inp">
+              <input type="text" name="" placeholder="상세주소" value="우우건물 103-1034">
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">평형</p>
+            
+            <div class="inp-row">
+             <div class="inp">
+               <input type="text" name="" id="" class="cal" value="1,000">
+               <span class="unit">평</span>
+             </div>
+             <!-- select -->
+             <div class="inp-select">
+              <select name="areaType" style="width:100%;">
+                <option value="000">공급</option>
+                <option value="001">전용</option>
+              </select>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="filter-box">
+            <p class="filter-title">담당자</p>
+            <div class="inp">
+              <input type="text" name="" id="" placeholder="담당자" value="홍길동" >
+            </div>
+          </div>
+          <div class="filter-box">
+            <p class="filter-title">최초 접수일</p>
+            <div class="inp">
+              <input type="text" name="" id="" value="21.10.12" >
+            </div>
+          </div>
+
+        </div><!-- filter wrap-->
+
+
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-bk-line"><span>채팅</span></button>
+          <button type="button" class="btn btn-bk layer-close"><span>고객 관리</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+  <!-- 고객 정보   레이어 -->
+  <div class="layer-pop" id="layer-team-info">
+    <div class="layer-cnt">
+      <div class="layer-top">
+        <h2 class="title">고객 정보 </h2>
+      </div>
+      <div class="layer-mid">
+        <div class="profile-box col">
+          <div class="profile-head">
+            <div class="profile">
+              <!-- dropdown-wrap -->
+              <div class="dropdown-wrap hover">
+                <button type="button" class="btn-thum-edit"><span>수정하기</span></button>
+                <div class="dropdown-box">
+                  <ul>
+                    <li>
+                      <span class="inp">
+                        <input type="file" name="" id="file1" placeholder="파일 검색">
+                        <label for="file1" class="btn-drop-menu"><span>사진 변경</span></label>
+                      </span>
+                    </li>
+                    <li><button type="button" class="btn-drop-menu">사진 삭제</button></li>
+                  </ul>
+                </div>
+              <div class="dim"></div></div>
+              <!-- //dropdown-wrap -->
+
+            </div>
+          </div>
+          <div class="profile-cnt">
+
+            <div class="filter-box">
+              <p class="filter-title">고객명</p>
+              <div class="inp">
+                <input type="text" name="" id="" placeholder="고객명" value="홍길동">
+              </div>
+              <p class="warning-txt02">이름을 입력해주세요.</p>
+            </div>
+
+            <div class="filter-box">
+              <p class="filter-title">연락처</p>
+              <div class="inp">
+                <input type="tel" name="" id="" value="010.1234.5678">
+              </div>
+            </div>
+
+            <div class="filter-box">
+              <p class="filter-title">이메일</p>
+              <div class="inp">
+                <input type="text" name="" id="" value="sample@naver.com">
+              </div>
+              <p class="warning-txt02">정확한 이메일을 입력해주세요.</p>
+              <p class="warning-txt02">이미 가입된 이메일입니다.</p>
+            </div>
+
+
+            <div class="filter-box">
+              <p class="filter-title">개인 코드</p>
+              <div class="inp">
+                <input type="text" name="" id="" value="ank289">
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="layer-btn tr">
+          <button type="button" class="btn btn-bk-line btn-ok"><span>채팅</span></button>
+        </div>
+      </div>
+      <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button>
+    </div>
+  </div>
+
+
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; left:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
-    <button type="button" class="btn-menu" data-info="chatting">채팅 사이드 메뉴</button>  </div>
+    <button type="button" class="btn-link btn-menu" data-info="chatting">채팅 사이드 메뉴</button>  
+    <button type="button" class="btn-link open-layer" data-info="layer-chatting-new" style="font-size:16px"><span>새로운 채팅</span></button><br>
+    <button type="button" class="btn-link open-layer" data-info="layer-customer-info" style="font-size:16px"><span>고객정보 고객</span></button><br>
+    <button type="button" class="btn-link open-layer" data-info="layer-team-info" style="font-size:16px"><span>고객정보 팀원</span></button><br>
+  </div>
 
   <!-- script -->
   <script src="../resource/js/vendor/jquery-2.1.3.min.js"></script>
@@ -993,7 +1311,8 @@
 
     dropMenuOpen(".btn-show-menu.depth1",".btn-show-menu.depth1 + .dropdown-box",".btn-drop-menu.dep1")
     dropMenuOpen(".btn-show-menu.depth2",".btn-show-menu.depth2 + .dropdown-box",".btn-drop-menu.dep2")
-
+    //레이어
+    layerFunc (".open-layer")
     //페이지 내 tab
     tabFunc(".content-box.chatting .tab-wrap")
     //right메뉴 탭
@@ -1010,7 +1329,8 @@
     alarmDropMenu()//알림용 드롭 메뉴 추가 기능
     alarmAllChecked(".btn-alarm-all",".content-box.alarm .content.active .alarm-list > li")
     dropMenuOpen ('.chatting .btn-drop','.chatting .dropdown-box','.chatting .btn-drop-menu',null)//상단 드롭 메뉴
-
+    clickAddClassFunc (".tab-wrap .search", ".search-box-dropmenu","show") 
+    accordionFunc (".accordion-title")
   </script>
 </body>
 </html>

@@ -560,7 +560,8 @@ width:20px; height:20px; border:1px solid #aaa; border-radius:50%;}
 .layer-cnt .layer-mid {padding-right:20px;}
 .layer-cnt .layer-btn {margin-top:26px; margin-bottom:20px}
 .layer-btn > .btn-bk-line{ min-width:auto; width:107px; font-size:16px;font-weight:bold}
-.layer-btn > .btn-bk { min-width:auto; min-width:90px; font-size:16px;font-weight:bold}
+.layer-btn > .btn-bk,
+.layer-btn > .btn-gray { min-width:auto; min-width:90px; font-size:16px;font-weight:bold}
 .layer-btn > button,
 .layer-btn > a {height:55px; line-height:21px; display:inline-block;}
 .layer-btn > a {line-height:31px}
