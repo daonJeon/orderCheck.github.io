@@ -454,7 +454,7 @@
                               </div>
                             </div>
                           </button>
-                        </li>                        
+                        </li>
                         <li>
                           <button type="button" class="btn-chat-list">
                             <div>
@@ -469,7 +469,7 @@
 
                             </div>
                           </button>
-                          
+
                         </li>
                       </ul>
 
@@ -1150,7 +1150,7 @@
 
           <div class="filter-box">
             <p class="filter-title">연락처</p>
-            
+
             <div class="inp">
               <input type="tel" name="" id="" placeholder="연락처" value="010-1234-5678">
             </div>
@@ -1158,7 +1158,7 @@
 
           <div class="filter-box">
             <p class="filter-title">주소</p>
-            
+
             <div class="inp-line">
               <span class="inp">
                 <input type="text" name="" value="서울특별시 동작구 구원로45">
@@ -1172,7 +1172,7 @@
 
           <div class="filter-box">
             <p class="filter-title">평형</p>
-            
+
             <div class="inp-row">
              <div class="inp">
                <input type="text" name="" id="" class="cal" value="1,000">
@@ -1291,22 +1291,81 @@
   <!-- 채팅창 레이어 -->
   <div class="layer-pop pop-chat" id="layer-pop-chatting">
     <div class="layer-cnt">
+      <div class="top flex-sidebox">
+        <div class="head flexbox center">
+          <i class="chat-profile"></i>
+          <span class="name"><strong>오더킹</strong>
+          <span class="tx-gray">010.1234.5678</span>
+        </div>
+
+        <div class="btns">
+          <button type="button" class="btn-chat-alarm"><span><img src="../resource/images/common/ico_chatting-alarm.png" alt="채팅 알림"></span></button>
+          <button type="button" class="btn-chat-menu"><span><img src="../resource/images/common/ico_chatting-menu.png" alt="메뉴"></span></button>
+        </div>
+
+      </div>
       <div class="layer-mid">
-        <div class="top flex-sidebox">          
-          <div class="head">
-            <i class="chat-profile"></i>
-            <span class="name"><strong>오더킹</strong>
-            <span class="tx-gray">010.1234.5678</span>
+        <div class="chat-msg-box">
+          <div class="chat-box">
+            <!-- msg-box -->
+            <div class="msg-box">
+              <i class="chat-profile"></i>
+              <ul>
+                <li>
+                  <p class="name">홍길동</p>
+                  <div class="flexbox">
+                    <p class="msg">안녕하세요:) 상담 문의주셔서 감사합니다. 간단한 상담을 위해 전화 드리려고 하는데 통화 가능하신 시간 남겨주시면 해당 시간대에 연락 드릴 수 있도록 하겠습니다.</p>
+                    <span class="time">오후 4:32</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- //msg-box -->
+
+            <p class="datetime">2021년 12월 12일</p>
+
+            <!-- msg-box -->
+            <div class="msg-box self">
+              <ul>
+                <li><p class="msg">혹시 통화 말고 채팅 상담은 진행이 어려울까요?</p></li>
+                <li><p class="msg">아! 주말이면 아무때나 가능합니다!</p></li>
+              </ul>
+            </div>
+            <!-- //msg-box -->
+            <!-- msg-box -->
+            <div class="msg-box">
+              <span class="head"><i class="chat-profile"></i></span>
+              <ul>
+                <li>
+                  <p class="name">홍길동</p>
+                  <p class="msg">현재 채팅 상담은 진행하고 있지 않습니다.</p>
+                </li>
+                <li class="on">
+                  <div class="flex-sidebox">
+                    <div class="flexbox">
+                      <p class="msg">주말 중 가능하신 시간이 있다면 말씀 주세요!</p>
+                      <span class="time">오후 4:32</span>
+                    </div>
+                    <button type="button" class="btn-show-menu depth1"><span class="hide">메뉴 보기</span></button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- //msg-box -->
+            <p class="tc"><span class="tx-invite"><strong>홍길동님</strong>이 <strong>오재하님</strong>을 초대했습니다</span></p>
+
+          </div>
+        </div>
+
+        <div class="fixed-btn tr">
+          <div class="fixbox">
+            <button type="button" class="btn-plus"><span class="hide">추가하기</span></button>
+            <span class="inp-chat">
+              <input type="text" value="abcd">
+              <button type="button" class="btn-sharp"><span>#</span></button>
+            </span>
           </div>
 
-          <div class="btns">
-            <button type="button" class="btn-chat-alarm"><span>채팅 알림</span></button>
-            <button type="button" class="btn-chat-menu"><span>메뉴</span></button>
-          </div>
-          
-        </div>
-        <div class="layer-btn tr">
-          <input type="text" value="13456">
         </div>
       </div>
       <!-- <button type="button" class="btn-close layer-close"><span class="txt">팝업 닫기</span></button> -->
@@ -1317,7 +1376,8 @@
   <!-- 개발 시 삭제 -->
   <div id="fixmenu" style="position:fixed; bottom:0; left:0; background: #fff; width:150px; border:1px solid #ddd; line-height:30px; z-index:1000; text-align: center; margin-bottom:10px ">
     <h2 style="padding:5px 0;border-bottom:1px solid #ddd; width:100%; line-height:30px; font-size:20px; ">레이어</h2>
-    <button type="button" class="btn-link btn-menu" data-info="chatting">채팅 사이드 메뉴</button>  
+    <button type="button" class="btn-link btn-menu" data-info="chatting">채팅 사이드 메뉴</button><br>
+    <button type="button" class="btn-link open-layer" data-info="layer-pop-chatting">채팅 레이어</button><br>
     <button type="button" class="btn-link open-layer" data-info="layer-chatting-new" style="font-size:16px"><span>새로운 채팅</span></button><br>
     <button type="button" class="btn-link open-layer" data-info="layer-customer-info" style="font-size:16px"><span>고객정보 고객</span></button><br>
     <button type="button" class="btn-link open-layer" data-info="layer-team-info" style="font-size:16px"><span>고객정보 팀원</span></button><br>
@@ -1334,8 +1394,7 @@
     //select box = jquery plugin
     $('.inp-select select').niceSelect();
 
-    dropMenuOpen(".btn-show-menu.depth1",".btn-show-menu.depth1 + .dropdown-box",".btn-drop-menu.dep1")
-    dropMenuOpen(".btn-show-menu.depth2",".btn-show-menu.depth2 + .dropdown-box",".btn-drop-menu.dep2")
+
     //레이어
     layerFunc (".open-layer")
     //페이지 내 tab
@@ -1354,7 +1413,7 @@
     alarmDropMenu()//알림용 드롭 메뉴 추가 기능
     alarmAllChecked(".btn-alarm-all",".content-box.alarm .content.active .alarm-list > li")
     dropMenuOpen ('.chatting .btn-drop','.chatting .dropdown-box','.chatting .btn-drop-menu',null)//상단 드롭 메뉴
-    clickAddClassFunc (".tab-wrap .search", ".search-box-dropmenu","show") 
+    clickAddClassFunc (".tab-wrap .search", ".search-box-dropmenu","show")
     accordionFunc (".accordion-title")
   </script>
 </body>

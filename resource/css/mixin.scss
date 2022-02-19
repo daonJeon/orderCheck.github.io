@@ -1,0 +1,12 @@
+@mixin fontSet($fontWeight:null,$lineHeight:null,$fontSize:null,$fontColor:null) {
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  font-size: $fontSize;
+  color: $fontColor;
+}
+@mixin flexBox ($dir:null,$justify:null,$align:null) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
