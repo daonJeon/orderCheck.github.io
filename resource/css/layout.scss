@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap'); /* Google Font Link */
 @import './font.css';
+@import "mixin.scss";
 
 /* reset */
 html, body, div, span, applet, object, iframe,
@@ -164,11 +165,41 @@ input[type=text]::-ms-clear { display:none;}
 .btn-round-gray {background: #EBEBEB; padding:6px 12px; border-radius: 24px; font-size: 13px; line-height: 19px;text-align: center; color:#7B7B7B; transition:background-color .4s}
 .btn-round-gray:hover {background: #1D58FF; color:#fff}
 
+.btn-chat-side {
+  display: inline-block;
+  padding-top:56px;
+  width:56px;
+  @include fontSet (400,14px,10px,#555868);
+  text-align: center;
+}
+.btn-chat-side.highlight {
+  @include bac("../images/chat/ico_chat-menu-highlight.svg")
+}
+.btn-chat-side.file {
+  @include bac("../images/chat/ico_chat-menu-file.svg")
+}
+.btn-chat-side.weblink {
+  @include bac("../images/chat/ico_chat-menu-weblink.svg")
+}
+
+.btn-msg-alarm {
+  width: 26px; height: 26px;
+  @include bac("../images/chat/ico_msg-alarm.svg")
+}
+.btn-msg-alarm.on {@include bac("../images/chat/ico_msg-alarm-on.svg")}
+
+
 /* input */
 .inp-line {display:flex; align-items: center; justify-content:space-between;}
 .inp-line .inp {flex:1; margin-right:10px;}
 .inp-line .btn {min-width:100px}
 .inp-line + .inp {margin-top:8px}
+
+.inp-chat { position: relative; display:block; height:40px; text-align:left; background: #FFFFFF; border: 1px solid #E8E8E8; box-sizing: border-box;  border-radius: 21px; }
+.inp-chat input {
+  @include fontSet (400,20px,14px,#555868);
+  caret-color: #1D58FF;
+}
 
 .textarea {width:100%;height:120px;padding: 0;margin: 0;border: 1px solid #E7E7E7;resize: none; box-sizing: border-box;}
 .textarea::placeholder {color:#9A9A9A; font-family: inherit; letter-spacing: -.5px;}
@@ -246,6 +277,7 @@ div.switch.no-txt {display: block;}
 .dot-list li:before {position:absolute; top:8px; left:8px; width:3px; height:3px; border-radius: 50%; background:#9A9A9A; content:''}
 .dot-list li + li {margin-top:8px;}
 
+.line-list > li + li {border-top:1px solid #F3F3F3;}
 
 /* layout */
 .header { display:flex; justify-content: space-between; align-items: center; }/* #footer */
@@ -328,7 +360,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 .gnb-box.right.chatting > ul > li {width:auto}
 .gnb-box.right.alarm .tab-wrap,
 .gnb-box.right.alarm .filter-title02 {padding-left:4px}
+.chatting .setting-nav .btm,
 .gnb-box.right .btm {position: absolute; width:100%; padding: 17px 20px 20px; left:0; bottom: 0px; z-index: 1; border-top:1px solid #E3E3E3; box-sizing: border-box;}
+.chatting .setting-nav .btm.side,
 .gnb-box.right .btm.side {display: flex; justify-content: space-between;}
 .gnb-box.right .data-empty-box {height:calc(100vh - 153px); overflow: auto;}
 .gnb-box.right .data-empty-box .txt {font-weight: 400;}
@@ -428,6 +462,9 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 /*===== Tab =====*/
 .tab-wrap {position:relative;}
 .tabs {display:flex; justify-content:start; border-bottom:1px solid #e6e6e6}
+.tabs.full li {width:50%; text-align: center;}
+.tabs.full li .tab-btn, .tabs.full li .tab-btn02 {width:100%}
+
 .tabs li, .tabs li { position:relative;}
 .tabs li .tab-btn, .tabs li .tab-btn02 { display:inline-block; padding-right:3px; font-weight: 500; font-size: 16px; line-height: 23px; color: #7B7B7B; letter-spacing: -.5px; }
 .tabs li.on .tab-btn, .tabs li.on .tab-btn02 {font-weight: bold; color: #02164F;}
@@ -681,7 +718,7 @@ width:calc(100% - 40px); font-size:14px;}
 .dropdown-wrap .dim {display: none;}
 .dropdown-box {display:none; position:absolute; top:40px; width:118px; min-height:20px; border:1px solid #ddd; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25); border-radius: 4px; background-color: #fff; z-index: 2; background-color:#fff;}
 .dropdown-box.on {display: block;}
-.dropdown-box .btn-drop-menu {display:block; width:100%; padding:10px 12px;font-size: 14px; line-height: 20px; color: #41495D; text-align:left; cursor: pointer; box-sizing: border-box;}
+.dropdown-box .btn-drop-menu {display:block; width:100%; padding:10px 11px;font-size: 14px; line-height: 20px; color: #41495D; text-align:left; cursor: pointer; box-sizing: border-box;}
 .dropdown-box li:first-child .btn-drop-menu {padding-top:14px;}
 .dropdown-box li:last-child .btn-drop-menu {padding-bottom:14px;}
 .dropdown-box li {position: relative;}

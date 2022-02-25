@@ -1,8 +1,9 @@
-@mixin fontSet($fontWeight:null,$lineHeight:null,$fontSize:null,$fontColor:null) {
+@mixin fontSet($fontWeight:null,$lineHeight:null,$fontSize:null,$fontColor:null,$letterSpacing:null) {
   font-weight: $fontWeight;
   line-height: $lineHeight;
   font-size: $fontSize;
   color: $fontColor;
+  letter-spacing: $letterSpacing;
 }
 @mixin flexBox ($dir:null,$justify:null,$align:null) {
   display: flex;
@@ -10,3 +11,38 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin size ($wid:null,$height:null) {
+  width: $wid;
+  height: $height;
+}
+
+@mixin posA ($top:null, $right:null, $bottom:null,$left:null,$zIndex:null) {
+  position: absolute;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  z-index:$zIndex;
+}
+
+@mixin posR ($top:null, $right:null, $bottom:null,$left:null,$zIndex:null) {
+  position: relative;
+  top:$top;
+  right:$right;
+  bottom:$bottom;
+  left:$left;
+  z-index:$zIndex;
+}
+
+@mixin bac ($src:null,$pos:left top,$repeat:no-repeat,$size:null ) {
+  background:url($src) $repeat $pos;
+  background-size:$size
+}
+
+@mixin textShorten () {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+

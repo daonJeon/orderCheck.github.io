@@ -714,6 +714,39 @@ input[type=text]::-ms-clear {
   color: #fff;
 }
 
+.btn-chat-side {
+  display: inline-block;
+  padding-top: 56px;
+  width: 56px;
+  font-weight: 400;
+  line-height: 14px;
+  font-size: 10px;
+  color: #555868;
+  text-align: center;
+}
+
+.btn-chat-side.highlight {
+  background: url("../images/chat/ico_chat-menu-highlight.svg") no-repeat left top;
+}
+
+.btn-chat-side.file {
+  background: url("../images/chat/ico_chat-menu-file.svg") no-repeat left top;
+}
+
+.btn-chat-side.weblink {
+  background: url("../images/chat/ico_chat-menu-weblink.svg") no-repeat left top;
+}
+
+.btn-msg-alarm {
+  width: 26px;
+  height: 26px;
+  background: url("../images/chat/ico_msg-alarm.svg") no-repeat left top;
+}
+
+.btn-msg-alarm.on {
+  background: url("../images/chat/ico_msg-alarm-on.svg") no-repeat left top;
+}
+
 /* input */
 .inp-line {
   display: -webkit-box;
@@ -740,6 +773,26 @@ input[type=text]::-ms-clear {
 
 .inp-line + .inp {
   margin-top: 8px;
+}
+
+.inp-chat {
+  position: relative;
+  display: block;
+  height: 40px;
+  text-align: left;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 21px;
+}
+
+.inp-chat input {
+  font-weight: 400;
+  line-height: 20px;
+  font-size: 14px;
+  color: #555868;
+  caret-color: #1D58FF;
 }
 
 .textarea {
@@ -1149,6 +1202,10 @@ div.switch.no-txt {
   margin-top: 8px;
 }
 
+.line-list > li + li {
+  border-top: 1px solid #F3F3F3;
+}
+
 /* layout */
 .header {
   display: -webkit-box;
@@ -1453,6 +1510,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
   padding-left: 4px;
 }
 
+.chatting .setting-nav .btm,
 .gnb-box.right .btm {
   position: absolute;
   width: 100%;
@@ -1465,6 +1523,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
           box-sizing: border-box;
 }
 
+.chatting .setting-nav .btm.side,
 .gnb-box.right .btm.side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1922,6 +1981,15 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
       -ms-flex-pack: start;
           justify-content: start;
   border-bottom: 1px solid #e6e6e6;
+}
+
+.tabs.full li {
+  width: 50%;
+  text-align: center;
+}
+
+.tabs.full li .tab-btn, .tabs.full li .tab-btn02 {
+  width: 100%;
 }
 
 .tabs li, .tabs li {
@@ -3053,7 +3121,7 @@ body {
 .dropdown-box .btn-drop-menu {
   display: block;
   width: 100%;
-  padding: 10px 12px;
+  padding: 10px 11px;
   font-size: 14px;
   line-height: 20px;
   color: #41495D;
