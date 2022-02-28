@@ -45,4 +45,12 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+@mixin textlineShorten ($lineNum:2px,$width:null) {
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineNum;
+  -webkit-box-orient: vertical;
+}
 

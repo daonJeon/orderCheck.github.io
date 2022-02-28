@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
 /* Google Font Link */
 @import url(c:\Users\peace\Desktop\prepare-work\order_check\resource\css\font.css);
 /* reset */
@@ -212,6 +212,10 @@ input[type=text]::-ms-clear {
   text-indent: -9999px;
   z-index: 0;
   overflow: hidden;
+}
+
+.mt30 {
+  margin-top: 30px;
 }
 
 .mt40 {
@@ -717,7 +721,7 @@ input[type=text]::-ms-clear {
 .btn-chat-side {
   display: inline-block;
   padding-top: 56px;
-  width: 56px;
+  width: 52px;
   font-weight: 400;
   line-height: 14px;
   font-size: 10px;
@@ -1489,8 +1493,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
   right: -100%;
 }
 
-.gnb-box.right.alarm,
-.gnb-box.right.chatting {
+.gnb-box.right.alarm {
   width: 440px;
   padding: 22px 15px;
   -webkit-box-sizing: border-box;
@@ -1499,10 +1502,18 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
 
 .gnb-box.right.chatting {
   width: 460px;
+  padding: 22px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .gnb-box.right.chatting > ul > li {
   width: auto;
+}
+
+.gnb-box.right.chatting .btn-side-close {
+  right: 20px;
+  top: 23px;
 }
 
 .gnb-box.right.alarm .tab-wrap,
@@ -1533,22 +1544,40 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
           justify-content: space-between;
 }
 
+.gnb-box.right .btm.right,
+.chatting .setting-nav .btm.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .gnb-box.right .data-empty-box {
   height: calc(100vh - 153px);
   overflow: auto;
 }
 
 .gnb-box.right .data-empty-box .txt {
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 16px;
 }
 
 .gnb-box.right.alarm .filter-title,
-.gnb-box.right.chatting .filter-title {
+.gnb-box.right.chatting .filter-title,
+.chatting .setting-nav .filter-title {
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   color: #41495D;
+}
+
+.gnb-box.right.chatting .tabs li + li,
+.chatting .setting-nav .tabs li + li {
+  margin-left: 22px;
 }
 
 .gnb-wrap.menu .btn-menu.open + .gnb-box,
@@ -2011,6 +2040,7 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
   color: #02164F;
 }
 
+/* .tabs li .tab-btn02:after {display:block; position:absolute; width:0; height:5px; left: 50%;transform: translateX(-50%); bottom:0; background: #02164F; border-radius: 6px 6px 0px 0px; content:'';transition: width .5s ease,background-color .5s ease;} */
 .tabs li .tab-btn:after,
 .tabs li .tab-btn02:after {
   display: block;
@@ -2034,6 +2064,25 @@ display: inline-block; line-height: 1; text-transform: none; letter-spacing: nor
   border-radius: 0;
   height: 3px;
   margin-top: 11px;
+}
+
+.tabs.full li .tab-btn {
+  width: auto;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+  color: #9A9A9A;
+}
+
+.tabs.full li.on .tab-btn {
+  color: #02164F;
+}
+
+.tabs.full li .tab-btn:after {
+  height: 3px;
+  margin: 8px auto 0;
+  border-radius: 0;
+  content: '';
 }
 
 .tabs li + li {
@@ -3609,6 +3658,24 @@ body {
   font-weight: 500;
 }
 
+.data-empty-box.pop {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.data-empty-box.pop .txt {
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 16px;
+  color: #9A9A9A;
+}
+
 .tab-content {
   position: relative;
   height: 100%;
@@ -3971,6 +4038,23 @@ body {
   -webkit-transition: all 1s;
   transition: all 1s;
   opacity: 0;
+}
+
+.toast.type02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #1D58FF;
+}
+
+.toast .btn-link {
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
 }
 
 .toast + .toast {

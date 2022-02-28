@@ -1130,7 +1130,7 @@ function pageInfoRemove () {
 
 
 
-function ToastFunc(btn, msg, time) {
+function ToastFunc(btn, msg, time, link, linkMsg) {
   var button = document.querySelectorAll(btn)
 
   var toastArea = document.createElement("div");
@@ -1143,7 +1143,8 @@ function ToastFunc(btn, msg, time) {
     createToast()
   } else {
     Array.prototype.forEach.call(button, function(btn, idx){
-      btn.addEventListener("click", createToast)
+      if (link) btn.addEventListener("click", createLinkToast)
+      else btn.addEventListener("click", createToast)
     })
 
   }
@@ -1153,6 +1154,34 @@ function ToastFunc(btn, msg, time) {
     toastEl.classList.add("toast")
     toastEl.innerText = msg
     toastCont.appendChild(toastEl)
+
+    setTimeout(function () {
+      toastEl.classList.add("active")
+    },10)
+    setTimeout(function () {
+      toastEl.remove()
+      toastEl.classList.remove("active")
+    },time)
+  }
+
+  function createLinkToast () {
+    var toastEl = document.createElement("div")
+    var msgBox = document.createElement("p")
+    var btn = document.createElement("BUTTON")
+
+    toastEl.classList.add("toast")
+    toastEl.classList.add("type02")
+    msgBox.classList.add("msg")
+    btn.setAttribute("type","button")
+    btn.classList.add("btn-link")
+
+    msgBox.innerText = msg
+    btn.innerText = linkMsg
+    toastEl.appendChild(msgBox)
+    toastEl.appendChild(btn)
+    toastCont.appendChild(toastEl)
+
+    console.log(toastCont)
 
     setTimeout(function () {
       toastEl.classList.add("active")
