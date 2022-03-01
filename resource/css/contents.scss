@@ -435,7 +435,7 @@
 .msg-box .list-linkbox:not(card) .badge.position {margin-left:0;}
 .btn-sharp{
   @include size (28px,28px); text-indent:-9999px;
-  @include bac ("../images/chat/ico_btn-sharp.png",center)
+  @include bac ("../images/chat/ico_btn-sharp.svg",center)
 }
 .btn-sharp.on {background-color:rgba(29, 88, 255, 0.06); }
 .btn-chat-send {
@@ -1084,7 +1084,7 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 
 .btn-all {padding-left:24px; font-weight: 500; font-size: 15px; line-height: 22px; color: #555868; background: url(../images/common/ico_full.png) no-repeat left center;}
 .btn-all.type02 {@include fontSet(400,20px,14px,#02164F,0.2px);}
-.btn-chatting {display:inline-block; width:22px;height:22px; background: url(../images/chat/ico_chatting.png) no-repeat center; text-indent: -9999px;}
+.btn-chatting {display:inline-block; width:22px;height:22px; background: url(../images/chat/ico_chatting.svg) no-repeat center; text-indent: -9999px;}
 
 /* 파일 보관함 */
 .btn-folder {min-width:212px; padding:12px 10px 12px 36px; border: 1px solid #E6E6E6; box-sizing: border-box; border-radius: 6px; background:url(../images/common/ico_storage-folder.png) no-repeat left 12px center; text-align: left; background-size:18px auto}
@@ -1445,18 +1445,18 @@ li.active + li.active:after {position:absolute; top:-10px; right:0; width:10px; 
 .btn-chat-list > div .name {font-weight: bold;font-size: 16px;line-height: 23px;color: #41495D;}
 .btn-chat-list > div .head { padding-left:60px}
 .btn-chat-list > div .chat-profile {position: absolute; left:0px; top:50%; margin-top:-24px; width:48px; height:48px; line-height: 48px;}
-.chat-profile {display:inline-block; border-radius: 50%; width:30px; height:30px; background: url(../images/chat/ico_chat-profile.png) no-repeat center/contain;}
+.chat-profile {display:inline-block; border-radius: 50%; width:30px; height:30px; background: url(../images/chat/ico_chat-profile.svg) no-repeat center/contain;}
 .chat-profile.logo {background: #0822A0;font-weight: 500; font-size: 18px;  text-align: center; color: #FFFFFF;}
 .chat-profile.logo.darkgreen {background-color:  #969845;}
-.chat-profile.group {background-color:#EA8484; background-image: url(../images/chat/ico_chat-profile-group.png); background-size:30px auto }
-.chat-profile.group02 {background-color:#5A5C65; background-image: url(../images/chat/ico_chat-profile-group.png); background-size:30px auto }
+.chat-profile.group {background-color:#EA8484; background-image: url(../images/chat/ico_chat-profile-group.svg); background-size:30px auto }
+.chat-profile.group02 {background-color:#5A5C65; background-image: url(../images/chat/ico_chat-profile-group.svg); background-size:30px auto }
 
 
 .btn-chat-list > div .head .msg {display: block; margin-top:5px; font-size: 14px;
   line-height: 20px; color: #555868; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
 .btn-chat-list {text-align: left; width:100%;}
-.alarm-state {display:inline-block; width:16px; height:16px;  background: url(../images/chat/ico_chat-alarm-on.png) no-repeat center;text-indent: -9999px;}
-.alarm-state.off { background-image: url(../images/chat/ico_chat-alarm-off.png) }
+.alarm-state {display:inline-block; width:16px; height:16px;  background: url(../images/chat/ico_chat-alarm-on.svg) no-repeat center;text-indent: -9999px;}
+.alarm-state.off { background-image: url(../images/chat/ico_chat-alarm-off.svg) }
 .chatting-list > li {position: relative;padding:12px 0 11px;; height:48px}
 .chatting-list > li .alarm-state {margin-left:4px; vertical-align: -2px;}
 .chatting-list > li.on {background: #F7F9FF; border-radius: 10px;}
@@ -1751,7 +1751,7 @@ line-height:22px; font-size:14px;}
 .content-section.chatting .setting-nav {width:460px; box-shadow: none;}
 
 .chatting .cnt-inner {box-shadow: 1px 1px 30px rgba(29, 88, 255, 0.06);  border-radius: 16px; overflow: hidden; background-color: #E1E4E8;}
-.chatting .cnt-inner .left {position: relative; width:925px;}
+.chatting .cnt-inner .left {position: relative; min-width:925px; flex:1}
 .chatting .cnt-inner .right {width:395px; height:100%; margin-left:0;}
 .chatting .cnt-inner .right .pop-chat {position: relative; height:100%;}
 
@@ -1794,7 +1794,7 @@ line-height:22px; font-size:14px;}
 
 
 .data-empty-box.chatting {width:100%; height:calc(100% - 96px)}
-.data-empty-box.chatting .txt {margin-top:-140px; width:100%; padding-bottom:180px; @include bac("../images/chat/bg_highlight-empty.png",bottom center)}
+.data-empty-box.chatting .txt {margin-top:-140px; width:100%; padding-bottom:180px; @include bac("../images/chat/bg_highlight-empty.svg",bottom center)}
 .ht-list {width:100%; margin-bottom:20px;}
 .ht-list .video-info-box {width:100%; background-color:#F7F7F7;}
 .ht-list .msg-box {padding:8px 10px; border-radius: 10px; background-color:#F7F7F7; border:1px solid #F7F7F7; @include fontSet(400,19px,13px,#555868)}
@@ -1802,6 +1802,8 @@ line-height:22px; font-size:14px;}
 .ht-list .btn-close {top:0; right:0; }
 .ht-list .btn-close:before,
 .ht-list .btn-close:after {width:11px; height:1px; top:50%; left:50%;}
+
+.ht-list .btn-close:hover {transform: rotate(0);}
 .ht-list li.highlight .msg-box {background: rgba(29, 88, 255, 0.06); border: 1px solid #1D58FF;}
 
 .txt-adding {margin-bottom:8px; @include fontSet(400,17px,12px,#41495D)}

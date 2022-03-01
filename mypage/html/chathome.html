@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi" />
+        <meta property="og:title" content="">
+        <meta property="og:type" content="mypage">
+        <meta name="naver-site-verification" content="">
+        <meta property="og:image" content="">
+        <meta http-equiv="Cache-Control" content="No-Cache">
+        <meta http-equiv="Pragma" content="No-Cache">
+        <meta name="language" content="ko">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        
+        <title>마이페이지</title>
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+        <script src="../js/jquery-2.1.3.min.js"></script>
+        <script src="../js/layerpop.js"></script>
+        <script src="../js/common.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <div id="wrap">
+            <section id="content">
+                <div class="chathome">
+                    <div class="inner">
+                        <div class="swiper chat-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide slider01">
+                                    <strong>채팅으로 원활한 소통</strong>
+                                    <p>상담 신청한 업체와 채팅을 시작해보세요</p>
+                                </div>
+                                <div class="swiper-slide slider02">
+                                    <strong>하이라이트로 메세지 보관</strong>
+                                    <p>중요한 메세지를 길게 탭하여 하이라이트에 추가해보세요</p>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-primary">다음</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
+<script>
+    var swiper = new Swiper(".chat-slider", {
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>

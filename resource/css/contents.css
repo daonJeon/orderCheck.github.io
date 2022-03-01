@@ -2086,7 +2086,7 @@
   width: 28px;
   height: 28px;
   text-indent: -9999px;
-  background: url("../images/chat/ico_btn-sharp.png") no-repeat center;
+  background: url("../images/chat/ico_btn-sharp.svg") no-repeat center;
 }
 
 .btn-sharp.on {
@@ -4941,7 +4941,7 @@ li.active + li.active:after {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: url(../images/chat/ico_chatting.png) no-repeat center;
+  background: url(../images/chat/ico_chatting.svg) no-repeat center;
   text-indent: -9999px;
 }
 
@@ -6615,7 +6615,7 @@ li.active + li.active:after {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background: url(../images/chat/ico_chat-profile.png) no-repeat center/contain;
+  background: url(../images/chat/ico_chat-profile.svg) no-repeat center/contain;
 }
 
 .chat-profile.logo {
@@ -6632,13 +6632,13 @@ li.active + li.active:after {
 
 .chat-profile.group {
   background-color: #EA8484;
-  background-image: url(../images/chat/ico_chat-profile-group.png);
+  background-image: url(../images/chat/ico_chat-profile-group.svg);
   background-size: 30px auto;
 }
 
 .chat-profile.group02 {
   background-color: #5A5C65;
-  background-image: url(../images/chat/ico_chat-profile-group.png);
+  background-image: url(../images/chat/ico_chat-profile-group.svg);
   background-size: 30px auto;
 }
 
@@ -6662,12 +6662,12 @@ li.active + li.active:after {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: url(../images/chat/ico_chat-alarm-on.png) no-repeat center;
+  background: url(../images/chat/ico_chat-alarm-on.svg) no-repeat center;
   text-indent: -9999px;
 }
 
 .alarm-state.off {
-  background-image: url(../images/chat/ico_chat-alarm-off.png);
+  background-image: url(../images/chat/ico_chat-alarm-off.svg);
 }
 
 .chatting-list > li {
@@ -7476,7 +7476,10 @@ li.active + li.active:after {
 
 .chatting .cnt-inner .left {
   position: relative;
-  width: 925px;
+  min-width: 925px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .chatting .cnt-inner .right {
@@ -7660,7 +7663,7 @@ li.active + li.active:after {
   margin-top: -140px;
   width: 100%;
   padding-bottom: 180px;
-  background: url("../images/chat/bg_highlight-empty.png") no-repeat bottom center;
+  background: url("../images/chat/bg_highlight-empty.svg") no-repeat bottom center;
 }
 
 .ht-list {
@@ -7699,6 +7702,11 @@ li.active + li.active:after {
   height: 1px;
   top: 50%;
   left: 50%;
+}
+
+.ht-list .btn-close:hover {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .ht-list li.highlight .msg-box {
