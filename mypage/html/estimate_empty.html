@@ -37,12 +37,12 @@
                         </div>
                         <div class="tab-wrap">
                             <ul class="tabs">
-                                <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">전체</button></li>
-                                <li><button type="button" class="tab-btn" data-tab="tab2">즐겨찾기</button></li>
+                                <li class="on"><button type="button" class="tab-btn " data-tab="tab1">전체</button></li>
+                                <li><button type="button" class="tab-btn active" data-tab="tab2">즐겨찾기</button></li>
                             </ul>
                         </div>
                         <section class="tab-content">
-                            <div class="content active" id="tab1">
+                            <div class="content " id="tab1">
                                 <div class="list-top">
                                     <p class="total">전체 <strong>3</strong>개</p>
                                     <button type="button" class="btn-sort">최신순</button>
@@ -54,16 +54,7 @@
                                             <div class="tit">
                                                 <p>오더킹</p>
                                                 <span>06월 3일</span>
-                                                <div class="dropdown-wrap small">
-                                                  <button type="button" class="btn-more">더보기</button>
-                                                  <div class="dropdown-box">
-                                                    <ul>
-                                                      <li><button type="button" class="btn-drop-menu btn-bookmark on">즐겨찾기</button><!-- on 클래스 추가시 --></li>
-                                                      <li><a href="#" class="btn-drop-menu"><span>업체 정보</span></a></li>
-                                                    </ul>
-                                                  </div>
-                                                </div>
-
+                                                <button type="button" class="btn-more">더보기</button>
                                             </div>
                                         </div>
                                         <div class="btm">
@@ -85,17 +76,13 @@
                                             <div class="tit">
                                                 <p>오더킹</p>
                                                 <span>06월 3일</span>
-                                                <div class="dropdown-wrap small">
-                                                  <button type="button" class="btn-more">더보기</button>
-                                                  <div class="dropdown-box">
+                                                <div class="more-cnt">
+                                                    <button type="button" class="btn-more">더보기</button>
                                                     <ul>
-                                                      <li><button type="button" class="btn-drop-menu btn-bookmark on">즐겨찾기</button></li>
-                                                      <li><a href="#" class="btn-drop-menu"><span>업체 정보</span></a></li>
+                                                        <li><button type="button" class="btn-bookmark on">즐겨찾기</button></li>
+                                                        <li><button type="button" class="">업체 정보</button></li>
                                                     </ul>
-                                                  </div>
                                                 </div>
-
-
                                             </div>
                                         </div>
                                         <div class="btm">
@@ -117,15 +104,7 @@
                                             <div class="tit">
                                                 <p><span>(기존 견적)</span>오더킹</p>
                                                 <span>06월 3일</span>
-                                                <div class="dropdown-wrap small">
-                                                  <button type="button" class="btn-more">더보기</button>
-                                                  <div class="dropdown-box">
-                                                    <ul>
-                                                      <li><button type="button" class="btn-drop-menu btn-bookmark on">즐겨찾기</button><!-- on 클래스 추가시 --></li>
-                                                      <li><a href="#" class="btn-drop-menu"><span>업체 정보</span></a></li>
-                                                    </ul>
-                                                  </div>
-                                                </div>
+                                                <button type="button" class="btn-more">더보기</button>
                                             </div>
                                         </div>
                                         <div class="btm">
@@ -143,7 +122,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="content" id="tab2">
+                            <div class="content active" id="tab2">
                                 <div class="list-top">
                                     <p class="total">전체 <strong>3</strong>개</p>
                                     <button type="button" class="btn-sort">최신순</button>
@@ -161,10 +140,6 @@
                 </div>
             </section>
         </div>
-        <script>
-          tabFunc(".tab-wrap")
-          dropMenuOpen ('.dropdown-wrap .btn-more','.dropdown-wrap .dropdown-box','.dropdown-wrap .btn-drop-menu')//상단 드롭 메뉴
-
-        </script>
+        <script>tabFunc(".tab-wrap")</script>
     </body>
 </html>

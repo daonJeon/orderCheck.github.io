@@ -22,14 +22,20 @@
     </head>
     <body>
       <div id="wrap">
-        <div class="dropdown-box">
-          <ul>
-            <li><button type="button" class="btn-drop-menu"><span>메세지 알림</span></button></li>
-            <li><button type="button" class="btn-drop-menu"><span>채팅방 나가기</span><buttona></li>
-            <li><button type="button" class="btn-drop-menu"><span>업체 정보</span></button></li>
-          </ul>
+        <div class="dropdown-wrap center">
+          <button type="button" class="btn-temporary">메뉴 열기</button>
+          <div class="dropdown-box">
+            <ul>
+              <li><button type="button" class="btn-drop-menu"><span>메세지 알림</span></button></li>
+              <li><button type="button" class="btn-drop-menu"><span>채팅방 나가기</span><buttona></li>
+              <li><button type="button" class="btn-drop-menu"><span>업체 정보</span></button></li>
+            </ul>
+          </div>
         </div>
+
       </div>
-      <div id="dim"></div>
+        <script>
+          dropMenuOpen ('.dropdown-wrap .btn-temporary','.dropdown-wrap .dropdown-box','.dropdown-wrap .btn-drop-menu')//상단 드롭 메뉴
+        </script>
     </body>
 </html>

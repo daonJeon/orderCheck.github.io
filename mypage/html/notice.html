@@ -30,31 +30,37 @@
                 </div>
             </header>
             <section id="content">
-                <div class="user-info">
+                <div class="notice">
                     <div class="inner">
                         <div class="tit-box">
-                            <p class="tit">내 정보</p>
+                            <p class="tit">공지사항</p>
                         </div>
-                        <div class="myinfo">
-                            <p class="tit">로그인 정보</p>
+                        <div class="board-list">
+                            <div class="board-slide swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../images/img_notice01.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/img_notice01.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/img_notice01.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../images/img_notice01.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
                             <ul>
                                 <li>
-                                    <strong>이름</strong>
-                                    <p>홍길동</p>
-                                    <button type="button">변경</button>
+                                    <p><a href="#">개인정보 처리방침 변경 안내</a></p>
+                                    <span>2021.10.30</span>
                                 </li>
                                 <li>
-                                    <strong>휴대전화</strong>
-                                    <p>010-0000-0000</p>
-                                </li>
-                            </ul>
-                            <p class="tit">계정 관리</p>
-                            <ul>
-                                <li>
-                                    <button type="button">로그아웃</button>
-                                </li>
-                                <li>
-                                    <button type="button">계정 삭제</button>
+                                    <p><a href="#">21년 4월 포인트 이벤트 당첨자 안내</a></p>
+                                    <span>2021.10.30</span>
                                 </li>
                             </ul>
                         </div>
@@ -64,3 +70,11 @@
         </div>
     </body>
 </html>
+<script>
+    var swiper = new Swiper(".board-slide", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+    });
+</script>

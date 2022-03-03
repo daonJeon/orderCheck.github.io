@@ -43,15 +43,77 @@
                 </ul>
              </div>
              <section class="tab-content">
-                <div class="content active" id="tab1">
-                  <div class="data-box">
-                    <p class="txt"><span>주고받은 파일이 없습니다.</span></p>
-                  </div>
+                <div class="content" id="tab1">
+                  <p class="file-title">2021년 8월</p>
+                  <ul class="img-grid-box">
+                    <li><button type="button"><img src="../images/img_temp.png"></button></li>
+                    <li><button type="button"><img src="../images/img_temp.png"></button></li>
+                  </ul>
                 </div>
-                <div class="content" id="tab2">
-                  <div class="data-box">
-                    <p class="txt"><span>주고받은 파일이 없습니다.</span></p>
-                  </div>
+                <div class="content active" id="tab2">
+                  <p class="file-title">2021년 8월</p>
+                  <ul class="file-doc-list">
+                    <li>
+                      <div class="video-info-box storageFolder">
+                        <p class="title">(21.12.10)오더체크 개인정보 처리방침</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box zip">
+                        <p class="title">신혼부부 인테리어 제안서 v2</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box pic">
+                        <p class="title">(21.12.10)오더체크 개인정보 처리방침</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box pdf">
+                        <p class="title">신혼부부 인테리어 제안서 v2</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box excel">
+                        <p class="title">(21.12.10)오더체크 개인정보 처리방침</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box ppt">
+                        <p class="title">신혼부부 인테리어 제안서 v2</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box docx">
+                        <p class="title">(21.12.10)오더체크 개인정보 처리방침</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box hwp">
+                        <p class="title">신혼부부 인테리어 제안서 v2</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box info">
+                        <p class="title">(21.12.10)오더체크 개인정보 처리방침</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="video-info-box statics">
+                        <p class="title">신혼부부 인테리어 제안서 v2</p>
+                        <p class="sub"><span class="file">docx</span><span class="size">27.18KB</span></p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </section>
             </div>
@@ -208,6 +270,7 @@
         document.querySelector(".pop-chat .btn-chat-menu").addEventListener("click",function(){
           document.querySelector(".pop-chat .menu-wrap").classList.toggle("open")
         })
+        tabFunc(".tab-wrap")
       </script>
     </body>
 </html>

@@ -35,25 +35,25 @@
           <div class="menu-wrap file">
             <div class="scroll-box">
               <button class="btn-prev"><strong>뒤로가기</strong></button>
-              <h3 class="title-name">웹링크</h3>
-              <p class="file-title">2021년 10월 5일</p>
-              <ul class="file-link-list">
-                <li>
-                  <a href="https://channel.io/ko?utm_source=google&amp;utm_mediu" class="link"><span class="txt">https://channel.io/ko?utm_source=google&amp;utm_mediu</span></a>
-                </li>
-                <li>
-                  <a href="https://ko.dict.naver.com/#/search?query=%EC%9E%AC%ED%95" class="link"><span class="txt">https://ko.dict.naver.com/#/search?query=%EC%9E%AC%ED%95</span></a>
-                </li>
-              </ul>
-              <p class="file-title">2021년 10월 5일</p>
-              <ul class="file-link-list">
-                <li>
-                  <a href="https://channel.io/ko?utm_source=google&amp;utm_mediu" class="link"><span class="txt">https://channel.io/ko?utm_source=google&amp;utm_mediu</span></a>
-                </li>
-                <li>
-                  <a href="https://ko.dict.naver.com/#/search?query=%EC%9E%AC%ED%95" class="link"><span class="txt">https://ko.dict.naver.com/#/search?query=%EC%9E%AC%ED%95</span></a>
-                </li>
-              </ul>
+              <h3 class="title-name">파일</h3>
+              <div class="tab-wrap">
+                <ul class="tabs">
+                    <li class="on"><button type="button" class="tab-btn active" data-tab="tab1">이미지/영상</button></li>
+                    <li><button type="button" class="tab-btn" data-tab="tab2">문서</button></li>
+                </ul>
+             </div>
+             <section class="tab-content">
+                <div class="content active" id="tab1">
+                  <div class="data-box">
+                    <p class="txt"><span>주고받은 파일이 없습니다.</span></p>
+                  </div>
+                </div>
+                <div class="content" id="tab2">
+                  <div class="data-box">
+                    <p class="txt"><span>주고받은 파일이 없습니다.</span></p>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
           <div class="chat-box">
@@ -208,6 +208,7 @@
         document.querySelector(".pop-chat .btn-chat-menu").addEventListener("click",function(){
           document.querySelector(".pop-chat .menu-wrap").classList.toggle("open")
         })
+        tabFunc(".tab-wrap")
       </script>
     </body>
 </html>

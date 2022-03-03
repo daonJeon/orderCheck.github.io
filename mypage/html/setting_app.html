@@ -23,7 +23,7 @@
         <script src="../js/swiper-bundle.min.js"></script>
     </head>
     <body>
-        <div id="wrap">
+        <div id="wrap" class="is-gnb">
             <header id="header">
                 <div class="header-wrap">
                     <button type="button" class="btn-prev">이전</button>
@@ -33,28 +33,49 @@
                 <div class="user-info">
                     <div class="inner">
                         <div class="tit-box">
-                            <p class="tit">내 정보</p>
+                            <p class="tit">앱 설정</p>
                         </div>
                         <div class="myinfo">
                             <p class="tit">로그인 정보</p>
                             <ul>
                                 <li>
-                                    <strong>이름</strong>
-                                    <p>홍길동</p>
-                                    <button type="button">변경</button>
+                                    <div class="txt">
+                                        <p>활동 알림</p>
+                                        <span>상담, 견적 등 알림</span>
+                                    </div>
+                                    <div class="radio-area">
+                                        <input type="checkbox" id="radio01_01" name="radio01">
+                                        <label for="radio01_01"></label>
+                                    </div>
                                 </li>
                                 <li>
-                                    <strong>휴대전화</strong>
-                                    <p>010-0000-0000</p>
+                                    <div class="txt">
+                                        <p>메세지 알림</p>
+                                    </div>
+                                    <div class="radio-area">
+                                        <input type="checkbox" id="radio01_02" name="radio01">
+                                        <label for="radio01_02"></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="txt">
+                                        <p>마케팅 알림</p>
+                                    </div>
+                                    <div class="radio-area">
+                                        <input type="checkbox" id="radio01_03" name="radio01">
+                                        <label for="radio01_03"></label>
+                                    </div>
                                 </li>
                             </ul>
-                            <p class="tit">계정 관리</p>
+                            <p class="tit">기타</p>
                             <ul>
                                 <li>
-                                    <button type="button">로그아웃</button>
-                                </li>
-                                <li>
-                                    <button type="button">계정 삭제</button>
+                                    <div class="txt">
+                                        <p>버전 정보</p>
+                                    </div>
+                                    <div class="txt-sub">
+                                        <p>v9.81.2</p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
