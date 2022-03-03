@@ -73,7 +73,8 @@ function layerOpen(e, pos, bgset){
 
 //닫기용 함수 - 레이어 전체
 function layerClose(e){
-  e.closest(".layer-pop").style.display = "none"
+  if(e.closest(".layer-pop-type02") != null )  e.closest(".layer-pop-type02").style.display = "none"
+  if(e.closest(".layerpop") != null )  e.closest(".layerpop").style.display = "none"
 
 	//if(layerset != null) indexOnScroll(cntwrap);
 	//else tabIndexOn(cntwrap);
@@ -137,89 +138,4 @@ function bodyScrollEnable() {
   body.style.removeProperty('width');
   window.scrollTo(0, scrollPosition);
 }
-//생성용 레이어
-function layerAlert(title, msg, btn, tg) {
-	var body = document.querySelector('body');
 
-	var btnTx = btn == null ? '확인' : btn;
-	var layerCnt = '<div class="layer-pop alert" id="alertLayer">';
-		layerCnt += '<div class="layer-cnt">';
-
-		if(title != '') {
-			layerCnt += '<div class="layer-top">';
-			layerCnt += '<h2 class="layer-title">'+ title +'</h2>';
-			layerCnt += '</div>';
-		}
-
-		layerCnt += '<div class="layer-mid">';
-		layerCnt += '<p class="alert-msg">'+msg+'</p>';
-		layerCnt += '<div class="layer-btn tr">';
-		layerCnt += '<button type="button" class="btn btn-gray close-layer"><span>'+btnTx+'</span></button>';
-		layerCnt += '</div>';
-		layerCnt += '</div>';
-		layerCnt += '<button type="button" class="btn-close close-layer"><span class="txt">팝업 닫기</span></button>';
-		layerCnt += '</div>';
-		layerCnt += '</div>';
-
-	body.insertAdjacentHTML('beforeend', layerCnt);
-	var alert = document.querySelector('#alertLayer'),
-		close = alert.querySelector('#alertLayer .close-layer');
-
-  document.querySelector('#alertLayer').style.display="block";
-	close.focus();
-
-	close.addEventListener('click', function(){
-
-		alert.parentNode.removeChild(alert);
-		if(tg != null) tg.focus();
-	});
-}
-
-// 생성용 레이어
-function layerConfirm(active, title, msg, btn1, btn2) {
-	var body = document.querySelector('body');
-
-	var btnCancel = btn1 == null ? '취소' : btn1,
-		btnOk = btn2 == null ? '확인' : btn2;
-
-	var layerCnt = '<div class="layer-pop confirm" id="ConfirmLayer">';
-		layerCnt += '<div class="layer-cnt">';
-		if(title != '') {
-			layerCnt += '<div class="layer-top">';
-			layerCnt += '<h2 class="layer-title">'+ title +'</h2>';
-			layerCnt += '</div>';
-		}
-		layerCnt += '<div class="layer-mid">';
-		layerCnt += '<p class="confirm-msg">'+msg+'</p>';
-		layerCnt += '<div class="layer-btn tr">';
-		layerCnt += '<button type="button" class="btn btn-gray close-layer"><span>'+ btnCancel +'</span></button>';
-		layerCnt += '<button type="button" class="btn btn-bk close-layer btn-ok"><span>'+ btnOk +'</span></button>';
-		layerCnt += '</div>';
-		layerCnt += '</div>';
-		layerCnt += '<button type="button" class="btn-close close-layer"><span class="txt">팝업 닫기</span></button>';
-		layerCnt += '</div>';
-		layerCnt += '</div>';
-
-	body.insertAdjacentHTML('beforeend', layerCnt);
-	var confirm  = document.querySelector('#ConfirmLayer'),
-		cancel = confirm.querySelectorAll('#ConfirmLayer .close-layer'),
-		okBtn 	   = confirm.querySelectorAll('#ConfirmLayer .btn-ok');
-
-	document.querySelector('#ConfirmLayer').style.display="block";
-
-  Array.prototype.forEach.call(cancel, function(cancelBtn, idx){
-    cancelBtn.addEventListener('click', function(){
-		confirm.parentNode.removeChild(confirm);
-    });
-})
-Array.prototype.forEach.call(okBtn, function(ok, idx){
-    ok.addEventListener('click', function(){
-      confirm.parentElement.removeChild(confirm);
-      if(typeof active === 'function') {
-        active();
-      }
-    });
-  })
-
-
-}
